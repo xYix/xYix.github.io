@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>测试用博文</title>
+    <url>/2020/05/21/hello-world/</url>
+    <content><![CDATA[<p>在外面应该只能看到这一行</p>
+<a id="more"></a>
+<script type="math/tex; mode=display">\begin{vmatrix}如果这玩&意没换行\\
+那么说明&博客炸了\end{vmatrix}</script><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*代码块*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+</search>
