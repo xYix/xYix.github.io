@@ -11,4 +11,18 @@
         <tag>测试</tag>
       </tags>
   </entry>
+  <entry>
+    <title>烷烃计数学习笔记</title>
+    <url>/2020/06/06/alkane-counting/</url>
+    <content><![CDATA[<p>任何点的度数小于等于 $4$ 的无标号无根树个数。</p>
+<a id="more"></a>
+<h1 id="烷基计数"><a href="#烷基计数" class="headerlink" title="烷基计数"></a>烷基计数</h1><p>我们先来数烷基。（任何节点均最多只有三个儿子的无标号有根树）</p>
+<p>设 $f_i$ 是 $i$ 个点的烷基个数，可以 <code>DP</code>：</p>
+<script type="math/tex; mode=display">f_n=\sum_{i+j+k+1=n}f_if_jf_k</script><p>兄啊，你这不是有标号的吗？</p>
+<p><del>日恁毛！（恼）</del></p>
+<p>用 <code>Burnside引理</code> 可以得到正确的 <code>DP</code>：</p>
+<script type="math/tex; mode=display">f_n=\dfrac 16\left(\sum_{i+j+k+1=n}f_if_jf_k+3\sum_{2i+j+1=n}f_if_j+2\sum_{3i+1=n}f_i\right)</script><p>写成 <code>OGF</code> 就是</p>
+<script type="math/tex; mode=display">F(x)=\dfrac x6(F(x)^3+3F(x^2)F(x)+2F(x^3))+1</script><p>牛迭即可。</p>
+]]></content>
+  </entry>
 </search>
