@@ -28,7 +28,7 @@
 <meta property="og:description" content="任何点的度数小于等于 $4$ 的无标号无根树个数。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-06T01:23:32.000Z">
-<meta property="article:modified_time" content="2020-06-06T03:26:31.862Z">
+<meta property="article:modified_time" content="2020-06-07T11:01:10.658Z">
 <meta property="article:author" content="x_Yi_x">
 <meta name="twitter:card" content="summary">
 
@@ -211,10 +211,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-06-06 09:23:32 / 修改时间：11:26:31" itemprop="dateCreated datePublished" datetime="2020-06-06T09:23:32+08:00">2020-06-06</time>
+              <time title="创建时间：2020-06-06 09:23:32" itemprop="dateCreated datePublished" datetime="2020-06-06T09:23:32+08:00">2020-06-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-07 19:01:10" itemprop="dateModified" datetime="2020-06-07T19:01:10+08:00">2020-06-07</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -229,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>528</span>
+              <span>632</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,12 +262,12 @@
 <script type="math/tex; mode=display">f_n=\dfrac 16\left(\sum_{i+j+k+1=n}f_if_jf_k+3\sum_{2i+j+1=n}f_if_j+2\sum_{3i+1=n}f_i\right)</script><p>写成 <code>OGF</code> 就是</p>
 <script type="math/tex; mode=display">F(x)=\dfrac x6(F(x)^3+3F(x^2)F(x)+2F(x^3))+1</script><p>牛迭即可。</p>
 <h1 id="烷烃计数"><a href="#烷烃计数" class="headerlink" title="烷烃计数"></a>烷烃计数</h1><p>还是考虑重心的套路。</p>
-<p>对于有两个重心的情况，就是两个 $\frac n 2$ 拼在一起。</p>
-<p>否则，重心有至多 $4$ 个儿子，每个儿子的大小都小于 $\frac n2$。如果没有后者的限制那么非常好做（也就是有根树）：</p>
-<script type="math/tex; mode=display">P(x)=\dfrac x{24}(F(x)^4+8F(x^3)F(x)+3F(x^2)^2+6F(x^2)F(x)^2+6F(x^4))</script><p>如果只要求一个 $n$，直接强行削除 $\ge\frac n 2$ 的方案然后按上面那个算即可。</p>
-<p>（代码咕咕）</p>
-<p>如果需要求整个数列，就比较麻烦：</p>
-<p>（咕咕）</p>
+<p>有一个结论：一棵树点等价类的数量 $p$（点的等价可以理解为将其定为根后整棵树的等价）减边等价类的数量 $q$ 加上 $[\text{其重心的数量为 }2]$（记为 $s$）等于 $1$。</p>
+<p>容易发现所有不同构无根树的 $p$ 之和其实就是有根树的数量。类似烷基的式子，不过儿子数为 4。</p>
+<script type="math/tex; mode=display">P(x)=\dfrac x{24}(F(x)^4+8F(x^3)F(x)+3F(x^2)^2+6F(x^2)F(x)^2+6F(x^4))</script><p>所有 $q$ 之和就是两个烷基拼起来。注意特判 $n=0$。</p>
+<script type="math/tex; mode=display">Q(x)=\dfrac{(F(x)-1)^2+F(x^2)-1}{2}</script><p>$s$ 也很显然：有两个重心的无根树必然是两个大小相等的烷基拼起来。</p>
+<script type="math/tex; mode=display">S(x)=F(x^2)</script><p>于是烷烃数量即为</p>
+<p><script type="math/tex">P(x)-Q(x)+S(x)</script>。</p>
 
     </div>
 
