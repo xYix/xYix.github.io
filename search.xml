@@ -27,7 +27,6 @@
 <script type="math/tex; mode=display">P(x)=\dfrac x{24}(F(x)^4+8F(x^3)F(x)+3F(x^2)^2+6F(x^2)F(x)^2+6F(x^4))</script><p>所有 $q$ 之和就是两个烷基拼起来。注意特判 $n=0$。</p>
 <script type="math/tex; mode=display">Q(x)=\dfrac{(F(x)-1)^2+F(x^2)-1}{2}</script><p>$s$ 也很显然：有两个重心的无根树必然是两个大小相等的烷基拼起来。</p>
 <script type="math/tex; mode=display">S(x)=F(x^2)</script><p>于是烷烃数量即为</p>
-<p><script type="math/tex">P(x)-Q(x)+S(x)</script>。</p>
-]]></content>
+<script type="math/tex; mode=display">P(x)-Q(x)+S(x)</script>]]></content>
   </entry>
 </search>
