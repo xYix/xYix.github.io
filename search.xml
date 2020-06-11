@@ -52,4 +52,17 @@
         <tag>多项式</tag>
       </tags>
   </entry>
+  <entry>
+    <title>biconnected-graph-counting</title>
+    <url>/2020/06/11/biconnected-graph-counting/</url>
+    <content><![CDATA[<p>有标号边/点双连通图计数。</p>
+<a id="more"></a>
+<p>下面只讨论有根情况，无根情况即乘以 $\dfrac 1 n$。</p>
+<h1 id="有标号边双连通图计数"><a href="#有标号边双连通图计数" class="headerlink" title="有标号边双连通图计数"></a>有标号边双连通图计数</h1><p>我们都知道<a href="https://www.luogu.com.cn/problem/P4841" target="_blank" rel="noopener">有标号无向连通图</a>的 EGF 怎么求。记为 $F(x)$。</p>
+<p>对于一个无向连通图，枚举根节点所在边双连通分量的大小。剩下的部分是一个个无向连通图，挂在根边双联通分量的任意一个点上，于是有</p>
+<script type="math/tex; mode=display">F(x)=\sum_{i=1}^{\infty}\dfrac{g_ix^i\exp(iF(x))}{i!}=G(x\exp F(x))</script><p>这里出现了一个复合，难以处理，需要请出一个新的工具：</p>
+<h1 id="拉格朗日反演"><a href="#拉格朗日反演" class="headerlink" title="拉格朗日反演"></a>拉格朗日反演</h1><script type="math/tex; mode=display">[x^n]A(B^{-1}(x))=\dfrac 1n[x^{n-1}]A'(x)\left(\dfrac{x}{B(x)}\right)^n</script><p>回到边双连通计数的问题上。</p>
+<p>设 $H(x)=x\exp F(x)$，则</p>
+<script type="math/tex; mode=display">F(x)=G(H(x))</script><script type="math/tex; mode=display">[x^n]F(H^{-1}(x))=\dfrac 1n[x^{n-1}]\dfrac{F'(x)}{\exp nF(x)}=[x^n]G(x)</script>]]></content>
+  </entry>
 </search>
