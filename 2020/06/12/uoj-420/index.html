@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="每条边最多仅在一个环上的有标号无向图个数。">
+  <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="有标号仙人掌计数">
-<meta property="og:url" content="http://yoursite.com/2020/06/09/cactus-counting/index.html">
+<meta property="og:title" content="uoj#420 题解">
+<meta property="og:url" content="http://yoursite.com/2020/06/12/uoj-420/index.html">
 <meta property="og:site_name" content="xYix的博客">
-<meta property="og:description" content="每条边最多仅在一个环上的有标号无向图个数。">
+<meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-08T23:51:09.000Z">
-<meta property="article:modified_time" content="2020-06-09T07:30:50.720Z">
+<meta property="article:published_time" content="2020-06-12T12:00:28.000Z">
+<meta property="article:modified_time" content="2020-06-12T13:23:00.532Z">
 <meta property="article:author" content="x_Yi_x">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="计数">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="多项式">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/09/cactus-counting/">
+<link rel="canonical" href="http://yoursite.com/2020/06/12/uoj-420/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>有标号仙人掌计数 | xYix的博客</title>
+  <title>uoj#420 题解 | xYix的博客</title>
   
 
 
@@ -193,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/09/cactus-counting/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/12/uoj-420/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -206,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          有标号仙人掌计数
+          uoj#420 题解
         </h1>
 
         <div class="post-meta">
@@ -217,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-09 07:51:09 / 修改时间：15:30:50" itemprop="dateCreated datePublished" datetime="2020-06-09T07:51:09+08:00">2020-06-09</time>
+              <time title="创建时间：2020-06-12 20:00:28 / 修改时间：21:23:00" itemprop="dateCreated datePublished" datetime="2020-06-12T20:00:28+08:00">2020-06-12</time>
             </span>
 
           
@@ -233,7 +233,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>460</span>
+              <span>583</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -252,13 +252,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>每条边最多仅在一个环上的有标号无向图个数。</p>
+        <p><a href="http://uoj.ac/problem/420" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
-<p>显然有标号无根图（相当于钦定根为 $1$）的数量是对应的有标号有根图的 $\frac 1 n$，所以下面我们只讨论有根仙人掌。</p>
-<p>枚举根的每个“儿子”，一个“儿子”可能与根以一条边相连（一棵仙人掌，$F(x)$），也有可能由一个环相连（如果环的大小为 $i$，其下方可以接上 $i-1$ 棵仙人掌，又由于环可以翻转，所以生成函数即为 $\frac {F^{i-1}(x)}2$）。</p>
-<p>所以有：</p>
-<script type="math/tex; mode=display">F(x)=x\text{exp}\left(\dfrac{F(x)}2+\sum_{i=1}^{\infty}\dfrac{F^i(x)}2\right)</script><script type="math/tex; mode=display">F(x)=x\text{exp}\left(\dfrac{F(x)}2+\dfrac{1}{2-2F(x)}-\dfrac 1 2\right)</script><script type="math/tex; mode=display">F(x)=x\text{exp}\left(\dfrac{-F^2(x)+2F(x)}{2-2F(x)}\right)</script><p>构造函数 $A(X)=X\exp(\dfrac{-X^2+2X}{2-2X})-X$，多项式牛迭即可。</p>
-
+<p>考虑 $f_i$ 和 $c$ 分别的贡献。</p>
+<h1 id="f-i-的贡献"><a href="#f-i-的贡献" class="headerlink" title="$f_i$ 的贡献"></a>$f_i$ 的贡献</h1><script type="math/tex; mode=display">h^{-m-1}\sum_{x\ge i,y\ge 1}h^{mx+y}a^{x-i}b^y\begin{pmatrix}x-i+y-1\\y-1\end{pmatrix}</script><script type="math/tex; mode=display">h^{mi-m-1}\sum_{x\le n-i,y\le m-1}h^{mx+y}a^xb^y\begin{pmatrix}x+y-1\\y-1\end{pmatrix}</script><script type="math/tex; mode=display">h^{mi-m-1}\sum_{x\le n-i,y\le m-1}(x+y)!\dfrac{(h^ma)^x}{x!}\dfrac{(hb)^y}{y!}</script><p>后面的部分和 $i$ 完全无关。对于某个 $x$，它的贡献就是</p>
+<script type="math/tex; mode=display">(h^ma)^x\sum_{y\le m-1}\dfrac{(x+y)!}{x!y!}(hb)^y</script><p>用的时候前缀和一下就是 $f_i$ 的贡献了，于是关键就是求</p>
+<script type="math/tex; mode=display">\begin{aligned}g(x)&=\sum_{y\le m-1}\dfrac{(x+y)!}{x!y!}(hb)^y\\&=\sum_{y\le m-1}(C^{y-1}_{x+y-1}+C^y_{x+y-1})(hb)^y\\&=hb(g(x)-C_{x+y-1}^{y-1}(hb)^{m-1})g(x-1)\end{aligned}</script><p>分类讨论 $hb=1$ 和 $hb\neq 1$ 即可以递推 $g$。</p>
+<h1 id="c-的贡献"><a href="#c-的贡献" class="headerlink" title="$c$ 的贡献"></a>$c$ 的贡献</h1>
     </div>
 
     
@@ -279,13 +279,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/06/alkane-counting/" rel="prev" title="烷烃计数">
-      <i class="fa fa-chevron-left"></i> 烷烃计数
+    <a href="/2020/06/11/biconnected-graph-counting/" rel="prev" title="边/点双连通图计数">
+      <i class="fa fa-chevron-left"></i> 边/点双连通图计数
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/11/biconnected-graph-counting/" rel="next" title="边/点双连通图计数">
-      边/点双连通图计数 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -344,6 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#f-i-的贡献"><span class="nav-number">1.</span> <span class="nav-text">$f_i$ 的贡献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-的贡献"><span class="nav-number">2.</span> <span class="nav-text">$c$ 的贡献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
