@@ -117,4 +117,22 @@
         <tag>数论</tag>
       </tags>
   </entry>
+  <entry>
+    <title>loj-6275</title>
+    <url>/2020/06/18/loj-6275/</url>
+    <content><![CDATA[<p><a href="https://loj.ac/problem/6275" target="_blank" rel="noopener">题目链接</a></p>
+<a id="more"></a>
+<p>首先考虑辣鸡 DP $f_{i,s,j}$，表示考虑前 $i$ 列，第 $i$ 列状态为 $s$，有 $j$ 个连通块。</p>
+<p>（有 $7$ 种状态：□□□，■□□ 和镜像，□■□，■■□ 和镜像，不连通的 ■□■，连通的 ■□■，■■■）</p>
+<p>考虑它的 OGF $F_{i,s}(x)$，$F_{i,s}$ 的 $s$ 那维可以矩乘（当然矩阵的系数是多项式），即 $F_{i}=AF_{i-1}$。为了防止混淆我再强调一遍：其中 $F_{i}$ 是一个七维向量，每一维坐标都是一个多项式。</p>
+<p>所以答案就是 $\sum_{s}<a href="A^mB">x^k</a>_s$。但是多项式乘法无法接受，所以我们只考虑点值表示然后 IDFT 回去即可。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>计数</tag>
+        <tag>生成函数</tag>
+        <tag>多项式</tag>
+        <tag>矩阵</tag>
+      </tags>
+  </entry>
 </search>
