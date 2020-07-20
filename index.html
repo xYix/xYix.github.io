@@ -184,6 +184,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/SPOJ-26073/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="x_Yi_x">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xYix的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/20/SPOJ-26073/" class="post-title-link" itemprop="url">SPOJ-26073</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-20 11:24:04 / 修改时间：11:25:58" itemprop="dateCreated datePublished" datetime="2020-07-20T11:24:04+08:00">2020-07-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.spoj.com/problems/DIVCNT1/" target="_blank" rel="noopener">题目链接</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/20/SPOJ-26073/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/min25-powerfulnum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -209,7 +289,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-20 11:20:11 / 修改时间：11:21:12" itemprop="dateCreated datePublished" datetime="2020-07-20T11:20:11+08:00">2020-07-20</time>
+              <time title="创建时间：2020-07-20 11:20:11 / 修改时间：11:22:43" itemprop="dateCreated datePublished" datetime="2020-07-20T11:20:11+08:00">2020-07-20</time>
             </span>
 
           <br>
@@ -218,7 +298,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -237,45 +317,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Powerful-Number-筛"><a href="#Powerful-Number-筛" class="headerlink" title="Powerful Number 筛"></a>Powerful Number 筛</h2><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul>
-<li><p>积性</p>
-</li>
-<li><p>有一个和它在质数处取值相等的简单函数</p>
-</li>
-</ul>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>Powerful Number 是指其每一个质因数的次数都大于等于 2 的数。可以证明其数量是 $O(\sqrt n)$ 的。</p>
-<p>假设我们要求 $F$ 的前缀和，设计积性函数 $G$，使得对于质数 $p$ 有 $G(p)=F(p)$，设 $H$ 使 $F=G*H$，于是就有 $H(p)=0$，又因为 $H$ 显然也积性，从而 $H$ 只在 Powerful Number 处取非 0 值。</p>
-<p>然后考虑一个和杜教筛一样的柿子：</p>
-<script type="math/tex; mode=display">S_F(n)=\sum_{d=1}^nH(d)S_G(\lfloor\dfrac{n}{d}\rfloor)</script><p>可以取巧妙的 $G$ 使得它容易杜教筛。$H(p^k)$ 一般也比较容易分析。接下来直接爆搜出所有的 Powerful Number 和它们的函数值即可。</p>
-<p>非常好写，而且如果 $G$ 的前缀和很容易求的话可以 $O(\sqrt n)$。</p>
-<h2 id="Min25-筛"><a href="#Min25-筛" class="headerlink" title="Min25 筛"></a>Min25 筛</h2><h3 id="要求-1"><a href="#要求-1" class="headerlink" title="要求"></a>要求</h3><ul>
-<li><p>积性</p>
-</li>
-<li><p>在质数的幂处的取值是项数较少的多项式</p>
-</li>
-</ul>
-<h3 id="做法-1"><a href="#做法-1" class="headerlink" title="做法"></a>做法</h3><p>思路借鉴了模板题第二篇题解，努力讲的清楚了一些，我尽力了……</p>
-<p>设要求的是 $\sum_{i=1}^n f(i)$。先按质数和合数分类，合数再按其最小质因子分类，注意合数 $n$ 的最小质因子小于等于 $\sqrt n$：</p>
-<script type="math/tex; mode=display">\sum_{p} f(i)+\sum_{p\le \sqrt n,p^e\le n}f(p^e)\sum_{1\le i\le n/p^e,i\text{ 的最小质因子}>p}f(i)</script><p>兄啊，这不是每一项都不能算吗（恼）</p>
-<p>我们先考虑一下 $f$ 在质数处的值之和。</p>
-<h4 id="质数处的值"><a href="#质数处的值" class="headerlink" title="质数处的值"></a>质数处的值</h4><p>我们搞出一个函数 $f’(x)$，这个函数<strong>完全积性</strong>，在<strong>质数处</strong>取值和 $f(x)$ 一样。考虑一个 DP，设</p>
-<script type="math/tex; mode=display">g(n,j)=\sum_{i\text{ 是质数或其最小质因子}>p_j,i\le n}f'(i)</script><p>其中 $p_j$ 是第 $j$ 个质数。</p>
-<p>当 $j\leftarrow j+1$，会有一些 $i$ 变得不满足条件，也就是那些最小质因子 $=p_j$ 的合数。</p>
-<p>如果提出一个 $p_j$（因为完全积性所以随便提），那么对它们的要求就只有：<strong>没有小于 $p_j$ 的因子，而且不是小于 $p_j$ 的质数</strong>。也就是 $g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1)$。</p>
-<p>所以</p>
-<script type="math/tex; mode=display">g(n,j)=\begin{cases}g(n,j-1)&(p_j^2>n)\\g(n,j-1)-f'(p_j)(g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1))&(p_j^2\le n)\end{cases}</script><p>那个 $g(p_{j-1},j-1))$ 就是小于 $p_j$ 的质数之 $f’$ 和。线性筛的同时处理。</p>
-<p>于是发现用到的 $n$ 只有 $O(\sqrt n)$ 种。（可以不用 <code>map</code> 存储，大意就是对 $x\le \sqrt n$ 直接存到第一个桶，否则映射到第二个桶的 $\frac{N}{x}$ 处）</p>
-<p>总结一下就是靠一个 DP 一步步把非质数值给清洗掉。</p>
-<p>设 $m$ 是 $p_m^2\le n$ 的最大 $m$。则 $g(n,m)$ 就是所有质数的函数值和，不过我们不打算直接使用。</p>
-<h4 id="整个柿子"><a href="#整个柿子" class="headerlink" title="整个柿子"></a>整个柿子</h4><p>故技重施，设 $S(n,j)$ 是最小质因数大于 $p_j$ 的 $f(i)$ 和，则有</p>
-<script type="math/tex; mode=display">S(n,j)=g(n,m)-g(p_{j-1},j-1)+\sum_{i>j,p_i^e\le n}f(p_i^e)(S(\frac{n}{p^e_i})+[e>1])</script><h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>考虑对 $S,g$ 的 DP。用到的一个 $n=\lfloor\dfrac{N}{x}\rfloor$ 会枚举小于等于 $\sqrt n$ 的所有质数，我们知道小于 $n$ 的质数是 $O(\dfrac{n}{\ln n})$ 的，于是积一下可以知道是 $O(\dfrac{n^{3/4}}{\ln n})$。</p>
-<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><ul>
-<li><p><a href="https://www.luogu.com.cn/problem/P5325" target="_blank" rel="noopener">P5325 【模板】Min_25筛</a></p>
-</li>
-<li><p><a href="https://loj.ac/problem/6053" target="_blank" rel="noopener">#6053. 简单的函数</a></p>
-</li>
-</ul>
-
+          <p>两种求积性函数前缀和的方法。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/20/min25-powerfulnum/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1022,14 +1072,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1076,12 +1126,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
