@@ -205,10 +205,11 @@
 <p>所以</p>
 <script type="math/tex; mode=display">g(n,j)=\begin{cases}g(n,j-1)&(p_j^2>n)\\g(n,j-1)-f'(p_j)(g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1))&(p_j^2\le n)\end{cases}</script><p>那个 $g(p_{j-1},j-1))$ 就是小于 $p_j$ 的质数之 $f’$ 和。线性筛的同时处理。</p>
 <p>于是发现用到的 $n$ 只有 $O(\sqrt n)$ 种。（可以不用 <code>map</code> 存储，大意就是对 $x\le \sqrt n$ 直接存到第一个桶，否则映射到第二个桶的 $\frac{N}{x}$ 处）</p>
-<p>总结一下就是靠一个 DP 一步步把非质数值给清洗掉。</p>
+<p>总结一下就是靠一个 DP 一步步把非质数值给清洗掉。类似埃氏筛？</p>
 <p>设 $m$ 是 $p_m^2\le n$ 的最大 $m$。则 $g(n,m)$ 就是所有质数的函数值和，不过我们不打算直接使用。</p>
 <h4 id="整个柿子"><a href="#整个柿子" class="headerlink" title="整个柿子"></a>整个柿子</h4><p>故技重施，设 $S(n,j)$ 是最小质因数大于 $p_j$ 的 $f(i)$ 和，则有</p>
-<script type="math/tex; mode=display">S(n,j)=g(n,m)-g(p_{j-1},j-1)+\sum_{i>j,p_i^e\le n}f(p_i^e)(S(\frac{n}{p^e_i})+[e>1])</script><h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>考虑对 $S,g$ 的 DP。用到的一个 $n=\lfloor\dfrac{N}{x}\rfloor$ 会枚举小于等于 $\sqrt n$ 的所有质数，我们知道小于 $n$ 的质数是 $O(\dfrac{n}{\ln n})$ 的，于是积一下可以知道是 $O(\dfrac{n^{3/4}}{\ln n})$。</p>
+<script type="math/tex; mode=display">S(n,j)=g(n,m)-g(p_{j-1},j-1)+\sum_{i>j,p_i^e\le n}f(p_i^e)(S(\frac{n}{p^e_i})+[e>1])</script><h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>考虑对 $g$ 的 DP。用到的一个 $n=\lfloor\dfrac{N}{x}\rfloor$ 会枚举小于等于 $\sqrt n$ 的所有质数，我们知道小于 $n$ 的质数是 $O(\dfrac{n}{\ln n})$ 的，于是积一下可以知道是 $O(\dfrac{n^{3/4}}{\ln n})$。</p>
+<p>对 $S$ 的 DP 可以证明是 $O(n^{1-\epsilon})$ 的。</p>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><ul>
 <li><p><a href="https://www.luogu.com.cn/problem/P5325" target="_blank" rel="noopener">P5325 【模板】Min_25筛</a></p>
 </li>
