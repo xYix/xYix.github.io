@@ -86,7 +86,7 @@
 <p>考虑 $f_i$ 和 $c$ 分别的贡献。</p>
 <h1 id="f-i-的贡献"><a href="#f-i-的贡献" class="headerlink" title="$f_i$ 的贡献"></a>$f_i$ 的贡献</h1><script type="math/tex; mode=display">\sum_{x\ge i,y\ge 1}h^{mx+y}a^{x-i}b^y\begin{pmatrix}x-i+y-1\\y-1\end{pmatrix}</script><script type="math/tex; mode=display">h^{mi}\sum_{x\le n-i,y\le m-1}h^{mx+y}a^xb^y\begin{pmatrix}x+y-1\\y-1\end{pmatrix}</script><script type="math/tex; mode=display">h^{mi}\sum_{x\le n-i,y\le m-1}(x+y)!\dfrac{(h^ma)^x}{x!}\dfrac{(hb)^y}{y!}</script><p>后面的部分和 $i$ 完全无关。对于某个 $x$，它的贡献就是</p>
 <script type="math/tex; mode=display">(h^ma)^x\sum_{y\le m-1}\dfrac{(x+y)!}{x!y!}(hb)^y</script><p>用的时候前缀和一下就是 $f_i$ 的贡献了，于是关键就是求</p>
-<script type="math/tex; mode=display">\begin{aligned}g(x)&=\sum_{y\le m-1}\dfrac{(x+y)!}{x!y!}(hb)^y\\&=\sum_{y\le m-1}(C^{y-1}_{x+y-1}+C^y_{x+y-1})(hb)^y\\&=hb(g(x)-C_{x+y-1}^{y-1}(hb)^{m-1})g(x-1)\end{aligned}</script><p>分类讨论 $hb=1$ 和 $hb\neq 1$ 即可以递推 $g$。</p>
+<script type="math/tex; mode=display">\begin{aligned}g(x)&=\sum_{y\le m-1}\dfrac{(x+y)!}{x!y!}(hb)^y\\&=\sum_{y\le m-1}(C^{y-1}_{x+y-1}+C^y_{x+y-1})(hb)^y\\&=hb(g(x)-C_{x+y-1}^{y-1}(hb)^{m-1})+g(x-1)\end{aligned}</script><p>分类讨论 $hb=1$ 和 $hb\neq 1$ 即可以递推 $g$。</p>
 <h1 id="c-的贡献"><a href="#c-的贡献" class="headerlink" title="$c$ 的贡献"></a>$c$ 的贡献</h1><p>对于某个 $(x,y)$，它的 $c$ 是</p>
 <script type="math/tex; mode=display">\sum_{i=0}^{x-1}\sum_{j=0}^{y-1}a^ib^jC_{i+j}^i</script><p>那么 $c$ 的总贡献就是</p>
 <script type="math/tex; mode=display">\sum_{x=1}^nh^{mx}\sum_{y=1}^mh^y\sum_{i=0}^{x-1}\sum_{j=0}^{y-1}a^ib^jC_{i+j}^i</script><p>故 技 重 施，设 $p(x,y)=h^y\sum_{i=0}^{x-1}\sum_{j=0}^{y-1}a^ib^jC_{i+j}^i$，则有</p>
