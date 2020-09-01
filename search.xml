@@ -411,7 +411,7 @@
     <url>/2020/09/01/dirichlet-GF/</url>
     <content><![CDATA[<p>对于一些奇怪的数论问题有奇效。也是对数论函数的另一种视角。</p>
 <a id="more"></a>
-<h2 id="基础形式"><a href="#基础形式" class="headerlink" title="基础形式"></a>基础形式</h2><p>数列 $\left&lt; f(1),f(2),… \right&gt;$ 的狄利克雷生成函数是</p>
+<h2 id="基础形式"><a href="#基础形式" class="headerlink" title="基础形式"></a>基础形式</h2><p>数列 $\left&lt; f(1),f(2),\dots \right&gt;$ 的狄利克雷生成函数是</p>
 <script type="math/tex; mode=display">F(z)=\sum_{n=1}^{\infty}\dfrac{f(n)}{n^z}</script><p>容易验证它的乘积就是狄利克雷卷积</p>
 <script type="math/tex; mode=display">(F*G)(z)=\sum_{n=1}\dfrac{\sum_{d|n}f(d)g(\frac{n}{d})}{n^z}</script><p>狄利克雷函数初看非常的诡异，它和普通型与指数型不同，并不是一个形式幂级数。我们介绍一些典型的狄利克雷生成函数来了解它的性质。</p>
 <h2 id="典型函数"><a href="#典型函数" class="headerlink" title="典型函数"></a>典型函数</h2><p>过于显然地 $\left<1,0,0,...\right>$，也就是数论中的 $\varepsilon$ 函数，的狄利克雷生成函数是 1。</p>
@@ -431,7 +431,7 @@
 <script type="math/tex; mode=display">\begin{cases}1&(k=0)\\(p-1)p^{k-1}&(k\ge1)\end{cases}</script><p>当质因数增加了一个 $p$ 的时候按这个柿子更新贡献即可。</p>
 <h2 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h2><h3 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h3><p>筛出 $\varphi*\mu$。</p>
 <h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>它就是 $\dfrac{\zeta(z-1)}{\zeta^2(z)}$，容易知道 $p^k$ 的贡献是</p>
-<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\p-2&(k=1)\\(p^2-2p+1)p^{k-2}&(k\ge 2)\end{cases}</script><h3 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h3><p><a href="https://www.luogu.com.cn/problem/T138482" target="_blank" rel="noopener">链接</a></p>
+<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\p-2&(k=1)\\(p^2-2p+1)p^{k-2}&(k\ge 2)\end{cases}</script><h3 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h3><p><a href="https://www.luogu.com.cn/problem/T119515" target="_blank" rel="noopener">链接</a></p>
 <h3 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h3><p>显然有答案的生成函数是</p>
 <script type="math/tex; mode=display">\dfrac{\zeta(z-q)}{\zeta(z-p)}</script><p>几乎立即得到 $d^k$ 的贡献是</p>
 <script type="math/tex; mode=display">\begin{cases}1&(k=0)\\(d^q-d^p)d^{(k-1)q}&(k\ge 1)\end{cases}</script>]]></content>
