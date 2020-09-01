@@ -459,6 +459,7 @@
 <script type="math/tex; mode=display">h(k),h(k+1),...,h(k+d)</script><p>拉格朗日插一插<del>叉义叉</del>得到</p>
 <script type="math/tex; mode=display">h(j+k)=\sum_{i=0}^dh(i)\prod_{i'\neq i}\dfrac{j+k-i'}{i-i'}</script><script type="math/tex; mode=display">h(j+k)=\prod_{i=0}^d(j+k-i)\sum_{i=0}^d\dfrac{h(i)}{i!(d-i)!(-1)^{d-i}}\dfrac{1}{j+k-i}</script><p>前面那个双指针，后面那个卷积即可。注意 $k$ 可能不是整数所以 $j+k$ 可能巨大无比，卷积时注意移位。</p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这题其实坠痛苦的是任意模数……</p>
+<p>相信不会有神必出题人在 OI 赛场上出题不用 998244353 还不放 7 次的拆系数 FFT 过的吧，呐？</p>
 ]]></content>
       <tags>
         <tag>数学</tag>
