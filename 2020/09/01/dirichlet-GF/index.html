@@ -22,21 +22,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="两种求积性函数前缀和的方法。">
+  <meta name="description" content="对于一些奇怪的数论问题有奇效。也是对数论函数的另一种视角。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="min25 筛和 Powerful Number 筛">
-<meta property="og:url" content="http://yoursite.com/2020/07/20/min25-powerfulnum/index.html">
+<meta property="og:title" content="狄利克雷生成函数学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/dirichlet-GF/index.html">
 <meta property="og:site_name" content="xYix的博客">
-<meta property="og:description" content="两种求积性函数前缀和的方法。">
+<meta property="og:description" content="对于一些奇怪的数论问题有奇效。也是对数论函数的另一种视角。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-20T03:20:11.000Z">
-<meta property="article:modified_time" content="2020-07-20T23:48:44.432Z">
+<meta property="article:published_time" content="2020-09-01T11:45:15.000Z">
+<meta property="article:modified_time" content="2020-09-01T11:47:26.096Z">
 <meta property="article:author" content="x_Yi_x">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="数论">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/20/min25-powerfulnum/">
+<link rel="canonical" href="http://yoursite.com/2020/09/01/dirichlet-GF/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>min25 筛和 Powerful Number 筛 | xYix的博客</title>
+  <title>狄利克雷生成函数学习笔记 | xYix的博客</title>
   
 
 
@@ -198,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/min25-powerfulnum/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/dirichlet-GF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -211,7 +211,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          min25 筛和 Powerful Number 筛
+          狄利克雷生成函数学习笔记
         </h1>
 
         <div class="post-meta">
@@ -220,16 +220,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-07-20 11:20:11" itemprop="dateCreated datePublished" datetime="2020-07-20T11:20:11+08:00">2020-07-20</time>
+              <time title="创建时间：2020-09-01 19:45:15 / 修改时间：19:47:26" itemprop="dateCreated datePublished" datetime="2020-09-01T19:45:15+08:00">2020-09-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-21 07:48:44" itemprop="dateModified" datetime="2020-07-21T07:48:44+08:00">2020-07-21</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -255,48 +249,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>两种求积性函数前缀和的方法。</p>
+        <p>对于一些奇怪的数论问题有奇效。也是对数论函数的另一种视角。</p>
 <a id="more"></a>
-<h2 id="Powerful-Number-筛"><a href="#Powerful-Number-筛" class="headerlink" title="Powerful Number 筛"></a>Powerful Number 筛</h2><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul>
-<li><p>积性</p>
-</li>
-<li><p>有一个和它在质数处取值相等的简单函数</p>
-</li>
-</ul>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>Powerful Number 是指其每一个质因数的次数都大于等于 2 的数。可以证明其数量是 $O(\sqrt n)$ 的。</p>
-<p>假设我们要求 $F$ 的前缀和，设计积性函数 $G$，使得对于质数 $p$ 有 $G(p)=F(p)$，设 $H$ 使 $F=G*H$，于是就有 $H(p)=0$，又因为 $H$ 显然也积性，从而 $H$ 只在 Powerful Number 处取非 0 值。</p>
-<p>然后考虑一个和杜教筛一样的柿子：</p>
-<script type="math/tex; mode=display">S_F(n)=\sum_{d=1}^nH(d)S_G(\lfloor\dfrac{n}{d}\rfloor)</script><p>可以取巧妙的 $G$ 使得它容易杜教筛。$H(p^k)$ 一般也比较容易分析。接下来直接爆搜出所有的 Powerful Number 和它们的函数值即可。</p>
-<p>非常好写，而且如果 $G$ 的前缀和很容易求的话可以 $O(\sqrt n)$。</p>
-<h2 id="Min25-筛"><a href="#Min25-筛" class="headerlink" title="Min25 筛"></a>Min25 筛</h2><h3 id="要求-1"><a href="#要求-1" class="headerlink" title="要求"></a>要求</h3><ul>
-<li><p>积性</p>
-</li>
-<li><p>在质数的幂处的取值是项数较少的多项式</p>
-</li>
-</ul>
-<h3 id="做法-1"><a href="#做法-1" class="headerlink" title="做法"></a>做法</h3><p>思路借鉴了模板题第二篇题解，努力讲的清楚了一些，我尽力了……</p>
-<p>设要求的是 $\sum_{i=1}^n f(i)$。先按质数和合数分类，合数再按其最小质因子分类，注意合数 $n$ 的最小质因子小于等于 $\sqrt n$：</p>
-<script type="math/tex; mode=display">\sum_{p} f(i)+\sum_{p\le \sqrt n,p^e\le n}f(p^e)\sum_{1\le i\le n/p^e,i\text{ 的最小质因子}>p}f(i)</script><p>兄啊，这不是每一项都不能算吗（恼）</p>
-<p>我们先考虑一下 $f$ 在质数处的值之和。</p>
-<h4 id="质数处的值"><a href="#质数处的值" class="headerlink" title="质数处的值"></a>质数处的值</h4><p>我们搞出一个函数 $f’(x)$，这个函数<strong>完全积性</strong>，在<strong>质数处</strong>取值和 $f(x)$ 一样。考虑一个 DP，设</p>
-<script type="math/tex; mode=display">g(n,j)=\sum_{i\text{ 是质数或其最小质因子}>p_j,i\le n}f'(i)</script><p>其中 $p_j$ 是第 $j$ 个质数。</p>
-<p>当 $j\leftarrow j+1$，会有一些 $i$ 变得不满足条件，也就是那些最小质因子 $=p_j$ 的合数。</p>
-<p>如果提出一个 $p_j$（因为完全积性所以随便提），那么对它们的要求就只有：<strong>没有小于 $p_j$ 的因子，而且不是小于 $p_j$ 的质数</strong>。也就是 $g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1)$。</p>
-<p>所以</p>
-<script type="math/tex; mode=display">g(n,j)=\begin{cases}g(n,j-1)&(p_j^2>n)\\g(n,j-1)-f'(p_j)(g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1))&(p_j^2\le n)\end{cases}</script><p>那个 $g(p_{j-1},j-1))$ 就是小于 $p_j$ 的质数之 $f’$ 和。线性筛的同时处理。</p>
-<p>于是发现用到的 $n$ 只有 $O(\sqrt n)$ 种。（可以不用 <code>map</code> 存储，大意就是对 $x\le \sqrt n$ 直接存到第一个桶，否则映射到第二个桶的 $\frac{N}{x}$ 处）</p>
-<p>总结一下就是靠一个 DP 一步步把非质数值给清洗掉。类似埃氏筛？</p>
-<p>设 $m$ 是 $p_m^2\le n$ 的最大 $m$。则 $g(n,m)$ 就是所有质数的函数值和，不过我们不打算直接使用。</p>
-<h4 id="整个柿子"><a href="#整个柿子" class="headerlink" title="整个柿子"></a>整个柿子</h4><p>故技重施，设 $S(n,j)$ 是最小质因数大于 $p_j$ 的 $f(i)$ 和，则有</p>
-<script type="math/tex; mode=display">S(n,j)=g(n,m)-g(p_{j-1},j-1)+\sum_{i>j,p_i^e\le n}f(p_i^e)(S(\frac{n}{p^e_i})+[e>1])</script><h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>考虑对 $g$ 的 DP。用到的一个 $n=\lfloor\dfrac{N}{x}\rfloor$ 会枚举小于等于 $\sqrt n$ 的所有质数，我们知道小于 $n$ 的质数是 $O(\dfrac{n}{\ln n})$ 的，于是积一下可以知道是 $O(\dfrac{n^{3/4}}{\ln n})$。</p>
-<p>对 $S$ 的 DP 可以证明是 $O(n^{1-\epsilon})$ 的。</p>
-<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><ul>
-<li><p><a href="https://www.luogu.com.cn/problem/P5325" target="_blank" rel="noopener">P5325 【模板】Min_25筛</a></p>
-</li>
-<li><p><a href="https://loj.ac/problem/6053" target="_blank" rel="noopener">#6053. 简单的函数</a></p>
-</li>
-</ul>
-
+<h2 id="基础形式"><a href="#基础形式" class="headerlink" title="基础形式"></a>基础形式</h2><p>数列 $\left<f(1),f(2),...\right>$ 的狄利克雷生成函数是</p>
+<script type="math/tex; mode=display">F(z)=\sum_{n=1}^{\infty}\dfrac{f(n)}{n^z}</script><p>容易验证它的乘积就是狄利克雷卷积</p>
+<script type="math/tex; mode=display">(F*G)(z)=\sum_{n=1}\dfrac{\sum_{d|n}f(d)g(\frac{n}{d})}{n^z}</script><p>狄利克雷函数初看非常的诡异，它和普通型与指数型不同，并不是一个形式幂级数。我们介绍一些典型的狄利克雷生成函数来了解它的性质。</p>
+<h2 id="典型函数"><a href="#典型函数" class="headerlink" title="典型函数"></a>典型函数</h2><p>过于显然地 $\left<1,0,0,...\right>$，也就是数论中的 $\varepsilon$ 函数，的狄利克雷生成函数是 1。</p>
+<h3 id="zeta-函数"><a href="#zeta-函数" class="headerlink" title="zeta 函数"></a>zeta 函数</h3><p>众所周知研究某型生成函数都要从 $\left<1,1,...\right>$ 开始，也就是数论中的 $\mathbf{1}$ 函数，它的狄利克雷生成函数是</p>
+<script type="math/tex; mode=display">\sum_{n=1}^{\infty}\dfrac{1}{n^z}</script><p>你可能已经在各种科普文上见过这个函数。这就是著名的黎曼 $\zeta$ 函数。</p>
+<p>和 $\dfrac{1}{1-x}$ 以及 $e^x$ 不同，它的性质比较复杂，我们甚至不完全了解它的零点……不过这和接下来的介绍关系不大。</p>
+<p>$\mathbf{1}$ 是一个（完全）积性函数，把 $n$ 分解质因数后每个 $p^k$ 对它的贡献是独立的，也就是说，一个积性函数 $f$ 的狄利克雷生成函数有下面的形式</p>
+<script type="math/tex; mode=display">\prod_{p\text{ is a prime}}\sum_{k=0}^{\infty}\dfrac{f(p^k)}{p^{kz}}</script><p>这个形式会极大地方便我们讨论积性函数的性质。比如 $\zeta(z)=$</p>
+<script type="math/tex; mode=display">\prod_{p\text{ is a prime}}\sum_{k=0}^{\infty}\dfrac{1}{p^{kz}}</script><script type="math/tex; mode=display">\prod_{p\text{ is a prime}}\dfrac{1}{1-p^{-z}}</script><p>那么它的逆就是</p>
+<h3 id="莫比乌斯函数"><a href="#莫比乌斯函数" class="headerlink" title="莫比乌斯函数"></a>莫比乌斯函数</h3><script type="math/tex; mode=display">\prod_{p\text{ is a prime}}(1-p^{-z})</script><p>当 $k=0$ 时贡献为 $1$，当 $k=1$ 时贡献为 $-1$，否则贡献为 $0$，正是莫比乌斯函数 $\mu$。也就是说</p>
+<script type="math/tex; mode=display">\mu(z)=\zeta^{-1}(z)</script><h3 id="ID-函数"><a href="#ID-函数" class="headerlink" title="ID 函数"></a>ID 函数</h3><script type="math/tex; mode=display">\sum_{n=1}^{\infty}\dfrac{n}{n^z}</script><p>显然就是</p>
+<script type="math/tex; mode=display">\zeta(z-1)</script><p>同理，</p>
+<script type="math/tex; mode=display">\mathbf{Id}_k(z)=\zeta(z-k)</script><h3 id="约数个数和"><a href="#约数个数和" class="headerlink" title="约数个数和"></a>约数个数和</h3><p>显然有</p>
+<script type="math/tex; mode=display">\sigma_k(z)=\zeta(z)\zeta(z-k)</script><h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p>有</p>
+<script type="math/tex; mode=display">\varphi(z)=\dfrac{\zeta(z-1)}{\zeta(z)}</script><p>从中可以立刻看出欧拉函数的筛法：</p>
+<script type="math/tex; mode=display">\prod_{p\text{ is a prime}}\dfrac{1-p^{-z}}{1-p^{1-z}}</script><script type="math/tex; mode=display">\prod_{p\text{ is a prime}}1+\sum_{k=1}^{\infty}\dfrac{(p-1)p^{k-1}}{p^{kz}}</script><p>也就是说，$p^k$ 的贡献是</p>
+<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\(p-1)p^{k-1}&(k\ge1)\end{cases}</script><p>当质因数增加了一个 $p$ 的时候按这个柿子更新贡献即可。</p>
+<h2 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h2><h3 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h3><p>筛出 $\varphi*\mu$。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>它就是 $\dfrac{\zeta(z-1)}{\zeta^2(z)}$，容易知道 $p^k$ 的贡献是</p>
+<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\p-2&(k=1)\\(p^2-2p+1)p^{k-2}&(k\ge 2)\end{cases}</script><h3 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h3><p><a href="https://www.luogu.com.cn/problem/T138482" target="_blank" rel="noopener">链接</a></p>
+<h3 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h3><p>显然有答案的生成函数是</p>
+<script type="math/tex; mode=display">\dfrac{\zeta(z-q)}{\zeta(z-p)}</script><p>几乎立即得到 $d^k$ 的贡献是</p>
+<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\(d^q-d^p)d^{(k-1)q}&(k\ge 1)\end{cases}</script>
     </div>
 
     
@@ -315,13 +293,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/19/ZJOI2020-baolingji/" rel="prev" title="ZJOI2020 爆零记">
-      <i class="fa fa-chevron-left"></i> ZJOI2020 爆零记
+    <a href="/2020/09/01/probability-expectation/" rel="prev" title="概率和期望（旧文补档）">
+      <i class="fa fa-chevron-left"></i> 概率和期望（旧文补档）
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/20/SPOJ-26073/" rel="next" title="SPOJ26073 题解">
-      SPOJ26073 题解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -380,7 +355,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Powerful-Number-筛"><span class="nav-number">1.</span> <span class="nav-text">Powerful Number 筛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求"><span class="nav-number">1.1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法"><span class="nav-number">1.2.</span> <span class="nav-text">做法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Min25-筛"><span class="nav-number">2.</span> <span class="nav-text">Min25 筛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求-1"><span class="nav-number">2.1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法-1"><span class="nav-number">2.2.</span> <span class="nav-text">做法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#质数处的值"><span class="nav-number">2.2.1.</span> <span class="nav-text">质数处的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整个柿子"><span class="nav-number">2.2.2.</span> <span class="nav-text">整个柿子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">2.2.3.</span> <span class="nav-text">复杂度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">3.</span> <span class="nav-text">例题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础形式"><span class="nav-number">1.</span> <span class="nav-text">基础形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#典型函数"><span class="nav-number">2.</span> <span class="nav-text">典型函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zeta-函数"><span class="nav-number">2.1.</span> <span class="nav-text">zeta 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数"><span class="nav-number">2.2.</span> <span class="nav-text">莫比乌斯函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID-函数"><span class="nav-number">2.3.</span> <span class="nav-text">ID 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约数个数和"><span class="nav-number">2.4.</span> <span class="nav-text">约数个数和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数"><span class="nav-number">2.5.</span> <span class="nav-text">欧拉函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实际应用"><span class="nav-number">3.</span> <span class="nav-text">实际应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例一"><span class="nav-number">3.1.</span> <span class="nav-text">例一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答"><span class="nav-number">3.2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例二"><span class="nav-number">3.3.</span> <span class="nav-text">例二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答-1"><span class="nav-number">3.4.</span> <span class="nav-text">解答</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
