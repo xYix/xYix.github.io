@@ -411,7 +411,7 @@
     <url>/2020/09/01/dirichlet-GF/</url>
     <content><![CDATA[<p>对于一些奇怪的数论问题有奇效。也是对数论函数的另一种视角。</p>
 <a id="more"></a>
-<h2 id="基础形式"><a href="#基础形式" class="headerlink" title="基础形式"></a>基础形式</h2><p>数列 $\left&lt; f(1),f(2),\dots \right&gt;$ 的狄利克雷生成函数是</p>
+<h2 id="基础形式"><a href="#基础形式" class="headerlink" title="基础形式"></a>基础形式</h2><p>数列 $\left<f(1),f(2),\dots \right>$ 的狄利克雷生成函数是</p>
 <script type="math/tex; mode=display">F(z)=\sum_{n=1}^{\infty}\dfrac{f(n)}{n^z}</script><p>容易验证它的乘积就是狄利克雷卷积</p>
 <script type="math/tex; mode=display">(F*G)(z)=\sum_{n=1}\dfrac{\sum_{d|n}f(d)g(\frac{n}{d})}{n^z}</script><p>狄利克雷函数初看非常的诡异，它和普通型与指数型不同，并不是一个形式幂级数。我们介绍一些典型的狄利克雷生成函数来了解它的性质。</p>
 <h2 id="典型函数"><a href="#典型函数" class="headerlink" title="典型函数"></a>典型函数</h2><p>过于显然地 $\left<1,0,0,...\right>$，也就是数论中的 $\varepsilon$ 函数，的狄利克雷生成函数是 1。</p>
@@ -441,8 +441,28 @@
       </tags>
   </entry>
   <entry>
-    <title>fast-factorial-calculating</title>
+    <title>快速阶乘算法</title>
     <url>/2020/09/01/fast-factorial-calculating/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>快速计算阶乘。</p>
+<a id="more"></a>
+<h1 id="naive-的做法"><a href="#naive-的做法" class="headerlink" title="naive 的做法"></a>naive 的做法</h1><p>把 $1\cdot 2\cdot 3\cdot\ldots\cdot n$ 分成长为 $B$ 的数段，显然每一段都是形如</p>
+<script type="math/tex; mode=display">\prod_{i=1}^B(x+i)</script><p>的东西，那么多点求值暴力刚出 $f(0),f(B),f(2B)…,f(B^2)$ 即可，复杂度 $O(\sqrt n\log ^2 n)$。</p>
+<h1 id="精甚细腻的做法"><a href="#精甚细腻的做法" class="headerlink" title="精甚细腻的做法"></a>精甚细腻的做法</h1><p>我们设</p>
+<script type="math/tex; mode=display">f(d,x)=\prod_{i=1}^d(x+i)</script><p>要求的就是 $f(B,0),f(B,B),f(B,2B),…,f(B,B^2)$。</p>
+<p>那么我们考虑从 $f(d,0),f(d,B),f(d,2B),…,f(d,dB)$ 倍增上去。</p>
+<h2 id="d-leftarrow-d-1"><a href="#d-leftarrow-d-1" class="headerlink" title="$d\leftarrow d+1$"></a>$d\leftarrow d+1$</h2><p>非常简单，$f(d+1,(d+1)B)$ 暴力算，其他的</p>
+<script type="math/tex; mode=display">f(d+1,kB)=f(d,kB)(kB+d+1)</script><p>显然 $O(d)$。</p>
+<h2 id="d-leftarrow-2d"><a href="#d-leftarrow-2d" class="headerlink" title="$d\leftarrow 2d$"></a>$d\leftarrow 2d$</h2><p>我们有</p>
+<script type="math/tex; mode=display">f(2d,kB)=f(d,kB)f(d,kB+d)</script><p>大概就是要算这样的一组东西</p>
+<p><img src="\images\fac.png" alt=""></p>
+<p>设 $h(x)=f(Bx)$，那么其实就是要求三次</p>
+<script type="math/tex; mode=display">h(k),h(k+1),...,h(k+d)</script><p>拉格朗日插一插<del>叉义叉</del>得到</p>
+<script type="math/tex; mode=display">h(j+k)=\sum_{i=0}^dh(i)\prod_{i'\neq i}\dfrac{j+k-i'}{i-i'}</script><script type="math/tex; mode=display">h(j+k)=\prod_{i=0}^d(j+k-i)\sum_{i=0}^d\dfrac{h(i)}{i!(d-i)!(-1)^{d-i}}\dfrac{1}{j+k-i}</script><p>前面那个双指针，后面那个卷积即可。注意 $k$ 可能不是整数所以 $j+k$ 可能巨大无比，卷积时注意移位。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这题其实坠痛苦的是任意模数……</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>多项式</tag>
+      </tags>
   </entry>
 </search>
