@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="另一种看待 FFT 的视角。不只是奇偶拆分。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 FFT（旧文补档）">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/about-FFT/index.html">
+<meta property="og:site_name" content="x义x的博客">
+<meta property="og:description" content="另一种看待 FFT 的视角。不只是奇偶拆分。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-01T12:36:49.000Z">
+<meta property="article:modified_time" content="2020-09-02T08:20:41.925Z">
+<meta property="article:author" content="x义x">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="多项式">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/09/01/about-FFT/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>关于 FFT（旧文补档） | x义x的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">x义x的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">……就算是单程票，也是可以的吧？</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-博客首页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>博客首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于作者">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于作者</a>
+
+  </li>
+        <li class="menu-item menu-item-标签一览">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签一览</a>
+
+  </li>
+        <li class="menu-item menu-item-文章归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章归档</a>
+
+  </li>
+        <li class="menu-item menu-item-膜瑇！">
+
+    <a href="/modai/" rel="section"><i class="fa fa-user fa-fw"></i>膜瑇！</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/about-FFT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="x义x">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x义x的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于 FFT（旧文补档）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-01 20:36:49" itemprop="dateCreated datePublished" datetime="2020-09-01T20:36:49+08:00">2020-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-02 16:20:41" itemprop="dateModified" datetime="2020-09-02T16:20:41+08:00">2020-09-02</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>4.8k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>另一种看待 FFT 的视角。不只是奇偶拆分。</p>
+<a id="more"></a>
+<p>说是旧文补档其实我根本没存档，这篇完全是重写的……</p>
+<p>下面切入正题。</p>
+<h1 id="单位根反演"><a href="#单位根反演" class="headerlink" title="单位根反演"></a>单位根反演</h1><p>首先定义 $\omega_n$ 是 $n$ 次单位根，满足 $\omega_n^{i}\neq 1\ (1\le i&lt;n),\omega^{n}_n=1$。</p>
+<p>考虑</p>
+<script type="math/tex; mode=display">\sum_{i=0}^{n-1}\omega_{n}^{ik}</script><p>由于 $\omega_{n}^{in}=1$，所以我们可以把 $k$ 模 $n$ 考虑。</p>
+<p>对于 $1\le k&lt;n$，有 $\omega_{n}^{k}\neq 1$，于是等比数列求和得到原式为</p>
+<script type="math/tex; mode=display">\dfrac{1-\omega_{n}^{nk}}{1-\omega_{n}^k}=0</script><p>而对于 $k=0$ 则显然有原式等于 $n$。于是我们得到单位根反演</p>
+<script type="math/tex; mode=display">\boxed{[n|k]=\dfrac{1}{n}\sum_{i=0}^{n-1}\omega_{n}^{ik}}</script><h1 id="循环卷积"><a href="#循环卷积" class="headerlink" title="循环卷积"></a>循环卷积</h1><p>考虑循环卷积</p>
+<script type="math/tex; mode=display">c_k=\sum_{(i+j)\bmod n=k}a_ib_j</script><p>也就是说 $[n|i+j-k]$。应用我们刚刚得到的单位根反演：</p>
+<script type="math/tex; mode=display">c_k=\dfrac 1 n\sum_{i,j}a_ib_j\sum_{d=0}^{n-1}\omega_{n}^{di+dj-dk}</script><p>换求和号并整理得</p>
+<script type="math/tex; mode=display">c_k=\dfrac{1}{n}\sum_{d=0}^{n-1}\omega_{n}^{-dk}\sum_{i}a_i\omega_{n}^{di}\sum_{i}b_i\omega_{n}^{di}</script><p>我们从这个式子中发现了两种形式。设</p>
+<script type="math/tex; mode=display">\boxed{A_d=\sum_{i=0}^{n-1}a_i\omega_{n}^{di}}</script><p>这就是离散傅里叶变换 $\text{DFT}$。而</p>
+<script type="math/tex; mode=display">\boxed{a_i=\dfrac 1 n\sum_{d=0}^{n-1}\omega_{n}^{-di}A_d}</script><p>就是 $\text{DFT}^{-1}$。下面验证 $\text{DFT}^{-1}(\text{DFT}(a))=a$：</p>
+<script type="math/tex; mode=display">\begin{aligned}\text{DFT}^{-1}(\text{DFT}(a))_i&=\dfrac{1}{n}\sum_{d=0}^{n-1}\omega_{n}^{-di}\sum_{j=0}^{n-1}a_j\omega_{n}^{dj}\\&=\sum_{j=0}^{n-1}a_j\dfrac{1}{n}\sum_{d=0}^{n-1}\omega_{n}^{d(j-i)}\\&=\sum_{j=0}^{n-1}a_j[n|j-i]\\&=a_i\end{aligned}</script><p>$\text{DFT}(\text{DFT}^{-1})$ 类似，不表。</p>
+<p>对于长度为 $2^k$ 的 DFT，我们都知道可以奇偶拆分来计算。对于长度不那么好的序列，我们需要一些技巧。</p>
+<h1 id="Bluestein-算法（任意长度循环卷积）"><a href="#Bluestein-算法（任意长度循环卷积）" class="headerlink" title="Bluestein 算法（任意长度循环卷积）"></a>Bluestein 算法（任意长度循环卷积）</h1><p>请注意，虽然标题是 _任意长度循环卷积_ ，但是仍然要求单位根 $\omega_{n}$ 存在（我们对 $\text{DFT}$ 的完全建立在单位根的性质上）推导，如果你使用的是 NTT 那么请千万注意这一点。</p>
+<p>我们有</p>
+<script type="math/tex; mode=display">di={d+i\choose 2}-{d\choose 2}-{i\choose 2}</script><p>那么用它换掉 $\omega_n^{di}$，$\text{DFT}$ 就变为</p>
+<script type="math/tex; mode=display">A_d=\omega_{n}^{-{d\choose 2}}\sum_{i=0}^{n-1}a_i\omega_{n}^{\tiny\begin{pmatrix}d+i\\2\end{pmatrix}-\begin{pmatrix}i\\2\end{pmatrix}}</script><p>显然获得了一个卷积形式。<del>用 DFT 优化卷积，再用卷积做 DFT</del></p>
+<p>参考例题：</p>
+<ul>
+<li><p><a href="https://loj.ac/problem/3058" target="_blank" rel="noopener">【HNOI2019】白兔之舞</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/problem/P4191" target="_blank" rel="noopener">【CTSC2010】性能优化</a></p>
+</li>
+</ul>
+<h1 id="两次变一次优化"><a href="#两次变一次优化" class="headerlink" title="两次变一次优化"></a>两次变一次优化</h1><p>现在希望求 $\text{DFT}(a),\text{DFT}(b)$。下面介绍一种高妙操作，使得求这两个序列只需要一次 $\text{DFT}$。</p>
+<p>首先记复数 $z=a+bi$ 的共轭为 $\text{conj}(z):=a-bi$。有一个显然的结论，读者自行验证：</p>
+<script type="math/tex; mode=display">\text{conj}(z_1z_2)=\text{conj}(z_1)\text{conj}(z_2)</script><p>（事实上 $\mathbb{C}$ 到自身的，保持加法和乘法都不变的，而且连续的映射似乎只有共轭？）</p>
+<p>注意到下面两个事实：</p>
+<ul>
+<li><p>$\text{conj}(\omega_n^k)=\omega_{n}^{-k}$</p>
+</li>
+<li><p>如果 $\zeta=z_1+z_2i$，那么 $z_1=\dfrac{\zeta+\text{conj}(\zeta)}{2},z_2=\dfrac{\zeta-\text{conj}(\zeta)}{2i}$</p>
+</li>
+</ul>
+<p>构造 $p=a-bi,q=a+bi$。则有</p>
+<script type="math/tex; mode=display">\text{conj}(\text{DFT}(p)_j)=\text{DFT}(q)_{-j}</script><p>也就是说只要求出 $\text{DFT}(p)$，将其共轭再翻转就得到了 $\text{DFT}(q)$，也就得到了 $\text{DFT}(a),\text{DFT}(b)$。</p>
+<p>七次变四次的拆系数任意模数 NTT 板子：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> db long double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxN=<span class="number">524288</span>;</span><br><span class="line"><span class="keyword">const</span> db Pi=<span class="built_in">acos</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Cpl</span>&#123;</span></span><br><span class="line">    db r,i;</span><br><span class="line">    Cpl(db r0=<span class="number">0</span>,db i0=<span class="number">0</span>)&#123;r=r0;i=i0;&#125;</span><br><span class="line">    Cpl <span class="keyword">operator</span> +(<span class="keyword">const</span> Cpl b)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Cpl(r+b.r,i+b.i);&#125;</span><br><span class="line">    Cpl <span class="keyword">operator</span> -(<span class="keyword">const</span> Cpl b)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Cpl(r-b.r,i-b.i);&#125;</span><br><span class="line">    Cpl <span class="keyword">operator</span> *(<span class="keyword">const</span> Cpl b)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Cpl(r*b.r-i*b.i,r*b.i+i*b.r);&#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> ==(<span class="keyword">const</span> Cpl b)<span class="keyword">const</span>&#123;<span class="keyword">return</span> <span class="built_in">abs</span>(r-b.r)&lt;<span class="number">1e-8</span>&amp;&amp;<span class="built_in">abs</span>(i-b.i)&lt;<span class="number">1e-8</span>;&#125;</span><br><span class="line">&#125;W[maxN],iW[maxN];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> R[maxN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(Cpl d[],<span class="keyword">int</span> n0,<span class="keyword">bool</span> flg)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">1</span>,len=<span class="number">0</span>;<span class="keyword">while</span>(x&lt;n0) x&lt;&lt;=<span class="number">1</span>,len++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++)&#123;</span><br><span class="line">        R[i]=(R[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span>)|((i&amp;<span class="number">1</span>)&lt;&lt;(len<span class="number">-1</span>));</span><br><span class="line">        <span class="keyword">if</span>(i&lt;R[i]) swap(d[i],d[R[i]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,l=maxN/(i&lt;&lt;<span class="number">1</span>);i&lt;x;i&lt;&lt;=<span class="number">1</span>,l&gt;&gt;=<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;x;j+=(i&lt;&lt;<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;i;k++)&#123;</span><br><span class="line">        Cpl a0=d[j+k],a1=(flg?iW[l*k]:W[l*k])*d[j+i+k];</span><br><span class="line">        d[j+k]=a0+a1;d[j+i+k]=a0-a1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(flg)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++) d[i].r/=x,d[i].i/=x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Cpl tp[maxN],tq[maxN];</span><br><span class="line">Cpl d1[maxN],d2[maxN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dbFFT</span><span class="params">(Cpl d1[],Cpl d2[],<span class="keyword">int</span> n0,<span class="keyword">bool</span> flg)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n0;i++) tp[i]=d1[i]+Cpl(<span class="number">0</span>,<span class="number">1</span>)*d2[i];</span><br><span class="line">	FFT(tp,n0,flg);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n0;i++) tq[i]=Cpl(tp[i].r,-tp[i].i);</span><br><span class="line">	reverse(tq+<span class="number">1</span>,tq+n0);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n0;i++) d1[i]=(tp[i]+tq[i])*Cpl(<span class="number">0.5</span>,<span class="number">0</span>),d2[i]=(tp[i]-tq[i])*Cpl(<span class="number">0</span>,<span class="number">-0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line">Cpl a1[maxN],b1[maxN],a0[maxN],b0[maxN],c1[maxN],c2[maxN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Conv</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> B[],<span class="keyword">int</span> ans[],<span class="keyword">int</span> n0,<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">1</span>;<span class="keyword">while</span>(x&lt;(n0&lt;&lt;<span class="number">1</span>)) x&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++) a1[i].r=A[i]&gt;&gt;<span class="number">15</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++) b1[i].r=B[i]&gt;&gt;<span class="number">15</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++) a0[i].r=A[i]&amp;<span class="number">0x7fff</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++) b0[i].r=B[i]&amp;<span class="number">0x7fff</span>;</span><br><span class="line">	dbFFT(a1,b1,x,<span class="number">0</span>);dbFFT(a0,b0,x,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++)</span><br><span class="line">		c1[i]=a1[i]*b1[i],</span><br><span class="line">		c2[i]=a1[i]*b0[i]+a0[i]*b1[i]+a0[i]*b0[i]*Cpl(<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">	FFT(c1,x,<span class="number">1</span>);FFT(c2,x,<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++)</span><br><span class="line">		ans[i]=(((ll)(c1[i].r+<span class="number">0.5</span>)%p&lt;&lt;<span class="number">30</span>)%p+((ll)(c2[i].r+<span class="number">0.5</span>)%p&lt;&lt;<span class="number">15</span>)%p+(ll)(c2[i].i+<span class="number">0.5</span>)%p)%p;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;x;i++)</span><br><span class="line">		a1[i].r=a1[i].i=<span class="number">0</span>,b1[i].r=b1[i].i=<span class="number">0</span>,a0[i].r=a0[i].i=<span class="number">0</span>,b0[i].r=b0[i].i=<span class="number">0</span>,c1[i].r=c1[i].i=<span class="number">0</span>,c2[i].r=c2[i].i=<span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> F[maxN],G[maxN],H[maxN];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;maxN;i++)</span><br><span class="line">        W[i]=Cpl(<span class="built_in">cos</span>(i*Pi/(maxN&gt;&gt;<span class="number">1</span>)),<span class="built_in">sin</span>(i*Pi/(maxN&gt;&gt;<span class="number">1</span>))),</span><br><span class="line">        iW[i]=Cpl(<span class="built_in">cos</span>(i*Pi/(maxN&gt;&gt;<span class="number">1</span>)),-<span class="built_in">sin</span>(i*Pi/(maxN&gt;&gt;<span class="number">1</span>)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	init();</span><br><span class="line">	<span class="keyword">int</span> N,M,P;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;N,&amp;M,&amp;P);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;F[i]),F[i]%=P;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=M;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;G[i]),G[i]%=P;</span><br><span class="line">	Conv(F,G,H,max(N+<span class="number">1</span>,M+<span class="number">1</span>),P);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=N+M;i++) <span class="built_in">printf</span>(<span class="string">"%d "</span>,H[i]); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然而因为不明原因，这玩意比没优化前跑的慢……</p>
+<p>一直以来的努力，全部木大（绝望）</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+              <a href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" rel="tag"># 多项式</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/01/fast-factorial-calculating/" rel="prev" title="快速阶乘算法">
+      <i class="fa fa-chevron-left"></i> 快速阶乘算法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单位根反演"><span class="nav-number">1.</span> <span class="nav-text">单位根反演</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环卷积"><span class="nav-number">2.</span> <span class="nav-text">循环卷积</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bluestein-算法（任意长度循环卷积）"><span class="nav-number">3.</span> <span class="nav-text">Bluestein 算法（任意长度循环卷积）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#两次变一次优化"><span class="nav-number">4.</span> <span class="nav-text">两次变一次优化</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="x义x"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">x义x</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/58567" title="luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;58567" rel="noopener" target="_blank"><i class="fas fa-code fa-fw"></i>luogu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/blog/zyxxs/" title="旧博客 → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;zyxxs&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>旧博客</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/Pataphysicist" title="codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;Pataphysicist" rel="noopener" target="_blank"><i class="fas fa-code fa-fw"></i>codeforces</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/zkdxl/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;zkdxl&#x2F;" rel="noopener" target="_blank">凯指导 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.luogu.com.cn/blog/Coding-life/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;Coding-life&#x2F;" rel="noopener" target="_blank">瑇 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/-Wallace-/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;-Wallace-&#x2F;" rel="noopener" target="_blank">汪莱士 的博客</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">x义x</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">25k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">22 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script color="44,159,111" opacity="1.0" zIndex="-1" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
