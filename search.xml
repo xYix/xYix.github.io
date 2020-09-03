@@ -431,7 +431,7 @@
 <script type="math/tex; mode=display">\begin{cases}1&(k=0)\\(p-1)p^{k-1}&(k\ge1)\end{cases}</script><p>当质因数增加了一个 $p$ 的时候按这个柿子更新贡献即可。</p>
 <h2 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h2><h3 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h3><p>筛出 $\varphi*\mu$。</p>
 <h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>它就是 $\dfrac{\zeta(z-1)}{\zeta^2(z)}$，容易知道 $p^k$ 的贡献是</p>
-<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\p-2&(k=1)\\(p^2-2p+1)p^{k-2}&(k\ge 2)\end{cases}</script><h3 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h3><p><a href="https://www.luogu.com.cn/problem/T119515" target="_blank" rel="noopener">链接</a></p>
+<script type="math/tex; mode=display">\begin{cases}1&(k=0)\\p-2&(k=1)\\(p^2-2p+1)p^{k-2}&(k\ge 2)\end{cases}</script><h3 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h3><p><a href="https://www.luogu.com.cn/problem/U119515" target="_blank" rel="noopener">链接</a></p>
 <h3 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h3><p>显然有答案的生成函数是</p>
 <script type="math/tex; mode=display">\dfrac{\zeta(z-q)}{\zeta(z-p)}</script><p>几乎立即得到 $d^k$ 的贡献是</p>
 <script type="math/tex; mode=display">\begin{cases}1&(k=0)\\(d^q-d^p)d^{(k-1)q}&(k\ge 1)\end{cases}</script>]]></content>
@@ -528,6 +528,36 @@
       <tags>
         <tag>数学</tag>
         <tag>多项式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对欧拉-麦克劳林公式的不严谨推导</title>
+    <url>/2020/09/03/euler-maclaurin-formula/</url>
+    <content><![CDATA[<p>因为很有趣就记下来了。余项什么的不管了（</p>
+<a id="more"></a>
+<p>首先有（不带余项的）泰勒公式。</p>
+<script type="math/tex; mode=display">f(x)=\sum_{i=0}^{\infty}\dfrac{1}{i!}f^{(i)}(x_0)(x-x_0)^i</script><p>令 $x_0\leftarrow x,x\leftarrow x+1$ 得</p>
+<script type="math/tex; mode=display">f(x+1)=\sum_{i=0}^{\infty}\dfrac{f^{(i)}(x)}{i!}</script><p>我们定义<strong>移位算子</strong> $\text{E}$ 为</p>
+<script type="math/tex; mode=display">\text{E}f(x)=f(x+1)</script><p>而微分算子 $\text{D}$ 我们都很熟悉，就不介绍了。</p>
+<p>上面的式子可以写为</p>
+<script type="math/tex; mode=display">\text{E}=e^{\text{D}}</script><p>而我们知道<strong>差分算子</strong> $\Delta f(x)=f(x+1)-f(x)$，显然它是 $\text{E}-\mathbf{1}=e^{D}-\mathbf{1}$。</p>
+<p>那么我们还知道前缀和是差分的逆运算，设<strong>求和算子</strong> $\Sigma$ 为</p>
+<script type="math/tex; mode=display">\Sigma f(x)=\sum_{i=0}^x f(i)</script><p>那么有</p>
+<script type="math/tex; mode=display">\Delta\Sigma=\text{E}</script><script type="math/tex; mode=display">\Sigma=1+\dfrac{1}{e^{\text{D}}-1}</script>]]></content>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分块学习笔记</title>
+    <url>/2020/09/03/sqrt-tech/</url>
+    <content><![CDATA[<p>再不学就要变成时代的眼泪了（悲）</p>
+<a id="more"></a>
+]]></content>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>分块</tag>
+        <tag>毒瘤</tag>
       </tags>
   </entry>
 </search>
