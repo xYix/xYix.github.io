@@ -531,19 +531,25 @@
       </tags>
   </entry>
   <entry>
-    <title>对欧拉-麦克劳林公式的不严谨推导</title>
+    <title>欧拉-麦克劳林级数的推导</title>
     <url>/2020/09/03/euler-maclaurin-formula/</url>
-    <content><![CDATA[<p>因为很有趣就记下来了。余项什么的不管了（</p>
+    <content><![CDATA[<p>因为很有趣就记下来了。</p>
 <a id="more"></a>
-<p>首先有（不带余项的）泰勒公式。</p>
+<p>首先有泰勒级数：</p>
 <script type="math/tex; mode=display">f(x)=\sum_{i=0}^{\infty}\dfrac{1}{i!}f^{(i)}(x_0)(x-x_0)^i</script><p>令 $x_0\leftarrow x,x\leftarrow x+1$ 得</p>
 <script type="math/tex; mode=display">f(x+1)=\sum_{i=0}^{\infty}\dfrac{f^{(i)}(x)}{i!}</script><p>我们定义<strong>移位算子</strong> $\text{E}$ 为</p>
 <script type="math/tex; mode=display">\text{E}f(x)=f(x+1)</script><p>而微分算子 $\text{D}$ 我们都很熟悉，就不介绍了。</p>
 <p>上面的式子可以写为</p>
 <script type="math/tex; mode=display">\text{E}=e^{\text{D}}</script><p>而我们知道<strong>差分算子</strong> $\Delta f(x)=f(x+1)-f(x)$，显然它是 $\text{E}-\mathbf{1}=e^{D}-\mathbf{1}$。</p>
 <p>那么我们还知道前缀和是差分的逆运算，设<strong>求和算子</strong> $\Sigma$ 为</p>
-<script type="math/tex; mode=display">\Sigma f(x)=\sum_{i=0}^x f(i)</script><p>那么有</p>
-<script type="math/tex; mode=display">\Delta\Sigma=\text{E}</script><script type="math/tex; mode=display">\Sigma=1+\dfrac{1}{e^{\text{D}}-1}</script>]]></content>
+<script type="math/tex; mode=display">\Sigma f(x)=\sum_{i=0}^{x-1} f(i)</script><p>那么有</p>
+<script type="math/tex; mode=display">\Sigma=\Delta^{-1}=\dfrac{1}{e^{\text{D}}-1}</script><p>而</p>
+<script type="math/tex; mode=display">[x^n]\dfrac{x}{e^x-1}=\dfrac{B_n}{n!}</script><p>其中 $B_n$ 是伯努利数。</p>
+<p>于是我们得到</p>
+<script type="math/tex; mode=display">\boxed{\Sigma=\sum_{i=0}^{\infty}\dfrac{B_i}{i!}\text{D}^{i-1}}</script><p>形式幂级数，永远滴神，连算子都能往里代（</p>
+<p>具体把上面的式子作用到函数 $f$ 上就是<strong>欧拉-麦克劳林级数</strong></p>
+<script type="math/tex; mode=display">\boxed{\sum_{0\le i<n}f(i)=\int_{0}^{n}f(x)\text{d}x+\sum_{i=1}^{\infty}\dfrac{B_i}{i!}f^{(i-1)}(n)}</script><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>关于 <strong>欧拉-麦克劳林公式</strong>（也就是欧拉-麦克劳林级数加上用来估计误差的余项）的资料可以在<a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89-%E9%BA%A6%E5%85%8B%E5%8A%B3%E6%9E%97%E6%B1%82%E5%92%8C%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener">这里</a>查看。</p>
+]]></content>
       <tags>
         <tag>数学</tag>
       </tags>
