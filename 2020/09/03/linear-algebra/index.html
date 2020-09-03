@@ -22,27 +22,23 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题目链接">
+  <meta name="description" content="非常重要的数学基础知识。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SPOJ26073 题解">
-<meta property="og:url" content="http://yoursite.com/2020/07/20/SPOJ-26073/index.html">
+<meta property="og:title" content="线性代数学习笔记（搬运）">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/linear-algebra/index.html">
 <meta property="og:site_name" content="x义x的博客">
-<meta property="og:description" content="题目链接">
+<meta property="og:description" content="非常重要的数学基础知识。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yhx-12243.github.io/OI-transit/records/uploads/42.png">
-<meta property="og:image" content="http://yoursite.com/images/SPOJ-26073-1.png">
-<meta property="og:image" content="http://yoursite.com/images/SPOJ-26073-2.png">
-<meta property="og:image" content="http://yoursite.com/images/SPOJ-26073-3.png">
-<meta property="article:published_time" content="2020-07-20T03:24:04.000Z">
-<meta property="article:modified_time" content="2020-07-20T09:45:23.581Z">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/g3w7zlis.png">
+<meta property="article:published_time" content="2020-09-03T10:43:01.000Z">
+<meta property="article:modified_time" content="2020-09-03T10:44:28.705Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="数学">
-<meta property="article:tag" content="数论">
-<meta property="article:tag" content="Stern-Brocot Tree">
+<meta property="article:tag" content="线性代数">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yhx-12243.github.io/OI-transit/records/uploads/42.png">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/g3w7zlis.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/20/SPOJ-26073/">
+<link rel="canonical" href="http://yoursite.com/2020/09/03/linear-algebra/">
 
 
 <script id="page-configurations">
@@ -55,7 +51,7 @@
   };
 </script>
 
-  <title>SPOJ26073 题解 | x义x的博客</title>
+  <title>线性代数学习笔记（搬运） | x义x的博客</title>
   
 
 
@@ -204,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/SPOJ-26073/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/03/linear-algebra/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -217,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          SPOJ26073 题解
+          线性代数学习笔记（搬运）
         </h1>
 
         <div class="post-meta">
@@ -228,7 +224,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-20 11:24:04 / 修改时间：17:45:23" itemprop="dateCreated datePublished" datetime="2020-07-20T11:24:04+08:00">2020-07-20</time>
+              <time title="创建时间：2020-09-03 18:43:01 / 修改时间：18:44:28" itemprop="dateCreated datePublished" datetime="2020-09-03T18:43:01+08:00">2020-09-03</time>
             </span>
 
           
@@ -243,7 +239,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.2k</span>
+              <span>4.1k</span>
             </span>
 
         </div>
@@ -255,74 +251,112 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://www.spoj.com/problems/DIVCNT1/" target="_blank" rel="noopener">题目链接</a></p>
+        <p>非常重要的数学基础知识。</p>
 <a id="more"></a>
-<p>首先把式子转化为</p>
-<script type="math/tex; mode=display">\sum_{d=1}^n\lfloor\dfrac{n}{d}\rfloor</script><p>设 $B=\lfloor\sqrt n\rfloor$。则显然有原式等于</p>
-<script type="math/tex; mode=display">-B^2+2\sum_{d=1}^{B}\lfloor\dfrac{n}{d}\rfloor</script><p>考虑</p>
-<script type="math/tex; mode=display">\sum_{d=1}^{B}\lfloor\dfrac{n}{d}\rfloor</script><p>也就是 $xy\le n,x&gt;0,y&gt;0,y\le B$ 内部的整点数，记这个区域为 $R$。这里贺一张著名图片。</p>
-<p><img src="https://yhx-12243.github.io/OI-transit/records/uploads/42.png" alt=""></p>
-<p>总的思路就是用一系列 $x,y$ 都是整数的向量拼接起来，去拟合这个函数。为了能构造出任意斜率的向量来完美拟合，我们需要 <strong>Stern-Brocot Tree</strong>。</p>
-<p>我们需要一个单调栈，里面的向量斜率单调降。设当前坐标为 $(x,y)$。算法流程如下：</p>
+<p>参考教材：《代数学引论》柯斯特利金。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h3><p>对于一组向量 $X_i$，$X=\sum a_iX_i$ 是它带有系数 $a_i$ 的<strong>线性组合</strong>。</p>
+<p>我们把一组给定向量的所有线性组合构成的集合称为这组向量<strong>张成</strong>的<strong>线性包</strong>。记为 $\left<X_i\right>$。它对于数乘和加法封闭。</p>
+<p>一个集合 $S$ 的<strong>线性包</strong> $\left<S\right>$ 是从 $S$ 中任取 _有限_ 个元素的线性组合构成的集合。</p>
+<p>一个线性包的线性包是它本身。</p>
+<h3 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h3><p>如果存在不全为 0 的 $a_i$ 使得</p>
+<script type="math/tex; mode=display">\sum a_iX_i=0</script><p>那么就称 $X_i$ <strong>线性相关</strong>，上式为<strong>不平凡</strong>的。</p>
+<p>一些显然的性质：</p>
 <ul>
-<li><p>取出栈顶向量弹出，不断加上它，直到还差一步就会走进 $R$。</p>
-</li>
-<li><ul>
-<li>每走一步都可能带来一些贡献。如图，贡献是 $xv+(v+1)(u-1)/2$。（皮克定理）</li>
+<li>如果 $X$ 线性相关，那么 _至少有一个_ $X_i$ 是其他向量的线性组合。</li>
 </ul>
-</li>
-</ul>
-<p><img src="\images\SPOJ-26073-1.png" alt=""></p>
+<p>（此处并非全部：反例如 $(1,0),(2,0),(0,1)$）</p>
 <ul>
-<li>不断弹出栈顶，直到加上栈顶刚好走不进 $R$，称它为 $r$。设最近一次弹的是 $l$（它也有可能是上一步的栈顶向量）。现在的情况是，加上 $l$ 刚好走进 $R$，加上 $r$ 刚好走不进 $R$。</li>
+<li><p>如果存在 $X_i$ 是其他向量的线性组合，那么 $X$ 线性相关。</p>
+</li>
+<li><p>如果 $X$ 的一部分线性相关那么 $X$ 也线性相关。</p>
+</li>
+<li><p>如果 $X$ 线性无关那么 $X$ 的任何一部分也线性无关。</p>
+</li>
+<li><p>如果 $X_1,X_2,…,X_n$ 线性无关而 $X_1,X_2,…,X_n,X_{n+1}$ 线性相关，那么 $X_{n+1}$ 是 $X_1,X_2,…,X_n$ 的线性组合。</p>
+</li>
+<li><p>如果 $X_1,X_2,…,X_n$ 线性无关而 $X_{n+1}$ 不能表示为它们的线性组合，那么 $X_1,X_2,…,X_n,X_{n+1}$ 也线性无关。</p>
+</li>
 </ul>
-<p><img src="\images\SPOJ-26073-2.png" alt=""></p>
+<h3 id="基，维数"><a href="#基，维数" class="headerlink" title="基，维数"></a>基，维数</h3><p>如果 $V$ 是一个 _非零_ 的线性包，而 $X_i$ 线性无关且 $\left<X_i\right>=V$，那么说 $X_i$ 是 $V$ 的一个<strong>基</strong>。</p>
+<p>那么 $V$ 中的任何元素 $X$ 都可以被表示为 $X=\sum a_iX_i$，$a_i$ 称为它相对于该基的<strong>坐标</strong>。</p>
+<p>（在指出一个向量的坐标前必须先指出基。坐标为 $(1,0,…,0),(0,1,…,0),…,(0,0,…,1)$ 的向量并非坐标恰好很特殊，而是它们定义了坐标。）</p>
+<p>（下面我们可能会混淆一个向量和它的坐标，但请记住坐标总是也和基有关。否则学习基变换的时候可能会遇到一些困难。）</p>
+<p>可以证明：如果有 $n$ 个元素的向量组 $X_i$ 与有 $m$ 个元素，且线性无关的向量组 $Y_i$ 张成的线性包同等于 $V$，则有 $m\le n$。</p>
+<p>于是显然这样的 $n$ 总是相等，因为显然有 $n_1\ge n_2,n_2\ge n_1$，所以我们把 $n$ 称作 $V$ 的<strong>维数</strong>，记作 $\dim_{\mathbb R} V$ 或 $\dim V$，也是 $X$ 的<strong>秩</strong>，记作 $\text{rank}\ X$。</p>
+<p>一个矩阵的<strong>秩</strong>定义为将其拆为一组行向量或列向量（可以证明与行还是列无关，且有 $\text{rank}\ A=\text{rank}\ (A^T)$，其中 $^T$ 表示<strong>转置</strong>，即交换某矩阵的行和列），这组向量的秩。</p>
+<h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性映射的定义"><a href="#线性映射的定义" class="headerlink" title="线性映射的定义"></a>线性映射的定义</h3><p>一个 $n$ 行 $m$ 列的矩阵 $A$ 左乘一个 $m$ 列的列向量 $X$ 会得到一个 $n$ 列的列向量 $Y$，这样的 $A$ 称为<strong>线性映射</strong>，特别地，当 $n=m$ 称其为<strong>线性变换</strong>。</p>
+<p>线性变换的概念非常直观：一个线性变换 $A$ 会把向量 $(1,0,…,0),(0,1,…,0),…,(0,0,…,1)$ 分别映射到 $A^{(1)},A^{(2)},…,A^{(n)}$（其中 $A^{(i)}$ 是 $A$ 的第 $i$ 列），空间的其他部分也被光滑地映射。旋转，剪切，拉伸等都是线性变换。</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/g3w7zlis.png" alt=""></p>
+<p>（此处灵魂画手了，原来的网格映射后还是平行的。）</p>
+<p>连续应用的两个变换相当于它们的乘积。$(G\cdot F)(x)=G(F(x))$。一些关于乘积的结论：</p>
 <ul>
-<li><p>开始二分，用 <strong>Stern-Brocot Tree</strong> 搞出一个 $l,r$ 的中间向量，也就是 $(l_x+r_x,l_y+r_y)$ 称为 $mid$。</p>
-</li>
-<li><ul>
-<li>如果 $mid$ 走一步不会进 $R$，那么 $mid$ 进栈并把 $r\leftarrow mid$ 继续二分。</li>
+<li>$(XY)^T=Y^TX^T$</li>
 </ul>
-</li>
-<li><ul>
-<li>否则，</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
-<li>如果 $r\le f’(x+x_{mid})$，那么如果继续二分就会找不到任何一步不进 $R$ 的向量，直接停止二分。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="\images\SPOJ-26073-3.png" alt=""></p>
 <ul>
-<li><ul>
-<li><ul>
-<li>↑ 可以发现如果 $r\le f’(x+x_{mid})$，$mid,r$ 的中间向量 $midmid$ 显然一步进 $R$，而且因为 $f’$ 单调增，$r\le f’(x+x_{midmid})$ 也一定满足……进入了死结。</li>
+<li>$\text{rank} (XY)\le \min(\text{rank}\ X,\text{rank}\ Y)$</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
-<li>否则 $l\leftarrow mid$ 继续二分。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>当 $y\le \sqrt[3] n$ 时可以直接暴力。可以证明这样就获得了 $O(\sqrt[3]n\log n)$ 的优异复杂度。</p>
-<p>还有一些细节：</p>
+<h3 id="线性变换环"><a href="#线性变换环" class="headerlink" title="线性变换环"></a>线性变换环</h3><p>$n$ 相等的所有线性变换构成一个环。</p>
+<p>线性变换不总是有<strong>乘法逆元</strong>：$AA^{-1}=A^{-1}A=I$。注意这不表明矩阵乘法有交换律。</p>
+<p>可以证明，某个线性变换有乘法逆元等价于它满秩。下面也称不满秩/无乘法逆元为<strong>退化</strong>。关于退化有如下结论：</p>
 <ul>
-<li><p>$(x,y)$ 从 $(\lfloor\dfrac{n}{B}\rfloor,B+1)$ 开始。可以发现所用斜率必然是 $[-1,0]$ 之间，于是栈里初始化为 $(1,0),(1,1)$。</p>
+<li><p>如果 $A$ 不退化那么它的转置也不退化。</p>
 </li>
-<li><p>为了方便可以改为存向量的绝对值。（真的方便吗？）</p>
+<li><p>如果 $B$ 不退化，那么 $\text{rank}(AB)=\text{rank}(BA)=\text{rank}\ A$。</p>
+</li>
+<li><p>如果 $A_i$ 均不退化，那么 $(A_1A_2…A_n)^{-1}=A_n^{-1}A_{n-1}^{-1}…A_1^{-1}$。</p>
 </li>
 </ul>
-<p>代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lll __int128</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">myw</span><span class="params">(lll x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!x) <span class="keyword">return</span>;</span><br><span class="line">	myw(x/<span class="number">10</span>);<span class="built_in">printf</span>(<span class="string">"%d"</span>,(<span class="keyword">int</span>)(x%<span class="number">10</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">vec</span>&#123;</span></span><br><span class="line">	ll x,y;</span><br><span class="line">	vec (ll x0=<span class="number">0</span>,ll y0=<span class="number">0</span>)&#123;x=x0,y=y0;&#125;</span><br><span class="line">	vec <span class="keyword">operator</span> +(<span class="keyword">const</span> vec b)&#123;<span class="keyword">return</span> vec(x+b.x,y+b.y);&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ll N;</span><br><span class="line">vec stk[<span class="number">1000005</span>];<span class="keyword">int</span> len;</span><br><span class="line">vec P;</span><br><span class="line">vec L,R; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ninR</span><span class="params">(vec a)</span></span>&#123;<span class="keyword">return</span> N&lt;(lll)a.x*a.y;&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">steep</span><span class="params">(ll x,vec a)</span></span>&#123;<span class="keyword">return</span> (lll)N*a.x&lt;=(lll)x*x*a.y;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">lll <span class="title">Solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	len=<span class="number">0</span>;</span><br><span class="line">	ll cbr=cbrt(N),sqr=<span class="built_in">sqrt</span>(N);</span><br><span class="line">	P.x=N/sqr,P.y=sqr+<span class="number">1</span>;</span><br><span class="line">	lll ans=<span class="number">0</span>;</span><br><span class="line">	stk[++len]=vec(<span class="number">1</span>,<span class="number">0</span>);stk[++len]=vec(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		L=stk[len--];</span><br><span class="line">		<span class="keyword">while</span>(ninR(vec(P.x+L.x,P.y-L.y)))</span><br><span class="line">			ans+=(lll)P.x*L.y+(lll)(L.y+<span class="number">1</span>)*(L.x<span class="number">-1</span>)/<span class="number">2</span>,</span><br><span class="line">			P.x+=L.x,P.y-=L.y;</span><br><span class="line">		<span class="keyword">if</span>(P.y&lt;=cbr) <span class="keyword">break</span>;</span><br><span class="line">		R=stk[len];</span><br><span class="line">		<span class="keyword">while</span>(!ninR(vec(P.x+R.x,P.y-R.y))) L=R,R=stk[--len];</span><br><span class="line">		<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">			vec mid=L+R;</span><br><span class="line">			<span class="keyword">if</span>(ninR(vec(P.x+mid.x,P.y-mid.y))) R=stk[++len]=mid;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(steep(P.x+mid.x,R)) <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">else</span> L=mid;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;P.y;i++) ans+=N/i;</span><br><span class="line">	<span class="keyword">return</span> ans*<span class="number">2</span>-sqr*sqr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;N);</span><br><span class="line">		myw(Solve());<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>线性变换 $A$ 的<strong>解空间</strong>，或称<strong>零空间</strong>，是所有使得 $AX=0$ 的 $X$ 构成的集合。记作 $V_A$。</p>
+<p>显然这样一个解空间是一个线性包。而且可以证明，$\dim V_A+\text{rank}\ A=n$。</p>
+<h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><p>直观地讲，$A$ 的行列式 $\det A$ 表示的是，如果对单位立方体应用 $A$，它的像的“有向”体积。</p>
+<p>以 $n=2$ 来举例子。此时单位立方体即所有的  $(x,y),x,y\in[0,1]$。一个线性变换 $A$ 会将它变换到一个平行四边形上，这个平行四边形的面积就是 $\det A$ 的绝对值；而如果在映射过程中单位立方体“翻转”了，那么就要加一个负号。例如</p>
+<script type="math/tex; mode=display">\begin{pmatrix}0&1\\1&0\end{pmatrix}</script><p>就可以理解为沿直线 $y=x$ 翻转单位立方体。它的行列式是 $-1$。</p>
+<p>对于 $n=3$，一个立方体有没有被翻转取决于左手定则，不展开讲了。</p>
+<p>行列式的形式化定义如下。</p>
+<script type="math/tex; mode=display">\det A=\sum_{\sigma}\varepsilon_{\sigma}\prod_ia_{i,\sigma(i)}</script><p>其中 $\sigma$ 是 $1,2,…,n$ 的一个置换。$\varepsilon_{\sigma}$ 定义为 $(-1)^k$，其中 $k$ 是 $\sigma$ 的循环数，即如果把 $\sigma$ 拆成循环那么应当有 $k$ 个循环。</p>
+<p>关于行列式有以下结论：</p>
+<ul>
+<li><p>$\det A=\det (A^T)$</p>
+</li>
+<li><p>交换 $A$ 的任意两行，行列式变号。（<strong>斜对称性</strong>）</p>
+</li>
+<li><p>可以把行列式运算看成一个对 $A$ 的 $n$ 个行向量/列向量的函数。对于任意一个行向量/列向量它都是线性的。（<strong>多重对称性</strong>）具体来说：</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">\det(A_1,A_2,...,\lambda A_i,...,A_n)=\lambda\det(A_1,A_2,...,A_i,...,A_n)</script><script type="math/tex; mode=display">\det(A_1,A_2,..., A_i+A'_i,...,A_n)=\det(A_1,A_2,...,A_i,...,A_n)+\det(A_1,A_2,...,A'_i,...,A_n)</script><ul>
+<li><p>如果某一行/列 $A_i$ 全为 0，那么 $\det A=0$。如果某两行/列相同，那么 $\det A=0$。（从现实意义上可以很容易看出，一个被“拍扁”的立方体体积显然是 0）</p>
+</li>
+<li><p>上两条的推论：如果使 $A_u=A_u+\lambda A_v$ 而生成一个新的矩阵 $A’$（也被称为在 $A$ 上进行<strong>行/列初等变换</strong>），有 $\det A’=\det A$。（$\det A’$ 可以拆成 $\det A+\lambda \det B$，其中 $B_u=B_v$ 所以 $\det B=0$。）</p>
+</li>
+<li><p>如果将 $A$ 是一个上三角矩阵，那么它的行列式就是对角线元素之积。（这提供了我们一个 $O(n^3)$ 计算行列式的方法。）</p>
+</li>
+<li><p>$\det AB=\det A\det B$。</p>
+</li>
+</ul>
+<p>事实上行列式不仅具有斜对称性和多重线性性，而且斜对称性和多重线性性和 $\det I=1$（<strong>规范性</strong>）唯一地确定了行列式这个函数。</p>
+<h2 id="行列式的应用"><a href="#行列式的应用" class="headerlink" title="行列式的应用"></a>行列式的应用</h2><ul>
+<li><p>一个矩阵不退化等价于其行列式不为 0。</p>
+</li>
+<li><p>（<strong>Cramer 法则</strong>）线性方程组</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">AX=B</script><p>的解为：（其中 $A^{(i)}$ 是 $A$ 的第 $i$ 列）</p>
+<script type="math/tex; mode=display">x_k=\dfrac{\left|A^{(1)},,...,A^{(k-1)},B,A^{(k+1)},...,A^{(n)}\right|}{\left|A^{(1)},,...,A^{(k-1)},A^{(k)},A^{(k+1)},...,A^{(n)}\right|}</script><h2 id="特征值，特征向量，可对角化"><a href="#特征值，特征向量，可对角化" class="headerlink" title="特征值，特征向量，可对角化"></a>特征值，特征向量，可对角化</h2><p>很草的是这本教材里并没有讲这些内容，接下来几章和多项式环有关，讲回线代就是第二卷的事情了，讲的是抽象向量空间而且还是没讲特征值相关的东西……</p>
+<p>所以我只好去看了3b1b的<a href="https://www.bilibili.com/video/BV1Ls411b7oL" target="_blank" rel="noopener">这期视频</a>，再加一点自己的理解写了这一节。</p>
+<h3 id="特征值，特征向量，特征多项式"><a href="#特征值，特征向量，特征多项式" class="headerlink" title="特征值，特征向量，特征多项式"></a>特征值，特征向量，特征多项式</h3><p>一个线性变换 $A$，如果存在一个 _非零_ 向量 $v$ 使得 $A$ 作用于 $v$ 后 $v$ 只收到了拉伸，那么 $v$ 就是<br>一个 $A$ 的<strong>特征向量</strong>。</p>
+<p>显然有 $Av=\lambda v$。此处 $\lambda$ 即为<strong>特征值</strong>。</p>
+<p>做一些推导：</p>
+<script type="math/tex; mode=display">Av=\lambda Iv</script><script type="math/tex; mode=display">(A-\lambda I)v=0</script><p>因为 $v$ 非零，所以这个等式不平凡，这意味着 $A-\lambda I$ 的列线性相关，而线性相关的 $A-\lambda I$ 也一定能找到对应的 $v$，于是上式等价于</p>
+<script type="math/tex; mode=display">\det(A-\lambda I)=0</script><p>这个式子现在只关于 $\lambda$ 了。我们把 $F(\lambda)=\det(A-\lambda I)$ 称为<strong>特征多项式</strong>。</p>
+<h3 id="对角化"><a href="#对角化" class="headerlink" title="对角化"></a>对角化</h3><p>一个<strong>对角矩阵</strong>只在其对角线上有值，意味着它对任何向量只有拉伸效果（只有拉伸效果的矩阵也显然一定是对角矩阵），其特征向量即 $(1,0,…,0),(0,1,…,0),…,(0,0,…,1)$ ，它的幂也非常容易计算。所以对角矩阵非常具有研究价值。</p>
+<p>介绍对角化之前，先来介绍一下<strong>基变换</strong>。即如果把基从 $(1,0,…,0),(0,1,…,0),…,(0,0,…,1)$ 变为给定的 $E^{(1)},E^{(2)},…,E^{(n)}$，某个线性变换 $A$ 该如何重新表示。</p>
+<p>显然某个向量 $v$ 会表示为：</p>
+<script type="math/tex; mode=display">E^{-1}v</script><p>线性变换 $A$ 把原来的 $E^{(i)}$变为 $AE^{(i)}$，在新的语言下，它把 $E^{-1}E^{(i)}=(0,…,1,…,0)$（仅在第 $i$ 位为 1）映射到 $E^{-1}AE^{(i)}$，所以，$A$ 应当表示为：</p>
+<script type="math/tex; mode=display">E^{-1}AE</script><p>接下来继续介绍对角化。我们知道 $A$ 对其特征向量只有拉伸效果，所以如果选取它的一组线性无关的特征向量为基，$A$ 一定会被表示为一个对角矩阵，而且对角线上的元素就是特征值，这就是对角化。</p>
+<p>一个矩阵可对角化等价于其特征多项式的实根数（包括重根）与 $A$ 的秩相等。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>完结撒花~</p>
+<p>很快（咕咕咕咕咕）将发新博客更新关于抽象向量空间的内容。（UPD 7.6：鸽了。）</p>
+
     </div>
 
     
@@ -332,8 +366,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag"># 数论</a>
-              <a href="/tags/Stern-Brocot-Tree/" rel="tag"># Stern-Brocot Tree</a>
+              <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag"># 线性代数</a>
           </div>
 
         
@@ -342,13 +375,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/20/min25-powerfulnum/" rel="prev" title="min25 筛和 Powerful Number 筛">
-      <i class="fa fa-chevron-left"></i> min25 筛和 Powerful Number 筛
+    <a href="/2020/09/03/sqrt-tech/" rel="prev" title="分块学习笔记">
+      <i class="fa fa-chevron-left"></i> 分块学习笔记
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/01/probability-expectation/" rel="next" title="概率和期望（旧文补档）">
-      概率和期望（旧文补档） <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -407,6 +437,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性组合"><span class="nav-number">1.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性相关"><span class="nav-number">1.2.</span> <span class="nav-text">线性相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基，维数"><span class="nav-number">1.3.</span> <span class="nav-text">基，维数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性变换"><span class="nav-number">2.</span> <span class="nav-text">线性变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性映射的定义"><span class="nav-number">2.1.</span> <span class="nav-text">线性映射的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性变换环"><span class="nav-number">2.2.</span> <span class="nav-text">线性变换环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行列式"><span class="nav-number">3.</span> <span class="nav-text">行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行列式的应用"><span class="nav-number">4.</span> <span class="nav-text">行列式的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征值，特征向量，可对角化"><span class="nav-number">5.</span> <span class="nav-text">特征值，特征向量，可对角化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征值，特征向量，特征多项式"><span class="nav-number">5.1.</span> <span class="nav-text">特征值，特征向量，特征多项式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对角化"><span class="nav-number">5.2.</span> <span class="nav-text">对角化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">6.</span> <span class="nav-text">后记</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
