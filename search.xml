@@ -709,4 +709,23 @@
         <tag>线性代数</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AGC038E 题解</title>
+    <url>/2020/09/04/agc-038-e/</url>
+    <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc038/tasks/agc038_e" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT5202" target="_blank" rel="noopener">题目翻译</a></p>
+<a id="more"></a>
+<p>虽然这个容斥非常诱人，但是不管容斥硬上也是可以的。</p>
+<p>考虑</p>
+<script type="math/tex; mode=display">\begin{aligned}P(X\le n)&=n![x^n]\prod_{i=0}^{N-1}\sum_{j=B_i}\dfrac{(\dfrac{A_i}{S}x)^j}{j!}\\&=n![x^n]\prod_{i}\left(e^{\frac{A_i}{S}x}-\sum_{j=0}^{B_i-1}\dfrac{(\dfrac{A_i}{S}x)^j}{j!}\right)\end{aligned}</script><p>可以观察到它应该有这样的形式</p>
+<script type="math/tex; mode=display">n![x^n]\sum_{i=0}^SP_i(x)e^{\frac{i}{S}x}</script><p>显然 $P$ 是可以大力 DP 得出的。</p>
+<p>答案应该是</p>
+<script type="math/tex; mode=display">\begin{aligned}\sum_{n=0}^{\infty}P(X>n)&=\sum_{n=0}^{\infty}1-n![x^n]\sum_{i=0}^SP_i(x)e^{\frac{i}{S}x}\\&=-\sum_{n=0}^{\infty}n![x^n]\sum_{i=0}^{S-1}P_i(x)e^{\frac{i}{S}x}\end{aligned}</script><p>是时候拆掉 $[x^n]$ 了。设 $P_{i,j}=[x^j]P_i(x),T=\sum B$。</p>
+<script type="math/tex; mode=display">-\sum_{n=0}^{\infty}n!\sum_{i=0}^{S-1}\sum_{j=0}^nP_{i,n-j}\dfrac{i^j}{S^jj!}</script><script type="math/tex; mode=display">\boxed{-\sum_{i=0}^{S-1}\sum_{k=0}^TP_{i,k}\sum_{j=0}^{\infty}\left(\dfrac{i}{S}\right)^j\dfrac{j!}{(j-k)!}}</script><p>设后面那个东西是 $k!F_k(\dfrac{i}{S})$，也就是说</p>
+<script type="math/tex; mode=display">\begin{aligned}F_k(x)&=\sum_{i=0}^{\infty}{i\choose k}x^i\\&={0\choose k}+\sum_{i=1}^{\infty}\left({i-1\choose k}+{i-1\choose k-1}\right)x^i\\&=xF_k(x)+xF_{k-1}(x)\end{aligned}</script><script type="math/tex; mode=display">\boxed{F_k(x)=\dfrac{x}{1-x}F_{k-1}(x)}</script><p>递推即可。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>生成函数</tag>
+      </tags>
+  </entry>
 </search>
