@@ -400,6 +400,8 @@
 <script type="math/tex; mode=display">P(X_n\le x)=\begin{cases}0&(x<l)\\\left(\dfrac{x-l}{r-l}\right)^n&(x\in [l,r])\\1&(x>r)\end{cases}</script><script type="math/tex; mode=display">P(X_n\ge x)=\begin{cases}1&(x<l)\\1-\left(\dfrac{x-l}{r-l}\right)^n&(x\in [l,r])\\0&(x>r)\end{cases}</script><p>运用连续情况下的整数概率公式，得到答案为</p>
 <script type="math/tex; mode=display">\dfrac{nr+l}{n+1}</script><h3 id="例五"><a href="#例五" class="headerlink" title="例五"></a>例五</h3><p><a href="https://www.luogu.org/problem/P3343" target="_blank" rel="noopener">P3343 [ZJOI2015]地震后的幻想乡</a></p>
 <h3 id="解答-4"><a href="#解答-4" class="headerlink" title="解答"></a>解答</h3><p>_rqy 的题解写得太清晰了以至于我完全没有可以补充的地方……所以直接看罢。</p>
+<h3 id="例六"><a href="#例六" class="headerlink" title="例六"></a>例六</h3><p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">#372. 【UR #17】滑稽树前做游戏</a></p>
+<h3 id="解答-5"><a href="#解答-5" class="headerlink" title="解答"></a>解答</h3><p><a href="https://xyix.github.io/2020/09/06/uoj-372/" target="_blank" rel="noopener">这里</a></p>
 ]]></content>
       <tags>
         <tag>数学</tag>
@@ -747,7 +749,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj-372</title>
+    <title>uoj#372 题解</title>
     <url>/2020/09/06/uoj-372/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
