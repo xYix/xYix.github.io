@@ -817,7 +817,7 @@
 <h1 id="ZJOI2020-Day1"><a href="#ZJOI2020-Day1" class="headerlink" title="ZJOI2020 Day1"></a>ZJOI2020 Day1</h1><h2 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h2><p><a href="https://www.luogu.com.cn/problem/P6630" target="_blank" rel="noopener">题目链接</a></p>
 <p>考虑以下 5 类点：</p>
 <p><img src="\images\zjoi2020d1t2.png" alt=""></p>
-<p>白色点标记会被清空；</p>
+<p>白色点标记会被清空；红色点一定会被打上标记；灰色点标记一定不变；黄色点标记也不变。橙色点比较麻烦，它取决于自己的祖先有没有标记 <code>pushdown</code> 下来。</p>
 <p>设 $f_x$ 是当前 $x$ 有标记的概率，$g_x$ 是 $x$ 的祖先中有标记的概率。</p>
 ]]></content>
   </entry>
