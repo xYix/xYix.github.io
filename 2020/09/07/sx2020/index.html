@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/zjoi2020d1t2.png">
 <meta property="article:published_time" content="2020-09-07T04:42:20.000Z">
-<meta property="article:modified_time" content="2020-09-07T05:39:50.785Z">
+<meta property="article:modified_time" content="2020-09-07T05:48:25.153Z">
 <meta property="article:author" content="x义x">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/zjoi2020d1t2.png">
@@ -222,22 +222,22 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-07 12:42:20 / 修改时间：13:39:50" itemprop="dateCreated datePublished" datetime="2020-09-07T12:42:20+08:00">2020-09-07</time>
+              <time title="创建时间：2020-09-07 12:42:20 / 修改时间：13:48:25" itemprop="dateCreated datePublished" datetime="2020-09-07T12:42:20+08:00">2020-09-07</time>
             </span>
 
           
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+            <span class="post-meta-item" title="阅读次数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
+                <i class="fa fa-users"></i>
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
+              <span class="firestore-visitors-count"></span>
             </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>229</span>
+              <span>2.1k</span>
             </span>
 
         </div>
@@ -274,7 +274,7 @@
 <td></td>
 <td></td>
 <td>$\sqrt{}$</td>
-<td></td>
+<td>$\sqrt{}$</td>
 <td>$\sqrt{}$</td>
 <td></td>
 </tr>
@@ -291,10 +291,13 @@
 </div>
 <h1 id="ZJOI2020-Day1"><a href="#ZJOI2020-Day1" class="headerlink" title="ZJOI2020 Day1"></a>ZJOI2020 Day1</h1><h2 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h2><p><a href="https://www.luogu.com.cn/problem/P6630" target="_blank" rel="noopener">题目链接</a></p>
 <p>考虑以下 5 类点：</p>
-<p><img src="\images\zjoi2020d1t2.png" alt=""></p>
-<p>白色点标记会被清空；红色点一定会被打上标记；灰色点标记一定不变；黄色点标记也不变。橙色点比较麻烦，它取决于自己的祖先有没有标记 <code>pushdown</code> 下来。</p>
-<p>设 $f_x$ 是当前 $x$ 有标记的概率，$g_x$ 是 $x$ 的祖先中有标记的概率。</p>
+<div style="width:70%;margin:auto"><img src="\images\zjoi2020d1t2.png" alt=""></div>
 
+<p>白色点标记会被清空；红色点一定会被打上标记；灰色点标记一定不变；黄色点标记也不变。橙色点比较麻烦，它取决于自己的祖先有没有标记 <code>pushdown</code> 下来。</p>
+<p>设 $f_x$ 是当前 $x$ 有标记的概率，$g_x$ 是 $x$ 的祖先中有标记的概率。于是就可以 DP 了。</p>
+<p>我们发现每次转移系数都一样，于是矩乘即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p=<span class="number">998244353</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">mat</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">3</span>];</span><br><span class="line">	mat ()&#123;<span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="keyword">sizeof</span>(a));&#125;</span><br><span class="line">	mat <span class="keyword">operator</span> *(<span class="keyword">const</span> mat b)<span class="keyword">const</span>&#123;</span><br><span class="line">		mat c;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">3</span>;k++)</span><br><span class="line">			c.a[i][k]=(c.a[i][k]+<span class="number">1L</span>L*a[i][j]*b.a[j][k]%p)%p;</span><br><span class="line">		<span class="keyword">return</span> c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">mat <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">		mat c,b=*<span class="keyword">this</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++) c.a[i][i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(k)&#123;</span><br><span class="line">			<span class="keyword">if</span>(k&amp;<span class="number">1</span>) c=c*b;</span><br><span class="line">			b=b*b;</span><br><span class="line">			k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> c;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;G,H;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> N,K,M;</span><br><span class="line"><span class="keyword">int</span> A[<span class="number">400005</span>],lc[<span class="number">400005</span>],rc[<span class="number">400005</span>],Lp[<span class="number">400005</span>],midp[<span class="number">400005</span>],Rp[<span class="number">400005</span>],idx,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=++idx;Lp[x]=L,Rp[x]=R;</span><br><span class="line">	<span class="keyword">int</span> ty;</span><br><span class="line">	<span class="keyword">if</span>(L!=R) ty=++y,lc[x]=init(L,A[ty]),rc[x]=init(A[ty]+<span class="number">1</span>,R),midp[x]=A[ty];</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> l)</span></span>&#123;<span class="keyword">return</span> <span class="number">1L</span>L*l*(l+<span class="number">1</span>)/<span class="number">2</span>%p;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;<span class="keyword">return</span> (calc(r)-calc(l<span class="number">-1</span>)+p)%p;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(k)&#123;</span><br><span class="line">		<span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans=<span class="number">1L</span>L*ans*a%p;</span><br><span class="line">		a=<span class="number">1L</span>L*a*a%p;</span><br><span class="line">		k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"><span class="keyword">int</span> h[<span class="number">400005</span>],f[<span class="number">400005</span>],s[<span class="number">400005</span>],g[<span class="number">400005</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Solve</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	G=mat();</span><br><span class="line">	<span class="keyword">int</span> L=Lp[x],R=Rp[x];</span><br><span class="line">	f[x]=(<span class="number">1l</span>l*L*(N+<span class="number">1</span>-R)%p*M%p-s[fa]+p)%p;</span><br><span class="line">	s[x]=(s[fa]+f[x])%p;</span><br><span class="line">	h[x]=<span class="number">1l</span>l*(calc(L<span class="number">-1</span>)+calc(N-R))*M%p;</span><br><span class="line">	<span class="keyword">int</span> p1=f[x],</span><br><span class="line">		p2=s[fa],</span><br><span class="line">		p3=g[x],</span><br><span class="line">		p4=(<span class="number">1l</span>l*(R-L)*(N-R+L<span class="number">-1</span>)+calc(R-L+<span class="number">1</span>)<span class="number">-1</span>)%p*M%p,</span><br><span class="line">		p5=h[fa];</span><br><span class="line">	G.a[<span class="number">0</span>][<span class="number">0</span>]=((p3+p4)%p+p5)%p,	G.a[<span class="number">0</span>][<span class="number">1</span>]=p2,			G.a[<span class="number">0</span>][<span class="number">2</span>]=p1;</span><br><span class="line">	G.a[<span class="number">1</span>][<span class="number">0</span>]=p4,			G.a[<span class="number">1</span>][<span class="number">1</span>]=(p2+p5)%p,	G.a[<span class="number">1</span>][<span class="number">2</span>]=(p1+p3)%p;</span><br><span class="line">	G.a[<span class="number">2</span>][<span class="number">0</span>]=p4,			G.a[<span class="number">2</span>][<span class="number">1</span>]=<span class="number">0</span>,			G.a[<span class="number">2</span>][<span class="number">2</span>]=((p1+p2)%p+(p3+p5)%p)%p;</span><br><span class="line">	H=G.qpow(K);ans=(ans+H.a[<span class="number">0</span>][<span class="number">2</span>])%p;</span><br><span class="line">	<span class="keyword">if</span>(L==R)<span class="keyword">return</span>;</span><br><span class="line">	g[lc[x]]=(<span class="number">1l</span>l*(R-midp[x])*(N-R)+calc(R-midp[x]))%p*M%p;</span><br><span class="line">	g[rc[x]]=(<span class="number">1l</span>l*(midp[x]-L+<span class="number">1</span>)*(L<span class="number">-1</span>)+calc(midp[x]-L+<span class="number">1</span>))%p*M%p;</span><br><span class="line">	Solve(lc[x],x);Solve(rc[x],x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;N,&amp;K);M=qpow(calc(N),p<span class="number">-2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;A[i]);</span><br><span class="line">	init(<span class="number">1</span>,N);Solve(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h2>
     </div>
 
     
@@ -371,7 +374,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ZJOI2020-Day1"><span class="nav-number">1.</span> <span class="nav-text">ZJOI2020 Day1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#T2"><span class="nav-number">1.1.</span> <span class="nav-text">T2</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ZJOI2020-Day1"><span class="nav-number">1.</span> <span class="nav-text">ZJOI2020 Day1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#T2"><span class="nav-number">1.1.</span> <span class="nav-text">T2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T3"><span class="nav-number">1.2.</span> <span class="nav-text">T3</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -456,41 +459,92 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">53k</span>
+    <span title="站点总字数">55k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">48 分钟</span>
+    <span title="站点阅读时长">50 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><script color="44,159,111" opacity="1.0" zIndex="-1" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
 
 
 
 
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey   : '',
+      projectId: ''
+    });
+
+    function getCount(doc, increaseCount) {
+      // IncreaseCount will be false when not in article page
+      return doc.get().then(d => {
+        var count = 0;
+        if (!d.exists) { // Has no data, initialize count
+          if (increaseCount) {
+            doc.set({
+              count: 1
+            });
+            count = 1;
+          }
+        } else { // Has data
+          count = d.data().count;
+          if (increaseCount) {
+            // If first view this article
+            doc.set({ // Increase count
+              count: count + 1
+            });
+            count++;
+          }
+        }
+
+        return count;
+      });
+    }
+
+    function appendCountTo(el) {
+      return count => {
+        el.innerText = count;
+      }
+    }
+  </script>
+  <script>
+    (function() {
+      var db = firebase.firestore();
+      var articles = db.collection('articles');
+
+      if (CONFIG.page.isPost) { // Is article page
+        var title = document.querySelector('.post-title').innerText.trim();
+        var doc = articles.doc(title);
+        var increaseCount = CONFIG.hostname === location.hostname;
+        if (localStorage.getItem(title)) {
+          increaseCount = false;
+        } else {
+          // Mark as visited
+          localStorage.setItem(title, true);
+        }
+        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
+      } else if (CONFIG.page.isHome) { // Is index page
+        var promises = [...document.querySelectorAll('.post-title')].map(element => {
+          var title = element.innerText.trim();
+          var doc = articles.doc(title);
+          return getCount(doc);
+        });
+        Promise.all(promises).then(counts => {
+          var metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => {
+            appendCountTo(metas[idx])(val);
+          });
+        });
+      }
+    })();
+  </script>
 
 
 
