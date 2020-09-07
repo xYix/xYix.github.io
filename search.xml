@@ -74,6 +74,7 @@
         <tag>计数</tag>
         <tag>生成函数</tag>
         <tag>多项式</tag>
+        <tag>拉格朗日反演</tag>
       </tags>
   </entry>
   <entry>
@@ -864,5 +865,32 @@
 <p>$G^{\left&lt;-1\right&gt;}$ 显然可以牛迭，那么这题就做完了。</p>
 <h2 id="T3-1"><a href="#T3-1" class="headerlink" title="T3"></a>T3</h2><p>神必题，这题超级没有素质，连个题解都搜不到</p>
 ]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>计数</tag>
+        <tag>生成函数</tag>
+        <tag>概率期望</tag>
+        <tag>拉格朗日反演</tag>
+        <tag>字符串</tag>
+        <tag>lyndon 科技</tag>
+        <tag>线性规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BZOJ3684 题解</title>
+    <url>/2020/09/07/bzoj-3684/</url>
+    <content><![CDATA[<p><a href="https://darkbzoj.tk/problem/3684" target="_blank" rel="noopener">$\small\color{black}\texttt{黑暗}$的题目链接</a></p>
+<a id="more"></a>
+<p>显然有</p>
+<script type="math/tex; mode=display">F(x)=x+\sum_{i\in D}F^i(x)</script><p>可以发现这里有一个恶心的多项式复合（$x^i\rightarrow F^i(x)$），幸运的是 $F(x)$ 的逆非常好求</p>
+<script type="math/tex; mode=display">F(x)-\sum_{i\in D}F^i(x)=x</script><script type="math/tex; mode=display">F^{\left<-1\right>}(x)=x-\sum_{i\in D}x^i</script><p>那么拉格朗日反演即可。</p>
+<script type="math/tex; mode=display">[x^n]F(x)=\dfrac{1}{n}[x^{n-1}]\left(\dfrac{x}{F^{\left<-1\right>}(x)}\right)^n</script>]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>计数</tag>
+        <tag>生成函数</tag>
+        <tag>多项式</tag>
+        <tag>拉格朗日反演</tag>
+      </tags>
   </entry>
 </search>
