@@ -22,23 +22,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="有标号边&#x2F;点双连通图计数。">
+  <meta name="description" content="如题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="边&#x2F;点双连通图计数">
-<meta property="og:url" content="http://yoursite.com/2020/06/11/biconnected-graph-counting/index.html">
+<meta property="og:title" content="省选 2020 补题记录">
+<meta property="og:url" content="http://yoursite.com/2020/09/07/sx2020/index.html">
 <meta property="og:site_name" content="x义x的博客">
-<meta property="og:description" content="有标号边&#x2F;点双连通图计数。">
+<meta property="og:description" content="如题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-11T11:43:26.000Z">
-<meta property="article:modified_time" content="2020-06-16T12:34:53.138Z">
+<meta property="og:image" content="http://yoursite.com/images/zjoi2020d1t2.png">
+<meta property="article:published_time" content="2020-09-07T04:42:20.000Z">
+<meta property="article:modified_time" content="2020-09-07T05:38:27.381Z">
 <meta property="article:author" content="x义x">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="计数">
-<meta property="article:tag" content="生成函数">
-<meta property="article:tag" content="多项式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/zjoi2020d1t2.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/11/biconnected-graph-counting/">
+<link rel="canonical" href="http://yoursite.com/2020/09/07/sx2020/">
 
 
 <script id="page-configurations">
@@ -51,7 +49,7 @@
   };
 </script>
 
-  <title>边/点双连通图计数 | x义x的博客</title>
+  <title>省选 2020 补题记录 | x义x的博客</title>
   
 
 
@@ -200,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/11/biconnected-graph-counting/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/07/sx2020/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -213,7 +211,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          边/点双连通图计数
+          省选 2020 补题记录
         </h1>
 
         <div class="post-meta">
@@ -222,16 +220,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-06-11 19:43:26" itemprop="dateCreated datePublished" datetime="2020-06-11T19:43:26+08:00">2020-06-11</time>
+              <time title="创建时间：2020-09-07 12:42:20 / 修改时间：13:38:27" itemprop="dateCreated datePublished" datetime="2020-09-07T12:42:20+08:00">2020-09-07</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-16 20:34:53" itemprop="dateModified" datetime="2020-06-16T20:34:53+08:00">2020-06-16</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -245,7 +237,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>903</span>
+              <span>165</span>
             </span>
 
         </div>
@@ -257,20 +249,52 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>有标号边/点双连通图计数。</p>
+        <p>如题。</p>
 <a id="more"></a>
-<p>下面只讨论有根情况，无根情况即乘以 $\dfrac 1 n$。</p>
-<p>答案为 $g_n$。</p>
-<h1 id="有标号边双连通图计数"><a href="#有标号边双连通图计数" class="headerlink" title="有标号边双连通图计数"></a>有标号边双连通图计数</h1><p>我们都知道<a href="https://www.luogu.com.cn/problem/P4841" target="_blank" rel="noopener">有标号无向连通图</a>的 EGF 怎么求。记为 $F(x)$。</p>
-<p>对于一个无向连通图，枚举根节点所在边双连通分量的大小。剩下的部分是一个个无向连通图，挂在根边双联通分量的任意一个点上，于是有</p>
-<script type="math/tex; mode=display">F(x)=\sum_{i=1}^{\infty}\dfrac{g_ix^i\exp(iF(x))}{i!}=G(x\exp F(x))</script><p>这里出现了一个复合，难以处理，需要请出一个新的工具：</p>
-<h1 id="拉格朗日反演"><a href="#拉格朗日反演" class="headerlink" title="拉格朗日反演"></a>拉格朗日反演</h1><script type="math/tex; mode=display">[x^n]A(B^{-1}(x))=\dfrac 1n[x^{n-1}]A'(x)\left(\dfrac{x}{B(x)}\right)^n</script><p>回到<strong>边双连通图计数</strong>的问题上。</p>
-<p>设 $H(x)=x\exp F(x)$，则</p>
-<script type="math/tex; mode=display">F(x)=G(H(x))</script><script type="math/tex; mode=display">[x^n]F(H^{-1}(x))=\dfrac 1n[x^{n-1}]\dfrac{F'(x)}{\exp nF(x)}=[x^n]G(x)</script><h1 id="有标号点双连通图计数"><a href="#有标号点双连通图计数" class="headerlink" title="有标号点双连通图计数"></a>有标号点双连通图计数</h1><p>根有可能存在于多个点双中，这些点双显然两两间只有根一个交点，如果把根去掉，那么原图会被分为数个连通块，一个点双对应一个。所以把连通块 exp 即可。下面分析单个连通块。</p>
-<p>枚举点双大小 $i+1$，显然它的 EGF 是</p>
-<script type="math/tex; mode=display">\sum_{i=1}^{\infty}g_{i+1}\dfrac{F(x)^i}{i!}</script><p>这里 $G(x)$ 移了一位，是 $\sum_{i=1}^\infty g_{i+1}\dfrac{x^i}{i!}$。有</p>
-<script type="math/tex; mode=display">F(x)=x\exp G(F(x))</script><script type="math/tex; mode=display">\ln\dfrac{F(x)}{x}=G(F(x))</script><script type="math/tex; mode=display">[x^n]\ln\dfrac{F(F^{-1}(x))}{F^{-1}(x)}=\dfrac{1}{n}[x^{n-1}]\left(\ln\dfrac{F(x)}{x}\right)'\left(\dfrac{x}{F(x)}\right)^n=[x^n]G(x)</script><p>设 $H(x)=\dfrac{F(x)}x$，则有</p>
-<script type="math/tex; mode=display">[x^n]G(x)=\dfrac{1}{n}[x^{n-1}]\dfrac{H'(x)}{H^{n+1}(x)}</script>
+<blockquote>
+<p>羽毛没有长齐，就不能向往蓝天吗？</p>
+</blockquote>
+<p>目前进度：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>T1代码</th>
+<th>T1题解</th>
+<th>T2代码</th>
+<th>T2题解</th>
+<th>T3代码</th>
+<th>T3题解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZJOI2020 Day1</td>
+<td></td>
+<td></td>
+<td>$\sqrt{}$</td>
+<td></td>
+<td>$\sqrt{}$</td>
+<td></td>
+</tr>
+<tr>
+<td>ZJOI2020 Day2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="ZJOI2020-Day1"><a href="#ZJOI2020-Day1" class="headerlink" title="ZJOI2020 Day1"></a>ZJOI2020 Day1</h1><h2 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h2><p><a href="https://www.luogu.com.cn/problem/P6630" target="_blank" rel="noopener">题目链接</a></p>
+<p>考虑以下 5 类点：</p>
+<p><img src="\images\zjoi2020d1t2.png" alt=""></p>
+<p>白色点标记会被清空；</p>
+<p>设 $f_x$ 是当前 $x$ 有标记的概率，$g_x$ 是 $x$ 的祖先中有标记的概率。</p>
+
     </div>
 
     
@@ -278,12 +302,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E8%AE%A1%E6%95%B0/" rel="tag"># 计数</a>
-              <a href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" rel="tag"># 生成函数</a>
-              <a href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" rel="tag"># 多项式</a>
-          </div>
 
         
 
@@ -291,13 +309,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/09/cactus-counting/" rel="prev" title="有标号仙人掌计数">
-      <i class="fa fa-chevron-left"></i> 有标号仙人掌计数
+    <a href="/2020/09/06/uoj-372/" rel="prev" title="uoj#372 题解">
+      <i class="fa fa-chevron-left"></i> uoj#372 题解
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/12/uoj-420/" rel="next" title="uoj#420 题解">
-      uoj#420 题解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -356,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#有标号边双连通图计数"><span class="nav-number">1.</span> <span class="nav-text">有标号边双连通图计数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拉格朗日反演"><span class="nav-number">2.</span> <span class="nav-text">拉格朗日反演</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有标号点双连通图计数"><span class="nav-number">3.</span> <span class="nav-text">有标号点双连通图计数</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ZJOI2020-Day1"><span class="nav-number">1.</span> <span class="nav-text">ZJOI2020 Day1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#T2"><span class="nav-number">1.1.</span> <span class="nav-text">T2</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

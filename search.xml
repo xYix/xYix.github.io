@@ -771,4 +771,54 @@
         <tag>概率期望</tag>
       </tags>
   </entry>
+  <entry>
+    <title>省选 2020 补题记录</title>
+    <url>/2020/09/07/sx2020/</url>
+    <content><![CDATA[<p>如题。</p>
+<a id="more"></a>
+<blockquote>
+<p>羽毛没有长齐，就不能向往蓝天吗？</p>
+</blockquote>
+<p>目前进度：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>T1代码</th>
+<th>T1题解</th>
+<th>T2代码</th>
+<th>T2题解</th>
+<th>T3代码</th>
+<th>T3题解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZJOI2020 Day1</td>
+<td></td>
+<td></td>
+<td>$\sqrt{}$</td>
+<td></td>
+<td>$\sqrt{}$</td>
+<td></td>
+</tr>
+<tr>
+<td>ZJOI2020 Day2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="ZJOI2020-Day1"><a href="#ZJOI2020-Day1" class="headerlink" title="ZJOI2020 Day1"></a>ZJOI2020 Day1</h1><h2 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h2><p><a href="https://www.luogu.com.cn/problem/P6630" target="_blank" rel="noopener">题目链接</a></p>
+<p>考虑以下 5 类点：</p>
+<p><img src="\images\zjoi2020d1t2.png" alt=""></p>
+<p>白色点标记会被清空；</p>
+<p>设 $f_x$ 是当前 $x$ 有标记的概率，$g_x$ 是 $x$ 的祖先中有标记的概率。</p>
+]]></content>
+  </entry>
 </search>
