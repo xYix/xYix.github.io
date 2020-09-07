@@ -912,4 +912,185 @@
         <tag>拉格朗日反演</tag>
       </tags>
   </entry>
+  <entry>
+    <title>超现实数学习笔记（搬运）</title>
+    <url>/2020/09/07/surreal-number/</url>
+    <content><![CDATA[<p>超现实数和不平等博弈。</p>
+<a id="more"></a>
+<p>这种一堆数学推导的东西写了有啥意义……就当自己的笔记吧</p>
+<h2 id="1-超实数基础知识"><a href="#1-超实数基础知识" class="headerlink" title="1.超实数基础知识"></a>1.超实数基础知识</h2><p>首先定义<strong>超实数</strong> <code>surreal number</code> 是什么东西。</p>
+<p>一个超实数 $x$ 由两个超实数集合 $x_L,x_R$ 构成，记作 $\{x_L|x_R\}$。</p>
+<p>但是 $x_L$ 和 $x_R$ 要满足一个条件：任意 $x_R$ 里的元素都不 $\le$ 任何 $x_L$ 里的元素。（但是我们以后会破坏这条规定……）</p>
+<p><del>超实数由两个超实数集构成，禁止套娃</del></p>
+<p>但是什么是 $\le$？于是<strong>定义超实数集上的偏序关系</strong> $\le$。</p>
+<p>称 $x\le y$ 当且仅当</p>
+<script type="math/tex; mode=display">\forall d\in x_L,d\not\ge y</script><p>且</p>
+<script type="math/tex; mode=display">\forall d\in y_R,d\not\le x</script><p>这个 $\le$ 满足<strong>自反性</strong>：</p>
+<ul>
+<li>$\forall x,x\le x$。</li>
+</ul>
+<p>下面使用（类似）数学归纳法（的东西）证明。</p>
+<p>首先 $x=\{|\}$（这个记号表示 $x_L=x_R=\varnothing$）的时候原命题显然成立（直接代入 $\le$ 的定义）。</p>
+<p>下面证明：</p>
+<script type="math/tex; mode=display">\forall d\in x_L,d\not\ge x</script><script type="math/tex; mode=display">\forall d\in x_R,d\not\le x</script><p>对于 $\forall d\in x_L$，如果 $d\le d$，那么 $x\le d$ 显然不成立（在 $x_L$ 中选取 $d$ 自身），得到第一个柿子；</p>
+<p>对于 $\forall d\in x_R$，如果 $d\le d$，那么 $d\le x$ 显然不成立（在 $x_R$ 中选取 $d$ 自身），得到第二个柿子。</p>
+<p>因为这两个柿子成立，所以原命题显然成立（直接代入 $\le$ 的定义）。</p>
+<p>这个 $\le$ 具有<strong>传递性</strong>：</p>
+<ul>
+<li>如果 $x\le y,y\le z$，则 $x\le z$。</li>
+</ul>
+<p>思路还是（类似）数学归纳法（的东西）。</p>
+<p>首先对于 $x=y=z=\{|\}$ 原命题显然成立。</p>
+<p>如果 $\forall d\in x_L,y\le z,z\le d$ 可以推出 $y\le d$，那么必然有 $d\not\ge z$，否则可推出 $y\le d$ 与事实矛盾。同理可推出 $\forall d\in z_R,d\not\le x$。</p>
+<p>其实还应该满足<strong>反对称性</strong>：</p>
+<ul>
+<li>如果 $x\le y,y\le x$，那么 $x=y$。</li>
+</ul>
+<p>接下来你会看到如果 $=$ 代表常规的，$x_L=y_L$ 且 $x_R=y_R$ 的那种 $=$，反对称性会不满足。</p>
+<p>所以事实上我们是拿这个定义新的 $=$ 的……</p>
+<p>也就是说，两个 _不同的_ 元素 $x,y$，可能使得 $x\le y,y\le x$同时满足。很快你会看到一个例子。</p>
+<p>据说可以证明 $x\le y$ 和 $y\le x$ 中至少有一个成立，博主不会证。而且这个结论意义不大，因为如果引入 $*,\uparrow,\downarrow$ 后这个结论显然不成立，而很多游戏都存在先手必胜局面。</p>
+<p>聊了这么多，让我们<strong>真正地见识一些超现实数</strong>。</p>
+<p>$\{|\}$ 是最简单的一个超现实数，我们把它称作 $0$，很快你会知道这是为什么。（标记 $\color{red}1$）</p>
+<p>$\{0|\}$ 称作 $1$。显然有 $0\le 1$，$0\not\ge 1$。</p>
+<p>$\{|0\}$ 称作 $-1$。显然有 $0\ge -1$，$0\not\le -1$。</p>
+<p>再进一步：</p>
+<p>$\{1|\}$ 称作 $2$。对称地，$\{|-1\}$ 称作 $-2$。</p>
+<p>$\{0|1\}$ 称作 $\frac 1 2$。很快你会知道这是为什么。（标记 $\color{red}2$）对称地 $\{-1|0\}$ 称作 $-\frac 1 2$。</p>
+<p>容易（？）发现有：</p>
+<script type="math/tex; mode=display">-2\not\ge -1\not\ge-\tfrac 1 2\not\ge 0\not\ge \tfrac 1 2\not\ge 1\not\ge 2</script><script type="math/tex; mode=display">-2\le -1\le-\tfrac 1 2\le 0\le \tfrac 1 2\le 1\le 2</script><p>提一句：对于 $\{-1|1\}$ 这种我们就不讲了，原因是它等于 $0$。</p>
+<p>通过这种方式我们能构建实数到超实数的对应关系，称为 <strong>达利函数</strong>：</p>
+<script type="math/tex; mode=display">\delta(x)=\begin{cases}\{|\}&(x=0)\\\{\delta(x-1)|\}&(x>0,x\in Z)\\\{|\delta(x+1)\}&(x<0,x\in Z)\\\{\delta(\frac{j-1}{2^k})|\delta(\frac{j+1}{2^k})\}&(x=\frac j{2^k},j,k\in Z)\end{cases}</script><p>无法表示为 $\frac j{2^k}$ 的实数就靠逼近。</p>
+<p>注意，一个超实数不一定有对应的实数。</p>
+<p>接下来定义<strong>加法运算</strong> $+$。</p>
+<script type="math/tex; mode=display">(x+y)_L=\{\{d+y,d\in x_L\}\cup\{x+d,d\in y_L\}\}</script><script type="math/tex; mode=display">(x+y)_R=\{\{d+y,d\in x_R\}\cup\{x+d,d\in y_R\}\}</script><p>（此处需要证明 $x+y$ 仍是一个超实数，即超实数在加法上封闭。<del>我不会证，所以</del>略。）</p>
+<p>显然这个加法运算的单位元是 $0$。这也是我们把它称作 $0$ 的原因。$\large\color{red}^{1}$</p>
+<p>一个非 $0$ 超实数 $x$ 的加法逆元是 $\{-d,d\in x_R|-d,d\in x_L\}$，$0$ 的加法逆元是 $0$。</p>
+<p>再举个具体的加法算数栗子。</p>
+<script type="math/tex; mode=display">\tfrac 1 2+\tfrac 1 2=\{\tfrac 1 2|\{\tfrac 1 2,1|2\}\}</script><p>可以证明，$\{\frac 1 2,1|2\}=\frac 3 2$，$\{\frac 1 2|\frac 3 2\}=1$，即 $\frac 1 2+\frac 1 2=1$。这也是我们把它称作 $\frac 1 2$ 的原因。$\large\color{red}^{2}$</p>
+<p>容易（？）发现这个加法满足<strong>交换律</strong>，<strong>结合律</strong>。</p>
+<p>还有一组结论：</p>
+<script type="math/tex; mode=display">a\le b,c\le d\rightarrow a+c\le b+d</script><script type="math/tex; mode=display">a\ge b,a+b\le c+d\rightarrow c\le d</script><p>总结一下，这种加法在某些方面和实数上的加法具有相同的性质。（事实上还有 $\delta(x)+\delta(y)=\delta(x+y),x,y\in R$）</p>
+<h2 id="2-超实数和不平等博弈"><a href="#2-超实数和不平等博弈" class="headerlink" title="2.超实数和不平等博弈"></a>2.超实数和不平等博弈</h2><p>再来讲讲不平等博弈。为了方便把不平等博弈的一个状态描述称为一个棋局。我们称两个玩家为 Alice 和 Bob，当然，先手者可能是 Alice 也可能是 Bob。</p>
+<p>举个简单的栗子：改造版 nim 游戏。有好几叠积木，每块积木上写着 A 或 B。Alice 可以进行的操作是，选择一块尚未被移除的写着 A 的积木，移除它和它顶上的所有积木；Bob 相反，可以选定写着 B 的积木。</p>
+<p>我们使用两个棋局集合描述一个棋局。（是不是很熟悉？）A 集合是如果当前 Alice 先手，他走一步后可能转移到的所有棋局；B 集合相反。</p>
+<p>显然，如果 AB 集合中有一个为空，那么他先手时就显然会无路可走，失败。后手时？不好说。</p>
+<p>接下来我们干脆就用一个超实数描述一个棋局。</p>
+<p>首先来回顾超实数的加法。一个棋局可能有很多子游戏，玩家操作时可以任选一个子游戏操作。非常显然，超实数的加法就对应两个游戏的合并。</p>
+<p>加法逆元就对应一个棋局的反棋局：Alice 和 Bob 的“操作权限”互换。即 Alice 改成选定 B 积木，Bob 改成选定 A 积木。</p>
+<p>$x+(-x)=0$。可是 $=$ 有什么含义？</p>
+<p>$0$ 棋局显然是一个先手必败的棋局。</p>
+<p>任何一个棋局的反棋局与它自身同时进行，也是先手必败，后手的最佳策略就是：在另一半棋局复制对手上一步的行动。</p>
+<p>事实上 $x\not\le 0,x\ge 0$ 就代表 $x$ 是一个 Alice 必胜的棋局， $x\not\ge 0,x\le 0$ 就代表 $x$ 是一个 Bob 必胜的棋局，$x=0$ 表示后手必胜，$x\not\le 0,x\not\ge 0$ 表示先手必胜。</p>
+<p>好的，回来分析改造版 nim 游戏，先考虑只有一叠积木的情况。</p>
+<p>空的积木塔：显然是 $0$。</p>
+<p>一块写着 A 的积木：$\{0|\}=1$。</p>
+<p>以此类推，$N$ 块写着 A 的积木：$\delta(N)$。</p>
+<p>相反，$N$ 块写着 B 的积木： $\delta(-N)$。</p>
+<p>算了直接丢个结论图吧：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/2hoe6ndn.png" alt=""></p>
+<p>多个子游戏直接实数加法即可。</p>
+<h2 id="3-超超实数？？？"><a href="#3-超超实数？？？" class="headerlink" title="3.超超实数？？？"></a>3.超超实数？？？</h2><p><del>这个“超超”的前缀总是让我想到<a href="http://scp-wiki-cn.wikidot.com/component:pataphysics-theme" target="_blank" rel="noopener">超形上学部</a></del></p>
+<p><del>找不到超形上学部中心页，只好丢了个版式页进来</del></p>
+<p>注意超实数要求右集合的任何一个元素都不小于等于左集合的任意一个元素，然而不符合这个要求的游戏是非常常见的。</p>
+<p>比如在刚才的游戏中加入一种同时写着 A 和 B 的积木，显然，单独一块这种积木的游戏对应的“超实数”应该是：</p>
+<script type="math/tex; mode=display">\{0|0\}</script><p>把它记作 $*$。</p>
+<p>$<em>$ 是一个先手必胜的棋局，同时有 $</em>+*=0$。</p>
+<p>$<em>$ 小于（不大于）任何一个正数，大于任何一个负数，但是和 $0$ 无法比较： $</em>\not\le 0,*\not\ge 0$。</p>
+<p>再考虑 $\uparrow=\{0|<em>\},\downarrow=\{</em>|0\}$。$\uparrow$ 描述了这样一个棋局：Alice 先手则 Bob 无路可走，Alice 胜；Bob 先手则转为 $*$ 局面且 Alice 先手，还是 Alice 胜，是一个 Alice 必胜局面。$\downarrow$ 反之。$\uparrow=-\downarrow$。</p>
+<p>但是 $\uparrow$ 小于任何一个正数。你可以把它认为是无穷小一类的东西。</p>
+<p>注意 $<em>+\uparrow$ 是先手必胜的，但是 $</em>+\uparrow+\uparrow$ 又变成 Alice 必胜了。</p>
+<p>如何在考虑 $*,\uparrow,\downarrow$ 的情况下判断整个游戏是先手必胜、后手必胜？丢结论：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/wqh1hy9p.png" alt=""></p>
+<p>好力，接下来看例题。</p>
+<h2 id="4-例题"><a href="#4-例题" class="headerlink" title="4.例题"></a>4.例题</h2><h3 id="P4225"><a href="#P4225" class="headerlink" title="P4225"></a><a href="https://www.luogu.com.cn/problem/P4225" target="_blank" rel="noopener">P4225</a></h3><p><del>可以从题目名称里体会到出题人溢出屏幕的求生欲。</del></p>
+<p>总共只有 $23$ 种情况，于是手推可以得出每一种棋局对应的超实数。这题只有 $0,\pm 1,\pm \tfrac 1 2$ 和 $*,\uparrow,\downarrow$。</p>
+<p>显然只要 $<em>$ 的游戏的个数不为 0，随机 kill 完 $</em>$ 游戏的个数是偶数/奇数的概率都是 $\frac 1 2$。</p>
+<p>用上一点生成函数的知识应该容易计算 $\sum\uparrow$ 的部分。即计算 $(x+1)^n(x^{-1}+1)^m=x^{-m}(x+1)^{n+m}$ 中 $x^i(i&lt;0)$ 的系数和。很好做。</p>
+<p>用上较多的生成函数的知识容易计算 $\sum \texttt{数字}$ 的部分。即计算 $(x+1)^a(x^{-1}+1)^c(x^2+1)^b(x^{-2}+1)^d=x^{-c-d}(x+1)^{a+c}(x^2+1)^{b+d}$ 中 $x^i(i&lt;0)$ 的系数和。</p>
+<p>枚举 $(x^2+1)^{b+d}$ 中展开出的 $Cx^i$ 项，容易发现可以和它配对对答案产生贡献的 $(x+1)^{a+c}$ 中展开出的 $Cx^j$ 项要满足 $j&lt;-i$，于是把 $x^j$ 的系数做一个前缀和即可。</p>
+<p>总的来说是道只要懂了不平等博弈就没有难点的题目。</p>
+<h3 id="HDU3544"><a href="#HDU3544" class="headerlink" title="HDU3544"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3544" target="_blank" rel="noopener">HDU3544</a></h3><p>此题问题在于每次操作都会把游戏分成两个游戏相加。</p>
+<p>$1\times 1$ 的巧克力：$0$。</p>
+<p>$1\times 2$ 的巧克力：$1$。</p>
+<p>以此类推，$1\times N$ 的巧克力：$\delta(N-1)$。</p>
+<p>$2\times 1$ 的巧克力：$-1$。</p>
+<p>$2\times 2$ 的巧克力：$\{-2|2\}=0$</p>
+<p>$2\times 3$ 的巧克力：$\{-1|4\}=0$</p>
+<p>$2\times 4$ 的巧克力：$\{-1,0|6\}=1$</p>
+<p>以此类推，$2\times N$ 的巧克力：$\delta(-1+\frac N 2)$</p>
+<p>打个究极大表可以发现</p>
+<p>$M\times N,2^k\le M&lt;2^{k+1}$ 的巧克力：$\delta(-M+2+\frac {N-2}{2^k})$</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>博弈论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单纯形法学习笔记（搬运）</title>
+    <url>/2020/09/07/simplex-alg/</url>
+    <content><![CDATA[<p>解决线性规划。不是多项式算法，但是跑的很快，</p>
+<a id="more"></a>
+<p>我们容易把线性规划问题转化成如下的一般形式：</p>
+<ul>
+<li>给出 $M$ 条互相线性无关的约束条件和 $N$ 个变量 $x_i$（$M&lt;N$，否则不需要线性规划而是有不多于一个解），第 $i$ 条形如</li>
+</ul>
+<script type="math/tex; mode=display">\sum a_{i,j}x_j=b_i</script><ul>
+<li><p>同时要满足 $x_j\ge 0$。（如果有不需要满足这个非负限制的元素，则转化为两个 $x$ 的差）</p>
+</li>
+<li><p>求 $\max \sum c_ix_i$。</p>
+</li>
+</ul>
+<p>不过常见的线性规划一般是形如</p>
+<script type="math/tex; mode=display">\sum a_{i,j}x_j\ge b_i</script><p>这时加入 $M$ 个变量 $x_{N+1},x_{N+2},…,x_{N+M}$，得到</p>
+<script type="math/tex; mode=display">\sum a_{i,j}x_j+x_{N+i}= b_i</script><p>容易发现此时 $M&lt;N$ 和线性无关的性质就自动满足了。</p>
+<p>下面为了方便操作把它转化成矩阵的形式：</p>
+<p>设 $A_{i,j}=a_{i,j},C_{1,i}=c_i,B_{i,1}=b_i,X_{i,1}=x_i$，则可以记成</p>
+<script type="math/tex; mode=display">\begin{cases}AX=B\\x_i\ge 0\\\text{求}\max CX\end{cases}</script><p>准备工作完成，接下来介绍单纯形法。</p>
+<h2 id="基解"><a href="#基解" class="headerlink" title="基解"></a>基解</h2><p>首先把 $A$ 拆成 $N$ 个列向量 $P_i$。选出其中 $M$ 个，因为约束条件互相线性无关，所以可以把这几个 $P$ 作为基向量，把其他的 $P$ 用它们的线性组合表示。$P$ 对应的 $x$ 就称为基变量。</p>
+<p>设基向量构成的矩阵为 $A_B$，非基向量构成的矩阵为 $A_N$。基变量组成的列向量为 $X_B$，非基变量组成的列向量为 $X_N$。于是约束可以写成</p>
+<script type="math/tex; mode=display">(A_B\ A_N){X_B\choose X_N}=B</script><p>即</p>
+<script type="math/tex; mode=display">A_BX_B+A_NX_N=B</script><p>两边乘以 $A_B^{-1}$，得</p>
+<script type="math/tex; mode=display">X_B=A_{B}^{-1}B-A_{B}^{-1}A_NX_N</script><p>我们称一类特殊的解，$X_{N}$ 全为 $0$ 的解，即 $X={A_{B}^{-1}B\choose 0}$ 的解，称为<strong>基解</strong>。还满足 $x\ge 0$ 的基解称为<strong>基可行解</strong>。</p>
+<p>有一个结论：至少有一组使得 $CX$ 最大的 $X$ 是基解。于是我们只关心所有的基解就可以了。 </p>
+<p>可是总共有 $C_{M}^{N}$ 个基解，总不能都求一遍吧……</p>
+<p>我们的策略是，从某个基变量的选择方案开始不断调整。</p>
+<h2 id="判断一个方案是否是最优方案"><a href="#判断一个方案是否是最优方案" class="headerlink" title="判断一个方案是否是最优方案"></a>判断一个方案是否是最优方案</h2><p>显然，如果我们可以调整 $X_N$ 的值使得答案更小那么这个方案就不是最优方案。下面把 $X_N$ 看成变量。</p>
+<p>$CX$ 可以拆成：</p>
+<script type="math/tex; mode=display">C_BX_B+C_NX_N</script><script type="math/tex; mode=display">C_B(A_{B}^{-1}B-A_{B}^{-1}A_NX_N)+C_NX_N</script><script type="math/tex; mode=display">C_BA^{-1}_BB+(C_N-C_BA_B^{-1}A_N)X_N</script><p>前面的 $C_BA_B^{-1}B$ 是常量。</p>
+<p>好的，显然，如果 $C_N-C_BA_B^{-1}A_N$ 的元素都大于等于零，那么显然这就是一个最优方案。</p>
+<h2 id="调整"><a href="#调整" class="headerlink" title="调整"></a>调整</h2><p>我们的调整方式是，找一个基内元素和基外元素并交换。</p>
+<h3 id="入基元素"><a href="#入基元素" class="headerlink" title="入基元素"></a>入基元素</h3><p>$C_N-C_BA_B^{-1}A_N$ 系数最小的那个。设这个元素为 $x_d$。</p>
+<h3 id="出基元素"><a href="#出基元素" class="headerlink" title="出基元素"></a>出基元素</h3><p>原来 $x_d$ 为 0，现在我们希望令它为 $x’_d$。当然其他基元素也会因此更改，我们看一下是什么情况。</p>
+<p>把 $P_d$ 用当前基向量的线性组合表示：</p>
+<script type="math/tex; mode=display">P_d=\sum y_iP_i</script><p>即</p>
+<script type="math/tex; mode=display">A_By=P_d</script><p>再联系一下</p>
+<script type="math/tex; mode=display">A_BX_B=B</script><p>于是可以写出：</p>
+<script type="math/tex; mode=display">A_B(X_B-x'_dy)+P_dx'_d=B</script><p>即原来的基向量会变化成</p>
+<script type="math/tex; mode=display">x'_i=x_i-x'_dy_i</script><p>因为要满足 $x’_i\ge 0$，于是令 $x’_d=\min \dfrac {x_i}{y_i}$。这个 $x’_i=0$ 的元素就出基。</p>
+<h2 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h2><script type="math/tex; mode=display">\begin{cases}AX=B\\X\ge 0\\\text{求}\max CX\end{cases}</script><p>和</p>
+<script type="math/tex; mode=display">\begin{cases}A^TY=C^T\\Y\ge 0\\\text{求}\min B^TY\end{cases}</script><p>的答案是相等的。这两个问题互为对偶问题。<del>所以如果要求的是最小值你又懒得改板子的话可以直接对偶一下。</del></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>别看我 BB 了一大堆代码倒是出人意料地短？</p>
+<p>初始基即所有不实际存在的 $M$ 个变量。这里初始解是所有基变量全为 $b_i$，非基变量全为 0。（当 $b_i$ 不全大于等于 0 时这个解可能不合法，所以需要一些处理，下面讲）</p>
+<p>如果 $b_i$ 不全大于等于 0，需要如下操作：</p>
+<ul>
+<li><p>强行把基变量设为 $b_i$，非基变量设为 $0$。</p>
+</li>
+<li><p>重复下面的操作：</p>
+</li>
+<li><p>找一个值小于 0 的基变量 $u$ 和一个 $A[u][v]$ 为正的非基变量 $v$。<code>Pivot(u,v)</code> </p>
+</li>
+<li><p>如果找到了 $u$ 但找不到 $v$，原线性规划无解；如果找不到 $u$ 那么你已经找到了一个合法的初始解。</p>
+</li>
+</ul>
+<p>uoj#179 代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps=<span class="number">1e-8</span>,inf=<span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxM=<span class="number">25</span>,maxN=<span class="number">25</span>;</span><br><span class="line"><span class="keyword">int</span> N,M,typ;</span><br><span class="line"><span class="keyword">double</span> A[maxM][maxN];</span><br><span class="line"><span class="keyword">int</span> id[maxN+maxM],iid[maxN+maxM];</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> flg;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pivot</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">	swap(id[u],id[v+N]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=N;i++) <span class="keyword">if</span>(i!=u) A[v][i]/=-A[v][u];</span><br><span class="line">    A[v][u]=<span class="number">1</span>/A[v][u];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=M;i++) <span class="keyword">if</span>(i!=v&amp;&amp;<span class="built_in">abs</span>(A[i][u])&gt;eps)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=N;j++) <span class="keyword">if</span>(j!=u) A[i][j]+=A[i][u]*A[v][j];</span><br><span class="line">        A[i][u]*=A[v][u];</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) id[i]=i;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> u,v=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=M;i++) <span class="keyword">if</span>(A[i][<span class="number">0</span>]&lt;-eps&amp;&amp;(v==<span class="number">0</span>||A[i][<span class="number">0</span>]&lt;A[v][<span class="number">0</span>])) v=i;</span><br><span class="line">        <span class="keyword">if</span>(!v) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span>(u=<span class="number">1</span>;u&lt;=N;u++) <span class="keyword">if</span>(A[v][u]&gt;eps) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span>(u&gt;N)&#123;<span class="built_in">printf</span>(<span class="string">"Infeasible\n"</span>);flg=<span class="number">1</span>;<span class="keyword">return</span>;&#125;</span><br><span class="line">        Pivot(u,v);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> u,v=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(u=<span class="number">1</span>;u&lt;=N;u++) <span class="keyword">if</span>(A[<span class="number">0</span>][u]&gt;eps) <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">if</span>(u&gt;N) <span class="keyword">return</span>; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=M;i++) <span class="keyword">if</span>(A[i][u]&lt;-eps&amp;&amp;(v==<span class="number">0</span>||A[i][<span class="number">0</span>]/A[i][u]&gt;A[v][<span class="number">0</span>]/A[v][u])) v=i;</span><br><span class="line">        <span class="keyword">if</span>(!v)&#123;<span class="built_in">printf</span>(<span class="string">"Unbounded\n"</span>);flg=<span class="number">1</span>;<span class="keyword">return</span>;&#125;</span><br><span class="line">        Pivot(u,v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;N,&amp;M,&amp;typ);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;A[<span class="number">0</span>][i]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=M;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=N;j++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;A[i][j]),A[i][j]*=<span class="number">-1</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;A[i][<span class="number">0</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	Solve();</span><br><span class="line">	<span class="keyword">if</span>(!flg) <span class="built_in">printf</span>(<span class="string">"%.9lf\n"</span>,A[<span class="number">0</span>][<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">if</span>(!flg&amp;&amp;typ)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=N+<span class="number">1</span>;i&lt;=N+M;i++) iid[id[i]]=i;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) <span class="keyword">if</span>(iid[i]) <span class="built_in">printf</span>(<span class="string">"%.9lf "</span>,A[iid[i]-N][<span class="number">0</span>]);<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"0.000000000 "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+        <tag>线性规划</tag>
+      </tags>
+  </entry>
 </search>
