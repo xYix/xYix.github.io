@@ -878,7 +878,7 @@
   <entry>
     <title>BZOJ3684 题解</title>
     <url>/2020/09/07/bzoj-3684/</url>
-    <content><![CDATA[<p><a href="https://darkbzoj.tk/problem/3684" target="_blank" rel="noopener">$\color{black}\texttt{黑暗的题目链接}$</a></p>
+    <content><![CDATA[<p><a href="https://darkbzoj.tk/problem/3684" target="_blank" rel="noopener">$\colorbox{black}{\color{white}\texttt{黑暗的题目链接}}$</a></p>
 <a id="more"></a>
 <p>显然有</p>
 <script type="math/tex; mode=display">F(x)=x+\sum_{i\in D}F^i(x)</script><p>可以发现这里有一个恶心的多项式复合（$x^i\rightarrow F^i(x)$），幸运的是 $F(x)$ 的逆非常好求</p>
