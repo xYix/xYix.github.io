@@ -1096,4 +1096,26 @@
         <tag>线性规划</tag>
       </tags>
   </entry>
+  <entry>
+    <title>loj#6054</title>
+    <url>/2020/09/08/loj-6054/</url>
+    <content><![CDATA[<p><a href="https://loj.ac/problem/6054" target="_blank" rel="noopener">题目链接</a>，<a href="https://loj.ac/problem/6055" target="_blank" rel="noopener">加强版链接</a></p>
+<a id="more"></a>
+<p>首先你应该能推出答案 $f_k(n)$ 等于</p>
+<script type="math/tex; mode=display">n^k+\sum_{i=1}^{n-1}2^{n-1-i}i^k</script><p>显然有递推</p>
+<script type="math/tex; mode=display">f_k(n)-2f_k(n-1)=n^k-(n-1)^k</script><p>你可能以为 $f_k$ 是一个 $k-1$ 次多项式，但不幸的是由于 $f_k(1)=1$ 所以它并不是……</p>
+<p>那么学过高中数学的各位应该都知道这时候应该构造一个</p>
+<script type="math/tex; mode=display">\boxed{g_k(n)-2g_k(n-1)=-n^k+(n-1)^k}</script><p>也就是说</p>
+<script type="math/tex; mode=display">f_k(n)+g_k(n)=2(f_k(n-1)+g_k(n-1))</script><script type="math/tex; mode=display">\boxed{f_k(n)=2^{n-1}(1+g_k(1))-g_k(n)}</script><p>那这是好的啊，毕竟不要求 $g_k(1)=1$，它可以是一个 $k-1$ 次多项式啊</p>
+<p>那么 $g_k(n)$ 盲猜一下必然要拉格朗日插值，我们求 $k$ 个点值就好了，而从一个点值就可以递推出所有的点值，所以我们只需要求 $g_k(0)$ 就好了</p>
+<p>考虑所有其他点值都可以被 $kg_k(0)+b$ 表示，那么我们再掏出一个方程就可以解出 $g_k(0)$ 了</p>
+<p>这里有一个恒等式</p>
+<script type="math/tex; mode=display">\sum_{i=0}^k(-1)^{k-i}{k\choose i}g_k(i)=0</script><p>把 $g^k(i)$ 看成 $\text{E}^ig^k(0)$，那么等式左边其实就是 $\Delta^kg_k(0)$，而 $g_k$ 是一个 $k-1$ 次多项式，差分 $k$ 次当然是 0，也就证明了上面的式子</p>
+<p>于是大力插值即可。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>计数</tag>
+      </tags>
+  </entry>
 </search>
