@@ -22,15 +22,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="x义x的博客">
-<meta property="og:url" content="http://yoursite.com/tags/%E8%AE%A1%E6%95%B0/index.html">
+  <meta name="description" content="题目链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="luoguP5155 题解">
+<meta property="og:url" content="http://yoursite.com/2020/09/08/luogu-5155/index.html">
 <meta property="og:site_name" content="x义x的博客">
+<meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-08T09:29:03.000Z">
+<meta property="article:modified_time" content="2020-09-08T09:44:43.838Z">
 <meta property="article:author" content="x义x">
+<meta property="article:tag" content="概率期望">
+<meta property="article:tag" content="计算几何">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/%E8%AE%A1%E6%95%B0/">
+<link rel="canonical" href="http://yoursite.com/2020/09/08/luogu-5155/">
 
 
 <script id="page-configurations">
@@ -38,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 计数 | x义x的博客</title>
+  <title>luoguP5155 题解 | x义x的博客</title>
   
 
 
@@ -185,231 +191,103 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">计数
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/08/luogu-5155/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="x义x">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x义x的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          luoguP5155 题解
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-08 17:29:03 / 修改时间：17:44:43" itemprop="dateCreated datePublished" datetime="2020-09-08T17:29:03+08:00">2020-09-08</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>355</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-08T13:56:59+08:00"
-              content="2020-09-08">
-          09-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/08/loj-6054/" itemprop="url">
-            <span itemprop="name">loj#6054 题解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-07T16:25:22+08:00"
-              content="2020-09-07">
-          09-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/07/bzoj-3684/" itemprop="url">
-            <span itemprop="name">BZOJ3684 题解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-07T12:42:20+08:00"
-              content="2020-09-07">
-          09-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/07/sx2020/" itemprop="url">
-            <span itemprop="name">省选 2020 补题记录</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-06T17:32:42+08:00"
-              content="2020-09-06">
-          09-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/06/uoj-372/" itemprop="url">
-            <span itemprop="name">uoj#372 题解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-04T18:47:28+08:00"
-              content="2020-09-04">
-          09-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/04/agc-038-e/" itemprop="url">
-            <span itemprop="name">AGC038E 题解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-18T07:59:58+08:00"
-              content="2020-06-18">
-          06-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/18/loj-6275/" itemprop="url">
-            <span itemprop="name">loj#6275 题解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-12T20:00:28+08:00"
-              content="2020-06-12">
-          06-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/12/uoj-420/" itemprop="url">
-            <span itemprop="name">uoj#420 题解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-11T19:43:26+08:00"
-              content="2020-06-11">
-          06-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/11/biconnected-graph-counting/" itemprop="url">
-            <span itemprop="name">边/点双连通图计数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-09T07:51:09+08:00"
-              content="2020-06-09">
-          06-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/09/cactus-counting/" itemprop="url">
-            <span itemprop="name">有标号仙人掌计数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-06T09:23:32+08:00"
-              content="2020-06-06">
-          06-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/06/alkane-counting/" itemprop="url">
-            <span itemprop="name">烷烃计数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        <p><a href="https://www.luogu.com.cn/problem/P5155" target="_blank" rel="noopener">题目链接</a></p>
+<a id="more"></a>
+<p>好题好题妙啊妙啊</p>
+<p>首先显然可以列出</p>
+<script type="math/tex; mode=display">E_i=\max(F_i,\dfrac{E_{i-1}+E_{i+1}}{2})</script><p>但是这个东西显然是解不了的。</p>
+<p>考虑 $E_i=F_i$ 的点，称为中止点，游走到它上面的时候显然立即停止。</p>
+<p>那么非中止点的期望也就只取决于相邻的两个中止点：</p>
+<script type="math/tex; mode=display">E_i=\dfrac{v-i}{v-u}F_u+\dfrac{i-u}{v-u}F_v</script><p>系数是经典结论（在数轴上随机游走，到两端停止，到两端分别的概率）</p>
+<p>那么一个点是停止点也就等价于</p>
+<script type="math/tex; mode=display">F_i>\dfrac{v-i}{v-u}F_u+\dfrac{i-u}{v-u}F_v</script><script type="math/tex; mode=display">F_i-F_u>\dfrac{i-u}{v-u}(F_v-F_u)</script><script type="math/tex; mode=display">\dfrac{F_i-F_u}{i-u}>\dfrac{F_v-F_u}{v-u}</script><p>即 $(i,F_i)$ 在凸包上！</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/" rel="tag"># 概率期望</a>
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="tag"># 计算几何</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/08/loj-6054/" rel="prev" title="loj#6054 题解">
+      <i class="fa fa-chevron-left"></i> loj#6054 题解
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
