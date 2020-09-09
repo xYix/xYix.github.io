@@ -24,20 +24,21 @@
 
   <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="uoj#372 题解">
-<meta property="og:url" content="http://yoursite.com/2020/09/06/uoj-372/index.html">
+<meta property="og:title" content="luoguP4500 题解">
+<meta property="og:url" content="http://yoursite.com/2020/09/08/luogu-4500/index.html">
 <meta property="og:site_name" content="x义x的博客">
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-06T09:32:42.000Z">
-<meta property="article:modified_time" content="2020-09-06T10:21:26.740Z">
+<meta property="article:published_time" content="2020-09-08T11:05:49.000Z">
+<meta property="article:modified_time" content="2020-09-09T08:45:56.803Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="数学">
-<meta property="article:tag" content="计数">
-<meta property="article:tag" content="概率期望">
+<meta property="article:tag" content="生成函数">
+<meta property="article:tag" content="组合计数">
+<meta property="article:tag" content="群论计数">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/09/06/uoj-372/">
+<link rel="canonical" href="http://yoursite.com/2020/09/08/luogu-4500/">
 
 
 <script id="page-configurations">
@@ -50,7 +51,7 @@
   };
 </script>
 
-  <title>uoj#372 题解 | x义x的博客</title>
+  <title>luoguP4500 题解 | x义x的博客</title>
   
 
 
@@ -199,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/06/uoj-372/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/08/luogu-4500/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -212,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          uoj#372 题解
+          luoguP4500 题解
         </h1>
 
         <div class="post-meta">
@@ -221,10 +222,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-09-06 17:32:42 / 修改时间：18:21:26" itemprop="dateCreated datePublished" datetime="2020-09-06T17:32:42+08:00">2020-09-06</time>
+              <time title="创建时间：2020-09-08 19:05:49" itemprop="dateCreated datePublished" datetime="2020-09-08T19:05:49+08:00">2020-09-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-09 16:45:56" itemprop="dateModified" datetime="2020-09-09T16:45:56+08:00">2020-09-09</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -238,7 +245,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>594</span>
+              <span>4.1k</span>
             </span>
 
         </div>
@@ -250,20 +257,59 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
+        <p><a href="https://www.luogu.com.cn/problem/P4500" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
-<p>首先这种鬼题都是独立性非常难考虑，所以一般来讲都是直接对整个图考虑，做子集 DP。</p>
-<p>显然用限制条件（边）肯定比一个单个的元素（好）。所以我们下面直接对图讨论了。</p>
-<p>我们的函数显然肯定有一维 $x$ 表示要求答案 $\le x$，但是这显然是不够的，我们再考虑加一维 $y$ 表示要求所有点权 $\le y$。</p>
-<p>设 $F(s,x,y)$ 表示当前考虑的子图为 $s$，$x,y$ 的含义如上，的概率。</p>
-<p>考虑枚举点权最大值 $w$。</p>
-<blockquote>
-<p>$2w&lt;x$。此时一切约束都被满足。发生这种情况必然有所有点权 $\le \dfrac x 2$，所以概率为 $\left(\dfrac x 2\right)^{|s|}$。</p>
-<p>$2w&gt;x$。此时，设点 $i$ 取到了最大值。考虑和 $i$ 有边的 $j$，显然除了 $(i,j)$ 我们可以不考虑任何其他 $j$ 连出的边。显然对于 $j$ 我们要求它 $\le x-w$，对于其他点，我们只要求 $\le w$ 且答案还是 $\le y$。</p>
-</blockquote>
-<p>设去掉 $i$ 和 $j$ 的图为 $s_i’$。我们得到方程</p>
-<script type="math/tex; mode=display">F(s,x,y)=\left(\dfrac{x}{2}\right)^{|s|}+\sum_i\int_{\frac x 2}^y\left(x-w\right)^{|s|-|s_i'|-1}F(s_i',w,y)\text{d}w</script><p>大力 DP 即可。注意 $s$ 可能不连通，这时候拆成数个连通块跑。加上这个优化就莫名能跑 $n=25$ 了，非常神必。</p>
-
+<h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>这就是 ZJOI 的 D2T1 吗爱了爱了</p>
+<p>这题实在太毒以至于我花了整整一天时间才写好这篇 blog，题解长度堪称群论计数界幽灵乐团</p>
+<p>但它又和幽灵乐团不一样，这题的题面简直不能再短：求随机生成 $k$ 棵大小为 $n$ 的有标号树互相有根同构的概率</p>
+<p>这题只是难而已……</p>
+<p>不禁令人叹息：吉老师，永远滴神</p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>首先你可能需要一些群论计数的知识。</p>
+<p>设 $f(i,j)$ 是大小为 $i$ 的树的所有等价类大小的 $jk$ 次方和。答案当然就是 $f(n,1)$。至于这个 $j$ 是一个伏笔（草）</p>
+<p>提醒：$f(i,j)$ 可以被解释为生成 $jk$ 棵树全都彼此同构的方案数。</p>
+<p>很显然下一步我们应该删掉根然后考虑它子树的构成。设 $tf(p,j,i)$ 是用大小不超过 $p$ 的子树拼成 $i$ 个节点，这堆子树的所有等价类大小的 $jk$ 次方和。</p>
+<p>显然有 $f(i,j)=tf(i-1,j,-1)$。</p>
+<p>边界为 $tf(1,j,i)=1$。</p>
+<p>考虑到只有大小相同的子树可能同构，不妨分别考虑 $p,p-1,p-2$。具体来说我们得到下面的东西：</p>
+<h1 id="tf-p-j-i"><a href="#tf-p-j-i" class="headerlink" title="$tf(p,j,i)$"></a>$tf(p,j,i)$</h1><script type="math/tex; mode=display">\boxed{tf(p,j,i)=\sum_{pu+v=i}tf(p-1,j,v)g(p,u,j){i\choose pu}^{jk}}</script><p>组合数比较好理解，简单来说就是我们从 $i$ 个标号里抽出了 $pu$ 个标号用来构成我们的这 $u$ 棵大小为 $p$ 的树。</p>
+<p>那么这里的 $g(p,u,j)$ 表示的当然就是 $u$ 棵大小为 $p$ 的树的所有等价类大小的 $jk$ 次方之和。</p>
+<p>讲道理至今为止其实我们没干什么东西，只不过把大小为 $p$ 的树抽出来讨论了而已。</p>
+<p>提醒：$pu\le n$。</p>
+<h1 id="g-p-u-j"><a href="#g-p-u-j" class="headerlink" title="$g(p,u,j)$"></a>$g(p,u,j)$</h1><p>mark 一下，我们要求的是 $u$ 棵大小为 $p$ 的树的所有等价类大小的 $jk$ 次方之和，也可以解释为生成 $jk$ 组每组 $u$ 个大小为 $p$ 的树，每组互相同构的方案数。</p>
+<p>冷静分析一下。假设 $n$ 个节点的树有 $m$ 个等价类，属于第 $i$ 号等价类的树有 $a_i$ 棵。那么<strong>两个方案等价当且仅当 $\{a_i\}$ 相等</strong>。</p>
+<p>伟大的成就！可是每个等价类有多少方案呢？</p>
+<p>首先考虑分配 $1…pu$ 个标号。显然方案数是</p>
+<script type="math/tex; mode=display">\dfrac{up\choose p,p,..,p}{\prod_{i}(a_i!)}</script><p>下面那个累乘是因为我们无法区分等价的树。</p>
+<p>那么每个树内部都可以看成是以 $1..p$ 标号了。那么现在考虑它们内部的结构。答案是不是</p>
+<script type="math/tex; mode=display">\prod_if(p,a_ij)</script><p>呢？</p>
+<p>显然不是。因为这样可能生成两组等价但是被算成两种等价类的树。假设我们把 $1…u$ 每棵树属于的等价类写成一个序列，那么我们只能考虑<strong>无序</strong>序列，或者一个 <code>sort</code> 过的代表序列。这个玩意显然不符合要求。</p>
+<p>但上面这个东西并非没有价值。引入一些记号：我们考虑 $1…u$ 每棵树属于的等价类组成的<strong>有序</strong>序列，设一个有序序列为 $x$，组成的集合为 $X$。你可以理解为这是对 $u$ 棵树的<strong>染色</strong>。我们知道 $x$ 在 $\{a_i\}$ 的意义下同构，设它属于的等价类为 $\overline x$。我们有</p>
+<script type="math/tex; mode=display">\boxed{g(p,u,j)=\dfrac{(up!)^{jk}}{(p!)^{ujk}}\cdot\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}}</script><p>其中 $\omega_x$ 表示可以被 $x$ 描述的树组个数的 $jk$ 次方。同属一个等价类的元素会重复计算它，所以还要除以 $|\overline x|$。</p>
+<p>那么之前的式子是什么意思呢：它只要求 $a_1$ 个元素同色，另外 $a_2$ 个元素同色，……。而且它认为 $\{a_i\}$ <strong>有序</strong>（根本没人觉得它无序吧……）。我们知道要求某些东西同色可以被描述为<strong>是某个置换的不动点</strong>，在这里就是一个大小为 $a_1$ 的循环加一个大小为 $a_2$ 的循环……</p>
+<p>设 $fix(A)$ 是置换 $A$ 的不动点集合，$A$ 拆成循环生成的序列是 $\{a’_i\}$，注意 $\{a’_i\}$ <strong>有序</strong>，因为循环之间是可以按最前面的元素的位置分出先后的（这也就和前面的 $\{a_i\}$ 有序对上了），那么我们有</p>
+<script type="math/tex; mode=display">\boxed{\sum_{x\in fix(A)}\omega_x=\prod_{i}f(p,a_i'j)}</script><p>好了，伏笔回收。那么我们猜也能猜出来 Burnside 引理肯定有一个扩展是等价类权值（即等于其任意元素的权值，显然都相等）之和等于各置换的不动点的权值之和的平均数</p>
+<script type="math/tex; mode=display">\sum_{x\in X}\dfrac{\omega_x}{|\overline x|}=\dfrac{1}{|G|}\sum_{A\in G}\sum_{x\in fix(A)}\omega_x=\dfrac{1}{|G|}\sum_A\prod_{i}f(p,a_i'j)</script><p>伟大的成就！</p>
+<p>可是问题就来了，$\prod_{i}\dfrac{1}{(a_i!)^{jk}}$ 该如何解决呢？</p>
+<h1 id="解决-prod-i-dfrac-1-a-i-jk"><a href="#解决-prod-i-dfrac-1-a-i-jk" class="headerlink" title="解决 $\prod_{i}\dfrac{1}{(a_i!)^{jk}}$"></a>解决 $\prod_{i}\dfrac{1}{(a_i!)^{jk}}$</h1><p>既然元素可以带权，那么置换可不可以带权呢？答案当然是肯定的。</p>
+<p>假设置换 $A$ 的权为 $w_A$，则有</p>
+<script type="math/tex; mode=display">\sum_{A\in G}w_A\sum_{x\in fix(A)}\omega_x=\sum_{x\in X}\omega_x\sum_{x\in fix(A)}w_A</script><p>于是我们只需要求 $w_A$ 使得</p>
+<script type="math/tex; mode=display">\sum_{x\in fix(A)}w_A=\dfrac{C}{|\overline x|}\prod_i\dfrac{1}{(a_i!)^{jk}}</script><p>其中 $C$ 是一个常数，<del>事实上是另一个伏笔</del>。这样的话我们就有</p>
+<script type="math/tex; mode=display">C\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}=\dfrac{1}{|G|}\sum_Aw_A\prod_{i}f(p,a_i'j)</script><script type="math/tex; mode=display">\boxed{C\dfrac{g(p,u,j)(p!)^{ujk}}{(up!)^{jk}}=\dfrac{1}{|G|}\sum_Aw_A\prod_{i}f(p,a_i'j)}</script><p>注意到 $w_A$ 后面接的连乘号，我们自然也希望</p>
+<script type="math/tex; mode=display">w_A=\prod_i \hat w(a'_i)</script><p>你可能已经猜到 $\text{Exp}$ 了。具体如下。先假装我们会求 $\hat w(a’_i)$。</p>
+<h1 id="回到-g-p-u-j"><a href="#回到-g-p-u-j" class="headerlink" title="回到 $g(p,u,j)$"></a>回到 $g(p,u,j)$</h1><p>换掉 $w_A$，有更近一步的</p>
+<script type="math/tex; mode=display">\begin{aligned}&\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}\\=&\dfrac{1}{C|G|}\sum_A\prod_{i}\hat w(a_i)f(p,a_ij)\end{aligned}</script><p>考虑一个 $\{a_i\}$ 序列能代表几个置换。（由于对之前的 $a_i$ 的讨论已经停止了，我们从这里开始对 $a’_i$ 去掉 $’$ 号应该不至于混淆。)先决定标号从属于哪个循环，然后循环内可以圆排列，但是这样会使循环原本的次序错乱所以还要除以循环数的阶乘。</p>
+<script type="math/tex; mode=display">=\dfrac{1}{C|G|}\sum_{l,\sum a_i=u}{u\choose a_1,a_2,...,a_l}\left(\prod_{i=1}^l(a_i-1)!\right)\dfrac{\prod_{i=1}^l\hat w(a_i)f(p,a_ij)}{l!}</script><script type="math/tex; mode=display">=\dfrac{u!}{C|G|}\sum_{l,\sum a_i=u}\dfrac 1{l!}\prod_{i=1}^l\dfrac{\hat w(a_i)f(p,a_ij)}{a_i}</script><p>审视一下这个形式。$\sum a_i=u$ 已经刻到 DNA 里了。设</p>
+<script type="math/tex; mode=display">F(x)=\sum_{i=1}^{\infty}\dfrac{\hat w(i)f(p,ij)x^i}{i}</script><p>那么我们得到</p>
+<script type="math/tex; mode=display">=\dfrac{u!}{C|G|}[x^u]e^{F(x)}</script><p>也就是</p>
+<script type="math/tex; mode=display">\boxed{g(p,u,j)=\dfrac{(up!)^{jk}}{(p!)^{ujk}}\dfrac{u!}{C|G|}[x^u]e^{F(x)}}</script><p>现在只剩 $\hat w(a_i’)$ 的问题了。</p>
+<h1 id="hat-w-a’-i"><a href="#hat-w-a’-i" class="headerlink" title="$\hat w(a’_i)$"></a>$\hat w(a’_i)$</h1><p>我们希望满足的是</p>
+<script type="math/tex; mode=display">\sum_{x\in fix(A)}\prod_{i}\hat w(a'_i)=\dfrac{C}{|\overline x|}\prod_i\dfrac{1}{(a_i!)^{jk}}</script><p>展开 $|\overline{x}|$。</p>
+<script type="math/tex; mode=display">\sum_{x\in fix(A)}\prod_{i}\hat w(a'_i)=C\prod_{i}\dfrac{1}{(a_i!)^{jk}}{u\choose a_1,a_2,...,a_m}^{-1}</script><p>考虑 $x\in fix(A)$ 的 $A$。显然 $A$ 没有跨颜色块的循环。那么我们故技重施拆解颜色块，等式左边就等于</p>
+<script type="math/tex; mode=display">=\prod_{i=1}^m\sum_{l,\sum b_j=a_i}{a_i\choose b_1,b_2,...,b_l}\left(\prod_{j=1}^l(b_j-1)!\right)\dfrac {\prod_{j=1}^l\hat w(b_j)}{l!}</script><script type="math/tex; mode=display">=\prod_{i=1}^ma_i!\cdot \sum_{l,\sum b_j=a_i}\dfrac 1{l!}\prod_{j=1}^l\dfrac{\hat w(b_j)}{b_j}</script><p>设 </p>
+<script type="math/tex; mode=display">G(x)=\sum_{i=1}^{\infty}\dfrac{\hat w(i)x^i}{i}</script><p>即</p>
+<script type="math/tex; mode=display">\prod_{i=1}^m[x^{a_i}]e^{G(x)}=\dfrac{C}{u!}\prod_{i}\dfrac{1}{(a_i!)^{jk}}</script><p>取 $C=u!$（伏笔回收），那么有</p>
+<script type="math/tex; mode=display">\boxed{[x^i]e^{G(x)}=\dfrac{1}{(i!)^{jk}}}</script><p>完 全 胜 利</p>
+<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="暴力-Ln-和-Exp"><a href="#暴力-Ln-和-Exp" class="headerlink" title="暴力 Ln 和 Exp"></a>暴力 Ln 和 Exp</h2>
     </div>
 
     
@@ -273,8 +319,9 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E8%AE%A1%E6%95%B0/" rel="tag"># 计数</a>
-              <a href="/tags/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/" rel="tag"># 概率期望</a>
+              <a href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" rel="tag"># 生成函数</a>
+              <a href="/tags/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0/" rel="tag"># 组合计数</a>
+              <a href="/tags/%E7%BE%A4%E8%AE%BA%E8%AE%A1%E6%95%B0/" rel="tag"># 群论计数</a>
           </div>
 
         
@@ -283,13 +330,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/04/agc-038-e/" rel="prev" title="AGC038E 题解">
-      <i class="fa fa-chevron-left"></i> AGC038E 题解
+    <a href="/2020/09/08/luogu-5155/" rel="prev" title="luoguP5155 题解">
+      <i class="fa fa-chevron-left"></i> luoguP5155 题解
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/07/sx2020/" rel="next" title="省选 2020 补题记录">
-      省选 2020 补题记录 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -348,6 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#感想"><span class="nav-number">1.</span> <span class="nav-text">感想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tf-p-j-i"><span class="nav-number">3.</span> <span class="nav-text">$tf(p,j,i)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#g-p-u-j"><span class="nav-number">4.</span> <span class="nav-text">$g(p,u,j)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决-prod-i-dfrac-1-a-i-jk"><span class="nav-number">5.</span> <span class="nav-text">解决 $\prod_{i}\dfrac{1}{(a_i!)^{jk}}$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#回到-g-p-u-j"><span class="nav-number">6.</span> <span class="nav-text">回到 $g(p,u,j)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hat-w-a’-i"><span class="nav-number">7.</span> <span class="nav-text">$\hat w(a’_i)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复杂度分析"><span class="nav-number">8.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">9.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#暴力-Ln-和-Exp"><span class="nav-number">9.1.</span> <span class="nav-text">暴力 Ln 和 Exp</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
