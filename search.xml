@@ -1144,14 +1144,14 @@
 <a id="more"></a>
 <h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>这就是 ZJOI 的 D2T1 吗爱了爱了</p>
 <p>这题实在太毒以至于我花了整整一天时间才写好这篇 blog，题解长度堪称群论计数界幽灵乐团</p>
-<p>但它又和幽灵乐团不一样，这题的题面简直不能再短：求随机生成 $k$ 棵大小为 $n$ 的有标号树互相有根同构的概率</p>
-<p>这题只是难而已……</p>
+<p>但这题的题面简直不能再短：求随机生成 $k$ 棵大小为 $n$ 的有标号树互相有根同构的概率。它只是难而已……</p>
 <p>不禁令人叹息：吉老师，永远滴神</p>
+<p>想要在合理的时间内解出这题需要你非常熟悉群论计数，有一个清晰的逻辑，可能还需要比较强的观察能力。<del>然而你大概率需要解出这题才够资格宣称自己非常熟悉群论计数</del></p>
 <h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>首先你可能需要一些群论计数的知识。</p>
 <p>设 $f(i,j)$ 是大小为 $i$ 的树的所有等价类大小的 $jk$ 次方和。答案当然就是 $f(n,1)$。至于这个 $j$ 是一个伏笔（草）</p>
 <p>提醒：$f(i,j)$ 可以被解释为生成 $jk$ 棵树全都彼此同构的方案数。</p>
 <p>很显然下一步我们应该删掉根然后考虑它子树的构成。设 $tf(p,j,i)$ 是用大小不超过 $p$ 的子树拼成 $i$ 个节点，这堆子树的所有等价类大小的 $jk$ 次方和。</p>
-<p>显然有 $f(i,j)=tf(i-1,j,-1)$。</p>
+<p>显然有 $f(i,j)=tf(i-1,j,i-1)$。</p>
 <p>边界为 $tf(1,j,i)=1$。</p>
 <p>考虑到只有大小相同的子树可能同构，不妨分别考虑 $p,p-1,p-2$。具体来说我们得到下面的东西：</p>
 <h1 id="tf-p-j-i"><a href="#tf-p-j-i" class="headerlink" title="$tf(p,j,i)$"></a>$tf(p,j,i)$</h1><script type="math/tex; mode=display">\boxed{tf(p,j,i)=\sum_{pu+v=i}tf(p-1,j,v)g(p,u,j){i\choose pu}^{jk}}</script><p>组合数比较好理解，简单来说就是我们从 $i$ 个标号里抽出了 $pu$ 个标号用来构成我们的这 $u$ 棵大小为 $p$ 的树。</p>
@@ -1192,7 +1192,16 @@
 <script type="math/tex; mode=display">G(x)=\sum_{i=1}^{\infty}\dfrac{\hat w(i)x^i}{i}</script><p>即</p>
 <script type="math/tex; mode=display">\prod_{i=1}^m[x^{a_i}]e^{G(x)}=\dfrac{C}{u!}\prod_{i}\dfrac{1}{(a_i!)^{jk}}</script><p>取 $C=u!$（伏笔回收），那么有</p>
 <script type="math/tex; mode=display">\boxed{[x^i]e^{G(x)}=\dfrac{1}{(i!)^{jk}}}</script><p>完 全 胜 利</p>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="暴力-Ln-和-Exp"><a href="#暴力-Ln-和-Exp" class="headerlink" title="暴力 Ln 和 Exp"></a>暴力 Ln 和 Exp</h2>]]></content>
+<h1 id="暴力-Ln-和-Exp"><a href="#暴力-Ln-和-Exp" class="headerlink" title="暴力 Ln 和 Exp"></a>暴力 Ln 和 Exp</h1><p>MTT Exp……想想都恐怖……还是暴力吧</p>
+<p>考虑</p>
+<script type="math/tex; mode=display">\text{Ln} F=G</script><script type="math/tex; mode=display">\dfrac{F'}{F}=G'</script><script type="math/tex; mode=display">F'-FG'=0</script><script type="math/tex; mode=display">(n+1)f_{n+1}-\sum_{i=1}^{n+1}if_{n+1-i}g_i=0</script><script type="math/tex; mode=display">\boxed{f_n=\dfrac{1}{n}\sum_{i=1}^nif_{n-i}g_i}</script><script type="math/tex; mode=display">\boxed{g_n=nf_n-\sum_{i=1}^{n-1}if_{n-i}g_i}</script><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><p>对于 $g(p,u,j)$，会计算$f(p,j),…,f(p,uj)$；</p>
+<p>对于 $f(i,j)$，会计算 $g(p,u,j)(up\le i)$</p>
+<p>而我们从 $f(n,1)$ 出发，也就是说会 DP 到的状态，其下标之积 $\le n$</p>
+<p>容易发现 Exp 所用复杂度为 $\sum_{i}\sum_{j}\dfrac{n^2}{i^2j^2}=\Theta(n^2)$（著名的巴塞尔问题），Ln 所用时间复杂度为 $\sum_{i}\dfrac{n^2}{i^2}=\Theta(n^2)$，而 DP 所用时间复杂度为 $\sum_{i}\sum_{j}\dfrac{n}{ij}$ 显然没有 Exp 高。</p>
+<p>如果实现比较辣鸡可能会多出一个求逆元的 $\log$。</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p>败了呀。</p>
+<p><img src="\images\qiyangak.png" alt=""></p>
+]]></content>
       <tags>
         <tag>数学</tag>
         <tag>生成函数</tag>
