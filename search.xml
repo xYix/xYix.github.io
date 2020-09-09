@@ -1170,21 +1170,21 @@
 <script type="math/tex; mode=display">\boxed{g(p,u,j)=\dfrac{(up!)^{jk}}{(p!)^{ujk}}\cdot\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}}</script><p>其中 $\omega_x$ 表示可以被 $x$ 描述的树组个数的 $jk$ 次方。同属一个等价类的元素会重复计算它，所以还要除以 $|\overline x|$。</p>
 <p>那么之前的式子是什么意思呢：它只要求 $a_1$ 个元素同色，另外 $a_2$ 个元素同色，……。而且它认为 $\{a_i\}$ <strong>有序</strong>（根本没人觉得它无序吧……）。我们知道要求某些东西同色可以被描述为<strong>是某个置换的不动点</strong>，在这里就是一个大小为 $a_1$ 的循环加一个大小为 $a_2$ 的循环……</p>
 <p>设 $fix(A)$ 是置换 $A$ 的不动点集合，$A$ 拆成循环生成的序列是 $\{a’_i\}$，注意 $\{a’_i\}$ <strong>有序</strong>，因为循环之间是可以按最前面的元素的位置分出先后的（这也就和前面的 $\{a_i\}$ 有序对上了），那么我们有</p>
-<script type="math/tex; mode=display">\boxed{\sum_{x\in fix(A)}\omega_x=\prod_{i}f(p,a_i'j)}</script><p>好了，伏笔回收。那么我们猜也能猜出来 Burnside 引理肯定有一个扩展是等价类权值（即等于其任意元素的权值，显然都相等）之和等于各置换的不动点的权值之和的平均数</p>
-<script type="math/tex; mode=display">\sum_{x\in X}\dfrac{\omega_x}{|\overline x|}=\dfrac{1}{|G|}\sum_{A\in G}\sum_{x\in fix(A)}\omega_x=\dfrac{1}{|G|}\sum_A\prod_{i}f(p,a_i'j)</script><p>伟大的成就！</p>
-<p>可是问题就来了，$\prod_{i}\dfrac{1}{(a_i!)^{jk}}$ 该如何解决呢？</p>
-<h1 id="解决-prod-i-dfrac-1-a-i-jk"><a href="#解决-prod-i-dfrac-1-a-i-jk" class="headerlink" title="解决 $\prod_{i}\dfrac{1}{(a_i!)^{jk}}$"></a>解决 $\prod_{i}\dfrac{1}{(a_i!)^{jk}}$</h1><p>既然元素可以带权，那么置换可不可以带权呢？答案当然是肯定的。</p>
+<script type="math/tex; mode=display">\boxed{\color{red}\sum_{x\in fix(A)}\omega_x=\prod_{i}f(p,a_i'j)}</script><p>好了，伏笔回收。</p>
+<p>可以看出这个东西和我们要求的 $g$ 起码算是有点关系了。那么问题就来了，系数 $\dfrac 1{|\overline x|}\prod_{i}\dfrac{1}{(a_i!)^{jk}}$ 该如何解决呢？</p>
+<h1 id="解决-small-dfrac-1-overline-x-prod-i-dfrac-1-a-i-jk"><a href="#解决-small-dfrac-1-overline-x-prod-i-dfrac-1-a-i-jk" class="headerlink" title="解决 $\small\dfrac 1{|\overline x|}\prod_{i}\dfrac{1}{(a_i!)^{jk}}$"></a>解决 $\small\dfrac 1{|\overline x|}\prod_{i}\dfrac{1}{(a_i!)^{jk}}$</h1><p>既然元素可以带权，那么置换可不可以带权呢？答案当然是肯定的。</p>
 <p>假设置换 $A$ 的权为 $w_A$，则有</p>
-<script type="math/tex; mode=display">\sum_{A\in G}w_A\sum_{x\in fix(A)}\omega_x=\sum_{x\in X}\omega_x\sum_{x\in fix(A)}w_A</script><p>于是我们只需要求 $w_A$ 使得</p>
-<script type="math/tex; mode=display">\sum_{x\in fix(A)}w_A=\dfrac{C}{|\overline x|}\prod_i\dfrac{1}{(a_i!)^{jk}}</script><p>其中 $C$ 是一个常数，<del>事实上是另一个伏笔</del>。这样的话我们就有</p>
-<script type="math/tex; mode=display">C\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}=\dfrac{1}{|G|}\sum_Aw_A\prod_{i}f(p,a_i'j)</script><script type="math/tex; mode=display">\boxed{C\dfrac{g(p,u,j)(p!)^{ujk}}{(up!)^{jk}}=\dfrac{1}{|G|}\sum_Aw_A\prod_{i}f(p,a_i'j)}</script><p>注意到 $w_A$ 后面接的连乘号，我们自然也希望</p>
+<script type="math/tex; mode=display">\sum_{A\in G}w_A{\color{red}\sum_{x\in fix(A)}\omega_x}=\sum_{x\in X}\omega_x{\color{blue}\sum_{x\in fix(A)}w_A}</script><p>于是我们只需要求 $w_A$ 使得</p>
+<script type="math/tex; mode=display">\color{blue}\sum_{x\in fix(A)}w_A=\dfrac{C}{|\overline x|}\prod_i\dfrac{1}{(a_i!)^{jk}}</script><p>其中 $C$ 是一个常数，<del>事实上是另一个伏笔</del>。这样的话我们就有</p>
+<script type="math/tex; mode=display">{\color{blue}C}\sum_{x\in X}{\color{blue}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)}\cdot\dfrac{\omega_x}{\color{blue}|\overline x|}=\sum_Aw_A{\color{red}\prod_{i}f(p,a_i'j)}</script><script type="math/tex; mode=display">\boxed{C\dfrac{g(p,u,j)(p!)^{ujk}}{(up!)^{jk}}=\sum_Aw_A\prod_{i}f(p,a_i'j)}</script><p>伟大的成就！（震声）</p>
+<p>注意到 $w_A$ 后面接的连乘号，我们自然也希望</p>
 <script type="math/tex; mode=display">w_A=\prod_i \hat w(a'_i)</script><p>你可能已经猜到 $\text{Exp}$ 了。具体如下。先假装我们会求 $\hat w(a’_i)$。</p>
 <h1 id="回到-g-p-u-j"><a href="#回到-g-p-u-j" class="headerlink" title="回到 $g(p,u,j)$"></a>回到 $g(p,u,j)$</h1><p>换掉 $w_A$，有更近一步的</p>
-<script type="math/tex; mode=display">\begin{aligned}&\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}\\=&\dfrac{1}{C|G|}\sum_A\prod_{i}\hat w(a_i)f(p,a_ij)\end{aligned}</script><p>考虑一个 $\{a_i\}$ 序列能代表几个置换。（由于对之前的 $a_i$ 的讨论已经停止了，我们从这里开始对 $a’_i$ 去掉 $’$ 号应该不至于混淆。)先决定标号从属于哪个循环，然后循环内可以圆排列，但是这样会使循环原本的次序错乱所以还要除以循环数的阶乘。</p>
-<script type="math/tex; mode=display">=\dfrac{1}{C|G|}\sum_{l,\sum a_i=u}{u\choose a_1,a_2,...,a_l}\left(\prod_{i=1}^l(a_i-1)!\right)\dfrac{\prod_{i=1}^l\hat w(a_i)f(p,a_ij)}{l!}</script><script type="math/tex; mode=display">=\dfrac{u!}{C|G|}\sum_{l,\sum a_i=u}\dfrac 1{l!}\prod_{i=1}^l\dfrac{\hat w(a_i)f(p,a_ij)}{a_i}</script><p>审视一下这个形式。$\sum a_i=u$ 已经刻到 DNA 里了。设</p>
+<script type="math/tex; mode=display">\begin{aligned}&\sum_{x\in X}\left(\prod_{i}\dfrac{1}{(a_i!)^{jk}}\right)\cdot\dfrac{\omega_x}{|\overline x|}\\=&\dfrac{1}{C}\sum_A\prod_{i}\hat w(a_i)f(p,a_ij)\end{aligned}</script><p>考虑一个 $\{a_i\}$ 序列能代表几个置换。（由于对之前的 $a_i$ 的讨论已经停止了，我们从这里开始对 $a’_i$ 去掉 $’$ 号应该不至于混淆。)先决定标号从属于哪个循环，然后循环内可以圆排列，但是这样会使循环原本的次序错乱所以还要除以循环数的阶乘。</p>
+<script type="math/tex; mode=display">=\dfrac{1}{C}\sum_{l,\sum a_i=u}{u\choose a_1,a_2,...,a_l}\left(\prod_{i=1}^l(a_i-1)!\right)\dfrac{\prod_{i=1}^l\hat w(a_i)f(p,a_ij)}{l!}</script><script type="math/tex; mode=display">=\dfrac{u!}{C}\sum_{l,\sum a_i=u}\dfrac 1{l!}\prod_{i=1}^l\dfrac{\hat w(a_i)f(p,a_ij)}{a_i}</script><p>审视一下这个形式。$\sum a_i=u$ 已经刻到 DNA 里了。设</p>
 <script type="math/tex; mode=display">F(x)=\sum_{i=1}^{\infty}\dfrac{\hat w(i)f(p,ij)x^i}{i}</script><p>那么我们得到</p>
-<script type="math/tex; mode=display">=\dfrac{u!}{C|G|}[x^u]e^{F(x)}</script><p>也就是</p>
-<script type="math/tex; mode=display">\boxed{g(p,u,j)=\dfrac{(up!)^{jk}}{(p!)^{ujk}}\dfrac{u!}{C|G|}[x^u]e^{F(x)}}</script><p>现在只剩 $\hat w(a_i’)$ 的问题了。</p>
+<script type="math/tex; mode=display">=\dfrac{u!}{C}[x^u]e^{F(x)}</script><p>也就是</p>
+<script type="math/tex; mode=display">\boxed{g(p,u,j)=\dfrac{(up!)^{jk}}{(p!)^{ujk}}\dfrac{u!}{C}[x^u]e^{F(x)}}</script><p>现在只剩 $\hat w(a_i’)$ 的问题了。</p>
 <h1 id="hat-w-a’-i"><a href="#hat-w-a’-i" class="headerlink" title="$\hat w(a’_i)$"></a>$\hat w(a’_i)$</h1><p>我们希望满足的是</p>
 <script type="math/tex; mode=display">\sum_{x\in fix(A)}\prod_{i}\hat w(a'_i)=\dfrac{C}{|\overline x|}\prod_i\dfrac{1}{(a_i!)^{jk}}</script><p>展开 $|\overline{x}|$。</p>
 <script type="math/tex; mode=display">\sum_{x\in fix(A)}\prod_{i}\hat w(a'_i)=C\prod_{i}\dfrac{1}{(a_i!)^{jk}}{u\choose a_1,a_2,...,a_m}^{-1}</script><p>考虑 $x\in fix(A)$ 的 $A$。显然 $A$ 没有跨颜色块的循环。那么我们故技重施拆解颜色块，等式左边就等于</p>
@@ -1199,7 +1199,9 @@
 <p>而我们从 $f(n,1)$ 出发，也就是说会 DP 到的状态，其下标之积 $\le n$</p>
 <p>容易发现 Exp 所用复杂度为 $\sum_{i}\sum_{j}\dfrac{n^2}{i^2j^2}=\Theta(n^2)$（著名的巴塞尔问题），Ln 所用时间复杂度为 $\sum_{i}\dfrac{n^2}{i^2}=\Theta(n^2)$，而 DP 所用时间复杂度为 $\sum_{i}\sum_{j}\dfrac{n}{ij}$ 显然没有 Exp 高。</p>
 <p>如果实现比较辣鸡可能会多出一个求逆元的 $\log$。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p>败了呀。</p>
+<h1 id="式子速查"><a href="#式子速查" class="headerlink" title="式子速查"></a>式子速查</h1><p>$f(i,j)=tf(i-1,j,i-1)$</p>
+<p>$tf(1,j,i)=1$</p>
+<script type="math/tex; mode=display">\boxed{tf(p,j,i)=\sum_{pu+v=i}tf(p-1,j,v)g(p,u,j){i\choose pu}^{jk}}</script><script type="math/tex; mode=display">G(x)=\sum_{i=1}^{\infty}\dfrac{\hat w(i)x^i}{i}</script><script type="math/tex; mode=display">\boxed{[x^i]e^{G(x)}=\dfrac{1}{(i!)^{jk}}}</script><script type="math/tex; mode=display">F(x)=\sum_{i=1}^{\infty}\dfrac{\hat w(i)f(p,ij)x^i}{i}</script><script type="math/tex; mode=display">\boxed{g(p,u,j)=\dfrac{(up!)^{jk}}{(p!)^{ujk}}[x^u]e^{F(x)}}</script><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p>败了呀。</p>
 <p><img src="\images\qiyangak.png" alt=""></p>
 ]]></content>
       <tags>
