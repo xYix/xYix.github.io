@@ -1004,7 +1004,7 @@
 <p>但是 $\uparrow$ 小于任何一个正数。你可以把它认为是无穷小一类的东西。</p>
 <p>注意 $\star+\uparrow$ 是先手必胜的，但是 $\star+\uparrow+\uparrow$ 又变成 Alice 必胜了。</p>
 <p>如何在考虑 $\star,\uparrow,\downarrow$ 的情况下判断整个游戏是先手必胜、后手必胜？丢结论：</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/wqh1hy9p.png" alt=""></p>
+<p><img src="\images\surreal2.png" alt=""></p>
 <p>好力，接下来看例题。</p>
 <h2 id="4-例题"><a href="#4-例题" class="headerlink" title="4.例题"></a>4.例题</h2><h3 id="P4225"><a href="#P4225" class="headerlink" title="P4225"></a><a href="https://www.luogu.com.cn/problem/P4225" target="_blank" rel="noopener">P4225</a></h3><p><del>可以从题目名称里体会到出题人溢出屏幕的求生欲。</del></p>
 <p>总共只有 $23$ 种情况，于是手推可以得出每一种棋局对应的超实数。这题只有 $0,\pm 1,\pm \tfrac 1 2$ 和 $\star,\uparrow,\downarrow$。</p>
