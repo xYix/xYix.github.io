@@ -951,8 +951,8 @@
 </ul>
 <p>接下来你会看到如果 $=$ 代表常规的，$x_L=y_L$ 且 $x_R=y_R$ 的那种 $=$，反对称性会不满足。</p>
 <p>所以事实上我们是拿这个定义新的 $=$ 的……</p>
-<p>也就是说，两个 _不同的_ 元素 $x,y$，可能使得 $x\le y,y\le x$同时满足。很快你会看到一个例子。</p>
-<p>据说可以证明 $x\le y$ 和 $y\le x$ 中至少有一个成立，博主不会证。而且这个结论意义不大，因为如果引入 $*,\uparrow,\downarrow$ 后这个结论显然不成立，而很多游戏都存在先手必胜局面。</p>
+<p>也就是说，两个<em>不同的</em>元素 $x,y$，可能使得 $x\le y,y\le x$同时满足。很快你会看到一个例子。</p>
+<p>据说可以证明 $x\le y$ 和 $y\le x$ 中至少有一个成立，博主不会证。而且这个结论意义不大，因为如果引入 $\star,\uparrow,\downarrow$ 后这个结论显然不成立，而很多游戏都存在先手必胜局面。</p>
 <p>聊了这么多，让我们<strong>真正地见识一些超现实数</strong>。</p>
 <p>$\{|\}$ 是最简单的一个超现实数，我们把它称作 $0$，很快你会知道这是为什么。（标记 $\color{red}1$）</p>
 <p>$\{0|\}$ 称作 $1$。显然有 $0\le 1$，$0\not\ge 1$。</p>
@@ -991,24 +991,24 @@
 <p>以此类推，$N$ 块写着 A 的积木：$\delta(N)$。</p>
 <p>相反，$N$ 块写着 B 的积木： $\delta(-N)$。</p>
 <p>算了直接丢个结论图吧：</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/2hoe6ndn.png" alt=""></p>
+<p><img src="\images\surreal.png" alt=""></p>
 <p>多个子游戏直接实数加法即可。</p>
 <h2 id="3-超超实数？？？"><a href="#3-超超实数？？？" class="headerlink" title="3.超超实数？？？"></a>3.超超实数？？？</h2><p><del>这个“超超”的前缀总是让我想到<a href="http://scp-wiki-cn.wikidot.com/component:pataphysics-theme" target="_blank" rel="noopener">超形上学部</a></del></p>
 <p><del>找不到超形上学部中心页，只好丢了个版式页进来</del></p>
 <p>注意超实数要求右集合的任何一个元素都不小于等于左集合的任意一个元素，然而不符合这个要求的游戏是非常常见的。</p>
 <p>比如在刚才的游戏中加入一种同时写着 A 和 B 的积木，显然，单独一块这种积木的游戏对应的“超实数”应该是：</p>
-<script type="math/tex; mode=display">\{0|0\}</script><p>把它记作 $*$。</p>
-<p>$<em>$ 是一个先手必胜的棋局，同时有 $</em>+*=0$。</p>
-<p>$<em>$ 小于（不大于）任何一个正数，大于任何一个负数，但是和 $0$ 无法比较： $</em>\not\le 0,*\not\ge 0$。</p>
-<p>再考虑 $\uparrow=\{0|<em>\},\downarrow=\{</em>|0\}$。$\uparrow$ 描述了这样一个棋局：Alice 先手则 Bob 无路可走，Alice 胜；Bob 先手则转为 $*$ 局面且 Alice 先手，还是 Alice 胜，是一个 Alice 必胜局面。$\downarrow$ 反之。$\uparrow=-\downarrow$。</p>
+<script type="math/tex; mode=display">\{0|0\}</script><p>把它记作 $\star$。</p>
+<p>$\star$ 是一个先手必胜的棋局，同时有 $\star+\star=0$。</p>
+<p>$\star$ 小于（不大于）任何一个正数，大于任何一个负数，但是和 $0$ 无法比较： $\star\not\le 0,\star\not\ge 0$。</p>
+<p>再考虑 $\uparrow=\{0|\star\},\downarrow=\{\star|0\}$。$\uparrow$ 描述了这样一个棋局：Alice 先手则 Bob 无路可走，Alice 胜；Bob 先手则转为 $\star$ 局面且 Alice 先手，还是 Alice 胜，是一个 Alice 必胜局面。$\downarrow$ 反之。$\uparrow=-\downarrow$。</p>
 <p>但是 $\uparrow$ 小于任何一个正数。你可以把它认为是无穷小一类的东西。</p>
-<p>注意 $<em>+\uparrow$ 是先手必胜的，但是 $</em>+\uparrow+\uparrow$ 又变成 Alice 必胜了。</p>
-<p>如何在考虑 $*,\uparrow,\downarrow$ 的情况下判断整个游戏是先手必胜、后手必胜？丢结论：</p>
+<p>注意 $\star+\uparrow$ 是先手必胜的，但是 $\star+\uparrow+\uparrow$ 又变成 Alice 必胜了。</p>
+<p>如何在考虑 $\star,\uparrow,\downarrow$ 的情况下判断整个游戏是先手必胜、后手必胜？丢结论：</p>
 <p><img src="https://cdn.luogu.com.cn/upload/image_hosting/wqh1hy9p.png" alt=""></p>
 <p>好力，接下来看例题。</p>
 <h2 id="4-例题"><a href="#4-例题" class="headerlink" title="4.例题"></a>4.例题</h2><h3 id="P4225"><a href="#P4225" class="headerlink" title="P4225"></a><a href="https://www.luogu.com.cn/problem/P4225" target="_blank" rel="noopener">P4225</a></h3><p><del>可以从题目名称里体会到出题人溢出屏幕的求生欲。</del></p>
-<p>总共只有 $23$ 种情况，于是手推可以得出每一种棋局对应的超实数。这题只有 $0,\pm 1,\pm \tfrac 1 2$ 和 $*,\uparrow,\downarrow$。</p>
-<p>显然只要 $<em>$ 的游戏的个数不为 0，随机 kill 完 $</em>$ 游戏的个数是偶数/奇数的概率都是 $\frac 1 2$。</p>
+<p>总共只有 $23$ 种情况，于是手推可以得出每一种棋局对应的超实数。这题只有 $0,\pm 1,\pm \tfrac 1 2$ 和 $\star,\uparrow,\downarrow$。</p>
+<p>显然只要 $\star$ 的游戏的个数不为 0，随机 kill 完 $\star$ 游戏的个数是偶数/奇数的概率都是 $\frac 1 2$。</p>
 <p>用上一点生成函数的知识应该容易计算 $\sum\uparrow$ 的部分。即计算 $(x+1)^n(x^{-1}+1)^m=x^{-m}(x+1)^{n+m}$ 中 $x^i(i&lt;0)$ 的系数和。很好做。</p>
 <p>用上较多的生成函数的知识容易计算 $\sum \texttt{数字}$ 的部分。即计算 $(x+1)^a(x^{-1}+1)^c(x^2+1)^b(x^{-2}+1)^d=x^{-c-d}(x+1)^{a+c}(x^2+1)^{b+d}$ 中 $x^i(i&lt;0)$ 的系数和。</p>
 <p>枚举 $(x^2+1)^{b+d}$ 中展开出的 $Cx^i$ 项，容易发现可以和它配对对答案产生贡献的 $(x+1)^{a+c}$ 中展开出的 $Cx^j$ 项要满足 $j&lt;-i$，于是把 $x^j$ 的系数做一个前缀和即可。</p>
