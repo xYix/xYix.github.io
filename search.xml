@@ -877,7 +877,7 @@
 <p>还是可以分别对连续段计算。下面考虑单个长度为 $n$ 的连续段。</p>
 <p>考虑每次加连续的一段 $1$ 和一个 $0$，第 $n+1$ 强制选 $0$，那么大小为 $m$ 的答案就是</p>
 <script type="math/tex; mode=display">[x^{n+1}]\left(\sum_{i=1}^{K}x^i\right)^m</script><p>写成生成函数就是（其中 $G(x)=x\dfrac{1-x^K}{1-x}$）</p>
-<script type="math/tex; mode=display">[x^{n+1}]\dfrac{1}{1-yG(x)}</script><p>写成生成函数有什么用呢，看起来还没之前那个好算啊。不好算没关系，（拉格朗日）反演一下就好算了：</p>
+<script type="math/tex; mode=display">[x^{n+1}]\dfrac{1}{1-yG(x)}</script><p>写成生成函数有什么用呢，看起来还没之前那个好算啊，还有一个恶心的复合。不好算没关系，（拉格朗日）反演一下就好算了：</p>
 <script type="math/tex; mode=display">[x^{n+1}]\dfrac{1}{1-yG(x)}=\dfrac{1}{n+1}[x^{-1}]\dfrac{1}{(1-yx)^2}\cdot\dfrac{1}{G^{\left<-1\right>(n+1)}(x)}</script><p>明明是一个问题的两种表述为什么一种比另一种好算呢，人类的计算机科学就是逊啦（2/1）</p>
 <p>$F=G^{\left&lt;-1\right&gt;}$ 显然可以牛迭：</p>
 <script type="math/tex; mode=display">F\dfrac{1-F^K}{1-F}=x</script><script type="math/tex; mode=display">-x+(1+x)F-F^{K+1}=0</script><p>求导一下是</p>
