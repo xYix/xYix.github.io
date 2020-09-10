@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="简单介绍概率和期望。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率和期望（旧文补档）">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/probability-expectation/index.html">
+<meta property="og:site_name" content="x义x的博客">
+<meta property="og:description" content="简单介绍概率和期望。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-01T11:44:35.000Z">
+<meta property="article:modified_time" content="2020-09-06T10:21:17.148Z">
+<meta property="article:author" content="x义x">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="概率期望">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/09/01/probability-expectation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>概率和期望（旧文补档） | x义x的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">x义x的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">……就算是单程票，也是可以的吧？</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-博客首页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>博客首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于作者">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于作者</a>
+
+  </li>
+        <li class="menu-item menu-item-标签一览">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签一览</a>
+
+  </li>
+        <li class="menu-item menu-item-文章归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章归档</a>
+
+  </li>
+        <li class="menu-item menu-item-膜拜神瑇">
+
+    <a href="/modai/" rel="section"><i class="fa fa-user fa-fw"></i>膜拜神瑇</a>
+
+  </li>
+        <li class="menu-item menu-item-网义云音乐">
+
+    <a href="/songlist/" rel="section"><i class="fa fa-music fa-fw"></i>网义云音乐</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜点什么
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/probability-expectation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="x义x">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x义x的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          概率和期望（旧文补档）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-01 19:44:35" itemprop="dateCreated datePublished" datetime="2020-09-01T19:44:35+08:00">2020-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-06 18:21:17" itemprop="dateModified" datetime="2020-09-06T18:21:17+08:00">2020-09-06</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>5k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>简单介绍概率和期望。</p>
+<a id="more"></a>
+<h1 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h1><p><strong>概率</strong>反映随机事件出现的可能性大小，是事件发生的可能性的度量。</p>
+<p><strong>样本空间</strong>$\Omega$是某个随机实验的所有基本结果的集合。</p>
+<ul>
+<li><p>比如，$\{\texttt{叉义叉爆零}\}$是一个样本空间，因为一考试（随机试验）x义x就只能爆零。</p>
+</li>
+<li><p>$\{\texttt{ZK拿rank1},\texttt{ZK拿rank2},\texttt{ZK拿rank3}\}$是一个样本空间。</p>
+</li>
+<li><p>x义x抛两枚硬币，$\{\texttt{正正},\texttt{正反},\texttt{反正},\texttt{反反}\}$是一个样本空间。</p>
+</li>
+</ul>
+<p>样本空间的一个子集称为<strong>事件</strong>，所有事件的集合称为<strong>事件集合</strong>$F$。</p>
+<p><strong>概率测度</strong>$P$，即常说的概率，是一个从$F$到实数的函数，或者说，一个事件对应了一个它的概率。一个合理的概率测度需要满足概率公理：</p>
+<ul>
+<li><p>$\forall A\in F,P(A)\ge 0$。任何一个事件的概率非负。（非负性）</p>
+</li>
+<li><p>$P(\Omega)=1$。（规范性）</p>
+</li>
+<li><p>$\forall A,B\in F$，如果$A\cap B=\phi$，那么有$P(A)+P(B)=P(A\cup B)$。（可加性）</p>
+</li>
+</ul>
+<p><del>因此我们知道，在一个合理的概率测度下x义x的爆零是必然的</del></p>
+<h1 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h1><h2 id="条件概率-1"><a href="#条件概率-1" class="headerlink" title="条件概率"></a>条件概率</h2><p>记$P(A|B)$为，$B$发生的情况下$A$发生的概率。同时把$P(A\cap B)$简记为$P(AB)$或$P(A,B)$。</p>
+<p>条件概率公式：</p>
+<script type="math/tex; mode=display">P(A|B)=\dfrac{P(AB)}{P(B)}</script><p>事实上，我们把$B$看作了一个新的样本空间，条件概率公式也是两个样本空间上的概率测度的关系。</p>
+<h2 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h2><p>设$\forall i,j,\ B_i\cap B_j=\phi$，且$\bigcup B_i=\Omega$，则称$\{B_i\}$是样本空间的一个<strong>划分</strong>。</p>
+<p>如果$\{B_i\}$是样本空间的一个划分，那么有</p>
+<script type="math/tex; mode=display">P(A)=\sum P(A|B_i)P(B_i)</script><p>容易证明。</p>
+<h2 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h2><script type="math/tex; mode=display">P(A|B)=\dfrac{P(B|A)P(A)}{P(B)}</script><p>联系了两个概率空间 $A$ 和 $B$ 的重要公式。如果把 $P(A),P(B)$ 展开写为 $P(A|\Omega),P(B|\Omega)$ 再看看的话可能会获得一些更深的理解。</p>
+<h2 id="缝合怪（？？？）"><a href="#缝合怪（？？？）" class="headerlink" title="缝合怪（？？？）"></a>缝合怪（？？？）</h2><p>就是把贝叶斯公式和全概率公式结合一下</p>
+<script type="math/tex; mode=display">P(B_i|A)=\dfrac{P(A|B_i)P(B)}{\sum_{j}P(A|B_j)B_j}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p>似乎OI中用得不多？就不讲例题了。</p>
+<h1 id="随机变量，期望，方差"><a href="#随机变量，期望，方差" class="headerlink" title="随机变量，期望，方差"></a>随机变量，期望，方差</h1><p>如果没有特殊说明，以下默认随机变量为离散的。</p>
+<p><strong>离散的</strong>是说，如果一个随机变量的取值只有有限或<strong>可数</strong>个。可数的意思比较难解释，大意就是“可以列举出来”。比如所有偶数可以按第一个偶数，第二个偶数……这样列举出来，所有有理数也可以列举出来。但是$[0,1]$间的实数则不可以列举出来。不展开讲严谨定义了。</p>
+<h2 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h2><p><strong>随机变量</strong>本身没有随机性，也不是变量，它其实是一个定义在$\Omega$上的函数：一个基本结果对应一个值。出现哪一个基本结果才是随机的，同一个基本结果对应的函数值是固定的。</p>
+<p>然而大多数应用情况下我们反而不主要分析，甚至不明确指出样本空间……</p>
+<p>有时我们说，随机变量$X=x$的概率$P(X=x)$，其实是说$P(\{e|e\in \Omega,X(e)=x\})$。再换句话说，$X=x$是一个新的事件，我们按这些事件把样本空间重新作了划分。接下来我们将完全把$X=x$当事件看待。</p>
+<p>顺便再提一句，$\sum P(X=x)=1$。即$P(\Omega)=1$。</p>
+<p>我们说两个随机变量$X_1,X_2$是<strong>独立的</strong>，是说，</p>
+<script type="math/tex; mode=display">P(X_1=x_1,X_2=x_2)=P(X_1=x_1)\cdot P(X_2=x_2)</script><h2 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h2><p>一个随机变量$X$的<strong>期望</strong>$\text{E}X$是</p>
+<script type="math/tex; mode=display">\text{E}X=\sum x\cdot P(X=x)</script><p>期望具有<strong>线性性</strong>。对于两个<strong>不一定独立的</strong>随机变量$X,Y$，有</p>
+<script type="math/tex; mode=display">\text{E}(X+Y)=\text{E}X+\text{E}Y</script><p>对于两个<strong>独立的</strong>$X,Y$，还有</p>
+<script type="math/tex; mode=display">\text{E}(X\cdot Y)=\text{E}X\cdot\text{E}Y</script><p>还容易得到</p>
+<script type="math/tex; mode=display">\begin{aligned}\text{E}X&=\sum_{i=-\infty}^\infty iP(X=i)\\&=\sum_{i=-\infty}^{-1} P(X=i)\sum_{j=1}^{-i}-1+\sum_{i=1}^{\infty}P(X=i)\sum_{j=1}^i1\\&=-\sum_{j=1}^\infty\sum_{i\le -j}P(X=i)+\sum_{j=1}^{\infty}\sum_{i\ge j}P(X=i)\\&=-\sum_{j=-\infty}^{-1}P(X\le j)+\sum_{j=1}^{\infty}P(X\ge j)\end{aligned}</script><p>也就是所谓<strong>整数概率公式</strong>。</p>
+<h2 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h2><h3 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h3><p>抛一枚质地均匀的硬币。求期望正面朝上的次数。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>有两个基本结果：正面朝上或反面朝上，概率均为$\frac 1 2$。然后$X(\texttt{正面朝上})=1$，$X(\texttt{反面朝上})=0$，于是显然$\text{E}X=\frac 1 2$。</p>
+<h3 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h3><p>抛$N$枚质地均匀的硬币。求期望正面朝上的次数。</p>
+<h3 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h3><p>根据期望的线性性，显然有$\text{E}X=\frac N 2$。</p>
+<h2 id="条件期望"><a href="#条件期望" class="headerlink" title="条件期望"></a>条件期望</h2><p>我们前面提到了有关<strong>如果已经有某事件发生的约束</strong>，随机变量会如何行为的内容。实际上，就是缩小随机变量的定义域。</p>
+<p>如果$A$已经发生，那么随机变量$(X|A)$是一个从$A$到实数域的函数。</p>
+<p>类似条件概率公式，我们有条件期望公式：</p>
+<script type="math/tex; mode=display">P((X|A)=x)=\dfrac{P(X=x,A)}{P(A)}</script><p>全期望公式则看起来比较奇怪和不可思议：</p>
+<script type="math/tex; mode=display">\text{E}(\text{E}(X|Y))=\text{E}X</script><p>先来解读一下。$X|(Y=y)$是一个随机变量，它的期望就是$\text{E}(X|(Y=y))$；$\text{E}(X|Y)$也显然是一个从所有基本结果$Y=y$构成的样本空间到实数的函数（即一个随机变量），它的期望就是$\text{E}(\text{E}(X|Y))$，我们将要证明，它与$\text{E}X$相等。</p>
+<p>感性理解估计是理解不了了，我们爆拆吧。</p>
+<script type="math/tex; mode=display">\begin{aligned}\text{E}(\text{E}(X|Y))&=\sum_{y}\text{E}(X|Y=y)P(Y=y)\\&=\sum_{y}\sum_{x}xP(X=x|Y=y)P(Y=y)\\&=\sum_xx\sum_yP(X=x|Y=y)P(Y=y)\\&=\sum_xxP(X=x)\\&=\text{E}X\end{aligned}</script><p>大意就是，$Y=y$是样本空间的一个划分，于是我们换一下求和号再用一下全概率公式就得出来了。</p>
+<p>话说，其实我觉得（其中$B_i$是$\Omega$的一个划分）</p>
+<script type="math/tex; mode=display">\text{E}X=\sum P(B_i)\text{E}(X|B_i)</script><p>才更应该叫“全概率公式”？证法同。</p>
+<h2 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h2><h3 id="例三"><a href="#例三" class="headerlink" title="例三"></a>例三</h3><p><a href="https://www.luogu.org/problem/P2473" target="_blank" rel="noopener">P2473 [SCOI2008]奖励关</a></p>
+<h3 id="解答-2"><a href="#解答-2" class="headerlink" title="解答"></a>解答</h3><p>首先发现宝物数很少，考虑状压。一个宝物吃还是不吃，取决于吃/不吃<strong>之后</strong>能有多好，所以需要倒推。</p>
+<p>显然本题中，一个基本结果就是一串扔出的宝物序列$e$。我们设$F_{i,s}$是只考虑第$i$次到第$N$次扔出的宝物时的价值的期望（只考虑是说，$X_i$是所有这些宝物的价值和），即</p>
+<script type="math/tex; mode=display">\text{E}(X_i|\{e|e\text{是个从}i\texttt{次到}n\texttt{次的宝物的排列},e\texttt{中元素构成的集合为}s\})</script><p>后面那个事件太长，记为$A_{i,s}$。</p>
+<p>我们知道</p>
+<script type="math/tex; mode=display">\text{E}(X_i|A_{i,s})=\sum P(B_j|A_{i,s})E(X_i|B_j)</script><p>即“全期望公式”。</p>
+<p>现在我们考虑选择$B$。我们定义，$B_j$是$A_{i,s}$中，第$i$个宝物<strong>确定为</strong>$j$的宝物排列构成的集合，容易发现$P(B_j|A_{i,s})=\frac 1 N$。</p>
+<p>事实上，可以发现$A_{i+1,s’}$中的元素在开头加一个$j$就得到了$B_j$中的元素。于是有$E(X_i|B_j)=F_{i+1,s’}+W_j$。</p>
+<p>容易发现，$s’$并不好处理，但是反过来根据$i+1,s’,j$去确定$i,s$是容易的（$s=s’\cup\{j\}$），那么枚举$i,s,j$DP即可。</p>
+<p><del>花了这么长一段证了一个极其直观的DP</del></p>
+<h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><p>提一句吧。</p>
+<script type="math/tex; mode=display">\text{D}X=\text{E}\left((X-\text{E}X)^2\right)</script><script type="math/tex; mode=display">\text{D}X=\text{E}(X^2)-\text{E}^2X</script><h2 id="连续情形下的随机变量"><a href="#连续情形下的随机变量" class="headerlink" title="连续情形下的随机变量"></a>连续情形下的随机变量</h2><p>对于随机变量$X$，如果存在一个非负可积的函数$f(x)$使得</p>
+<script type="math/tex; mode=display">P(X\le x)=\int_{-\infty}^xp(t)\text{d}t</script><p>则称$X$是一个<strong>连续型随机变量</strong>，$P(X\le x)$是它的<strong>分布函数</strong>，也是上文的概率测度，$p(x)$是$X$的<strong>密度函数</strong>。</p>
+<p>显然有</p>
+<script type="math/tex; mode=display">P(X=x)=\int_x^xp(t)\text{d}t=0</script><p>然而，$X=x$并非不可能事件（$\phi$），也就是常说的：</p>
+<ul>
+<li><p>概率为0不一定不可能（$\phi$）；</p>
+</li>
+<li><p>概率为1不一定必然（整个$\Omega$）。</p>
+</li>
+</ul>
+<p>分布函数和密度函数当然要满足下面的性质：</p>
+<ul>
+<li><p>$p(x)\ge 0$。（非负性）</p>
+</li>
+<li><p>$\int_{-\infty}^\infty p(t)\text{d}t=1$。（规范性）</p>
+</li>
+<li><p>因为$p(t)$可积，所以可加性自然满足。</p>
+</li>
+</ul>
+<p>然后我们重新定义期望。我们的策略是，用离散型随机变量的期望“逼近”它。我们把图像切成宽度均为$\Delta x$的一小条一小条，$[x,x+\Delta x)$的概率近似看成$p(x)\Delta x$，此时随机变量的值近似看成$x$。其实就是积分：</p>
+<script type="math/tex; mode=display">\text{E}X=\int_{-\infty}^{\infty}tp(t)\text{d}t</script><p>你也可以理解为和离散情况更像的一种形式</p>
+<script type="math/tex; mode=display">\text{E}X=\int_{-\infty}^{\infty}t\text{d}P</script><p>同样有线性性，独立情况下的可乘性和如下的连续版的整数概率公式：</p>
+<script type="math/tex; mode=display">\begin{aligned}\text{E}X&=\int_{-\infty}^{\infty}tp(t)\text{d}t\\&=\int_{-\infty}^0 p(t)\int_{0}^{-t}(-1)\text{d}u\text{d}t+\int_0^\infty p(t)\int_{0}^t1\text{d}u\text{d}t\\&=-\int_{0}^\infty \int_{-\infty}^{-u}p(t)\text{d}t\text{d}u+\int_0^{\infty}\int_u^\infty p(t)\text{d}t\text{d}u\\&=-\int_{-\infty}^0 P(X\le u)\text{d}u+\int_0^{\infty}P(X\ge u)\text{d}u\end{aligned}</script><h2 id="例题-3"><a href="#例题-3" class="headerlink" title="例题"></a>例题</h2><h3 id="例四"><a href="#例四" class="headerlink" title="例四"></a>例四</h3><p>从$[l,r]\ (l,r&gt;0)$中随机取一个实数，取$N$次，求这取出的$N$个实数的最大值的期望。</p>
+<h3 id="解答-3"><a href="#解答-3" class="headerlink" title="解答"></a>解答</h3><p>设$X_n$是取了$n$次后的最大值。同时，设$X_0=l$。</p>
+<p>显然：</p>
+<script type="math/tex; mode=display">P(X_n\le x)=P(X_{n-1}\le x)\cdot P(\{\texttt{第}n\texttt{次取的}\le x\})</script><p>又显然有</p>
+<script type="math/tex; mode=display">P(\{\texttt{第}n\texttt{次取的}\le x\})=\begin{cases}0&(x<l)\\\dfrac{x-l}{r-l}&(x\in [l,r])\\1&(x>r)\end{cases}</script><p>所以</p>
+<script type="math/tex; mode=display">P(X_n\le x)=\begin{cases}0&(x<l)\\\left(\dfrac{x-l}{r-l}\right)^n&(x\in [l,r])\\1&(x>r)\end{cases}</script><script type="math/tex; mode=display">P(X_n\ge x)=\begin{cases}1&(x<l)\\1-\left(\dfrac{x-l}{r-l}\right)^n&(x\in [l,r])\\0&(x>r)\end{cases}</script><p>运用连续情况下的整数概率公式，得到答案为</p>
+<script type="math/tex; mode=display">\dfrac{nr+l}{n+1}</script><h3 id="例五"><a href="#例五" class="headerlink" title="例五"></a>例五</h3><p><a href="https://www.luogu.org/problem/P3343" target="_blank" rel="noopener">P3343 [ZJOI2015]地震后的幻想乡</a></p>
+<h3 id="解答-4"><a href="#解答-4" class="headerlink" title="解答"></a>解答</h3><p>_rqy 的题解写得太清晰了以至于我完全没有可以补充的地方……所以直接看罢。</p>
+<h3 id="例六"><a href="#例六" class="headerlink" title="例六"></a>例六</h3><p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">#372. 【UR #17】滑稽树前做游戏</a></p>
+<h3 id="解答-5"><a href="#解答-5" class="headerlink" title="解答"></a>解答</h3><p><a href="https://xyix.github.io/2020/09/06/uoj-372/" target="_blank" rel="noopener">这里</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+              <a href="/tags/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/" rel="tag"># 概率期望</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/20/SPOJ-26073/" rel="prev" title="SPOJ26073 题解">
+      <i class="fa fa-chevron-left"></i> SPOJ26073 题解
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/01/dirichlet-GF/" rel="next" title="狄利克雷生成函数学习笔记">
+      狄利克雷生成函数学习笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本定义"><span class="nav-number">1.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件概率"><span class="nav-number">2.</span> <span class="nav-text">条件概率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#条件概率-1"><span class="nav-number">2.1.</span> <span class="nav-text">条件概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全概率公式"><span class="nav-number">2.2.</span> <span class="nav-text">全概率公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贝叶斯公式"><span class="nav-number">2.3.</span> <span class="nav-text">贝叶斯公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缝合怪（？？？）"><span class="nav-number">2.4.</span> <span class="nav-text">缝合怪（？？？）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">2.5.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#随机变量，期望，方差"><span class="nav-number">3.</span> <span class="nav-text">随机变量，期望，方差</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#随机变量"><span class="nav-number">3.1.</span> <span class="nav-text">随机变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#期望"><span class="nav-number">3.2.</span> <span class="nav-text">期望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题-1"><span class="nav-number">3.3.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例一"><span class="nav-number">3.3.1.</span> <span class="nav-text">例一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答"><span class="nav-number">3.3.2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例二"><span class="nav-number">3.3.3.</span> <span class="nav-text">例二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答-1"><span class="nav-number">3.3.4.</span> <span class="nav-text">解答</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件期望"><span class="nav-number">3.4.</span> <span class="nav-text">条件期望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题-2"><span class="nav-number">3.5.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例三"><span class="nav-number">3.5.1.</span> <span class="nav-text">例三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答-2"><span class="nav-number">3.5.2.</span> <span class="nav-text">解答</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方差"><span class="nav-number">3.6.</span> <span class="nav-text">方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连续情形下的随机变量"><span class="nav-number">3.7.</span> <span class="nav-text">连续情形下的随机变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题-3"><span class="nav-number">3.8.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例四"><span class="nav-number">3.8.1.</span> <span class="nav-text">例四</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答-3"><span class="nav-number">3.8.2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例五"><span class="nav-number">3.8.3.</span> <span class="nav-text">例五</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答-4"><span class="nav-number">3.8.4.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例六"><span class="nav-number">3.8.5.</span> <span class="nav-text">例六</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解答-5"><span class="nav-number">3.8.6.</span> <span class="nav-text">解答</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="x义x"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">x义x</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/58567" title="luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;58567" rel="noopener" target="_blank"><i class="fas fa-code fa-fw"></i>luogu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/blog/zyxxs/" title="旧博客 → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;zyxxs&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>旧博客</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/Pataphysicist" title="codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;Pataphysicist" rel="noopener" target="_blank"><i class="fas fa-code fa-fw"></i>codeforces</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/zkdxl/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;zkdxl&#x2F;" rel="noopener" target="_blank">凯指导 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.luogu.com.cn/blog/Coding-life/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;Coding-life&#x2F;" rel="noopener" target="_blank">瑇 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/-Wallace-/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;-Wallace-&#x2F;" rel="noopener" target="_blank">汪莱士 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/Flying2018/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;Flying2018&#x2F;" rel="noopener" target="_blank">孔姥爷 的病历</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.luogu.com.cn/blog/qwe2715772231/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;qwe2715772231&#x2F;" rel="noopener" target="_blank">给指导 的博客</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">x义x</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">83k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:15</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script color="44,159,111" opacity="1.0" zIndex="-1" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

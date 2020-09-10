@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="两种求积性函数前缀和的方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="min25 筛和 Powerful Number 筛">
+<meta property="og:url" content="http://yoursite.com/2020/07/20/min25-powerfulnum/index.html">
+<meta property="og:site_name" content="x义x的博客">
+<meta property="og:description" content="两种求积性函数前缀和的方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-20T03:20:11.000Z">
+<meta property="article:modified_time" content="2020-07-20T23:48:44.432Z">
+<meta property="article:author" content="x义x">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="数论">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/07/20/min25-powerfulnum/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>min25 筛和 Powerful Number 筛 | x义x的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">x义x的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">……就算是单程票，也是可以的吧？</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-博客首页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>博客首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于作者">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于作者</a>
+
+  </li>
+        <li class="menu-item menu-item-标签一览">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签一览</a>
+
+  </li>
+        <li class="menu-item menu-item-文章归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章归档</a>
+
+  </li>
+        <li class="menu-item menu-item-膜拜神瑇">
+
+    <a href="/modai/" rel="section"><i class="fa fa-user fa-fw"></i>膜拜神瑇</a>
+
+  </li>
+        <li class="menu-item menu-item-网义云音乐">
+
+    <a href="/songlist/" rel="section"><i class="fa fa-music fa-fw"></i>网义云音乐</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜点什么
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/min25-powerfulnum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="x义x">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x义x的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          min25 筛和 Powerful Number 筛
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-20 11:20:11" itemprop="dateCreated datePublished" datetime="2020-07-20T11:20:11+08:00">2020-07-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-21 07:48:44" itemprop="dateModified" datetime="2020-07-21T07:48:44+08:00">2020-07-21</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.6k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>两种求积性函数前缀和的方法。</p>
+<a id="more"></a>
+<h2 id="Powerful-Number-筛"><a href="#Powerful-Number-筛" class="headerlink" title="Powerful Number 筛"></a>Powerful Number 筛</h2><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul>
+<li><p>积性</p>
+</li>
+<li><p>有一个和它在质数处取值相等的简单函数</p>
+</li>
+</ul>
+<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>Powerful Number 是指其每一个质因数的次数都大于等于 2 的数。可以证明其数量是 $O(\sqrt n)$ 的。</p>
+<p>假设我们要求 $F$ 的前缀和，设计积性函数 $G$，使得对于质数 $p$ 有 $G(p)=F(p)$，设 $H$ 使 $F=G*H$，于是就有 $H(p)=0$，又因为 $H$ 显然也积性，从而 $H$ 只在 Powerful Number 处取非 0 值。</p>
+<p>然后考虑一个和杜教筛一样的柿子：</p>
+<script type="math/tex; mode=display">S_F(n)=\sum_{d=1}^nH(d)S_G(\lfloor\dfrac{n}{d}\rfloor)</script><p>可以取巧妙的 $G$ 使得它容易杜教筛。$H(p^k)$ 一般也比较容易分析。接下来直接爆搜出所有的 Powerful Number 和它们的函数值即可。</p>
+<p>非常好写，而且如果 $G$ 的前缀和很容易求的话可以 $O(\sqrt n)$。</p>
+<h2 id="Min25-筛"><a href="#Min25-筛" class="headerlink" title="Min25 筛"></a>Min25 筛</h2><h3 id="要求-1"><a href="#要求-1" class="headerlink" title="要求"></a>要求</h3><ul>
+<li><p>积性</p>
+</li>
+<li><p>在质数的幂处的取值是项数较少的多项式</p>
+</li>
+</ul>
+<h3 id="做法-1"><a href="#做法-1" class="headerlink" title="做法"></a>做法</h3><p>思路借鉴了模板题第二篇题解，努力讲的清楚了一些，我尽力了……</p>
+<p>设要求的是 $\sum_{i=1}^n f(i)$。先按质数和合数分类，合数再按其最小质因子分类，注意合数 $n$ 的最小质因子小于等于 $\sqrt n$：</p>
+<script type="math/tex; mode=display">\sum_{p} f(i)+\sum_{p\le \sqrt n,p^e\le n}f(p^e)\sum_{1\le i\le n/p^e,i\text{ 的最小质因子}>p}f(i)</script><p>兄啊，这不是每一项都不能算吗（恼）</p>
+<p>我们先考虑一下 $f$ 在质数处的值之和。</p>
+<h4 id="质数处的值"><a href="#质数处的值" class="headerlink" title="质数处的值"></a>质数处的值</h4><p>我们搞出一个函数 $f’(x)$，这个函数<strong>完全积性</strong>，在<strong>质数处</strong>取值和 $f(x)$ 一样。考虑一个 DP，设</p>
+<script type="math/tex; mode=display">g(n,j)=\sum_{i\text{ 是质数或其最小质因子}>p_j,i\le n}f'(i)</script><p>其中 $p_j$ 是第 $j$ 个质数。</p>
+<p>当 $j\leftarrow j+1$，会有一些 $i$ 变得不满足条件，也就是那些最小质因子 $=p_j$ 的合数。</p>
+<p>如果提出一个 $p_j$（因为完全积性所以随便提），那么对它们的要求就只有：<strong>没有小于 $p_j$ 的因子，而且不是小于 $p_j$ 的质数</strong>。也就是 $g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1)$。</p>
+<p>所以</p>
+<script type="math/tex; mode=display">g(n,j)=\begin{cases}g(n,j-1)&(p_j^2>n)\\g(n,j-1)-f'(p_j)(g(\frac{n}{p_j},j-1)-g(p_{j-1},j-1))&(p_j^2\le n)\end{cases}</script><p>那个 $g(p_{j-1},j-1))$ 就是小于 $p_j$ 的质数之 $f’$ 和。线性筛的同时处理。</p>
+<p>于是发现用到的 $n$ 只有 $O(\sqrt n)$ 种。（可以不用 <code>map</code> 存储，大意就是对 $x\le \sqrt n$ 直接存到第一个桶，否则映射到第二个桶的 $\frac{N}{x}$ 处）</p>
+<p>总结一下就是靠一个 DP 一步步把非质数值给清洗掉。类似埃氏筛？</p>
+<p>设 $m$ 是 $p_m^2\le n$ 的最大 $m$。则 $g(n,m)$ 就是所有质数的函数值和，不过我们不打算直接使用。</p>
+<h4 id="整个柿子"><a href="#整个柿子" class="headerlink" title="整个柿子"></a>整个柿子</h4><p>故技重施，设 $S(n,j)$ 是最小质因数大于 $p_j$ 的 $f(i)$ 和，则有</p>
+<script type="math/tex; mode=display">S(n,j)=g(n,m)-g(p_{j-1},j-1)+\sum_{i>j,p_i^e\le n}f(p_i^e)(S(\frac{n}{p^e_i})+[e>1])</script><h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>考虑对 $g$ 的 DP。用到的一个 $n=\lfloor\dfrac{N}{x}\rfloor$ 会枚举小于等于 $\sqrt n$ 的所有质数，我们知道小于 $n$ 的质数是 $O(\dfrac{n}{\ln n})$ 的，于是积一下可以知道是 $O(\dfrac{n^{3/4}}{\ln n})$。</p>
+<p>对 $S$ 的 DP 可以证明是 $O(n^{1-\epsilon})$ 的。</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><ul>
+<li><p><a href="https://www.luogu.com.cn/problem/P5325" target="_blank" rel="noopener">P5325 【模板】Min_25筛</a></p>
+</li>
+<li><p><a href="https://loj.ac/problem/6053" target="_blank" rel="noopener">#6053. 简单的函数</a></p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+              <a href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag"># 数论</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/19/ZJOI2020-baolingji/" rel="prev" title="ZJOI2020 爆零记">
+      <i class="fa fa-chevron-left"></i> ZJOI2020 爆零记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/20/SPOJ-26073/" rel="next" title="SPOJ26073 题解">
+      SPOJ26073 题解 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Powerful-Number-筛"><span class="nav-number">1.</span> <span class="nav-text">Powerful Number 筛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求"><span class="nav-number">1.1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法"><span class="nav-number">1.2.</span> <span class="nav-text">做法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Min25-筛"><span class="nav-number">2.</span> <span class="nav-text">Min25 筛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求-1"><span class="nav-number">2.1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法-1"><span class="nav-number">2.2.</span> <span class="nav-text">做法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#质数处的值"><span class="nav-number">2.2.1.</span> <span class="nav-text">质数处的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整个柿子"><span class="nav-number">2.2.2.</span> <span class="nav-text">整个柿子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">2.2.3.</span> <span class="nav-text">复杂度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">3.</span> <span class="nav-text">例题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="x义x"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">x义x</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/58567" title="luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;58567" rel="noopener" target="_blank"><i class="fas fa-code fa-fw"></i>luogu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/blog/zyxxs/" title="旧博客 → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;zyxxs&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>旧博客</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/Pataphysicist" title="codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;Pataphysicist" rel="noopener" target="_blank"><i class="fas fa-code fa-fw"></i>codeforces</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/zkdxl/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;zkdxl&#x2F;" rel="noopener" target="_blank">凯指导 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.luogu.com.cn/blog/Coding-life/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;Coding-life&#x2F;" rel="noopener" target="_blank">瑇 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/-Wallace-/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;-Wallace-&#x2F;" rel="noopener" target="_blank">汪莱士 的博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/Flying2018/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;Flying2018&#x2F;" rel="noopener" target="_blank">孔姥爷 的病历</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.luogu.com.cn/blog/qwe2715772231/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;qwe2715772231&#x2F;" rel="noopener" target="_blank">给指导 的博客</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">x义x</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">83k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:15</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script color="44,159,111" opacity="1.0" zIndex="-1" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
