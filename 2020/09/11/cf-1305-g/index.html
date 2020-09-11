@@ -22,22 +22,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题目链接">
+  <meta name="description" content="题目链接，翻译链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="uoj#372 题解">
-<meta property="og:url" content="http://yoursite.com/2020/09/06/uoj-372/index.html">
+<meta property="og:title" content="CF1305G 题解">
+<meta property="og:url" content="http://yoursite.com/2020/09/11/cf-1305-g/index.html">
 <meta property="og:site_name" content="x义x的博客">
-<meta property="og:description" content="题目链接">
+<meta property="og:description" content="题目链接，翻译链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-06T09:32:42.000Z">
-<meta property="article:modified_time" content="2020-09-06T10:21:26.740Z">
+<meta property="og:image" content="http://yoursite.com/images/sbxyx1.png">
+<meta property="article:published_time" content="2020-09-11T07:21:57.000Z">
+<meta property="article:modified_time" content="2020-09-11T09:49:32.831Z">
 <meta property="article:author" content="x义x">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="计数">
-<meta property="article:tag" content="概率期望">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/sbxyx1.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/09/06/uoj-372/">
+<link rel="canonical" href="http://yoursite.com/2020/09/11/cf-1305-g/">
 
 
 <script id="page-configurations">
@@ -50,7 +49,7 @@
   };
 </script>
 
-  <title>uoj#372 题解 | x义x的博客</title>
+  <title>CF1305G 题解 | x义x的博客</title>
   
 
 
@@ -204,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/06/uoj-372/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/11/cf-1305-g/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -217,7 +216,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          uoj#372 题解
+          CF1305G 题解
         </h1>
 
         <div class="post-meta">
@@ -228,7 +227,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-06 17:32:42 / 修改时间：18:21:26" itemprop="dateCreated datePublished" datetime="2020-09-06T17:32:42+08:00">2020-09-06</time>
+              <time title="创建时间：2020-09-11 15:21:57 / 修改时间：17:49:32" itemprop="dateCreated datePublished" datetime="2020-09-11T15:21:57+08:00">2020-09-11</time>
             </span>
 
           
@@ -243,7 +242,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>594</span>
+              <span>2.2k</span>
             </span>
 
         </div>
@@ -255,19 +254,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
+        <p><a href="https://codeforces.com/problemset/problem/1305/G" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/CF1305G" target="_blank" rel="noopener">翻译链接</a></p>
 <a id="more"></a>
-<p>首先这种鬼题都是独立性非常难考虑，所以一般来讲都是直接对整个图考虑，做子集 DP。</p>
-<p>显然用限制条件（边）肯定比一个单个的元素（好）。所以我们下面直接对图讨论了。</p>
-<p>我们的函数显然肯定有一维 $x$ 表示要求答案 $\le x$，但是这显然是不够的，我们再考虑加一维 $y$ 表示要求所有点权 $\le y$。</p>
-<p>设 $F(s,x,y)$ 表示当前考虑的子图为 $s$，$x,y$ 的含义如上，的概率。</p>
-<p>考虑枚举点权最大值 $w$。</p>
-<blockquote>
-<p>$2w&lt;x$。此时一切约束都被满足。发生这种情况必然有所有点权 $\le \dfrac x 2$，所以概率为 $\left(\dfrac x 2\right)^{|s|}$。</p>
-<p>$2w&gt;x$。此时，设点 $i$ 取到了最大值。考虑和 $i$ 有边的 $j$，显然除了 $(i,j)$ 我们可以不考虑任何其他 $j$ 连出的边。显然对于 $j$ 我们要求它 $\le x-w$，对于其他点，我们只要求 $\le w$ 且答案还是 $\le y$。</p>
-</blockquote>
-<p>设去掉 $i$ 和 $j$ 的图为 $s_i’$。我们得到方程</p>
-<script type="math/tex; mode=display">F(s,x,y)=\left(\dfrac{x}{2}\right)^{|s|}+\sum_i\int_{\frac x 2}^y\left(x-w\right)^{|s|-|s_i'|-1}F(s_i',w,y)\text{d}w</script><p>大力 DP 即可。注意 $s$ 可能不连通，这时候拆成数个连通块跑。加上这个优化就莫名能跑 $n=25$ 了，非常神必。</p>
+<p>1 操作相当于有一个年龄为 0 的人已经预先在传销组织里了。</p>
+<p>顺序非常难搞。可以看成每个人第一次连边没有贡献。这启发我们把边权直接设为 $a_i+a_j$（也是 $a_i|a_j）$，最后算边权-点权。于是变为一个最大生成树问题。</p>
+<p>显然可以 kruskal，枚举边权，枚举以它为权的所有边（边权的子集）。复杂度 $O(3^{\log_2 n}\alpha(n))$。你可能会很惊讶，$3^{18}$ 是怎么草过这题的呢，小编也很惊讶，但是事实就是这样。</p>
+<p>考虑 Boruvka 算法。我们需要做 $O(\log n)$ 次以下操作：</p>
+<ul>
+<li><p>对每个连通块找出其最大出边。</p>
+</li>
+<li><p>合并这些边。</p>
+</li>
+</ul>
+<p>考虑如何找点 $u$ 的最大出边。这里有一个很妙的操作：另一个端点一定是 $s/a_u$ 的子集，如果 $s/a_u$ 中权值最大的点和 $u$ 不在一个连通块，那么直接取它即可；否则再求一个 $s/a_u$ 和最大值不在一个联通块的最大点。子集DP即可。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxN=<span class="number">262144</span>; </span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="keyword">int</span> A[maxN],fa[maxN];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> (fa[x]==x)?x:fa[x]=find(fa[x]);&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> p,c;</span><br><span class="line">	node(<span class="keyword">int</span> p0=<span class="number">-1</span>,<span class="keyword">int</span> c0=<span class="number">-1</span>)&#123;p=p0;c=c0;&#125;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> node b)<span class="keyword">const</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> p&lt;b.p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &gt;(<span class="keyword">const</span> node b)<span class="keyword">const</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> p&gt;b.p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">operator</span> <span class="title">bool</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> p!=<span class="number">-1</span>;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">node F[maxN][<span class="number">2</span>];</span><br><span class="line">node maxE[maxN];</span><br><span class="line"><span class="keyword">int</span> ANS;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;A[i]),ANS-=A[i];A[N++]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) fa[i]=i;</span><br><span class="line">	<span class="keyword">int</span> cnt=N;</span><br><span class="line">	<span class="keyword">while</span>(cnt!=<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;<span class="number">18</span>);s++)</span><br><span class="line">			F[s][<span class="number">0</span>]=F[s][<span class="number">1</span>]=node();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">			<span class="function">node <span class="title">tmp</span><span class="params">(A[i],find(i))</span></span>;</span><br><span class="line">			<span class="keyword">if</span>(tmp&gt;F[A[i]][<span class="number">0</span>])&#123;</span><br><span class="line">				<span class="keyword">if</span>(F[A[i]][<span class="number">0</span>].c!=tmp.c) F[A[i]][<span class="number">1</span>]=F[A[i]][<span class="number">0</span>]; </span><br><span class="line">				F[A[i]][<span class="number">0</span>]=tmp;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(tmp&gt;F[A[i]][<span class="number">1</span>]&amp;&amp;tmp.c!=F[A[i]][<span class="number">0</span>].c) F[A[i]][<span class="number">1</span>]=tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">18</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;<span class="number">18</span>);s++) <span class="keyword">if</span>((s&gt;&gt;i)&amp;<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> d=<span class="number">0</span>,t=s^(<span class="number">1</span>&lt;&lt;i);d&lt;<span class="number">2</span>;d++)&#123;</span><br><span class="line">			node tmp=F[t][d];</span><br><span class="line">			<span class="keyword">if</span>(tmp&gt;F[s][<span class="number">0</span>])&#123;</span><br><span class="line">				<span class="keyword">if</span>(F[s][<span class="number">0</span>].c!=tmp.c) F[s][<span class="number">1</span>]=F[s][<span class="number">0</span>]; </span><br><span class="line">				F[s][<span class="number">0</span>]=tmp;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(tmp&gt;F[s][<span class="number">1</span>]&amp;&amp;tmp.c!=F[s][<span class="number">0</span>].c) F[s][<span class="number">1</span>]=tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) maxE[i]=node();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> s=((<span class="number">1</span>&lt;&lt;<span class="number">18</span>)<span class="number">-1</span>)^A[i],c=find(i);</span><br><span class="line">			<span class="keyword">if</span>(F[s][<span class="number">0</span>])<span class="keyword">if</span>(F[s][<span class="number">0</span>].c!=c)</span><br><span class="line">				&#123;<span class="keyword">if</span>(node(A[i]+F[s][<span class="number">0</span>].p,F[s][<span class="number">0</span>].c)&gt;maxE[c]) maxE[c]=node(A[i]+F[s][<span class="number">0</span>].p,F[s][<span class="number">0</span>].c);&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(F[s][<span class="number">1</span>])</span><br><span class="line">				&#123;<span class="keyword">if</span>(node(A[i]+F[s][<span class="number">1</span>].p,F[s][<span class="number">1</span>].c)&gt;maxE[c]) maxE[c]=node(A[i]+F[s][<span class="number">1</span>].p,F[s][<span class="number">1</span>].c);&#125; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">0</span>;u&lt;N;u++) <span class="keyword">if</span>(u==find(u))&#123;</span><br><span class="line">			<span class="keyword">int</span> v=maxE[u].c;</span><br><span class="line">			<span class="keyword">if</span>(find(u)==find(v)) <span class="keyword">continue</span>;</span><br><span class="line">			cnt--;fa[find(u)]=find(v);ANS+=maxE[u].p;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ANS);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p><img src="\images\sbxyx1.png" alt=""></p>
 
     </div>
 
@@ -276,11 +278,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E8%AE%A1%E6%95%B0/" rel="tag"># 计数</a>
-              <a href="/tags/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/" rel="tag"># 概率期望</a>
-          </div>
 
         
 
@@ -288,13 +285,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/04/agc-038-e/" rel="prev" title="AGC038E 题解">
-      <i class="fa fa-chevron-left"></i> AGC038E 题解
+    <a href="/2020/09/11/sx2019/" rel="prev" title="省选 2019 补题记录">
+      <i class="fa fa-chevron-left"></i> 省选 2019 补题记录
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/07/sx2020/" rel="next" title="省选 2020 补题记录">
-      省选 2020 补题记录 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -353,6 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#彩蛋"><span class="nav-number">1.</span> <span class="nav-text">彩蛋</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
