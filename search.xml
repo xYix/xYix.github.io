@@ -1306,7 +1306,10 @@
 </table>
 </div>
 <h1 id="ZJOI2019-Day1"><a href="#ZJOI2019-Day1" class="headerlink" title="ZJOI2019 Day1"></a>ZJOI2019 Day1</h1><h1 id="ZJOI2019-Day2"><a href="#ZJOI2019-Day2" class="headerlink" title="ZJOI2019 Day2"></a>ZJOI2019 Day2</h1><p>觉得 Day2 比 Day1 简单是怎么回事？</p>
-<h2 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h2>]]></content>
+<h2 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h2><p><a href="https://www.luogu.com.cn/problem/P5326" target="_blank" rel="noopener">题目链接</a></p>
+<p>首先考虑“第一次”怎么处理。设 $f$ 是 $i$ 步操作恰好第一次达成目标的生成函数，$g$ 是 $i$ 步操作走回原状态的生成函数，$h$ 是 $i$ 步操作达成目标的生成函数。显然有</p>
+<script type="math/tex; mode=display">f*g=h</script><p>而 $g$ 就是把终状态改掉的 $h$。</p>
+]]></content>
   </entry>
   <entry>
     <title>CF1305G 题解</title>
