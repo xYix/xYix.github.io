@@ -827,23 +827,6 @@
 <td>$\sqrt{}$</td>
 <td>$\sqrt{}$</td>
 </tr>
-<tr>
-<td>联考 B 卷 Day1</td>
-<td>$\text{skipped}$</td>
-<td>$\text{skipped}$</td>
-<td></td>
-<td></td>
-<td>$\text{skipped}$</td>
-<td>$\text{skipped}$</td>
-</tr>
-<tr>
-<td>联考 B 卷 Day2</td>
-<td>$\text{skipped}$</td>
-<td>$\text{skipped}$</td>
-<td>$\sqrt{}$</td>
-<td>$\sqrt{}$</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -904,6 +887,11 @@
 <h2 id="T3-1"><a href="#T3-1" class="headerlink" title="T3"></a>T3</h2><p>神必题，这题超级没有素质，连个题解都搜不到</p>
 <h1 id="联考-A-卷-Day1"><a href="#联考-A-卷-Day1" class="headerlink" title="联考 A 卷 Day1"></a>联考 A 卷 Day1</h1><h2 id="T1-2"><a href="#T1-2" class="headerlink" title="T1"></a>T1</h2><p>傻逼题懒得写了</p>
 <h2 id="T2-2"><a href="#T2-2" class="headerlink" title="T2"></a>T2</h2><p><a href="https://www.luogu.com.cn/problem/P6620" target="_blank" rel="noopener">题目链接</a></p>
+<p>组合数和幂很不搭，考虑把 $f$ 转成下降幂：</p>
+<script type="math/tex; mode=display">f(k)=\sum_{i=0}^m b_ik^{\underline i}</script><p>那么答案就是</p>
+<script type="math/tex; mode=display">\sum_{d=0}^mb_d\sum_{k=d}^n\dfrac{n!}{(n-k)!(k-d)!}x^k</script><script type="math/tex; mode=display">\sum_{d=0}^mb_d\sum_{k=d}^n\dfrac{n!(n-d)!}{(n-k)!(k-d)!(n-d)!}x^k</script><script type="math/tex; mode=display">\sum_{d=0}^mb_d\sum_{k=d}^n{n-d\choose k-d}n^{\underline d}x^k</script><p>如果你认真读过水泥数学或者研究过下降幂，这个东西还是比较容易想到的。<del>而我不是这种人</del></p>
+<p>枚举改为 $k-d$。整理一下。</p>
+<script type="math/tex; mode=display">\sum_{d=0}^mb_dn^{\underline d}x^d\sum_{k=0}^{n-d}{n-d\choose k}x^k</script><script type="math/tex; mode=display">\sum_{d=0}^mb_dn^{\underline d}x^d(1+x)^{n-d}</script><p>N 方暴力转下降幂即可。</p>
 <h2 id="T3-2"><a href="#T3-2" class="headerlink" title="T3"></a>T3</h2><p>保序回归是啥啊不会啊qaq</p>
 <h1 id="联考-A-卷-Day2"><a href="#联考-A-卷-Day2" class="headerlink" title="联考 A 卷 Day2"></a>联考 A 卷 Day2</h1><p>做完后最大的感悟是：</p>
 <p>何苦生在浙江……</p>
