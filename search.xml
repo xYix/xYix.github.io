@@ -1452,4 +1452,19 @@
         <tag>群论计数</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AGC016F 题解</title>
+    <url>/2020/09/12/agc-016-f/</url>
+    <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2390" target="_blank" rel="noopener">翻译链接</a></p>
+<a id="more"></a>
+<p>博弈论有益身心健康~</p>
+<p>首先两个石子是两个独立的子游戏，我们只需要求 $\text{SG}(1)=\text{SG}(2)$ 的方案数。</p>
+<p>考虑 $1,2$ 都先手必败的情况。这时候枚举 $\text{SG}$ 值为 0 的子集 $\{1,2\}\subseteq A$，$B=N/A$。考虑边的情况。显然 $A$ 内部没有边，$B$ 内部可以任意有边，每个 $B$ 到 $A$ 至少一条边。</p>
+<p>那么 $1,2$ 的 $\text{SG}$ 不是 0 该怎么办呢？考虑抽掉所有的 0，然后 $B$ 集合的 $\text{SG}$ 已经默认都有至少一条边连向 $0$，而且 $B$ 集合内部没有任何 $0$，冷静分析一下就会发现这相当于 $B$ 集合的 $\text{SG}$ <strong>全体加一</strong>。</p>
+<p>子集 DP 即可。</p>
+]]></content>
+      <tags>
+        <tag>博弈论</tag>
+      </tags>
+  </entry>
 </search>
