@@ -1386,6 +1386,7 @@
 <p>现在掌握了群论理论，我们能不能<del>暴力</del>推导出它呢？</p>
 <p>首先枚举儿子数 $i$。考虑应用 burnside 引理，显然一个置换 $f$ 的不动点只与其循环拆分（有序，显然循环间可以通过最前一个元素的位置分出顺序） $\{a_i\}$ 有关。具体来说是</p>
 <script type="math/tex; mode=display">\sum_{i}\dfrac{1}{i!}\sum_{f}\prod F(x^{a_i})</script><p>（解释一下上式：循环内所有组的“染色”方案必须完全一样，选择大小均为 $s$ 方案数就只有 $[x^s]F$，但是“占地”却是 $a_is$，故有上式）</p>
+<p>（似乎也叫做生成函数形式的 Polya 定理？）</p>
 <p>思考有多少个循环能被循环拆分 $\{a_i\}$ 描述。首先决定每个标号属于哪个循环，然后循环内可以圆排列，而这样搞会破坏循环原本的有序，所以还要再除以循环数的阶乘。</p>
 <script type="math/tex; mode=display">\sum_{i}\dfrac 1{i!}\sum_{l,\sum a_j=i}\dfrac 1{l!}{i\choose a_1,a_2,...a_l}\prod_{j=1}^lF(x^{a_i})(a_i-1)!</script><script type="math/tex; mode=display">\sum_{i}\sum_{l,\sum a_j=i}\dfrac{1}{l!}\prod_{j=1}^l\dfrac{F(x^{a_i})}{a_i}</script><p>我们发现现在后面这个部分可以写成 $\text{Exp}$ 的形式。设</p>
 <script type="math/tex; mode=display">G(x,y)=\sum_{i=1}^{\infty}\dfrac{F(x^i)y}{i}</script><p>则我们得到</p>
@@ -1399,6 +1400,49 @@
         <tag>数学</tag>
         <tag>计数</tag>
         <tag>生成函数</tag>
+        <tag>群论计数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生成函数进阶</title>
+    <url>/2020/09/12/GF-intro-ex-ex/</url>
+    <content><![CDATA[<p>终于有底气说不是生成函数入门了。可喜可贺！</p>
+<a id="more"></a>
+<p>主要是一些博文的整理。</p>
+<p><a href="https://xyix.github.io/2020/06/06/alkane-counting/" target="_blank" rel="noopener">烷烃计数</a></p>
+<blockquote>
+<p>著名的烷烃计数。群论在计数里的应用。</p>
+</blockquote>
+<p><a href="https://xyix.github.io/2020/06/09/cactus-counting/" target="_blank" rel="noopener">有标号仙人掌计数</a></p>
+<blockquote>
+<p>著名的有标号仙人掌计数。</p>
+</blockquote>
+<p><a href="https://xyix.github.io/2020/06/11/biconnected-graph-counting/" target="_blank" rel="noopener">有标号边/点双连通图计数</a></p>
+<blockquote>
+<p>著名的有标号边/点双连通图计数。了解拉格朗日反演。</p>
+</blockquote>
+<p><a href="https://xyix.github.io/2020/06/18/loj-6275/" target="_blank" rel="noopener">loj#6275</a></p>
+<blockquote>
+<p>状压 DP + 多项式。当多项式运算无法接受，不如考虑只存点值。</p>
+</blockquote>
+<p><a href="https://xyix.github.io/2020/09/07/bzoj-3684/" target="_blank" rel="noopener">BZOJ3684</a></p>
+<blockquote>
+<p>还是拉格朗日反演。</p>
+</blockquote>
+<p><a href="https://xyix.github.io/2020/09/07/sx2020/#T2-1" target="_blank" rel="noopener">ZJOI2020D2T2 抽卡</a></p>
+<blockquote>
+<p>还是拉格朗日反演……当然，从开始到拉格朗日反演之间的路途也不容易。</p>
+</blockquote>
+<p><a href="https://xyix.github.io/2020/09/08/luogu-4500/" target="_blank" rel="noopener">ZJOI2018D2T1 树</a></p>
+<blockquote>
+<p>究极毒瘤群论计数。Polya 定理和 Exp 的密切关系。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>计数</tag>
+        <tag>生成函数</tag>
+        <tag>拉格朗日反演</tag>
         <tag>群论计数</tag>
       </tags>
   </entry>

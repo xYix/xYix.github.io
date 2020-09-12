@@ -30,7 +30,7 @@
 <meta property="og:description" content="对无标号计数的重新讨论。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-11T23:17:35.000Z">
-<meta property="article:modified_time" content="2020-09-12T00:05:32.460Z">
+<meta property="article:modified_time" content="2020-09-12T00:09:32.508Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="计数">
@@ -229,7 +229,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-12 07:17:35 / 修改时间：08:05:32" itemprop="dateCreated datePublished" datetime="2020-09-12T07:17:35+08:00">2020-09-12</time>
+              <time title="创建时间：2020-09-12 07:17:35 / 修改时间：08:09:32" itemprop="dateCreated datePublished" datetime="2020-09-12T07:17:35+08:00">2020-09-12</time>
             </span>
 
           
@@ -244,7 +244,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.1k</span>
+              <span>1.2k</span>
             </span>
 
         </div>
@@ -270,6 +270,7 @@
 <p>现在掌握了群论理论，我们能不能<del>暴力</del>推导出它呢？</p>
 <p>首先枚举儿子数 $i$。考虑应用 burnside 引理，显然一个置换 $f$ 的不动点只与其循环拆分（有序，显然循环间可以通过最前一个元素的位置分出顺序） $\{a_i\}$ 有关。具体来说是</p>
 <script type="math/tex; mode=display">\sum_{i}\dfrac{1}{i!}\sum_{f}\prod F(x^{a_i})</script><p>（解释一下上式：循环内所有组的“染色”方案必须完全一样，选择大小均为 $s$ 方案数就只有 $[x^s]F$，但是“占地”却是 $a_is$，故有上式）</p>
+<p>（似乎也叫做生成函数形式的 Polya 定理？）</p>
 <p>思考有多少个循环能被循环拆分 $\{a_i\}$ 描述。首先决定每个标号属于哪个循环，然后循环内可以圆排列，而这样搞会破坏循环原本的有序，所以还要再除以循环数的阶乘。</p>
 <script type="math/tex; mode=display">\sum_{i}\dfrac 1{i!}\sum_{l,\sum a_j=i}\dfrac 1{l!}{i\choose a_1,a_2,...a_l}\prod_{j=1}^lF(x^{a_i})(a_i-1)!</script><script type="math/tex; mode=display">\sum_{i}\sum_{l,\sum a_j=i}\dfrac{1}{l!}\prod_{j=1}^l\dfrac{F(x^{a_i})}{a_i}</script><p>我们发现现在后面这个部分可以写成 $\text{Exp}$ 的形式。设</p>
 <script type="math/tex; mode=display">G(x,y)=\sum_{i=1}^{\infty}\dfrac{F(x^i)y}{i}</script><p>则我们得到</p>
@@ -302,7 +303,10 @@
     <a href="/2020/09/11/cf-1305-g/" rel="prev" title="CF1305G 题解">
       <i class="fa fa-chevron-left"></i> CF1305G 题解
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/12/GF-intro-ex-ex/" rel="next" title="生成函数进阶">
+      生成函数进阶 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -375,7 +379,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
