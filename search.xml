@@ -1307,6 +1307,10 @@
 </div>
 <h1 id="ZJOI2019-Day1"><a href="#ZJOI2019-Day1" class="headerlink" title="ZJOI2019 Day1"></a>ZJOI2019 Day1</h1><h2 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h2><p><a href="https://www.luogu.com.cn/problem/P5279" target="_blank" rel="noopener">题目链接</a></p>
 <p>对麻将的热爱消失殆尽了（悲）</p>
+<p>考虑怎么判断一副牌是胡的。我们有一个 DP 做法：设 $f_{i,j_1,j_0,k}$ 是考虑面值为 $1…i$ 的所有牌，预留的 $(i-1,i,i+1)$ 顺子数目为 $j_1$，预留的 $(i,i+1,i+2)$ 顺子数目为 $j_0$，$k$ 是有没有预留过对子，的最大面子数。还要再加一维表示总共有多少对子来判断七对子。显然 $j_1,j_0&lt;3$，否则可以拆成刻子。</p>
+<p>判断能否胡牌很简单，$f_i,\star,\star,1$ 中有一个大于等于 $4$ 或者有七个对子即可。</p>
+<p>显然这个 DP 和 $i$ 完全没有关系，和 $k$ 也关系不大，它可以看成一个 $2\times 3\times 3$ 的矩阵，接受一个数后转移成另一个矩阵，可以看成一个<strong>自动机</strong>。走到胡节点即胡牌。</p>
+<p>那么我们就可以考虑在这个自动机上 DP 了，设 $g_{i,j,p}$ 是考虑了面值为 $1…i$ 的牌，摸了其中 $j$ 张，走到了自动机节点 $p$ 的概率。我们都知道胡牌期望就是 $\sum_{i=0}^\infty P(\texttt{摸了 i 张牌还不胡})$，大力 DP 即可。</p>
 <h2 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h2><p><a href="https://www.luogu.com.cn/problem/P5280" target="_blank" rel="noopener">题目链接</a></p>
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/zjoi2020d1t2.png" alt=""></div>
 
