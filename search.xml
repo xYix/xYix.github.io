@@ -1393,6 +1393,7 @@
 <script type="math/tex; mode=display">\text{Exp}\left(\sum_{i=1}^{\infty}\dfrac{F(x^i)}{i}\right)</script><p>？？？</p>
 <p>是哪出了问题？</p>
 <p>答案是：没有问题！将 Euler 变换 $\text{Ln}$ 再 $\text{Exp}$ 即得到我们的形式！</p>
+<p><del>还以为有什么有趣的东西，结果就这？</del></p>
 ]]></content>
       <tags>
         <tag>数学</tag>
