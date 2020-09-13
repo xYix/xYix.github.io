@@ -1468,4 +1468,16 @@
         <tag>博弈论</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AGC016D 题解</title>
+    <url>/2020/09/13/agc-016-d/</url>
+    <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_d" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2388" target="_blank" rel="noopener">题目翻译</a></p>
+<a id="more"></a>
+<p>经典 trick：往序列里放一个 $a_0=\bigoplus a_i$，那么对 $a_i$ 操作其实就是交换 $a_0$ 和 $a_i$。</p>
+<p>题意变成：给出一个置换，求用尽可能少的步数生成这个置换。显然对于长度大于等于 $2$ 的循环，所需操作数是循环长度+1。长度为 $1$ 的循环不需要管。注意如果 $a_0$ 在某个长度大于等于 $2$ 的循环里，则我们可以少花两步让它和其他循环沟通，答案 <code>-=2</code>。</p>
+<p>这么思博？注意 $a_i$ 可能相同！</p>
+<p>考虑两个相等的 $a_i,a_j$，我们可以随时交换它们的目的地。如果它们在不同的两个循环，可以交换它们使得两个循环沟通，步数 -1。</p>
+<p><img src="https://xyix.github.io/images/agc016d.png" alt=""></p>
+]]></content>
+  </entry>
 </search>
