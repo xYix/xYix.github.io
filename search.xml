@@ -1502,12 +1502,25 @@
   <entry>
     <title>杨表学习笔记</title>
     <url>/2020/09/14/young-tableau/</url>
-    <content><![CDATA[<p>orz hehezhou</p>
+    <content><![CDATA[<p>参考资料：论文集2019《浅谈杨氏矩阵在信息学竞赛中的应用》袁方舟</p>
 <a id="more"></a>
-<p>杨表大概就是一个长成这样的东西：</p>
-<p><img src="/images/youngtable.png" alt=""></p>
+<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="杨图，杨表，勾长公式"><a href="#杨图，杨表，勾长公式" class="headerlink" title="杨图，杨表，勾长公式"></a>杨图，杨表，勾长公式</h2><p><strong>杨图</strong>（记为 $\lambda$）大概就是一个长成这样的东西：</p>
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/youngtable.png" alt=""></div>
-]]></content>
+
+<p>每行的列数称为 $\lambda_i$。</p>
+<p>你要往里面填 $1…n$ 的排列，使得行单调增列单调增，这样的一种填充称为<strong>标准杨表</strong>。杨表数量由下面的<strong>勾长公式</strong>给出。</p>
+<blockquote>
+<p>设 $\text{hook}(p)$ 是杨图中格子 $p$ 的<strong>勾长</strong>，等于其下方格子个数+右方格子个数+1。</p>
+<p>标准杨表总数为</p>
+<script type="math/tex; mode=display">\dfrac{n!}{\prod_{p\in \lambda}\text{hook}(p)}</script></blockquote>
+<h2 id="半标准杨表，勾长公式"><a href="#半标准杨表，勾长公式" class="headerlink" title="半标准杨表，勾长公式"></a>半标准杨表，勾长公式</h2><p>即行不严格递增，列严格递增的杨表。</p>
+<p>设值域为 $r$，半标准杨表数为</p>
+<blockquote>
+<script type="math/tex; mode=display">\prod_{p\in\lambda}\dfrac{r+p_y-p_x}{\text{hook}(p)}</script></blockquote>
+<h2 id="斜杨图"><a href="#斜杨图" class="headerlink" title="斜杨图"></a>斜杨图</h2><p>即从一个杨图中扣掉另一个杨图。不连通也没关系。</p>
+<p>下面引入兴奋图：</p>
+<p>（咕咕）</p>
+<h1 id="RSK-算法"><a href="#RSK-算法" class="headerlink" title="RSK 算法"></a>RSK 算法</h1>]]></content>
       <tags>
         <tag>数学</tag>
         <tag>计数</tag>
