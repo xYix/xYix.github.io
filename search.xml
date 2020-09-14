@@ -1479,4 +1479,22 @@
         <tag>概率期望</tag>
       </tags>
   </entry>
+  <entry>
+    <title>loj#6077 题解</title>
+    <url>/2020/09/14/loj-6077/</url>
+    <content><![CDATA[<p><a href="https://loj.ac/problem/6077" target="_blank" rel="noopener">题目链接</a></p>
+<a id="more"></a>
+<p>首先可以发现要求的是</p>
+<script type="math/tex; mode=display">[x^k]\prod_{i=1}^n\sum_{0\le j<i} x^j</script><p>也就是</p>
+<script type="math/tex; mode=display">[x^k]\dfrac{\prod (1-x^i)}{(1-x)^n}</script><p>众所周知 $<a href="1-x">x^k</a>^{-n}={k+n-1\choose n-1}$。考虑分子。它的组合意义就是从 $1…n$ 中选出一些数加起来为 $k$，选了偶数个贡献 $1$，否则贡献 $-1$。</p>
+<p><del>然后就不会了</del></p>
+<p>审视了一下数据范围，$k\le \text{1e5}$ 草。</p>
+<p>直接 DP，令 <code>f[i][j]</code> 为选了 $i$ 个数加起来为 $j$，显然第一维是 $\sqrt k$ 的。经典 DP：可以多加一个元素或者元素全体加一。注意可能会搞出大小大于 $n$ 的元素，减一下就好。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>计数</tag>
+        <tag>生成函数</tag>
+      </tags>
+  </entry>
 </search>
