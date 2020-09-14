@@ -1508,18 +1508,23 @@
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/youngtable.png" alt=""></div>
 
 <p>每行的列数称为 $\lambda_i$。</p>
-<p>你要往里面填 $1…n$ 的排列，使得行单调增列单调增，这样的一种填充称为<strong>标准杨表</strong>。杨表数量由下面的<strong>勾长公式</strong>给出。</p>
+<p>你要往里面填 $1…|\lambda|$ 的排列，使得行单调增列单调增，这样的一种填充称为<strong>标准杨表</strong>。杨表数量由下面的<strong>勾长公式</strong>给出。</p>
 <blockquote>
 <p>设 $\text{hook}(p)$ 是杨图中格子 $p$ 的<strong>勾长</strong>，等于其下方格子个数+右方格子个数+1。</p>
 <p>标准杨表总数为</p>
-<script type="math/tex; mode=display">\dfrac{n!}{\prod_{p\in \lambda}\text{hook}(p)}</script></blockquote>
+<script type="math/tex; mode=display">\dfrac{|\lambda|!}{\prod_{p\in \lambda}\text{hook}(p)}</script></blockquote>
 <h2 id="半标准杨表，勾长公式"><a href="#半标准杨表，勾长公式" class="headerlink" title="半标准杨表，勾长公式"></a>半标准杨表，勾长公式</h2><p>即行不严格递增，列严格递增的杨表。</p>
 <p>设值域为 $r$，半标准杨表数为</p>
 <blockquote>
 <script type="math/tex; mode=display">\prod_{p\in\lambda}\dfrac{r+p_y-p_x}{\text{hook}(p)}</script></blockquote>
-<h2 id="斜杨图"><a href="#斜杨图" class="headerlink" title="斜杨图"></a>斜杨图</h2><p>即从一个杨图中扣掉另一个杨图。不连通也没关系。</p>
-<p>下面引入兴奋图：</p>
-<p>（咕咕）</p>
+<h2 id="斜杨图"><a href="#斜杨图" class="headerlink" title="斜杨图"></a>斜杨图</h2><p>即从一个杨图 $\lambda$ 中扣掉另一个杨图 $\mu$。不连通也没关系。</p>
+<p>一个<strong>兴奋图</strong>是指，$\mu$ 经过一系列的<strong>兴奋运动</strong>形成的 $\lambda$ 的某个子集。对 $\mu$ 的兴奋运动是指，将一个下方右方右下方都属于 $\lambda/\mu$ 的属于 $\mu$ 的方格移动到其右下方。</p>
+<p><img src="/images/excited.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/excited.png" alt=""></div>
+
+<p>如图是 $\mu$ 的所有可能的兴奋图。记为 $\mathcal{E}(\lambda/\mu)$。如下是勾长公式。</p>
+<blockquote>
+<script type="math/tex; mode=display">|\lambda/\mu|!\sum_{D\in\mathcal E{(\lambda/\mu)}}\prod_{p\in \lambda/D}\dfrac{1}{\text{hook}(p)}</script></blockquote>
 <h1 id="RSK-算法"><a href="#RSK-算法" class="headerlink" title="RSK 算法"></a>RSK 算法</h1>]]></content>
       <tags>
         <tag>数学</tag>
