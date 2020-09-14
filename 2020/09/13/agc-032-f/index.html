@@ -30,7 +30,7 @@
 <meta property="og:description" content="题目链接，题目翻译">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-13T12:25:19.000Z">
-<meta property="article:modified_time" content="2020-09-14T07:12:26.648Z">
+<meta property="article:modified_time" content="2020-09-14T07:23:31.156Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="概率期望">
 <meta name="twitter:card" content="summary">
@@ -232,7 +232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-14 15:12:26" itemprop="dateModified" datetime="2020-09-14T15:12:26+08:00">2020-09-14</time>
+                <time title="修改时间：2020-09-14 15:23:31" itemprop="dateModified" datetime="2020-09-14T15:23:31+08:00">2020-09-14</time>
               </span>
 
           
@@ -247,7 +247,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.3k</span>
+              <span>2.1k</span>
             </span>
 
         </div>
@@ -281,7 +281,7 @@
 <script type="math/tex; mode=display">\boxed{\text{E}X_k=\dfrac{1}{n}\sum_{i=1}^k\dfrac{1}{n-i+1}}</script><p>回到原问题。显然类型 $t$ 非常独立，于是最小值能取的概率为 $\dfrac 2 3$，最小值不能取而次小值能取的概率为 $\dfrac 2 9$……注意第 $n$ 小值，如果前 $n-1$ 小值全不能取，那么此时前缀的类型全是 0，后缀的类型全是 1，于是第 $n$ 小值必然能取，概率就是 $\dfrac 1{3^{n-1}}$。</p>
 <p>于是这题就做完了。</p>
 <p>代码如下：</p>
-
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxN=<span class="number">1000005</span>,p=<span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="keyword">int</span> H[maxN];</span><br><span class="line"><span class="keyword">int</span> fac[maxN],ifac[maxN],inv[maxN];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(k)&#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans=<span class="number">1L</span>L*ans*a%p;</span><br><span class="line">        a=<span class="number">1L</span>L*a*a%p;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="keyword">inline</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span>&#123;x-=p,x+=x&gt;&gt;<span class="number">31</span>&amp;p;&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fac[<span class="number">0</span>]=ifac[<span class="number">0</span>]=fac[<span class="number">1</span>]=ifac[<span class="number">1</span>]=inv[<span class="number">1</span>]=H[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;maxN;i++)</span><br><span class="line">    	fac[i]=<span class="number">1L</span>L*fac[i<span class="number">-1</span>]*i%p,</span><br><span class="line">    	inv[i]=<span class="number">1L</span>L*(p-p/i)*inv[p%i]%p,</span><br><span class="line">    	ifac[i]=<span class="number">1L</span>L*ifac[i<span class="number">-1</span>]*inv[i]%p,</span><br><span class="line">    	check(H[i]=H[i<span class="number">-1</span>]+inv[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	init();</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N);</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,mul=inv[<span class="number">3</span>];i&lt;=N;i++,mul=<span class="number">1L</span>L*mul*inv[<span class="number">3</span>]%p)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==N) mul=<span class="number">3L</span>L*mul%p*inv[<span class="number">2</span>]%p;</span><br><span class="line">		check(ans+=<span class="number">1L</span>L*inv[N]*(H[N]-H[N-i]+p)%p*mul%p*<span class="number">2</span>%p);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="number">1L</span>L*ans*inv[<span class="number">3</span>]%p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -450,12 +450,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">105k</span>
+    <span title="站点总字数">106k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:36</span>
+    <span title="站点阅读时长">1:37</span>
 </div><script color="44,159,111" opacity="1.0" zIndex="-1" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
         
