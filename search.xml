@@ -1505,7 +1505,8 @@
     <content><![CDATA[<p>orz hehezhou</p>
 <a id="more"></a>
 <p>杨表大概就是一个长成这样的东西：</p>
-<p><img src="\images\youngtable.png" alt=""></p>
+<p><img src="/images/youngtable.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/youngtable.png" alt=""></div>
 ]]></content>
       <tags>
         <tag>数学</tag>
