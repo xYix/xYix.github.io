@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xyix.github.io/2020/09/14/young-tableau/</loc>
+    
+    <lastmod>2020-09-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xyix.github.io/2020/09/14/loj-6077/</loc>
     
     <lastmod>2020-09-14</lastmod>
@@ -418,6 +425,13 @@
   
   <url>
     <loc>http://xyix.github.io/tags/lyndon-%E7%A7%91%E6%8A%80/</loc>
+    <lastmod>2020-09-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xyix.github.io/tags/%E6%9D%A8%E8%A1%A8/</loc>
     <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
