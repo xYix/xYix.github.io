@@ -1554,7 +1554,7 @@
 
 <p>很明显删除就是行插入的逆操作。</p>
 <p>考虑一个 $1…n$ 的排列，依次插入即可得到两个杨表 $(P,Q)$；给定 $(P,Q)$，显然 $Q$ 中最大元素一定在边角，于是我们可以按 $Q$ 的指导去删除 $P$ 来还原原来的排列。</p>
-<p>于是也就得到了以下的 _Robinson–Schensted correspondence_ ：</p>
+<p>于是也就得到了以下的<em>Robinson–Schensted correspondence</em>：</p>
 <blockquote>
 <p>上述算法构成了 $(P,Q)$ 到 $S_n$ 的一一映射。也就是说，</p>
 <script type="math/tex; mode=display">\sum_{\lambda\vdash n}f_{\lambda}^2=n!</script></blockquote>
@@ -1582,7 +1582,10 @@
 </ul>
 <h3 id="「CTSC2017」最长上升子序列"><a href="#「CTSC2017」最长上升子序列" class="headerlink" title="「CTSC2017」最长上升子序列"></a><a href="https://loj.ac/problem/2265" target="_blank" rel="noopener">「CTSC2017」最长上升子序列</a></h3><p>根据 Dilworth 定理，一个序列的 LIS 的长度等于将其分为若干个不上升子序列所需数量的最小值。那么最长的 $C$ 就是 $B$ 对应的“$\le $ 杨表”的前 $k$ 行长度之和。</p>
 <p>不幸的是直接暴力实现杨表插入是 $n^2\log n$ 的。考虑根号分治，分别维护前 $\sqrt n$ 行和前 $\sqrt n$ 列。对于前 $k$ 列，它就是对应的“$&gt;$ 杨表”（标准杨表）的前 $k$ 行。</p>
-<h3 id="LIS-计数"><a href="#LIS-计数" class="headerlink" title="LIS 计数"></a>LIS 计数</h3>]]></content>
+<p><del>明明和杨表没有深入关系，但是不会杨表就做不了的屑题</del></p>
+<h3 id="BJWC2018-最长上升子序列"><a href="#BJWC2018-最长上升子序列" class="headerlink" title="[BJWC2018]最长上升子序列"></a><a href="https://www.luogu.com.cn/problem/P4484" target="_blank" rel="noopener">[BJWC2018]最长上升子序列</a></h3><p>爆枚杨表形态即可。整数拆分 $p(n)$ 渐进意义上等于</p>
+<script type="math/tex; mode=display">p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}</script><p>顺瑇一提这个公式是拉马努金发现的（</p>
+<h1 id="杨表和网格图路径数"><a href="#杨表和网格图路径数" class="headerlink" title="杨表和网格图路径数"></a>杨表和网格图路径数</h1>]]></content>
       <tags>
         <tag>数学</tag>
         <tag>计数</tag>
