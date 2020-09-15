@@ -1524,17 +1524,34 @@
 <p>如图是 $\mu$ 的所有可能的兴奋图。记为 $\mathcal{E}(\lambda/\mu)$。如下是勾长公式。</p>
 <blockquote>
 <script type="math/tex; mode=display">|\lambda/\mu|!\sum_{D\in\mathcal E{(\lambda/\mu)}}\prod_{p\in \lambda/D}\dfrac{1}{\text{hook}_{\lambda}(p)}</script></blockquote>
-<h1 id="RSK-算法"><a href="#RSK-算法" class="headerlink" title="RSK 算法"></a>RSK 算法</h1><p>下面我们将揭示杨图和排列的深刻联系。</p>
+<h1 id="RSK-算法"><a href="#RSK-算法" class="headerlink" title="RSK 算法"></a>RSK 算法</h1><p>下面我们将揭示杨图和排列的深刻联系。先引入 $\text{RSK}$ 算法。</p>
 <blockquote>
-<h2 id="行插入"><a href="#行插入" class="headerlink" title="行插入"></a>行插入</h2><p>定义 $S\leftarrow x$ 是把 $x$ 从第一行行插入进近似标准杨表（即填入的元素不必是 $1…|\lambda|$）$S$ 中。流程如下：</p>
+<h2 id="行插入"><a href="#行插入" class="headerlink" title="行插入"></a>行插入</h2><p>定义 $P\leftarrow x$ 是把 $x$ 从第一行行插入进近似标准杨表（即填入的元素不必是 $1…|\lambda|$）$P$ 中。流程如下：</p>
 <ul>
 <li>找到本行最小的比 $x$ 大的数 $y$。如果找不到这样的 $y$，则把 $x$ 放在本行末尾并结束算法。</li>
 <li>交换 $x,y$。将 $y$ 行插入下一行。</li>
 </ul>
 </blockquote>
 <p>如下演示了一个行插入过程。</p>
-<p><img src="https://xyix.github.io/images/RSK1.png" alt=""></p>
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/RSK.png" alt=""></div>]]></content>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/RSK1.png" alt=""></div>
+
+<p>显然最后新增的格子一定在边角，即其下方和右方都没有格子。</p>
+<p>对于对 $P$ 的第 $i$ 插入，在另一个杨表 $Q$ 中在新增的格子上写上 $i$（注意不是插入）。我们称 $P$ 为<strong>插入表</strong>，$Q$ 为<strong>记录表</strong>。</p>
+<blockquote>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>下面定义从 $P$ 中删除格子 $p$。尽管看起来不必要，我们还是规定 $p$ 必须是边角。记 $p$ 中填的数是 $x$。流程如下：</p>
+<ul>
+<li><p>如果这是第一行，结束算法。</p>
+</li>
+<li><p>找到上一行最大的比 $x$ 小的数 $y$（显然一定存在）</p>
+</li>
+<li><p>交换 $x,y$，移到上一行继续算法。</p>
+</li>
+</ul>
+<p>结束算法后删掉已经没有数的格子 $p$。</p>
+</blockquote>
+<p>如下演示了一个删除过程。</p>
+<p><img src="https://xyix.github.io/images/RSK2.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/RSK2.png" alt=""></div>]]></content>
       <tags>
         <tag>数学</tag>
         <tag>计数</tag>
