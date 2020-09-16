@@ -1608,8 +1608,7 @@
 </blockquote>
 <p>比较显然。</p>
 <h2 id="k-Dyck-Path"><a href="#k-Dyck-Path" class="headerlink" title="k-Dyck Path"></a>k-Dyck Path</h2><p>1-Dyck Path 就是卡塔兰路径。k-Dyck Path 是 $k$ 条卡塔兰路径，但第二条必须完全在第一条“内部”，第三条必须完全在第二条内部……</p>
-<p><img src="https://xyix.github.io/images/dyck_path.png" alt=""></p>
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/dyck_path.png" alt=""></div>
+<div style="width:50%;margin:auto"><img src="https://xyix.github.io/images/dyck_path.png" alt=""></div>
 
 <blockquote>
 <p>一元素在 $[1,n]$ 的 $\lambda_i$ <strong>均为偶数</strong>的半标准杨表和 $n+1$ 阶的 k-Dyck Path 对应，且公式如下</p>
