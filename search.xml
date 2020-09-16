@@ -1507,12 +1507,13 @@
 <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="杨图，杨表，勾长公式"><a href="#杨图，杨表，勾长公式" class="headerlink" title="杨图，杨表，勾长公式"></a>杨图，杨表，勾长公式</h2><p><strong>杨图</strong>（记为 $\lambda$）大概就是一个长成这样的东西：</p>
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/youngtable.png" alt=""></div>
 
-<p>每行的列数称为 $\lambda_i$。$\lambda_i$ 单调不增，和为 $n$，称为 $\lambda\vdash n$。</p>
+<p>每行的列数称为 $\lambda_1,\lambda_2,…\lambda_m$。$\lambda_i$ 单调不增，和为 $n$，称为 $\lambda\vdash n$。</p>
 <p>你要往里面填 $1…|\lambda|$ 的排列，使得行单调增列单调增，这样的一种填充称为<strong>标准杨表</strong>。杨表数量由下面的<strong>勾长公式</strong>给出。</p>
 <blockquote>
 <p>设 $\text{hook}(p)$ 是杨图中格子 $p$ 的<strong>勾长</strong>，等于其下方格子个数+右方格子个数+1。</p>
 <p>标准杨表总数为</p>
-<script type="math/tex; mode=display">f_{\lambda}=\dfrac{|\lambda|!}{\prod_{p\in \lambda}\text{hook}(p)}</script></blockquote>
+<script type="math/tex; mode=display">f_{\lambda}=\dfrac{|\lambda|!}{\prod_{p\in \lambda}\text{hook}(p)}</script><p>也可以完全只用 $\lambda$ 表达：</p>
+<script type="math/tex; mode=display">f_{\lambda}=n!\dfrac{\prod_{i<j}(\lambda_i-i-\lambda_j+j)}{\prod_{i=1}^m(\lambda+m-i)!}</script></blockquote>
 <h2 id="半标准杨表，勾长公式"><a href="#半标准杨表，勾长公式" class="headerlink" title="半标准杨表，勾长公式"></a>半标准杨表，勾长公式</h2><p>即行不严格递增，列严格递增的杨表。</p>
 <p>设值域为 $r$，半标准杨表数为</p>
 <blockquote>
@@ -1585,9 +1586,21 @@
 <p><del>明明和杨表没有深入关系，但是不会杨表就做不了的屑题</del></p>
 <h3 id="BJWC2018-最长上升子序列"><a href="#BJWC2018-最长上升子序列" class="headerlink" title="[BJWC2018]最长上升子序列"></a><a href="https://www.luogu.com.cn/problem/P4484" target="_blank" rel="noopener">[BJWC2018]最长上升子序列</a></h3><p>爆枚杨表形态即可。整数拆分 $p(n)$ 渐进意义上等于</p>
 <script type="math/tex; mode=display">p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}</script><p>顺瑇一提这个公式是拉马努金发现的（</p>
-<h1 id="杨表和网格图路径数"><a href="#杨表和网格图路径数" class="headerlink" title="杨表和网格图路径数"></a>杨表和网格图路径数</h1><p>记一条路径 $P(\mathcal A\rightarrow\mathcal E)$ 是一条点 $\mathcal A$ 到 $\mathcal E$ 的路线，每一步只能往右边走或者往上方走。两条路径相交即有公共点。显然 $|P(\mathcal{A\rightarrow E})|={E_1+E_2-A_1-A_2\choose E_1-A_1}$。</p>
+<h1 id="杨表和网格图路径数"><a href="#杨表和网格图路径数" class="headerlink" title="杨表和网格图路径数"></a>杨表和网格图路径数</h1><p>记 $P(\mathcal A\rightarrow\mathcal E)$ 是点 $\mathcal A$ 到点 $\mathcal E$ 的路线的集合，每一步只能往右边走或者往上方走。两条路径相交即有公共点。显然 $|P(\mathcal{A\rightarrow E})|={E_1+E_2-A_1-A_2\choose E_1-A_1}$。</p>
 <h2 id="卡塔兰数"><a href="#卡塔兰数" class="headerlink" title="卡塔兰数"></a>卡塔兰数</h2><p>卡塔兰数的组合意义即从 $(0,0)$ 走到 $(n,n)$，任何时刻横坐标不能小于纵坐标。考虑 $X_i$ 为横坐标到达 $i$ 的时间，$Y_i$ 亦然，那么它就对应如下的一个杨表。</p>
-<div style="height:300px;margin:auto"><img src="https://xyix.github.io/images/cata.png" alt=""></div>]]></content>
+<div style="height:300px;margin:auto"><img src="https://xyix.github.io/images/cata.png" alt=""></div>
+
+<p>显然一个 $2\times n$ 的标准杨表和路径一一对应。从而 $2\times n$ 的标准杨表数即卡塔兰数。</p>
+<h2 id="「雅礼集训-2017-Day11」PATH"><a href="#「雅礼集训-2017-Day11」PATH" class="headerlink" title="「雅礼集训 2017 Day11」PATH"></a><a href="https://loj.ac/problem/6051" target="_blank" rel="noopener">「雅礼集训 2017 Day11」PATH</a></h2><p>显然题目要求的路径对应一个 $\{a_1,a_2,…,a_n\}$ 的杨表。式子化出来是</p>
+<script type="math/tex; mode=display">\prod\dfrac{a_i!}{(a_i+n-i)!}\prod_{i<j}(a_i-i-a_j+j)</script><p>FFT 统计有多少对 $(i,j)$ 满足 $a_i-i-a_j+j=k$，然后就好了。</p>
+<h2 id="LGV-引理"><a href="#LGV-引理" class="headerlink" title="LGV 引理"></a>LGV 引理</h2><blockquote>
+<p>给出平面上的 $n$ 个点对 $(\mathcal A_i,\mathcal E_i)$，记 $P_i=P(\mathcal A_i\rightarrow \mathcal E_i)$。则从 $P_1,P_2,…,P_n$ 中各取一条路径，使得它们互不相交的方案数为</p>
+<script type="math/tex; mode=display">\text{det}\left|\ |P(\mathcal A_i\rightarrow E_j)\right|\ |</script><p>事实上该引理适用于所有有向无环图。</p>
+</blockquote>
+<p>考虑容斥掉所有存在相交的方案。对于一个相交的方案，我们找到一个最大（这个最大可以任意定义，只要唯一即可）的相交点，则我们可以交换相交后的这条路径。</p>
+<p><img src="/images/LGVlemma.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/LGVlemma.png" alt=""></div>
+]]></content>
       <tags>
         <tag>数学</tag>
         <tag>计数</tag>
