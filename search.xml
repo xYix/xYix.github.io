@@ -1585,7 +1585,10 @@
 <p><del>明明和杨表没有深入关系，但是不会杨表就做不了的屑题</del></p>
 <h3 id="BJWC2018-最长上升子序列"><a href="#BJWC2018-最长上升子序列" class="headerlink" title="[BJWC2018]最长上升子序列"></a><a href="https://www.luogu.com.cn/problem/P4484" target="_blank" rel="noopener">[BJWC2018]最长上升子序列</a></h3><p>爆枚杨表形态即可。整数拆分 $p(n)$ 渐进意义上等于</p>
 <script type="math/tex; mode=display">p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}</script><p>顺瑇一提这个公式是拉马努金发现的（</p>
-<h1 id="杨表和网格图路径数"><a href="#杨表和网格图路径数" class="headerlink" title="杨表和网格图路径数"></a>杨表和网格图路径数</h1>]]></content>
+<h1 id="杨表和网格图路径数"><a href="#杨表和网格图路径数" class="headerlink" title="杨表和网格图路径数"></a>杨表和网格图路径数</h1><p>记一条路径 $P(\mathcal A\rightarrow\mathcal E)$ 是一条点 $\mathcal A$ 到 $\mathcal E$ 的路线，每一步只能往右边走或者往上方走。两条路径相交即有公共点。显然 $|P(\mathcal{A\rightarrow E})|={E_1+E_2-A_1-A_2\choose E_1-A_1}$。</p>
+<h2 id="卡塔兰数"><a href="#卡塔兰数" class="headerlink" title="卡塔兰数"></a>卡塔兰数</h2><p>卡塔兰数的组合意义即从 $(0,0)$ 走到 $(n,n)$，任何时刻横坐标不能小于纵坐标。考虑 $X_i$ 为横坐标到达 $i$ 的时间，$Y_i$ 亦然，那么它就对应如下的一个杨表。</p>
+<p><img src="https://xyix.github.io/images/cata.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/cata.png" alt=""></div>]]></content>
       <tags>
         <tag>数学</tag>
         <tag>计数</tag>
