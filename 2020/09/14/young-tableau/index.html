@@ -35,9 +35,10 @@
 <meta property="og:image" content="https://xyix.github.io/images/RSK2.png">
 <meta property="og:image" content="https://xyix.github.io/images/cata.png">
 <meta property="og:image" content="https://xyix.github.io/images/LGVlemma.png">
-<meta property="og:image" content="https://xyix.github.io/images/LGVlemma.png">
+<meta property="og:image" content="https://xyix.github.io/images/dyck_path.png">
+<meta property="og:image" content="https://xyix.github.io/images/dyck_path.png">
 <meta property="article:published_time" content="2020-09-14T10:50:39.000Z">
-<meta property="article:modified_time" content="2020-09-16T10:46:43.805Z">
+<meta property="article:modified_time" content="2020-09-16T11:13:12.626Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="计数">
@@ -214,7 +215,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-16 18:46:43" itemprop="dateModified" datetime="2020-09-16T18:46:43+08:00">2020-09-16</time>
+                <time title="修改时间：2020-09-16 19:13:12" itemprop="dateModified" datetime="2020-09-16T19:13:12+08:00">2020-09-16</time>
               </span>
 
           
@@ -337,11 +338,26 @@
 <script type="math/tex; mode=display">\text{det}\left|\ |P(\mathcal A_i\rightarrow E_j)\right|\ |</script><p>事实上该引理适用于所有有向无环图。</p>
 </blockquote>
 <p>考虑容斥掉所有存在相交的方案。对于一个相交的方案，我们找到一个最大（这个最大可以任意定义，只要唯一即可）的相交点，则我们可以交换相交后的这条路径。</p>
-<p><img src="https://xyix.github.io/images/LGVlemma.png" alt=""></p>
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/LGVlemma.png" alt=""></div>
 
-<p>为了让它们相互抵消，交换后容斥系数应当乘以 -1。我们发现这正是置换的符号 $\text{sgn}(\sigma)$ 的定义。（逆序对个数）写出式子：</p>
+<p>为了让它们相互抵消，交换后容斥系数应当乘以 -1。我们发现这正是置换的符号 $\text{sgn}(\sigma)$ 的定义。（-1 的逆序对个数次方）写出式子：</p>
 <script type="math/tex; mode=display">\text{ans}=\sum_{\sigma}\text{sgn}(\sigma)\prod_{i}P(\mathcal A_i,\mathcal E_{\sigma(i)})</script><p>这正是行列式的定义。</p>
+<p>和卡塔兰数类似，不相交路径集合也和杨表有对应。</p>
+<blockquote>
+<p>一个元素在 $[1,n]$ 的半标准斜杨表 $\lambda/\mu$ 和一个 $\mathcal A_i=(\mu_i-i,1),\mathcal E_i=(\lambda_i-i,n)$ 的不相交路径集合对应。</p>
+</blockquote>
+<p>比较显然。</p>
+<h2 id="k-Dyck-Path"><a href="#k-Dyck-Path" class="headerlink" title="k-Dyck Path"></a>k-Dyck Path</h2><p>1-Dyck Path 就是卡塔兰路径。k-Dyck Path 是 $k$ 条卡塔兰路径，但第二条必须完全在第一条“内部”，第三条必须完全在第二条内部……</p>
+<p><img src="https://xyix.github.io/images/dyck_path.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/dyck_path.png" alt=""></div>
+
+<blockquote>
+<p>一元素在 $[1,n]$ 的 $\lambda_i$ <strong>均为偶数</strong>的半标准杨表和 $n+1$ 阶的 k-Dyck Path 对应，且公式如下</p>
+<script type="math/tex; mode=display">b_{n,k}=\prod_{1\le i\le j\le n}\dfrac{2k+i+j}{i+j}</script></blockquote>
+<p>记录下每条 Dyck_Path 的由上方向转为右方向的拐角即可证明。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>完结撒花。</p>
+<p>因为我学不动了。</p>
+<p>学会群论之后回来补补杨表和 $S_n$ 的不可约表示的关系。</p>
 
     </div>
 
@@ -424,7 +440,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引入"><span class="nav-number">1.</span> <span class="nav-text">引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#杨图，杨表，勾长公式"><span class="nav-number">1.1.</span> <span class="nav-text">杨图，杨表，勾长公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半标准杨表，勾长公式"><span class="nav-number">1.2.</span> <span class="nav-text">半标准杨表，勾长公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜杨图"><span class="nav-number">1.3.</span> <span class="nav-text">斜杨图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSK-算法，杨表与-LIS-问题"><span class="nav-number">2.</span> <span class="nav-text">RSK 算法，杨表与 LIS 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RSK-算法"><span class="nav-number">2.1.</span> <span class="nav-text">RSK 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行插入"><span class="nav-number">2.1.1.</span> <span class="nav-text">行插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">2.1.2.</span> <span class="nav-text">删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RSK-算法和半标准杨表"><span class="nav-number">2.2.</span> <span class="nav-text">RSK 算法和半标准杨表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杨表和-LIS-问题"><span class="nav-number">2.3.</span> <span class="nav-text">杨表和 LIS 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#「CTSC2017」最长上升子序列"><span class="nav-number">2.3.1.</span> <span class="nav-text">「CTSC2017」最长上升子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BJWC2018-最长上升子序列"><span class="nav-number">2.3.2.</span> <span class="nav-text">[BJWC2018]最长上升子序列</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杨表和网格图路径数"><span class="nav-number">3.</span> <span class="nav-text">杨表和网格图路径数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#卡塔兰数"><span class="nav-number">3.1.</span> <span class="nav-text">卡塔兰数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#「雅礼集训-2017-Day11」PATH"><span class="nav-number">3.2.</span> <span class="nav-text">「雅礼集训 2017 Day11」PATH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LGV-引理"><span class="nav-number">3.3.</span> <span class="nav-text">LGV 引理</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引入"><span class="nav-number">1.</span> <span class="nav-text">引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#杨图，杨表，勾长公式"><span class="nav-number">1.1.</span> <span class="nav-text">杨图，杨表，勾长公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半标准杨表，勾长公式"><span class="nav-number">1.2.</span> <span class="nav-text">半标准杨表，勾长公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜杨图"><span class="nav-number">1.3.</span> <span class="nav-text">斜杨图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSK-算法，杨表与-LIS-问题"><span class="nav-number">2.</span> <span class="nav-text">RSK 算法，杨表与 LIS 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RSK-算法"><span class="nav-number">2.1.</span> <span class="nav-text">RSK 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行插入"><span class="nav-number">2.1.1.</span> <span class="nav-text">行插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">2.1.2.</span> <span class="nav-text">删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RSK-算法和半标准杨表"><span class="nav-number">2.2.</span> <span class="nav-text">RSK 算法和半标准杨表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杨表和-LIS-问题"><span class="nav-number">2.3.</span> <span class="nav-text">杨表和 LIS 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#「CTSC2017」最长上升子序列"><span class="nav-number">2.3.1.</span> <span class="nav-text">「CTSC2017」最长上升子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BJWC2018-最长上升子序列"><span class="nav-number">2.3.2.</span> <span class="nav-text">[BJWC2018]最长上升子序列</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杨表和网格图路径数"><span class="nav-number">3.</span> <span class="nav-text">杨表和网格图路径数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#卡塔兰数"><span class="nav-number">3.1.</span> <span class="nav-text">卡塔兰数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#「雅礼集训-2017-Day11」PATH"><span class="nav-number">3.2.</span> <span class="nav-text">「雅礼集训 2017 Day11」PATH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LGV-引理"><span class="nav-number">3.3.</span> <span class="nav-text">LGV 引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k-Dyck-Path"><span class="nav-number">3.4.</span> <span class="nav-text">k-Dyck Path</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
