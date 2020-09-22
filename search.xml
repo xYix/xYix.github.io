@@ -1644,8 +1644,34 @@
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5050" target="_blank" rel="noopener">题目链接</a>。终于不需要恐怖的多项式取模了。</p>
 <a id="more"></a>
 <p>首先可以把多项式 $F$ 写成一个列向量</p>
-<script type="math/tex; mode=display">\mathbf f=\begin{pmatrix}f_0\\f_1\\\vdots\\f_{n-1}\end{pmatrix}</script><p>那么多点求值就是一个范德蒙德矩阵乘它：</p>
-<script type="math/tex; mode=display">\begin{pmatrix}1&a_1&a_1^2&\dots&a_1^{n-1}\\1&a_2&a_2^2&\dots&a_2^{n-1}\end{pmatrix}</script>]]></content>
+<script type="math/tex; mode=display">\mathbf f=\begin{pmatrix}f_0\\f_1\\\vdots\\f_{n-1}\end{pmatrix}</script><p>那么多点求值就是一个范德蒙德矩阵 $\mathbf A$ 乘它：</p>
+<script type="math/tex; mode=display">\begin{pmatrix}1&a_0&a_0^2&\dots&a_0^{n-1}\\1&a_1&a_1^2&\dots&a_1^{n-1}\\\vdots&\vdots&\vdots&\ddots&\vdots\\1&a_{n-1}&a_{n-1}^2&\dots&a_{n-1}^{n-1}\end{pmatrix}\mathbf f</script><p>而 $\mathbf A^T\mathbf f$ 不算难求，它是</p>
+<script type="math/tex; mode=display">ans_d=\sum_{i=0}^{n-1}f_ia_i^d</script><p>也就是</p>
+<script type="math/tex; mode=display">[x^d]\sum_{i=0}^{n-1}\dfrac{f_i}{1-a_ix}</script><p>这有一个 $\Theta(n\log^2 n)$ 做法，分治合并求解，设左边分子分母为 $(u_L,v_L)$，右边分子分母为 $(u_R,v_R)$，则合并后为 $(u_Lv_R+u_Rv_L,v_Lv_R)$。不妨把准确的过程写出来：</p>
+<ul>
+<li><p>预处理所有的 $v$</p>
+</li>
+<li><p>$\text{Solve(x):=}$</p>
+</li>
+<li><p>$\quad\text{if len=1 return }f_i$</p>
+</li>
+<li><p>$\quad\text{Solve(L),Solve(R)}$</p>
+</li>
+<li><p>$\quad\text{return }u_Lv_R+u_Rv_L$</p>
+</li>
+</ul>
+<p>那么根据某神奇的特勒根原理（Tellegen’s Principle），只要我们能计算 $\mathbf {Af}$ 就能构造出一种计算 $\mathbf A^T\mathbf f$ 的方法，而且加法/乘法次数完全一样，具体构造方式如下：</p>
+<ul>
+<li><p>把 $\mathbf A$ 拆成一系列初等变换 $\prod_{i=1}^m \mathbf E_i$</p>
+</li>
+<li><p>那么 $\mathbf A^T$ 就是 $\prod_{i=1}^m\mathbf E_{m-i+1}^T$</p>
+</li>
+</ul>
+<p>其中初等变换是指把 $f_j\leftarrow f_j+cf_i$。显然它的转置就是 $f_i\leftarrow f_i+cf_j$。</p>
+<p>只要你不嫌麻烦就可以把这个分治 FFT 的所有加法乘法全部离线下来，然后转置并反向操作。但是显然这是非常憨批的。</p>
+<p>观察原来的分治过程。</p>
+<p><img src="/images/polypolyeval.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval.png" alt=""></div>]]></content>
       <tags>
         <tag>多项式</tag>
       </tags>
