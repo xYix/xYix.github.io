@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://xyix.github.io/images/polypolyeval.png">
 <meta property="og:image" content="https://xyix.github.io/images/polypolyeval_T.png">
 <meta property="article:published_time" content="2020-09-22T07:13:16.000Z">
-<meta property="article:modified_time" content="2020-09-22T12:24:37.224Z">
+<meta property="article:modified_time" content="2020-09-22T12:35:14.205Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="多项式">
 <meta name="twitter:card" content="summary">
@@ -201,7 +201,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-22 15:13:16 / 修改时间：20:24:37" itemprop="dateCreated datePublished" datetime="2020-09-22T15:13:16+08:00">2020-09-22</time>
+              <time title="创建时间：2020-09-22 15:13:16 / 修改时间：20:35:14" itemprop="dateCreated datePublished" datetime="2020-09-22T15:13:16+08:00">2020-09-22</time>
             </span>
 
           
@@ -216,7 +216,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.2k</span>
+              <span>2.8k</span>
             </span>
 
         </div>
@@ -267,7 +267,8 @@
 
 <p>有趣的是：关于逆向卷积，可以直接翻转 $v$ 然后按原来的长度循环卷积，因为溢出的部分刚好不需要。</p>
 <p>最后叶子处挨个拼成的向量就是所求点值。</p>
-
+<p>核心代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> MultiEval&#123;</span><br><span class="line">	Poly F,A;</span><br><span class="line">	Poly V[maxN&lt;&lt;<span class="number">2</span>],G[maxN&lt;&lt;<span class="number">2</span>];</span><br><span class="line">	Poly ans;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Get_V</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(l==r)&#123;V[x].push_back(<span class="number">1</span>);V[x].push_back(-A[l]);<span class="keyword">return</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		Get_V(x&lt;&lt;<span class="number">1</span>,l,mid);Get_V(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">		V[x]=Conv(V[x&lt;&lt;<span class="number">1</span>],V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>],r-l+<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">		V[x].clear();G[x].clear();</span><br><span class="line">		<span class="keyword">if</span>(l==r) <span class="keyword">return</span>;</span><br><span class="line">		<span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;clear(x&lt;&lt;<span class="number">1</span>,l,mid);clear(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Get_G</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(l==r)&#123;ans.push_back(G[x][<span class="number">0</span>]);<span class="keyword">return</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>,N0=(r-l+<span class="number">1</span>)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		reverse(V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].begin(),V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].end()); <span class="comment">//0-&gt;N0</span></span><br><span class="line">		V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]=Conv(V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>],G[x],N0&lt;&lt;<span class="number">1</span>);</span><br><span class="line">		G[x&lt;&lt;<span class="number">1</span>].resize(N0);copy(V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].begin()+N0,V[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].end(),G[x&lt;&lt;<span class="number">1</span>].begin()); <span class="comment">//[0,N0-1]</span></span><br><span class="line">		reverse(V[x&lt;&lt;<span class="number">1</span>].begin(),V[x&lt;&lt;<span class="number">1</span>].end()); 	<span class="comment">//0-&gt;N0</span></span><br><span class="line">		V[x&lt;&lt;<span class="number">1</span>]=Conv(V[x&lt;&lt;<span class="number">1</span>],G[x],N0&lt;&lt;<span class="number">1</span>);</span><br><span class="line">		G[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].resize(N0);copy(V[x&lt;&lt;<span class="number">1</span>].begin()+N0,V[x&lt;&lt;<span class="number">1</span>].end(),G[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].begin()); <span class="comment">//[N0,2N0-1]</span></span><br><span class="line">		Get_G(x&lt;&lt;<span class="number">1</span>,l,mid);Get_G(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">Poly <span class="title">Solve</span><span class="params">(Poly dF,Poly dA)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> N0=calc(max(dF.size(),dA.size()+<span class="number">1</span>)); <span class="comment">//占位符 </span></span><br><span class="line">		F=dF,A=dA;F.resize(N0);A.resize(N0);</span><br><span class="line">		Get_V(<span class="number">1</span>,<span class="number">0</span>,N0<span class="number">-1</span>);</span><br><span class="line">		Poly invSV=Inv(V[<span class="number">1</span>],N0);</span><br><span class="line">		reverse(invSV.begin(),invSV.end()); <span class="comment">//0-&gt;N0-1</span></span><br><span class="line">		invSV=Conv(invSV,F,N0&lt;&lt;<span class="number">1</span>);G[<span class="number">1</span>].resize(N0);</span><br><span class="line">		copy(invSV.begin()+N0<span class="number">-1</span>,invSV.end()<span class="number">-1</span>,G[<span class="number">1</span>].begin());</span><br><span class="line">		Get_G(<span class="number">1</span>,<span class="number">0</span>,N0<span class="number">-1</span>);</span><br><span class="line">		clear(<span class="number">1</span>,<span class="number">0</span>,N0<span class="number">-1</span>);</span><br><span class="line">		Poly tans=ans;ans.clear();tans.resize(A.size());A.clear();F.clear();</span><br><span class="line">		<span class="keyword">return</span> tans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -436,12 +437,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">104k</span>
+    <span title="站点总字数">105k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:34</span>
+    <span title="站点阅读时长">1:36</span>
 </div><script color="44,159,111" opacity="1.0" zIndex="-999" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
         
