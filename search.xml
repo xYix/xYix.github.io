@@ -1669,9 +1669,13 @@
 </ul>
 <p>其中初等变换是指把 $f_j\leftarrow f_j+cf_i$。显然它的转置就是 $f_i\leftarrow f_i+cf_j$。</p>
 <p>只要你不嫌麻烦就可以把这个分治 FFT 的所有加法乘法全部离线下来，然后转置并反向操作。但是显然这是非常憨批的。</p>
-<p>观察原来的分治过程。</p>
-<p><img src="/images/polypolyeval.png" alt=""></p>
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval.png" alt=""></div>]]></content>
+<p>首先考虑卷积的转置是什么。原来把 $f_{i+j}\leftarrow f_iv_j$，那么转置后就变成 $f_{i-j}\leftarrow f_iv_j$。也就是逆向卷积。记为 $\times^T$。</p>
+<p>然后观察原来的分治过程。</p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval.png" alt=""></div>
+
+<p>它的转置应该是</p>
+<p><img src="/images/polypolyeval_T.png" alt=""></p>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval_T.png" alt=""></div>]]></content>
       <tags>
         <tag>多项式</tag>
       </tags>
