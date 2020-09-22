@@ -1255,7 +1255,8 @@
 <td>$\sqrt{}$</td>
 <td>$\sqrt{}$</td>
 <td>$\sqrt{}$</td>
-<td>$\sqrt{}$$\sqrt{}$</td>
+<td>$\sqrt{}$</td>
+<td>$\sqrt{}$</td>
 </tr>
 <tr>
 <td>ZJOI2019 Day2</td>
@@ -1635,6 +1636,18 @@
         <tag>数学</tag>
         <tag>计数</tag>
         <tag>杨表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多点求值的新做法</title>
+    <url>/2020/09/22/luogu-5050/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5050" target="_blank" rel="noopener">题目链接</a>。终于不需要恐怖的多项式取模了。</p>
+<a id="more"></a>
+<p>首先可以把多项式 $F$ 写成一个列向量</p>
+<script type="math/tex; mode=display">\mathbf f=\begin{pmatrix}f_0\\f_1\\\vdots\\f_{n-1}\end{pmatrix}</script><p>那么多点求值就是一个范德蒙德矩阵乘它：</p>
+<script type="math/tex; mode=display">\begin{pmatrix}1&a_1&a_1^2&\dots&a_1^{n-1}\\1&a_2&a_2^2&\dots&a_2^{n-1}\end{pmatrix}</script>]]></content>
+      <tags>
+        <tag>多项式</tag>
       </tags>
   </entry>
 </search>
