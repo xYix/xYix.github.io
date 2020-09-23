@@ -1675,9 +1675,8 @@
 <p>然后观察原来的分治过程。</p>
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval.png" alt=""></div>
 
-<p>它的转置应该是（请注意向量和多项式的对应）（由于做这图的时候脑子不太清醒，所以请将后一半全部转为前一半）</p>
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval_T.png" alt=""></div>
-
+<p>请注意第二/三层之间的那组箭头<strong>不是</strong> $4\times 4$ 的。</p>
+<p>它的转置应该能想象得出来了吧……</p>
 <p>有趣的是：关于逆向卷积，可以直接翻转 $v$ 然后按原来的长度循环卷积，因为溢出的部分刚好不需要。</p>
 <p>最后叶子处挨个拼成的向量就是所求点值。</p>
 <p>核心代码：</p>
