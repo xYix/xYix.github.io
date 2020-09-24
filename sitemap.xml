@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xyix.github.io/2020/09/03/linear-algebra/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xyix.github.io/songlist/index.html</loc>
     
     <lastmod>2020-09-24</lastmod>
@@ -199,13 +206,6 @@
   
   <url>
     <loc>http://xyix.github.io/2020/09/01/fast-factorial-calculating/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xyix.github.io/2020/09/03/linear-algebra/</loc>
     
     <lastmod>2020-09-04</lastmod>
     
