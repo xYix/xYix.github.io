@@ -534,7 +534,7 @@
 <script type="math/tex; mode=display">\begin{pmatrix}0&1\\1&0\end{pmatrix}</script><p>就可以理解为沿直线 $y=x$ 翻转单位立方体。它的行列式是 $-1$。</p>
 <p>对于 $n=3$，一个立方体有没有被翻转取决于左手定则，不展开讲了。</p>
 <p>行列式的形式化定义如下。</p>
-<script type="math/tex; mode=display">\det A=\sum_{\sigma}\varepsilon_{\sigma}\prod_ia_{i,\sigma(i)}</script><p>其中 $\sigma$ 是 $1,2,…,n$ 的一个置换。$\varepsilon_{\sigma}$ 定义为 $(-1)^k$，其中 $k$ 是 $\sigma$ 的<strong>对换</strong>数，即如果把 $\sigma$ 拆成<strong>对换</strong>（即 <code>swap</code>）那么应当有 $k$ 个对换。</p>
+<script type="math/tex; mode=display">\det A=\sum_{\sigma}\varepsilon_{\sigma}\prod_ia_{i,\sigma(i)}</script><p>其中 $\sigma$ 是 $1,2,…,n$ 的一个置换。$\varepsilon_{\sigma}$ 定义为 $(-1)^k$，其中 $k$ 是 $\sigma$ 的<strong>对换</strong>数，即如果把 $\sigma$ 拆成<strong>对换</strong>（即 <code>swap</code>）那么应当有 $k$ 个对换。也等价于逆序对数。</p>
 <p>关于行列式有以下结论：</p>
 <ul>
 <li><p>$\det A=\det (A^T)$</p>
