@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"xyix.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题目链接，翻译链接">
+  <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AGC016F 题解">
-<meta property="og:url" content="http://xyix.github.io/2020/09/12/agc-016-f/index.html">
+<meta property="og:title" content="uoj#272 题解">
+<meta property="og:url" content="http://xyix.github.io/2020/09/25/uoj-272/index.html">
 <meta property="og:site_name" content="x义x的博客">
-<meta property="og:description" content="题目链接，翻译链接">
+<meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-12T08:28:08.000Z">
-<meta property="article:modified_time" content="2020-09-13T09:13:10.325Z">
+<meta property="article:published_time" content="2020-09-25T10:26:26.000Z">
+<meta property="article:modified_time" content="2020-09-25T12:12:17.384Z">
 <meta property="article:author" content="x义x">
-<meta property="article:tag" content="博弈论">
+<meta property="article:tag" content="集合幂级数">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://xyix.github.io/2020/09/12/agc-016-f/">
+<link rel="canonical" href="http://xyix.github.io/2020/09/25/uoj-272/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>AGC016F 题解 | x义x的博客</title>
+  <title>uoj#272 题解 | x义x的博客</title>
   
 
 
@@ -174,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xyix.github.io/2020/09/12/agc-016-f/">
+    <link itemprop="mainEntityOfPage" href="http://xyix.github.io/2020/09/25/uoj-272/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -187,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AGC016F 题解
+          uoj#272 题解
         </h1>
 
         <div class="post-meta">
@@ -196,16 +196,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-09-12 16:28:08" itemprop="dateCreated datePublished" datetime="2020-09-12T16:28:08+08:00">2020-09-12</time>
+              <time title="创建时间：2020-09-25 18:26:26 / 修改时间：20:12:17" itemprop="dateCreated datePublished" datetime="2020-09-25T18:26:26+08:00">2020-09-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-13 17:13:10" itemprop="dateModified" datetime="2020-09-13T17:13:10+08:00">2020-09-13</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -219,7 +213,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.5k</span>
+              <span>2.3k</span>
             </span>
 
         </div>
@@ -231,14 +225,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2390" target="_blank" rel="noopener">翻译链接</a></p>
+        <p><a href="https://uoj.ac/problem/272" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
-<p>博弈论有益身心健康~</p>
-<p>首先两个石子是两个独立的子游戏，我们只需要求 $\text{SG}(1)=\text{SG}(2)$ 的方案数。</p>
-<p>考虑 $1,2$ 都先手必败的情况。这时候枚举 $\text{SG}$ 值为 0 的子集 $\{1,2\}\subseteq A$，$B=N/A$。考虑边的情况。显然 $A$ 内部没有边，$B$ 内部可以任意有边，每个 $B$ 到 $A$ 至少一条边，$A$ 到 $B$ 任意有边。</p>
-<p>那么 $1,2$ 的 $\text{SG}$ 不是 0 该怎么办呢？考虑抽掉所有的 0，然后 $B$ 集合的 $\text{SG}$ 已经默认都有至少一条边连向 $0$，而且 $B$ 集合内部没有任何 $0$，冷静分析一下就会发现这相当于 $B$ 集合的 $\text{SG}$ <strong>全体加一</strong>。</p>
-<p>子集 DP 即可。代码如下。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p=<span class="number">1000000007</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="keyword">inline</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span>&#123;x-=p,x+=x&gt;&gt;<span class="number">31</span>&amp;p;&#125;</span><br><span class="line"><span class="keyword">int</span> N,M;</span><br><span class="line"><span class="keyword">int</span> pow2[<span class="number">250</span>];</span><br><span class="line"><span class="keyword">int</span> g[<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line"><span class="keyword">int</span> G[<span class="number">15</span>][<span class="number">32768</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> F[<span class="number">32768</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;N,&amp;M);</span><br><span class="line">	pow2[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;<span class="number">250</span>;i++) check(pow2[i]=pow2[i<span class="number">-1</span>]+pow2[i<span class="number">-1</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=M;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u,v;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);u--;v--;</span><br><span class="line">		g[u][v]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">0</span>;u&lt;N;u++)</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">0</span>;v&lt;N;v++)</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;N);s++) <span class="keyword">if</span>((s&gt;&gt;v)&amp;<span class="number">1</span>)</span><br><span class="line">		G[u][s]+=g[u][v];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;N);s++) <span class="keyword">if</span>((s&amp;<span class="number">3</span>)==<span class="number">3</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> A=s;A;A=(A<span class="number">-1</span>)&amp;s) <span class="keyword">if</span>((A&amp;<span class="number">3</span>)==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> B=s^A,tmp=F[B];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">0</span>;u&lt;N;u++) <span class="keyword">if</span>((B&gt;&gt;u)&amp;<span class="number">1</span>)</span><br><span class="line">				tmp=<span class="number">1L</span>L*tmp*(pow2[G[u][A]]<span class="number">-1</span>)%p;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">0</span>;u&lt;N;u++) <span class="keyword">if</span>((A&gt;&gt;u)&amp;<span class="number">1</span>)</span><br><span class="line">				tmp=<span class="number">1L</span>L*tmp*pow2[G[u][B]]%p;</span><br><span class="line">			check(F[s]+=tmp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> A=s;A;A=(A<span class="number">-1</span>)&amp;s) <span class="keyword">if</span>((A&amp;<span class="number">3</span>)==<span class="number">3</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> B=s^A,tmp=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">0</span>;u&lt;N;u++) <span class="keyword">if</span>((B&gt;&gt;u)&amp;<span class="number">1</span>)</span><br><span class="line">				tmp=<span class="number">1L</span>L*tmp*(pow2[G[u][A]]<span class="number">-1</span>)%p*pow2[G[u][B]]%p;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">0</span>;u&lt;N;u++) <span class="keyword">if</span>((A&gt;&gt;u)&amp;<span class="number">1</span>)</span><br><span class="line">				tmp=<span class="number">1L</span>L*tmp*pow2[G[u][B]]%p;</span><br><span class="line">			check(F[s]+=tmp);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(pow2[M]-F[(<span class="number">1</span>&lt;&lt;N)<span class="number">-1</span>]+p)%p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>题意非常的恶心。先理一下。考虑两个人 $x,y$，他们的剪刀石头布结果是 $b((x\oplus y)_{\text{cnt2}},(x\oplus y)_{\text{cnt1}})$，其中 $\oplus$ 表示三进制不进位加法，可以类比异或；而 $_{\text{cnt2}}$ 表示 $2$ 的个数。那么设这个东西为 $B_{y,x}$，要求的就是</p>
+<script type="math/tex; mode=display">B^tf</script><p>我们发现</p>
+<script type="math/tex; mode=display">B_{i,j}=B_{i\oplus k,j\oplus k}</script><p>这个性质非常的优秀！我们有</p>
+<script type="math/tex; mode=display">B_{i,j}=B_{i\ominus j,0}</script><p>于是这个矩阵就只有第一列是有意义的。考虑矩阵乘法：</p>
+<script type="math/tex; mode=display">B^t_{i,0}=\sum_{k}B_{i,k}^{t-1}B_{k,0}</script><script type="math/tex; mode=display">B^t_{i,0}=\sum_{k}B_{i\ominus k,0}^{t-1}B_{k,0}</script><p>于是就是“迫真子集卷积”。子集卷积是在每一维上做长度为 2 的 $\text{DFT}$，那么在每一维上做长度为 3 的 $\text{DFT}$ 即可。</p>
+<p>需要 $\sqrt {-3}$，暴力扩域即可。还需要 $3^{-1}$，题目保证了直接 $(2p+1)/3$ 即可。</p>
+<p>有个卡常小技巧：$\text{FWWT}(B)$ 结果的本质不同的值很少（不知道为什么QAQ），可以省掉极多的快速幂。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> M,K,N=<span class="number">1</span>,p;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="keyword">inline</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> x&gt;=p?x-p:x;&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Z</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	Z(<span class="keyword">int</span> a0=<span class="number">0</span>,<span class="keyword">int</span> b0=<span class="number">0</span>):a(a0),b(b0)&#123;&#125;</span><br><span class="line">	Z <span class="keyword">operator</span> +(<span class="keyword">const</span> Z v)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Z(check(a+v.a),check(b+v.b));&#125;</span><br><span class="line">	Z <span class="keyword">operator</span> -(<span class="keyword">const</span> Z v)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Z(check(a-v.a+p),check(b-v.b+p));&#125;</span><br><span class="line">	Z <span class="keyword">operator</span> *(<span class="keyword">const</span> Z v)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Z(check(<span class="number">1L</span>L*a*v.a%p<span class="number">-3L</span>L*b%p*v.b%p+p),check(<span class="number">1L</span>L*a*v.b%p+<span class="number">1L</span>L*b*v.a%p));&#125; </span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> Z v)<span class="keyword">const</span>&#123;<span class="keyword">return</span> a&lt;v.a||(a==v.a&amp;&amp;b&lt;v.b);&#125;</span><br><span class="line">&#125;w,w2,F[<span class="number">531441</span>],G[<span class="number">531441</span>];</span><br><span class="line"><span class="keyword">int</span> inv2,inv3;</span><br><span class="line"><span class="keyword">int</span> B[<span class="number">13</span>][<span class="number">13</span>];</span><br><span class="line"></span><br><span class="line"><span class="function">Z <span class="title">qpow</span><span class="params">(Z a,<span class="keyword">int</span> k)</span></span>&#123;Z ans=<span class="number">1</span>;<span class="keyword">while</span>(k)&#123;<span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans=ans*a;a=a*a;k&gt;&gt;=<span class="number">1</span>;&#125;<span class="keyword">return</span> ans;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> k)</span></span>&#123;<span class="keyword">int</span> ans=<span class="number">1</span>;<span class="keyword">while</span>(k)&#123;<span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans=<span class="number">1L</span>L*ans*a%p;a=<span class="number">1L</span>L*a*a%p;k&gt;&gt;=<span class="number">1</span>;&#125;<span class="keyword">return</span> ans;&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FWWT</span><span class="params">(Z d[],<span class="keyword">bool</span> flg)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> n=<span class="number">1</span>;n&lt;N;n*=<span class="number">3</span>)</span><br><span class="line">	<span class="keyword">for</span>(Z *j=d;j&lt;d+N;j+=n*<span class="number">3</span>)</span><br><span class="line">	<span class="keyword">for</span>(Z *k0=j,*k1=j+n,*k2=j+n+n;k0&lt;j+n;k0++,k1++,k2++)&#123;</span><br><span class="line">		Z D0=*k0+*k1+*k2,</span><br><span class="line">		  D1=*k0+*k1*w+*k2*w2,</span><br><span class="line">		  D2=*k0+*k1*w2+*k2*w;</span><br><span class="line">		<span class="keyword">if</span>(flg) swap(D1,D2);</span><br><span class="line">		*k0=D0,*k1=D1,*k2=D2;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;Z,Z&gt; WTF;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;M,&amp;K,&amp;p);inv2=(p+<span class="number">1</span>)/<span class="number">2</span>,inv3=(<span class="number">2</span>*p+<span class="number">1</span>)/<span class="number">3</span>;</span><br><span class="line">	w=Z(p-inv2,inv2);w2=Z(p-inv2,p-inv2);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=M;i++) N*=<span class="number">3</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;F[i].a);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=M;i++)</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;i+j&lt;=M;j++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;B[i][j]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> i1=i,cnt1=<span class="number">0</span>,cnt2=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(i1) cnt1+=(i1%<span class="number">3</span>==<span class="number">1</span>),cnt2+=(i1%<span class="number">3</span>==<span class="number">2</span>),i1/=<span class="number">3</span>;</span><br><span class="line">		G[i]=Z(B[cnt1][cnt2]); </span><br><span class="line">	&#125;</span><br><span class="line">	FWWT(G,<span class="number">0</span>);FWWT(F,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">		<span class="keyword">if</span>(!WTF.count(G[i])) F[i]=F[i]*(WTF[G[i]]=qpow(G[i],K));</span><br><span class="line">		<span class="keyword">else</span> F[i]=F[i]*WTF[G[i]];</span><br><span class="line">	FWWT(F,<span class="number">1</span>);</span><br><span class="line">	inv3=qpow(inv3,M);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="number">1L</span>L*F[i].a*inv3%p); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -248,7 +245,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" rel="tag"># 博弈论</a>
+              <a href="/tags/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0/" rel="tag"># 集合幂级数</a>
           </div>
 
         
@@ -257,13 +254,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/12/euler-trans-in-group-theory/" rel="prev" title="群论视角下的欧拉变换">
-      <i class="fa fa-chevron-left"></i> 群论视角下的欧拉变换
+    <a href="/2020/09/23/my-poly-module/" rel="prev" title="我的多项式板子">
+      <i class="fa fa-chevron-left"></i> 我的多项式板子
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/13/agc-016-d/" rel="next" title="AGC016D 题解">
-      AGC016D 题解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
