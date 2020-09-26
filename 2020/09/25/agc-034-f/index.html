@@ -29,11 +29,13 @@
 <meta property="og:site_name" content="x义x的博客">
 <meta property="og:description" content="题目链接,题目翻译">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xyix.github.io/images/wtf.png">
 <meta property="article:published_time" content="2020-09-25T12:55:31.000Z">
-<meta property="article:modified_time" content="2020-09-26T07:01:32.870Z">
+<meta property="article:modified_time" content="2020-09-26T07:14:02.075Z">
 <meta property="article:author" content="x义x">
 <meta property="article:tag" content="集合幂级数">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xyix.github.io/images/wtf.png">
 
 <link rel="canonical" href="http://xyix.github.io/2020/09/25/agc-034-f/">
 
@@ -204,7 +206,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-26 15:01:32" itemprop="dateModified" datetime="2020-09-26T15:01:32+08:00">2020-09-26</time>
+                <time title="修改时间：2020-09-26 15:14:02" itemprop="dateModified" datetime="2020-09-26T15:14:02+08:00">2020-09-26</time>
               </span>
 
           
@@ -219,7 +221,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>904</span>
+              <span>2.6k</span>
             </span>
 
         </div>
@@ -242,6 +244,9 @@
 <script type="math/tex; mode=display">c=-2^n</script><p>从而对于 $i\neq \varnothing$，</p>
 <script type="math/tex; mode=display">\text{FWT}(\mathbf E)_i=\dfrac{\text{FWT}(\sum_sx^s)_i-2^n}{1-\text{FWT}(\mathbf p)_i}</script><p>从而我们可以得出所有的 $\text{FWT}(\mathbf E)_i,i\neq \varnothing$。但是 $\text{FWT}(\mathbf E)_{\varnothing}$ 是多少？不妨设它为 $e$。如果我们假装 $\text{FWT}(\mathbf E)_{\varnothing}=0$ 做 $\text{FWT}^{-1}$，那么有</p>
 <script type="math/tex; mode=display">\mathbf{E}_i'+\dfrac{e}{2^n}=\mathbf E_i</script><p>从而我们知道 $e=-2^n\mathbf{E}’_{\varnothing},\mathbf E_i=\mathbf E’_i-\mathbf E’_{\varnothing}$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p=<span class="number">998244353</span>,maxN=<span class="number">262144</span>*<span class="number">2</span>,maxK=<span class="number">20</span>,g=<span class="number">3</span>,ig=<span class="number">332748118</span>,inv2=(p+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">1</span>;<span class="keyword">while</span>(x&lt;n) x&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Z</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	Z(<span class="keyword">int</span> x0=<span class="number">0</span>):x(x0)&#123;&#125;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="keyword">inline</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> x&gt;=p?x-p:x;&#125;</span><br><span class="line">Z <span class="keyword">operator</span> +(<span class="keyword">const</span> Z a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> check(a.x+b.x);&#125;</span><br><span class="line">Z <span class="keyword">operator</span> -(<span class="keyword">const</span> Z a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> check(a.x-b.x+p);&#125;</span><br><span class="line">Z <span class="keyword">operator</span> *(<span class="keyword">const</span> Z a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> <span class="number">1L</span>L*a.x*b.x%p;&#125;</span><br><span class="line">Z <span class="keyword">operator</span> -(<span class="keyword">const</span> Z a)&#123;<span class="keyword">return</span> check(p-a.x);&#125;</span><br><span class="line">Z&amp; <span class="keyword">operator</span> +=(Z &amp;a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> a=a+b;&#125;</span><br><span class="line">Z&amp; <span class="keyword">operator</span> -=(Z &amp;a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> a=a-b;&#125;</span><br><span class="line">Z&amp; <span class="keyword">operator</span> *=(Z &amp;a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> a=a*b;&#125;</span><br><span class="line">Z fac[maxN],ifac[maxN],inv[maxN];</span><br><span class="line"><span class="function">Z <span class="title">qpow</span><span class="params">(Z a,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    Z ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(k)&#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans*=a;</span><br><span class="line">        a*=a;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fac[<span class="number">0</span>]=ifac[<span class="number">0</span>]=fac[<span class="number">1</span>]=ifac[<span class="number">1</span>]=inv[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;maxN;i++)</span><br><span class="line">    	fac[i]=fac[i<span class="number">-1</span>]*i,</span><br><span class="line">    	inv[i]=(p-p/i)*inv[p%i],</span><br><span class="line">    	ifac[i]=ifac[i<span class="number">-1</span>]*inv[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> M,N;Z P[<span class="number">1</span>&lt;&lt;<span class="number">18</span>],SP,E[<span class="number">1</span>&lt;&lt;<span class="number">18</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FWT</span><span class="params">(Z d[],<span class="keyword">bool</span> flg)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> n=<span class="number">1</span>;n&lt;N;n*=<span class="number">2</span>)</span><br><span class="line">	<span class="keyword">for</span>(Z *j=d;j&lt;d+N;j+=n*<span class="number">2</span>)</span><br><span class="line">	<span class="keyword">for</span>(Z *k0=j,*k1=j+n,tmp;k0&lt;j+n;k0++,k1++)</span><br><span class="line">		tmp=*k1,*k1=*k0-*k1,*k0+=tmp;</span><br><span class="line">	<span class="keyword">if</span>(flg)&#123;</span><br><span class="line">		Z invN=qpow(N,p<span class="number">-2</span>);</span><br><span class="line">		<span class="keyword">for</span>(Z *k=d;k&lt;d+N;k++) *k*=invN;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	init();</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;M);N=<span class="number">1</span>&lt;&lt;M;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;P[i].x),SP+=P[i];</span><br><span class="line">	SP=qpow(SP,p<span class="number">-2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) P[i]*=SP,E[i]=<span class="number">1</span>;</span><br><span class="line">	FWT(P,<span class="number">0</span>);FWT(E,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;i++) E[i]=(E[i]-N)*qpow(<span class="number">1</span>-P[i],p<span class="number">-2</span>);E[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	FWT(E,<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,E[i]-E[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p>我什么时候写的这题？？？</p>
+<p><img src="https://xyix.github.io/images/wtf.png" alt=""></p>
 
     </div>
 
@@ -322,6 +327,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#彩蛋"><span class="nav-number">1.</span> <span class="nav-text">彩蛋</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -411,12 +417,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">115k</span>
+    <span title="站点总字数">117k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:44</span>
+    <span title="站点阅读时长">1:46</span>
 </div><script color="44,159,111" opacity="1.0" zIndex="-999" count="250" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
         
