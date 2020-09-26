@@ -24,20 +24,18 @@
 
   <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="uoj#372 题解">
-<meta property="og:url" content="http://xyix.github.io/2020/09/06/uoj-372/index.html">
+<meta property="og:title" content="uoj#310 题解">
+<meta property="og:url" content="http://xyix.github.io/2020/09/26/uoj-310/index.html">
 <meta property="og:site_name" content="x义x的博客">
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-06T09:32:42.000Z">
-<meta property="article:modified_time" content="2020-09-06T10:21:26.740Z">
+<meta property="article:published_time" content="2020-09-26T07:29:21.000Z">
+<meta property="article:modified_time" content="2020-09-26T08:28:18.144Z">
 <meta property="article:author" content="x义x">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="概率期望">
-<meta property="article:tag" content="计数">
+<meta property="article:tag" content="集合幂级数">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://xyix.github.io/2020/09/06/uoj-372/">
+<link rel="canonical" href="http://xyix.github.io/2020/09/26/uoj-310/">
 
 
 <script id="page-configurations">
@@ -50,7 +48,7 @@
   };
 </script>
 
-  <title>uoj#372 题解 | x义x的博客</title>
+  <title>uoj#310 题解 | x义x的博客</title>
   
 
 
@@ -176,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xyix.github.io/2020/09/06/uoj-372/">
+    <link itemprop="mainEntityOfPage" href="http://xyix.github.io/2020/09/26/uoj-310/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -189,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          uoj#372 题解
+          uoj#310 题解
         </h1>
 
         <div class="post-meta">
@@ -200,7 +198,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-06 17:32:42 / 修改时间：18:21:26" itemprop="dateCreated datePublished" datetime="2020-09-06T17:32:42+08:00">2020-09-06</time>
+              <time title="创建时间：2020-09-26 15:29:21 / 修改时间：16:28:18" itemprop="dateCreated datePublished" datetime="2020-09-26T15:29:21+08:00">2020-09-26</time>
             </span>
 
           
@@ -215,7 +213,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>594</span>
+              <span>2.8k</span>
             </span>
 
         </div>
@@ -227,20 +225,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
+        <p><a href="https://yhx-12243.github.io/OI-transit/records/uoj310.html" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
-<p>首先这种鬼题都是独立性非常难考虑，所以一般来讲都是直接对整个图考虑，做子集 DP。</p>
-<p>显然用限制条件（边）肯定比一个单个的元素（好）。所以我们下面直接对图讨论了。</p>
-<p>我们的函数显然肯定有一维 $x$ 表示要求答案 $\le x$，但是这显然是不够的，我们再考虑加一维 $y$ 表示要求所有点权 $\le y$。</p>
-<p>设 $F(s,x,y)$ 表示当前考虑的子图为 $s$，$x,y$ 的含义如上，的概率。</p>
-<p>考虑枚举点权最大值 $w$。</p>
+<p>简要题意：</p>
 <blockquote>
-<p>$2w&lt;x$。此时一切约束都被满足。发生这种情况必然有所有点权 $\le \dfrac x 2$，所以概率为 $\left(\dfrac x 2\right)^{|s|}$。</p>
-<p>$2w&gt;x$。此时，设点 $i$ 取到了最大值。考虑和 $i$ 有边的 $j$，显然除了 $(i,j)$ 我们可以不考虑任何其他 $j$ 连出的边。显然对于 $j$ 我们要求它 $\le x-w$，对于其他点，我们只要求 $\le w$ 且答案还是 $\le y$。</p>
+<p>给一个集合 $S$，求多少个有序集合对 $(A,B)$，使得 $A\cup B\neq \varnothing,A\cap B=\varnothing$ 且 $\bigoplus_{x\in A}x=\bigoplus_{x\in B}x$。</p>
 </blockquote>
-<p>设去掉 $i$ 和 $j$ 的图为 $s_i’$。我们得到方程</p>
-<script type="math/tex; mode=display">F(s,x,y)=\left(\dfrac{x}{2}\right)^{|s|}+\sum_i\int_{\frac x 2}^y\left(x-w\right)^{|s|-|s_i'|-1}F(s_i',w,y)\text{d}w</script><p>大力 DP 即可。注意 $s$ 可能不连通，这时候拆成数个连通块跑。加上这个优化就莫名能跑 $n=25$ 了，非常神必。</p>
-
+<p>显然，由于 $A\cap B=\varnothing$，所以</p>
+<script type="math/tex; mode=display">\bigoplus_{x\in A}x=\bigoplus_{x\in B}x\Rightarrow \bigoplus_{x\in A\cup B}x=0</script><p>于是只需要求出</p>
+<blockquote>
+<p>满足 $\bigoplus x\in A=0$ 的非空集合的 2 的集合大小次方之和</p>
+</blockquote>
+<p>设 $f_{i,j}$ 是考虑前 $i$ 个元素，异或值为 $j$ 的答案。显然有</p>
+<script type="math/tex; mode=display">f_{i,j}=f_{i-1,j}+2f_{i-1,j\oplus a_i}</script><p>设 $F_i$ 是 $f_{i,j}$ 的集合幂级数，则</p>
+<script type="math/tex; mode=display">F_i=F_{i-1}\times(1+2x^{a_i})</script><p>其中 $\times$ 是异或卷积。</p>
+<p>那么现在我们考虑如何求 $\text{FWT}(x^{\varnothing}+2x^{a_i})$。</p>
+<p>我们都知道 $\text{FWT}$ 是一个线性算子，从而它应该等于 $\text{FWT}(x^{\varnothing})+2\text{FWT}(x^{a_i})$。<del>打个表</del>可以发现，$\text{FWT}(x^{d})_i=(-1)^{|i\cap d|}$。</p>
+<p>从而</p>
+<script type="math/tex; mode=display">\text{FWT}(x^{\varnothing}+2x^{a_i})_j=\begin{cases}-1&(|a_i\cap j|\bmod 2=1)\\3&(|a_i\cap j|\bmod 2 =0)\end{cases}</script><p>于是，只要算出 $\sum_{i}\big[|a_i\cap j|\bmod 2=1\big]$ 即可得到 $\text{FWT}(\text{ans})_j$。</p>
+<p>设 $b_i$ 是 $a_j=i$ 的 $j$ 个数。于是所求即可转化为</p>
+<script type="math/tex; mode=display">\sum_{i}(-1)^{|i\cap j|}b_j</script><p>这恰好又变回了 $\text{FWT}$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p=<span class="number">998244353</span>,maxN=<span class="number">1</span>&lt;&lt;<span class="number">20</span>,maxK=<span class="number">20</span>,g=<span class="number">3</span>,ig=<span class="number">332748118</span>,inv2=(p+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">1</span>;<span class="keyword">while</span>(x&lt;n) x&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Z</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	Z(<span class="keyword">int</span> x0=<span class="number">0</span>):x(x0)&#123;&#125;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="keyword">inline</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> x&gt;=p?x-p:x;&#125;</span><br><span class="line">Z <span class="keyword">operator</span> +(<span class="keyword">const</span> Z a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> check(a.x+b.x);&#125;</span><br><span class="line">Z <span class="keyword">operator</span> -(<span class="keyword">const</span> Z a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> check(a.x-b.x+p);&#125;</span><br><span class="line">Z <span class="keyword">operator</span> *(<span class="keyword">const</span> Z a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> <span class="number">1L</span>L*a.x*b.x%p;&#125;</span><br><span class="line">Z <span class="keyword">operator</span> -(<span class="keyword">const</span> Z a)&#123;<span class="keyword">return</span> check(p-a.x);&#125;</span><br><span class="line">Z&amp; <span class="keyword">operator</span> +=(Z &amp;a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> a=a+b;&#125;</span><br><span class="line">Z&amp; <span class="keyword">operator</span> -=(Z &amp;a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> a=a-b;&#125;</span><br><span class="line">Z&amp; <span class="keyword">operator</span> *=(Z &amp;a,<span class="keyword">const</span> Z b)&#123;<span class="keyword">return</span> a=a*b;&#125;</span><br><span class="line">Z fac[maxN],ifac[maxN],inv[maxN];</span><br><span class="line"><span class="function">Z <span class="title">qpow</span><span class="params">(Z a,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    Z ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(k)&#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans*=a;</span><br><span class="line">        a*=a;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line">Z pow3[<span class="number">1</span>&lt;&lt;<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fac[<span class="number">0</span>]=ifac[<span class="number">0</span>]=fac[<span class="number">1</span>]=ifac[<span class="number">1</span>]=inv[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;maxN;i++)</span><br><span class="line">    	fac[i]=fac[i<span class="number">-1</span>]*i,</span><br><span class="line">    	inv[i]=(p-p/i)*inv[p%i],</span><br><span class="line">    	ifac[i]=ifac[i<span class="number">-1</span>]*inv[i];</span><br><span class="line">    pow3[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;maxN;i++) pow3[i]=pow3[i<span class="number">-1</span>]*<span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> M,N,tot;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FWT</span><span class="params">(Z d[],<span class="keyword">bool</span> flg)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> n=<span class="number">1</span>;n&lt;N;n*=<span class="number">2</span>)</span><br><span class="line">	<span class="keyword">for</span>(Z *j=d;j&lt;d+N;j+=n*<span class="number">2</span>)</span><br><span class="line">	<span class="keyword">for</span>(Z *k0=j,*k1=j+n,tmp;k0&lt;j+n;k0++,k1++)</span><br><span class="line">		tmp=*k1,*k1=*k0-*k1,*k0+=tmp;</span><br><span class="line">	<span class="keyword">if</span>(flg)&#123;</span><br><span class="line">		Z invN=qpow(N,p<span class="number">-2</span>);</span><br><span class="line">		<span class="keyword">for</span>(Z *k=d;k&lt;d+N;k++) *k*=invN;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="keyword">inline</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num=<span class="number">0</span>,neg=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c))&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) neg=<span class="number">-1</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">isdigit</span>(c)) num=num*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</span><br><span class="line">	<span class="keyword">return</span> num*neg; </span><br><span class="line">&#125;</span><br><span class="line">Z B[<span class="number">1</span>&lt;&lt;<span class="number">20</span>];</span><br><span class="line">Z ANS[<span class="number">1</span>&lt;&lt;<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	init();</span><br><span class="line">	M=<span class="number">20</span>;N=<span class="number">1</span>&lt;&lt;M;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;tot);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++) B[read()].x++;</span><br><span class="line">	FWT(B,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> cnt=((B[i].x+tot)%p)/<span class="number">2</span>; <span class="comment">//-1 个数</span></span><br><span class="line">		ANS[i]=(tot-cnt)&amp;<span class="number">1</span>?p-pow3[cnt]:pow3[cnt]; </span><br><span class="line">	&#125;</span><br><span class="line">	FWT(ANS,<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(ANS[<span class="number">0</span>].x<span class="number">-1</span>+p)%p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -249,9 +254,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/" rel="tag"># 概率期望</a>
-              <a href="/tags/%E8%AE%A1%E6%95%B0/" rel="tag"># 计数</a>
+              <a href="/tags/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0/" rel="tag"># 集合幂级数</a>
           </div>
 
         
@@ -260,13 +263,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/04/agc-038-e/" rel="prev" title="AGC038E 题解">
-      <i class="fa fa-chevron-left"></i> AGC038E 题解
+    <a href="/2020/09/25/agc-034-f/" rel="prev" title="AGC034F 题解">
+      <i class="fa fa-chevron-left"></i> AGC034F 题解
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/07/sx2020/" rel="next" title="省选 2020 补题记录">
-      省选 2020 补题记录 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
