@@ -1809,7 +1809,7 @@
 <p>定义 $\sigma$ 是 $f$ 的<strong>集合占位幂级数</strong>，如果任意 $[x^S]\sigma$ 是一个形式幂级数，且对于 $i&lt;|S|$ 有 $[z^ix^S]\sigma=0$，同时有 $[z^{|S|}x^S]\sigma=f_S$。</p>
 </blockquote>
 <p>我也知道乱改论文里的符号不太好，但是在右下角标里写太多东西就是让我很难受……</p>
-<p>显然对于 $i&gt;|S|$ 的 $[z^iz^S]\sigma$ 我们完全不关心。显然集合占位幂级数的如下定义的卷积</p>
+<p>显然对于 $i&gt;|S|$ 的 $[z^iz^S]\sigma$ 我们完全不关心。大概这就是占位罢（。显然集合占位幂级数的如下定义的卷积</p>
 <script type="math/tex; mode=display">\boxed{[z^rx^S]\delta=\sum_{L\cup R=S,p+q=r}[z^px^L]\sigma[z^qx^R]\tau}</script><p>就是子集卷积。</p>
 <p>实现方法就是之前提到的经典算法，不再赘述。</p>
 <p>接下来我们简称集合占位幂级数为集合幂级数。</p>
