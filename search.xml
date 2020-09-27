@@ -1796,4 +1796,30 @@
         <tag>集合幂级数</tag>
       </tags>
   </entry>
+  <entry>
+    <title>集合幂级数学习笔记</title>
+    <url>/2020/09/26/set-power-series/</url>
+    <content><![CDATA[<p>太劲爆了</p>
+<p>参考资料：论文集2015《集合幂级数的性质及其快速算法》吕凯风</p>
+<a id="more"></a>
+<h1 id="从子集卷积开始"><a href="#从子集卷积开始" class="headerlink" title="从子集卷积开始"></a>从子集卷积开始</h1><p>两个序列 $f,g$（当然，以集合为下标）的<strong>子集卷积</strong>为</p>
+<script type="math/tex; mode=display">h_S=\sum_{L\subseteq S}\sum_{R\subseteq S}[L\cap R=\varnothing][L\cup R=S]f_Lg_R</script><p>它是非常重要的集合卷积；事实上它可能是最重要的集合卷积。</p>
+<p>我们都知道它的经典 $O(n^22^n)$ 算法：考虑把 $f_{|L|,L}$ 和 $g_{|R|,R}$ 卷积到 $h_{|L|+|R|,L\cup R}$ 上，这样 $h_{|S|,S}$ 显然一定是两个不相交的 $L,R$ 卷出来的，否则第一维一定会比 $|S|$ 大。</p>
+<p>$(|L|,|R|)\rightarrow |L|+|R|$ 显然就是普通的序列卷积，这提示我们定义如下的</p>
+<h1 id="集合占位幂级数"><a href="#集合占位幂级数" class="headerlink" title="集合占位幂级数"></a>集合占位幂级数</h1><blockquote>
+<p>定义 $\sigma$ 是 $f$ 的<strong>集合占位幂级数</strong>，如果任意 $[x^S]\sigma$ 是一个形式幂级数，且对于 $i&lt;|S|$ 有 $[z^ix^S]\sigma=0$，同时有 $[z^{|S|}x^S]\sigma=f_S$。</p>
+</blockquote>
+<p>我也知道乱改论文里的符号不太好，但是在右下角标里写太多东西就是让我很难受……</p>
+<p>显然对于 $i&gt;|S|$ 的 $[z^iz^S]\sigma$ 我们完全不关心。显然集合占位幂级数的如下定义的卷积</p>
+<script type="math/tex; mode=display">\boxed{[z^rx^S]\delta=\sum_{L\cup R=S,p+q=r}[z^px^L]\sigma[z^qx^R]\tau}</script><p>就是子集卷积。</p>
+<p>实现方法就是之前提到的经典算法，不再赘述。</p>
+<p>接下来我们不再区分集合幂级数和集合占位幂级数。</p>
+<h1 id="集合幂级数求逆"><a href="#集合幂级数求逆" class="headerlink" title="集合幂级数求逆"></a>集合幂级数求逆</h1><p>此处指的是子集卷积意义下的逆。显然子集卷积意义下的乘法单位元就是 $z^{\varnothing}$。</p>
+<p>回想子集卷积，我们只是单纯地 $\sigma,\tau$ or_FWT 后把对应位置的集合幂级数相乘。从而有</p>
+<script type="math/tex; mode=display">[x^S]\text{FWT}(\sigma)\cdot[x^S]\text{FWT}(\sigma^{-1})=[x^S]\text{FWT}(x^{\varnothing})=1</script><p>于是我们把 $[x^S]\text{FWT}(\sigma)$（是一个形式幂级数）挨个求逆然后 $\text{FWT}^{-1}$ 回去即可。从而也可以看出集合幂级数 $\sigma$ 有逆当且仅当</p>
+<script type="math/tex; mode=display">[z^0x^{\varnothing}]\sigma\neq 0</script>]]></content>
+      <tags>
+        <tag>集合幂级数</tag>
+      </tags>
+  </entry>
 </search>
