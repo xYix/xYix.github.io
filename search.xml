@@ -1817,7 +1817,14 @@
 <h1 id="集合幂级数求逆"><a href="#集合幂级数求逆" class="headerlink" title="集合幂级数求逆"></a>集合幂级数求逆</h1><p>此处指的是子集卷积意义下的逆。显然子集卷积意义下的乘法单位元就是 $z^{\varnothing}$。</p>
 <p>回想子集卷积，我们只是单纯地 $\sigma,\tau$ or_FWT 后把对应位置的集合幂级数相乘。从而有</p>
 <script type="math/tex; mode=display">[x^S]\text{FWT}(\sigma)\cdot[x^S]\text{FWT}(\sigma^{-1})=[x^S]\text{FWT}(x^{\varnothing})=1</script><p>于是我们把 $[x^S]\text{FWT}(\sigma)$（是一个形式幂级数）挨个求逆然后 $\text{FWT}^{-1}$ 回去即可。从而也可以看出集合幂级数 $\sigma$ 有逆当且仅当</p>
-<script type="math/tex; mode=display">[z^0x^{\varnothing}]\sigma\neq 0</script>]]></content>
+<script type="math/tex; mode=display">[z^0x^{\varnothing}]\sigma\neq 0</script><p>由于 $\text{FWT}$ 一个集合幂级数是 $O(n^22^n)$ 的，所以时间复杂度瓶颈并不在求逆上，可以使用简单常数小的暴力 $O(n^2)$ 求逆。</p>
+<h1 id="集合幂级数-Exp-和-Ln"><a href="#集合幂级数-Exp-和-Ln" class="headerlink" title="集合幂级数 Exp 和 Ln"></a>集合幂级数 Exp 和 Ln</h1><p>考虑如下定义的 Exp：</p>
+<script type="math/tex; mode=display">\text{Exp}(\sigma)=\sum_{i}\dfrac{\sigma^i}{i!}</script><p>从而有</p>
+<script type="math/tex; mode=display">\begin{aligned}[x^S]\text{FWT Exp}(\sigma)&=\sum_{i}\dfrac{\Big([x^S]\text{FWT}(\sigma)\Big)^i}{i!}\end{aligned}</script><p>从而只需要 $\text{FWT}$ - 对每个形式幂级数求 $\text{Exp}$ - $\text{FWT}^{-1}$ 即可。</p>
+<p>$\text{Ln}$ 完全类似。</p>
+<p>同样，由于对形式幂级数的操作并非时间复杂度瓶颈，从而可以使用暴力 $O(n^2)$ 算法。</p>
+<h1 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h1><p>咕咕</p>
+<h1 id="劲爆应用"><a href="#劲爆应用" class="headerlink" title="劲爆应用"></a>劲爆应用</h1>]]></content>
       <tags>
         <tag>集合幂级数</tag>
       </tags>
