@@ -1833,11 +1833,13 @@
 <p>首先我们可以算出连通生成子图的集合幂级数 $F_0$。这个很显然，生成子图的集合幂级数 $\text{Ln}$ 一下即可。</p>
 <p>令 $F_i$ 为所有割点编号都大于等于 $i$ 的连通生成子图的集合幂级数。考虑从 $F_i$ 推到 $F_{i+1}$。也就是要去除所有 $i$ 是其割点的图：删去 $i$ 后变为多个 $F_{i}$（你可能会想不应该是 $F_{i+1}$ 吗，但是这些图本来就不含 $i$，$F_{i},F_{i+1}$ 不影响它们）的图。</p>
 <p>但是这怎么列式子呢，你可以看看大概长这样的一个图</p>
-<p><img src="https://xyix.github.io/images/spsln.png" alt=""></p>
-<div style="width:70%;margin:auto"><img src="\images\spsln.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/spsln.png" alt=""></div>
 
-<p>建议细品。理解这个完全基于点的容斥的处理边的方式是不太容易的。</p>
-]]></content>
+<p>于是我们得到</p>
+<script type="math/tex; mode=display">\dfrac{F_{i+1}'}{x^{\{i\}}}=\text{Ln}\dfrac{F_i'}{x^{\{i\}}}</script><p>其中 $F_i’$ 是强制把不包含 $i$ 的位置置 0 得到的集合幂级数。</p>
+<p>建议细品。理解这个完全基于点的容斥的处理边的方式是不太容易的。关注处理连通性的方式。</p>
+<p>复杂度 $O(2^nn^3)$。</p>
+<h2 id="边双连通生成子图计数"><a href="#边双连通生成子图计数" class="headerlink" title="边双连通生成子图计数"></a><a href="https://loj.ac/problem/6730" target="_blank" rel="noopener">边双连通生成子图计数</a></h2>]]></content>
       <tags>
         <tag>集合幂级数</tag>
       </tags>
