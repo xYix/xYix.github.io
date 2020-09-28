@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>51nod1222 题解</title>
+    <title>51nod1222 题解 - 最小公倍数计数</title>
     <url>/2020/06/15/51nod-1222/</url>
     <content><![CDATA[<p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1222" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -15,7 +15,7 @@
       </tags>
   </entry>
   <entry>
-    <title>SPOJ26073 题解</title>
+    <title>SPOJ26073 题解 - DIVCNT1</title>
     <url>/2020/07/20/SPOJ-26073/</url>
     <content><![CDATA[<p><a href="https://www.spoj.com/problems/DIVCNT1/" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -127,7 +127,7 @@
       </tags>
   </entry>
   <entry>
-    <title>AGC032F 题解</title>
+    <title>AGC032F 题解 - One Third</title>
     <url>/2020/09/13/agc-032-f/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc032/tasks/agc032_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT4521" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
@@ -157,7 +157,7 @@
       </tags>
   </entry>
   <entry>
-    <title>AGC016F 题解</title>
+    <title>AGC016F 题解 - Games on DAG</title>
     <url>/2020/09/12/agc-016-f/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2390" target="_blank" rel="noopener">翻译链接</a></p>
 <a id="more"></a>
@@ -173,7 +173,7 @@
       </tags>
   </entry>
   <entry>
-    <title>AGC016D 题解</title>
+    <title>AGC016D 题解 - XOR Replace</title>
     <url>/2020/09/13/agc-016-d/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_d" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2388" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
@@ -197,7 +197,7 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxN=<span class="number">200005</span>;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="keyword">int</span> A[maxN],B[maxN];<span class="keyword">int</span> *d;</span><br><span class="line"><span class="keyword">int</span> idA[maxN],idB[maxN];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;<span class="keyword">return</span> d[u]&lt;d[v];&#125;</span><br><span class="line"><span class="keyword">int</span> mA[maxN],mB[maxN];</span><br><span class="line"><span class="keyword">int</span> fa[maxN],siz[maxN];<span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> (fa[x]==x)?x:fa[x]=find(fa[x]);&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;x=find(x),y=find(y);<span class="keyword">if</span>(x==y) <span class="keyword">return</span>;fa[x]=y,siz[y]+=siz[x];&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;A[i]),A[<span class="number">0</span>]^=A[i],idA[i]=i;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;B[i]),B[<span class="number">0</span>]^=B[i],idB[i]=i;</span><br><span class="line">	d=A;sort(idA,idA+N+<span class="number">1</span>,cmp);d=B;sort(idB,idB+N+<span class="number">1</span>,cmp);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=N;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">0</span>) mA[idA[i]]=<span class="number">1</span>; <span class="keyword">else</span> mA[idA[i]]=mA[idA[i<span class="number">-1</span>]]+<span class="number">1</span>-(A[idA[i]]==A[idA[i<span class="number">-1</span>]]);</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">0</span>) mB[idB[i]]=<span class="number">1</span>; <span class="keyword">else</span> mB[idB[i]]=mB[idB[i<span class="number">-1</span>]]+<span class="number">1</span>-(B[idB[i]]==B[idB[i<span class="number">-1</span>]]);</span><br><span class="line">		<span class="keyword">if</span>(A[idA[i]]!=B[idB[i]])&#123;<span class="built_in">printf</span>(<span class="string">"-1\n"</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N+<span class="number">1</span>;i++) fa[i]=i,siz[i]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=N;i++) merge(mA[i],mB[i]),ans+=(mA[i]!=mB[i]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N+<span class="number">1</span>;i++) <span class="keyword">if</span>(fa[i]==i&amp;&amp;siz[i]&gt;=<span class="number">2</span>) ans+=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(siz[find(mA[<span class="number">0</span>])]!=<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(mA[<span class="number">0</span>]==mB[<span class="number">0</span>]) ans-=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> ans-=<span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title>BZOJ3684 题解</title>
+    <title>BZOJ3684 题解 - 大朋友和多叉树</title>
     <url>/2020/09/07/bzoj-3684/</url>
     <content><![CDATA[<p><a href="https://darkbzoj.tk/problem/3684" target="_blank" rel="noopener">$\color{white}\colorbox{black}{黑暗的题目链接}$</a></p>
 <a id="more"></a>
@@ -216,7 +216,7 @@
       </tags>
   </entry>
   <entry>
-    <title>AGC038E 题解</title>
+    <title>AGC038E 题解 - Gachapon</title>
     <url>/2020/09/04/agc-038-e/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc038/tasks/agc038_e" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT5202" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
@@ -358,7 +358,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CF1305G 题解</title>
+    <title>CF1305G 题解 - Kuroni and Antihype</title>
     <url>/2020/09/11/cf-1305-g/</url>
     <content><![CDATA[<p><a href="https://codeforces.com/problemset/problem/1305/G" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/CF1305G" target="_blank" rel="noopener">翻译链接</a></p>
 <a id="more"></a>
@@ -439,7 +439,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CF1286F 题解</title>
+    <title>CF1286F 题解 - Harry the Potter</title>
     <url>/2020/09/10/cf-1286-f/</url>
     <content><![CDATA[<p><a href="https://codeforces.com/problemset/problem/1286/F" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/CF1286F" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
@@ -657,7 +657,7 @@
       </tags>
   </entry>
   <entry>
-    <title>loj#6077 题解</title>
+    <title>loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对</title>
     <url>/2020/09/14/loj-6077/</url>
     <content><![CDATA[<p><a href="https://loj.ac/problem/6077" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -677,7 +677,7 @@
       </tags>
   </entry>
   <entry>
-    <title>loj#6275 题解</title>
+    <title>loj#6275 题解 - 棋盘</title>
     <url>/2020/06/18/loj-6275/</url>
     <content><![CDATA[<p><a href="https://loj.ac/problem/6275" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -696,7 +696,7 @@
       </tags>
   </entry>
   <entry>
-    <title>loj#6054 题解</title>
+    <title>loj#6055 题解 - 「from CommonAnts」一道数学题</title>
     <url>/2020/09/08/loj-6054/</url>
     <content><![CDATA[<p><a href="https://loj.ac/problem/6054" target="_blank" rel="noopener">题目链接</a>，<a href="https://loj.ac/problem/6055" target="_blank" rel="noopener">加强版链接</a></p>
 <a id="more"></a>
@@ -718,7 +718,7 @@
       </tags>
   </entry>
   <entry>
-    <title>luoguP5155 题解</title>
+    <title>luoguP5155 题解 - [USACO18DEC]Balance Beam P</title>
     <url>/2020/09/08/luogu-5155/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5155" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -787,7 +787,7 @@
       </tags>
   </entry>
   <entry>
-    <title>luoguP4500 题解</title>
+    <title>luoguP4500 题解 - [ZJOI2018]树</title>
     <url>/2020/09/08/luogu-4500/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P4500" target="_blank" rel="noopener">题目链接</a>。究极毒瘤群论计数。</p>
 <a id="more"></a>
@@ -932,7 +932,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#372 题解</title>
+    <title>uoj#372 题解 - 【UR \#17】滑稽树前做游戏</title>
     <url>/2020/09/06/uoj-372/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -1344,7 +1344,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#420 题解</title>
+    <title>uoj#420 题解 - 【集训队作业2018】矩形</title>
     <url>/2020/06/12/uoj-420/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/problem/420" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -1761,7 +1761,7 @@
       </tags>
   </entry>
   <entry>
-    <title>AGC034F 题解</title>
+    <title>AGC034F 题解 - RNG and XOR</title>
     <url>/2020/09/25/agc-034-f/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc034/tasks/agc034_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT4996" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
@@ -1783,9 +1783,9 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#310 题解</title>
+    <title>uoj#310 题解 - 【UNR \#2】黎明前的巧克力</title>
     <url>/2020/09/26/uoj-310/</url>
-    <content><![CDATA[<p><a href="https://yhx-12243.github.io/OI-transit/records/uoj310.html" target="_blank" rel="noopener">题目链接</a></p>
+    <content><![CDATA[<p><a href="https://uoj.ac/problem/310" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>简要题意：</p>
 <blockquote>
@@ -1878,5 +1878,12 @@
         <tag>集合幂级数</tag>
         <tag>$\color{red}精品$</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>luoguP5469 题解 - [NOI2019]机器人</title>
+    <url>/2020/09/28/luogu-5469/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5469" target="_blank" rel="noopener">题目链接</a></p>
+<a id="more"></a>
+]]></content>
   </entry>
 </search>
