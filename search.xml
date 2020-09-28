@@ -1819,7 +1819,7 @@
 <script type="math/tex; mode=display">[z^0x^{\varnothing}]\sigma\neq 0</script><p>由于 $\text{FWT}$ 一个集合幂级数是 $O(n^22^n)$ 的，所以时间复杂度瓶颈并不在求逆上，可以使用简单常数小的暴力 $O(n^2)$ 求逆。</p>
 <h1 id="集合幂级数-Exp-和-Ln"><a href="#集合幂级数-Exp-和-Ln" class="headerlink" title="集合幂级数 Exp 和 Ln"></a>集合幂级数 Exp 和 Ln</h1><p>考虑如下定义的 Exp：</p>
 <script type="math/tex; mode=display">\text{Exp}(\sigma)=\sum_{i}\dfrac{\sigma^i}{i!}</script><p>从而有</p>
-<script type="math/tex; mode=display">\begin{aligned}[x^S]\text{FWT Exp}(\sigma)&=\sum_{i}\dfrac{\Big([x^S]\text{FWT}(\sigma)\Big)^i}{i!}\end{aligned}</script><p>某种意义上说：$\text{FWT}\circ\text{Exp}=\text{Exp}\circ\text{FWT}$。</p>
+<script type="math/tex; mode=display">\begin{aligned} \left[x^S\right] \text{FWT Exp}(\sigma)&=\sum_{i}\dfrac{\Big([x^S]\text{FWT}(\sigma)\Big)^i}{i!}\end{aligned}</script><p>某种意义上说：$\text{FWT}\circ\text{Exp}=\text{Exp}\circ\text{FWT}$。</p>
 <p>从而只需要 $\text{FWT}$ - 对每个形式幂级数求 $\text{Exp}$ - $\text{FWT}^{-1}$ 即可。</p>
 <p>$\text{Ln}$ 完全类似。</p>
 <p>同样，由于对形式幂级数的操作并非时间复杂度瓶颈，从而可以使用暴力 $O(n^2)$ 算法。</p>
