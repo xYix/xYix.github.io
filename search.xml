@@ -932,7 +932,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#372 题解 - 【UR \#17】滑稽树前做游戏</title>
+    <title>uoj#372 题解 - 【UR</title>
     <url>/2020/09/06/uoj-372/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -1783,7 +1783,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#310 题解 - 【UNR \#2】黎明前的巧克力</title>
+    <title>uoj#310 题解 - 【UNR</title>
     <url>/2020/09/26/uoj-310/</url>
     <content><![CDATA[<p><a href="https://uoj.ac/problem/310" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -1884,6 +1884,10 @@
     <url>/2020/09/28/luogu-5469/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5469" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
+<p>经典操作：先枚举最高同时最右的柱子所在位置。它右边的 <code>P</code> 机器人过不去，左边的 <code>Q</code> 机器人过不来，于是可以得到 DP。而由于就在这根柱子上释放的 <code>P,Q</code> 机器人都一定会移动到底，从而合法的所在位置很少，据说 $n=300$ 时只有 $2000$ 个区间可行，从而得到一个大力 DP 的 $O(N^2\text{val})$ 算法。</p>
+<p>考虑测试点 $11,12$。我们发现 <code>f[l][r][x]</code> 表示区间为 $[l,r]$，最大值为 $x$ 时的答案是一个关于 $x$ 的 $r-l+1$ 次多项式。</p>
+<p>重新审视转移方程</p>
+<script type="math/tex; mode=display">f_{l,r,x}=\sum_{|r+l-2i|\le 2}\left(\sum_{y\le x}f_{l,i-1,y}\right)\left(\sum_{y<x}f_{i+1,r,y}\right)</script><p>前缀和不好处理……吗？</p>
 ]]></content>
   </entry>
 </search>
