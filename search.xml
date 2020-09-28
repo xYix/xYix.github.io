@@ -1839,17 +1839,18 @@
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/spsln.png" alt=""></div>
 
 <p>于是我们得到</p>
-<script type="math/tex; mode=display">\dfrac{F_{i+1}'}{x^{\{i\}}}=\text{Ln}\dfrac{F_i'}{x^{\{i\}}}</script><p>其中 $F_i’$ 是强制把不包含 $i$ 的位置置 0 得到的集合幂级数。</p>
+<script type="math/tex; mode=display">\dfrac{F_{i+1}'}{zx^{\{i\}}}=\text{Ln}\dfrac{F_i'}{zx^{\{i\}}}</script><p>其中 $F_i’$ 是强制把不包含 $i$ 的位置置 0 得到的集合幂级数。</p>
 <blockquote>
 <p>建议细品。理解这个完全基于点的容斥的处理边的方式是不太容易的。关注处理连通性的方式：这里用 $i$ 把连通块“缝”了起来。上面的变换也和 Exp 有了很大差别，不如称为“连通组合”？</p>
 </blockquote>
 <p>复杂度 $O(2^nn^3)$。</p>
+<h3 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h3><p><img src="https://xyix.github.io/images/sbxyx2.png" alt=""></p>
 <h2 id="边双连通生成子图计数"><a href="#边双连通生成子图计数" class="headerlink" title="边双连通生成子图计数"></a><a href="https://loj.ac/problem/6730" target="_blank" rel="noopener">边双连通生成子图计数</a></h2><p>啊这，边的限制……这就很难搞了。我们必须想个办法把它变成点。</p>
 <p>边双的每一条边都包含在至少一个环里。环意味着什么？点双连通分量。</p>
 <p>也就是说，每一个有边的点对都包含在一个更大的点双里。<strong>边双连通图就是没有大小为 2 的点双连通分量的图</strong>。</p>
 <p>注意大小为 2 的点双连通分量是不可（按上面的方式）拆解的。</p>
 <p>我们考虑先求出点双的集合幂级数，然后挖掉所有的大小为 2 的位置，记为 $G_0$，再一步步把它“组装”回去。令 $G_i$ 是允许编号小于等于 $i$ 的节点成为其割点的答案。如果你真的认真考虑过了上面两个问题，你应该能轻松写出</p>
-<script type="math/tex; mode=display">\dfrac{F_{i+1}'}{x^{\{i\}}}=\text{Exp}\dfrac{F_i'}{x^{\{i\}}}</script><p>复杂度 $O(2^nn^3)$。</p>
+<script type="math/tex; mode=display">\dfrac{F_{i+1}'}{zx^{\{i\}}}=\text{Exp}\dfrac{F_i'}{zx^{\{i\}}}</script><p>复杂度 $O(2^nn^3)$。</p>
 <h2 id="生成仙人掌计数"><a href="#生成仙人掌计数" class="headerlink" title="生成仙人掌计数"></a>生成仙人掌计数</h2>]]></content>
       <tags>
         <tag>集合幂级数</tag>
