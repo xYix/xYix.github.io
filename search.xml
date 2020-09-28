@@ -932,7 +932,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#372 题解 - 【UR</title>
+    <title>uoj#372 题解 - 【UR#17】滑稽树前做游戏</title>
     <url>/2020/09/06/uoj-372/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -1783,7 +1783,7 @@
       </tags>
   </entry>
   <entry>
-    <title>uoj#310 题解 - 【UNR</title>
+    <title>uoj#310 题解 - 【UNR#2】黎明前的巧克力</title>
     <url>/2020/09/26/uoj-310/</url>
     <content><![CDATA[<p><a href="https://uoj.ac/problem/310" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
@@ -1889,5 +1889,9 @@
 <p>重新审视转移方程</p>
 <script type="math/tex; mode=display">f_{l,r,x}=\sum_{|r+l-2i|\le 2}\left(\sum_{y\le x}f_{l,i-1,y}\right)\left(\sum_{y<x}f_{i+1,r,y}\right)</script><p>前缀和不好处理……吗？</p>
 ]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>下降幂</tag>
+      </tags>
   </entry>
 </search>

@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xyix.github.io/2020/09/06/uoj-372/</loc>
+    <loc>http://xyix.github.io/2020/09/26/uoj-310/</loc>
     
     <lastmod>2020-09-28</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xyix.github.io/2020/09/26/uoj-310/</loc>
+    <loc>http://xyix.github.io/2020/09/06/uoj-372/</loc>
     
     <lastmod>2020-09-28</lastmod>
     
@@ -495,6 +495,13 @@
   
   <url>
     <loc>http://xyix.github.io/tags/color-green-%E5%92%95%E5%92%95/</loc>
+    <lastmod>2020-09-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xyix.github.io/tags/%E4%B8%8B%E9%99%8D%E5%B9%82/</loc>
     <lastmod>2020-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
