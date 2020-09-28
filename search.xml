@@ -1866,7 +1866,8 @@
 <p>我们考虑先求出点双的集合幂级数，然后挖掉所有的大小为 2 的位置，记为 $G_0$，再一步步把它“组装”回去。令 $G_i$ 是允许编号小于等于 $i$ 的节点成为其割点的答案。如果你真的认真考虑过了上面两个问题，你应该能轻松写出</p>
 <script type="math/tex; mode=display">\dfrac{G_{i+1}'}{zx^{\{i\}}}=\text{Exp}\dfrac{G_i'}{zx^{\{i\}}}</script><p>复杂度 $O(2^nn^3)$。</p>
 <h3 id="彩蛋-1"><a href="#彩蛋-1" class="headerlink" title="彩蛋"></a>彩蛋</h3><p><img src="https://xyix.github.io/images/sbxyx3.png" alt=""></p>
-<h2 id="生成仙人掌计数"><a href="#生成仙人掌计数" class="headerlink" title="生成仙人掌计数"></a>生成仙人掌计数</h2>]]></content>
+<h2 id="生成仙人掌计数"><a href="#生成仙人掌计数" class="headerlink" title="生成仙人掌计数"></a>生成仙人掌计数</h2><p>不会。</p>
+<h2 id="Tutte-多项式"><a href="#Tutte-多项式" class="headerlink" title="Tutte 多项式"></a><a href="https://loj.ac/problem/155" target="_blank" rel="noopener">Tutte 多项式</a></h2>]]></content>
       <tags>
         <tag>集合幂级数</tag>
         <tag>$\color{red}精品$</tag>
