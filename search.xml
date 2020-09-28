@@ -1867,7 +1867,13 @@
 <script type="math/tex; mode=display">\dfrac{G_{i+1}'}{zx^{\{i\}}}=\text{Exp}\dfrac{G_i'}{zx^{\{i\}}}</script><p>复杂度 $O(2^nn^3)$。</p>
 <h3 id="彩蛋-1"><a href="#彩蛋-1" class="headerlink" title="彩蛋"></a>彩蛋</h3><p><img src="https://xyix.github.io/images/sbxyx3.png" alt=""></p>
 <h2 id="生成仙人掌计数"><a href="#生成仙人掌计数" class="headerlink" title="生成仙人掌计数"></a>生成仙人掌计数</h2><p>不会。</p>
-<h2 id="Tutte-多项式"><a href="#Tutte-多项式" class="headerlink" title="Tutte 多项式"></a><a href="https://loj.ac/problem/155" target="_blank" rel="noopener">Tutte 多项式</a></h2>]]></content>
+<h2 id="Tutte-多项式"><a href="#Tutte-多项式" class="headerlink" title="Tutte 多项式"></a><a href="https://loj.ac/problem/155" target="_blank" rel="noopener">Tutte 多项式</a></h2><p>一个无向图 $G=(V,E)$ 的 Tutte 多项式定义为</p>
+<script type="math/tex; mode=display">T_G(x,y)=\sum_{A\subseteq E}(x-1)^{k(A)-k(E)}(y-1)^{k(A)+|A|-|V|}</script><p>我们先考虑计算连通的 $A$，之后再 Exp 上去。</p>
+<p>设 $f_S$ 是所有使 $S$ 连通的 $A$ 的 $(y-1)^{1+|A|-|S|}$ 之和。考虑加一个节点 $i$。设 $S,i$ 之间的边数为 $G(S,i)$。则如果加入 $i$ 则应该乘的是</p>
+<script type="math/tex; mode=display">\sum_{j=1}^{G(S,i)}{G(S,i)\choose j}(y-1)^{j-1}</script><script type="math/tex; mode=display">\dfrac{y^{G(S,i)}-1}{y-1}</script><p>可以发现如果新的连通块是由多个 $S$ 拼成，那么只需要对每个 $S$ 分别乘这个东西就好了。那么暴力把 $n$ 个 $i$ 全都加进去就做完了。</p>
+<p>注意 $x=1$ 的情况。</p>
+<h3 id="彩蛋-2"><a href="#彩蛋-2" class="headerlink" title="彩蛋"></a>彩蛋</h3><p><img src="https://xyix.github.io/images/sbxyx4.png" alt=""></p>
+]]></content>
       <tags>
         <tag>集合幂级数</tag>
         <tag>$\color{red}精品$</tag>
