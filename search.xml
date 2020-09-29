@@ -1879,11 +1879,16 @@
 <li><p>和根节点在一个环。那么这个子树是一个仙人掌，加上 $i$ 也必须还是一个仙人掌。</p>
 </li>
 </ul>
-<p><img src="https://xyix.github.io/images/cactus.png" alt=""></p>
 <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/cactus.png" alt=""></div>
 
-<p>那么我们设 $[x^s]S$ 是点集为 $s\cup\{i\}$ 的仙人掌，而且删掉 $i$ 还是仙人掌的数量，从而答案就是</p>
-<script type="math/tex; mode=display">zx^{\{i\}}\text{Exp}(S)</script>]]></content>
+<p>那么我们设 $[x^s]Caccac$ 是点集为 $s\cup\{i\}$ 的仙人掌，而且删掉 $i$ 还是仙人掌的数量，从而答案就是</p>
+<script type="math/tex; mode=display">zx^{\{i\}}\text{Exp}(Caccac)</script><p><a href="https://xyix.github.io/2020/06/09/cactus-counting/">经验</a>告诉我们应该分别讨论单纯的点和环两种情况。设前一种为 $S_v$：$v$ 表示儿子为 $v$，后一种为 $C_v$：$v$ 表示 $i$ 在环上的“下一个点”是 $v$，显然 $C$ 会因此算两遍。从而有</p>
+<script type="math/tex; mode=display">Caccac=\sum S+\dfrac 1 2\sum C</script><p>$[x^s]S_v$ 非常的简单，它只要求 $(i,v)$ 有边，而且 $s$ 是一个仙人掌。</p>
+<p>接下来考虑 $C$。$C$ 是由一串仙人掌串在一个环上，不妨修改 $C_v$ 的定义：不再要求 $(v,i)$ 有边，我们只是简单地把仙人掌串到了 $v$ 处。也不妨利用一下 $S$，它也不再要求 $(v,i)$ 有边。最后统计的时候强行要求即可。</p>
+<p>于是可以写出</p>
+<script type="math/tex; mode=display">C_v=S_v\sum_{(u,v)}C_u</script><p>初值为 $C_i=x^{\varnothing}$。考虑</p>
+<script type="math/tex; mode=display">\text{FWT}(C_v)=\text{FWT}(S_v)\times\sum_{(u,v)}\text{FWT}(C_u)</script><p>于是从较低的 $z^i$ 推上去即可。</p>
+]]></content>
       <tags>
         <tag>集合幂级数</tag>
         <tag>$\color{red}精品$</tag>
