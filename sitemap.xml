@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>http://xyix.github.io/2020/09/28/luogu-5469/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://xyix.github.io/2020/09/26/uoj-310/</loc>
     
     <lastmod>2020-09-28</lastmod>
@@ -229,6 +222,13 @@
     <loc>http://xyix.github.io/modai/index.html</loc>
     
     <lastmod>2020-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xyix.github.io/2020/09/25/uoj-272/</loc>
+    
+    <lastmod>2020-09-25</lastmod>
     
   </url>
   
@@ -495,13 +495,6 @@
   
   <url>
     <loc>http://xyix.github.io/tags/color-green-%E5%92%95%E5%92%95/</loc>
-    <lastmod>2020-09-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xyix.github.io/tags/%E4%B8%8B%E9%99%8D%E5%B9%82/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
