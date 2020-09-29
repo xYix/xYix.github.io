@@ -1891,6 +1891,8 @@
 <p>于是可以写出</p>
 <script type="math/tex; mode=display">C_v=S_v\sum_{(u,v)}C_u</script><p>初值为 $C_i=x^{\varnothing}$。考虑</p>
 <script type="math/tex; mode=display">\text{FWT}(C_v)=\text{FWT}(S_v)\times\sum_{(u,v)}\text{FWT}(C_u)</script><p>于是从较低的 $z^i$ 推上去即可。</p>
+<p>考虑一下时间复杂度。$S$ 显然不是瓶颈，计算 $C$ 的复杂度为 $O(nm2^n)=O(n^32^n)$。所以最终时间复杂度为</p>
+<script type="math/tex; mode=display">\sum_{i=1}^nO(n^32^n)</script><p>显然相邻两项比值大于 $2$，最终复杂度为 $O(n^32^n)$。你可能会很惊讶，这玩意不是 $1.5\text{e}9$ 的吗，是怎么过的呢，小编也很惊讶，但事实就是这样。</p>
 ]]></content>
       <tags>
         <tag>集合幂级数</tag>
