@@ -1892,6 +1892,8 @@
 <script type="math/tex; mode=display">C_v=S_v\sum_{(u,v)}C_u</script><p>初值为 $C_i=x^{\varnothing}$。考虑</p>
 <script type="math/tex; mode=display">\text{FWT}(C_v)=\text{FWT}(S_v)\times\sum_{(u,v)}\text{FWT}(C_u)</script><p>于是从较低的 $z^i$ 推上去即可。时间复杂度为 $\sum_{i=1}^nO(n^32^n)$。</p>
 <h3 id="彩蛋-3"><a href="#彩蛋-3" class="headerlink" title="彩蛋"></a>彩蛋</h3><p><img src="https://xyix.github.io/images/sbxyx5.png" alt=""></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>是不是什么图计数题都可以搬到集合幂级数上啊（</p>
+<p>生 成 烷 烃（错乱）</p>
 ]]></content>
       <tags>
         <tag>集合幂级数</tag>
