@@ -9,6 +9,7 @@ div{
     position: absolute;
     padding: 0;
     margin: 0 auto;
+    border: 20px;
 }
 .sidebar{
     width: 240px;
