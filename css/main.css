@@ -2703,3 +2703,57 @@ mjx-container + br {
     margin: 8px 0 0;
   }
 }
+
+/*modified gitalk*/
+/* gitalk.css | https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css */
+
+.gt-container .gt-btn {
+  border: 1px solid #36C48B !important;
+  background-color: #36C48B !important;
+}
+
+.gt-container .gt-btn-preview {
+  color: #ffffff !important;
+}
+
+.gt-container .gt-header-controls-tip {
+  color: #36C48B !important;
+}
+
+.gt-container .gt-svg svg {
+  fill: #36C48B !important;
+}
+
+.gt-container a:hover {
+  color: #81a60d;
+  border-color: #81a60d;
+}
+
+.gt-container .gt-link {
+  border-bottom: 1px dotted #36C48B !important;
+}
+
+.gt-container a {
+  color: #36C48B !important;
+}
+
+.gt-container .gt-popup .gt-action.is--active::before {
+  background: #36C48B !important;
+}
+
+.gt-container .gt-btn-preview:hover {
+  border-color: #81a60d;
+}
+
+.gt-container .gt-user .is--poping .gt-ico svg {
+  fill: #36C48B !important;
+}
+
+.gt-container .gt-btn-public:hover {
+  background-color: #81a60d;
+  border-color: #81a60d;
+}
+
+.gt-container .gt-comment-username {
+  color: #36C48B !important;
+}
