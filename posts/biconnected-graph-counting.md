@@ -23,21 +23,29 @@ tags:
 
 对于一个无向连通图，枚举根节点所在边双连通分量的大小。剩下的部分是一个个无向连通图，挂在根边双联通分量的任意一个点上，于是有
 
-$$F(x)=\sum_{i=1}^{\infty}\dfrac{g_ix^i\exp(iF(x))}{i!}=G(x\exp F(x))$$
+$$
+F(x)=\sum_{i=1}^{\infty}\dfrac{g_ix^i\exp(iF(x))}{i!}=G(x\exp F(x))
+$$
 
 这里出现了一个复合，难以处理，需要请出一个新的工具：
 
 # 拉格朗日反演
 
-$$[x^n]A(B^{-1}(x))=\dfrac 1n[x^{n-1}]A'(x)\left(\dfrac{x}{B(x)}\right)^n$$
+$$
+[x^n]A(B^{-1}(x))=\dfrac 1n[x^{n-1}]A'(x)\left(\dfrac{x}{B(x)}\right)^n
+$$
 
 回到**边双连通图计数**的问题上。
 
 设 $H(x)=x\exp F(x)$，则
 
-$$F(x)=G(H(x))$$
+$$
+F(x)=G(H(x))
+$$
 
-$$[x^n]F(H^{-1}(x))=\dfrac 1n[x^{n-1}]\dfrac{F'(x)}{\exp nF(x)}=[x^n]G(x)$$
+$$
+[x^n]F(H^{-1}(x))=\dfrac 1n[x^{n-1}]\dfrac{F'(x)}{\exp nF(x)}=[x^n]G(x)
+$$
 
 # 有标号点双连通图计数
 
@@ -45,16 +53,26 @@ $$[x^n]F(H^{-1}(x))=\dfrac 1n[x^{n-1}]\dfrac{F'(x)}{\exp nF(x)}=[x^n]G(x)$$
 
 枚举点双大小 $i+1$，显然它的 EGF 是
 
-$$\sum_{i=1}^{\infty}g_{i+1}\dfrac{F(x)^i}{i!}$$
+$$
+\sum_{i=1}^{\infty}g_{i+1}\dfrac{F(x)^i}{i!}
+$$
 
 这里 $G(x)$ 移了一位，是 $\sum_{i=1}^\infty g_{i+1}\dfrac{x^i}{i!}$。有
 
-$$F(x)=x\exp G(F(x))$$
+$$
+F(x)=x\exp G(F(x))
+$$
 
-$$\ln\dfrac{F(x)}{x}=G(F(x))$$
+$$
+\ln\dfrac{F(x)}{x}=G(F(x))
+$$
 
-$$[x^n]\ln\dfrac{F(F^{-1}(x))}{F^{-1}(x)}=\dfrac{1}{n}[x^{n-1}]\left(\ln\dfrac{F(x)}{x}\right)'\left(\dfrac{x}{F(x)}\right)^n=[x^n]G(x)$$
+$$
+[x^n]\ln\dfrac{F(F^{-1}(x))}{F^{-1}(x)}=\dfrac{1}{n}[x^{n-1}]\left(\ln\dfrac{F(x)}{x}\right)'\left(\dfrac{x}{F(x)}\right)^n=[x^n]G(x)
+$$
 
 设 $H(x)=\dfrac{F(x)}x$，则有
 
-$$[x^n]G(x)=\dfrac{1}{n}[x^{n-1}]\dfrac{H'(x)}{H^{n+1}(x)}$$
+$$
+[x^n]G(x)=\dfrac{1}{n}[x^{n-1}]\dfrac{H'(x)}{H^{n+1}(x)}
+$$

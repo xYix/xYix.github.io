@@ -18,10 +18,16 @@ tags:
 
 所以有：
 
-$$F(x)=x\text{exp}\left(\dfrac{F(x)}2+\sum_{i=1}^{\infty}\dfrac{F^i(x)}2\right)$$
+$$
+F(x)=x\text{exp}\left(\dfrac{F(x)}2+\sum_{i=1}^{\infty}\dfrac{F^i(x)}2\right)
+$$
 
-$$F(x)=x\text{exp}\left(\dfrac{F(x)}2+\dfrac{1}{2-2F(x)}-\dfrac 1 2\right)$$
+$$
+F(x)=x\text{exp}\left(\dfrac{F(x)}2+\dfrac{1}{2-2F(x)}-\dfrac 1 2\right)
+$$
 
-$$F(x)=x\text{exp}\left(\dfrac{-F^2(x)+2F(x)}{2-2F(x)}\right)$$
+$$
+F(x)=x\text{exp}\left(\dfrac{-F^2(x)+2F(x)}{2-2F(x)}\right)
+$$
 
 构造函数 $A(X)=X\exp(\dfrac{-X^2+2X}{2-2X})-X$，多项式牛迭即可。
