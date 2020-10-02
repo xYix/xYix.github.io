@@ -10,7 +10,7 @@ div{
     padding: 0;
     margin: 0 auto;
 }
-.sider-bar{
+.siderbar{
     width: 240px;
     opacity: 0.85;
 }
@@ -21,6 +21,9 @@ div{
     position: fixed;
     background-color: #36C48B;
     left: 0;top: 0;
+}
+.lil-p{
+    font-size: smaller;
 }
 body{
     
