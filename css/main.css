@@ -52,7 +52,7 @@ a:hover{
     float: left;
     opacity: 0.85;
     margin: auto 20px;
-    width: calc(100% - 200px);
+    width: calc(100% - 400px);
     left: 10px;
     position: relative;
 }
