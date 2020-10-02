@@ -69,5 +69,6 @@ a:hover{
 .bodybody{
 }
 .title{
+    position: relative;
     left: 50px;
 }
