@@ -16,8 +16,9 @@ div{
 .cover{
     width: 2000px;
     height: 20000px;
-    position: absolute;
+    position: fixed;
     background-color: #36C48B;
+    left: 0;top: 0;
 }
 body{
     
