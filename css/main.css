@@ -1,6 +1,15 @@
 div{
     display: block;
 }
+.h1{
+    color: #555555;
+}
+.p{
+    color: #555555;
+}
+.a{
+    color: #1A5A40;
+}
 .content-block{
     background: white;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
