@@ -42,6 +42,7 @@ a{
 }
 .post-block{
     position: relative;
+    opacity: 0.85;
 }
 body{
     
