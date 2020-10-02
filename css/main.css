@@ -7,8 +7,12 @@ div{
                 0 1px 5px 0 rgba(0,0,0,0.12);
     position: absolute;
     padding: 0;
+    margin: 0 auto;
 }
 .sider-bar{
     width: 240px;
     opacity: 0.85;
+}
+body{
+    background-color: #36C48B;
 }
