@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>51nod1222 题解 - 最小公倍数计数</title>
-    <url>/blog/2020/06/15/51nod-1222/</url>
+    <url>/2020/06/15/51nod-1222/</url>
     <content><![CDATA[<p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1222" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>（和原题意略不一样，反正差不多）求</p>
@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <title>SPOJ26073 题解 - DIVCNT1</title>
-    <url>/blog/2020/07/20/SPOJ-26073/</url>
+    <url>/2020/07/20/SPOJ-26073/</url>
     <content><![CDATA[<p><a href="https://www.spoj.com/problems/DIVCNT1/" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>首先把式子转化为</p>
@@ -92,7 +92,7 @@
   </entry>
   <entry>
     <title>ZJOI2020 爆零记</title>
-    <url>/blog/2020/06/19/ZJOI2020-baolingji/</url>
+    <url>/2020/06/19/ZJOI2020-baolingji/</url>
     <content><![CDATA[<p>别D了别D了，孩子都要被D傻了</p>
 <a id="more"></a>
 <h1 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h1><p>要爆零了！（绝望）</p>
@@ -128,7 +128,7 @@
   </entry>
   <entry>
     <title>AGC032F 题解 - One Third</title>
-    <url>/blog/2020/09/13/agc-032-f/</url>
+    <url>/2020/09/13/agc-032-f/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc032/tasks/agc032_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT4521" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
 <p>考虑辐角，要求的就是 $\min|a-b-\dfrac{2\pi}{3}|$，也就是 $a$ 和 $b+\dfrac{2\pi}3$ 的距离。</p>
@@ -158,7 +158,7 @@
   </entry>
   <entry>
     <title>AGC016F 题解 - Games on DAG</title>
-    <url>/blog/2020/09/12/agc-016-f/</url>
+    <url>/2020/09/12/agc-016-f/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2390" target="_blank" rel="noopener">翻译链接</a></p>
 <a id="more"></a>
 <p>博弈论有益身心健康~</p>
@@ -174,7 +174,7 @@
   </entry>
   <entry>
     <title>AGC016D 题解 - XOR Replace</title>
-    <url>/blog/2020/09/13/agc-016-d/</url>
+    <url>/2020/09/13/agc-016-d/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc016/tasks/agc016_d" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT2388" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
 <p>经典 trick：往序列里放一个 $a_0=\bigoplus a_i$，那么对 $a_i$ 操作其实就是交换 $a_0$ 和 $a_i$。</p>
@@ -198,7 +198,7 @@
   </entry>
   <entry>
     <title>BZOJ3684 题解 - 大朋友和多叉树</title>
-    <url>/blog/2020/09/07/bzoj-3684/</url>
+    <url>/2020/09/07/bzoj-3684/</url>
     <content><![CDATA[<p><a href="https://darkbzoj.tk/problem/3684" target="_blank" rel="noopener">$\color{white}\colorbox{black}{黑暗的题目链接}$</a></p>
 <a id="more"></a>
 <p>显然有</p>
@@ -217,7 +217,7 @@
   </entry>
   <entry>
     <title>AGC038E 题解 - Gachapon</title>
-    <url>/blog/2020/09/04/agc-038-e/</url>
+    <url>/2020/09/04/agc-038-e/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc038/tasks/agc038_e" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT5202" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
 <p>虽然这个容斥非常诱人，但是不管容斥硬上也是可以的。</p>
@@ -240,7 +240,7 @@
   </entry>
   <entry>
     <title>有标号仙人掌计数</title>
-    <url>/blog/2020/06/09/cactus-counting/</url>
+    <url>/2020/06/09/cactus-counting/</url>
     <content><![CDATA[<p>每条边最多仅在一个环上的有标号无向图个数。</p>
 <a id="more"></a>
 <p>显然有标号无根图（相当于钦定根为 $1$）的数量是对应的有标号有根图的 $\frac 1 n$，所以下面我们只讨论有根仙人掌。</p>
@@ -257,7 +257,7 @@
   </entry>
   <entry>
     <title>边/点双连通图计数</title>
-    <url>/blog/2020/06/11/biconnected-graph-counting/</url>
+    <url>/2020/06/11/biconnected-graph-counting/</url>
     <content><![CDATA[<p>有标号边/点双连通图计数。</p>
 <a id="more"></a>
 <p>下面只讨论有根情况，无根情况即乘以 $\dfrac 1 n$。</p>
@@ -282,7 +282,7 @@
   </entry>
   <entry>
     <title>关于 FFT（旧文补档）</title>
-    <url>/blog/2020/09/01/about-FFT/</url>
+    <url>/2020/09/01/about-FFT/</url>
     <content><![CDATA[<p>另一种看待 FFT 的视角。不只是奇偶拆分。</p>
 <a id="more"></a>
 <p>说是旧文补档其实我根本没存档，这篇完全是重写的……</p>
@@ -335,7 +335,7 @@
   </entry>
   <entry>
     <title>烷烃计数</title>
-    <url>/blog/2020/06/06/alkane-counting/</url>
+    <url>/2020/06/06/alkane-counting/</url>
     <content><![CDATA[<p>任何点的度数小于等于 $4$ 的无标号无根树个数。</p>
 <a id="more"></a>
 <h1 id="烷基计数"><a href="#烷基计数" class="headerlink" title="烷基计数"></a>烷基计数</h1><p>我们先来数烷基。（任何节点均最多只有三个儿子的无标号有根树）</p>
@@ -359,7 +359,7 @@
   </entry>
   <entry>
     <title>CF1305G 题解 - Kuroni and Antihype</title>
-    <url>/blog/2020/09/11/cf-1305-g/</url>
+    <url>/2020/09/11/cf-1305-g/</url>
     <content><![CDATA[<p><a href="https://codeforces.com/problemset/problem/1305/G" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/CF1305G" target="_blank" rel="noopener">翻译链接</a></p>
 <a id="more"></a>
 <p>1 操作相当于有一个年龄为 0 的人已经预先在传销组织里了。</p>
@@ -380,7 +380,7 @@
   </entry>
   <entry>
     <title>欧拉-麦克劳林级数的推导</title>
-    <url>/blog/2020/09/03/euler-maclaurin-formula/</url>
+    <url>/2020/09/03/euler-maclaurin-formula/</url>
     <content><![CDATA[<p>因为很有趣就记下来了。</p>
 <a id="more"></a>
 <p>首先有泰勒级数：</p>
@@ -405,7 +405,7 @@
   </entry>
   <entry>
     <title>狄利克雷生成函数学习笔记</title>
-    <url>/blog/2020/09/01/dirichlet-GF/</url>
+    <url>/2020/09/01/dirichlet-GF/</url>
     <content><![CDATA[<p>对于一些奇怪的数论问题有奇效。也是对数论函数的另一种视角。</p>
 <a id="more"></a>
 <h2 id="基础形式"><a href="#基础形式" class="headerlink" title="基础形式"></a>基础形式</h2><p>数列 $f$ 的狄利克雷生成函数是</p>
@@ -440,7 +440,7 @@
   </entry>
   <entry>
     <title>CF1286F 题解 - Harry the Potter</title>
-    <url>/blog/2020/09/10/cf-1286-f/</url>
+    <url>/2020/09/10/cf-1286-f/</url>
     <content><![CDATA[<p><a href="https://codeforces.com/problemset/problem/1286/F" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/CF1286F" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
 <p>考虑二操作（看成无向边）不会有环，否则可以转化成等数量的一操作</p>
@@ -462,7 +462,7 @@
   </entry>
   <entry>
     <title>测试用博文</title>
-    <url>/blog/2020/05/21/hello-world/</url>
+    <url>/2020/05/21/hello-world/</url>
     <content><![CDATA[<p>在外面应该只能看到这一行</p>
 <a id="more"></a>
 <script type="math/tex; mode=display">\begin{vmatrix}如果这玩&意没换行\\
@@ -473,7 +473,7 @@
   </entry>
   <entry>
     <title>线性代数学习笔记（搬运）</title>
-    <url>/blog/2020/09/03/linear-algebra/</url>
+    <url>/2020/09/03/linear-algebra/</url>
     <content><![CDATA[<p>非常重要的数学基础知识。</p>
 <a id="more"></a>
 <p>参考教材：《代数学引论》柯斯特利金。</p>
@@ -587,7 +587,7 @@
   </entry>
   <entry>
     <title>群论视角下的欧拉变换</title>
-    <url>/blog/2020/09/12/euler-trans-in-group-theory/</url>
+    <url>/2020/09/12/euler-trans-in-group-theory/</url>
     <content><![CDATA[<p>对无标号计数的重新讨论。</p>
 <a id="more"></a>
 <p>摘一段去年写的东西：</p>
@@ -621,7 +621,7 @@
   </entry>
   <entry>
     <title>快速阶乘算法</title>
-    <url>/blog/2020/09/01/fast-factorial-calculating/</url>
+    <url>/2020/09/01/fast-factorial-calculating/</url>
     <content><![CDATA[<p>快速计算阶乘。</p>
 <a id="more"></a>
 <h1 id="log方做法"><a href="#log方做法" class="headerlink" title="log方做法"></a>log方做法</h1><p>把 $1\cdot 2\cdot 3\cdot\ldots\cdot n$ 分成长为 $B$ 的数段，显然每一段都是形如</p>
@@ -658,7 +658,7 @@
   </entry>
   <entry>
     <title>loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对</title>
-    <url>/blog/2020/09/14/loj-6077/</url>
+    <url>/2020/09/14/loj-6077/</url>
     <content><![CDATA[<p><a href="https://loj.ac/problem/6077" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>首先可以发现要求的是</p>
@@ -678,7 +678,7 @@
   </entry>
   <entry>
     <title>loj#6275 题解 - 棋盘</title>
-    <url>/blog/2020/06/18/loj-6275/</url>
+    <url>/2020/06/18/loj-6275/</url>
     <content><![CDATA[<p><a href="https://loj.ac/problem/6275" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>首先考虑辣鸡 DP $f_{i,s,j}$，表示考虑前 $i$ 列，第 $i$ 列状态为 $s$，有 $j$ 个连通块。</p>
@@ -697,7 +697,7 @@
   </entry>
   <entry>
     <title>loj#6055 题解 - 「from CommonAnts」一道数学题</title>
-    <url>/blog/2020/09/08/loj-6054/</url>
+    <url>/2020/09/08/loj-6054/</url>
     <content><![CDATA[<p><a href="https://loj.ac/problem/6054" target="_blank" rel="noopener">题目链接</a>，<a href="https://loj.ac/problem/6055" target="_blank" rel="noopener">加强版链接</a></p>
 <a id="more"></a>
 <p>首先你应该能推出答案 $f_k(n)$ 等于</p>
@@ -719,7 +719,7 @@
   </entry>
   <entry>
     <title>luoguP5155 题解 - [USACO18DEC]Balance Beam P</title>
-    <url>/blog/2020/09/08/luogu-5155/</url>
+    <url>/2020/09/08/luogu-5155/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5155" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>好题好题妙啊妙啊</p>
@@ -738,7 +738,7 @@
   </entry>
   <entry>
     <title>min25 筛和 Powerful Number 筛</title>
-    <url>/blog/2020/07/20/min25-powerfulnum/</url>
+    <url>/2020/07/20/min25-powerfulnum/</url>
     <content><![CDATA[<p>两种求积性函数前缀和的方法。</p>
 <a id="more"></a>
 <h2 id="Powerful-Number-筛"><a href="#Powerful-Number-筛" class="headerlink" title="Powerful Number 筛"></a>Powerful Number 筛</h2><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul>
@@ -788,7 +788,7 @@
   </entry>
   <entry>
     <title>luoguP4500 题解 - [ZJOI2018]树</title>
-    <url>/blog/2020/09/08/luogu-4500/</url>
+    <url>/2020/09/08/luogu-4500/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P4500" target="_blank" rel="noopener">题目链接</a>。究极毒瘤群论计数。</p>
 <a id="more"></a>
 <h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>这就是 ZJOI 的 D2T1 吗爱了爱了</p>
@@ -866,7 +866,7 @@
   </entry>
   <entry>
     <title>单纯形法学习笔记（搬运）</title>
-    <url>/blog/2020/09/07/simplex-alg/</url>
+    <url>/2020/09/07/simplex-alg/</url>
     <content><![CDATA[<p>解决线性规划。不是多项式算法，但是跑的很快。</p>
 <a id="more"></a>
 <p>我们容易把线性规划问题转化成如下的一般形式：</p>
@@ -933,7 +933,7 @@
   </entry>
   <entry>
     <title>uoj#372 题解 - 【UR#17】滑稽树前做游戏</title>
-    <url>/blog/2020/09/06/uoj-372/</url>
+    <url>/2020/09/06/uoj-372/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/contest/43/problem/372" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>首先这种鬼题都是独立性非常难考虑，所以一般来讲都是直接对整个图考虑，做子集 DP。</p>
@@ -956,7 +956,7 @@
   </entry>
   <entry>
     <title>超现实数学习笔记（搬运）</title>
-    <url>/blog/2020/09/07/surreal-number/</url>
+    <url>/2020/09/07/surreal-number/</url>
     <content><![CDATA[<p>超现实数和不平等博弈。</p>
 <a id="more"></a>
 <p>这种一堆数学推导的东西写了有啥意义……就当自己的笔记吧</p>
@@ -1072,7 +1072,7 @@
   </entry>
   <entry>
     <title>概率和期望（旧文补档）</title>
-    <url>/blog/2020/09/01/probability-expectation/</url>
+    <url>/2020/09/01/probability-expectation/</url>
     <content><![CDATA[<p>简单介绍概率和期望。</p>
 <a id="more"></a>
 <h1 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h1><p><strong>概率</strong>反映随机事件出现的可能性大小，是事件发生的可能性的度量。</p>
@@ -1182,7 +1182,7 @@
   </entry>
   <entry>
     <title>分块学习笔记</title>
-    <url>/blog/2020/09/03/sqrt-tech/</url>
+    <url>/2020/09/03/sqrt-tech/</url>
     <content><![CDATA[<p>再不学就要变成时代的眼泪了（悲）</p>
 <a id="more"></a>
 <h1 id="莫队二次离线"><a href="#莫队二次离线" class="headerlink" title="莫队二次离线"></a>莫队二次离线</h1><p>特征：神必的区间询问，连莫队都难以处理。</p>
@@ -1239,7 +1239,7 @@
   </entry>
   <entry>
     <title>省选 2019 补题记录</title>
-    <url>/blog/2020/09/11/sx2019/</url>
+    <url>/2020/09/11/sx2019/</url>
     <content><![CDATA[<p>如题。</p>
 <a id="more"></a>
 <p>目前进度：</p>
@@ -1346,7 +1346,7 @@
   </entry>
   <entry>
     <title>uoj#420 题解 - 【集训队作业2018】矩形</title>
-    <url>/blog/2020/06/12/uoj-420/</url>
+    <url>/2020/06/12/uoj-420/</url>
     <content><![CDATA[<p><a href="http://uoj.ac/problem/420" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>先把答案改成求</p>
@@ -1373,7 +1373,7 @@
   </entry>
   <entry>
     <title>省选 2020 补题记录</title>
-    <url>/blog/2020/09/07/sx2020/</url>
+    <url>/2020/09/07/sx2020/</url>
     <content><![CDATA[<p>如题。</p>
 <a id="more"></a>
 <p>目前进度：</p>
@@ -1529,7 +1529,7 @@
   </entry>
   <entry>
     <title>杨表学习笔记</title>
-    <url>/blog/2020/09/14/young-tableau/</url>
+    <url>/2020/09/14/young-tableau/</url>
     <content><![CDATA[<p>参考资料：论文集2019《浅谈杨氏矩阵在信息学竞赛中的应用》袁方舟，<a href="https://whzecomjm.com/usr/uploads/2020/07/1514961931.pdf" target="_blank" rel="noopener">《对称群笔记》</a>Wenchao Zhang。</p>
 <a id="more"></a>
 <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="杨图，杨表，勾长公式"><a href="#杨图，杨表，勾长公式" class="headerlink" title="杨图，杨表，勾长公式"></a>杨图，杨表，勾长公式</h2><p><strong>杨图</strong>（记为 $\lambda$）大概就是一个长成这样的东西：</p>
@@ -1655,7 +1655,7 @@
   </entry>
   <entry>
     <title>多点求值的新做法</title>
-    <url>/blog/2020/09/22/luogu-5050/</url>
+    <url>/2020/09/22/luogu-5050/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5050" target="_blank" rel="noopener">题目链接</a>。终于不需要恐怖的多项式取模了。</p>
 <a id="more"></a>
 <p>首先可以把多项式 $F$ 写成一个列向量</p>
@@ -1702,7 +1702,7 @@
   </entry>
   <entry>
     <title>多项式快速插值</title>
-    <url>/blog/2020/09/22/poly-interpolation/</url>
+    <url>/2020/09/22/poly-interpolation/</url>
     <content><![CDATA[<p>果然这种东西不推一遍是绝对记不住的</p>
 <a id="more"></a>
 <p>首先我们观察一下拉格朗日插值</p>
@@ -1720,7 +1720,7 @@
   </entry>
   <entry>
     <title>我的多项式板子</title>
-    <url>/blog/2020/09/23/my-poly-module/</url>
+    <url>/2020/09/23/my-poly-module/</url>
     <content><![CDATA[<p>常数巨大</p>
 <a id="more"></a>
 <p>目前有的东西：</p>
@@ -1763,7 +1763,7 @@
   </entry>
   <entry>
     <title>AGC034F 题解 - RNG and XOR</title>
-    <url>/blog/2020/09/25/agc-034-f/</url>
+    <url>/2020/09/25/agc-034-f/</url>
     <content><![CDATA[<p><a href="https://atcoder.jp/contests/agc034/tasks/agc034_f" target="_blank" rel="noopener">题目链接</a>，<a href="https://www.luogu.com.cn/problem/AT4996" target="_blank" rel="noopener">题目翻译</a></p>
 <a id="more"></a>
 <p>看起来很像 ZJOI2019 开关，可惜这题被大大强化，看来还是逃不过集合幂级数了。</p>
@@ -1785,7 +1785,7 @@
   </entry>
   <entry>
     <title>uoj#310 题解 - 【UNR#2】黎明前的巧克力</title>
-    <url>/blog/2020/09/26/uoj-310/</url>
+    <url>/2020/09/26/uoj-310/</url>
     <content><![CDATA[<p><a href="https://uoj.ac/problem/310" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>简要题意：</p>
@@ -1813,7 +1813,7 @@
   </entry>
   <entry>
     <title>集合幂级数学习笔记</title>
-    <url>/blog/2020/09/26/set-power-series/</url>
+    <url>/2020/09/26/set-power-series/</url>
     <content><![CDATA[<p>参考资料：论文集2015《集合幂级数的性质及其快速算法》吕凯风</p>
 <a id="more"></a>
 <h1 id="从子集卷积开始"><a href="#从子集卷积开始" class="headerlink" title="从子集卷积开始"></a>从子集卷积开始</h1><p>两个序列 $f,g$（当然，以集合为下标）的<strong>子集卷积</strong>为</p>
@@ -1903,7 +1903,7 @@
   </entry>
   <entry>
     <title>uoj#272 题解 - 【清华集训2016】石家庄的工人阶级队伍比较坚强</title>
-    <url>/blog/2020/09/25/uoj-272/</url>
+    <url>/2020/09/25/uoj-272/</url>
     <content><![CDATA[<p><a href="https://uoj.ac/problem/272" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>
 <p>题意非常的恶心。先理一下。考虑两个人 $x,y$，他们的剪刀石头布结果是 $b((x\oplus y)_{\text{cnt2}},(x\oplus y)_{\text{cnt1}})$，其中 $\oplus$ 表示三进制不进位加法，可以类比异或；而 $_{\text{cnt2}}$ 表示 $2$ 的个数。那么设这个东西为 $B_{y,x}$，要求的就是</p>
@@ -1923,7 +1923,7 @@
   </entry>
   <entry>
     <title>luogu5294 题解 - P5294 [HNOI2019]序列</title>
-    <url>/blog/2020/09/29/luogu-5294/</url>
+    <url>/2020/09/29/luogu-5294/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5294" target="_blank" rel="noopener">题目链接</a></p>
 <a id="more"></a>]]></content>
       <tags>
@@ -1932,7 +1932,7 @@
   </entry>
   <entry>
     <title>计算几何学习笔记</title>
-    <url>/blog/2020/09/29/calculating-geometry/</url>
+    <url>/2020/09/29/calculating-geometry/</url>
     <content><![CDATA[<p>几何放 OI 赛制还不给强样例的出题人给爷爬</p>
 <a id="more"></a>
 <h1 id="叉积"><a href="#叉积" class="headerlink" title="叉积"></a>叉积</h1><p><del>XJ</del></p>
@@ -1941,7 +1941,9 @@
 <h2 id="快速排斥试验"><a href="#快速排斥试验" class="headerlink" title="快速排斥试验"></a>快速排斥试验</h2><p>如果两条线段的分别以两个端点作为角的矩形有交那么通过快速排斥试验。</p>
 <h2 id="跨立试验"><a href="#跨立试验" class="headerlink" title="跨立试验"></a>跨立试验</h2><p>如果每条线段的两个端点都在另一条线段的两侧则通过跨立试验。</p>
 <p>（不相交而能通过跨立试验的只有共线的线段）</p>
-<h1 id="直线交点"><a href="#直线交点" class="headerlink" title="直线交点"></a>直线交点</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">Vec <span class="title">IntSec</span><span class="params">(Line a,Line b)</span></span>&#123;</span><br><span class="line">	Vec u=a.s-b.s,v=a.t-a.s,w=b.t-b.s;</span><br><span class="line">	<span class="keyword">return</span> a.s+v*((w^u)/(v^w));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="直线交点"><a href="#直线交点" class="headerlink" title="直线交点"></a>直线交点</h1><p>没啥好说的，就是高妙相似</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">Vec <span class="title">IntSec</span><span class="params">(Line a,Line b)</span></span>&#123;</span><br><span class="line">	Vec u=a.s-b.s,v=a.t-a.s,w=b.t-b.s;</span><br><span class="line">	<span class="keyword">return</span> a.s+v*((w^u)/(v^w));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>计算几何</tag>
         <tag>毒瘤</tag>
