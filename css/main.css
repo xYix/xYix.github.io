@@ -40,6 +40,9 @@ a{
 .lil-p{
     font-size: smaller;
 }
+.post-block{
+    position: relative;
+}
 body{
     
 }
