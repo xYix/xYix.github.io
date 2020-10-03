@@ -36,7 +36,7 @@ void PRINT_HEAD(string title){
 	cout<<"<head><meta http-equiv=\"content-type\" content=\"text/html;charset=gbk\" /><meta charset=\"UTF-8\"><title>x义x 的 blog - 文章一览</title><link rel=\"icon\" type=\"images/png\" sizes=\"32x32\" href=\"/images/favicon32.png\"><link rel=\"icon\" type=\"images/png\" sizes=\"32x32\" href=\"/images/favicon16.png\"><link rel=\"stylesheet\" href=\"/css/main.css\"></head>\n";
 	cout<<"<div class=\"cover\"></div><div class=\"bodybody\"><div class=\"sidebar\"><div class=\"title\"><center><h1>x义x 的自制 BLOG</h1><p><h3>您现在在："<<title<<"</h3></p></center>";
     cout<<"</div><div class=\"content-block\"><div class=\"content\"><center><p class=\"lil-p\">……就算是单程票，也是可以的吧？</p></center><a href=\"/\"><strong>· 回到首页</strong></a>";
-    cout<<"<p></p><a href=\"/archieve/\"><strong>· 文章一览</strong></a><p></p><a href=\"/tags/\"><strong>· 标签一览</strong></a><p></p><a href=\"/songlist/\"><strong>· 网义云音乐</strong></a></div><script type=\"text/javascript\" src=\"/daily/daily.js\"></script></div></div>";
+    cout<<"<p></p><a href=\"/archieve/\"><strong>· 文章一览</strong></a><p></p><a href=\"/tags/\"><strong>· 标签一览</strong></a><p></p><a href=\"/songlist/\"><strong>· 网义云音乐</strong></a></div><script type=\"text/javascript\" src=\"/daily/daily.js\" charset=\"UTF-8\"></script></div></div>";
 }
 
 void PRINT_TAG_INFO(){
