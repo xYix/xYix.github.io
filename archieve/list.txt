@@ -77,3 +77,31 @@ solution
 2
 number-theory
 calculating-geometry
+agc-038-e
+AGC038E 题解 - Gachapon
+solution
+3
+counting
+generating-function
+probability-expectation
+linear-algebra
+线性代数学习笔记
+algorithm
+1
+linear-algebra
+sx2020
+省选 2020 补题记录
+solution
+7
+string
+lyndon-tech
+counting
+generating-function
+probability-expectation
+lagrange-inversion
+linear-programming
+uoj-372
+uoj#372 题解 - 【UR#17】滑稽树前做游戏
+solution
+1
+probability-expectation

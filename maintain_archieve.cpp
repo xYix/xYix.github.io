@@ -55,7 +55,7 @@ void PRINT_POST_INFO(){
 		cout<<"<th>";
 		for(int i=1;i<=tag_cnt;i++){
 			cout<<"<a href=\"/tags/"<<post_tag[i]<<"/\"><strong>";
-			if(!TAG.count(post_tag[i])){cerr<<"ERROR tag not found\n";exit(0);}
+			if(!TAG.count(post_tag[i])){cerr<<"ERROR tag not found "<<post_tag[i]<<"\n";exit(0);}
 			cout<<TAG[post_tag[i]]<<"</strong></a>";
 			if(i!=tag_cnt) cout<<" ";
 		}

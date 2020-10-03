@@ -16,3 +16,11 @@ calculating-geometry
 计算几何
 lagrange-interpolation
 拉格朗日插值
+linear-algebra
+线性代数
+string
+字符串
+lyndon-tech
+lyndon 科技
+linear-programming
+线性规划
