@@ -84,7 +84,7 @@ int main(){
 	freopen("D:\\迫真blog\\archieve\\list.txt","r",stdin);
 	freopen("D:\\迫真blog\\archieve\\index.html","w",stdout);
 	PRINT_HEAD("文章一览");
-	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>文章一览</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
+	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>文章一览</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:40%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:40%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
 		cerr<<"check "<<post_name<<"\n";
 		getline(cin,post_chinese_name);
@@ -101,7 +101,7 @@ int main(){
 	freopen("D:\\迫真blog\\archieve\\algorithm\\index.html","w",stdout);
 	bool FLG=0;
 	PRINT_HEAD("分类：算法");
-	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 算法 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
+	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 算法 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:40%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:40%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
 		getline(cin,post_chinese_name);
 		post_chinese_name=UTF8ToGB(post_chinese_name.c_str());
@@ -119,7 +119,7 @@ int main(){
 	freopen("D:\\迫真blog\\archieve\\solution\\index.html","w",stdout);
 	FLG=0;
 	PRINT_HEAD("分类：题解");
-	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 题解 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
+	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 题解 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:40%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:40%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
 		getline(cin,post_chinese_name);
 		post_chinese_name=UTF8ToGB(post_chinese_name.c_str());
@@ -137,7 +137,7 @@ int main(){
 	freopen("D:\\迫真blog\\archieve\\other\\index.html","w",stdout);
 	FLG=0;
 	PRINT_HEAD("分类：游记和其他");
-	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 游记和其他 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
+	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 游记和其他 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:40%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:40%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
 		getline(cin,post_chinese_name);
 		post_chinese_name=UTF8ToGB(post_chinese_name.c_str());

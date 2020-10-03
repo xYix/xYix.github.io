@@ -97,7 +97,7 @@ int main(){
 		freopen(pth,"w",stdout);
 		
 		PRINT_HEAD("标签："+tag_chinese_name);
-		cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>具有 "<<tag_chinese_name<<" 标签的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
+		cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>具有 "<<tag_chinese_name<<" 标签的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:40%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:40%\">标签</th></tr>\n";
 		cin.clear();
 		freopen("D:\\迫真blog\\archieve\\list.txt","r",stdin);
 		bool FLG=0;
