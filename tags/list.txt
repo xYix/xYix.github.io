@@ -1,0 +1,16 @@
+counting
+计数
+generating-function
+生成函数
+lagrange-inversion
+拉格朗日反演
+polynomial
+多项式
+number-theory
+数论
+min25-sieve
+min25筛
+probability-expectation
+概率期望
+calculating-geometry
+计算几何
