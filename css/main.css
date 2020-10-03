@@ -6,6 +6,9 @@ h1{
 h2{
     color: #555555;
 }
+h3{
+    color: #555555;
+}
 p{
     color: #555555;
 }
@@ -30,7 +33,7 @@ a:hover{
     width: 260px;
     opacity: 0.85;
     left: 10px;
-    position: relative;
+    position: fixed;
 }
 .cover{
     z-index: -1;
@@ -53,12 +56,12 @@ a:hover{
     opacity: 0.85;
     margin: auto 20px;
     width: calc(100% - 300px);
-    left: 10px;
+    left: 260px;
     position: relative;
 }
 .bodybody{
 }
 .title{
     position: relative;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 0;
 }
