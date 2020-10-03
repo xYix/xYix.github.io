@@ -58,6 +58,7 @@ a:hover{
     width: calc(100% - 300px);
     left: 260px;
     position: relative;
+    bottom: 20px;
 }
 .bodybody{
 }
