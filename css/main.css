@@ -32,7 +32,7 @@ a:hover{
     float: left;
     width: 260px;
     opacity: 0.85;
-    left: 10px;
+    left: 18px;
     position: fixed;
 }
 .cover{
@@ -56,13 +56,13 @@ a:hover{
     opacity: 0.85;
     margin: auto 20px;
     width: calc(100% - 300px);
-    left: 260px;
+    left: 268px;
     position: relative;
 }
 .bodybody{
     position: absolute;
-    margin: 10px 0 32px 0;
-    width: calc(100% - 20px);
+    margin: 10px 0 19px 0;
+    width: calc(100% - 16px);
 }
 .title{
     position: relative;
