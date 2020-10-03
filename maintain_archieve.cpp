@@ -40,7 +40,7 @@ void PRINT_HEAD(string title){
 	cout<<"<div class=\"bodybody\"><div class=\"sidebar\"><div class=\"content-block\"><div class=\"content\"><center><p>……就算是单程票，也是可以的吧？</p></center><a href=\"/\"><strong>· 回到首页</strong></a><p></p><a href=\"/archieve/\"><strong>· 文章一览</strong></a><p></p><a href=\"/tags/\"><strong>· 标签一览</strong></a><p></p><a href=\"/songlist/\"><strong>· 网义云音乐</strong></a></div></div></div>\n";
 }
 void PRINT_POST_INFO(){
-	cout<<"<tr><th><a href=\"/posts/\""<<post_name<<".html\"><strong>"<<post_chinese_name<<"</strong></a></th>\n";
+	cout<<"<tr><th><a href=\"/posts/"<<post_name<<".html\"><strong>"<<post_chinese_name<<"</strong></a></th>\n";
 	
 	if(type_name=="solution")
 		cout<<"<th><a href=\"/archieve/solution/\"><strong>题解</strong></a></th>\n";
