@@ -24,3 +24,7 @@ lyndon-tech
 lyndon 科技
 linear-programming
 线性规划
+group-counting
+群论计数
+game-theory
+博弈论
