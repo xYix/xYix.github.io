@@ -62,6 +62,7 @@ a:hover{
 .bodybody{
     position: absolute;
     margin: 10px 0 20px 0;
+    width: 100%;
 }
 .title{
     position: relative;
