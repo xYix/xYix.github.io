@@ -9,9 +9,14 @@
         '数数是好的，并且没有任何坏处',
     ];
     function Write_Daily_Message(data){
+        let message_box=document.createElement('center');
+        let message_title=document.createElement('h3');
+        message_title.textContent="一言";
         let daily_message=document.createElement('p');
         daily_message.textContent=DAILY_MESSAGES[Math.floor(Math.random()*DAILY_MESSAGES.length)];
-        data.appendChild(daily_message);
+        message_box.appendChild(message_title);
+        message_box.appendChild(daily_message);
+        data.appendChild(message_box);
     }
     Write_Daily_Message(document.querySelector('.content-block'));
 }
