@@ -53,7 +53,7 @@ void PRINT_POST_INFO(){
 	if(type_name=="solution")
 		cout<<"<th><a href=\"/archieve/solution/\"><strong>题解</strong></a></th>\n";
 	else if(type_name=="algorithm")
-		cout<<"<th><a href=\"/archieve/algorithm/\"><strong>算法</strong></a></th>\n";
+		cout<<"<th><a href=\"/archieve/algorithm/\"><strong>算法/知识点</strong></a></th>\n";
 	else
 		cout<<"<th><p>无</p></th>\n";
 	

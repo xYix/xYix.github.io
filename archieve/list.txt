@@ -54,3 +54,26 @@ solution
 2
 polynomial
 lagrange-interpolation
+dirichlet-GF
+狄利克雷生成函数
+algorithm
+2
+generating-function
+number-theory
+min25-powerfulnum
+Min25 筛和 Powerful Number 筛
+algorithm
+2
+number-theory
+min25-sieve
+probability-expectation
+概率和期望
+algorithm
+1
+probability-expectation
+SPOJ-26073
+SPOJ26073 题解 - DIVCNT1
+solution
+2
+number-theory
+calculating-geometry
