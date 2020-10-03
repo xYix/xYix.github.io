@@ -47,7 +47,7 @@ string post_tag[20];int tag_cnt;
 map<string,string> TAG;
 string trash;
 void PRINT_POST_INFO(){
-	cout<<"<tr><th><a href=\"/posts/\""<<post_name<<".html\"><strong>"<<post_chinese_name<<"</strong></a></th>\n";
+	cout<<"<tr><th><a href=\"/posts/"<<post_name<<".html\"><strong>"<<post_chinese_name<<"</strong></a></th>\n";
 	
 	if(type_name=="solution")
 		cout<<"<th><a href=\"/archieve/solution/\"><strong>Ã‚Ω‚</strong></a></th>\n";
