@@ -38,3 +38,19 @@ counting
 solution
 1
 number-theory
+about-FFT
+关于 FFT
+algorithm
+1
+polynomial
+euler-maclaurin-formula
+欧拉-麦克劳林级数的推导
+algorithm
+1
+generating-function
+fast-factorial-calculating
+快速阶乘算法
+solution
+2
+polynomial
+lagrange-interpolation

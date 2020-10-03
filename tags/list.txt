@@ -14,3 +14,5 @@ probability-expectation
 概率期望
 calculating-geometry
 计算几何
+lagrange-interpolation
+拉格朗日插值
