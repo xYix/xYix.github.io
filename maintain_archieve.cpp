@@ -99,6 +99,7 @@ int main(){
 	cin.clear();
 	freopen("D:\\迫真blog\\archieve\\list.txt","r",stdin);
 	freopen("D:\\迫真blog\\archieve\\algorithm\\index.html","w",stdout);
+	bool FLG=0;
 	PRINT_HEAD("分类：算法");
 	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 算法 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
@@ -107,12 +108,16 @@ int main(){
 		getline(cin,type_name);
 		cin>>tag_cnt;getline(cin,trash);
 		for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
-		if(type_name=="algorithm") PRINT_POST_INFO();
+		if(type_name=="algorithm") PRINT_POST_INFO(),FLG=1;
 	}
+	cout<<"</table>\n";
+	if(!FLG) cout<<"<h2>好像什么都没有找到啊 QAQ</h2>";
+	cout<<"</center></div></div></div>\n";
 	//archieve.solution.index
 	cin.clear();
 	freopen("D:\\迫真blog\\archieve\\list.txt","r",stdin);
 	freopen("D:\\迫真blog\\archieve\\solution\\index.html","w",stdout);
+	FLG=0;
 	PRINT_HEAD("分类：题解");
 	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 题解 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
@@ -121,12 +126,16 @@ int main(){
 		getline(cin,type_name);
 		cin>>tag_cnt;getline(cin,trash);
 		for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
-		if(type_name=="solution") PRINT_POST_INFO();
+		if(type_name=="solution") PRINT_POST_INFO(),FLG=1;
 	}
+	cout<<"</table>\n";
+	if(!FLG) cout<<"<h2>好像什么都没有找到啊 QAQ</h2>";
+	cout<<"</center></div></div></div>\n";
 	//archieve.other.index
 	cin.clear();
 	freopen("D:\\迫真blog\\archieve\\list.txt","r",stdin);
 	freopen("D:\\迫真blog\\archieve\\other\\index.html","w",stdout);
+	FLG=0;
 	PRINT_HEAD("分类：游记和其他");
 	cout<<"<div class=\"post-block\"><div class=\"content-block\"><center><h1>分类为 游记和其他 的页面</h1></center><center><table border=\"1\" style=\"width: 100%;\"><tr><th style=\"width:35%\">标题</th><th style=\"width:20%\">分类</th><th style=\"width:45%\">标签</th></tr>\n";
 	while(getline(cin,post_name)){
@@ -135,6 +144,9 @@ int main(){
 		getline(cin,type_name);
 		cin>>tag_cnt;getline(cin,trash);
 		for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
-		if(type_name=="other") PRINT_POST_INFO();
+		if(type_name=="other") PRINT_POST_INFO(),FLG=1;
 	}
+	cout<<"</table>\n";
+	if(!FLG) cout<<"<h2>好像什么都没有找到啊 QAQ</h2>";
+	cout<<"</center></div></div></div>\n";
 }
