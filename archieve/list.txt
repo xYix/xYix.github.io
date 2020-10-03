@@ -21,3 +21,20 @@ algorithm
 counting
 generating-function
 lagrange-inversion
+loj-6275
+loj#6275 题解 - 棋盘
+solution
+3
+counting
+generating-function
+polynomial
+uoj-420
+uoj#420 题解 - 【集训队作业2018】矩形
+solution
+1
+counting
+51nod-1222
+51nod1222 题解 - 最小公倍数计数
+solution
+1
+number-theory
