@@ -58,9 +58,11 @@ a:hover{
     width: calc(100% - 300px);
     left: 260px;
     position: relative;
-    bottom: 20px;
+    top: 10px;
 }
 .bodybody{
+    position: absolute;
+    margin: 10px 0 20px 0;
 }
 .title{
     position: relative;
