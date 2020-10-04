@@ -29,7 +29,7 @@
                 let SideBarTitleContent1=document.createElement('h1');
                 SideBarTitleContent1.textContent='x义x 的自制 BLOG';
             SideBarTitle.appendChild(SideBarTitleContent1);
-                let SideBarTitleContent2=document.createElement('strong');
+                let SideBarTitleContent2=document.createElement('p');
                 SideBarTitleContent2.textContent='您现在在：'+title;
             SideBarTitle.appendChild(SideBarTitleContent2);
         SideBar.appendChild(SideBarTitle);
