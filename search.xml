@@ -1924,10 +1924,34 @@
   <entry>
     <title>luogu5294 题解 - P5294 [HNOI2019]序列</title>
     <url>/2020/09/29/luogu-5294/</url>
-    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5294" target="_blank" rel="noopener">题目链接</a></p>
-<a id="more"></a>]]></content>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P5294" target="_blank" rel="noopener">题目链接</a>，参考资料：论文集2018《浅谈保序回归问题》高睿泉</p>
+<a id="more"></a>
+<p>出论文题的屑出题人给爷爬</p>
+<h1 id="保序回归问题的定义"><a href="#保序回归问题的定义" class="headerlink" title="保序回归问题的定义"></a>保序回归问题的定义</h1><p>$L_p$ 问题的定义如下：</p>
+<blockquote>
+<p>给出一张 DAG $G=(V,E)$，每个点 $i$ 有代价 $y_i,w_i$。求点值序列 $f$，满足如果在 $G$ 中有从 $i$ 到 $j$ 的路径（称为 $v_i\preceq v_j$），则必须有 $f_i\le f_j$，并使得</p>
+<script type="math/tex; mode=display">
+\begin{cases}\sum_{i=1}^nw_i|f_i-y_i|^p&(1\le p<\infty)\\\max_{i=1}^n w_i|f_i-y_i|&(p=\infty)\end{cases}</script><p>最小。</p>
+</blockquote>
+<h2 id="其他定义"><a href="#其他定义" class="headerlink" title="其他定义"></a>其他定义</h2><blockquote>
+<p>将序列 $z$ 中 $\le a$ 的元素变为 $a$，$\ge b$ 的元素变为 $b$，称为把 $z$ 向 $(a,b)$ 取整。</p>
+</blockquote>
+]]></content>
       <tags>
-        <tag>$\color{green}咕咕$</tag>
+        <tag>整体二分</tag>
+        <tag>保序回归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搬迁</title>
+    <url>/2020/10/04/bye-hexo/</url>
+    <content><![CDATA[<p><a href="https://xyix.gitee.io/" target="_blank" rel="noopener">新博客地址</a></p>
+<a id="more"></a>
+<p>搬迁工作已经完成，这个博客将不会再更新。</p>
+<p>果然还是自己搭的东西最方便啊……</p>
+]]></content>
+      <tags>
+        <tag>测试</tag>
       </tags>
   </entry>
 </search>

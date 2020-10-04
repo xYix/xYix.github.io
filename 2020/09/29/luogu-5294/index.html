@@ -22,17 +22,18 @@
     var CONFIG = {"hostname":"xyix.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题目链接">
+  <meta name="description" content="题目链接，参考资料：论文集2018《浅谈保序回归问题》高睿泉">
 <meta property="og:type" content="article">
 <meta property="og:title" content="luogu5294 题解 - P5294 [HNOI2019]序列">
 <meta property="og:url" content="http://xyix.github.io/2020/09/29/luogu-5294/index.html">
 <meta property="og:site_name" content="x义x的博客">
-<meta property="og:description" content="题目链接">
+<meta property="og:description" content="题目链接，参考资料：论文集2018《浅谈保序回归问题》高睿泉">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T08:24:13.000Z">
-<meta property="article:modified_time" content="2020-09-29T10:56:00.632Z">
+<meta property="article:modified_time" content="2020-10-02T23:56:55.014Z">
 <meta property="article:author" content="x义x">
-<meta property="article:tag" content="$\color{green}咕咕$">
+<meta property="article:tag" content="整体二分">
+<meta property="article:tag" content="保序回归">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://xyix.github.io/2020/09/29/luogu-5294/">
@@ -196,10 +197,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-09-29 16:24:13 / 修改时间：18:56:00" itemprop="dateCreated datePublished" datetime="2020-09-29T16:24:13+08:00">2020-09-29</time>
+              <time title="创建时间：2020-09-29 16:24:13" itemprop="dateCreated datePublished" datetime="2020-09-29T16:24:13+08:00">2020-09-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-03 07:56:55" itemprop="dateModified" datetime="2020-10-03T07:56:55+08:00">2020-10-03</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -213,7 +220,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>4</span>
+              <span>215</span>
             </span>
 
         </div>
@@ -225,8 +232,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://www.luogu.com.cn/problem/P5294" target="_blank" rel="noopener">题目链接</a></p>
+        <p><a href="https://www.luogu.com.cn/problem/P5294" target="_blank" rel="noopener">题目链接</a>，参考资料：论文集2018《浅谈保序回归问题》高睿泉</p>
 <a id="more"></a>
+<p>出论文题的屑出题人给爷爬</p>
+<h1 id="保序回归问题的定义"><a href="#保序回归问题的定义" class="headerlink" title="保序回归问题的定义"></a>保序回归问题的定义</h1><p>$L_p$ 问题的定义如下：</p>
+<blockquote>
+<p>给出一张 DAG $G=(V,E)$，每个点 $i$ 有代价 $y_i,w_i$。求点值序列 $f$，满足如果在 $G$ 中有从 $i$ 到 $j$ 的路径（称为 $v_i\preceq v_j$），则必须有 $f_i\le f_j$，并使得</p>
+<script type="math/tex; mode=display">
+\begin{cases}\sum_{i=1}^nw_i|f_i-y_i|^p&(1\le p<\infty)\\\max_{i=1}^n w_i|f_i-y_i|&(p=\infty)\end{cases}</script><p>最小。</p>
+</blockquote>
+<h2 id="其他定义"><a href="#其他定义" class="headerlink" title="其他定义"></a>其他定义</h2><blockquote>
+<p>将序列 $z$ 中 $\le a$ 的元素变为 $a$，$\ge b$ 的元素变为 $b$，称为把 $z$ 向 $(a,b)$ 取整。</p>
+</blockquote>
+
     </div>
 
     
@@ -235,7 +253,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/color-green-%E5%92%95%E5%92%95/" rel="tag"># $\color{green}咕咕$</a>
+              <a href="/tags/%E6%95%B4%E4%BD%93%E4%BA%8C%E5%88%86/" rel="tag"># 整体二分</a>
+              <a href="/tags/%E4%BF%9D%E5%BA%8F%E5%9B%9E%E5%BD%92/" rel="tag"># 保序回归</a>
           </div>
 
         
@@ -247,7 +266,10 @@
     <a href="/2020/09/26/set-power-series/" rel="prev" title="集合幂级数学习笔记">
       <i class="fa fa-chevron-left"></i> 集合幂级数学习笔记
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/04/bye-hexo/" rel="next" title="博客搬迁">
+      博客搬迁 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -307,6 +329,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#保序回归问题的定义"><span class="nav-number">1.</span> <span class="nav-text">保序回归问题的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#其他定义"><span class="nav-number">1.1.</span> <span class="nav-text">其他定义</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -321,13 +344,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -396,7 +419,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">128k</span>
+    <span title="站点总字数">129k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
