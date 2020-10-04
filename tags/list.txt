@@ -28,3 +28,11 @@ group-counting
 群论计数
 game-theory
 博弈论
+set-power-series
+集合幂级数
+set-DP
+子集DP
+pigeon
+鸽掉的文章
+young-tableau
+杨表

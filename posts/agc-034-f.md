@@ -15,27 +15,39 @@ tags:
 
 显然有方程组
 
-$$E_i=\begin{cases}1+\sum_{j}p_{i\oplus j}E_j&(i\neq\varnothing)\\0&(i=\varnothing)\end{cases}$$
+$$
+E_i=\begin{cases}1+\sum_{j}p_{i\oplus j}E_j&(i\neq\varnothing)\\0&(i=\varnothing)\end{cases}
+$$
 
 写成集合幂级数就是
 
-$$\mathbf E=\sum_{s}x^s+\mathbf{p}\times\mathbf E+cx^{\varnothing}$$
+$$
+\mathbf E=\sum_{s}x^s+\mathbf{p}\times\mathbf E+cx^{\varnothing}
+$$
 
 $c$ 暂且不知道是什么。$\text{FWT}$ 得
 
-$$\text{FWT}(\textbf E)_i=\text{FWT}\left(\sum_{s} x^s\right)_i+\text{FWT}(\mathbf p)_i\cdot\text{FWT}(\mathbf E)_i+\text{FWT}(cx^{\varnothing})_i$$
+$$
+\text{FWT}(\textbf E)_i=\text{FWT}\left(\sum_{s} x^s\right)_i+\text{FWT}(\mathbf p)_i\cdot\text{FWT}(\mathbf E)_i+\text{FWT}(cx^{\varnothing})_i
+$$
 
 先研究 $i=\varnothing$。显然 $\text{FWT}(\mathbf p)_{\varnothing}=1,\text{FWT}(\sum_sx^s)_{\varnothing}=2^n$，于是
 
-$$c=-2^n$$
+$$
+c=-2^n
+$$
 
 从而对于 $i\neq \varnothing$，
 
-$$\text{FWT}(\mathbf E)_i=\dfrac{\text{FWT}(\sum_sx^s)_i-2^n}{1-\text{FWT}(\mathbf p)_i}$$
+$$
+\text{FWT}(\mathbf E)_i=\dfrac{\text{FWT}(\sum_sx^s)_i-2^n}{1-\text{FWT}(\mathbf p)_i}
+$$
 
 从而我们可以得出所有的 $\text{FWT}(\mathbf E)_i,i\neq \varnothing$。但是 $\text{FWT}(\mathbf E)_{\varnothing}$ 是多少？不妨设它为 $e$。如果我们假装 $\text{FWT}(\mathbf E)_{\varnothing}=0$ 做 $\text{FWT}^{-1}$，那么有
 
-$$\mathbf{E}_i'+\dfrac{e}{2^n}=\mathbf E_i$$
+$$
+\mathbf{E}_i'+\dfrac{e}{2^n}=\mathbf E_i
+$$
 
 从而我们知道 $e=-2^n\mathbf{E}'_{\varnothing},\mathbf E_i=\mathbf E'_i-\mathbf E'_{\varnothing}$。
 

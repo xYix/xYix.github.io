@@ -14,7 +14,9 @@ tags:
 
 两个序列 $f,g$（当然，以集合为下标）的**子集卷积**为
 
-$$h_S=\sum_{L\subseteq S}\sum_{R\subseteq S}[L\cap R=\varnothing][L\cup R=S]f_Lg_R$$
+$$
+h_S=\sum_{L\subseteq S}\sum_{R\subseteq S}[L\cap R=\varnothing][L\cup R=S]f_Lg_R
+$$
 
 它是非常重要的集合卷积；事实上它可能是最重要的集合卷积。
 
@@ -30,7 +32,9 @@ $(|L|,|R|)\rightarrow |L|+|R|$ 显然就是普通的序列卷积，这提示我�
 
 显然对于 $i>|S|$ 的 $[z^ix^S]\sigma$ 我们完全不关心。大概这就是占位罢（。显然集合占位幂级数的如下定义的卷积
 
-$$\boxed{[z^rx^S]\delta=\sum_{L\cup R=S,p+q=r}[z^px^L]\sigma[z^qx^R]\tau}$$
+$$
+\boxed{[z^rx^S]\delta=\sum_{L\cup R=S,p+q=r}[z^px^L]\sigma[z^qx^R]\tau}
+$$
 
 就是子集卷积。
 
@@ -44,11 +48,15 @@ $$\boxed{[z^rx^S]\delta=\sum_{L\cup R=S,p+q=r}[z^px^L]\sigma[z^qx^R]\tau}$$
 
 回想子集卷积，我们只是单纯地 $\sigma,\tau$ or_FWT 后把对应位置的集合幂级数相乘。从而有
 
-$$[x^S]\text{FWT}(\sigma)\cdot[x^S]\text{FWT}(\sigma^{-1})=[x^S]\text{FWT}(x^{\varnothing})=1$$
+$$
+[x^S]\text{FWT}(\sigma)\cdot[x^S]\text{FWT}(\sigma^{-1})=[x^S]\text{FWT}(x^{\varnothing})=1
+$$
 
 于是我们把 $[x^S]\text{FWT}(\sigma)$（是一个形式幂级数）挨个求逆然后 $\text{FWT}^{-1}$ 回去即可。从而也可以看出集合幂级数 $\sigma$ 有逆当且仅当
 
-$$[z^0x^{\varnothing}]\sigma\neq 0$$
+$$
+[z^0x^{\varnothing}]\sigma\neq 0
+$$
 
 由于 $\text{FWT}$ 一个集合幂级数是 $O(n^22^n)$ 的，所以时间复杂度瓶颈并不在求逆上，可以使用简单常数小的暴力 $O(n^2)$ 求逆。
 
@@ -56,11 +64,15 @@ $$[z^0x^{\varnothing}]\sigma\neq 0$$
 
 考虑如下定义的 Exp：
 
-$$\text{Exp}(\sigma)=\sum_{i}\dfrac{\sigma^i}{i!}$$
+$$
+\text{Exp}(\sigma)=\sum_{i}\dfrac{\sigma^i}{i!}
+$$
 
 从而有
 
-$$\begin{aligned} \left[x^S\right] \text{FWT Exp}(\sigma)&=\sum_{i}\dfrac{\Big([x^S]\text{FWT}(\sigma)\Big)^i}{i!}\end{aligned}$$
+$$
+\begin{aligned} \left[x^S\right] \text{FWT Exp}(\sigma)&=\sum_{i}\dfrac{\Big([x^S]\text{FWT}(\sigma)\Big)^i}{i!}\end{aligned}
+$$
 
 某种意义上说：$\text{FWT}\circ\text{Exp}=\text{Exp}\circ\text{FWT}$。
 
@@ -215,7 +227,7 @@ int main(){
 
 ## [点双连通生成子图计数](https://loj.ac/problem/6729)
 
-我们都知道点/边双是和连通有[某种容斥关系](https://xyix.github.io/2020/06/11/biconnected-graph-counting/)的。在生成子图问题中我们仍然可以类推。具体来讲：
+我们都知道点/边双是和连通有[某种容斥关系](/posts/biconnected-graph-counting/)的。在生成子图问题中我们仍然可以类推。具体来讲：
 
 首先我们可以算出连通生成子图的集合幂级数 $F_0$。这个很显然，生成子图的集合幂级数 $\text{Ln}$ 一下即可。
 
@@ -223,11 +235,13 @@ int main(){
 
 但是这怎么列式子呢，你可以看看大概长这样的一个图
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/spsln.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/spsln.png" alt=""></div>
 
 于是我们得到
 
-$$\dfrac{F_{i+1}'}{zx^{\{i\}}}=\text{Ln}\dfrac{F_i'}{zx^{\{i\}}}$$
+$$
+\dfrac{F_{i+1}'}{zx^{\{i\}}}=\text{Ln}\dfrac{F_i'}{zx^{\{i\}}}
+$$
 
 其中 $F_i'$ 是强制把不包含 $i$ 的位置置 0 得到的集合幂级数。
 
@@ -237,7 +251,7 @@ $$\dfrac{F_{i+1}'}{zx^{\{i\}}}=\text{Ln}\dfrac{F_i'}{zx^{\{i\}}}$$
 
 ### 彩蛋
 
-![](https://xyix.github.io/images/sbxyx2.png)
+![](/images/sbxyx2.png)
 
 ## [边双连通生成子图计数](https://loj.ac/problem/6730)
 
@@ -251,27 +265,35 @@ $$\dfrac{F_{i+1}'}{zx^{\{i\}}}=\text{Ln}\dfrac{F_i'}{zx^{\{i\}}}$$
 
 我们考虑先求出点双的集合幂级数，然后挖掉所有的大小为 2 的位置，记为 $G_0$，再一步步把它“组装”回去。令 $G_i$ 是允许编号小于等于 $i$ 的节点成为其割点的答案。如果你真的认真考虑过了上面两个问题，你应该能轻松写出
 
-$$\dfrac{G_{i+1}'}{zx^{\{i\}}}=\text{Exp}\dfrac{G_i'}{zx^{\{i\}}}$$
+$$
+\dfrac{G_{i+1}'}{zx^{\{i\}}}=\text{Exp}\dfrac{G_i'}{zx^{\{i\}}}
+$$
 
 复杂度 $O(2^nn^3)$。
 
 ### 彩蛋
 
-![](https://xyix.github.io/images/sbxyx3.png)
+![](/images/sbxyx3.png)
 
 ## [Tutte 多项式](https://loj.ac/problem/155)
 
 一个无向图 $G=(V,E)$ 的 Tutte 多项式定义为
 
-$$T_G(x,y)=\sum_{A\subseteq E}(x-1)^{k(A)-k(E)}(y-1)^{k(A)+|A|-|V|}$$
+$$
+T_G(x,y)=\sum_{A\subseteq E}(x-1)^{k(A)-k(E)}(y-1)^{k(A)+|A|-|V|}
+$$
 
 我们先考虑计算连通的 $A$，之后再 Exp 上去。
 
 设 $f_S$ 是所有使 $S$ 连通的 $A$ 的 $(y-1)^{1+|A|-|S|}$ 之和。考虑加一个节点 $i$。设 $S,i$ 之间的边数为 $G(S,i)$。则如果加入 $i$ 则应该乘的是
 
-$$\sum_{j=1}^{G(S,i)}{G(S,i)\choose j}(y-1)^{j-1}$$
+$$
+\sum_{j=1}^{G(S,i)}{G(S,i)\choose j}(y-1)^{j-1}
+$$
 
-$$\dfrac{y^{G(S,i)}-1}{y-1}$$
+$$
+\dfrac{y^{G(S,i)}-1}{y-1}
+$$
 
 可以发现如果新的连通块是由多个 $S$ 拼成，那么只需要对每个 $S$ 分别乘这个东西就好了。那么暴力把 $n$ 个 $i$ 全都加进去就做完了。复杂度 $O(n^22^n)$。
 
@@ -279,7 +301,7 @@ $$\dfrac{y^{G(S,i)}-1}{y-1}$$
 
 ### 彩蛋
 
-![](https://xyix.github.io/images/sbxyx4.png)
+![](/images/sbxyx4.png)
 
 ## [生成仙人掌计数](https://loj.ac/problem/6719)
 
@@ -289,37 +311,45 @@ $$\dfrac{y^{G(S,i)}-1}{y-1}$$
 
 - 和根节点在一个环。那么这个子树是一个仙人掌，加上 $i$ 也必须还是一个仙人掌。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/cactus.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/cactus.png" alt=""></div>
 
 那么我们设 $[x^s]Caccac$ 是点集为 $s\cup\{i\}$ 的仙人掌，而且删掉 $i$ 还是仙人掌的数量，从而答案就是
 
-$$zx^{\{i\}}\text{Exp}(Caccac)$$
+$$
+zx^{\{i\}}\text{Exp}(Caccac)
+$$
 
-[经验](https://xyix.github.io/2020/06/09/cactus-counting/)告诉我们应该分别讨论单纯的点和环两种情况。设前一种为 $S_v$：$v$ 表示儿子为 $v$，后一种为 $C_v$：$v$ 表示 $i$ 在环上的“下一个点”是 $v$，显然 $C$ 会因此算两遍。然后还要特判只有 $i,v$ 的迫真环，从而有
+[经验](/posts/cactus-counting/)告诉我们应该分别讨论单纯的点和环两种情况。设前一种为 $S_v$：$v$ 表示儿子为 $v$，后一种为 $C_v$：$v$ 表示 $i$ 在环上的“下一个点”是 $v$，显然 $C$ 会因此算两遍。然后还要特判只有 $i,v$ 的迫真环，从而有
 
-$$Caccac=\dfrac 12\sum S+\dfrac 1 2\sum C$$
+$$
+Caccac=\dfrac 12\sum S+\dfrac 1 2\sum C
+$$
 
 $[x^s]S_v$ 非常的简单，它只要求 $(i,v)$ 有边，而且 $s$ 是一个仙人掌。
 
 接下来考虑 $C$。$C$ 是由一串仙人掌串在一个环上，不妨修改 $C_v$ 的定义：不再要求 $(v,i)$ 有边，我们只是简单地把仙人掌串到了 $v$ 处。也不妨利用一下 $S$，它也不再要求 $(v,i)$ 有边。最后统计的时候强行要求即可。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/cactuus.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/cactuus.png" alt=""></div>
 
 （↑ 请注意实际上 $C,S$ 的“占地”并不包含 $i$，图中只是为了方便理解）
 
 于是可以写出
 
-$$C_v=S_v\sum_{(u,v)}C_u$$
+$$
+C_v=S_v\sum_{(u,v)}C_u
+$$
 
 初值为 $C_i=x^{\varnothing}$。考虑
 
-$$\text{FWT}(C_v)=\text{FWT}(S_v)\times\sum_{(u,v)}\text{FWT}(C_u)$$
+$$
+\text{FWT}(C_v)=\text{FWT}(S_v)\times\sum_{(u,v)}\text{FWT}(C_u)
+$$
 
 于是从较低的 $z^i$ 推上去即可。时间复杂度为 $\sum_{i=1}^nO(n^32^n)$。
 
 ### 彩蛋
 
-![](https://xyix.github.io/images/sbxyx5.png)
+![](/images/sbxyx5.png)
 
 # 后记
 

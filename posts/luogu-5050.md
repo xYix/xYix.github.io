@@ -11,19 +11,27 @@ tags:
 
 首先可以把多项式 $F$ 写成一个列向量
 
-$$\mathbf f=\begin{pmatrix}f_0\\f_1\\\vdots\\f_{n-1}\end{pmatrix}$$
+$$
+\mathbf f=\begin{pmatrix}f_0\\f_1\\\vdots\\f_{n-1}\end{pmatrix}
+$$
 
 那么多点求值就是一个范德蒙德矩阵 $\mathbf A$ 乘它：
 
-$$\begin{pmatrix}1&a_0&a_0^2&\dots&a_0^{n-1}\\1&a_1&a_1^2&\dots&a_1^{n-1}\\\vdots&\vdots&\vdots&\ddots&\vdots\\1&a_{n-1}&a_{n-1}^2&\dots&a_{n-1}^{n-1}\end{pmatrix}\mathbf f$$
+$$
+\begin{pmatrix}1&a_0&a_0^2&\dots&a_0^{n-1}\\1&a_1&a_1^2&\dots&a_1^{n-1}\\\vdots&\vdots&\vdots&\ddots&\vdots\\1&a_{n-1}&a_{n-1}^2&\dots&a_{n-1}^{n-1}\end{pmatrix}\mathbf f
+$$
 
 而 $\mathbf A^T\mathbf f$ 不算难求，它是
 
-$$ans_d=\sum_{i=0}^{n-1}f_ia_i^d$$
+$$
+ans_d=\sum_{i=0}^{n-1}f_ia_i^d
+$$
 
 也就是
 
-$$[x^d]\sum_{i=0}^{n-1}\dfrac{f_i}{1-a_ix}$$
+$$
+[x^d]\sum_{i=0}^{n-1}\dfrac{f_i}{1-a_ix}
+$$
 
 这有一个 $\Theta(n\log^2 n)$ 做法，分治合并求解，设左边分子分母为 $(u_L,v_L)$，右边分子分母为 $(u_R,v_R)$，则合并后为 $(u_Lv_R+u_Rv_L,v_Lv_R)$。不妨把准确的过程写出来：
 
@@ -53,7 +61,7 @@ $$[x^d]\sum_{i=0}^{n-1}\dfrac{f_i}{1-a_ix}$$
 
 然后观察原来的分治过程。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/polypolyeval.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/polypolyeval.png" alt=""></div>
 
 请注意第二/三层之间的那组箭头**不是** $4\times 4$ 的。
 

@@ -143,3 +143,80 @@ surreal-number
 algorithm
 1
 game-theory
+agc-016-d
+AGC016D 题解 - XOR Replace
+solution
+0
+agc-016-f
+AGC016F 题解 - Games on DAG
+solution
+1
+game-theory
+agc-032-f
+AGC032F 题解 - One Third
+solution
+1
+probability-expectation
+agc-034-f
+AGC034F 题解 - RNG and XOR
+solution
+2
+probability-expectation
+set-power-series
+cf-1286-f
+CF1286F 题解 - Harry the Potter
+solution
+1
+set-power-series
+cf-1305-g
+CF1305G 题解 - Kuroni and Antihype
+solution
+1
+set-DP
+euler-trans-in-group-theory
+群论视角下的欧拉变换
+algorithm
+3
+counting
+generating-function
+group-counting
+loj-6077
+loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对
+solution
+1
+counting
+luogu-5050
+多点求值的新做法
+solution
+1
+polynomial
+my-poly-module
+我的多项式板子
+algorithm
+1
+polynomial
+set-power-series
+集合幂级数学习笔记
+algorithm
+1
+set-power-series
+sx2019
+省选 2019 补题记录
+solution
+1
+pigeon
+uoj-272
+uoj#272 题解 - 【清华集训2016】石家庄的工人阶级队伍比较坚强
+solution
+1
+set-power-series
+uoj-310
+uoj#310 题解 - 【UNR#2】黎明前的巧克力
+solution
+1
+set-power-series
+young-tableau
+杨表学习笔记
+algorithm
+1
+young-tableau

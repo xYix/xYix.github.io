@@ -22,11 +22,15 @@ tags:
 >
 > 这个要求有点奇怪。所以可以想到枚举大小和每个方案，这时我们只能决定使用多少个这种方案（要求我们不考虑它们的顺序），所以 $\text{Euler}$ 变换即
 >
->$$\prod_{i}\prod_{j=1}^{f_i}(1+x^i+x^{2i}+\dots)$$
+>$$
+>\prod_{i}\prod_{j=1}^{f_i}(1+x^i+x^{2i}+\dots)
+>$$
 >
 >整理得
 >
->$$\prod_{i=1}^{\infty}(1-x^i)^{-f_i}$$
+>$$
+>\prod_{i=1}^{\infty}(1-x^i)^{-f_i}
+>$$
 >
 >（不得不说生成函数真的是数数困难患者的福音，原来见到“无标号”这三个字我只能懵 B，现在拿 $\text{Euler}$ 变换刚就好了）
 
@@ -34,7 +38,9 @@ tags:
 
 首先枚举儿子数 $i$。考虑应用 burnside 引理，显然一个置换 $f$ 的不动点只与其循环拆分（有序，显然循环间可以通过最前一个元素的位置分出顺序） $\{a_i\}$ 有关。具体来说是
 
-$$\sum_{i}\dfrac{1}{i!}\sum_{f}\prod F(x^{a_i})$$
+$$
+\sum_{i}\dfrac{1}{i!}\sum_{f}\prod F(x^{a_i})
+$$
 
 （解释一下上式：循环内所有组的“染色”方案必须完全一样，选择大小均为 $s$ 方案数就只有 $[x^s]F$，但是“占地”却是 $a_is$，故有上式）
 
@@ -42,21 +48,31 @@ $$\sum_{i}\dfrac{1}{i!}\sum_{f}\prod F(x^{a_i})$$
 
 思考有多少个循环能被循环拆分 $\{a_i\}$ 描述。首先决定每个标号属于哪个循环，然后循环内可以圆排列，而这样搞会破坏循环原本的有序，所以还要再除以循环数的阶乘。
 
-$$\sum_{i}\dfrac 1{i!}\sum_{l,\sum a_j=i}\dfrac 1{l!}{i\choose a_1,a_2,...a_l}\prod_{j=1}^lF(x^{a_i})(a_i-1)!$$
+$$
+\sum_{i}\dfrac 1{i!}\sum_{l,\sum a_j=i}\dfrac 1{l!}{i\choose a_1,a_2,...a_l}\prod_{j=1}^lF(x^{a_i})(a_i-1)!
+$$
 
-$$\sum_{i}\sum_{l,\sum a_j=i}\dfrac{1}{l!}\prod_{j=1}^l\dfrac{F(x^{a_i})}{a_i}$$
+$$
+\sum_{i}\sum_{l,\sum a_j=i}\dfrac{1}{l!}\prod_{j=1}^l\dfrac{F(x^{a_i})}{a_i}
+$$
 
 我们发现现在后面这个部分可以写成 $\text{Exp}$ 的形式。设
 
-$$G(x,y)=\sum_{i=1}^{\infty}\dfrac{F(x^i)y}{i}$$
+$$
+G(x,y)=\sum_{i=1}^{\infty}\dfrac{F(x^i)y}{i}
+$$
 
 则我们得到
 
-$$\sum_{i}[y^i]e^{G}$$
+$$
+\sum_{i}[y^i]e^{G}
+$$
 
 直接带入 $y=1$ 即可。我们得到
 
-$$\text{Exp}\left(\sum_{i=1}^{\infty}\dfrac{F(x^i)}{i}\right)$$
+$$
+\text{Exp}\left(\sum_{i=1}^{\infty}\dfrac{F(x^i)}{i}\right)
+$$
 
 ？？？
 

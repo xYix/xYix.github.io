@@ -18,7 +18,7 @@ tags:
 
 **杨图**（记为 $\lambda$）大概就是一个长成这样的东西：
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/youngtable.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/youngtable.png" alt=""></div>
 
 每行的列数称为 $\lambda_1,\lambda_2,...\lambda_m$。$\lambda_i$ 单调不增，和为 $n$，称为 $\lambda\vdash n$。
 
@@ -28,11 +28,15 @@ tags:
 >
 > 标准杨表总数为
 >
-> $$f_{\lambda}=\dfrac{|\lambda|!}{\prod_{p\in \lambda}\text{hook}(p)}$$
+> $$
+> f_{\lambda}=\dfrac{|\lambda|!}{\prod_{p\in \lambda}\text{hook}(p)}
+> $$
 > 
 > 也可以完全只用 $\lambda$ 表达：
 >
-> $$f_{\lambda}=n!\dfrac{\prod_{i<j}(\lambda_i-i-\lambda_j+j)}{\prod_{i=1}^m(\lambda+m-i)!}$$
+> $$
+> f_{\lambda}=n!\dfrac{\prod_{i<j}(\lambda_i-i-\lambda_j+j)}{\prod_{i=1}^m(\lambda+m-i)!}
+> $$
 
 ## 半标准杨表，勾长公式
 
@@ -40,7 +44,9 @@ tags:
 
 设值域为 $r$，半标准杨表数为
 
-> $$\prod_{p\in\lambda}\dfrac{r+p_y-p_x}{\text{hook}(p)}$$
+> $$
+> \prod_{p\in\lambda}\dfrac{r+p_y-p_x}{\text{hook}(p)}
+> $$
 
 ## 斜杨图
 
@@ -48,11 +54,13 @@ tags:
 
 一个**兴奋图**（~~写出这个东西的英文名可能导致寿命减少~~）是指，$\mu$ 经过一系列的**兴奋运动**形成的 $\lambda$ 的某个子集。对 $\mu$ 的兴奋运动是指，将一个下方右方右下方都属于 $\lambda/\mu$ 的属于 $\mu$ 的方格移动到其右下方。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/excited.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/excited.png" alt=""></div>
 
 如图是 $\mu$ 的所有可能的兴奋图。记为 $\mathcal{E}(\lambda/\mu)$。如下是勾长公式。
 
-> $$|\lambda/\mu|!\sum_{D\in\mathcal E{(\lambda/\mu)}}\prod_{p\in \lambda/D}\dfrac{1}{\text{hook}_{\lambda}(p)}$$
+> $$
+> |\lambda/\mu|!\sum_{D\in\mathcal E{(\lambda/\mu)}}\prod_{p\in \lambda/D}\dfrac{1}{\text{hook}_{\lambda}(p)}
+> $$
 
 # RSK 算法，杨表与 LIS 问题
 
@@ -69,7 +77,7 @@ tags:
 
 如下演示了一个行插入过程。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/RSK1.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/RSK1.png" alt=""></div>
 
 显然最后新增的格子一定在边角，即其下方和右方都没有格子。
 
@@ -89,7 +97,7 @@ tags:
 
 如下演示了一个删除过程。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/RSK2.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/RSK2.png" alt=""></div>
 
 很明显删除就是行插入的逆操作。
 
@@ -99,13 +107,17 @@ tags:
 
 > 上述算法构成了 $(P,Q)$ 到 $S_n$ 的一一映射。也就是说，
 >
-> $$\sum_{\lambda\vdash n}f_{\lambda}^2=n!$$
+> $$
+> \sum_{\lambda\vdash n}f_{\lambda}^2=n!
+> $$
 
 不禁让人联想到 prüfer 序列。
 
 同时对于置换（当然也是排列）$\pi\rightarrow (P,Q)$，我们有 $\pi^{-1}\rightarrow(Q,P)$，从而每一个标准杨表 $P$ 对应一个**对合**，即逆等于自身的置换。对对合计数，我们得到：
 
-> $$\sum_{\lambda\vdash n}f_{\lambda}=\sum_{k=0}^{\lfloor n/2\rfloor}{n\choose 2k}(2k-1)!!$$
+> $$
+> \sum_{\lambda\vdash n}f_{\lambda}=\sum_{k=0}^{\lfloor n/2\rfloor}{n\choose 2k}(2k-1)!!
+> $$
 >
 > 其中双阶乘 $(2k-1)!!$ 定义为 $(2k-1)(2k-3)...3\cdot 1$。
 
@@ -113,7 +125,9 @@ tags:
 
 一个**广义置换**大概可以理解为可重集上的置换，比如
 
-$$\begin{pmatrix}1&1&2&2&2&3\\1&3&1&2&2&2\end{pmatrix}$$
+$$
+\begin{pmatrix}1&1&2&2&2&3\\1&3&1&2&2&2\end{pmatrix}
+$$
 
 它对应一个**广义置换矩阵**，这个矩阵的第 $i$ 行 $j$ 列表示 $i$ 到 $j$ 的个数。
 
@@ -147,7 +161,9 @@ LIS 即最长上升子序列，LDS 即最长下降子序列。
 
 爆枚杨表形态即可。整数拆分 $p(n)$ 渐进意义上等于
 
-$$p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}$$
+$$
+p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}
+$$
 
 顺瑇一提这个公式是拉马努金发现的（
 
@@ -159,7 +175,7 @@ $$p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}$$
 
 卡塔兰数的组合意义即从 $(0,0)$ 走到 $(n,n)$，任何时刻横坐标不能小于纵坐标。考虑 $X_i$ 为横坐标到达 $i$ 的时间，$Y_i$ 亦然，那么它就对应如下的一个杨表。
 
-<div style="width:25%;margin:auto"><img src="https://xyix.github.io/images/cata.png" alt=""></div>
+<div style="width:25%;margin:auto"><img src="/images/cata.png" alt=""></div>
 
 显然一个 $2\times n$ 的标准杨表和路径一一对应。从而 $2\times n$ 的标准杨表数即卡塔兰数。
 
@@ -167,7 +183,9 @@ $$p(n)\sim\dfrac{1}{4\sqrt 3 n}e^{\pi\sqrt{\frac{2n}{3}}}$$
 
 显然题目要求的路径对应一个 $\{a_1,a_2,...,a_n\}$ 的杨表。式子化出来是
 
-$$\prod\dfrac{a_i!}{(a_i+n-i)!}\prod_{i<j}(a_i-i-a_j+j)$$
+$$
+\prod\dfrac{a_i!}{(a_i+n-i)!}\prod_{i<j}(a_i-i-a_j+j)
+$$
 
 FFT 统计有多少对 $(i,j)$ 满足 $a_i-i-a_j+j=k$，然后就好了。
 
@@ -175,17 +193,21 @@ FFT 统计有多少对 $(i,j)$ 满足 $a_i-i-a_j+j=k$，然后就好了。
 
 > 给出平面上的 $n$ 个点对 $(\mathcal A_i,\mathcal E_i)$，记 $P_i=P(\mathcal A_i\rightarrow \mathcal E_i)$。则从 $P_1,P_2,...,P_n$ 中各取一条路径，使得它们互不相交的方案数为
 >
-> $$\text{det}\left|\ |P(\mathcal A_i\rightarrow E_j)\right|\ |$$
+> $$
+> \text{det}\left|\ |P(\mathcal A_i\rightarrow E_j)\right|\ |
+> $$
 >
 > 事实上该引理适用于所有有向无环图。
 
 考虑容斥掉所有存在相交的方案。对于一个相交的方案，我们找到一个最大（这个最大可以任意定义，只要唯一即可）的相交点，则我们可以交换相交后的这条路径。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/LGVlemma.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/LGVlemma.png" alt=""></div>
 
 为了让它们相互抵消，交换后容斥系数应当乘以 -1。我们发现这正是置换的符号 $\text{sgn}(\sigma)$ 的定义。（-1 的逆序对个数次方）写出式子：
 
-$$\text{ans}=\sum_{\sigma}\text{sgn}(\sigma)\prod_{i}P(\mathcal A_i,\mathcal E_{\sigma(i)})$$
+$$
+\text{ans}=\sum_{\sigma}\text{sgn}(\sigma)\prod_{i}P(\mathcal A_i,\mathcal E_{\sigma(i)})
+$$
 
 这正是行列式的定义。
 
@@ -199,11 +221,13 @@ $$\text{ans}=\sum_{\sigma}\text{sgn}(\sigma)\prod_{i}P(\mathcal A_i,\mathcal E_{
 
 1-Dyck Path 就是卡塔兰路径。k-Dyck Path 是 $k$ 条卡塔兰路径，但第二条必须完全在第一条“内部”，第三条必须完全在第二条内部……
 
-<div style="width:50%;margin:auto"><img src="https://xyix.github.io/images/dyck_path.png" alt=""></div>
+<div style="width:50%;margin:auto"><img src="/images/dyck_path.png" alt=""></div>
 
 > 一元素在 $[1,n]$ 的 $\lambda_i$ **均为偶数**的半标准杨表和 $n+1$ 阶的 k-Dyck Path 对应，且公式如下
 > 
-> $$b_{n,k}=\prod_{1\le i\le j\le n}\dfrac{2k+i+j}{i+j}$$
+> $$
+> b_{n,k}=\prod_{1\le i\le j\le n}\dfrac{2k+i+j}{i+j}
+> $$
 
 记录下每条 Dyck_Path 的由上方向转为右方向的拐角即可证明。
 
