@@ -10,7 +10,7 @@
     win.AnalyzePathname = function (s){
         let ret = [], t;
         for (t of (s.startsWith('/') ? s.substr(1) : s).split('/'))
-            ret[ret.length] = t;
+            if(t.match('.') !== '.')ret[ret.length] = t;
 		return ret;
     }
     win.WriteSideBar = function (data,title){
