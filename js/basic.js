@@ -87,4 +87,5 @@
             }
         }
     }
+    win.title='x义x 的 blog - '+win.Title;
 })(document);
