@@ -21,7 +21,7 @@
             ret[ret.length] = t;
 		return ret;
     }
-    win.WriteSideBar = function (data,title){
+    win.WriteSideBar = function (data,title,funval){
         let SideBar=document.createElement('div');
         SideBar.className='sidebar';
             let SideBarConBlock=document.createElement('div');
@@ -29,14 +29,18 @@
                 let SideBarTitle=document.createElement('center');
                 SideBarTitle.className='title';
                     let SideBarTitleContent1=document.createElement('h1');
-                    SideBarTitleContent1.textContent='x义x 的自制 BLOG';
+                    if(funval !== undefined) SideBarTitleContent1.textContent='XJOI';
+                    else SideBarTitleContent1.textContent='x义x 的自制 BLOG';
                 SideBarTitle.appendChild(SideBarTitleContent1);
-                let SideBarTitleContent2=document.createElement('p');
-                for(let i=0;i<title.length;i=i+1){
-                    if(i==0) SideBarTitleContent2.appendChild(document.createTextNode('您现在在：'+title[i]));
-                    else SideBarTitleContent2.appendChild(document.createTextNode(title[i]));
-                    if(i<title.length-1) SideBarTitleContent2.appendChild(document.createElement('br'));
-                }
+                    let SideBarTitleContent2=document.createElement('p');
+                    if(funval !== undefined) SideBarTitleContent2.textContent='since 2009';
+                    else{
+                        for(let i=0;i<title.length;i=i+1){
+                            if(i==0) SideBarTitleContent2.appendChild(document.createTextNode('您现在在：'+title[i]));
+                            else SideBarTitleContent2.appendChild(document.createTextNode(title[i]));
+                            if(i<title.length-1) SideBarTitleContent2.appendChild(document.createElement('br'));
+                        }
+                    }
                 SideBarTitle.appendChild(SideBarTitleContent2);
                 SideBarConBlock.appendChild(SideBarTitle);
                 let SideBarCon=document.createElement('div');
@@ -79,6 +83,7 @@
     win.Type=win.Search['type'];
     win.Sortby=win.Search['sortby'];
     win.Page=win.Search['page'];
+    win.Funval=win.Search['funval'];
     if(win.Page === undefined) win.Page = 0;
     // Title
     win.Title=[];
