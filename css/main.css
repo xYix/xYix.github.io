@@ -26,6 +26,10 @@ a:hover{
     padding: 0;
     margin: 20px 20px;
 }
+.sidebar-content-block{
+    padding: 0;
+    margin: 10px 10px;
+}
 .sidebar{
     background: white;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 

@@ -24,26 +24,23 @@
     win.WriteSideBar = function (data,title){
         let SideBar=document.createElement('div');
         SideBar.className='sidebar';
-            let SideBarTitle=document.createElement('center');
-            SideBarTitle.className='title';
-                let SideBarTitleContent1=document.createElement('h1');
-                SideBarTitleContent1.textContent='x义x 的自制 BLOG';
-            SideBarTitle.appendChild(SideBarTitleContent1);
-            for(let i=0;i<title.length;i=i+1){
-                let SideBarTitleContent2=document.createElement('p');
-                SideBarTitleContent2.textContent=title[i];
-                if(i === 0) SideBarTitleContent2.textContent='您现在在：'+SideBarTitleContent2.textContent;
-                SideBarTitle.appendChild(SideBarTitleContent2);
-            }
-        SideBar.appendChild(SideBarTitle);
             let SideBarConBlock=document.createElement('div');
-            SideBarConBlock.className='content-block';
+            SideBarConBlock.className='sidebar-content-block';
+                let SideBarTitle=document.createElement('center');
+                SideBarTitle.className='title';
+                    let SideBarTitleContent1=document.createElement('h1');
+                    SideBarTitleContent1.textContent='x义x 的自制 BLOG';
+                SideBarTitle.appendChild(SideBarTitleContent1);
+                let SideBarTitleContent2=document.createElement('p');
+                for(let i=0;i<title.length;i=i+1){
+                    if(i==0) SideBarTitleContent2.appendChild(document.createTextNode('您现在在：'+title[i]));
+                    else SideBarTitleContent2.appendChild(document.createTextNode(title[i]));
+                    if(i<title.length-1) SideBarTitleContent2.appendChild(document.createElement('br'));
+                }
+                SideBarTitle.appendChild(SideBarTitleContent2);
+                SideBarConBlock.appendChild(SideBarTitle);
                 let SideBarCon=document.createElement('div');
                 SideBarCon.className='content';
-                    let xYixSign=document.createElement('p');
-                    xYixSign.className='lil-p';
-                    xYixSign.textContent='……就算是单程票，也是可以的吧？';
-                SideBarCon.appendChild(document.createElement('center').appendChild(xYixSign));
                         let Text1=document.createElement('strong');
                         Text1.textContent='· 回到首页';
                     let aText1=document.createElement('a');
