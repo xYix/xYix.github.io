@@ -29,9 +29,12 @@
                 let SideBarTitleContent1=document.createElement('h1');
                 SideBarTitleContent1.textContent='x义x 的自制 BLOG';
             SideBarTitle.appendChild(SideBarTitleContent1);
+            for(let i=0;i<title.length;i=i+1){
                 let SideBarTitleContent2=document.createElement('p');
-                SideBarTitleContent2.textContent='您现在在：'+title;
-            SideBarTitle.appendChild(SideBarTitleContent2);
+                SideBarTitleContent2.textContent=title[i];
+                if(i === 0) SideBarTitleContent2.textContent='您现在在：'+SideBarTitleContent2.textContent;
+                SideBarTitle.appendChild(SideBarTitleContent2);
+            }
         SideBar.appendChild(SideBarTitle);
             let SideBarConBlock=document.createElement('div');
             SideBarConBlock.className='content-block';
@@ -81,35 +84,34 @@
     win.Page=win.Search['page'];
     if(win.Page === undefined) win.Page = 0;
     // Title
-    win.Title='';
-    if(win.Pathname.length === 0) win.Title='首页';
+    win.Title=[];
+    if(win.Pathname.length === 0) win.Title[0]='首页';
     else{
-        if(win.Pathname[0] === 'archieve') win.Title='文章一览';
-        if(win.Pathname[0] === 'tags') win.Title='标签一览';
-        if(win.Pathname[0] === 'songlist') win.Title='网义云音乐';
+        if(win.Pathname[0] === 'archieve') win.Title[0]='文章一览';
+        if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
+        if(win.Pathname[0] === 'songlist') win.Title[0]='网义云音乐';
         if(win.Pathname[0] === 'archieve'){
-            win.Title += '：';
             if(win.Type !== undefined){
-                win.Title += '分类为：';
-                if(win.Type == 'solution') win.Title += '题解';
-                else if(win.Type == 'algorithm') win.Title += '算法/知识点';
-                else if(win.Type == 'other') win.Title += '游记/其他';
-                else win.Title += '不明分类';
-                win.Title += '；'
+                let nowlen=win.Title.length;
+                win.Title[nowlen] = '分类为：';
+                if(win.Type == 'solution') win.Title[nowlen] += '题解';
+                else if(win.Type == 'algorithm') win.Title[nowlen] += '算法/知识点';
+                else if(win.Type == 'other') win.Title[nowlen] += '游记/其他';
+                else win.Title[nowlen] += '不明分类';
             }
             if(win.Tags.length !== 0){
-                win.Title += '具有标签：';
+                let nowlen=win.Title.length;
+                win.Title[nowlen] = '具有标签：';
                 for (let i = 0; i < win.Tags.length; i = i + 1){
                     if(win.tags_list[win.Tags[i]] !== undefined)
-                        win.Title += win.tags_list[win.Tags[i]];
-                    else win.Title += '不明标签';
-                    if(i !== win.Tags.length - 1) win.Title += '，';
+                        win.Title[nowlen] += win.tags_list[win.Tags[i]];
+                    else win.Title[nowlen] += '不明标签';
+                    if(i !== win.Tags.length - 1) win.Title[nowlen] += '，';
                 }
-                win.Title += '；';
             }
         }
     }
-    win.title='x义x 的 blog - ' + win.Title;
+    win.title='x义x 的 blog - ' + win.Title[0];
     win.WriteTitle2 = function (data){
         let AddText = function (twin,tdata,ttext,eletag){
             let Ttext=twin.createElement(eletag);
