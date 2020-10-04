@@ -81,10 +81,10 @@
     win.Title='';
     if(win.Pathname.length === 0) win.Title='首页';
     else{
-        if(win.Pathname[0] === 'achieve') win.Title='文章一览';
+        if(win.Pathname[0] === 'archieve') win.Title='文章一览';
         if(win.Pathname[0] === 'tags') win.Title='标签一览';
         if(win.Pathname[0] === 'songlist') win.Title='网义云音乐';
-        if(win.Pathname.length !== 1){
+        if(win.Pathname[0] === 'archieve'){
             win.Title += '，';
             if(win.Type !== undefined){
                 win.Title += '分类为：';
