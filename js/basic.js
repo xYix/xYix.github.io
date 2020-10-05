@@ -80,9 +80,9 @@
         win.Tags=win.AnalyzeTags(win.Search['tags']);
         win.Type=win.Search['type'];
         win.Sortby=win.Search['sortby'];
-        win.Page=parseInt(win.Search['page']);
+        if(win.Search['page'] === undefined) win.Page = 0;
+        else win.Page=parseInt(win.Search['page']);
         win.Funval=win.Search['funval'];
-        if(win.Page === undefined) win.Page = 0;
         win.TrueSearch={
             Tags : win.Tags,
             Type : win.Type,
