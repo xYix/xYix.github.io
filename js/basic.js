@@ -123,7 +123,7 @@
     win.WriteTitle2 = function (data){
         let AddText = function (twin,tdata,ttext,eletag){
             let Ttext=twin.createElement(eletag);
-            if(win.Funval !== undefined && eletag === 'h1') Ttext..textContent = '集天下英才 育天下人';
+            if(win.Funval !== undefined && eletag === 'h1') Ttext.textContent = '集天下英才 育天下人';
             else Ttext.textContent = ttext;
             let TTtext=twin.createElement('center');
             TTtext.appendChild(Ttext);
