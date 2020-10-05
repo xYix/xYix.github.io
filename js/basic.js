@@ -12,7 +12,7 @@
     win.AnalyzePathname = function (s){
         let ret = [], t;
         for (t of (s.startsWith('/') ? s.substr(1) : s).split('/'))
-            if(t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog') ret[ret.length] = t;
+            if(t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog' && t !== '') ret[ret.length] = t;
             else if(t === '404.html') win.isError = 1;
 		return ret;
     }
@@ -98,7 +98,9 @@
     if(win.Page === undefined) win.Page = 0;
     // Title
     win.Title=[];
-    if(win.Pathname.length === 0) win.Title[0]='首页';
+    if(win.Pathname.length === 0)
+        if(win.isError === 0) win.Title[0]='首页';
+        else win.Title[0]='未知页面';
     else{
         if(win.Pathname[0] === 'archieve') win.Title[0]='文章一览';
         if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
