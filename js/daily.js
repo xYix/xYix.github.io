@@ -37,6 +37,7 @@
         '2020/10/5：x义x 被 T1 虐杀，没写出 T2，被 T3 虐杀',
         'Oura-Mugi Katsumi Hayashi数值指导　算术/知识　生成功能',
         '超真实数学　算术/知识　博览会理论',
+        '据说在网址后面加上 ?funval=233（如果已经有问号则加 &funval=233）会有奇妙的事情发生',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
