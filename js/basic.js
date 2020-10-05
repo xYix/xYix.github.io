@@ -74,21 +74,24 @@
         }
         return ret;
     }
-    win.Pathname=win.AnalyzePathname(location.pathname);
-    win.Search=win.AnalyzeSearch(location.search);
-    win.Tags=win.AnalyzeTags(win.Search['tags']);
-    win.Type=win.Search['type'];
-    win.Sortby=win.Search['sortby'];
-    win.Page=win.Search['page'];
-    win.Funval=win.Search['funval'];
-    if(win.Page === undefined) win.Page = 0;
-    win.TrueSearch={
-        Tags : win.Tags,
-        Type : win.Type,
-        Sortby : win.Sortby,
-        Page : win.Page,
-        Funval : win.Funval,
-    };
+    win.InitAnalyze = function (){
+        win.Pathname=win.AnalyzePathname(location.pathname);
+        win.Search=win.AnalyzeSearch(location.search);
+        win.Tags=win.AnalyzeTags(win.Search['tags']);
+        win.Type=win.Search['type'];
+        win.Sortby=win.Search['sortby'];
+        win.Page=parseInt(win.Search['page']);
+        win.Funval=win.Search['funval'];
+        if(win.Page === undefined) win.Page = 0;
+        win.TrueSearch={
+            Tags : win.Tags,
+            Type : win.Type,
+            Sortby : win.Sortby,
+            Page : win.Page,
+            Funval : win.Funval,
+        };
+    }
+    win.InitAnalyze();
     win.WriteSideBar = function (data,title,funval){
         let SideBar=win.createElement('div');
         SideBar.className='sidebar';
@@ -187,6 +190,8 @@
                     if(i !== win.Tags.length - 1) win.Title[nowlen] += '，';
                 }
             }
+            let nowlen=win.Title.length;
+            win.Title[nowlen] = '第 '+(win.Page+1)+' 页';
         }
     }
     win.title='x义x 的 blog - ' + win.Title[0];
@@ -226,6 +231,7 @@
                     }
                     AddText(win,data,Taginfo,'h3');
                 }
+                AddText(win,data,'第 '+(win.Page+1)+' 页','h3');
             }
         }
     }
@@ -270,20 +276,16 @@
             let Postinfo_title=win.createElement('th');
             let Postinfo_title_a=win.createElement('a');
             Postinfo_title_a.href='/posts/'+postinfo.post_name+'.html';
-            let Postinfo_title_strong=win.createElement('strong');
-            Postinfo_title_strong.textContent=postinfo.post_chinese_name;
-            Postinfo_title_a.appendChild(Postinfo_title_strong);
+            Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title.appendChild(Postinfo_title_a);
         PostinfoBlock.appendChild(Postinfo_title);
             let Postinfo_type=win.createElement('th');
             if(postinfo.type_name !== 'none'){
                 let Postinfo_type_a=win.createElement('a');
                 Postinfo_type_a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Type : postinfo.type_name}));
-                let Postinfo_type_strong=win.createElement('strong');
-                if(postinfo.type_name === 'solution') Postinfo_type_strong.textContent='题解';
-                else if(postinfo.type_name === 'algorithm') Postinfo_type_strong.textContent='算法/知识点';
-                else Postinfo_type_strong.textContent='游记/其他';
-                Postinfo_type_a.appendChild(Postinfo_type_strong);
+                if(postinfo.type_name === 'solution') Postinfo_type_a.textContent='题解';
+                else if(postinfo.type_name === 'algorithm') Postinfo_type_a.textContent='算法/知识点';
+                else Postinfo_type_a.textContent='游记/其他';
                 Postinfo_type.appendChild(Postinfo_type_a);
             }
             else{
@@ -296,9 +298,7 @@
             for(let i=0;i<postinfo.tag.length;i=i+1){
                 let Postinfo_tags_a=win.createElement('a');
                 Postinfo_tags_a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]]}));
-                let Postinfo_tags_strong=win.createElement('strong');
-                Postinfo_tags_strong.textContent=win.tags_list[postinfo.tag[i]];
-                Postinfo_tags_a.appendChild(Postinfo_tags_strong);
+                Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
                 Postinfo_tags.appendChild(Postinfo_tags_a);
                 if(i!==postinfo.tag.length-1) Postinfo_tags.appendChild(win.createTextNode(','));
             }
@@ -319,14 +319,13 @@
             if(postinfo.tag.indexOf(win.Tags[i]) === -1) return 0;
         }
         post_count.value=post_count.value+1;
-        console.log(post_count.value);
         if(post_count.value<=win.Page*win.post_per_page) return 0;
         if(post_count.value>(win.Page+1)*win.post_per_page) return 0;
         return 1;
     }
     //绘制文章一览
+    win.post_count={value : 0};
     win.WriteArchieve = function(data){
-        let post_count={value : 0};
         let ArchieveBlock = win.createElement('center');
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
@@ -345,9 +344,52 @@
         ArchieveTitle.appendChild(Titleh3);
         ArchieveTable.appendChild(ArchieveTitle);
         for(let i=0;i<win.archieve_list.length;i=i+1)
-            if(win.isLegalPost(win.archieve_list[i],post_count)){
+            if(win.isLegalPost(win.archieve_list[i],win.post_count)){
                 win.WritePostinfo(ArchieveTable,win.archieve_list[i]);
             }
         data.appendChild(ArchieveTable);
+        if(win.post_count.value === 0){
+            let ErrorText = win.createElement('center');
+            let ErrorText1 = win.createElement('h3');
+            ErrorText1.textContent='您的要求过于奇怪，什么都没有找到呢QAQ';
+            ErrorText.appendChild(ErrorText1);
+            data.appendChild(ErrorText);
+        }
+    }
+    //绘制翻页按钮
+    win.WritePageButton = function(data){
+        let ButtonBlock = document.createElement('div');
+        ButtonBlock.className = 'button-block';
+        let PagePrev = win.createElement('button');
+        if(win.Page !== 0){
+            PagePrev.style='float: left;background-color: #ffffff;cursor: pointer;';
+            PagePrev.onmouseover = function(){this.style = 'float: left;background-color: #dddddd;cursor: pointer;';}
+            PagePrev.onmouseout = function(){this.style = 'float: left;background-color: #ffffff;cursor: pointer;';}
+            PagePrev.onclick = function (){
+                location.replace(location.pathname+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Page:win.Page-1})));
+            }
+            PagePrev.textContent = '<<上一页';
+        }
+        else{
+            PagePrev.style='float: left;background-color: #ffffff;';
+            PagePrev.textContent = '已经到顶了';
+        }
+        ButtonBlock.appendChild(PagePrev);
+        let PageSucc = win.createElement('button');
+        if((win.Page+1)*win.post_per_page < win.post_count.value){
+            PageSucc.style='float: right;background-color: #ffffff;cursor: pointer;';
+            PageSucc.onmouseover = function(){this.style = 'float: right;background-color: #dddddd;cursor: pointer;';}
+            PageSucc.onmouseout = function(){this.style = 'float: right;background-color: #ffffff;cursor: pointer;';}
+            PageSucc.onclick = function (){
+                location.replace(location.pathname+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Page:win.Page+1})));
+            }
+            PageSucc.textContent = '下一页>>';
+        }
+        else{
+            PageSucc.style='float: right;background-color: #ffffff;';
+            PageSucc.textContent = '已经到底了';
+        }
+        ButtonBlock.appendChild(PageSucc);
+        data.appendChild(ButtonBlock);
     }
 })(document);

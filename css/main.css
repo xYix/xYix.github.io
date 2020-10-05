@@ -75,3 +75,14 @@ a:hover{
     position: relative;
     margin: 0 0 0 0;
 }
+button{
+    border: 1px outset #1A5A40;
+    border-radius: 5px;
+    font-size: medium;
+}
+.button-block{
+    padding: 10px 1px 24px 1px;
+}
+th{
+    font-weight: normal;
+}
