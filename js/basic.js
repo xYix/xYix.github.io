@@ -33,7 +33,7 @@
                     else SideBarTitleContent1.textContent='x义x 的自制 BLOG';
                 SideBarTitle.appendChild(SideBarTitleContent1);
                     let SideBarTitleContent2=document.createElement('p');
-                    if(funval !== undefined){
+                    if(funval !== undefined){ //彩蛋
                         SideBarTitleContent2.appendChild(document.createTextNode('在线评测系统'));
                         SideBarTitleContent2.appendChild(document.createElement('br'));
                         SideBarTitleContent2.appendChild(document.createTextNode('新版上线'));
@@ -123,7 +123,8 @@
     win.WriteTitle2 = function (data){
         let AddText = function (twin,tdata,ttext,eletag){
             let Ttext=twin.createElement(eletag);
-            Ttext.textContent = ttext;
+            if(win.Funval !== undefined && eletag === 'h1') Ttext..textContent = '集天下英才 育天下人';
+            else Ttext.textContent = ttext;
             let TTtext=twin.createElement('center');
             TTtext.appendChild(Ttext);
             tdata.appendChild(TTtext);
