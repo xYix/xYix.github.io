@@ -1,39 +1,33 @@
 <head>
     <meta charset="UTF-8">
-    <title>x义x 的 blog - 首页</title>
+    
+    <script src="/js/archieve_list.js"></script>
+    <script src="/js/tags_list.js"></script>
+    <script src="/js/daily.js"></script>
+    <script src="/js/basic.js"></script>
+    
+    <!-- <script src="D:\迫真blog\js\archieve_list.js"></script>
+    <script src="D:\迫真blog\js\tags_list.js"></script>
+    <script src="D:\迫真blog\js\daily.js"></script>
+    <script src="D:\迫真blog\js\basic.js"></script> -->
+    
     <link rel="icon" type="images/png" sizes="32x32" href="/images/favicon32.png">
     <link rel="icon" type="images/png" sizes="32x32" href="/images/favicon16.png">
     <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- <link rel="icon" type="images/png" sizes="32x32" href="D:\迫真blog\images\favicon32.png">
+    <link rel="icon" type="images/png" sizes="32x32" href="D:\迫真blog\images\favicon16.png">
+    <link rel="stylesheet" href="D:\迫真blog\css\main.css"> -->
 </head>
 
 <div class="cover"></div>
 
-<div class="bodybody">
-    <div class="sidebar">
-        <div class="title">
-            <center>
-                <h1>x义x 的自制 BLOG</h1>
-                <p><h3>您现在在：首页</h3></p>
-            </center>
-        </div>
-        <div class="content-block">
-            <div class="content">
-                <center><p class="lil-p">……就算是单程票，也是可以的吧？</p></center>
-                <a href="/"><strong>· 回到首页</strong></a>
-                <p></p>
-                <a href="/archieve/"><strong>· 文章一览</strong></a>
-                <p></p>
-                <a href="/tags/"><strong>· 标签一览</strong></a>
-                <p></p>
-                <a href="/songlist/"><strong>· 网义云音乐</strong></a>
-            </div>
-            <script type="text/javascript" src="/daily/daily.js" charset="UTF-8"></script>
-        </div>
-    </div>
-
+<div class='bodybody'>
+    <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
-        <div class="content-block">
-            <center><h1>公告</h1></center>
+        <div class="content-block" id='post'>
+            <script>document.WriteTitle2(document.querySelector('#post'));</script>
+            <p>QAQ</p>
             <p>文章请点击右侧栏的“文章一览”。<del>所以首页并没有什么用。</del></p>
             <h2>关于这个博客</h2>
             <p>这个博客的一切都是手敲的 html 和 css，所以搞得非常痛苦……但是老有人说没有魔法上不了 github pages，而我本人也想玩玩 

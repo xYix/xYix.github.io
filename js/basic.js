@@ -1,6 +1,7 @@
 (function(win){
     'use strict',
     // 格式： xyix.gitee.io/.../.../?tags=...+...&type=...&sortby=&page=
+    win.isError = 0;
     win.AnalyzeSearch = function (s){
         let ret = {}, t, r;
 		for (t of (s.startsWith('?') ? s.substr(1) : s).split('&'))
@@ -12,6 +13,7 @@
         let ret = [], t;
         for (t of (s.startsWith('/') ? s.substr(1) : s).split('/'))
             if(t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog') ret[ret.length] = t;
+            else if(t === '404.html') win.isError = 1;
 		return ret;
     }
     win.AnalyzeTags = function (s){
@@ -132,7 +134,9 @@
             TTtext.appendChild(Ttext);
             tdata.appendChild(TTtext);
         }
-        if(win.Pathname.length === 0) AddText(win,data,'公告','h1');
+        if(win.Pathname.length === 0)
+            if(win.isError) AddText(win,data,'公告','h1');
+            else AddText(win,data,'您似乎跃迁到了银河系之外','h1');
         else{
             if(win.Pathname[0] === 'archieve') AddText(win,data,'文章一览','h1');
             if(win.Pathname[0] === 'tags') AddText(win,data,'标签一览','h1');

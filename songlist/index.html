@@ -1,67 +1,58 @@
 <head>
-  <meta charset="UTF-8">
-  <title>x义x 的 blog - 网义云音乐</title>
-  <link rel="icon" type="images/png" sizes="32x32" href="/images/favicon32.png">
-  <link rel="icon" type="images/png" sizes="32x32" href="/images/favicon16.png">
-  <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8">
+    
+    <script src="/js/archieve_list.js"></script>
+    <script src="/js/tags_list.js"></script>
+    <script src="/js/daily.js"></script>
+    <script src="/js/basic.js"></script>
+    
+    <!-- <script src="D:\迫真blog\js\archieve_list.js"></script>
+    <script src="D:\迫真blog\js\tags_list.js"></script>
+    <script src="D:\迫真blog\js\daily.js"></script>
+    <script src="D:\迫真blog\js\basic.js"></script> -->
+    
+    <link rel="icon" type="images/png" sizes="32x32" href="/images/favicon32.png">
+    <link rel="icon" type="images/png" sizes="32x32" href="/images/favicon16.png">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- <link rel="icon" type="images/png" sizes="32x32" href="D:\迫真blog\images\favicon32.png">
+    <link rel="icon" type="images/png" sizes="32x32" href="D:\迫真blog\images\favicon16.png">
+    <link rel="stylesheet" href="D:\迫真blog\css\main.css"> -->
 </head>
 
-<div class="cover">
-  
-</div>
+<div class="cover"></div>
 
-<div class="bodybody">
-  <div class="sidebar">
-      <div class="title">
-          <center>
-              <h1>x义x 的自制 BLOG</h1>
-              <p><h3>您现在在：网义云音乐</h3></p>
-          </center>
-      </div>
-      <div class="content-block">
-          <div class="content">
-              <center><p class="lil-p">……就算是单程票，也是可以的吧？</p></center>
-              <a href="/"><strong>· 回到首页</strong></a>
-              <p></p>
-              <a href="/archieve/"><strong>· 文章一览</strong></a>
-              <p></p>
-              <a href="/tags/"><strong>· 标签一览</strong></a>
-              <p></p>
-              <a href="/songlist/"><strong>· 网义云音乐</strong></a>
-          </div>
-          <script type="text/javascript" src="/daily/daily.js" charset="UTF-8"></script>
-      </div>
-  </div>
-
-  <div class="post-block">
-      <div class="content-block">
-        <center><h1>网义云音乐</h1></center>
-        <center>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546722667&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=547969348&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=484058954&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1446321698&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1446321699&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1446321703&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=459717339&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=459717341&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=459717345&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=452804927&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=452804930&auto=1&height=66"></iframe>
-        <p></p>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=452814864&auto=1&height=66"></iframe>
-        <p></p>
-      </center>
-      </div>
-  </div>
+<div class='bodybody'>
+    <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
+    <div class="post-block">
+        <div class="content-block" id='post'>
+            <script>document.WriteTitle2(document.querySelector('#post'));</script>
+            <center>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546722667&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=547969348&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=484058954&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1446321698&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1446321699&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1446321703&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=459717339&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=459717341&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=459717345&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=452804927&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=452804930&auto=1&height=66"></iframe>
+                <p></p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=452814864&auto=1&height=66"></iframe>
+                <p></p>
+            </center>
+        </div>
+    </div>
 </div>
