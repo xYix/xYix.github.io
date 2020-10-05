@@ -21,6 +21,9 @@
             ret[ret.length] = t;
 		return ret;
     }
+    win.putError = function(){
+        win.location.replace('/404.html');
+    }
     win.WriteSideBar = function (data,title,funval){
         let SideBar=document.createElement('div');
         SideBar.className='sidebar';
@@ -155,5 +158,8 @@
                 }
             }
         }
+    }
+    win.WriteArchieve = function (data){
+
     }
 })(document);
