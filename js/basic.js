@@ -156,6 +156,13 @@
                     aText5.setAttribute('href','/help/'+win.ezylanASearch(win.TrueSearch));
                     aText5.appendChild(Text5);
                 SideBarCon.appendChild(aText5);
+                SideBarCon.appendChild(win.createElement('p'));
+                        let Text6=win.createElement('strong');
+                        Text6.textContent='· 一键清除 tag';
+                    let aText6=win.createElement('a');
+                    aText6.setAttribute('href',location.pathname);
+                    aText6.appendChild(Text6);
+                SideBarCon.appendChild(aText6);
             SideBarConBlock.appendChild(SideBarCon);
             win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
