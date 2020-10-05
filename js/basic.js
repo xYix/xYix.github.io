@@ -27,59 +27,59 @@
         win.location.replace('/404.html');
     }
     win.WriteSideBar = function (data,title,funval){
-        let SideBar=document.createElement('div');
+        let SideBar=win.createElement('div');
         SideBar.className='sidebar';
-            let SideBarConBlock=document.createElement('div');
+            let SideBarConBlock=win.createElement('div');
             SideBarConBlock.className='sidebar-content-block';
-                let SideBarTitle=document.createElement('center');
+                let SideBarTitle=win.createElement('center');
                 SideBarTitle.className='title';
-                    let SideBarTitleContent1=document.createElement('h1');
+                    let SideBarTitleContent1=win.createElement('h1');
                     if(funval !== undefined) SideBarTitleContent1.textContent='XJOI';
                     else SideBarTitleContent1.textContent='x义x 的自制 BLOG';
                 SideBarTitle.appendChild(SideBarTitleContent1);
-                    let SideBarTitleContent2=document.createElement('p');
+                    let SideBarTitleContent2=win.createElement('p');
                     if(funval !== undefined){ //彩蛋
-                        SideBarTitleContent2.appendChild(document.createTextNode('在线评测系统'));
-                        SideBarTitleContent2.appendChild(document.createElement('br'));
-                        SideBarTitleContent2.appendChild(document.createTextNode('新版上线'));
-                        SideBarTitleContent2.appendChild(document.createElement('br'));
-                        SideBarTitleContent2.appendChild(document.createTextNode('since 2009'));
+                        SideBarTitleContent2.appendChild(win.createTextNode('在线评测系统'));
+                        SideBarTitleContent2.appendChild(win.createElement('br'));
+                        SideBarTitleContent2.appendChild(win.createTextNode('新版上线'));
+                        SideBarTitleContent2.appendChild(win.createElement('br'));
+                        SideBarTitleContent2.appendChild(win.createTextNode('since 2009'));
                     }
                     else{
                         for(let i=0;i<title.length;i=i+1){
-                            if(i==0) SideBarTitleContent2.appendChild(document.createTextNode('您现在在：'+title[i]));
-                            else SideBarTitleContent2.appendChild(document.createTextNode(title[i]));
-                            if(i<title.length-1) SideBarTitleContent2.appendChild(document.createElement('br'));
+                            if(i==0) SideBarTitleContent2.appendChild(win.createTextNode('您现在在：'+title[i]));
+                            else SideBarTitleContent2.appendChild(win.createTextNode(title[i]));
+                            if(i<title.length-1) SideBarTitleContent2.appendChild(win.createElement('br'));
                         }
                     }
                 SideBarTitle.appendChild(SideBarTitleContent2);
                 SideBarConBlock.appendChild(SideBarTitle);
-                let SideBarCon=document.createElement('div');
+                let SideBarCon=win.createElement('div');
                 SideBarCon.className='content';
-                        let Text1=document.createElement('strong');
+                        let Text1=win.createElement('strong');
                         Text1.textContent='· 回到首页';
-                    let aText1=document.createElement('a');
+                    let aText1=win.createElement('a');
                     aText1.setAttribute('href','/');
                     aText1.appendChild(Text1);
                 SideBarCon.appendChild(aText1);
-                SideBarCon.appendChild(document.createElement('p'));
-                        let Text2=document.createElement('strong');
+                SideBarCon.appendChild(win.createElement('p'));
+                        let Text2=win.createElement('strong');
                         Text2.textContent='· 文章一览';
-                    let aText2=document.createElement('a');
+                    let aText2=win.createElement('a');
                     aText2.setAttribute('href','/archieve/');
                     aText2.appendChild(Text2);
                 SideBarCon.appendChild(aText2);
-                SideBarCon.appendChild(document.createElement('p'));
-                        let Text3=document.createElement('strong');
+                SideBarCon.appendChild(win.createElement('p'));
+                        let Text3=win.createElement('strong');
                         Text3.textContent='· 标签一览';
-                    let aText3=document.createElement('a');
+                    let aText3=win.createElement('a');
                     aText3.setAttribute('href','/tags/');
                     aText3.appendChild(Text3);
                 SideBarCon.appendChild(aText3);
-                SideBarCon.appendChild(document.createElement('p'));
-                        let Text4=document.createElement('strong');
+                SideBarCon.appendChild(win.createElement('p'));
+                        let Text4=win.createElement('strong');
                         Text4.textContent='· 网义云音乐';
-                    let aText4=document.createElement('a');
+                    let aText4=win.createElement('a');
                     aText4.setAttribute('href','/songlist/');
                     aText4.appendChild(Text4);
                 SideBarCon.appendChild(aText4);
@@ -165,7 +165,38 @@
             }
         }
     }
-    win.WriteArchieve = function (data){
-
+    win.WriteTagsList = function (data){
+        let TagsBlock = win.createElement('center');
+        let TagsTable = win.createElement('table');
+        TagsTable.border='1';TagsTable.rules='all';TagsTable.style='width: 70%';
+        let TagsTitle = win.createElement('tr');
+            let Titleh1=win.createElement('th');
+            Titleh1.style='width: 40%';
+            Titleh1.appendChild(win.createTextNode('名称'));
+        TagsTitle.appendChild(Titleh1);
+            let Titleh2=win.createElement('th');
+            Titleh2.style='width: 60%';
+            Titleh2.appendChild(win.createTextNode('英文名'));
+        TagsTitle.appendChild(Titleh2);
+        TagsTable.appendChild(TagsTitle);
+        for(var Tag in win.tags_list){
+            let TagsRow=win.createElement('tr');
+                let TagsRow1=win.createElement('th');
+                let TagsRow1a=win.createElement('a');
+                TagsRow1a.href='/archieve/?tags='+Tag;
+                let TagsRow1strong=win.createElement('strong');
+                TagsRow1strong.textContent=win.tags_list[Tag];
+                TagsRow1a.appendChild(TagsRow1strong);
+                TagsRow1.appendChild(TagsRow1a);
+            TagsRow.appendChild(TagsRow1);
+                let TagsRow2=win.createElement('th');
+                let TagsRow2p=win.createElement('p');
+                TagsRow2p.textContent=Tag;
+                TagsRow2.appendChild(TagsRow2p);
+            TagsRow.appendChild(TagsRow2);
+            TagsTable.appendChild(TagsRow);
+        }
+        TagsBlock.appendChild(TagsTable);
+        data.appendChild(TagsBlock);
     }
 })(document);
