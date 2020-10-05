@@ -135,7 +135,7 @@
             tdata.appendChild(TTtext);
         }
         if(win.Pathname.length === 0)
-            if(win.isError) AddText(win,data,'公告','h1');
+            if(win.isError === 0) AddText(win,data,'公告','h1');
             else AddText(win,data,'您似乎跃迁到了银河系之外','h1');
         else{
             if(win.Pathname[0] === 'archieve') AddText(win,data,'文章一览','h1');
