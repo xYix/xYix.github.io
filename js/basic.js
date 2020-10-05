@@ -96,6 +96,13 @@
     win.Page=win.Search['page'];
     win.Funval=win.Search['funval'];
     if(win.Page === undefined) win.Page = 0;
+    win.TrueSearch={
+        Tags : win.Tags,
+        Type : win.Type,
+        Sortby : win.Sortby,
+        Page : win.Page,
+        Funval : win.Funval,
+    };
     // Title
     win.Title=[];
     if(win.Pathname.length === 0)
@@ -198,5 +205,42 @@
         }
         TagsBlock.appendChild(TagsTable);
         data.appendChild(TagsBlock);
+    }
+    win.NextSearch = function (PrevSearch,deltaSearch){
+        for(var Tag in deltaSearch.Tags) if(PrevSearch.Tags.indexOf(Tag) === -1)
+            PrevSearch.Tags[PrevSearch.Tags.length]=Tag;
+        PrevSearch.Type=deltaSearch.Type;
+        PrevSearch.Sortby=deltaSearch.Sortby;
+        PrevSearch.Page=deltaSearch.Page;
+        PrevSearch.Funval=deltaSearch.Funval;
+        return PrevSearch;
+    }
+    win.ezylanASearch = function (Search){
+        let ret = '?',flg = 1;
+        if(Search.Type !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'type=' + Search.Type;
+        }
+        if(Search.Tags.length !== 0){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'tags=';
+            for(let i = 0;i<Search.Tags.length;i++){
+                if(i !== 0) ret+='+';
+                ret+=Search.Tags[i];
+            }
+        }
+        if(Search.Sortby !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'sortby=' + Search.Sortby;
+        }
+        if(Search.Page !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'page=' + Search.Page;
+        }
+        if(Search.Funval !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'funval=' + Search.Funval;
+        }
+        return ret;
     }
 })(document);
