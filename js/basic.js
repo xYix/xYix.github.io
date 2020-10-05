@@ -2,6 +2,7 @@
     'use strict',
     // 格式： xyix.gitee.io/.../.../?tags=...+...&type=...&sortby=&page=
     win.isError = 0;
+    win.post_per_page = 30;
     win.AnalyzeSearch = function (s){
         let ret = {}, t, r;
 		for (t of (s.startsWith('?') ? s.substr(1) : s).split('&'))
@@ -26,6 +27,68 @@
     win.putError = function(){
         win.location.replace('/404.html');
     }
+    //生成后继链接
+    win.NextSearch = function (PrevSearch,deltaSearch){
+        let tmpSearch={};
+        for(var x in PrevSearch) if(x !== 'Tags')
+            tmpSearch[x]=PrevSearch[x];
+        else{
+            tmpSearch[x]=[];
+            for(let i=0;i<PrevSearch.Tags.length;i++)
+                tmpSearch[x][i]=PrevSearch[x][i];
+        }
+        if(deltaSearch.Tags !== undefined)
+            for(let i=0;i<deltaSearch.Tags.length;i++) if(tmpSearch.Tags.indexOf(deltaSearch.Tags[i]) === -1)
+                tmpSearch.Tags[tmpSearch.Tags.length]=deltaSearch.Tags[i];
+        if(deltaSearch.Type !== undefined) tmpSearch.Type=deltaSearch.Type;
+        if(deltaSearch.Sortby !== undefined) tmpSearch.Sortby=deltaSearch.Sortby;
+        if(deltaSearch.Page !== undefined) tmpSearch.Page=deltaSearch.Page;
+        if(deltaSearch.Funval !== undefined) tmpSearch.Funval=deltaSearch.Funval;
+        return tmpSearch;
+    }
+    win.ezylanASearch = function (Search){
+        let ret = '?',flg = 1;
+        if(Search.Type !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'type=' + Search.Type;
+        }
+        if(Search.Tags.length !== 0){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'tags=';
+            for(let i = 0;i<Search.Tags.length;i++){
+                if(i !== 0) ret+='+';
+                ret+=Search.Tags[i];
+            }
+        }
+        if(Search.Sortby !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'sortby=' + Search.Sortby;
+        }
+        if(Search.Page !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'page=' + Search.Page;
+        }
+        if(Search.Funval !== undefined){
+            if(flg === 1) flg = 0;else ret += '&';
+            ret += 'funval=' + Search.Funval;
+        }
+        return ret;
+    }
+    win.Pathname=win.AnalyzePathname(location.pathname);
+    win.Search=win.AnalyzeSearch(location.search);
+    win.Tags=win.AnalyzeTags(win.Search['tags']);
+    win.Type=win.Search['type'];
+    win.Sortby=win.Search['sortby'];
+    win.Page=win.Search['page'];
+    win.Funval=win.Search['funval'];
+    if(win.Page === undefined) win.Page = 0;
+    win.TrueSearch={
+        Tags : win.Tags,
+        Type : win.Type,
+        Sortby : win.Sortby,
+        Page : win.Page,
+        Funval : win.Funval,
+    };
     win.WriteSideBar = function (data,title,funval){
         let SideBar=win.createElement('div');
         SideBar.className='sidebar';
@@ -59,50 +122,42 @@
                         let Text1=win.createElement('strong');
                         Text1.textContent='· 回到首页';
                     let aText1=win.createElement('a');
-                    aText1.setAttribute('href','/');
+                    aText1.setAttribute('href','/'+win.ezylanASearch(win.TrueSearch));
                     aText1.appendChild(Text1);
                 SideBarCon.appendChild(aText1);
                 SideBarCon.appendChild(win.createElement('p'));
                         let Text2=win.createElement('strong');
                         Text2.textContent='· 文章一览';
                     let aText2=win.createElement('a');
-                    aText2.setAttribute('href','/archieve/');
+                    aText2.setAttribute('href','/archieve/'+win.ezylanASearch(win.TrueSearch));
                     aText2.appendChild(Text2);
                 SideBarCon.appendChild(aText2);
                 SideBarCon.appendChild(win.createElement('p'));
                         let Text3=win.createElement('strong');
                         Text3.textContent='· 标签一览';
                     let aText3=win.createElement('a');
-                    aText3.setAttribute('href','/tags/');
+                    aText3.setAttribute('href','/tags/'+win.ezylanASearch(win.TrueSearch));
                     aText3.appendChild(Text3);
                 SideBarCon.appendChild(aText3);
                 SideBarCon.appendChild(win.createElement('p'));
                         let Text4=win.createElement('strong');
                         Text4.textContent='· 网义云音乐';
                     let aText4=win.createElement('a');
-                    aText4.setAttribute('href','/songlist/');
+                    aText4.setAttribute('href','/songlist/'+win.ezylanASearch(win.TrueSearch));
                     aText4.appendChild(Text4);
                 SideBarCon.appendChild(aText4);
+                SideBarCon.appendChild(win.createElement('p'));
+                        let Text5=win.createElement('strong');
+                        Text5.textContent='· 需要帮助？';
+                    let aText5=win.createElement('a');
+                    aText5.setAttribute('href','/help/'+win.ezylanASearch(win.TrueSearch));
+                    aText5.appendChild(Text5);
+                SideBarCon.appendChild(aText5);
             SideBarConBlock.appendChild(SideBarCon);
             win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
         data.appendChild(SideBar);
     }
-    win.Pathname=win.AnalyzePathname(location.pathname);
-    win.Search=win.AnalyzeSearch(location.search);
-    win.Tags=win.AnalyzeTags(win.Search['tags']);
-    win.Type=win.Search['type'];
-    win.Sortby=win.Search['sortby'];
-    win.Page=win.Search['page'];
-    win.Funval=win.Search['funval'];
-    if(win.Page === undefined) win.Page = 0;
-    win.TrueSearch={
-        Tags : win.Tags,
-        Type : win.Type,
-        Sortby : win.Sortby,
-        Page : win.Page,
-        Funval : win.Funval,
-    };
     // Title
     win.Title=[];
     if(win.Pathname.length === 0)
@@ -112,6 +167,7 @@
         if(win.Pathname[0] === 'archieve') win.Title[0]='文章一览';
         if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
         if(win.Pathname[0] === 'songlist') win.Title[0]='网义云音乐';
+        if(win.Pathname[0] === 'help') win.Title[0]='帮助';
         if(win.Pathname[0] === 'archieve'){
             if(win.Type !== undefined){
                 let nowlen=win.Title.length;
@@ -150,6 +206,7 @@
             if(win.Pathname[0] === 'archieve') AddText(win,data,'文章一览','h1');
             if(win.Pathname[0] === 'tags') AddText(win,data,'标签一览','h1');
             if(win.Pathname[0] === 'songlist') AddText(win,data,'网义云音乐','h1');
+            if(win.Pathname[0] === 'help') AddText(win,data,'帮助','h1');
             if(win.Pathname[0] === 'archieve'){
                 if(win.Type !== undefined){
                     let Typeinfo = '分类为：';
@@ -172,6 +229,7 @@
             }
         }
     }
+    //绘制标签表格
     win.WriteTagsList = function (data){
         let TagsBlock = win.createElement('center');
         let TagsTable = win.createElement('table');
@@ -190,7 +248,7 @@
             let TagsRow=win.createElement('tr');
                 let TagsRow1=win.createElement('th');
                 let TagsRow1a=win.createElement('a');
-                TagsRow1a.href='/archieve/?tags='+Tag;
+                TagsRow1a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [Tag]}));
                 let TagsRow1strong=win.createElement('strong');
                 TagsRow1strong.textContent=win.tags_list[Tag];
                 TagsRow1a.appendChild(TagsRow1strong);
@@ -206,41 +264,90 @@
         TagsBlock.appendChild(TagsTable);
         data.appendChild(TagsBlock);
     }
-    win.NextSearch = function (PrevSearch,deltaSearch){
-        for(var Tag in deltaSearch.Tags) if(PrevSearch.Tags.indexOf(Tag) === -1)
-            PrevSearch.Tags[PrevSearch.Tags.length]=Tag;
-        PrevSearch.Type=deltaSearch.Type;
-        PrevSearch.Sortby=deltaSearch.Sortby;
-        PrevSearch.Page=deltaSearch.Page;
-        PrevSearch.Funval=deltaSearch.Funval;
-        return PrevSearch;
-    }
-    win.ezylanASearch = function (Search){
-        let ret = '?',flg = 1;
-        if(Search.Type !== undefined){
-            if(flg === 1) flg = 0;else ret += '&';
-            ret += 'type=' + Search.Type;
-        }
-        if(Search.Tags.length !== 0){
-            if(flg === 1) flg = 0;else ret += '&';
-            ret += 'tags=';
-            for(let i = 0;i<Search.Tags.length;i++){
-                if(i !== 0) ret+='+';
-                ret+=Search.Tags[i];
+    //绘制文章信息
+    win.WritePostinfo = function(data,postinfo){
+        let PostinfoBlock=win.createElement('tr');
+            let Postinfo_title=win.createElement('th');
+            let Postinfo_title_a=win.createElement('a');
+            Postinfo_title_a.href='/posts/'+postinfo.post_name+'.html';
+            let Postinfo_title_strong=win.createElement('strong');
+            Postinfo_title_strong.textContent=postinfo.post_chinese_name;
+            Postinfo_title_a.appendChild(Postinfo_title_strong);
+            Postinfo_title.appendChild(Postinfo_title_a);
+        PostinfoBlock.appendChild(Postinfo_title);
+            let Postinfo_type=win.createElement('th');
+            if(postinfo.type_name !== 'none'){
+                let Postinfo_type_a=win.createElement('a');
+                Postinfo_type_a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Type : postinfo.type_name}));
+                let Postinfo_type_strong=win.createElement('strong');
+                if(postinfo.type_name === 'solution') Postinfo_type_strong.textContent='题解';
+                else if(postinfo.type_name === 'algorithm') Postinfo_type_strong.textContent='算法/知识点';
+                else Postinfo_type_strong.textContent='游记/其他';
+                Postinfo_type_a.appendChild(Postinfo_type_strong);
+                Postinfo_type.appendChild(Postinfo_type_a);
             }
+            else{
+                let Postinfo_type_p=win.createElement('p');
+                Postinfo_type_p.textContent='无';
+                Postinfo_type.appendChild(Postinfo_type_p);
+            }
+        PostinfoBlock.appendChild(Postinfo_type);
+            let Postinfo_tags=win.createElement('th');
+            for(let i=0;i<postinfo.tag.length;i=i+1){
+                let Postinfo_tags_a=win.createElement('a');
+                Postinfo_tags_a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]]}));
+                let Postinfo_tags_strong=win.createElement('strong');
+                Postinfo_tags_strong.textContent=win.tags_list[postinfo.tag[i]];
+                Postinfo_tags_a.appendChild(Postinfo_tags_strong);
+                Postinfo_tags.appendChild(Postinfo_tags_a);
+                if(i!==postinfo.tag.length-1) Postinfo_tags.appendChild(win.createTextNode(','));
+            }
+            if(postinfo.tag.length === 0){
+                let Postinfo_tags_p=win.createElement('p');
+                Postinfo_tags_p.textContent='无';
+                Postinfo_tags.appendChild(Postinfo_tags_p);
+            }
+        PostinfoBlock.appendChild(Postinfo_tags);
+        data.appendChild(PostinfoBlock);
+    }
+    //判断文章是否合法
+    win.isLegalPost = function(postinfo,post_count){
+        if(win.Type !== undefined){
+            if(postinfo.type_name !== win.Type) return 0;
         }
-        if(Search.Sortby !== undefined){
-            if(flg === 1) flg = 0;else ret += '&';
-            ret += 'sortby=' + Search.Sortby;
+        for(let i=0;i<win.Tags.length;i=i+1){
+            if(postinfo.tag.indexOf(win.Tags[i]) === -1) return 0;
         }
-        if(Search.Page !== undefined){
-            if(flg === 1) flg = 0;else ret += '&';
-            ret += 'page=' + Search.Page;
-        }
-        if(Search.Funval !== undefined){
-            if(flg === 1) flg = 0;else ret += '&';
-            ret += 'funval=' + Search.Funval;
-        }
-        return ret;
+        post_count.value=post_count.value+1;
+        console.log(post_count.value);
+        if(post_count.value<=win.Page*win.post_per_page) return 0;
+        if(post_count.value>(win.Page+1)*win.post_per_page) return 0;
+        return 1;
+    }
+    //绘制文章一览
+    win.WriteArchieve = function(data){
+        let post_count={value : 0};
+        let ArchieveBlock = win.createElement('center');
+        let ArchieveTable = win.createElement('table');
+        ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
+        let ArchieveTitle = win.createElement('tr');
+            let Titleh1=win.createElement('th');
+            Titleh1.style='width: 40%';
+            Titleh1.appendChild(win.createTextNode('标题'));
+        ArchieveTitle.appendChild(Titleh1);
+            let Titleh2=win.createElement('th');
+            Titleh2.style='width: 20%';
+            Titleh2.appendChild(win.createTextNode('分类'));
+        ArchieveTitle.appendChild(Titleh2);
+            let Titleh3=win.createElement('th');
+            Titleh3.style='width: 40%';
+            Titleh3.appendChild(win.createTextNode('标签'));
+        ArchieveTitle.appendChild(Titleh3);
+        ArchieveTable.appendChild(ArchieveTitle);
+        for(let i=0;i<win.archieve_list.length;i=i+1)
+            if(win.isLegalPost(win.archieve_list[i],post_count)){
+                win.WritePostinfo(ArchieveTable,win.archieve_list[i]);
+            }
+        data.appendChild(ArchieveTable);
     }
 })(document);
