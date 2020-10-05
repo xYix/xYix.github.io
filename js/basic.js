@@ -34,11 +34,11 @@
                 SideBarTitle.appendChild(SideBarTitleContent1);
                     let SideBarTitleContent2=document.createElement('p');
                     if(funval !== undefined){
-                        SideBarTitle.appendChild(document.createTextNode('在线评测系统'));
+                        SideBarTitleContent2.appendChild(document.createTextNode('在线评测系统'));
                         SideBarTitleContent2.appendChild(document.createElement('br'));
-                        SideBarTitle.appendChild(document.createTextNode('新版上线'));
+                        SideBarTitleContent2.appendChild(document.createTextNode('新版上线'));
                         SideBarTitleContent2.appendChild(document.createElement('br'));
-                        SideBarTitle.appendChild(document.createTextNode('since 2009'));
+                        SideBarTitleContent2.appendChild(document.createTextNode('since 2009'));
                     }
                     else{
                         for(let i=0;i<title.length;i=i+1){
