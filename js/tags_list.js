@@ -19,4 +19,6 @@
 	win.tags_list['set-DP'] = '子集DP';
 	win.tags_list['pigeon'] = '鸽掉的文章';
 	win.tags_list['young-tableau'] = '杨表';
+	win.tags_list['isotonic-regression'] = '保序回归';
+	win.tags_list['overall-binary-search'] = '整体二分';
 })(document);

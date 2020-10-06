@@ -36,3 +36,7 @@ pigeon
 鸽掉的文章
 young-tableau
 杨表
+isotonic-regression
+保序回归
+overall-binary-search
+整体二分
