@@ -208,7 +208,7 @@
 		'post_name' : 'set-power-series',
 		'post_chinese_name' : '集合幂级数学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['set-power-series',],
+		'tag' : ['counting','generating-function','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'post_name' : 'sx2019',

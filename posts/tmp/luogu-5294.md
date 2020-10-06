@@ -16,7 +16,7 @@ tags:
 
 $L_p$ 问题的定义如下：
 
-> 给出一张 DAG $G=(V,E)$，每个点 $i$ 有代价 $y_i,w_i$。求点值序列 $f$，满足如果在 $G$ 中有从 $i$ 到 $j$ 的路径（称为 $v_i\preceq v_j$），则必须有 $f_i\le f_j$，并使得
+> 给出一张 DAG $G=(V,E)$，每个点 $i$ 有代价 $y_i,w_i$（$w_i>0$）。求点值序列 $f$，满足如果在 $G$ 中有从 $i$ 到 $j$ 的路径（称为 $v_i\preceq v_j$），则必须有 $f_i\le f_j$，并使得回归代价
 >
 > $$
 > \begin{cases}\sum_{i=1}^nw_i|f_i-y_i|^p&(1\le p<\infty)\\\max_{i=1}^n w_i|f_i-y_i|&(p=\infty)\end{cases}
@@ -26,4 +26,11 @@ $L_p$ 问题的定义如下：
 
 ## 其他定义
 
-> 将序列 $z$ 中 $\le a$ 的元素变为 $a$，$\ge b$ 的元素变为 $b$，称为把 $z$ 向 $(a,b)$ 取整。
+> 将序列 $z$ 中 $\le a$ 的元素变为 $a$，$\ge b$ 的元素变为 $b$，称为**把 $z$ 向 $(a,b)$ 取整**。
+
+> **点集 $U$ 的 $L_p$ 均值**为使得
+> $$
+> \begin{cases}\sum_{i\in U}w_i|k-y_i|^p&(1\le p<\infty)\\\max_{i\in U} w_i|k-y_i|&(p=\infty)\end{cases}
+> $$
+> 最小的 $k$。
+
