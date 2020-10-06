@@ -79,6 +79,7 @@ button{
     border: 1px outset #1A5A40;
     border-radius: 5px;
     font-size: medium;
+    color: #1A5A40;
 }
 .button-block{
     padding: 10px 1px 24px 1px;
