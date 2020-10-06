@@ -225,6 +225,8 @@ young-tableau
 isotonic-regression
 保序回归学习笔记
 algorithm
-2
+4
+offline
 overall-binary-search
 isotonic-regression
+pigeon

@@ -238,6 +238,6 @@
 		'post_name' : 'isotonic-regression',
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['overall-binary-search','isotonic-regression',],
+		'tag' : ['offline','overall-binary-search','isotonic-regression',],
 	};
 })(document);
