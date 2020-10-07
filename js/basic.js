@@ -240,8 +240,9 @@
                 if(win.Pathname[1] === 'fakenews'){
                     var d=new Date();
                     AddText(win,data,'×√日报','h2'),
-                    AddText(win,data,'地球日期：'+d.getFullYear()+' 年 '+d.getMonth()+' 月 '+d.getDate()+' 日','h3'),
-                    AddText(win,data,'奶油糖日期：'+Math.floor(Math.random()*10000)+' 年 '+Math.floor(Math.random()*23)+' 月 '+Math.floor(Math.random()*17)+' 日','h3');
+                    AddText(win,data,'地球日期：'+d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日','h3'),
+                    AddText(win,data,'奶油糖日期：'+Math.floor(Math.random()*10000)+' 年 '+Math.floor(Math.random()*23)+
+                    ' 月 '+Math.floor(Math.random()*17)+' 日','h3');
                 }
             }
             if(win.Pathname[0] === 'archieve'){
