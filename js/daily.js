@@ -49,7 +49,6 @@
         'Oura-Mugi Katsumi Hayashi数值指导 算术/知识 生成功能',
         '快速计算方法 问题方案 多项目类型,Rakuraro Nikki',
         '胜井胜井发电功能 算术/知识 生成函数,数论',
-        '据说在网址后面加上 ?funval=233（如果已经有问号则加 &funval=233）会有奇妙的事情发生',
         '愿 hehezhou 指引我们找到救赎',
         'Fate Chosen',
         'Reroll Your Destiny',

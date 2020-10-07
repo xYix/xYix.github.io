@@ -100,7 +100,12 @@
                 let SideBarTitle=win.createElement('center');
                 SideBarTitle.className='title';
                     let SideBarTitleContent1=win.createElement('h1');
-                    if(funval !== undefined|| win.Pathname[0] === 'xjoi') SideBarTitleContent1.textContent='×√OI';
+                    if(funval !== undefined|| win.Pathname[0] === 'xjoi'){
+                        SideBarTitleContent1.textContent='×√OI';
+                        if(win.Pathname[1] === 'fakenews') SideBarTitleContent1.textContent+='：新闻';
+                        if(win.Pathname[1] === 'contest') SideBarTitleContent1.textContent+='：比赛';
+                        if(win.Pathname[1] === 'problemset') SideBarTitleContent1.textContent+='：题库';
+                    }
                     else SideBarTitleContent1.textContent='x义x 的自制 BLOG';
                 SideBarTitle.appendChild(SideBarTitleContent1);
                     let SideBarTitleContent2=win.createElement('p');
@@ -228,7 +233,15 @@
             if(win.Pathname[0] === 'tags') AddText(win,data,'标签一览','h1');
             if(win.Pathname[0] === 'songlist') AddText(win,data,'网义云音乐','h1');
             if(win.Pathname[0] === 'help') AddText(win,data,'帮助','h1');
-            if(win.Pathname[0] === 'xjoi') AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
+            if(win.Pathname[0] === 'xjoi'){
+                AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
+                if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h3');
+                if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h3');
+                if(win.Pathname[1] === 'fakenews')
+                    AddText(win,data,'×√日报','h2'),
+                    AddText(win,data,'地球日期：'+getFullYear()+' 年 '+getMonth()+' 月 '+getDate()+' 日','h3'),
+                    AddText(win,data,'奶油糖日期：'+Math.floor(Math.random()*10000)+' 年 '+Math.floor(Math.random()*23)+' 月 '+Math.floor(Math.random()*17)+' 日','h3');
+            }
             if(win.Pathname[0] === 'archieve'){
                 if(win.Type !== undefined){
                     let Typeinfo = '分类为：';
