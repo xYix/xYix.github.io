@@ -237,10 +237,12 @@
                 AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
                 if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h3');
                 if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h3');
-                if(win.Pathname[1] === 'fakenews')
+                if(win.Pathname[1] === 'fakenews'){
+                    var d=new Date();
                     AddText(win,data,'×√日报','h2'),
-                    AddText(win,data,'地球日期：'+getFullYear()+' 年 '+getMonth()+' 月 '+getDate()+' 日','h3'),
+                    AddText(win,data,'地球日期：'+d.getFullYear()+' 年 '+d.getMonth()+' 月 '+d.getDate()+' 日','h3'),
                     AddText(win,data,'奶油糖日期：'+Math.floor(Math.random()*10000)+' 年 '+Math.floor(Math.random()*23)+' 月 '+Math.floor(Math.random()*17)+' 日','h3');
+                }
             }
             if(win.Pathname[0] === 'archieve'){
                 if(win.Type !== undefined){
