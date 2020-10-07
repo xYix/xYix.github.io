@@ -58,6 +58,7 @@
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
         '对不起，由于初试爆零，您无法查看题解，请下次努力',
         'ABNORMAL',
+        'Believe there is a great power silently working all things for good',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
