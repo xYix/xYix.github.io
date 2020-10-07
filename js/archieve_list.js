@@ -238,6 +238,12 @@
 		'post_name' : 'isotonic-regression',
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['offline','overall-binary-search','isotonic-regression',],
+		'tag' : ['offline','overall-binary-search','isotonic-regression','pigeon',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'post_name' : 'number-theory',
+		'post_chinese_name' : '《数论函数中的一些结论》翻译',
+		'type_name' : '1',
+		'tag' : [],
 	};
 })(document);
