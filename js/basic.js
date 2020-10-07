@@ -163,6 +163,13 @@
                     aText6.setAttribute('href',location.pathname);
                     aText6.appendChild(Text6);
                 SideBarCon.appendChild(aText6);
+                SideBarCon.appendChild(win.createElement('p'));
+                        let Text7=win.createElement('strong');
+                        Text7.textContent='· ×√OI';
+                    let aText7=win.createElement('a');
+                    aText7.setAttribute('href','/xjoi/'+win.ezylanASearch(win.TrueSearch));
+                    aText7.appendChild(Text6);
+                SideBarCon.appendChild(aText6);
             SideBarConBlock.appendChild(SideBarCon);
             win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
@@ -178,6 +185,7 @@
         if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
         if(win.Pathname[0] === 'songlist') win.Title[0]='网义云音乐';
         if(win.Pathname[0] === 'help') win.Title[0]='帮助';
+        if(win.Pathname[0] === 'xjoi') win.Title[0]='×√OI';
         if(win.Pathname[0] === 'archieve'){
             if(win.Type !== undefined){
                 let nowlen=win.Title.length;
