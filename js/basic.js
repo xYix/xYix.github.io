@@ -100,7 +100,7 @@
                 let SideBarTitle=win.createElement('center');
                 SideBarTitle.className='title';
                     let SideBarTitleContent1=win.createElement('h1');
-                    if(funval !== undefined|| win.pathname[0] === 'xjoi') SideBarTitleContent1.textContent='×√OI';
+                    if(funval !== undefined|| win.Pathname[0] === 'xjoi') SideBarTitleContent1.textContent='×√OI';
                     else SideBarTitleContent1.textContent='x义x 的自制 BLOG';
                 SideBarTitle.appendChild(SideBarTitleContent1);
                     let SideBarTitleContent2=win.createElement('p');
