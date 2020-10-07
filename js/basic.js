@@ -168,8 +168,8 @@
                         Text7.textContent='· ×√OI';
                     let aText7=win.createElement('a');
                     aText7.setAttribute('href','/xjoi/'+win.ezylanASearch(win.TrueSearch));
-                    aText7.appendChild(Text6);
-                SideBarCon.appendChild(aText6);
+                    aText7.appendChild(Text7);
+                SideBarCon.appendChild(aText7);
             SideBarConBlock.appendChild(SideBarCon);
             win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
@@ -185,7 +185,7 @@
         if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
         if(win.Pathname[0] === 'songlist') win.Title[0]='网义云音乐';
         if(win.Pathname[0] === 'help') win.Title[0]='帮助';
-        if(win.Pathname[0] === 'xjoi') win.Title[0]='×√OI';
+        if(win.Pathname[0] === 'xjoi') win.Title[0]='×√OI',win.Title[1]='在线评测系统',win.Title[2]='新版上线',win.Title[3]='since 2020';
         if(win.Pathname[0] === 'archieve'){
             if(win.Type !== undefined){
                 let nowlen=win.Title.length;
@@ -227,6 +227,7 @@
             if(win.Pathname[0] === 'tags') AddText(win,data,'标签一览','h1');
             if(win.Pathname[0] === 'songlist') AddText(win,data,'网义云音乐','h1');
             if(win.Pathname[0] === 'help') AddText(win,data,'帮助','h1');
+            if(win.Pathname[0] === 'xjoi') AddText(win,data,'集天下英才 育天下人','h1');
             if(win.Pathname[0] === 'archieve'){
                 if(win.Type !== undefined){
                     let Typeinfo = '分类为：';
