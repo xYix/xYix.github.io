@@ -54,6 +54,10 @@
         'Fate Chosen',
         'Reroll Your Destiny',
         'Blood Laser Barrage',
+        'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
+        'Rating changes for the last round are temporarily rolled back. They will be back soon.',
+        '对不起，由于初试爆零，您无法查看题解，请下次努力',
+        'ABNORMAL',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
