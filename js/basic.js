@@ -377,7 +377,6 @@
     //绘制文章一览
     win.post_count={value : 0};
     win.WriteArchieve = function(data){
-        let ArchieveBlock = win.createElement('center');
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
         let ArchieveTitle = win.createElement('tr');

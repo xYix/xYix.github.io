@@ -23,7 +23,6 @@
     }
     win.prob_count={value : 0};
     win.WriteProblemSet = function(data){
-        let ProblemSetBlock = win.createElement('center');
         let ProblemSetTable = win.createElement('table');
         ProblemSetTable.border='1';ProblemSetTable.rules='all';ProblemSetTable.style='width: 70%';
             let ProblemSetTitle = win.createElement('tr');
@@ -39,7 +38,6 @@
         for(var Probname in win.prob_list)
             if(win.isLegalProb(Probname,win.prob_count))
                 win.WriteProbinfo(ProblemSetTable,Probname,win.prob_count.value);
-        ProblemSetBlock.appendChild(ProblemSetTable);
-        data.appendChild(ProblemSetBlock);
+        data.appendChild(ProblemSetTable);
     }
 })(document);
