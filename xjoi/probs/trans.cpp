@@ -42,12 +42,16 @@ int main(){
 	freopen("D:\\∆»’Êblog\\xjoi\\probs\\list.txt","r",stdin);
 	freopen("D:\\∆»’Êblog\\xjoi\\js\\prob_list.js","w",stdout);
 	cout<<"(function(win){\n	win.prob_list={};\n";
-	string prob_name,prob_chinese_name;
+	cout<<"	win.prob_author={};\n";
+	string prob_name,prob_chinese_name,prob_author;
 	int prob_cnt=0;
 	while(getline(cin,prob_name)){
 		getline(cin,prob_chinese_name);
 		prob_chinese_name=UTF8ToGB(prob_chinese_name.c_str());
+		getline(cin,prob_author);
+		prob_author=UTF8ToGB(prob_author.c_str());
 		cout<<"	win.prob_list['"<<prob_name<<"'] = '"<<GBToUTF8(prob_chinese_name.c_str())<<"';\n";
+		cout<<"	win.prob_author['"<<prob_name<<"'] = '"<<GBToUTF8(prob_author.c_str())<<"';\n";
 	}
-	printf("})(document);");
+	cout<<"})(document);";
 } 

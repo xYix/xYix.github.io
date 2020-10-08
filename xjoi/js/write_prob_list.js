@@ -18,6 +18,11 @@
             Probinfo_path_p.textContent=Probname;
             Probinfo_path.appendChild(Probinfo_path_p);
         ProbinfoBlock.appendChild(Probinfo_path);
+            let Probinfo_author=win.createElement('th');
+            let Probinfo_author_p=win.createElement('p');
+            Probinfo_author_p.textContent=win.prob_author[Probname];
+            Probinfo_author.appendChild(Probinfo_author_p);
+        ProbinfoBlock.appendChild(Probinfo_author);
         data.appendChild(ProbinfoBlock);
     }
     win.isLegalProb = function(Probname,prob_count){
@@ -37,13 +42,17 @@
                 Titleh0.appendChild(win.createTextNode('编号'));
             ProblemSetTitle.appendChild(Titleh0);
                 let Titleh1=win.createElement('th');
-                Titleh1.style='width: 50%';
+                Titleh1.style='width: 40%';
                 Titleh1.appendChild(win.createTextNode('标题'));
             ProblemSetTitle.appendChild(Titleh1);
                 let Titleh2=win.createElement('th');
-                Titleh2.style='width: 40%';
+                Titleh2.style='width: 30%';
                 Titleh2.appendChild(win.createTextNode('目录名'));
             ProblemSetTitle.appendChild(Titleh2);
+                let Titleh3=win.createElement('th');
+                Titleh3.style='width: 20%';
+                Titleh3.appendChild(win.createTextNode('作者'));
+            ProblemSetTitle.appendChild(Titleh3);
         ProblemSetTable.appendChild(ProblemSetTitle);
         for(var Probname in win.prob_list)
             if(win.isLegalProb(Probname,win.prob_count))
