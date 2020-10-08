@@ -17,7 +17,8 @@
         <div class='content-block' id='post'>
             <script>document.WriteTitle2(document.querySelector('#post'));</script>
             <script>document.WriteArchieve(document.querySelector('#post'));</script>
-            <script>document.WritePageButton(document.querySelector('#post'));</script>
+            <script>document.WritePageButton(document.querySelector('#post'),
+                document.post_count.value,document.post_per_page);</script>
         </div>
     </div>
 </div>

@@ -401,7 +401,7 @@
         }
     }
     //绘制翻页按钮
-    win.WritePageButton = function(data){
+    win.WritePageButton = function(data,pcount,pper_page){
         let ButtonBlock = document.createElement('div');
         ButtonBlock.className = 'button-block';
         let PagePrev = win.createElement('button');
@@ -420,7 +420,7 @@
         }
         ButtonBlock.appendChild(PagePrev);
         let PageSucc = win.createElement('button');
-        if((win.Page+1)*win.post_per_page < win.post_count.value){
+        if((win.Page+1)*pper_page < pcount.value){
             PageSucc.style='float: right;background-color: #ffffff;cursor: pointer;';
             PageSucc.onmouseover = function(){this.style = 'float: right;background-color: #dddddd;cursor: pointer;';}
             PageSucc.onmouseout = function(){this.style = 'float: right;background-color: #ffffff;cursor: pointer;';}

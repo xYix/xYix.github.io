@@ -39,6 +39,7 @@
         for(var Probname in win.prob_list)
             if(win.isLegalProb(Probname,win.prob_count))
                 win.WriteProbinfo(ProblemSetTable,Probname,win.prob_count.value);
-        data.appendChild(ProblemSetTable);
+        ProblemSetBlock.appendChild(ProblemSetTable);
+        data.appendChild(ProblemSetBlock);
     }
 })(document);
