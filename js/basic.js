@@ -370,10 +370,10 @@
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
         let ArchieveTitle = win.createElement('tr');
-            let Titleh1=win.createElement('th');
-            Titleh1.style='width: 10%';
-            Titleh1.appendChild(win.createTextNode('编号'));
-        ArchieveTitle.appendChild(Titleh1);
+            let Titleh0=win.createElement('th');
+            Titleh0.style='width: 10%';
+            Titleh0.appendChild(win.createTextNode('编号'));
+        ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
             Titleh1.style='width: 40%';
             Titleh1.appendChild(win.createTextNode('标题'));
