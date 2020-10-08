@@ -190,8 +190,17 @@
         if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
         if(win.Pathname[0] === 'songlist') win.Title[0]='网义云音乐';
         if(win.Pathname[0] === 'help') win.Title[0]='帮助';
-        if(win.Pathname[0] === 'xjoi') win.Title[0]='×√OI',win.Title[1]='离线评测系统',
+        if(win.Pathname[0] === 'xjoi'){
+            win.Title[0]='×√OI',win.Title[1]='离线评测系统',
             win.Title[2]='新版下线',win.Title[3]='since 2020';
+            if(win.Pathname[1] === 'problemset'){
+                win.Title[0]+='：题库';
+                win.Title[4]=win.Title[3];win.Title[3]=win.Title[2];win.Title[2]=win.Title[1];
+                win.Title[1]='第 '+(win.Page+1)+' 页';
+            }
+            if(win.Pathname[1] === 'contest') win.Title[0]+='：比赛';
+            if(win.Pathname[1] === 'fakenews') win.Title[0]+='：新闻';
+        }
         if(win.Pathname[0] === 'archieve'){
             if(win.Type !== undefined){
                 let nowlen=win.Title.length;
@@ -235,8 +244,8 @@
             if(win.Pathname[0] === 'help') AddText(win,data,'帮助','h1');
             if(win.Pathname[0] === 'xjoi'){
                 AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
-                if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h3');
-                if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h3');
+                if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h2');
+                if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h2');
                 if(win.Pathname[1] === 'fakenews'){
                     var d=new Date();
                     AddText(win,data,'×√日报','h2'),
