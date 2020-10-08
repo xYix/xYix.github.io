@@ -306,6 +306,11 @@
     //绘制文章信息
     win.WritePostinfo = function(data,postinfo){
         let PostinfoBlock=win.createElement('tr');
+            let Postinfo_id=win.createElement('th');
+            let Postinfo_id_p=win.createElement('p');
+            Postinfo_id_p.textContent=postinfo.postid;
+            Postinfo_id.appendChild(Postinfo_id_p);
+        PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('th');
             let Postinfo_title_a=win.createElement('a');
             Postinfo_title_a.href='/posts/'+postinfo.post_name+'.html';
@@ -366,6 +371,10 @@
         ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
         let ArchieveTitle = win.createElement('tr');
             let Titleh1=win.createElement('th');
+            Titleh1.style='width: 10%';
+            Titleh1.appendChild(win.createTextNode('编号'));
+        ArchieveTitle.appendChild(Titleh1);
+            let Titleh1=win.createElement('th');
             Titleh1.style='width: 40%';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
@@ -374,7 +383,7 @@
             Titleh2.appendChild(win.createTextNode('分类'));
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
-            Titleh3.style='width: 40%';
+            Titleh3.style='width: 30%';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
         ArchieveTable.appendChild(ArchieveTitle);

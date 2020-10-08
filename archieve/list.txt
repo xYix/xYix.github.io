@@ -230,7 +230,3 @@ offline
 overall-binary-search
 isotonic-regression
 pigeon
-number-theory
-《数论函数中的一些结论》翻译
-1
-number-theory

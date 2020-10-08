@@ -14,7 +14,7 @@
         '网义云音乐里的那些歌真的很好听啊！',
         'x锟斤拷x 锟斤拷锟斤拷锟斤拷 BLOG',
         '你强归你强，Siyuan 比你强',
-        '你不能通过按住Enter来快速点击一个按钮。',
+        '你不能通过按住 Enter 来快速点击一个按钮。',
         'Siyuan 是我们的红太阳，没有她我们会死！',
         '世界的神秘在我眼前展开——可我却要止步于此。',
         '世界仿佛一台离心机。等到这一切的混乱和眩晕结束，你留下的思想结晶会是什么？',
@@ -43,9 +43,11 @@
         '夜が明けたら　何処へいこうか？　永久に出逢えぬ　あなたと',
         '星巡り　繰り返し　目指すは宇宙の　終着点さ',
         '星巡り　繰り返し　目指すは夢の　出発点さ',
+        '金星之舞传说了吗',
         '2020/10/3：x义x 又在模拟赛上只会 T1',
         '2020/10/4：x义x 又在模拟赛上一道题都不会',
         '2020/10/5：x义x 被 T1 虐杀，没写出 T2，被 T3 虐杀',
+        '2020/10/7：x义x 又不会单调队列了',
         'Oura-Mugi Katsumi Hayashi数值指导 算术/知识 生成功能',
         '快速计算方法 问题方案 多项目类型,Rakuraro Nikki',
         '胜井胜井发电功能 算术/知识 生成函数,数论',
@@ -57,7 +59,9 @@
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
         '对不起，由于初试爆零，您无法查看题解，请下次努力',
         'ABNORMAL',
+        'ACCESS DENIED',
         'Believe there is a great power silently working all things for good',
+        '为什么不去看看 ×√ 日报呢？',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');

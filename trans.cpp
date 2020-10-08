@@ -96,6 +96,7 @@ int main(){
 		cin>>tag_cnt;getline(cin,trash);
 		for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
 		cout<<"	win.archieve_list[win.archieve_list.length] = {\n";
+		cout<<"		'postid' : '"<<post_cnt<<"',\n";
 		cout<<"		'post_name' : '"<<post_name<<"',\n";
 		cout<<"		'post_chinese_name' : '"<<GBToUTF8(post_chinese_name.c_str())<<"',\n";
 		cout<<"		'type_name' : '"<<type_name<<"',\n";
