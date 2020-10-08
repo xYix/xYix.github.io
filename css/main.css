@@ -87,3 +87,7 @@ button{
 th{
     font-weight: normal;
 }
+.inline-blog{
+    width: 100%;
+    border: none;
+}
