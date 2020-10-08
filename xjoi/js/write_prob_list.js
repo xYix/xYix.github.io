@@ -37,7 +37,7 @@
             ProblemSetTitle.appendChild(Titleh1);
         ProblemSetTable.appendChild(ProblemSetTitle);
         for(var Probname in win.prob_list)
-            if(isLegalProb(Probname,win.prob_count))
+            if(win.isLegalProb(Probname,win.prob_count))
                 win.WriteProbinfo(ProblemSetTable,Probname,win.prob_count.value);
         data.appendChild(ProblemSetTable);
     }
