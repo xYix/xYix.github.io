@@ -274,17 +274,28 @@
         let TagsTable = win.createElement('table');
         TagsTable.border='1';TagsTable.rules='all';TagsTable.style='width: 70%';
         let TagsTitle = win.createElement('tr');
+            let Titleh0=win.createElement('th');
+            Titleh0.style='width: 8%';
+            Titleh0.appendChild(win.createTextNode('编号'));
+        TagsTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
             Titleh1.style='width: 40%';
             Titleh1.appendChild(win.createTextNode('名称'));
         TagsTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
-            Titleh2.style='width: 60%';
+            Titleh2.style='width: 52%';
             Titleh2.appendChild(win.createTextNode('英文名'));
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
+        let tagid=0;
         for(var Tag in win.tags_list){
+            tagid =tagid +1;
             let TagsRow=win.createElement('tr');
+                let TagsRow0=win.createElement('th');
+                let TagsRow0p=win.createElement('p');
+                TagsRow0p.textContent=tagid;
+                TagsRow0.appendChild(TagsRow0p);
+            TagsRow.appendChild(TagsRow0);
                 let TagsRow1=win.createElement('th');
                 let TagsRow1a=win.createElement('a');
                 TagsRow1a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [Tag],Page : 0}));
@@ -420,6 +431,7 @@
         }
         ButtonBlock.appendChild(PagePrev);
         let PageSucc = win.createElement('button');
+        console.log(pcount);
         if((win.Page+1)*pper_page < pcount.value){
             PageSucc.style='float: right;background-color: #ffffff;cursor: pointer;';
             PageSucc.onmouseover = function(){this.style = 'float: right;background-color: #dddddd;cursor: pointer;';}
