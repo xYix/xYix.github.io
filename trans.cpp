@@ -90,6 +90,7 @@ int main(){
 	cout<<"(function(win){\n	win.archieve_list=[];\n";
 	int post_cnt=0;
 	while(getline(cin,post_name)){
+		post_cnt++;
 		getline(cin,post_chinese_name);
 		post_chinese_name=UTF8ToGB(post_chinese_name.c_str());
 		getline(cin,type_name);
@@ -103,7 +104,6 @@ int main(){
 		cout<<"		'tag' : [";
 		for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
 		cout<<"],\n	};\n";
-		post_cnt++;
 	}
 	printf("})(document);");
 } 

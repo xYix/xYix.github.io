@@ -371,7 +371,7 @@
         ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
         let ArchieveTitle = win.createElement('tr');
             let Titleh0=win.createElement('th');
-            Titleh0.style='width: 10%';
+            Titleh0.style='width: 5%';
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
@@ -379,11 +379,11 @@
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
-            Titleh2.style='width: 20%';
+            Titleh2.style='width: 12%';
             Titleh2.appendChild(win.createTextNode('分类'));
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
-            Titleh3.style='width: 30%';
+            Titleh3.style='width: 43%';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
         ArchieveTable.appendChild(ArchieveTitle);
