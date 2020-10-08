@@ -430,7 +430,6 @@
         }
         ButtonBlock.appendChild(PagePrev);
         let PageSucc = win.createElement('button');
-        console.log(pcount);
         if((win.Page+1)*pper_page < pcount.value){
             PageSucc.style='float: right;background-color: #ffffff;cursor: pointer;';
             PageSucc.onmouseover = function(){this.style = 'float: right;background-color: #dddddd;cursor: pointer;';}
