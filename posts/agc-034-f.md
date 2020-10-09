@@ -119,4 +119,4 @@ int main(){
 
 我什么时候写的这题？？？
 
-![](https://xyix.github.io/images/wtf.png)
+![](/images/wtf.png)
