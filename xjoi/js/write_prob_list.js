@@ -9,7 +9,7 @@
         ProbinfoBlock.appendChild(Probinfo_id);
             let Probinfo_name=win.createElement('th');
             let Probinfo_name_a=win.createElement('a');
-            Probinfo_name_a.href='/xjoi/probs/'+Probname+'/'+Probname+'.html';
+            Probinfo_name_a.href='/xjoi/probs/?probname='+Probname;
             Probinfo_name_a.textContent=win.prob_chinese_name[Probname];
             Probinfo_name.appendChild(Probinfo_name_a);
         ProbinfoBlock.appendChild(Probinfo_name);

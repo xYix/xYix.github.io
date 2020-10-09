@@ -84,6 +84,7 @@
         else win.Page=parseInt(win.Search['page']);
         win.Funval=win.Search['funval'];
         win.Postid=win.Search['postid']; //Postid 非常特殊，不保存
+        win.Probname=win.Search['probname']; //整个 xjoi 都不保存任何 tag
         win.TrueSearch={
             Tags : win.Tags,
             Type : win.Type,
