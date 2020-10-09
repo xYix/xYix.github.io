@@ -91,3 +91,10 @@ th{
     width: 100%;
     border: 1px outset #36C48B;
 }
+.xjoi-submit{
+    width: 190px;
+    height: 40px;
+    background-color: #36C48B;
+    border: none;
+    color: #ffffff;
+}
