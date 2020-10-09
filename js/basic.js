@@ -83,7 +83,7 @@
         if(win.Search['page'] === undefined) win.Page = 0;
         else win.Page=parseInt(win.Search['page']);
         win.Funval=win.Search['funval'];
-        win.Postid=win.Search['postid'];
+        win.Postid=win.Search['postid']; //Postid 非常特殊，不保存
         win.TrueSearch={
             Tags : win.Tags,
             Type : win.Type,
@@ -328,8 +328,8 @@
         PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('th');
             let Postinfo_title_a=win.createElement('a');
-            if(win.Search.length !== 0)
-                Postinfo_title_a.href='/posts/'+win.Search+'&postid='+postinfo.postid;
+            if(location.search.length !== 0)
+                Postinfo_title_a.href='/posts/'+location.search+'&postid='+postinfo.postid;
             else Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title.appendChild(Postinfo_title_a);
