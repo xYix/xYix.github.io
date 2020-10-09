@@ -328,7 +328,9 @@
         PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('th');
             let Postinfo_title_a=win.createElement('a');
-            Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
+            if(win.Search.length !== 0)
+                Postinfo_title_a.href='/posts/'+win.Search+'&postid='+postinfo.postid;
+            else Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title.appendChild(Postinfo_title_a);
         PostinfoBlock.appendChild(Postinfo_title);
