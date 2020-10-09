@@ -289,28 +289,17 @@
         let TagsTable = win.createElement('table');
         TagsTable.border='1';TagsTable.rules='all';TagsTable.style='width: 70%';
         let TagsTitle = win.createElement('tr');
-            let Titleh0=win.createElement('th');
-            Titleh0.style='width: 8%';
-            Titleh0.appendChild(win.createTextNode('编号'));
-        TagsTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.style='width: 40%';
+            Titleh1.style='width: 45%';
             Titleh1.appendChild(win.createTextNode('名称'));
         TagsTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
-            Titleh2.style='width: 52%';
+            Titleh2.style='width: 55%';
             Titleh2.appendChild(win.createTextNode('英文名'));
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
-        let tagid=0;
         for(var Tag in win.tags_list){
-            tagid =tagid +1;
             let TagsRow=win.createElement('tr');
-                let TagsRow0=win.createElement('th');
-                let TagsRow0p=win.createElement('p');
-                TagsRow0p.textContent=tagid;
-                TagsRow0.appendChild(TagsRow0p);
-            TagsRow.appendChild(TagsRow0);
                 let TagsRow1=win.createElement('th');
                 let TagsRow1a=win.createElement('a');
                 TagsRow1a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [Tag],Page : 0}));
@@ -464,9 +453,43 @@
     win.WriteBlog = function(postid){
         let Blog = win.createElement('iframe');
         Blog.className='inline-blog';
-        Blog.style.height= document.body.clientHeight - 80;
+        Blog.style.height= document.body.clientHeight;
         Blog.src = '/posts/'+win.archieve_list[postid].post_name;
-        console.log(Blog.height);
         document.getElementById("post").appendChild(Blog);
+    }
+    win.WriteTagsList2 = function (data,postinfo){
+        let TagsBlock = win.createElement('center');
+        let TagsTable = win.createElement('table');
+        TagsTable.border='1';TagsTable.rules='all';TagsTable.style='width: 70%';
+        let TagsTitle = win.createElement('tr');
+            let Titleh1=win.createElement('th');
+            Titleh1.style='width: 45%';
+            Titleh1.appendChild(win.createTextNode('名称'));
+        TagsTitle.appendChild(Titleh1);
+            let Titleh2=win.createElement('th');
+            Titleh2.style='width: 55%';
+            Titleh2.appendChild(win.createTextNode('英文名'));
+        TagsTitle.appendChild(Titleh2);
+        TagsTable.appendChild(TagsTitle);
+        for(var i=0;i<postinfo.tag.length;i=i+1){
+            var Tag=postinfo.tag.length[i];
+            let TagsRow=win.createElement('tr');
+                let TagsRow1=win.createElement('th');
+                let TagsRow1a=win.createElement('a');
+                TagsRow1a.href='/archieve/'+win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [Tag],Page : 0}));
+                let TagsRow1strong=win.createElement('strong');
+                TagsRow1strong.textContent=win.tags_list[Tag];
+                TagsRow1a.appendChild(TagsRow1strong);
+                TagsRow1.appendChild(TagsRow1a);
+            TagsRow.appendChild(TagsRow1);
+                let TagsRow2=win.createElement('th');
+                let TagsRow2p=win.createElement('p');
+                TagsRow2p.textContent=Tag;
+                TagsRow2.appendChild(TagsRow2p);
+            TagsRow.appendChild(TagsRow2);
+            TagsTable.appendChild(TagsRow);
+        }
+        TagsBlock.appendChild(TagsTable);
+        data.appendChild(TagsBlock);
     }
 })(document);
