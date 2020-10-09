@@ -472,7 +472,7 @@
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
         for(var i=0;i<postinfo.tag.length;i=i+1){
-            var Tag=postinfo.tag.length[i];
+            var Tag=postinfo.tag[i];
             let TagsRow=win.createElement('tr');
                 let TagsRow1=win.createElement('th');
                 let TagsRow1a=win.createElement('a');
