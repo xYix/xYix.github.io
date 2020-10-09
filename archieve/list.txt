@@ -230,3 +230,9 @@ offline
 overall-binary-search
 isotonic-regression
 pigeon
+nimber
+nimber 运算和扩展
+algorithm
+2
+game-thoery
+generating-function
