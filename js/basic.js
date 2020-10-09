@@ -259,7 +259,7 @@
                 if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h2');
                 if(win.Pathname[1] === 'probs')
                     AddText(win,data,win.prob_chinese_name[win.Probname],'h1'),
-                    AddText(win,data,'作者：'+win.prob_author[win.prob_chinese_name[win.Probname]],'p');
+                    AddText(win,data,'作者：'+win.prob_author[win.Probname],'p');
                 if(win.Pathname[1] === 'fakenews'){
                     var d=new Date();
                     AddText(win,data,'×√日报','h2'),
