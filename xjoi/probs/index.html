@@ -22,9 +22,15 @@
             <center><h1>提交代码</h1></center>
             <center>
                 <p>在下面输入你的代码</p>
-                <textarea cols="200" rows="25" name="source" class="xjoi-textarea"></textarea>
+                <textarea cols="50" rows="10" name="source" class="xjoi-textarea"></textarea>
                 <br/>
-                <button type="submit" class="xjoi-submit"> SUBMIT </button>
+                <script>
+                    let XJOIonmouseover = function(){this.style = 'background-color: #1A5A40;';};
+                    let XJOIonmouseout = function(){this.style = '';};
+                    let XJOIonclick = function (){location.replace('/xjoi/abnormal/');};
+                </script>
+                <button class="xjoi-submit" onmouseover="XJOIonmouseover()" onmouseout="XJOIonmouseout()" 
+                    onclick="XJOIonclick()"> SUBMIT </button>
             </center>
         </div>
     </div>
