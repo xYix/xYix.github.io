@@ -83,6 +83,7 @@
         if(win.Search['page'] === undefined) win.Page = 0;
         else win.Page=parseInt(win.Search['page']);
         win.Funval=win.Search['funval'];
+        win.Postid=win.Search['postid'];
         win.TrueSearch={
             Tags : win.Tags,
             Type : win.Type,
@@ -187,6 +188,10 @@
         else win.Title[0]='未知页面';
     else{
         if(win.Pathname[0] === 'archieve') win.Title[0]='文章一览';
+        if(win.Pathname[0] === 'posts'){
+            win.Title[0]='文章内容';
+            win.Title[1]=win.archieve_list[win.Postid-1].post_chinese_name;
+        }
         if(win.Pathname[0] === 'tags') win.Title[0]='标签一览';
         if(win.Pathname[0] === 'songlist') win.Title[0]='网义云音乐';
         if(win.Pathname[0] === 'help') win.Title[0]='帮助';
@@ -242,6 +247,7 @@
             if(win.Pathname[0] === 'tags') AddText(win,data,'标签一览','h1');
             if(win.Pathname[0] === 'songlist') AddText(win,data,'网义云音乐','h1');
             if(win.Pathname[0] === 'help') AddText(win,data,'帮助','h1');
+            if(win.Pathname[0] === 'posts') AddText(win,data,win.archieve_list[win.Postid-1].post_chinese_name,'h1');
             if(win.Pathname[0] === 'xjoi'){
                 AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
                 if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h2');
@@ -356,8 +362,7 @@
             let Postinfo_tags=win.createElement('th');
             for(let i=0;i<postinfo.tag.length;i=i+1){
                 let Postinfo_tags_a=win.createElement('a');
-                Postinfo_tags_a.href='/archieve/'+
-                    win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]],Page : 0}));
+                Postinfo_tags_a.href='/posts/?'+postinfo.postid;
                 Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
                 Postinfo_tags.appendChild(Postinfo_tags_a);
                 if(i!==postinfo.tag.length-1) Postinfo_tags.appendChild(win.createTextNode(','));
