@@ -285,6 +285,6 @@
 		'post_name' : 'nimber',
 		'post_chinese_name' : 'nimber 运算和扩展',
 		'type_name' : 'algorithm',
-		'tag' : ['game-thoery','generating-function',],
+		'tag' : ['game-theory','generating-function',],
 	};
 })(document);
