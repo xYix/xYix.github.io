@@ -203,13 +203,15 @@
                 win.Title[0]+='：题库';
                 win.Title[4]=win.Title[3];win.Title[3]=win.Title[2];win.Title[2]=win.Title[1];
                 win.Title[1]='第 '+(win.Page+1)+' 页';
-            }if(win.Pathname[1] === 'probs'){
+            }
+            if(win.Pathname[1] === 'probs'){
                 win.Title[0]+='：题目内容';
                 win.Title[4]=win.Title[3];win.Title[3]=win.Title[2];win.Title[2]=win.Title[1];
                 win.Title[1]=win.prob_chinese_name[win.Probname];
             }
             if(win.Pathname[1] === 'contest') win.Title[0]+='：比赛';
             if(win.Pathname[1] === 'fakenews') win.Title[0]+='：新闻';
+            if(win.Pathname[1] === 'abnormal') win.Title[0]+='：评测记录';
         }
         if(win.Pathname[0] === 'archieve'){
             if(win.Type !== undefined){
@@ -257,6 +259,7 @@
                 if(win.Pathname[1] !== 'probs') AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
                 if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h2');
                 if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h2');
+                if(win.Pathname[1] === 'abnormal') AddText(win,data,'评测记录','h2');
                 if(win.Pathname[1] === 'probs')
                     AddText(win,data,win.prob_chinese_name[win.Probname],'h1'),
                     AddText(win,data,'作者：'+win.prob_author[win.Probname],'p');
