@@ -41,7 +41,7 @@ int main(){
 	
 	freopen("D:\\∆»’Êblog\\xjoi\\probs\\list.txt","r",stdin);
 	freopen("D:\\∆»’Êblog\\xjoi\\js\\prob_list.js","w",stdout);
-	cout<<"(function(win){\n	win.prob_list={};\n";
+	cout<<"(function(win){\n	win.prob_chinese_name={};\n";
 	cout<<"	win.prob_author={};\n";
 	string prob_name,prob_chinese_name,prob_author;
 	int prob_cnt=0;
