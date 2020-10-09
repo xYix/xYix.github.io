@@ -15,10 +15,11 @@
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
         <div class="content-block" id='post'>
+            <script>document.WriteTitle2(document.querySelector('#post'));</script>
+            <script>document.WriteBlog(document.Postid-1);</script>
+            <center><h1>标签</h1></center>
+            <script>document.WriteTagsList2(document.querySelector('#post'),document.archieve_list[document.Postid-1]);</script>
         </div>
     </div>
-    <script>document.WriteTitle2(document.querySelector('#post'));</script>
-    <script>document.WriteBlog(document.Postid-1);</script>
-    <h1>标签</h1>
-    <script>document.WriteTagsList2(document.querySelector('#post'),document.archieve_list[document.Postid-1]);</script>
+    
 </div>
