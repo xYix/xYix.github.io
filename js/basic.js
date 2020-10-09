@@ -468,7 +468,7 @@
         Blog.frameBorder =1;
         Blog.className='inline-blog';
         Blog.style.height= win.body.clientHeight - 122;
-        Blog.src = '/posts/'+win.archieve_list[postid].post_name;
+        Blog.src = '/posts/posts/'+win.archieve_list[postid].post_name;
         data.appendChild(Blog);
     }
     win.WriteTagsList2 = function (data,postinfo){
