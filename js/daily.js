@@ -64,6 +64,7 @@
         '为什么不去看看 ×√ 日报呢？',
         '今天你 AC 了吗',
         '《草，为什么倒计时结束又是一个倒计时》',
+        '即使被生活雷普，也要随时准备 一 转 攻 势',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
