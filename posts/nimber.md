@@ -185,6 +185,8 @@ namespace nimbers {
 
 # 系数为 Nimber 的生成函数
 
+> 你好啊小机器人。你学会数数了吗，还是说你还卡在 0 和 1 上？
+
 ## 例题，以及求逆 Ln 和 Exp
 
 [来源](https://yhx-12243.github.io/OI-transit/records/soj1006.html)

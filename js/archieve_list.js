@@ -280,4 +280,11 @@
 		'type_name' : 'algorithm',
 		'tag' : ['offline','overall-binary-search','isotonic-regression','pigeon',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '41',
+		'post_name' : 'nimber',
+		'post_chinese_name' : 'nimber 运算和扩展',
+		'type_name' : 'algorithm',
+		'tag' : ['game-thoery','generating-function',],
+	};
 })(document);

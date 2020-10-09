@@ -466,6 +466,7 @@
         Blog.className='inline-blog';
         Blog.style.height= document.body.clientHeight - 80;
         Blog.src = '/posts/'+win.archieve_list[postid].post_name;
+        console.log(Blog.height);
         document.getElementById("post").appendChild(Blog);
     }
 })(document);
