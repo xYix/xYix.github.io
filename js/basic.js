@@ -339,7 +339,7 @@
         PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('th');
             let Postinfo_title_a=win.createElement('a');
-            Postinfo_title_a.href='/posts/'+postinfo.post_name+'.html';
+            Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title.appendChild(Postinfo_title_a);
         PostinfoBlock.appendChild(Postinfo_title);
@@ -362,7 +362,8 @@
             let Postinfo_tags=win.createElement('th');
             for(let i=0;i<postinfo.tag.length;i=i+1){
                 let Postinfo_tags_a=win.createElement('a');
-                Postinfo_tags_a.href='/posts/?'+postinfo.postid;
+                Postinfo_tags_a.href='/archieve/'+
+                    win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]],Page : 0}));
                 Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
                 Postinfo_tags.appendChild(Postinfo_tags_a);
                 if(i!==postinfo.tag.length-1) Postinfo_tags.appendChild(win.createTextNode(','));
