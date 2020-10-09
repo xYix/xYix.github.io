@@ -26,8 +26,8 @@
                 <br/>
                 <script>
                     let XJOIonmouseover = function(){this.style = 'background-color: #1A5A40;';};
-                    let XJOIonmouseout = function(){this.style = '';};
-                    let XJOIonclick = function (){location.replace('/xjoi/abnormal/');};
+                    let XJOIonmouseout = function(){this.style = '';console.log('wtf');};
+                    let XJOIonclick = function (){location.href='/xjoi/abnormal/';};
                 </script>
                 <button class="xjoi-submit" onmouseover="XJOIonmouseover()" onmouseout="XJOIonmouseout()" 
                     onclick="XJOIonclick()"> SUBMIT </button>
