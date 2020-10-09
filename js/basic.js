@@ -254,12 +254,12 @@
             if(win.Pathname[0] === 'help') AddText(win,data,'帮助','h1');
             if(win.Pathname[0] === 'posts') AddText(win,data,win.archieve_list[win.Postid-1].post_chinese_name,'h1');
             if(win.Pathname[0] === 'xjoi'){
-                AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
+                if(win.Pathname[1] !== 'probs') AddText(win,data,'集天下毒瘤题 恶心天下人','h1');
                 if(win.Pathname[1] === 'contest') AddText(win,data,'比赛列表','h2');
                 if(win.Pathname[1] === 'problemset') AddText(win,data,'题目列表','h2');
                 if(win.Pathname[1] === 'probs')
-                    AddText(win,data,win.prob_chinese_name[win.Probname],'h2'),
-                    AddText(win,data,'作者：'+win.prob_author[win.prob_chinese_name[win.Probname]],'h2');
+                    AddText(win,data,win.prob_chinese_name[win.Probname],'h1'),
+                    AddText(win,data,'作者：'+win.prob_author[win.prob_chinese_name[win.Probname]],'p');
                 if(win.Pathname[1] === 'fakenews'){
                     var d=new Date();
                     AddText(win,data,'×√日报','h2'),
