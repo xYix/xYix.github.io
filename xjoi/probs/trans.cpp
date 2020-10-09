@@ -50,7 +50,7 @@ int main(){
 		prob_chinese_name=UTF8ToGB(prob_chinese_name.c_str());
 		getline(cin,prob_author);
 		prob_author=UTF8ToGB(prob_author.c_str());
-		cout<<"	win.prob_list['"<<prob_name<<"'] = '"<<GBToUTF8(prob_chinese_name.c_str())<<"';\n";
+		cout<<"	win.prob_chinese_name['"<<prob_name<<"'] = '"<<GBToUTF8(prob_chinese_name.c_str())<<"';\n";
 		cout<<"	win.prob_author['"<<prob_name<<"'] = '"<<GBToUTF8(prob_author.c_str())<<"';\n";
 	}
 	cout<<"})(document);";

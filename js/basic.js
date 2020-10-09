@@ -452,13 +452,13 @@
         ButtonBlock.appendChild(PageSucc);
         data.appendChild(ButtonBlock);
     }
-    win.WriteBlog = function(postid){
+    win.WriteBlog = function(data,postid){
         let Blog = win.createElement('iframe');
         Blog.frameBorder =1;
         Blog.className='inline-blog';
-        Blog.style.height= document.body.clientHeight - 122;
+        Blog.style.height= win.body.clientHeight - 122;
         Blog.src = '/posts/'+win.archieve_list[postid].post_name;
-        document.getElementById("post").appendChild(Blog);
+        data.appendChild(Blog);
     }
     win.WriteTagsList2 = function (data,postinfo){
         let TagsBlock = win.createElement('center');

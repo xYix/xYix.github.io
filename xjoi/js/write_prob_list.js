@@ -10,7 +10,7 @@
             let Probinfo_name=win.createElement('th');
             let Probinfo_name_a=win.createElement('a');
             Probinfo_name_a.href='/xjoi/probs/'+Probname+'/'+Probname+'.html';
-            Probinfo_name_a.textContent=win.prob_list[Probname];
+            Probinfo_name_a.textContent=win.prob_chinese_name[Probname];
             Probinfo_name.appendChild(Probinfo_name_a);
         ProbinfoBlock.appendChild(Probinfo_name);
             let Probinfo_path=win.createElement('th');
@@ -54,10 +54,18 @@
                 Titleh3.appendChild(win.createTextNode('作者'));
             ProblemSetTitle.appendChild(Titleh3);
         ProblemSetTable.appendChild(ProblemSetTitle);
-        for(var Probname in win.prob_list)
+        for(var Probname in win.prob_chinese_name)
             if(win.isLegalProb(Probname,win.prob_count))
                 win.WriteProbinfo(ProblemSetTable,Probname,win.prob_count.value);
         ProblemSetBlock.appendChild(ProblemSetTable);
         data.appendChild(ProblemSetBlock);
+    }
+    win.WriteProb =function(data,probname){
+        let Prob = win.createElement('iframe');
+        Prob.frameBorder = 1;
+        Prob.className='inline-blog';
+        Prob.style.height= win.body.clientHeight - 122;
+        Prob.src = '/xjoi/probs/'+probname+'/'+probname;
+        data.appendChild(Prob);
     }
 })(document);
