@@ -468,6 +468,7 @@
         Blog.frameBorder =1;
         Blog.className='inline-blog';
         Blog.src = '/posts/posts/'+win.archieve_list[postid].post_name+".html";
+        Blog.scrolling = "no";
         Blog.onload = function () {
             Blog.style.height = Blog.contentDocument.body.scrollHeight;
         }
