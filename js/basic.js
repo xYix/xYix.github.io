@@ -467,8 +467,10 @@
         let Blog = win.createElement('iframe');
         Blog.frameBorder =1;
         Blog.className='inline-blog';
-        Blog.style.height= win.body.clientHeight - 122;
-        Blog.src = '/posts/posts/'+win.archieve_list[postid].post_name;
+        Blog.src = '/posts/posts/'+win.archieve_list[postid].post_name+".html";
+        Blog.onload = function () {
+            Blog.style.height = Blog.contentDocument.body.scrollHeight;
+        }
         data.appendChild(Blog);
     }
     win.WriteTagsList2 = function (data,postinfo){
