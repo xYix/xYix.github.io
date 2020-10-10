@@ -64,6 +64,7 @@
         let Prob = win.createElement('iframe');
         Prob.frameBorder = 1;
         Prob.className='inline-blog';
+        Prob.scrolling = "no";
         Prob.src = '/xjoi/probs/'+probname+'/'+probname+'.html';
         Prob.onload = function () {
             Prob.style.height = Prob.contentDocument.body.scrollHeight;

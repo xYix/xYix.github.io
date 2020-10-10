@@ -73,6 +73,7 @@
         '我们互相痛恨，互相谴责，可是生活还在继续。人类真是一种神奇的生物。',
         'x义x 老网抑云了',
         '避群星而行之旅……那样的故事，明明听起来很好啊。',
+        'Q：x义x 最常去的地方是？ A：满分提交 - 最慢。',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');

@@ -18,4 +18,14 @@ $$
 $$
 这是显然容易验证的。
 
-记中间那个矩阵为 $M(n-m)$。从而我们就是要求 $\prod_{i=0}^{n-m}M(i)$。
+记中间那个矩阵为 $M(n-m)$。从而我们就是要求 $\prod_{i=0}^{n-m}M(i)$。下面我们令 $n\leftarrow n-m$。
+
+恐怖的数据范围，关于 $i$ 的“多项式”从 $0$ 到 $n$ 累乘。和这个类似的问题我们的确[见过](/posts/?page=0&postid=10)。我们设
+$$
+\mathcal M(w,x)=\prod_{i=0}^{w-1}M(x+w)
+$$
+从而我们要求
+$$
+\mathcal M(B,0)\cdot \mathcal M(B,B)\cdot\ldots\cdot \mathcal M\left(B,\Big\lfloor\dfrac nB\Big\rfloor B\right)
+$$
+再乘上 $O(B)$ 项边角料。可以发现，$\mathcal M(w,x)$ 是一个矩阵，每一个元素都是一个 $dw$ 次多项式，从而我们的倍增需要 $dw+1$ 个点值。

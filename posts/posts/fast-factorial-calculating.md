@@ -14,8 +14,9 @@ tags:
 
 把 $1\cdot 2\cdot 3\cdot\ldots\cdot n$ 分成长为 $B$ 的数段，显然每一段都是形如
 
-$$\prod_{i=1}^B(x+i)$$
-
+$$
+\prod_{i=1}^B(x+i)
+$$
 的东西，那么多点求值暴力刚出 $f(0),f(B),f(2B)...,f(B^2)$ 即可，复杂度 $O(\sqrt n\log ^2 n)$。
 
 # log做法
