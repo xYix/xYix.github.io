@@ -64,8 +64,10 @@
         let Prob = win.createElement('iframe');
         Prob.frameBorder = 1;
         Prob.className='inline-blog';
-        Prob.style.height= win.body.clientHeight - 122;
-        Prob.src = '/xjoi/probs/'+probname+'/'+probname;
+        Prob.src = '/xjoi/probs/'+probname+'/'+probname+'.html';
+        Prob.onload = function () {
+            Prob.style.height = Prob.contentDocument.body.scrollHeight;
+        }
         data.appendChild(Prob);
     }
 })(document);
