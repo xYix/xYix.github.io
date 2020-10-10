@@ -186,15 +186,17 @@ namespace nimbers {
 $$
 x^{2^{2^n}-1}=1
 $$
+别问我为什么……要解释的话又要写一堆东西了。
+
 于是 $x^{-1}=x^{2^{2^n}-2},\sqrt x=x^{2^{2^n-1}}$。快速幂即可。
 
 # 系数为 Nimber 的生成函数
 
 > 你好啊小机器人。你学会数数了吗，还是说你还卡在 0 和 1 上？
 
-## 例题，二项卷积逆 Ln 和 Exp
+## 二项卷积，二项卷积逆，Ln 和 Exp
 
-[来源](https://yhx-12243.github.io/OI-transit/records/soj1006.html)
+[题目链接](https://yhx-12243.github.io/OI-transit/records/soj1006.html)
 
 这个 OJ 好像爆了，而且疑似是一个校内 OJ？
 
