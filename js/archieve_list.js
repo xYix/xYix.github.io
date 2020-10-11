@@ -287,4 +287,11 @@
 		'type_name' : 'algorithm',
 		'tag' : ['game-theory','generating-function',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '42',
+		'post_name' : 'csp-2020-precontest',
+		'post_chinese_name' : 'CSP2020 初赛游记',
+		'type_name' : 'other',
+		'tag' : [],
+	};
 })(document);
