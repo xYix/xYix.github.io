@@ -285,7 +285,7 @@
 		'post_name' : 'nimber',
 		'post_chinese_name' : 'nimber 运算和扩展',
 		'type_name' : 'algorithm',
-		'tag' : ['game-theory','generating-function',],
+		'tag' : ['nimber','game-theory','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '42',
@@ -293,5 +293,12 @@
 		'post_chinese_name' : 'CSP2020 初赛游记',
 		'type_name' : 'other',
 		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '43',
+		'post_name' : 'cube-root-of-two',
+		'post_chinese_name' : '2 的立方根是多少（详细揭秘）',
+		'type_name' : 'algorithm',
+		'tag' : ['nimber','game-theory',],
 	};
 })(document);

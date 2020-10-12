@@ -233,10 +233,17 @@ pigeon
 nimber
 nimber 运算和扩展
 algorithm
-2
+3
+nimber
 game-theory
 generating-function
 csp-2020-precontest
 CSP2020 初赛游记
 other
 0
+cube-root-of-two
+2 的立方根是多少（详细揭秘）
+algorithm
+2
+nimber
+game-theory

@@ -42,3 +42,5 @@ overall-binary-search
 整体二分
 offline
 离线
+nimber
+nimber

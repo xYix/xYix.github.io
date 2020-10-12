@@ -22,4 +22,5 @@
 	win.tags_list['isotonic-regression'] = '保序回归';
 	win.tags_list['overall-binary-search'] = '整体二分';
 	win.tags_list['offline'] = '离线';
+	win.tags_list['nimber'] = 'nimber';
 })(document);
