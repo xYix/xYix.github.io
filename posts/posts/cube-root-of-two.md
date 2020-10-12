@@ -34,7 +34,7 @@ $$
 
 事实上，取任意 $x'\neq x,y'\neq y$，$(x+x')\times(y+y')\neq 0$。因为如果有 $a\times b=0,a\neq 0$，则有 $a\times a^{-1}\times b=0\Rightarrow b=0$。于是我们又回到了 mex，可喜可贺。
 
-为什么我们要讨论构造呢？因为这是让你熟悉一下 nimber 的“定义”：最简单的特征为 2 的域。接下来我们要讨论 nimber 的扩张，为了一次飞跃：从 $\N$ 跳到 $\omega=\N$。
+为什么我们要讨论构造呢？因为这是让你熟悉一下 nimber 的“定义”：最简单的特征为 2 的域。接下来我们要讨论 nimber 的扩张，为了一次飞跃：从 $\omega=\N$ 跳到 $\omega+1$。
 
 # 最小扩张定理
 
@@ -48,7 +48,7 @@ $a+b\ge \triangle$ 和 $a+b\le \triangle$ 都很显然。
 
 $[a\triangle]+b=\operatorname{mex}([a'\triangle]+c+b,[a\triangle]+b')$。显然的任意 $[a'\triangle]+c$ 都可以达到（$c=x+b$ 总是有解 $b+c$），从而得证。
 
->**引理 2.5. **如果 $\triangle$ 在加法下是一个群，则 $\triangle+\triangle$ 也是一个加法群。
+>**引理 2.5. **如果 $\triangle$ 在加法下是一个群，则 $[\triangle+\triangle]$ 也是加法群。
 
 在引理 2 中取 $a=1$ 即可得到新的加法。
 
@@ -66,23 +66,66 @@ $\gamma\triangle=\operatorname{mex}(\gamma'\triangle+\delta(\gamma+\gamma'))$。
 $$
 \triangle\Gamma=\operatorname{mex}(\triangle\gamma+\delta(\gamma+\Gamma)),\gamma\in\Gamma,\delta\in\triangle
 $$
-首先我们有 $[\alpha-\Gamma]\in\Gamma$，否则根据引理 2.5，$\Gamma+\Gamma$ 是一个更大的 $\le\alpha$ 的加法群。
+首先我们有 $[\alpha-\Gamma]\in\Gamma$，否则根据引理 2.5，$\Gamma+\Gamma$ 是一个更大的 $\le\alpha$ 的加法群。从而根据引理 2 有 $[\alpha-\Gamma]=\alpha-\Gamma=\alpha+\Gamma=[\alpha+\Gamma]$，我们不再区分它们。
 
-对于 $\gamma+\Gamma\le \alpha\Leftrightarrow[\gamma+\Gamma]\le \alpha$，它有乘法逆，从而 $\triangle\Gamma\ge \triangle[\alpha-\Gamma]$。事实上 $\triangle\Gamma>\triangle[\alpha-\Gamma]$，因为可以取 $\gamma=[\alpha-\Gamma],\delta=0$。但是也就到此为止了，因为 $\alpha$ 没有逆，我们无法得到 $[\triangle[\alpha-\Gamma]+1]=\triangle[\alpha-\Gamma]+1$。从而
+对于 $\gamma+\Gamma\le \alpha\Leftrightarrow[\gamma+\Gamma]\le \alpha$，它有乘法逆，从而 $\triangle\Gamma\ge \triangle[\alpha-\Gamma]$。事实上 $\triangle\Gamma>\triangle[\alpha-\Gamma]$，因为可以取 $\gamma=[\alpha-\Gamma],\delta=0$。
+
+但是也就到此为止了，因为 $\alpha$ 没有逆，我们无法得到 $[\triangle[\alpha-\Gamma]+1]=\triangle[\alpha-\Gamma]+1$。从而
 $$
 \triangle\Gamma-\triangle[\alpha-\Gamma]=1\\
 \triangle\alpha=1
 $$
 
-> **引理 6. **如果 $\triangle$ 是一个环，$\Gamma$ 是其中的一个域，$n\in\N$，则有 $\triangle^{n+1}=[\triangle\Gamma^n]$。这使得
->
+为了保住x义x的头发，接下来的引理不给出证明。
+
+> **引理 6. **如果 $\triangle$ 是一个环但是存在一个最小的非零元素 $\alpha$ 没有乘法逆，$\Gamma$ 是其中的最大的域，$n\in\N$，则有
 >$$
 >\triangle^n\gamma_n+\triangle^{n-1}\gamma_{n-1}+...+\triangle\gamma_1+\delta=[\triangle(\Gamma^{n-1}\gamma_n+...+\gamma_1)+\delta]
 >$$
 >
-> 其中 $\gamma_i\in \Gamma,\delta\in \triangle$。
+>其中 $\gamma_i\in \Gamma,\delta\in \triangle$。
 
-我们有
+此引理在书中的证明有误，虽然有改正但我并没有看懂。
+
+> **引理 7. **如果 $\triangle$ 是一个域但不是代数封闭的（任何多项式都有至少一个根），那么 $\triangle$ 是其中**字典序最小**（按次数从高到低排列）的无根多项式的根。
+
+这个是真的劲爆。
+
+> **引理 8.** 如果 $\triangle$ 是一个域但不是代数封闭的，设其次数最小的无根多项式次数为 $N$，$n<N$，则有
+> $$
+> \triangle^n\delta_n+\cdots+\delta_0=[\triangle^n\delta_n+\cdots+\delta_0]
+> $$
+
+> **引理 9.** 如果 $\triangle$ 是代数闭的，那么 $\triangle$ 本身是超越的。而且对任意 $n\in\N$ 有
+> $$
+> \triangle^n\delta_n+\cdots+\delta_0=[\triangle^n\delta_n+\cdots+\delta_0]
+> $$
+
+# 所以 2 的立方根是多少
+
+我们给出一个引理：
+
+> **引理 10.** $\omega=\N$ 中所有的二次多项式都有根。
+
+显然 $\omega$ 是域，于是所有二次多项式都可以表为 $x^2+\alpha x+\beta$。因为显然 $\omega$ 上所有非零元素都有逆元，所有元素都有平方根，于是，你甚至只需要用一用求根公式。
+
+于是，根据引理 7，$\omega$ 是字典序最小的三次多项式的根。这个三次多项式显然不是 $x^3$ 或者 $x^3+1$，所以它是 $x^3+2$。所以我们可以大声说出：“无穷的三次方是二！”
+
+草，什么玩意？
+
+不仅如此，我们还可以写出下面的一堆序列（下面所有的运算都是超实数运算）
 $$
-\triangle^{n+1}=\operatorname{mex}\left(\triangle+\prod_{i=1}^n (\delta_i+\triangle)\right)
+2,\omega,\omega^3,\omega^9,...\\
+4,\omega^{\omega},\omega^{5\omega},\omega^{25\omega},...\\
+\omega+1,\omega^{\omega^2},\omega^{7\omega^2},\omega^{49\omega^2},...
 $$
+第一行的开头是第一个没有立方根的数，第二行的开头是第一个没有五次方根的数，第三行的开头的第一个没有七次方根的数。
+
+第一行中每一项都是后一项的 nimber 三次方，第二行中每一项都是后一项的 nimber 五次方，第三行中每一项都是后一项的 nimber 七次方。
+
+上面这些域都不是代数封闭的，第一个代数封闭的域是
+$$
+\omega^{\omega^{\omega}}
+$$
+根据引理 9，它也是第一个超越数。
+
