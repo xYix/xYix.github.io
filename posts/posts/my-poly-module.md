@@ -15,22 +15,15 @@ tags:
 # 常规
 
 - NTT
-
 - 卷积
-
 - 求逆
-
 - 求导，积分
-
 - Ln
-
 - Exp
-
 - Power
-
 - 多点求值（**Multi**point **Eval**uation）
-
 - 快速插值（**Int**er**po**lation）
+- 快速阶乘/整式递推
 
 # 任意模数
 
@@ -45,10 +38,12 @@ tags:
 ## 9.23
 
 - 建立了本页。
-
 - 单位根改为用 log 个 vector 存，NTT 时直接操作指针，大大优化了寻址速度。
-
 - 增加了快速插值。
+
+## 10.13
+
+- 新增整式递推。由于参数复杂，目前使用标准读入获取参数。
 
 ```cpp
 #include<bits/stdc++.h>
@@ -268,6 +263,145 @@ namespace Intpo{
 	}
 }
 
+namespace PolyRec{
+	int N,B,M,D;
+	Poly P[8];
+	Z getP(int k,Z x){Z mul=1,ans=0;for(int i=0;i<=D;i++,mul*=x) ans+=mul*P[k][i];return ans;}
+	struct Mat{
+		Z a[8][8];
+		Mat(){}
+		Mat(Z l){for(int i=0;i<M;i++) a[i][i]=l;}
+		bool iszero(){for(int i=0;i<M;i++)for(int j=0;j<M;j++)if(a[i][j].x) return 0;return 1;}
+	};
+	Mat operator +(const Mat a,const Mat b){
+		Mat c=a;for(int i=0;i<M;i++)for(int j=0;j<M;j++)c.a[i][j]+=b.a[i][j];return c;
+	}
+	Mat operator -(const Mat a){Mat c;for(int i=0;i<M;i++)for(int j=0;j<M;j++)c.a[i][j]=p-a.a[i][j];return c;}
+	Mat operator -(const Mat a,const Mat b){return a+-b;}
+	Mat operator *(const Mat a,const Z l){Mat c=a;for(int i=0;i<M;i++)for(int j=0;j<M;j++) c.a[i][j]*=l;return c;}
+	Mat operator *(const Mat a,const Mat b){
+		Mat c;
+		for(int i=0;i<M;i++)
+		for(int j=0;j<M;j++)
+		for(int k=0;k<M;k++)
+			c.a[i][k]+=a.a[i][j]*b.a[j][k];
+		return c;
+	}
+	Mat& operator +=(Mat &a,const Mat b){return a=a+b;} 
+	Mat& operator -=(Mat &a,const Mat b){return a=a-b;}
+	Mat& operator *=(Mat &a,const Z l){return a=a*l;} 
+	Mat& operator *=(Mat &a,const Mat b){return a=a*b;}  
+	int M0;
+	Mat getM(Z x){
+		x+=M0;
+		Mat c;if(M!=1) c.a[1][0]=getP(0,x);
+		for(int i=1;i<M;i++) c.a[i+1][i]=c.a[1][0];
+		for(int i=0;i<M;i++) c.a[i][M-1]=p-getP(M-i,x);
+		return c;
+	}
+	
+	struct POLY:vector<Mat>{
+		using vector<Mat>::vector;
+		void DFT(int n0){
+			if(this->size()<n0) resize(n0);
+			Poly tmp;tmp.resize(n0);
+			for(int i=0;i<M;i++)
+			for(int j=0;j<M;j++){
+				for(int k=0;k<n0;k++) tmp[k]=this->data()[k].a[i][j];
+				tmp.DFT(n0);
+				for(int k=0;k<n0;k++) this->data()[k].a[i][j]=tmp[k];
+			}
+		}
+		void iDFT(int n0){
+			if(this->size()<n0) resize(n0);
+			Poly tmp;tmp.resize(n0);
+			for(int i=0;i<M;i++)
+			for(int j=0;j<M;j++){
+				for(int k=0;k<n0;k++) tmp[k]=this->data()[k].a[i][j];
+				tmp.iDFT(n0);
+				for(int k=0;k<n0;k++) this->data()[k].a[i][j]=tmp[k];
+			}
+		}
+	};
+	
+	int w;
+	POLY F;
+	void ADD1(){
+		for(int k=0;k<=D*w;k++) F[k]*=getM(k*B+w);
+		for(int j=1;j<=D;j++){
+			F.push_back(Mat(1));
+			for(int i=0;i<=w;i++) F[D*w+j]*=getM((D*w+j)*B+i);
+		}
+		w++;
+	}
+	Z preS[maxN],sufS[maxN],invS;
+	Poly _g;
+	POLY LIP(Z k){
+		POLY ans;
+		int x=1;while(x<=3*D*w) x<<=1;
+		ans.resize(x);_g.resize(x);
+		for(int i=0;i<x;i++) ans[i]=Mat(),_g[i]=0;
+		//get G : inv k-D*w~k+D*w
+		for(int i=0;i<=2*D*w;i++) _g[i]=(Z)i+k-D*w;
+		preS[0]=_g[0];for(int i=1;i<=2*D*w;i++) preS[i]=preS[i-1]*_g[i];
+		sufS[2*D*w]=_g[2*D*w];for(int i=2*D*w-1;~i;i--) sufS[i]=sufS[i+1]*_g[i];
+		invS=qpow(preS[2*D*w],p-2);
+		for(int i=0;i<=2*D*w;i++){_g[i]=invS;if(i!=0) _g[i]*=preS[i-1];if(i!=2*D*w) _g[i]*=sufS[i+1];}
+		//get F
+		for(int i=0;i<=D*w;i++){
+			ans[i]=F[i]*ifac[i]*ifac[D*w-i];
+			if((D*w-i)&1) ans[i]=-ans[i];
+		}
+		//main part
+		ans.DFT(x);_g.DFT(x);
+		for(int i=0;i<x;i++) ans[i]*=_g[i];
+		ans.iDFT(x);_g.iDFT(x);
+		Z mul=preS[D*w];
+		for(int i=0;i<=D*w;i++) ans[i]=ans[i+D*w]*mul,mul*=_g[i]*(k+i+1);
+		ans.resize(D*w+1);
+		return ans;
+	}
+	POLY G;
+	void MUL2(){
+		if(w==0) return;
+		G=LIP(D*w+1);for(int i=0;i<D*w;i++) F.push_back(G[i]);
+		w<<=1;
+		G=LIP(qpow(B,p-2)*(w>>1));
+		for(int i=0;i<=D*w;i++) F[i]*=G[i];
+	}
+	
+	Z A[7];
+	Z _Solve(){
+		w=0;F.clear();F.push_back(Mat(1));
+		for(int i=19;~i;i--){
+			MUL2();
+			if((B>>i)&1) ADD1();
+		}
+		Mat ans=Mat(1);
+		for(int i=0;i<=D*B;i++) ans*=F[i];
+		for(int i=B*(D*B+1);i<=N;i++) ans*=getM(i);
+		//ans=M(m)*...*M(n)
+		//{a_j} * ans = P_0(m)*P_0(m+1)*...*P_0(n)*a_n
+		Z ANS=0;
+		for(int i=0;i<M;i++) ANS+=A[i]*ans.a[i][M-1];
+		return ANS;
+	}
+	void Solve(){
+		scanf("%d%d%d",&N,&M,&D);M0=M;
+		for(int i=0;i<M;i++) scanf("%d",&A[i]);
+		for(int i=0;i<=M;i++){
+			P[i].resize(D+1);
+			for(int j=0;j<=D;j++) scanf("%d",&P[i][j]);
+		}
+		N-=M;B=max(sqrt(N/D)-1,0.0);
+		Z ANS=_Solve();
+		M=1;for(int i=0;i<=D;i++) P[1][i]=p-P[0][i];A[0]=1;
+		ANS*=qpow(_Solve(),p-2);
+		printf("%d\n",ANS);
+	}
+}
+
 int main(){
+	init(); //important
 }
 ```
