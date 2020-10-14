@@ -338,7 +338,7 @@ namespace PolyRec{
 	Poly _g;
 	POLY LIP(Z k){
 		POLY ans;
-		int x=1;while(x<=3*D*w) x<<=1;
+		int x=1;while(x<=2*D*w) x<<=1;
 		ans.resize(x);_g.resize(x);
 		for(int i=0;i<x;i++) ans[i]=Mat(),_g[i]=0;
 		//get G : inv k-D*w~k+D*w
