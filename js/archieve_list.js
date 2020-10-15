@@ -301,4 +301,11 @@
 		'type_name' : 'algorithm',
 		'tag' : ['nimber','game-theory',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '44',
+		'post_name' : 'luogu-4565',
+		'post_chinese_name' : 'luoguP4565 题解 - [CTSC2018]暴力写挂',
+		'type_name' : 'solution',
+		'tag' : ['d-and-c-on-tree',],
+	};
 })(document);

@@ -23,4 +23,5 @@
 	win.tags_list['overall-binary-search'] = '整体二分';
 	win.tags_list['offline'] = '离线';
 	win.tags_list['nimber'] = 'nimber';
+	win.tags_list['d-and-c-on-tree'] = '树分治';
 })(document);

@@ -247,3 +247,8 @@ algorithm
 2
 nimber
 game-theory
+luogu-4565
+luoguP4565 题解 - [CTSC2018]暴力写挂
+solution
+1
+d-and-c-on-tree
