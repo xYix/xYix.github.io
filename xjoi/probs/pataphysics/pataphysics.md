@@ -71,4 +71,4 @@ x义x 给了你 10 份题面，10 包样例，和 10 份挂掉的代码，希望
 
 # 下发文件下载
 
-[这里](/xjoi/probs/pataphysics/pataphysics.zip)
+[这里](https://gitee.com/xYix/xyix/raw/master/xjoi/probs/pataphysics/pataphysics.zip)
