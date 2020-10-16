@@ -28,3 +28,21 @@ $$
 <div style="width:70%;margin:auto"><img src="/images/bfz_.png" alt=""></div>
 
 那么在上面那个做法中，每个 lca 都有一个“生效的分治树”，有些分治叶子生效有些分治叶子不生效，所有生效的分治叶子就是 lca 在 $T_2$ 中的子树。每个 lca 能贡献的就是所有生效而且不在 lca 的儿子生效的节点对（准确地说是异色节点对，但是这也不甚准确，因为任意节点对会异色一次且仅一次）。看起来这很垃圾，但是这个贡献是和线段树合并完美契合的。具体可以看下面的核心代码。
+
+```cpp
+int Merge(int x,int y,int id,ll deplca){
+		if(!~x||!~y) return (x==-1?y:x);
+		ANS=max(ANS,T[x].maxD[0]+T[y].maxD[1]+BFZ::E[id]->c-2*deplca);
+		ANS=max(ANS,T[x].maxD[1]+T[y].maxD[0]+BFZ::E[id]->c-2*deplca);
+		T[x].maxD[0]=max(T[x].maxD[0],T[y].maxD[0]);
+		T[x].maxD[1]=max(T[x].maxD[1],T[y].maxD[1]);
+		T[x].s[0]=Merge(T[x].s[0],T[y].s[0],BFZ::Es[id][0],deplca);
+		T[x].s[1]=Merge(T[x].s[1],T[y].s[1],BFZ::Es[id][1],deplca);
+		stk[++len]=y;
+		return x;
+	}
+```
+
+# 彩蛋
+
+![](/images/sbxyx6.png)
