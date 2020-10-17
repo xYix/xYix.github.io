@@ -31,18 +31,20 @@ $$
 
 ```cpp
 int Merge(int x,int y,int id,ll deplca){
-		if(!~x||!~y) return (x==-1?y:x);
-		ANS=max(ANS,T[x].maxD[0]+T[y].maxD[1]+BFZ::E[id]->c-2*deplca);
-		ANS=max(ANS,T[x].maxD[1]+T[y].maxD[0]+BFZ::E[id]->c-2*deplca);
-		T[x].maxD[0]=max(T[x].maxD[0],T[y].maxD[0]);
-		T[x].maxD[1]=max(T[x].maxD[1],T[y].maxD[1]);
-		T[x].s[0]=Merge(T[x].s[0],T[y].s[0],BFZ::Es[id][0],deplca);
-		T[x].s[1]=Merge(T[x].s[1],T[y].s[1],BFZ::Es[id][1],deplca);
-		stk[++len]=y;
-		return x;
-	}
+	if(!~x||!~y) return (x==-1?y:x);
+	ANS=max(ANS,T[x].maxD[0]+T[y].maxD[1]+BFZ::E[id]->c-2*deplca);
+	ANS=max(ANS,T[x].maxD[1]+T[y].maxD[0]+BFZ::E[id]->c-2*deplca);
+	T[x].maxD[0]=max(T[x].maxD[0],T[y].maxD[0]);
+	T[x].maxD[1]=max(T[x].maxD[1],T[y].maxD[1]);
+	T[x].s[0]=Merge(T[x].s[0],T[y].s[0],BFZ::Es[id][0],deplca);
+	T[x].s[1]=Merge(T[x].s[1],T[y].s[1],BFZ::Es[id][1],deplca);
+	stk[++len]=y;
+	return x;
+}
 ```
 
 # 彩蛋
+
+新的榜单，新的奇迹
 
 ![](/images/sbxyx6.png)

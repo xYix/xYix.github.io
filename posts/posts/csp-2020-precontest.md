@@ -14,7 +14,7 @@ title: CSP2020 初赛游记
 
 发现草坪上有修剪成了危险动物的灌木，~~还有一个被掀翻了（图片中最大的那只的左边）~~
 
-<div style="width:70%;margin:auto"><img src="/images/bear.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="/images/bear.jpg" alt=""></div>
 
 然后发现了江对面的队伍。狂暴膜瑇！话说为什么他们不用穿校服啊（
 
