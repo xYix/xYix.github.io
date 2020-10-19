@@ -195,7 +195,7 @@ $$
 
 > 定义
 > $$
-> \mathcal B\circ\mathcal C:=\sum_{i\ge 0}\{\beta\in\mathcal B,|\beta|=i\}{\color{red}\times}\mathcal C^{\times i}
+> \mathcal B\circ\mathcal C:=\sum_{i\ge 0}\{\beta\in\mathcal B,|\beta|=i\}\  {\color{red}\times}\ \mathcal C^{\times i}
 > $$
 > $\mathcal C^{\times i}:=$ $i$ 个 $\mathcal C$ 连 $\times$。
 >
@@ -227,7 +227,7 @@ $$
 
 > ……两个**染色** $\phi_1,\phi_2\in\mathcal B^{\mathcal M}$ 被认为本质相同，如果存在映射 $g\in G,\phi_1\circ g=\phi_2$。从而我们研究的对象可以称为 $\mathcal B^{\mathcal M}/G$。
 >
-> $\mathcal B$ 中的每一个元素 $\beta$ 都可以有权重 $w(\beta)$。一个映射 $\phi$ 的权重 $w(\phi):=\prod_{k\in\mathcal M}w(\phi(k))$。**Pólya-Redfield 定理**的内容如下：
+> $\mathcal B$ 中的每一个元素 $\beta$ 都可以有权重 $w(\beta)$。一个映射 $\phi$ 的权重 $w(\phi):=\prod_{k\in\mathcal M}w(\phi(k))$，显然同一个等价类中的映射权重都一样，称为这个等价类的权重。**Pólya-Redfield 定理**的内容如下：
 > $$
 > \sum_{\phi\in (\mathcal B^{\mathcal M}/G)}w(\phi)=Z\left(G;\sum_{\beta\in\mathcal B}w(\beta),...,\sum_{\beta\in\mathcal B}w^m(\beta)\right)
 > $$
@@ -363,21 +363,70 @@ $$
 \boxed{\mathcal A=\Theta\mathcal B\Rightarrow A(z)=z\dfrac{\part}{\part z}B(z)}
 $$
 
-所以其实和一般情形是一样的。
-
-## Subsitution 构造
+## 有标号 Subsitution 构造
 
 > 定义
 > $$
-> \mathcal B\circ\mathcal C:=\sum_{i\ge 0}\{\beta\in\mathcal B,|\beta|=i\}{\color{red}\times}\mathcal C^{\star i}
+> \mathcal B\circ\mathcal C:=\sum_{i\ge 0}\{\beta\in\mathcal B,|\beta|=i\}\ {\color{red}\times}\ \dfrac{\mathcal C^{\star i}}{i!}
 > $$
 > $C^{\star i}:=$ $i$ 个 $\mathcal C$ 连 $\star$。
 >
 > 这里的 $\color{red}\times$ 较特殊：新的 $|\cdot|$ 定义为 $\sum|\gamma|$。
 
-其组合意义可以解释为我们把 $\mathcal B$ 的每一个节点全部换成一个 $\mathcal C$ 结构。由于标号，我们可以区分 $\beta$ 中各节点的不同，从而 $\mathcal C^{\star i}$ 和这个组合意义的对应是合理的。
+其组合意义可以解释为我们把 $\mathcal B$ 的每一个节点全部换成一个 $\mathcal C$ 结构。由于标号，我们可以区分 $\beta$ 中各节点的不同，从而把 $\dfrac{\mathcal C^{\star i}}{i!}$（请确认你了解这个东西的含义。比如它在有相同的 $\gamma$ 时是否还是正确的？）中的 $\mathcal C$ 挨个按 $\beta$ 的标号填进去即可。
 
 有
 $$
 \boxed{\mathcal A=\mathcal B\circ\mathcal C\Rightarrow A(z)=B(C(z))}
 $$
+
+## boxed product
+
+我们定义
+
+>$$
+>\mathcal A=\mathcal B^{\square}\star\mathcal C\Rightarrow \left(\dfrac{\text{d}}{\text{d}z}A\right)(z)=\left(\dfrac{\text{d}}{\text{d}z}B\right)(z)C(z)
+>$$
+
+这个东西的组合意义相当于要求一个特殊标号，比如 $1$ 必须分配进 $\beta$。在关于父亲在 $1..i-1$ 随机选的树的问题中比较有用。
+
+# 例题
+
+好了，你已经掌握数数的基本方法了，让我们来做一道例题练习一下吧！
+
+> [ZJOI2018 树](https://www.luogu.com.cn/problem/P4500)
+
+心 肺 停 止
+
+冷静一下。首先我们应该先表示一棵树。根据题面，我们要数的是每个**有根无标号树**（可以验证这个生成方法会把每个有根无标号树等概率生成）作为一个等价类的大小的 $k$ 次方和。设为 $siz^k(\alpha)$，表述的时候我们说这棵无标号树描述了多少棵有标号树。记 $T$ 是答案的 EGF，或 $T(z)=\sum_{\alpha}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!}$。
+
+冷静分析一下。首先我们可以剔掉根（和标号 1）：
+$$
+T'(z)=
+$$
+枚举儿子数：
+$$
+T'(z)=\sum_{i=0}^{\infty}
+$$
+然后呢？每个儿子都可以是一个有根无标号树（儿子到 $\mathcal T$ 的映射，也就是染色），注意无标号，所以在任意置换下相同的方案不该被重复计数。
+
+而最终生成的树描述的有标号树数量是：儿子描述的有标号树数量之积；再乘以当前的染色等价类的大小的 $k$ 次方。
+
+考虑染色等价类的大小怎么描述，显然就是 ${n\choose |\alpha_1|,...,|\alpha_i|}^k$。$k=1$ 是自然的，因为有一个叫 exp 的好东西会自动帮我们算出来：$T'(z)=\text{exp}T(z)$。
+
+对于 $k\neq 1$，我们可以魔改 exp 成，用 EI 的记号，
+$$
+\mathcal{EXP}:\alpha\rightarrow 1+\alpha+\dfrac{\alpha^{\star 2}}{2!^k}+...
+$$
+EGF 也改成 $\mathcal E$GF，$T(z)=\sum_{\alpha}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!^k}$。求导类似。
+
+但是你会发现这个 $\mathcal{EXP}$ 假掉了，问题的关键在于这个 $\mathcal{EXP}$ 不满足
+$$
+\mathcal{EXP}(f+g)=\mathcal{EXP}(f)\cdot\mathcal{EXP}(g)
+$$
+从而它并不像我们希望的那样，合理地使得
+$$
+\mathcal{EXP}\left(\sum_{\alpha}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!}\right)=\prod_{\alpha}\mathcal{EXP}\left(siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!}\right)
+$$
+左边是我们实际算的，而右边是我们希望的，这个 $\mathcal {EXP}$ 使得左边右边不相等。
+
