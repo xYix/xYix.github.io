@@ -126,6 +126,10 @@ $$
 > \text{MSET}(\mathcal B)=\text{SEQ}(\mathcal B)/\mathbf R
 > $$
 > 其中 $\mathbf R$ 是任意置换构成的群。
+>
+> 比如，$(\beta_1,\beta_2,\beta_3)$ 和 $(\beta_1,\beta_3,\beta_2),(\beta_2,\beta_1,\beta_3),(\beta_2,\beta_3,\beta_1),(\beta_3,\beta_1,\beta_2),(\beta_3,\beta_2,\beta_1)$ 等价。这是整个 $(\beta_1,\beta_2,\beta_3)$ 所属的等价类。
+>
+> 再比如，$(\beta_1,\beta_1,\beta_2)$ 和 $(\beta_1,\beta_2,\beta_1),(\beta_2,\beta_1,\beta_1)$ 等价。这是整个 $(\beta_1,\beta_1,\beta_2)$ 所属的等价类。
 
 你可能更熟悉它的另两个名字：Euler 变换或 Polya Exp。
 
@@ -176,25 +180,32 @@ $$
 
 >定义
 >$$
->\Theta\mathcal B:=\sum_{i\ge 0}\{\beta\in \mathcal B,|\beta|=n\}\times\{\epsilon_1,\epsilon_2,...,\epsilon_n\}
+>\Theta\mathcal B:=\sum_{i\ge 0}\{\beta\in \mathcal B,|\beta|=i\}\times\{\epsilon_1,\epsilon_2,...,\epsilon_i\}
 >$$
 >其中 $\epsilon_i$ 是大小为 0 的对象。
 
+它没有什么组合意义，因为它可以解释成在一个图 $\beta$ 中指明一个特殊节点（比如根），但是在图计数中使用 OGF 往往是因为无标号，而无标号场合下任何操作都要 $/\mathbf R$，这使得这个鬼构造什么用也没有。
+
 我们有
 $$
-\mathcal A=\Theta\mathcal B\Rightarrow A(z)=z\dfrac{\part}{\part z}B(z)
+\boxed{\mathcal A=\Theta\mathcal B\Rightarrow A(z)=z\dfrac{\part}{\part z}B(z)}
 $$
 
 ## Subsitution 构造
 
 > 定义
 > $$
-> \mathcal B\circ\mathcal C:=\sum_{k\ge 0}\{\beta\in\mathcal B,|\beta|=n\}\times \mathcal C^k
+> \mathcal B\circ\mathcal C:=\sum_{i\ge 0}\{\beta\in\mathcal B,|\beta|=i\}{\color{red}\times}\mathcal C^{\times i}
 > $$
+> $\mathcal C^{\times i}:=$ $i$ 个 $\mathcal C$ 连 $\times$。
+>
+> 这里的 $\color{red}\times$ 较特殊：新的 $|\cdot|$ 定义为 $\sum|\gamma|$。
+
+同上，没有组合意义。
 
 有
 $$
-\mathcal A=\mathcal B\circ\mathcal C\Rightarrow A(z)=B(C(z))
+\boxed{\mathcal A=\mathcal B\circ\mathcal C\Rightarrow A(z)=B(C(z))}
 $$
 
 
@@ -233,7 +244,7 @@ $$
 
 首先定义什么叫做标号。
 
-> 一个大小为 $n$ 的对象被称作**标号的**，如果它的每一个节点（这里我们认为一个对象是一个图，如果我们需要的话，可以任意扩展它）都有一个互不相同的正整数标号，恰好是 $[1..n]$ 的一个排列。
+> 一个大小为 $n$ 的对象被称作**标号的**，如果它的每一个节点（这里我们认为一个对象是一个图，如果我们需要的话，可以任意扩展它）都附带一个互不相同的正整数标号，恰好是 $[1..n]$ 的一个排列。
 >
 > 一个对象被称为**弱标号**的，如果它几乎是标号的，但是其标号不必恰好是 $[1..n]$ 的一个排列。
 >
@@ -287,5 +298,86 @@ $$
 \mathcal A=\mathcal B\star\mathcal C\Rightarrow A(z)=B(z)C(z)
 $$
 
-## Sequence 构造
+## 有标号 Sequence 构造
 
+> 若 $[z^0]\mathcal B=0$，则我们定义
+> $$
+> \text{SEQ}(\mathcal B):=\mathcal E+\mathcal B+\mathcal B\star \mathcal B+\mathcal B\star \mathcal B\star \mathcal B+...
+> $$
+> 是 $\mathcal B$ 的 Sequence 构造。换句话说，如果 $\mathcal A=\text{SEQ}(\mathcal B)$，则
+> $$
+> \mathcal A=\{\beta_1\star\ldots\star\beta_l\ |\ l\ge 0,\beta\in \mathcal B\}
+> $$
+> 比如，$(\beta'_1,\beta'_2,\beta'_3)$ 本身是强标号的，$\rho(\beta_1')=\beta_1,\rho(\beta_2')=\beta_2,\rho(\beta_3')=\beta_3$，那么它就应该的确是 $\text{SEQ}(\mathcal B)$ 的一个元素。
+>
+> 对应数个 $\mathcal B$ “有序地”组合在一起。
+
+有
+$$
+\boxed{\mathcal A=\text{SEQ}(\mathcal B)\Rightarrow A(z)=\dfrac{1}{1-B(z)}}
+$$
+
+## Set 构造
+
+> 若 $[z^0]\mathcal B=0$，则我们定义
+> $$
+> \text{SET}(\mathcal B):=\text{SEQ}(\mathcal B)/\mathbf R
+> $$
+> 对应数个 $\mathcal B$ “无序地”组合在一起。
+
+我们终于摆脱了“有序”和“无序”，我们现在只说它们在什么置换下等价。
+
+有~~刻在 DNA 里的~~结论
+$$
+\boxed{\mathcal A=\text{SET}(\mathcal B)\Rightarrow A(z)=\text{exp}B(z)}
+$$
+
+## 有标号 Cycle 构造
+
+> 若 $[z^0]\mathcal B=0$，则我们定义
+> $$
+> \text{CYC}(\mathcal B):=\text{SEQ}(\mathcal B)/\mathbf S
+> $$
+> 其中 $\mathbf S$ 是所有循环移位（circular shift）构成的群。
+
+我们有
+$$
+\boxed{\mathcal A=\text{CYC}(\mathcal B)\Rightarrow A(z)=\text{log}\dfrac{1}{1-B(z)}}
+$$
+
+## 有标号可构造性
+
+与普通的可构造性类似。
+
+## 有标号 Pointing 构造
+
+>定义
+>$$
+>\Theta\mathcal B:=\sum_{i\ge 0}\{\beta\in \mathcal B,|\beta|=i\}\times[1..n]
+>$$
+
+其组合意义可以解释为在 $\beta$ 中指明一个特殊的节点（也就是指明一个特殊的标号），比如指明根。
+
+我们有
+$$
+\boxed{\mathcal A=\Theta\mathcal B\Rightarrow A(z)=z\dfrac{\part}{\part z}B(z)}
+$$
+
+所以其实和一般情形是一样的。
+
+## Subsitution 构造
+
+> 定义
+> $$
+> \mathcal B\circ\mathcal C:=\sum_{i\ge 0}\{\beta\in\mathcal B,|\beta|=i\}{\color{red}\times}\mathcal C^{\star i}
+> $$
+> $C^{\star i}:=$ $i$ 个 $\mathcal C$ 连 $\star$。
+>
+> 这里的 $\color{red}\times$ 较特殊：新的 $|\cdot|$ 定义为 $\sum|\gamma|$。
+
+其组合意义可以解释为我们把 $\mathcal B$ 的每一个节点全部换成一个 $\mathcal C$ 结构。由于标号，我们可以区分 $\beta$ 中各节点的不同，从而 $\mathcal C^{\star i}$ 和这个组合意义的对应是合理的。
+
+有
+$$
+\boxed{\mathcal A=\mathcal B\circ\mathcal C\Rightarrow A(z)=B(C(z))}
+$$
