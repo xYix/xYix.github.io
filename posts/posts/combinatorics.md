@@ -31,6 +31,12 @@ title: 解析组合学习笔记
 
 > 两个组合类 $\mathcal A,\mathcal B$ 是**同构**的，如果 $A_n=B_n$。记作 $\mathcal A\cong\mathcal B$。
 
+## 引出的一些组合类
+
+记 $\mathcal  E$ 是只由一个大小为 0 的元素构成的组合类。我们有 $E(z)=1$。
+
+记 $\mathcal Z$ 是只由一个大小为 1 的元素构成的组合类。我们有 $Z(z)=z$。
+
 # 几个基础的构造
 
 下面讨论一些可以直接被翻译为生成函数的构造，称为 admissible constructions，可译为“可接受的构造”。具体来说
@@ -56,12 +62,6 @@ $$
 $$
 \boxed{A(z)=B(z)C(z)}
 $$
-
-### 引出的一些组合类
-
-记 $\mathcal  E$ 是只由一个大小为 0 的元素构成的组合类。我们有 $E(z)=1$，从而 $\mathcal A\cong \mathcal A\times \mathcal E\cong\mathcal E\times\mathcal A$。
-
-记 $\mathcal Z$ 是只由一个大小为 1 的元素构成的组合类。我们有 $Z(z)=z$。
 
 ## 不交并
 
@@ -100,7 +100,7 @@ $$
 
 我们有
 $$
-\boxed{\mathcal A=\text{SEQ}(\mathcal B)\Rightarrow A=\dfrac{1}{1-B}}
+\boxed{\mathcal A=\text{SEQ}(\mathcal B)\Rightarrow A(z)=\dfrac{1}{1-B(z)}}
 $$
 
 ## Cycle 构造
@@ -149,7 +149,7 @@ $$
 
 我们将用以上的几个构造（$\mathcal E,\mathcal Z,+,\times,\text{SEQ},\text{CYC},\text{MSET},\text{PSET}$）构造出一切组合类。具体来讲
 
-# specification，可构造性，Pólya 操作
+## specification，可构造性，Pólya 操作
 
 > 一个 $r$ 阶的 **specification**（可译作规范）是 $r$ 条方程构成的方程组
 > $$
@@ -171,6 +171,32 @@ $$
 它们被称为 Pólya 操作。
 
 ~~那个 Pólya Exp · 改真的不是我乱翻，原文就是 Modified Pólya Exp~~
+
+## Pointing 构造
+
+>定义
+>$$
+>\Theta\mathcal B:=\sum_{i\ge 0}\{\beta\in \mathcal B,|\beta|=n\}\times\{\epsilon_1,\epsilon_2,...,\epsilon_n\}
+>$$
+>其中 $\epsilon_i$ 是大小为 0 的对象。
+
+我们有
+$$
+\mathcal A=\Theta\mathcal B\Rightarrow A(z)=z\dfrac{\part}{\part z}B(z)
+$$
+
+## Subsitution 构造
+
+> 定义
+> $$
+> \mathcal B\circ\mathcal C:=\sum_{k\ge 0}\{\beta\in\mathcal B,|\beta|=n\}\times \mathcal C^k
+> $$
+
+有
+$$
+\mathcal A=\mathcal B\circ\mathcal C\Rightarrow A(z)=B(C(z))
+$$
+
 
 # Pólya 定理
 
@@ -200,3 +226,66 @@ $$
 > $$
 
 《如果早知道，~~男生也会被~~真正的 Pólya 定理长这样》
+
+现在运用上面的构造，Burnside 引理和 Pólya 定理，你应该能解决很多无标号计数问题了。可是……**标号**是什么？我们来介绍有标号计数。
+
+# 有标号计数
+
+首先定义什么叫做标号。
+
+> 一个大小为 $n$ 的对象被称作**标号的**，如果它的每一个节点（这里我们认为一个对象是一个图，如果我们需要的话，可以任意扩展它）都有一个互不相同的正整数标号，恰好是 $[1..n]$ 的一个排列。
+>
+> 一个对象被称为**弱标号**的，如果它几乎是标号的，但是其标号不必恰好是 $[1..n]$ 的一个排列。
+>
+> 一个组合类被称作**标号的**，如果它的元素都是标号的对象。
+
+> 一个计数序列 $A_n$ 的 **EGF**（Exponential GF）是形式幂级数
+> $$
+> A(z)=\sum_{i\ge 0}A_n\dfrac{z^n}{n!}
+> $$
+> 因而对于组合类 $\mathcal A$，它的 EGF 也是
+> $$
+> \sum_{x\in \mathcal A}\dfrac{z^{|x|}}{|x|!}
+> $$
+> 我们记
+> $$
+> A_n=n![z^n]A(z)
+> $$
+
+$\mathcal E,\mathcal Z$ 的定义如之前一样。接下来的 GF 默认为 EGF。
+
+## 重标号
+
+众所周知，标号的存在就是为了让你重新排的。下面是典型的两种重排。
+
+### reduction
+
+把一个弱标号的对象排成强标号。比如有一个 $\alpha$，它的标号是 $\left<233,998244353,1\right>$，那么 $\alpha$ 的标号就会被 reduction 成 $\left<2,3,1\right>$。这个被重标号的 $\alpha$ 记作 $\rho(\alpha)$。
+
+### expansion
+
+reduction 的逆操作。显然 expansion 的结果不唯一。记作 $e(\alpha)$。
+
+## 标号积
+
+你一定记得[城市规划](https://www.luogu.com.cn/problem/P4841)。“一个无向图就是由若干个无向连通图组成的”，组成是什么意思？~~感性理解，请~~今天我们终于可以严谨地定义“组成”了。
+
+两个标号对象 $\beta,\gamma$ 的**标号积**定义为
+$$
+\beta\star\gamma:=\{(\beta',\gamma')|(\beta',\gamma')\texttt{是强标号的},\rho(\beta')=\beta,\rho(\gamma')=\gamma\}
+$$
+其大小定义为 $|\beta|+|\gamma|$。
+
+两个组合类的**标号积**定义为
+$$
+\mathcal B\star\mathcal C:=\bigcup_{\beta\in\mathcal B,\gamma\in\mathcal C}\beta\star\gamma
+$$
+显然此处 $\beta\star\gamma$ 两两不交。
+
+那么标号积是否 admissible 呢？答案是肯定的。事实上我们都知道它对应二项卷积，也对应 EGF 的乘法。
+$$
+\mathcal A=\mathcal B\star\mathcal C\Rightarrow A(z)=B(z)C(z)
+$$
+
+## Sequence 构造
+
