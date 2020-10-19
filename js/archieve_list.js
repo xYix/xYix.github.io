@@ -308,4 +308,11 @@
 		'type_name' : 'solution',
 		'tag' : ['d-and-c-on-tree',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '45',
+		'post_name' : 'combinatorics',
+		'post_chinese_name' : '解析组合学习笔记',
+		'type_name' : 'algorithm',
+		'tag' : ['counting','generating-function','group-counting',],
+	};
 })(document);

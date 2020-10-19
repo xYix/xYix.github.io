@@ -1,5 +1,5 @@
 ---
-title: 组合计数学习笔记
+title: 解析组合学习笔记
 ---
 
 在写[ZJOI2018 树](/posts/?page=0&postid=21)的题解时我一直有这样一种感觉：我们计数的对象太复杂以至于我们很难描述和分析它。有序？无序？有标号？无标号？万一对象是什么“k 棵本质相同的树”之类的东西，上面的四个问题还能无限套娃。数数初学者更是很难搞明白 exp 和有标号计数的关系；作为一个集合幂级数的初学者我也很难理解集合幂级数 ln 是怎么“拆解”一个对象的。
@@ -119,8 +119,6 @@ $$
 $$
 \boxed{\mathcal A=\text{CYC}(\mathcal B)\Rightarrow A(z)=\sum_{k=1}^{\infty}\dfrac{\varphi(k)}{k}\text{log}\dfrac{1}{1-B(z^k)}}
 $$
-事实上我们甚至有一种绕过 Burnside 引理的做法，不过需要多元生成函数，此处先不表。
-
 ## Multiset 构造
 
 > 若 $[z^0]\mathcal B=0$，则我们定义
@@ -176,7 +174,7 @@ $$
 
 # Pólya 定理
 
-考虑一个大小为 $m$ 的集合 $\mathcal M$ 和一个置换群 $G$ 作用在其上。不妨认为 $\mathcal M=\{1,2,...,m\}$。
+考虑一个大小为 $m$ 的有限集合 $\mathcal M$ 和一个置换群 $G$ 作用在其上。不妨认为 $\mathcal M=\{1,2,...,m\}$。
 
 > 定义 $G$ 的**循环指标**为
 > $$
@@ -184,5 +182,21 @@ $$
 > $$
 > 其中 $j_1(g)$ 表示 $g$ 中大小为 1 的循环个数。
 
-> **Pólya 定理.** 
+一个我们并不陌生的东西。
 
+> **Pólya 定理.** 令 $\mathcal B$ 是一个组合类，$\mathcal M$ 是一个有限集合，上有一个置换群 $G$。考虑集合 $\mathcal B^{\mathcal M}$，即所有 $\mathcal M\rightarrow\mathcal B$ 的映射……
+
+我们指出，这是广义的**染色**。
+
+> ……两个**染色** $\phi_1,\phi_2\in\mathcal B^{\mathcal M}$ 被认为本质相同，如果存在映射 $g\in G,\phi_1\circ g=\phi_2$。从而我们研究的对象可以称为 $\mathcal B^{\mathcal M}/G$。
+>
+> $\mathcal B$ 中的每一个元素 $\beta$ 都可以有权重 $w(\beta)$。一个映射 $\phi$ 的权重 $w(\phi):=\prod_{k\in\mathcal M}w(\phi(k))$。**Pólya-Redfield 定理**的内容如下：
+> $$
+> \sum_{\phi\in (\mathcal B^{\mathcal M}/G)}w(\phi)=Z\left(G;\sum_{\beta\in\mathcal B}w(\beta),...,\sum_{\beta\in\mathcal B}w^m(\beta)\right)
+> $$
+> 如果取 $w(\beta)=z^{|\beta|}$，我们还有
+> $$
+> \sum_{\phi\in (\mathcal B^{\mathcal M}/G)}z^{|\phi|}=Z\left(G;B(z),...,B(z^m)\right)
+> $$
+
+《如果早知道，~~男生也会被~~真正的 Pólya 定理长这样》
