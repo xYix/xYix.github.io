@@ -149,14 +149,6 @@ $$
 \boxed{\mathcal A=\text{PSET}(\mathcal B)\Rightarrow A(z)=\begin{cases}\prod_{n}(1+z^n)^{B_i}\\\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{(-1)^{i-1}B(z^i)}{i}\right)\end{cases}}
 $$
 
-## 没啥用的几个记号
-
-$$
-\text{SEQ}_k(\mathcal B)=\mathcal B^k\\
-\text{SEQ}_{\ge k}(\mathcal B)=\mathcal B^k\text{SEQ}(\mathcal B)\\
-\text{MSET}_k(\mathcal B)=\mathcal B^k/\mathbf R
-$$
-
 我们将用以上的几个构造（$\mathcal E,\mathcal Z,+,\times,\text{SEQ},\text{CYC},\text{MSET},\text{PSET}$）构造出一切组合类。具体来讲
 
 # specification，可构造性，Pólya 操作
@@ -178,3 +170,19 @@ Q(f)=\dfrac{1}{1-f}\quad(\texttt{拟逆})\\
 \text{Exp}(f)=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{B(z^i)}{i}\right)\quad(\text{Pólya Exp})\\
 \overline{\text{Exp}}(f)=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{(-1)^{i-1}B(z^i)}{i}\right)\quad(\text{Pólya Exp · 改})
 $$
+它们被称为 Pólya 操作。
+
+~~那个 Pólya Exp · 改真的不是我乱翻，原文就是 Modified Pólya Exp~~
+
+# Pólya 定理
+
+考虑一个大小为 $m$ 的集合 $\mathcal M$ 和一个置换群 $G$ 作用在其上。不妨认为 $\mathcal M=\{1,2,...,m\}$。
+
+> 定义 $G$ 的**循环指标**为
+> $$
+> Z(G)=Z(G;x_1,x_2,...,x_m)=\dfrac{1}{|G|}\sum_{g\in G}x_1^{j_1(g)}x_2^{j_2(g)}...x_m^{j_m(g)}
+> $$
+> 其中 $j_1(g)$ 表示 $g$ 中大小为 1 的循环个数。
+
+> **Pólya 定理.** 
+
