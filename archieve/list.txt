@@ -253,7 +253,7 @@ solution
 1
 d-and-c-on-tree
 combinatorics
-解析组合学习笔记
+组合结构符号化学习笔记
 algorithm
 3
 counting
