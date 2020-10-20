@@ -436,7 +436,7 @@ $$
 $$
 \mathcal T^{\square}=\text{MSET}(\mathcal T)
 $$
-注意我们分析的是 $\mathcal T$ 的结构，这和我们使用什么生成函数**无关**，我们只是知道某些结构和某些生成函数有直接对应罢了。
+注意我们分析的是 $\mathcal T$ 的结构，这和我们使用什么生成函数**无关**，我们只是知道某些结构和某些生成函数有直接对应罢了。**绝对不要把构造和生成函数混为一谈**。
 
 我们直接把我们的魔改 EGF 带进去。有
 $$
@@ -474,3 +474,25 @@ $$
 $$
 
 但是当 $k$ 变动时我们必须重新计算右式，这部分复杂度为 $O(n^2\log n)$。
+
+# 课后练习
+
+我们定义一种新的组合类，其元素的大小函数是 $[1..n]$ 的一个子集，当然也可看成一个 $[0,2^n)$ 的一个二进制数。
+
+考虑[子集卷积的普通做法](https://www.luogu.com.cn/problem/P4221)，我们定义一个组合类的**集合占位幂级数**为
+$$
+\sum_{\alpha\in\mathcal A}\left(z^{|\alpha|}\sigma^{||\alpha||}+\sum_{i=||\alpha||+1}f_i\sigma^{i}\right)
+$$
+其中 $||\alpha||$ 表示集合 $|\alpha|$ 的大小。$f$ 是无意义的占位信息。容易验证集合占位幂级数的或卷积
+$$
+[z^{s}](\sigma\times\tau)=\sum_{p\cup q=s}[z^p]\sigma\times[z^q]\tau
+$$
+是**子集卷积**。
+
+- 定义两个组合类的“笛卡尔积”，它应该和其集合占位幂级数的乘积对应。
+- 定义两个组合类的和，它应该和其集合占位幂级数的和对应。
+- 定义 composition 构造，它应该和其集合占位幂级数的 $\text{exp}$ 对应。$\text{exp}$ 中出现的乘法均定义为或卷积。指出 composition 构造的组合意义。
+- 定义 decomposition 构造，它应该和其集合占位幂级数的 $\text{ln}$ 对应。指出 decomposition 构造的组合意义。
+- 定义 modified box 构造 $\square_i\mathcal A:=\{\alpha|\alpha\in \mathcal A,i\in|\alpha|\},|\alpha|_{\square_i\mathcal A}:=|\alpha|_{\mathcal A}/\{i\}$。指出它的组合意义。
+- 分析一个图的**有根生成树**的结构。你可以考虑从 $1..n$ 依次加入各个节点。
+- 分析一个图的**有根仙人掌**的结构。你可以参考[这里](https://xyix.gitee.io/posts/?page=1&postid=35)。
