@@ -444,10 +444,10 @@ $$
 &=T\left(\text{exp}\left(\sum_{i=1}^{\infty}\dfrac 1 i\sum_{t\in\mathcal T}t^i\right)\right)&(\texttt{Pólya}\ \text{定理})\\
 &=T\left(\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\sum_{j=0}^{\infty}\dfrac{t^{ij}}{i^jj!}\right)&(\texttt{拆开}\text{ exp})\\
 &=\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\sum_{j=0}^{\infty}\dfrac{T^{ij}(t)}{i^jj!}&(T\ \texttt{的线性，积性})\\
-&=\prod_{i=1}^{\infty}\text{exp}(T^i(\mathcal T)/i)&(恢复 \text{ exp})
+&=\prod_{i=1}^{\infty}\prod_{t\in \mathcal T}\text{exp}(T^i(\mathcal t)/i)&(\texttt{恢复} \text{ exp})
 \end{aligned}
 $$
-现在出现了一个问题。我们没法描述 $T^i(\mathcal T)$。
+现在出现了一个问题。我们没法处理 $T^i(\mathcal t)$。
 
 可以想到的是修改 $T$ 的定义为
 $$
@@ -455,14 +455,14 @@ T(\mathcal A;z,u)=\sum_{\alpha\in\mathcal A}z^{|\alpha|}\dfrac{1}{1-u\frac{siz(\
 $$
 $T$ 的乘法定义为 $[u^k](T_1T_2)=[u^k]T_1[u^k]T_2$，即 $z$ 一维卷积，$u$ 一维点乘。它仍然保有之前的线性，积性。于是有
 $$
-\begin{aligned} \left[u^k\right]T^i(\mathcal T;z)&=\sum_{t\in\mathcal T}siz^{ik}(t)\dfrac{z^{i|t|}}{|t|!^{ik}}\\
-&=\sum_{t\in\mathcal T}[u^{ik}]T(t;z^i)\\
-&=[u^{ik}]T(\mathcal T;z^i)
-\end{aligned}
+\left[u^k\right]T^i(\mathcal t;z)=siz^{ik}(t)\dfrac{z^{i|t|}}{|t|!^{ik}}=[u^{ik}]T(t;z^i)
 $$
 于是我们有
 $$
-[u^k]T(\mathcal T^{\square};z)=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}\right)
+\begin{aligned}[u^k]T(\mathcal T^{\square};z)&=\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\text{exp}([u^{ik}]T(t;z^i))\\
+&=\prod_{i=1}^{\infty}[u^{ik}]\text{exp}(T(\mathcal T;z^i)/i)&(T\ \texttt{的线性，也是刚才操作的目的})\\
+&=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}\right)
+\end{aligned}
 $$
 那么具体怎么做呢？首先观察到 $u$ 指标乘 $z$ 指标不超过 $nk$ 的项才是有意义的；然后我们从大的 $u$ 指标推到小的 $u$ 指标，有
 $$
