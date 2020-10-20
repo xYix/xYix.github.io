@@ -403,7 +403,7 @@ $$
 
 好了，你已经掌握数数的基本方法了，让我们来做一道例题练习一下吧！
 
-> [ZJOI2018 树](https://www.luogu.com.cn/problem/P4500)
+## [ZJOI2018 树](https://www.luogu.com.cn/problem/P4500)
 
 心 肺 停 止
 
@@ -468,12 +468,31 @@ $$
 $$
 \text{ln}[u^k]T(\mathcal T^{\square};z)-[u^k]T(\mathcal T;z)=\sum_{i=2}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}
 $$
-从而对 $[u^kz^n]T(\mathcal T)$ 容易 $O(n)$ 算出。复杂度为
+对于左边，$[u^kz^n]T(\mathcal T)$ 容易 $O(n)$ 算出。复杂度为
 $$
 \sum_{k=1}^nO\left(\dfrac{n^2}{k^2}\right)=O(n^2)
 $$
 
-但是当 $k$ 变动时我们必须重新计算右式，这部分复杂度为 $O(n^2\log n)$。
+当 $k$ 变动时我们必须重新计算右式，这部分复杂度为 $O(n\log^2 n)$。
+
+## 分析边仙人掌的结构
+
+先分析有标号有根仙人掌，记为 $\mathcal C$。显然它是 $\Theta(有标号无根仙人掌)$，从而很容易完成从有根到无根的转换。
+
+讨论根的“儿子”是否和根在一个环上。如果不在一个环上，那么直接得到
+$$
+\mathcal Z\star\text{SET}(\mathcal C)
+$$
+否则枚举环的大小 $i+1\ge 3$，显然有一端固定的环的结构是 $\mathcal Z^i/2$（由于标号，没有一个对象是翻转置换的不动点），而环上每一个除了根的节点都可以直接替换为一个仙人掌。所以我们最终得到
+$$
+\mathcal C=\mathcal Z\star\text{SET}\left(\mathcal C+\dfrac 12\sum_{i=2}^{\infty}\mathcal C^i\right)=\mathcal Z\star\text{SET}\left(\dfrac 1 2\mathcal C+\dfrac {\mathcal C} {2(1-\mathcal C)}\right)
+$$
+接下来看看无标号有根仙人掌，还是记为 $\mathcal C$。故技重施：
+$$
+\mathcal C=\mathcal Z\times\text{MSET}\left(\mathcal C+\dfrac 1 2\sum_{i=2}^{\infty}\mathcal C^i+\dfrac 12\sum_{i=1}^{\infty}(\Delta\mathcal C^2)^i\times(1+\mathcal C)\right)\\
+=\mathcal Z\times\text{MSET}\left(\dfrac{\mathcal C}{2(1-\mathcal C)}+\dfrac{\mathcal C+\Delta\mathcal C^2}{2(1-\Delta\mathcal C^2)}\right)
+$$
+其中 $\Delta\mathcal C^2=\sum_{t\in\mathcal C}t^2$。
 
 # 课后练习
 
@@ -481,7 +500,7 @@ $$
 
 考虑[子集卷积的普通做法](https://www.luogu.com.cn/problem/P4221)，我们定义一个组合类的**集合占位幂级数**为
 $$
-\sum_{\alpha\in\mathcal A}\left(z^{|\alpha|}\sigma^{||\alpha||}+\sum_{i=||\alpha||+1}f_i\sigma^{i}\right)
+\sum_{\alpha\in\mathcal A}\left(z^{|\alpha|}x^{||\alpha||}+\sum_{i=||\alpha||+1}^{\infty}f_ix^{i}\right)
 $$
 其中 $||\alpha||$ 表示集合 $|\alpha|$ 的大小。$f$ 是无意义的占位信息。容易验证集合占位幂级数的或卷积
 $$
@@ -494,5 +513,5 @@ $$
 - 定义 composition 构造，它应该和其集合占位幂级数的 $\text{exp}$ 对应。$\text{exp}$ 中出现的乘法均定义为或卷积。指出 composition 构造的组合意义。
 - 定义 decomposition 构造，它应该和其集合占位幂级数的 $\text{ln}$ 对应。指出 decomposition 构造的组合意义。
 - 定义 modified box 构造 $\square_i\mathcal A:=\{\alpha|\alpha\in \mathcal A,i\in|\alpha|\},|\alpha|_{\square_i\mathcal A}:=|\alpha|_{\mathcal A}/\{i\}$。指出它的组合意义。
-- 分析一个图的**有根生成树**的结构。你可以考虑从 $1..n$ 依次加入各个节点。
-- 分析一个图的**有根仙人掌**的结构。你可以参考[这里](https://xyix.gitee.io/posts/?page=1&postid=35)。
+- 分析一个图的**无根生成树**的结构。你可以考虑从 $1..n$ 依次加入各个节点。
+- 分析一个图的**无根生成仙人掌**的结构。你可以参考[这里](https://xyix.gitee.io/posts/?page=1&postid=35)。
