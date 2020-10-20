@@ -4,7 +4,7 @@ title: 解析组合学习笔记
 
 在写[ZJOI2018 树](/posts/?page=0&postid=21)的题解时我一直有这样一种感觉：我们计数的对象太复杂以至于我们很难描述和分析它。有序？无序？有标号？无标号？万一对象是什么“k 棵本质相同的树”之类的东西，上面的四个问题还能无限套娃。数数初学者更是很难搞明白 exp 和有标号计数的关系；作为一个集合幂级数的初学者我也很难理解集合幂级数 ln 是怎么“拆解”一个对象的。
 
-发现有个叫“解析组合”的东西里面有一些工具，学来用一用。pdf 版本在[这里](http://algo.inria.fr/flajolet/Publications/book.pdf)。书中举了大量生动的例子，画了大量的插图，非常的强大。如果你的数数不够好，可以找来看一看加深理解。
+发现有个叫“解析组合”的东西里面有一些符号化组合对象的工具，学来用一用。pdf 版本在[这里](http://algo.inria.fr/flajolet/Publications/book.pdf)。书中举了大量生动的例子，画了大量的插图，非常的强大。如果你的数数不够好，可以找来看一看加深理解。
 
 # 定义
 
@@ -235,6 +235,11 @@ $$
 > $$
 > \sum_{\phi\in (\mathcal B^{\mathcal M}/G)}z^{|\phi|}=Z\left(G;B(z),...,B(z^m)\right)
 > $$
+> 如果取 $G$ 为任意置换的集合 $\mathbf R$，我们还有
+> $$
+> \sum_{i=0}^{\infty}\sum_{\phi\in (\mathcal B^{[1..i]}/\mathbf R_i)}w(\phi)=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{\sum_{\beta\in\mathcal B}w^i(\beta)}{i}\right)
+> $$
+> 证明可大致参考[这里](/posts/?page=1&postid=31)（链接里同时还取 $w(\beta)=z^{|\beta|}$，但是其实不失一般性。注意 $w(\beta)=z^{|\beta|}$ 和 $\text{MSET}$ 的关系。）
 
 《如果早知道，~~男生也会被~~真正的 Pólya 定理长这样》
 
@@ -398,35 +403,64 @@ $$
 
 心 肺 停 止
 
-冷静一下。首先我们应该先表示一棵树。根据题面，我们要数的是每个**有根无标号树**（可以验证这个生成方法会把每个有根无标号树等概率生成）作为一个等价类的大小的 $k$ 次方和。设为 $siz^k(\alpha)$，表述的时候我们说这棵无标号树描述了多少棵有标号树。记 $T$ 是答案的 EGF，或 $T(z)=\sum_{\alpha}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!}$。
+冷静一下。根据题面，我们要数的是每个**有根无标号树**（可以验证这个生成方法会把每个有根无标号树等概率生成）（记所有有根无标号树构成的组合类为 $\mathcal T$）作为一个等价类的大小的 $k$ 次方和。设为 $siz^k(\alpha)$，表述的时候我们说这棵无标号树描述了多少棵有标号树。
 
-冷静分析一下。首先我们可以剔掉根（和标号 1）：
+首先考虑两个等价类的笛卡尔积（我们当然要先引入笛卡尔积再引入 $\text{MSET}$ 构造），记为 $*$。我们有
 $$
-T'(z)=
+|t_1*t_2|=|t_1|+|t_2|\\
+siz(t_1*t_2)=siz(t_1)siz(t_2){t_1+t_2\choose t_1,t_2}
 $$
-枚举儿子数：
-$$
-T'(z)=\sum_{i=0}^{\infty}
-$$
-然后呢？每个儿子都可以是一个有根无标号树（儿子到 $\mathcal T$ 的映射，也就是染色），注意无标号，所以在任意置换下相同的方案不该被重复计数。
+这提示我们搞出一个类似 EGF 的东西（$k=1$ 就退化到 EGF）。记 $T(\mathcal A;z)=\sum_{\alpha\in\mathcal A}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!^k}$。
 
-而最终生成的树描述的有标号树数量是：儿子描述的有标号树数量之积；再乘以当前的染色等价类的大小的 $k$ 次方。
+分析一下它的性质。
 
-考虑染色等价类的大小怎么描述，显然就是 ${n\choose |\alpha_1|,...,|\alpha_i|}^k$。$k=1$ 是自然的，因为有一个叫 exp 的好东西会自动帮我们算出来：$T'(z)=\text{exp}T(z)$。
+- 线性是自然的：
 
-对于 $k\neq 1$，我们可以魔改 exp 成，用 EI 的记号，
-$$
-\mathcal{EXP}:\alpha\rightarrow 1+\alpha+\dfrac{\alpha^{\star 2}}{2!^k}+...
-$$
-EGF 也改成 $\mathcal E$GF，$T(z)=\sum_{\alpha}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!^k}$。求导类似。
+- $$
+  T(\mathcal A+\mathcal B)=T(\mathcal A)+T(\mathcal B)
+  $$
 
-但是你会发现这个 $\mathcal{EXP}$ 假掉了，问题的关键在于这个 $\mathcal{EXP}$ 不满足
-$$
-\mathcal{EXP}(f+g)=\mathcal{EXP}(f)\cdot\mathcal{EXP}(g)
-$$
-从而它并不像我们希望的那样，合理地使得
-$$
-\mathcal{EXP}\left(\sum_{\alpha}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!}\right)=\prod_{\alpha}\mathcal{EXP}\left(siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!}\right)
-$$
-左边是我们实际算的，而右边是我们希望的，这个 $\mathcal {EXP}$ 使得左边右边不相等。
+- 于是我们也容易得到积性：
 
+- $$
+  T(\mathcal A*\mathcal B)=T(\mathcal A)T(\mathcal B)
+  $$
+
+那么我们分析一棵树的构造。我们容易得到
+$$
+\mathcal T^{\square}=\text{MSET}(\mathcal T)
+$$
+那么我们有
+$$
+\begin{aligned}T(\mathcal T^{\square})&=T(\text{MSET}(\mathcal T))\\
+&=T\left(\text{exp}\left(\sum_{i=1}^{\infty}\dfrac 1 i\sum_{t\in\mathcal T}t^i\right)\right)&(\texttt{Pólya}\ \text{定理})\\
+&=T\left(\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\sum_{j=0}^{\infty}\dfrac{t^{ij}}{i^jj!}\right)&(\texttt{拆开}\text{ exp})\\
+&=\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\sum_{j=0}^{\infty}\dfrac{T^{ij}(t)}{i^jj!}&(T\ \texttt{的线性，积性})\\
+&=\prod_{i=1}^{\infty}\text{exp}(T^i(\mathcal T)/i)&(恢复 \text{ exp})
+\end{aligned}
+$$
+现在出现了一个问题。我们没法描述 $T^i(\mathcal T)$。
+
+可以想到的是修改 $T$ 的定义为
+$$
+T(\mathcal A;z,u)=\sum_{\alpha\in\mathcal A}z^{|\alpha|}\dfrac{1}{1-u\frac{siz(\alpha)}{|\alpha|!}}
+$$
+$T$ 的乘法定义为 $[u^k](T_1T_2)=[u^k]T_1[u^k]T_2$，即 $z$ 一维卷积，$u$ 一维点乘。它仍然保有之前的优秀性质。于是有
+$$
+\begin{aligned} \left[u^k\right]T^i(\mathcal T;z)&=\sum_{t\in\mathcal T}siz^{ik}(t)\dfrac{z^{i|t|}}{|t|!^{ik}}\\
+&=\sum_{t\in\mathcal T}[u^{ik}]T(t;z^i)\\
+&=[u^{ik}]T(\mathcal T;z^i)
+\end{aligned}
+$$
+于是我们有
+$$
+[u^k]T(\mathcal T^{\square};z)=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}\right)
+$$
+那么具体怎么做呢？首先观察到 $u$ 指标乘 $z$ 指标不超过 $nk$ 的项才是有意义的；然后我们从大的 $u$ 指标推到小的 $u$ 指标，有
+$$
+\text{ln}[u^k]T(\mathcal T^{\square};z)-[u^k]T(\mathcal T;z)=\sum_{i=2}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}
+$$
+从而对 $[u^kz^n]T(\mathcal T)$ 容易 $O(n)$ 算出，暴力算出新的 ln 也是 $O(n)$ 的。复杂度为
+$$
+\sum_{k=1}^nO\left(\dfrac{n^2}{k^2}\right)=O(n^2)
+$$
