@@ -6,6 +6,8 @@ title: 组合结构符号化学习笔记
 
 发现有个叫“解析组合”的东西里面有一些符号化组合对象的工具，学来用一用。pdf 版本在[这里](http://algo.inria.fr/flajolet/Publications/book.pdf)。书中举了大量生动的例子，画了大量的插图，非常的强大。如果你的数数不够好，可以找来看一看加深理解。
 
+这里默认读者有一些数数功底，比如至少做过城市规划和无标号树计数。
+
 # 定义
 
 > 一个**组合类**（combinatorial class）是一个可数集合 $\mathcal A$，以及一个**大小函数**（size function）$f:\mathcal A\rightarrow\N$。记 $f(x)=|x|$，或者，在某些需要指出组合类的场合下，$|x|_{\mathcal A}$。
@@ -52,7 +54,7 @@ title: 组合结构符号化学习笔记
 
 ## 笛卡尔积
 
-> $\mathcal A=\mathcal B\times \mathcal C$ 被称为 $\mathcal B$ 和 $\mathcal C$ 的**笛卡尔积**，其中 $\mathcal A$ 的元素是有序对 $\alpha=(\beta,\gamma)$，$|\alpha|_{\mathcal A}=|\beta|_{\mathcal B}+|\gamma|_{\mathcal C}$。
+> $\mathcal A=\mathcal B\times \mathcal C$ 被称为 $\mathcal B$ 和 $\mathcal C$ 的**笛卡尔积**，其中 $\mathcal A$ 的元素是有序对 $\{(\beta,\gamma)|\beta\in\mathcal B,\gamma\in \mathcal C\}$，$|\alpha|_{\mathcal A}=|\beta|_{\mathcal B}+|\gamma|_{\mathcal C}$。
 
 此时，
 $$
@@ -98,6 +100,8 @@ $$
 > \mathcal A=\{(\beta_1,...,\beta_l)\ |\ l\ge 0,\beta\in \mathcal B\}
 > $$
 
+就是把 $\beta$ 排成有序序列，很好理解。
+
 我们有
 $$
 \boxed{\mathcal A=\text{SEQ}(\mathcal B)\Rightarrow A(z)=\dfrac{1}{1-B(z)}}
@@ -131,7 +135,7 @@ $$
 >
 > 再比如，$(\beta_1,\beta_1,\beta_2)$ 和 $(\beta_1,\beta_2,\beta_1),(\beta_2,\beta_1,\beta_1)$ 等价。这是整个 $(\beta_1,\beta_1,\beta_2)$ 所属的等价类。
 
-你可能更熟悉它的另两个名字：Euler 变换或 Polya Exp。
+你可能更熟悉它的另两个名字：Euler 变换或 Polya Exp。在无标号计数中起重要作用。
 
 于是有我们熟悉的结论：
 $$
@@ -184,7 +188,7 @@ $$
 >$$
 >其中 $\epsilon_i$ 是大小为 0 的对象。
 
-它没有什么组合意义，因为它可以解释成在一个图 $\beta$ 中指明一个特殊节点（比如根），但是在图计数中使用 OGF 往往是因为无标号，而无标号场合下任何操作都要 $/\mathbf R$，这使得这个鬼构造什么用也没有。
+它没有什么组合意义。它的确可以解释成在一个图 $\beta$ 中指明一个特殊节点（比如根），但是在图计数中使用 OGF 往往是因为无标号，而无标号场合下任何操作都要 $/\mathbf R$。而如果我们能区别点之间的区别，往往这会变成一个有标号计数问题。这使得这个鬼构造什么用也没有。
 
 我们有
 $$
@@ -276,7 +280,7 @@ $\mathcal E,\mathcal Z$ 的定义如之前一样。接下来的 GF 默认为 EGF
 
 ### reduction
 
-把一个弱标号的对象排成强标号。比如有一个 $\alpha$，它的标号是 $\left<233,998244353,1\right>$，那么 $\alpha$ 的标号就会被 reduction 成 $\left<2,3,1\right>$。这个被重标号的 $\alpha$ 记作 $\rho(\alpha)$。
+把一个弱标号的对象排成强标号。比如有一个 $\alpha$，它的标号是 $\left<233,998244353,1\right>$，那么 $\alpha$ 的标号就会被 reduction 成 $\left<2,3,1\right>$。这个被重标号的 $\alpha$ 记作 $\rho(\alpha)$。其实就是离散化。
 
 ### expansion
 
@@ -425,12 +429,16 @@ $$
 - $$
   T(\mathcal A*\mathcal B)=T(\mathcal A)T(\mathcal B)
   $$
+  
+- 事实上积性并不那么显然。请独立验证。
 
 那么我们分析一棵树的构造。我们容易得到
 $$
 \mathcal T^{\square}=\text{MSET}(\mathcal T)
 $$
-那么我们有
+注意我们分析的是 $\mathcal T$ 的结构，这和我们使用什么生成函数**无关**，我们只是知道某些结构和某些生成函数有直接对应罢了。
+
+我们直接把我们的魔改 EGF 带进去。有
 $$
 \begin{aligned}T(\mathcal T^{\square})&=T(\text{MSET}(\mathcal T))\\
 &=T\left(\text{exp}\left(\sum_{i=1}^{\infty}\dfrac 1 i\sum_{t\in\mathcal T}t^i\right)\right)&(\texttt{Pólya}\ \text{定理})\\
