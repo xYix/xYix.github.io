@@ -1,5 +1,5 @@
 ---
-title: 解析组合学习笔记
+title: 组合结构符号化学习笔记
 ---
 
 在写[ZJOI2018 树](/posts/?page=0&postid=21)的题解时我一直有这样一种感觉：我们计数的对象太复杂以至于我们很难描述和分析它。有序？无序？有标号？无标号？万一对象是什么“k 棵本质相同的树”之类的东西，上面的四个问题还能无限套娃。数数初学者更是很难搞明白 exp 和有标号计数的关系；作为一个集合幂级数的初学者我也很难理解集合幂级数 ln 是怎么“拆解”一个对象的。
@@ -445,7 +445,7 @@ $$
 $$
 T(\mathcal A;z,u)=\sum_{\alpha\in\mathcal A}z^{|\alpha|}\dfrac{1}{1-u\frac{siz(\alpha)}{|\alpha|!}}
 $$
-$T$ 的乘法定义为 $[u^k](T_1T_2)=[u^k]T_1[u^k]T_2$，即 $z$ 一维卷积，$u$ 一维点乘。它仍然保有之前的优秀性质。于是有
+$T$ 的乘法定义为 $[u^k](T_1T_2)=[u^k]T_1[u^k]T_2$，即 $z$ 一维卷积，$u$ 一维点乘。它仍然保有之前的线性，积性。于是有
 $$
 \begin{aligned} \left[u^k\right]T^i(\mathcal T;z)&=\sum_{t\in\mathcal T}siz^{ik}(t)\dfrac{z^{i|t|}}{|t|!^{ik}}\\
 &=\sum_{t\in\mathcal T}[u^{ik}]T(t;z^i)\\
@@ -460,7 +460,9 @@ $$
 $$
 \text{ln}[u^k]T(\mathcal T^{\square};z)-[u^k]T(\mathcal T;z)=\sum_{i=2}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}
 $$
-从而对 $[u^kz^n]T(\mathcal T)$ 容易 $O(n)$ 算出，暴力算出新的 ln 也是 $O(n)$ 的。复杂度为
+从而对 $[u^kz^n]T(\mathcal T)$ 容易 $O(n)$ 算出。复杂度为
 $$
 \sum_{k=1}^nO\left(\dfrac{n^2}{k^2}\right)=O(n^2)
 $$
+
+但是当 $k$ 变动时我们必须重新计算右式，这部分复杂度为 $O(n^2\log n)$。
