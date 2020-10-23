@@ -315,4 +315,18 @@
 		'type_name' : 'algorithm',
 		'tag' : ['counting','generating-function','group-counting',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '46',
+		'post_name' : 'luogu-6667',
+		'post_chinese_name' : 'luoguP6667 题解 - [清华集训2016] 如何优雅地求和',
+		'type_name' : 'solution',
+		'tag' : ['generating-function',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '47',
+		'post_name' : 'loj-6703',
+		'post_chinese_name' : 'loj#6703 题解 - 小 Q 的序列',
+		'type_name' : 'solution',
+		'tag' : ['counting','generating-function','lagrange-interpolation',],
+	};
 })(document);

@@ -412,7 +412,7 @@ $$
 首先考虑两个等价类的笛卡尔积（我们当然要先引入笛卡尔积再引入 $\text{MSET}$ 构造），记为 $*$。我们有
 $$
 |t_1*t_2|=|t_1|+|t_2|\\
-siz(t_1*t_2)=siz(t_1)siz(t_2){t_1+t_2\choose t_1,t_2}
+siz(t_1*t_2)=siz(t_1)siz(t_2){|t_1|+|t_2|\choose |t_1|,|t_2|}
 $$
 这提示我们搞出一个类似 EGF 的东西（$k=1$ 就退化到 EGF）。记 $T(\mathcal A;z)=\sum_{\alpha\in\mathcal A}siz^k(\alpha)\dfrac{z^{|\alpha|}}{|\alpha|!^k}$。
 

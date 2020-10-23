@@ -259,3 +259,15 @@ algorithm
 counting
 generating-function
 group-counting
+luogu-6667
+luoguP6667 题解 - [清华集训2016] 如何优雅地求和
+solution
+1
+generating-function
+loj-6703
+loj#6703 题解 - 小 Q 的序列
+solution
+3
+counting
+generating-function
+lagrange-interpolation
