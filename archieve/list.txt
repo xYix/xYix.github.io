@@ -271,3 +271,9 @@ solution
 counting
 generating-function
 lagrange-interpolation
+exc-inc
+容斥符号化 - 更炫酷的反演魔术
+algorithm
+2
+counting
+generating-function
