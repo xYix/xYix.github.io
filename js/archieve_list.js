@@ -329,4 +329,11 @@
 		'type_name' : 'solution',
 		'tag' : ['counting','generating-function','lagrange-interpolation',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '48',
+		'post_name' : 'exc-inc',
+		'post_chinese_name' : '容斥符号化 - 更炫酷的反演魔术',
+		'type_name' : 'algorithm',
+		'tag' : ['counting','generating-function',],
+	};
 })(document);
