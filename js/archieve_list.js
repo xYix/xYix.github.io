@@ -336,4 +336,11 @@
 		'type_name' : 'algorithm',
 		'tag' : ['counting','generating-function',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '49',
+		'post_name' : 'd-and-c',
+		'post_chinese_name' : '分治学习笔记',
+		'type_name' : 'algorithm',
+		'tag' : ['d-and-c-on-tree',],
+	};
 })(document);
