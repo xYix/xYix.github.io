@@ -55,6 +55,7 @@
         'my lungs are failing from inhaling / all the charcoal from this circle / of the hate and the lies',
         'Deny, Ignite, and Close Your Eyes.',
         'But I\'m a pyromaniac / and your veins are full of gas you\'re / burning higher, higher / I\'m storming this wildfire',
+        'Is this where I belong? / The furthest I could have gone?',
         '2020/10/3：x义x 又在模拟赛上只会 T1',
         '2020/10/4：x义x 又在模拟赛上一道题都不会',
         '2020/10/5：x义x 被 T1 虐杀，没写出 T2，被 T3 虐杀',

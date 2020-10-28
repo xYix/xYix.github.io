@@ -459,7 +459,7 @@ $$
 $$
 于是我们有
 $$
-\begin{aligned}[u^k]T(\mathcal T^{\square};z)&=\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\text{exp}([u^{ik}]T(t;z^i))\\
+\begin{aligned}[u^k]T(\mathcal T^{\square};z)&=\prod_{i=1}^{\infty}\prod_{t\in\mathcal T}\text{exp}([u^{ik}]T(t;z^i)/i)\\
 &=\prod_{i=1}^{\infty}[u^{ik}]\text{exp}(T(\mathcal T;z^i)/i)&(T\ \texttt{的线性，也是刚才操作的目的})\\
 &=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac{[u^{ik}]T(\mathcal T;z^i)}{i}\right)
 \end{aligned}
