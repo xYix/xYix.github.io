@@ -282,3 +282,8 @@ d-and-c
 algorithm
 1
 d-and-c-on-tree
+how-to-solve-sone1
+论如何通过 sone1
+solution
+1
+d-and-c-on-tree

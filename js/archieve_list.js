@@ -343,4 +343,11 @@
 		'type_name' : 'algorithm',
 		'tag' : ['d-and-c-on-tree',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '50',
+		'post_name' : 'how-to-solve-sone1',
+		'post_chinese_name' : '论如何通过 sone1',
+		'type_name' : 'solution',
+		'tag' : ['d-and-c-on-tree',],
+	};
 })(document);
