@@ -350,4 +350,11 @@
 		'type_name' : 'solution',
 		'tag' : ['d-and-c-on-tree',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '51',
+		'post_name' : 'ioi2020hw',
+		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡',
+		'type_name' : 'solution',
+		'tag' : ['construction','counting','lmoliver',],
+	};
 })(document);
