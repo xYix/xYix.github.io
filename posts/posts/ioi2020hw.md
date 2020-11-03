@@ -24,8 +24,8 @@ title: ioi2020 集训队作业 AT 部分口胡
 | AGC022D | [Shopping](https://atcoder.jp/contests/agc022/tasks/agc022_d) | $\color{blue}\text{skipped}$ | 是 |
 | AGC022E | [Median Replace](https://atcoder.jp/contests/agc022/tasks/agc022_e) | $\color{blue}\text{skipped}$ | 是 |
 | AGC022F | [Checkers](https://atcoder.jp/contests/agc022/tasks/agc022_f) | $\color{green}\text{accepted}$ | 否 |
-| AGC023D | [Go Home](https://atcoder.jp/contests/agc023/tasks/agc023_d) | $\text{queuing}$ |  |
-| AGC023E | [Inversions](https://atcoder.jp/contests/agc023/tasks/agc023_e) | $\text{queuing}$ |  |
+| AGC023D | [Go Home](https://atcoder.jp/contests/agc023/tasks/agc023_d) | $\color{green}\text{accepted}$ | 否 |
+| AGC023E | [Inversions](https://atcoder.jp/contests/agc023/tasks/agc023_e) | $\text{queuing}$ | 是 |
 | AGC023F | [01 on Tree](https://atcoder.jp/contests/agc023/tasks/agc023_f) | $\text{queuing}$ |  |
 
 # AGC020D
@@ -240,3 +240,50 @@ int main(){
 
 ```
 
+# AGC023D
+
+第一轮投票显然是往人多的方向开，不妨设为左边。那么这会一直开到左边的人小于右边为止，然后又变换方向，如此反复……吗？
+
+$N$ 号楼的人不可能对这种情况置之不理，如果有这种反复横跳导致时间延长的情况，他们一定会一直向左投。我们甚至可以证明，如果 $a_1>a_n$ 那么不管车的位置在哪，它一定先访问 $x_1$ 再访问 $x_n$。
+
+- 如果 $x_{n-1}<s$，那么所有其他人都会向左投，而 $a_1>a_n$，故一定会向左开。
+- 否则 $s<x_{n-1}$，此时访问 $x_{n}$ 前必然会先访问 $x_{n-1}$，这时会使得形势立即转化为上一种情况。
+
+那么 $a_n$ 一定会跟 $a_1$ 的票，我们可以把它们合并。迭代这样的过程，直到 $S$ 不在目标区间内，这时所有人都达成共识。
+
+```cpp
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int N, S;
+int X[100005]; ll A[100005];
+ll ANS;
+int Solve(int l, int r) {
+	if(S < X[l]) return ANS += X[r] - S, r;
+	if(S > X[r]) return ANS += S - X[l], l;
+	if(A[l] >= A[r]) {
+		A[l] += A[r];
+		ANS += X[r] - X[Solve(l, r - 1)];
+		return r;
+	}
+	else {
+		A[r] += A[l];
+		ANS += X[Solve(l + 1, r)] - X[l];
+		return l;
+	}
+}
+
+int main() {
+	scanf("%d%d", &N, &S);
+	for(int i = 1; i <= N; i++) scanf("%d%d", &X[i], &A[i]);
+	Solve(1, N); 
+	printf("%lld\n", ANS);
+}
+```
+
+# AGC023E
+
+⑧会，爬了
+
+首先给一个 $a_i$ 序列求有多少个条件满足它这很简单，就是记 $c_i=\sum_j[a_j\ge i]$，则答案为 $\prod (cnt_i-n+i)$（一直往排序后 $\prod (a_i-i+1)$ 上去想，结果去世了……）。
