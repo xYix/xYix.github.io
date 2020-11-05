@@ -9,10 +9,11 @@ title: ioi2020 集训队作业 AT 部分口胡
 我奉 hhz 的圣旨来胡一下罢
 
 - $\text{queuing}$：尚无题解
-
 - $\color{blue}\text{skipped}$：题解~~口胡~~已完成，代码鸽了
 - $\color{green}\text{accepted}$：题解已完成，代码已经通过
 - $\color{red}\text{unsolvable}$：xyx 认定此题不可做，于是跳过
+
+请注意题目中文翻译中可能有一些极度信雅达的生草东西（
 
 |  题号   |                            题目名                            |             状态             | 是否看题解 |
 | :-----: | :----------------------------------------------------------: | :--------------------------: | :--------: |
@@ -25,10 +26,16 @@ title: ioi2020 集训队作业 AT 部分口胡
 | AGC022E | [Median Replace](https://atcoder.jp/contests/agc022/tasks/agc022_e) | $\color{blue}\text{skipped}$ | 是 |
 | AGC022F | [Checkers](https://atcoder.jp/contests/agc022/tasks/agc022_f) | $\color{green}\text{accepted}$ | 否 |
 | AGC023D | [Go Home](https://atcoder.jp/contests/agc023/tasks/agc023_d) | $\color{green}\text{accepted}$ | 否 |
-| AGC023E | [Inversions](https://atcoder.jp/contests/agc023/tasks/agc023_e) | $\text{queuing}$ | 是 |
-| AGC023F | [01 on Tree](https://atcoder.jp/contests/agc023/tasks/agc023_f) | $\text{queuing}$ |  |
+| AGC023E | [Inversions](https://atcoder.jp/contests/agc023/tasks/agc023_e) | $\color{blue}\text{skipped}$ | 是 |
+| AGC023F | [01 on Tree](https://atcoder.jp/contests/agc023/tasks/agc023_f) | $\color{green}\text{accepted}$ | 否 |
+| AGC024D | [Isomorphism Freak](https://atcoder.jp/contests/agc024/tasks/agc024_d) | $\color{blue}\text{skipped}$ | 否 |
+| AGC024E | [Sequence Growing Hard](https://atcoder.jp/contests/agc024/tasks/agc024_e) | $\text{queuing}$ |  |
+| AGC024F | [Simple Subsequence Problem](https://atcoder.jp/contests/agc024/tasks/agc024_f) | $\color{blue}\text{skipped}$ | 否 |
+| AGC025D | [Choosing Points](https://atcoder.jp/contests/agc025/tasks/agc025_d) | $\text{queuing}$ | |
+| AGC025E | [Walking on a Tree](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\text{queuing}$ | |
+| AGC025F | [Addition and Andition](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\text{queuing}$ | |
 
-# AGC020D
+# AGC020D - 最大重复的最小值
 
 怎么开幕雷击整了个构造
 
@@ -36,7 +43,7 @@ title: ioi2020 集训队作业 AT 部分口胡
 
 哦原来确实是个思博题，skip
 
-# AGC020E
+# AGC020E - 加密子集
 
 ⑧会，爬了。
 
@@ -44,13 +51,13 @@ title: ioi2020 集训队作业 AT 部分口胡
 
 因为对出题人出乱搞的行为非常气愤，所以 skip 了。
 
-# AGC020F
+# AGC020F - 圆上的弧
 
 好像是个经典套路。显然离散情况是思博题，注意到 $N,C$ 巨小无比，而且 $l_i$ 全是整数，我们爆枚 $l_i$ 放置位置的小数部分的大小关系，每种情况发生概率都是 $\dfrac{1}{N!}$。
 
 听起来要 inf 个分类讨论，不写了，skipskip 都可以 skip
 
-# AGC021E
+# AGC021E - 球吃变色龙
 
 球吃变色龙生草，⑧会，爬了
 
@@ -62,7 +69,7 @@ title: ioi2020 集训队作业 AT 部分口胡
 
 +1 的变色龙显然可以以任意顺序吃，而 0 的变色龙等价于红蓝（否则可以丢到 +1 龙上）。也就是可以从原序列取出 $n+k-2r$ 个红蓝子序列，从而还等价于任意一个前缀 $\ge r-n$。于是还是一个折线问题，组合数搞一下就好了。
 
-# AGC021F
+# AGC021F - 三位一体
 
 题目名字好中二，不过我喜欢
 
@@ -151,7 +158,7 @@ int main(){
 }
 ```
 
-# AGC022D
+# AGC022D - 购物
 
 ⑧会，爬了
 
@@ -170,7 +177,7 @@ int main(){
 
 又是大细节题，skip skip
 
-# AGC022E
+# AGC022E - 中位数取代
 
 ⑧会，爬了
 
@@ -183,7 +190,7 @@ int main(){
 
 你会发现栈的情况巨少无比，是一个自动机，于是 DP 即可。
 
-# AGC022F
+# AGC022F - 棋子
 
 考虑变换 $x,y\rightarrow 2y -x$。那么我们可以考虑在这时给 $x,y$ 新建一个父亲，左儿子是 $y$ 右儿子是 $x$，有点像重构树。那么每个点的贡献就只和根的路径上左向边的数量和右向边的数量有关，显然由于那个 $10^{100}$ 的存在贡献不同根的取值就不同。
 
@@ -240,7 +247,11 @@ int main(){
 
 ```
 
-# AGC023D
+## 思考
+
+如果 $x,y\rightarrow 2y-x$ 改为 $x,y\rightarrow 3y -2x$ 是否有多项式做法？（网格中的任意一点贡献不相同）
+
+# AGC023D - 回家
 
 第一轮投票显然是往人多的方向开，不妨设为左边。那么这会一直开到左边的人小于右边为止，然后又变换方向，如此反复……吗？
 
@@ -282,8 +293,110 @@ int main() {
 }
 ```
 
-# AGC023E
+# AGC023E - 逆序
 
 ⑧会，爬了
 
 首先给一个 $a_i$ 序列求有多少个条件满足它这很简单，就是记 $c_i=\sum_j[a_j\ge i]$，则答案为 $\prod (cnt_i-n+i)$（一直往排序后 $\prod (a_i-i+1)$ 上去想，结果去世了……）。
+
+那么考虑计算一对 $(i,j)\quad(i<j)$ 会在多少个排列中成为逆序对。
+
+- $a_i= a_j$，$i,j$ 对称，就是总方案数 $/2$。
+- $a_i<a_j$，当 $p_j\in (a_i,a_j]$ 时不会是逆序对，否则和上面一样。但是注意 $a_j$ 的改变会使 $cnt_i,i\in(a_i,a_j]$ 减 1，我们维护区间积和减一后的区间积，前缀积即可。
+- $a_i>a_j$ 同理。
+
+但是暴力枚举 $i,j$ 还是 $O(n^2)$ 的，我们只需要考虑 $a_i$ 作为 $\min$ 的次数即可。
+
+# AGC023F - 树上的 01
+
+显然有 $0$ 我们就会立即贪心的取掉，所以我们可以把 $0$ 绑定到它的最低的为 $1$ 的祖先处。这样每个 $1$ 都附带了一个权值 $a_i$，如果它是第 $j$ 个被取的，则贡献为 $ja_i$。
+
+考虑合并 $a_i$ 序列。长度很短但是和很大的子节点有极大的“意向”立即接到父节点的末尾，而我们发现任何 $a_i$ 序列都可以通过合适的合并顺序达成，所以只要合适地处理合并即可。
+
+下一步是量化“意向”，考察交换两个儿子对答案的影响容易得出一个合理的标准是 $\dfrac{\sum a_i}{|a|}$。从而我们只需要用一个堆维护它。
+
+```cpp
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+const int maxN = 200005;
+
+int N, p[maxN], c[maxN], A[maxN];
+struct node {
+	ll s; int c, p; //scp 草 
+	bool operator <(const node b) const {
+		if(s * b.c != b.s * c) return s * b.c < b.s * c;
+		if(p != b.p) return p < b.p;
+		return c < b.c;
+	}
+}nowA[maxN]; priority_queue<node> Q, Q0;
+ll ans;
+int fa[maxN]; int find(int x) {return fa[x] == x ? x : fa[x] = find(fa[x]);}
+
+int main() {
+	scanf("%d", &N);
+	for(int i = 2; i <= N; i++) scanf("%d", &p[i]);
+	for(int i = 1; i <= N; i++) scanf("%d", &c[i]); c[0] = 1;
+	for(int i = N; i; i--)
+		if(!c[i]) A[p[i]] += A[i] + 1;
+		else {
+			int u = p[i]; while(!c[u]) u = p[u]; p[i] = u;
+			Q.push(nowA[i] = (node){A[i], 1, i});
+			fa[i] = i;
+		}
+	nowA[0] = (node){A[0], 1, 0};
+	while(Q.size()) {
+		node u = Q.top(); Q.pop();
+		if(Q0.size() && Q0.top().p == u.p && Q0.top().c == u.c) {Q0.pop(); continue;}
+		node v = nowA[fa[u.p] = find(p[u.p])];
+//		cerr << "merge " << u.p << " -> " << p[u.p] << " : " << v.p << "\n";
+		ans += v.c * u.s;
+		nowA[v.p] = (node){u.s + v.s, u.c + v.c, v.p};
+		if(v.p) Q.push(nowA[v.p]), Q0.push(v);
+	}
+	printf("%lld\n", ans);
+}
+```
+
+# AGC024D - 同构怪
+
+自动机怪（联想）
+
+考虑如果两个点同构，我们来证明，它们中间的这条链是关于它的中点（可能是点也可能是边）对称的。假设不然，那么容易发现这时我们必须无限地加边来保持同构性，这是不可能的。
+
+从而，我们得到一个根，这个根两边的点分别同构。
+
+<center><div style="width:90%;margin:auto"><img src="/images/at2.png" style="width: 70%" alt=""></div></center>
+
+对于边的情况，这时根已经是最高级的根，不会再变动；对于点的情况，在红色部分可能有一个更高的根。至少这告诉我们，这个图一定有一个根，一切对称都围绕它展开。
+
+那么我们考虑最对称的情况当然是和根距离相等的点全部同构。那么根的选取也就不言而喻了。
+
+接下来考虑让叶子数最小。这直接等价于相同深度的点度数相同。
+
+暴力选取根即可。
+
+# AGC024E - 生长的序列 Hard
+
+⑧会，爬了
+
+$n\le 100$，模数任意，这很 AT……
+
+题解都看不懂啊（悲），鸽了鸽了
+
+# AGC024F - 基础子序列练习题
+
+我们考虑一个串对它子序列的贡献，使用一个子序列自动机的模型。假设现在匹配到了 $s$，还剩 $t$ 可供匹配，则我们可以
+
+- 立即结束匹配，$s$ 获得贡献 +1
+- $s\leftarrow s + 0$，删掉 $t$ 前面的一串 $1$ 和第一个 $0$
+- $s\leftarrow s +1$，删掉 $t$ 前面的一串 $0$ 和第一个 $1$
+
+那么我们从 $\sum (\varnothing,t\in S)$ 开始，每走到 $(s,\varnothing)$ 便给 $s$ 的贡献 +1，又观察到 $|s|+|t|\le n$，DP 也就立即浮现了。
+
+# AGC025D - 选点
+
+# AGC025E - 树上行
+
+# AGC025F - 和与与
