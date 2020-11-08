@@ -357,4 +357,11 @@
 		'type_name' : 'solution',
 		'tag' : ['construction','counting','lmoliver',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '52',
+		'post_name' : 'csp-2020-fst',
+		'post_chinese_name' : 'CSP2020 游记',
+		'type_name' : 'other',
+		'tag' : [],
+	};
 })(document);
