@@ -29,7 +29,7 @@ title: ioi2020 集训队作业 AT 部分口胡
 | AGC023E | [Inversions](https://atcoder.jp/contests/agc023/tasks/agc023_e) | $\color{blue}\text{skipped}$ | 是 |
 | AGC023F | [01 on Tree](https://atcoder.jp/contests/agc023/tasks/agc023_f) | $\color{green}\text{accepted}$ | 否 |
 | AGC024D | [Isomorphism Freak](https://atcoder.jp/contests/agc024/tasks/agc024_d) | $\color{blue}\text{skipped}$ | 否 |
-| AGC024E | [Sequence Growing Hard](https://atcoder.jp/contests/agc024/tasks/agc024_e) | $\text{queuing}$ |  |
+| AGC024E | [Sequence Growing Hard](https://atcoder.jp/contests/agc024/tasks/agc024_e) | $\color{blue}\text{skipped}$ | 是 |
 | AGC024F | [Simple Subsequence Problem](https://atcoder.jp/contests/agc024/tasks/agc024_f) | $\color{blue}\text{skipped}$ | 否 |
 | AGC025D | [Choosing Points](https://atcoder.jp/contests/agc025/tasks/agc025_d) | $\text{queuing}$ | |
 | AGC025E | [Walking on a Tree](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\text{queuing}$ | |
@@ -383,7 +383,11 @@ int main() {
 
 $n\le 100$，模数任意，这很 AT……
 
+显然这个序列组可以看成往一个序列里插入元素的过程，插入时序列里的下一个元素必须比当前插入的严格小，或者是插入在序列末尾。
 
+考虑这样一个树形结构，每个节点有两个标记：权值 $w$ 和插入的时间 $t$。这样一棵树合法当且仅当对于任意 $u\rightarrow v, w_u>w_v,t_u<t_v$。
+
+那么 DP 就很显然了。
 
 # AGC024F - 基础子序列练习题
 
@@ -396,6 +400,10 @@ $n\le 100$，模数任意，这很 AT……
 那么我们从 $\sum (\varnothing,t\in S)$ 开始，每走到 $(s,\varnothing)$ 便给 $s$ 的贡献 +1，又观察到 $|s|+|t|\le n$，DP 也就立即浮现了。
 
 # AGC025D - 选点
+
+怎么又是构造，⑧会，爬了
+
+首先考虑如果只有一个 $D$ 怎么做。我们可以判掉 $D=4k+3$ 的情况，这时根本没有距离为 $\sqrt D$ 的点对。
 
 # AGC025E - 树上行
 
