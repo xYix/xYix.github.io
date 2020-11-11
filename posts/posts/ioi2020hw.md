@@ -15,6 +15,8 @@ title: ioi2020 集训队作业 AT 部分口胡
 
 请注意题目中文翻译中可能有一些极度信雅达的生草东西（
 
+思考了一下写这个东西的意义在于什么，也许是对通用的思考题目的方法的探索？也许通用的方法其实并不存在。不过要是能描下这个幽灵现身时的幻影也不错了。
+
 |  题号   |                            题目名                            |             状态             | 是否看题解 |
 | :-----: | :----------------------------------------------------------: | :--------------------------: | :--------: |
 | AGC020D | [Min Max Repetition](https://atcoder.jp/contests/agc020/tasks/agc020_d) | $\color{blue}\text{skipped}$ |     否     |
@@ -31,9 +33,15 @@ title: ioi2020 集训队作业 AT 部分口胡
 | AGC024D | [Isomorphism Freak](https://atcoder.jp/contests/agc024/tasks/agc024_d) | $\color{blue}\text{skipped}$ | 否 |
 | AGC024E | [Sequence Growing Hard](https://atcoder.jp/contests/agc024/tasks/agc024_e) | $\color{blue}\text{skipped}$ | 是 |
 | AGC024F | [Simple Subsequence Problem](https://atcoder.jp/contests/agc024/tasks/agc024_f) | $\color{blue}\text{skipped}$ | 否 |
-| AGC025D | [Choosing Points](https://atcoder.jp/contests/agc025/tasks/agc025_d) | $\text{queuing}$ | |
-| AGC025E | [Walking on a Tree](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\text{queuing}$ | |
-| AGC025F | [Addition and Andition](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\text{queuing}$ | |
+| AGC025D | [Choosing Points](https://atcoder.jp/contests/agc025/tasks/agc025_d) | $\color{blue}\text{skipped}$ | 否 |
+| AGC025E | [Walking on a Tree](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\color{blue}\text{skipped}$ | 是 |
+| AGC025F | [Addition and Andition](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\color{blue}\text{skipped}$ | 是 |
+| AGC026D | [Histogram Coloring](https://atcoder.jp/contests/agc026/tasks/agc026_d) | $\color{blue}\text{skipped}$ | 否 |
+| AGC026E | [Synchronized Subsequence](https://atcoder.jp/contests/agc026/tasks/agc026_e) | $\color{green}\text{accepted}$ | 是 |
+| AGC026F | [Manju Game](https://atcoder.jp/contests/agc026/tasks/agc026_f) | $\color{blue}\text{skipped}$ | 否 |
+| AGC027D | [Modulo Matrix](https://atcoder.jp/contests/agc027/tasks/agc027_d) | $\text{queuing}$ | |
+| AGC027E | [ABBreviate](https://atcoder.jp/contests/agc027/tasks/agc027_e) | $\text{queuing}$ | |
+| AGC027F | [Grafting](https://atcoder.jp/contests/agc027/tasks/agc027_f) | $\text{queuing}$ | |
 
 # AGC020D - 最大重复的最小值
 
@@ -401,10 +409,101 @@ $n\le 100$，模数任意，这很 AT……
 
 # AGC025D - 选点
 
-怎么又是构造，⑧会，爬了
+怎么又是构造草
 
-首先考虑如果只有一个 $D$ 怎么做。我们可以判掉 $D=4k+3$ 的情况，这时根本没有距离为 $\sqrt D$ 的点对。
+首先考虑如果只有一个 $D$ 怎么做。我们可以判掉 $D=4k+3$ 的情况，这时根本没有距离为 $\sqrt D$ 的点对。否则如果 $D=4k+2$，则两个距离为 $\sqrt D$  的点横纵坐标差都是奇数，故 4 中颜色内部不会有限制，取其中两种即可。如果 $D=4k+1$，类似，只需分两种颜色。否则 $D=4k$，讨论 $D/4$ 即可。
+
+从而我们怎么样都能取至少一半，此题有两个 $D$ 会把网格分成 4 部分，最大的一部分必然 $\ge n^2$。
 
 # AGC025E - 树上行
 
+⑧会，爬了
+
+显然有上界 $\sum_{i}\min(2,c_i=i\  \texttt{被经过的次数})$。这个上界是可以达到的：
+
+考虑任意叶子 $u$。
+
+- 如果 $c_u = 0$，直接删去 $u$。
+- 如果 $c_u = 1$，$u$ 的答案与通过它的那条路径 $(u,u')$ 的方向无关，修改其为 $(fa(u),u')$。
+- 否则，任意选取通过它的两条路径 $(u,u'_1),(u,u'_2)$，直到它们分叉，下面的所有元素都会被填满，于是可以只考虑分叉后的部分，它们的并恰好还是一条路径。
+
+于是就 win 了。
+
 # AGC025F - 和与与
+
+⑧会，爬了
+
+考虑如果只有两个同位置的 $(1,1)$，那么它们会一直往前进直到世界尽头。当然它们可能“撞上” $(0,1)$ 或 $(1,0)$ 导致错位，这时就不能往前进了。
+
+然后你把一长串 $(1,1)$ 缩到一起，撞到 $(0,1),(1,0)$ 的时候暴力搞，然后复杂度就是对的了，小编也很惊讶，大概这就是均摊的魅力吧
+
+具体见[myh 的题解](https://blog.csdn.net/qq_38609262/article/details/103265658)。
+
+# AGC026D - 直方图染色
+
+如果 $h_i$ 全一样，推到下一列只会简单地翻转，没有其他可能。只有一种情况例外：整一列完全是红蓝交替，此时才有可能选择翻转和不翻转。至于 $h_i$ 不同也~~胡了一下，感觉~~很简单。
+
+# AGC026E - 同步序列
+
+⑧会，爬了
+
+为啥我 E 题全不会做啊，这是替身攻击吗
+
+[兔的题解](https://www.luogu.com.cn/blog/PinkRabbit/solution-at3974)太详细了，懒得贺一遍了。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int N;
+char s[6005];
+int apos[3005], bpos[3005], id[6005], la, lb;
+string F[6005];
+int nxt[6005];
+
+int main() {
+	scanf("%d", &N); scanf("%s", s + 1);
+//	N = 3000;
+//	for(int i = 1; i <= N; i++) s[i] = 'a';
+//	for(int i = N + 1; i <= N << 1; i++) s[i] = 'b';
+	for(int i = 1; i <= N << 1; i++)
+		if(s[i] == 'a') apos[id[i] = ++la] = i;
+		else bpos[id[i] = ++lb] = i;
+	id[apos[++la] = bpos[++lb] = N << 1 | 1] = N + 1;
+	for(int i = 1, j = 1; i <= N; i++)
+		while(j < apos[i] && j < bpos[i]) nxt[j++] = i;
+	for(int i = N; i; i--) {
+		if(apos[i] < bpos[i]) F[i] = "ab" + F[nxt[bpos[i]]];
+		else {
+			int j = i + 1, maxA = apos[i];
+			while(j <= N && bpos[j] < maxA) maxA = max(maxA, apos[j]), j++;
+			F[i] = F[j];
+			for(int d = maxA; d >= bpos[i]; d--)
+				if(s[d] == 'b' || (s[d] == 'a' && id[d] >= i)) F[i] = s[d] + F[i];
+		}
+		F[i] = max(F[i], F[i + 1]);
+	}
+	cout << F[1];
+}
+```
+
+# AGC026F - 豆沙包游戏
+
+牛逼题。
+
+首先先手有一个策略是开始就选 $a_1$ 或 $a_n$，游戏也就立即结束，这个策略简称自爆。接下来考虑先手是否有更优的策略。
+
+考虑一段操作，先手决定起点，后手决定方向。从而区间 DP 是显然的。
+
+而我们发现如果先手让出先手的位置，原来的后手存在一个策略是立即自爆，使情况和先手自爆相同，这是不可接受的。故先手不会让出先手。
+
+当 $n$ 为偶数，后手必然会抢走先手然后自爆，故没有更优策略。
+
+接下来考虑 $n$ 为奇数。先手必会在某个区间 $[l,r]$ 选择自爆（当 $n=1$ 时只能自爆），此时贡献为 $[l,r]$ 的奇数位置之和 - 偶数位置之和。
+
+考虑区间 $[l,r]$ 可不可以拿到，假设我们硬点了就要 $[l,r]$，那么每一次分割，都有一个权值 $\ge [l,r]$ 而且可以拿到的区间在分割线的另一边。这让我们想到先手可以定好整棵决策树，而后手不论选哪个叶子都 $\ge[l,r]$。
+
+于是二分就立即浮现了，只需 DP 求是否有这样一个序列的划分，其中每一段权值都 $\ge k$。只需贪心地保留可行划分中前缀和最小者即可 $O(n)$ DP。
+
+# AGC027D - 膜矩阵
+
