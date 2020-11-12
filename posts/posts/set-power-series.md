@@ -88,127 +88,111 @@ $\text{Ln}$ 完全类似。
 
 ```cpp
 #include<bits/stdc++.h>
+#include<typeinfo>
 using namespace std;
 
-int inline read(){
-	int num=0,neg=1;char c=getchar();
-	while(!isdigit(c)){if(c=='-') neg=-1;c=getchar();}
-	while(isdigit(c)) num=num*10+c-'0',c=getchar();
-	return num*neg;
+const int p = 998244353, maxN = 18, mL = 1 << maxN, mN = maxN + 1, inv2 = (p + 1) >> 1;
+struct Z {int x; Z(int x0 = 0) : x(x0) {}};
+int inline check(int x) { return x >= p ? x - p : x; }
+Z operator +(const Z a, const Z b) { return check(a.x + b.x); }
+Z& operator +=(Z &a, const Z b) { return a = a + b; }
+Z operator -(const Z a, const Z b) { return check(a.x - b.x + p); }
+Z operator -(const Z a) {return check(p - a.x);}
+Z& operator -=(Z &a, const Z b) { return a = a - b; }
+Z operator *(const Z a, const Z b) { return 1LL * a.x * b.x % p; }
+Z& operator *=(Z &a, const Z b) { return a = a * b; }
+Z qpow(Z a, int k) {
+	Z ans = 1;
+	for (; k; a *= a, k >>= 1) if(k & 1) ans *= a;
+	return ans;
+}
+Z fac[mL], ifac[mL], inv[mL];
+int ppc[mL], ctz[mL];
+void init() {
+	inv[1] = fac[0] = fac[1] = ifac[0] = ifac[1] = 1;
+	for (int i = 2; i < mL; i++)
+		fac[i] = fac[i - 1] * i,
+		inv[i] = -inv[p % i] * (p / i),
+		ifac[i] = ifac[i - 1] * inv[i];
+	for (int i = 1; i < mL; i++) {
+		ppc[i] = ppc[i >> 1] + (i & 1);
+		ctz[i] = (i & 1) ? 0 : (ctz[i >> 1] + 1);
+	}
 }
 
-const int p=998244353,maxN=20,inv2=(p+1)/2;
-int calc(int n){
-	int x=1;while(x<n) x<<=1;
-	return x;
+namespace Poly {
+#define forj for(Z *jf = f + 1, *jg = i - 1; jg >= g; jf++, jg--)
+void Mul(Z f[], Z g[], int n) {
+	for (Z *i = g + n; i >= g; i--) {
+		*i *= f[0];
+		forj *i += *jf * *jg;
+	}
 }
-struct Z{
-	int x;
-	Z(int x0=0):x(x0){}
-}; 
-int inline check(int x){return x>=p?x-p:x;}
-Z operator +(const Z a,const Z b){return check(a.x+b.x);}
-Z operator -(const Z a,const Z b){return check(a.x-b.x+p);}
-Z operator *(const Z a,const Z b){return 1LL*a.x*b.x%p;}
-Z operator -(const Z a){return check(p-a.x);}
-Z& operator +=(Z &a,const Z b){return a=a+b;}
-Z& operator -=(Z &a,const Z b){return a=a-b;}
-Z& operator *=(Z &a,const Z b){return a=a*b;}
-Z fac[1<<maxN],ifac[1<<maxN],inv[1<<maxN];
-Z qpow(Z a,int k){
-    Z ans=1;
-    while(k){if(k&1) ans*=a;a*=a;k>>=1;}
-    return ans;
+void Inv(Z f[], Z g[], int n) {
+	memset(g, 0, (n + 1) * sizeof(Z));
+	g[0] = qpow(f[0], p - 2);
+	for (Z *i = g + 1; i <= g + n; i++) {
+		forj *i -= *jf * *jg;
+		*i *= g[0];
+	}
 }
-int siz[1<<maxN];
-void init(){
-    fac[0]=ifac[0]=fac[1]=ifac[1]=inv[1]=1;
-    for(int i=2;i<(1<<maxN);i++)
-    	fac[i]=fac[i-1]*i,
-    	inv[i]=(p-p/i)*inv[p%i],
-    	ifac[i]=ifac[i-1]*inv[i];
-    for(int i=0;i<(1<<maxN);i++) siz[i]=siz[i>>1]+(i&1);
+Z tg[mN]; //tg = 0.5ttgg = 0.5瑇!
+void copy(Z f[], Z g[], int n) { for (Z *i0 = f, *i1 = g; i0 <= f + n; i0++, i1++) *i1 = *i0; }
+void Inv(Z f[], int n) { copy(f, tg, n); Inv(tg, f, n); }
+void Ln(Z f[], Z g[], int n) {
+	memset(g, 0, (n + 1) * sizeof(Z));
+	g[0] = 0;
+	for (Z *i = g + 1; i <= g + n; i++) {
+		*i = (i - g) * f[i - g];
+		forj *i -= (jg - g) * *jf * *jg;
+		*i *= inv[i - g];
+	}
+}
+void Ln(Z f[], int n) { copy(f, tg, n); Ln(tg, f, n); }
+void Exp(Z f[], Z g[], int n) {
+	memset(g, 0, (n + 1) * sizeof(Z));
+	g[0] = 1;
+	for (Z *i = g + 1; i <= g + n; i++) {
+		forj *i += (jf - f) * *jf * *jg;
+		*i *= inv[i - g];
+	}
+}
+void Exp(Z f[], int n) { copy(f, tg, n); Exp(tg, f, n); }
+#undef forj
 }
 
-void Mul(Z f[],Z g[],int n){
-	for(int i=n;i>=0;i--){
-		Z tmp=0;
-		for(int j=0;j<=i;j++)
-			tmp+=f[j]*g[i-j];
-		g[i]=tmp;
-	}
-}
-void Inv(Z f[],Z g[],int n){
-	memset(g,0,(n+1)*sizeof(Z));g[0]=qpow(f[0],p-2);
-	for(int i=1;i<=n;i++){
-		for(int j=0;j<i;j++)
-			g[i]-=f[i-j]*g[j];
-		g[i]*=g[0];
-	}
-}
-void Ln(Z f[],Z g[],int n){
-	memset(g,0,(n+1)*sizeof(Z));g[0]=0;
-	for(int i=1;i<=n;i++){
-		g[i]=f[i];
-		for(int j=1;j<i;j++)
-			g[i]+=p-j*f[i-j]*g[j]*inv[i];
-	}
-}
-void Exp(Z g[],Z f[],int n){
-	memset(f,0,(n+1)*sizeof(Z));f[0]=1;
-	for(int i=1;i<=n;i++){
-		for(int j=1;j<=i;j++)
-			f[i]+=j*f[i-j]*g[j];
-		f[i]*=inv[i];
-	}
-}
-void outp(Z f[],int n){
-	for(int i=0;i<=n;i++) printf("%d ",f[i].x);printf("\n");
-}
-
-struct SPS{
+struct SPS { //Set Power Series
 	int n;
-	Z F[1<<maxN][maxN+1];
-	void FWT(bool flg){
-		for(int i=1;i<(1<<n);i<<=1)
-		for(int j=0;j<(1<<n);j+=(i<<1))
-		for(int k=j;k<j+i;k++)
-		for(int l=0;l<=n;l++)
-				if(flg) F[k+i][l]-=F[k][l];
-				else F[k+i][l]+=F[k][l];
+	Z D[mL][mN];
+	void FWT() {
+		for (int i = 1; i < 1 << n; i <<= 1)
+		for (auto j = D; j < D + (1 << n); j += i << 1)
+		for (auto k0 = j, k1 = j + i; k0 < j + i; k0++, k1++)
+		for (auto l0 = *k0, l1 = *k1; l0 <= *k0 + n; l0++, l1++)
+			*l1 += *l0;
+	}
+	void iFWT() {
+		for (int i = 1; i < 1 << n; i <<= 1)
+		for (auto j = D; j < D + (1 << n); j += i << 1)
+		for (auto k0 = j, k1 = j + i; k0 < j + i; k0++, k1++)
+		for (auto l0 = *k0, l1 = *k1; l0 <= *k0 + n; l0++, l1++)
+			*l1 -= *l0;
+	}
+	void clear() {
+		for (auto s = D; s < D + (1 << n); s++)
+		for (auto j = *s; j <= *s + n; j++)
+			*j = 0;
+	}
+	void copy(SPS &b) {
+		for (auto s0 = D, s1 = b.D; s0 < D + (1 << n); s0++, s1++)
+		for (auto j0 = *s0, j1 = *s1; j0 <= *s0 + n; j0++, j1++)
+			*j0 = *j1;
 	}
 };
-void MUL(SPS A,SPS &B){
-	A.FWT(0);B.FWT(0);
-	for(int i=0;i<(1<<A.n);i++) Mul(A.F[i],B.F[i],A.n);
-	B.FWT(1);
-}
-void INV(SPS A,SPS &B){
-	A.FWT(0);B.n=A.n;
-	for(int i=0;i<(1<<A.n);i++) Inv(A.F[i],B.F[i],A.n);
-	B.FWT(1);
-}
-void LN(SPS A,SPS &B){
-	A.FWT(0);B.n=A.n;
-	for(int i=0;i<(1<<A.n);i++) Ln(A.F[i],B.F[i],A.n);
-	B.FWT(1);
-}
-void EXP(SPS A,SPS &B){
-	A.FWT(0);B.n=A.n;
-	for(int i=0;i<(1<<A.n);i++) Exp(A.F[i],B.F[i],A.n);
-	B.FWT(1);
-}
 
-int N,M;
-SPS F,G; 
-int pow2[maxN*maxN];
-int fa[maxN];
-int find(int x){return (fa[x]==x)?x:fa[x]=find(fa[x]);}
-int E[maxN][maxN];
-
-int main(){
-	init(); //important
-} 
+int main() {
+	init();  // important
+}
 ```
 
 # 劲爆应用
