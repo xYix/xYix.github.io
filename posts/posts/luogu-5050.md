@@ -36,16 +36,12 @@ $$
 这有一个 $\Theta(n\log^2 n)$ 做法，分治合并求解，设左边分子分母为 $(u_L,v_L)$，右边分子分母为 $(u_R,v_R)$，则合并后为 $(u_Lv_R+u_Rv_L,v_Lv_R)$。不妨把准确的过程写出来：
 
 - 预处理所有的 $v$
-
 - $\text{Solve(x):=}$
-
-- $\quad\text{if len=1 return }f_i$
-
+- $\quad\text{if len=1 }u_x=f_i,\text{return}$
 - $\quad\text{Solve(L),Solve(R)}$
-
-- $\quad\text{return }u_Lv_R+u_Rv_L$
-
-- $\text{return }\text{Solve}([0,n-1])\times v_{[0,n-1]}^{-1}$
+- $\quad u_x=u_Lv_R+u_Rv_L$
+- $\text{Solve}([0,n-1])$
+- $\text{return }u\times v_{[0,n-1]}^{-1}$
 
 那么根据某神奇的特勒根原理（Tellegen's Principle），只要我们能计算 $\mathbf {Af}$ 就能构造出一种计算 $\mathbf A^T\mathbf f$ 的方法，而且加法/乘法次数完全一样，具体构造方式如下：
 
@@ -115,3 +111,4 @@ namespace MultiEval{
 	}
 }
 ```
+

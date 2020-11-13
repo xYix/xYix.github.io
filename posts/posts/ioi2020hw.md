@@ -39,7 +39,7 @@ title: ioi2020 集训队作业 AT 部分口胡
 | AGC026D | [Histogram Coloring](https://atcoder.jp/contests/agc026/tasks/agc026_d) | $\color{blue}\text{skipped}$ | 否 |
 | AGC026E | [Synchronized Subsequence](https://atcoder.jp/contests/agc026/tasks/agc026_e) | $\color{green}\text{accepted}$ | 是 |
 | AGC026F | [Manju Game](https://atcoder.jp/contests/agc026/tasks/agc026_f) | $\color{blue}\text{skipped}$ | 否 |
-| AGC027D | [Modulo Matrix](https://atcoder.jp/contests/agc027/tasks/agc027_d) | $\text{queuing}$ | |
+| AGC027D | [Modulo Matrix](https://atcoder.jp/contests/agc027/tasks/agc027_d) | $\color{blue}\text{skipped}$ | 是 |
 | AGC027E | [ABBreviate](https://atcoder.jp/contests/agc027/tasks/agc027_e) | $\text{queuing}$ | |
 | AGC027F | [Grafting](https://atcoder.jp/contests/agc027/tasks/agc027_f) | $\text{queuing}$ | |
 
@@ -506,4 +506,25 @@ int main() {
 于是二分就立即浮现了，只需 DP 求是否有这样一个序列的划分，其中每一段权值都 $\ge k$。只需贪心地保留可行划分中前缀和最小者即可 $O(n)$ DP。
 
 # AGC027D - 膜矩阵
+
+构造，⑧会，爬了
+
+考虑使相邻两个格子结果均为 $1$。考虑对格子黑白染色，然后使白格为周围 4 个黑格的 $\text{lcm} +1$。这时我们需要合理安排黑格的权值，否则白格的大小会爆炸。具体策略是给每条斜线一个权值，黑格权值为两条斜线权值之积（这样有公共点的黑格 $\text{gcd}$ 够大）。斜线的权值在质数里选即可。
+
+# AGC027E - AB 摘要
+
+**观察 1.** 手玩可以发现大量的串可以变为单个字符。
+
+**观察 2.** $ab$ 交替的串不能进行任何操作。
+
+**观察 3. ** 设一个串的权值为 $\sum s_i = a\ ?\ 1: 2$，则操作后权值不变。
+
+**观察 4.** 如果不 $ab$ 交替，几乎必定（仅有的例外：$aaa,bbb$）存在一种操作方法使得操作结果不 $ab$ 交替。
+
+也就是说任意串
+
+- 要么可以变为 $a$
+- 要么可以变为 $b$
+- 要么可以变为 $ab,ba$ 中任选其一
+- 要么 $ab$ 交替
 
