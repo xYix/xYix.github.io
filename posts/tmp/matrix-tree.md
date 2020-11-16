@@ -37,22 +37,16 @@ $$
 
 考虑生成树如何用集合幂级数表达。只需要对 $i$ 取遍 $[1..n]$ 进行迭代
 $$
-T\leftarrow T+x^{\{i\}}\text{exp}\left(\sum_{(i,j)}\sum_{j\in s}[x^s]T\right)
+T\leftarrow T+x^{\{i\}}\text{exp}\left(\sum_{(i,j)}\sum_{j\in s}x^s[x^s]T\right)
 $$
-我们只需要验证 $[x^s]T=\text{Det}(s\ \text{导出的子图})$ 的确满足上式，即
+我们只需要验证 $[x^s]T=\text{MatT}(s\ \text{导出的子图})=[x^s]x^{\{1\}}\text{exp}(\sum_{1\notin p}w(p)x^p)$（注意 $w$ 依赖于 $s$！）的确满足上式，即
 $$
-\begin{aligned}\text{Det}(s\cup\{i\})&=[x^s]\text{exp}\left(\sum_{(i,j)}\sum_{j\in t}x^t\text{Det}(t)\right)\\
-&=[x^s]\text{exp}\left(deg_i\sum_{t}x^t\text{Det}(t)-\sum_{(i,j)}\sum_{j\notin t}x^t\text{Det}(t)\right)
+\begin{aligned}\text{MatT}(s\cup\{i\})&=[x^s]\text{exp}\left(\sum_{(i,j)}\sum_{j\in t,i\notin t}x^t\text{MatT}(t)\right)
 \end{aligned}
 $$
-看起来比较难处理，我们使用一个 $\text{FWT}$ 变换，并记 $\text{FWT}$ 后的 $\text{Det}$ 为 $\mathbf{Det}$。
+不妨取等式左边的根为 $i$，即只需验证
 $$
-[x^{s\cup\{i\}}]\mathbf{Det}=[x^s]\mathbf{Det}+\text{exp}\left(deg_i[x^s]\mathbf{Det}-\sum_{(i,j)}[x^{s/\{j\}}]\mathbf{Det}\right)
+\boxed{[x^s]\text{exp}\left(\sum_{p}x^p\begin{cases}deg_p&(|p|=1)\\-1&(p\ \text{is a cycle})\end{cases}\right)=[x^s]\text{exp}\left(\sum_{t}x^t|t\cap deg_i|\text{MatT}(t)\right)}
 $$
-稍微合适了一些，但是 $\text{exp}$ 的出现仍然令人迷惑。
+其中度数均是在 $s\cup\{i\}$ 导出的子图意义下的。这就非常令人惊讶了，堪称离谱。
 
-根据上面的讨论，我们知道
-$$
-\text{Det}(s)=[x^s]\text{exp}\left(\sum_{i\in s, j\in s, (i,j)}\left(x^{\{i\}}+x^{\{j\}}\right)-\sum_{|p|\ge 2}[p\ \text{is a cycle in}\ s]\right)
-$$
-此处的核心障碍在于，$\text{exp}$ 里面的内容依赖于 $s$，从而我们不能简单地认为 $[x^s]\mathbf{Det}=\text{exp}(*)$。

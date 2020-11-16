@@ -364,4 +364,18 @@
 		'type_name' : 'other',
 		'tag' : [],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '53',
+		'post_name' : 'det-eq-exp-trace-log',
+		'post_chinese_name' : 'det = exp trace log',
+		'type_name' : 'algorithm',
+		'tag' : ['linear-algebra',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '54',
+		'post_name' : 'multi-lagrange-inv',
+		'post_chinese_name' : '多元拉反和矩阵树定理',
+		'type_name' : 'algorithm',
+		'tag' : ['linear-algebra','lagrange-inversion',],
+	};
 })(document);
