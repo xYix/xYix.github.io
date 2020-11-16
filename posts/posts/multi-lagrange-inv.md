@@ -8,6 +8,8 @@ title: 多元拉反和矩阵树定理
 
 [2] [Multivariable Lagrange Inversion, Gessel-Viennot Cancellation, and the Matrix Tree Theorem](https://uwaterloo.ca/math/sites/ca.math/files/uploads/files/gkulkjcta1997.pdf)
 
+[3] [A bijetive proof for the arboresent form of the multivariable Lagrange inversion formula](http://www.cecm.sfu.ca/~cchauve/Publications/MCS00.ps)
+
 在此之前，我们需要先深刻地理解矩阵树定理。
 
 # 矩阵树定理的组合解释
@@ -86,18 +88,22 @@ $$
 
 我们给出对内向树形式的一个**组合解释**。证明了内向树形式也就证明了原来的形式，因为中间的推导都是可逆的。
 
+## 内向树形式的组合解释
+
 
 
 还有一个奇妙的扩展。
 
-> **多元拉格朗日反演：主子式形式.**
+> **多元拉格朗日反演：主子式扩展.**
 > $$
 > \boxed{\left[\dfrac{\mathbf t^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf f(\mathbf t))\det\left(t_j\dfrac{\part f_i}{\part t_j}\right)_\alpha=\\
 > \qquad \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\prod_{k\in\alpha}x_k\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\part g_i}{\part x_j}\right)_{\overline\alpha}}
 > $$
 > 其中 $\det \alpha$ 表示仅留下原矩阵的 $\alpha$ 中的行列的子矩阵（**主子式**）的行列式。$\overline \alpha$ 表示 $\alpha$ 的补。
 
-接下来，我们给出一个对这个主子式形式的**组合解释**。
+接下来，我们给出一个对这个主子式扩展的**组合解释**。
+
+## 主子式扩展的组合解释
 
 先扔出一大坨定义：
 
