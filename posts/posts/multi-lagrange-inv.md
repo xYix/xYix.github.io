@@ -1,5 +1,5 @@
 ---
-title: 多元拉反和矩阵树定理
+title: 矩阵树定理和多元拉反
 ---
 
 参考资料：
@@ -39,26 +39,7 @@ $$
 
 去掉第一行第一列正代表了选取一个根。这也解释了为什么如果不去掉第一行第一列，基尔霍夫矩阵的行列式为 $0$，因为这时不论怎么选总存在一个环。
 
-# 从集合幂级数到矩阵树定理
-
-首先声明：我们必须避免“集合幂级数方法算的是生成树个数，矩阵树定理算的也是生成树个数，所以它们相等”和类似的逻辑，否则讨论会变得没有意义。
-
-考虑生成树如何用集合幂级数表达。只需要对 $i$ 取遍 $[1..n]$ 进行迭代
-$$
-T\leftarrow T+x^{\{i\}}\text{exp}\left(\sum_{(i,j)}\sum_{j\in s}x^s[x^s]T\right)
-$$
-我们只需要验证 $[x^s]T=\text{MatT}(s\ \text{导出的子图})=[x^s]x^{\{1\}}\text{exp}(\sum_{1\notin p}w(p)x^p)$（注意 $w$ 依赖于 $s$！）的确满足上式，即
-$$
-\begin{aligned}\text{MatT}(s\cup\{i\})&=[x^s]\text{exp}\left(\sum_{(i,j)}\sum_{j\in t,i\notin t}x^t\text{MatT}(t)\right)
-\end{aligned}
-$$
-不妨取等式左边的根为 $i$，即只需验证
-$$
-\boxed{[x^s]\text{exp}\left(\sum_{p}x^p\begin{cases}deg_p&(|p|=1)\\-1&(p\ \text{is a cycle})\end{cases}\right)=[x^s]\text{exp}\left(\sum_{t}x^t|t\cap deg_i|\text{MatT}(t)\right)}
-$$
-其中度数均是在 $s\cup\{i\}$ 导出的子图意义下的。这就非常令人惊讶了，堪称离谱。
-
-x义x 试图搞这个东西搞了三天但并没有效果。其实这是因为我们持有的工具并不足以推出它。下面我们有请——
+因为一些奇怪的原因，矩阵树定理和多元拉格朗日反演有着紧密的联系，我们来介绍它。你很快会看到这是为什么。
 
 # 多元拉格朗日反演
 
@@ -127,7 +108,7 @@ $$
 
 > **引理 1.**
 > $$
-> h(\mathbf f(\mathbf t))\ 是\ \mathcal A_0\ 的权值和的生成函数。
+> h(\mathbf f(\mathbf t))\ 是\ \mathcal A_0\ 的权值和的指数生成函数。
 > $$
 
 ### 函数图的概括，路图和色图
@@ -143,13 +124,13 @@ $$
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
   - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
-- 这里给出一个[例子](/images/path-abor.png)
+- 这里给出一个[例子](/images/path-abor.png)。
 
 - 记只保留 $\{0\}\cup\{\sigma_1,...,\sigma_j\}$ 的 $P(T)$ 为 $P^{(j)}(T)$。
 
 - 一个 $\sigma_j$ 是 **rlmax** 的，如果 $\sigma_j=\max(\sigma_j,...,\sigma_m)$。
 
-可见路图的性质是复杂的。我们下面对它进行研究。
+可见路图的性质是复杂的。我们下面给出它的一些有用的性质。
 
 > **引理 2.** 路图具有以下性质：
 >
@@ -199,7 +180,7 @@ $$
 - 通过 $D((\sigma_j,n_{\sigma_j}))=K_{\sigma_j}$ 和引理 2.1，我们可以恢复 $K$ 和 $F$。
 
 - 显然 $(j_2)$ 是可逆的。
-- 下面说明 $(j_1)$ 也是可逆的。我们找到图中环上有 $\sigma_j$ 但没有 $\{0\}\cup\{\sigma_1,...,\sigma_{j-1}\}$ 的那些基环树，上面颜色为 $\sigma_j$ 中标号最大的元素就是原来的 $w$，逆也就显然了。
+- 下面说明 $(j_1)$ 也是可逆的。我们找到图中环上有 $\sigma_j$ 但没有 $\{0\}\cup\{\sigma_1,...,\sigma_{j-1}\}$ 的那些基环树，环上面颜色为 $\sigma_j$ 中标号最大的元素就是原来的 $w$，逆也就显然了。
 
 $\blacksquare$
 
@@ -235,4 +216,12 @@ $\blacksquare$
 接下来，我们给出一个对这个主子式扩展的**组合解释**。
 
 ## 主子式扩展的组合解释
+
+直接沿用对普通多元拉反的组合解释。在引理 3 之后，我们已经得到
+$$
+\sum_{A\in\mathcal A_0(\mathbf n),P(A)=T}\Psi(A)=\sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\part(h,\mathbf g^{\mathbf n})}{\part T}
+$$
+我们的目的是，对规定的 $k$，对这样的 $T$ 求上式的和：$T$ 中存在边 $(k+1,0),...,(m,0)$，这样的 $T$ 的集合称为 $\mathcal F_0^{(k)}(\mathbf 1)$。显然可以不失一般性地从 $\{k+1,...,m\}$ 扩展到任意集合 $\alpha$。
+
+### 右式的处理
 
