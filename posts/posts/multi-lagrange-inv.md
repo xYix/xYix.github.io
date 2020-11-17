@@ -89,9 +89,13 @@ $$
 \dfrac{\part \mathbf f}{\part G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\part}{\part x_i}\right)f_j
 > $$
 
-我们给出对内向树形式的一个**组合解释**。证明了内向树形式也就证明了原来的形式，因为中间的推导都是可逆的。
+我们给出对内向树形式的一个**组合解释**。由于普通形式到内向树形式的推导是可逆的，这也就证明了多元拉格朗日反演。
 
-## 内向树形式的组合解释
+下面这个组合解释，让人看了之后不禁想高呼：组合意义，永远滴神。
+
+## 多元拉反的组合解释
+
+### 基础定义
 
 定义我们研究的点集：
 
@@ -123,8 +127,10 @@ $$
 
 > **引理 1.**
 > $$
-> h(\mathbf f(\mathbf t))\ 是\ \mathcal F_0\ 的权值和的生成函数。
+> h(\mathbf f(\mathbf t))\ 是\ \mathcal A_0\ 的权值和的生成函数。
 > $$
+
+### 函数图的概括，路图和色图
 
 接下来我们定义两种对函数图的**概括**（原文为 substructure 子结构，原谅我擅自如此翻译）。
 
@@ -135,7 +141,7 @@ $$
 
   - $\rho$ 上有边 $y\rightarrow x$，令离 $(\mu,n_\mu)$ 最近且与 $y$ 同色的节点为 $z$（它当然可以为 $(\mu,n_\mu)$ 自身）。
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
-  - 在 $P(T)$ 中连边 $\sigma_j\rightarrow K_{\sigma_j} 的颜色$。
+  - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
 - 这里给出一个[例子](/images/path-abor.png)
 
@@ -168,7 +174,9 @@ $$
 
 现在我们终于可以给出下面这个定理。
 
-> **定理.（树形概括双射）**
+### 树形概括双射定理
+
+> **定理 1.（树形概括双射）**
 > $$
 > \sum_{A\in\mathcal A_0(\mathbf n),P(A)=T}\Psi(A)=\sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)
 > $$
@@ -178,13 +186,32 @@ $$
 - $(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
 - $(j_2)$：转换 $((\sigma_j,n_{\sigma_j}),F_{\sigma_j})$；
 
-接下来我们证明：最终得出的图 $D$ 满足 $C(D)=T$，而且这组变换是一个双射。
+接下来我们只需要证明：最终得出的图 $D$ 满足 $C(D)=T$，而且这组变换是一个双射。
 
 首先指出，第 $j$ 组变换只会影响颜色为 $j$ 的节点的函数值，又根据引理 2.3，故当第 $j$ 组变换被施行时，$\pi_{\sigma_j}$ 是“完好无损”的。
 
-当 $(j_1)$ 结束，我们有 $D(F_{\sigma_j})=K_{\sigma_j}$，也就是说 $(j_2)$ 结束时 $D((\sigma_j,n_{\sigma_j}))=K_{\sigma_j}$。从而，最终，$C(D)=T$。
+于是，当 $(j_1)$ 结束，我们有 $D(F_{\sigma_j})=K_{\sigma_j}$，也就是说 $(j_2)$ 结束时 $D((\sigma_j,n_{\sigma_j}))=K_{\sigma_j}$。从而，最终，$C(D)=T$。
 
 接下来我们展示上面的变换的可逆性。
+
+- 首先，我们的确可以恢复 $\sigma$，只需要重复使用引理 2.2。
+
+- 通过 $D((\sigma_j,n_{\sigma_j}))=K_{\sigma_j}$ 和引理 2.1，我们可以恢复 $K$ 和 $F$。
+
+- 显然 $(j_2)$ 是可逆的。
+- 下面说明 $(j_1)$ 也是可逆的。我们找到图中环上有 $\sigma_j$ 但没有 $\{0\}\cup\{\sigma_1,...,\sigma_{j-1}\}$ 的那些基环树，上面颜色为 $\sigma_j$ 中标号最大的元素就是原来的 $w$，逆也就显然了。
+
+$\blacksquare$
+
+### 结局
+
+接下来，我们只需要证明
+
+> **引理 3.**
+> $$
+> \sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\part(h,\mathbf g^{\mathbf n})}{\part T}
+> $$
+> 
 
 还有一个奇妙的扩展。
 
