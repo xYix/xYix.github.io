@@ -213,6 +213,14 @@ $\blacksquare$
 > $$
 > 
 
+**证明.** 如果不管 $C(D)=T$ 的限制，那么儿子是可以任意选的，只要所有点恰好被作为一次儿子。那么答案即为
+$$
+\left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h\cdot\prod\mathbf g^{\mathbf n}
+$$
+现在考虑 $C(D)=T$。此时元素 $(i,n_i)$ 的父亲就被钦定为了某个颜色，那个颜色的生成函数中必须挖去一个 $i$ 的位置留给它，而且标号还必须是 $n_i$，这正是对 $i$ 求偏导。
+
+$\blacksquare$
+
 还有一个奇妙的扩展。
 
 ## 主子式扩展
