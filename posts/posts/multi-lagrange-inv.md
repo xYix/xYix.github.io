@@ -28,9 +28,11 @@ title: 矩阵树定理和多元拉反
 # 1 矩阵树定理的组合解释
 
 考虑某矩阵 $(a_{i,j})$ 的行列式，它是
+
 $$
 \text{Det}=\sum_p\text{sgn}(p)w(p)
 $$
+
 其中 $p$ 是任意置换，$w(p)=\prod_{i} a_{i,p_i}$。我们考虑它的循环分解
 
 $$
@@ -62,30 +64,27 @@ $$
 $$
 f_i=x_ig_i(\mathbf f)
 $$
+
 那么我们有
 > **多元拉格朗日反演**.
 > $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\part g_j(\mathbf x)}{\part x_i}\right)}
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
 > $$
 
-行吧，我们没去找行列式，行列式却自己找上门了。
-
-我们暴力展开行列式。中间过程不表，类似之前对矩阵树定理的证明，只有一个观察是 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\part}{\part x_i}$。这得到一个有趣的新形式
+我们暴力展开行列式。中间过程不表，类似之前对矩阵树定理的证明，只有一个观察是 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。这得到一个有趣的新形式
 
 ## 2.1 内向树形式
 
 > **多元拉格朗日反演：内向树形式.**
 > $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - 1}]\sum_{\mathcal T}\dfrac{\part(h,\mathbf g^{\mathbf n})}{\part \mathcal T}}
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
 > $$
 > 其中 $\mathcal T$ 是完全图 $[0..m]$ 的所有以 $0$ 为根的内向树，而
 > $$
-\dfrac{\part \mathbf f}{\part G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\part}{\part x_i}\right)f_j
+\dfrac{\partial \mathbf f}{\partial G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
 > $$
 
-我们给出对内向树形式的一个**组合解释**。由于普通形式到内向树形式的推导是可逆的，这也就证明了多元拉格朗日反演。
-
-下面这个组合解释，让人看了之后不禁想高呼：组合意义，永远滴神。
+我们给出对内向树形式的一个**组合解释**。
 
 ## 2.2 多元拉反的组合解释
 
@@ -117,6 +116,7 @@ $$
 $$
 \hat f_i=x_i\sum_{\mathbf j}g_{i,\mathbf j}\prod_{l=1}^m \hat f_l^{j_l}=x_ig_i(\hat {\mathbf f})
 $$
+
 正是我们最开始提到的方程组，即 $\hat f=f$。从而有引理
 
 > **引理 1.**
@@ -137,7 +137,7 @@ $$
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
   - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
-- 这里给出一个[例子](/images/path-abor.png)。
+- 这里给出一个[例子](https://xyix.gitee.io/images/path-abor.png)。
 
 - 记只保留 $\{0\}\cup\{\sigma_1,...,\sigma_j\}$ 的 $P(T)$ 为 $P^{(j)}(T)$。
 
@@ -203,7 +203,7 @@ $\blacksquare$
 
 > **引理 3.**
 > $$
-> \sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\part(h,\mathbf g^{\mathbf n})}{\part T}
+> \sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial T}
 > $$
 > 
 
@@ -211,6 +211,7 @@ $\blacksquare$
 $$
 \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h\cdot\prod\mathbf g^{\mathbf n}
 $$
+
 现在考虑 $C(D)=T$。此 $M_i$ 的父亲就被钦定为了某个颜色，那个颜色的生成函数中必须挖去一个 $i$ 的位置留给它，而且标号还必须是 $n_i$，这正是对 $i$ 求偏导。
 
 $\blacksquare$
@@ -221,10 +222,10 @@ $\blacksquare$
 
 > **多元拉格朗日反演：主子式扩展.**
 > $$
-> \boxed{\left[\dfrac{\mathbf t^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf f(\mathbf t))\det\left(t_j\dfrac{\part f_i}{\part t_j}\right)_\alpha=\\
-> \qquad \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\prod_{k\in\alpha}x_k\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\part g_i}{\part x_j}\right)_{\overline\alpha}}
+> \boxed{\left[\dfrac{\mathbf t^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf f(\mathbf t))\det\left(t_j\dfrac{\partial f_i}{\partial t_j}\right)_\alpha=\\
+> \qquad \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\prod_{k\in\alpha}x_k\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{\overline\alpha}}
 > $$
-> 其中 $\det \alpha$ 表示仅留下原矩阵的 $\alpha$ 中的行列的子矩阵（**主子式**）的行列式。$\overline \alpha$ 表示 $\alpha$ 的补。
+> 其中 $\det \alpha$ 表示仅留下原矩阵的 $\alpha$ 中的行列的子矩阵（主子式）的行列式。$\overline \alpha$ 表示 $\alpha$ 的补。
 
 接下来，我们给出一个对这个主子式扩展的**组合解释**。
 
@@ -232,8 +233,9 @@ $\blacksquare$
 
 直接沿用对普通多元拉反的组合解释。在引理 3 之后，我们已经得到
 $$
-\sum_{A\in\mathcal A_0(\mathbf n),P(A)=T}\Psi(A)=\sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\part(h,\mathbf g^{\mathbf n})}{\part T}
+\sum_{A\in\mathcal A_0(\mathbf n),P(A)=T}\Psi(A)=\sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial T}
 $$
+
 我们的目的是，对规定的 $k$，对下面这样的 $T$ 求上式的和：$T$ 中存在边 $(k+1,0),...,(m,0)$，这样的 $T$ 的集合称为 $\mathcal J^{(k)}$。显然可以不失一般性地从 $\{k+1,...,m\}$ 扩展到任意集合 $\alpha$。
 
 ### 2.4.1 右式的处理
@@ -241,10 +243,10 @@ $$
 >  **定理 2.** 
 > $$
 > \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
-> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\part}{\part x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\part g_i}{\part x_j}\right)_{[1...k]}
+> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
 > $$
 
-**证明.** 只需要对引理 3 运用矩阵树定理即可。还有别忘了 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\part}{\part x_i}$。
+**证明.** 只需要对引理 3 运用矩阵树定理即可。还有别忘了 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。
 
 $\blacksquare$
 
@@ -269,7 +271,7 @@ $\blacksquare$
 > **定理 3.**
 > $$
 > \sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\\
-> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{1}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\part}{\part f_i}\right)H(\mathbf f)\right\}\cdot\text{det}\left(x_j\dfrac{\part f_i}{\part x_j}\right)_{[k+1...m]}
+> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{1}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial f_i}\right)H(\mathbf f)\right\}\cdot\text{det}\left(x_j\dfrac{\partial f_i}{\partial x_j}\right)_{[k+1...m]}
 > $$
 
 **证明.**
@@ -278,11 +280,13 @@ $\blacksquare$
 $$
 \sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\sum_{A\in\mathcal R^{(k)}}\Psi(A)=\sum_{A\in\mathcal R^{(k)}}\text{sgn}(\kappa(A))\Psi(A)
 $$
+
 下面我们来证明
 $$
 \sum_{A\in\mathcal U^{(k)}}\text{sgn}(\kappa(A))\Psi(A)=0
 $$
-这其实是一个容斥（也就是所说的 Gessel - Viennot cancellation，其实在[这篇博客](https://xyix.gitee.io/posts/?page=1&postid=39)的 LGV 引理一节时我们已经遇到了）。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
+
+这其实是一个容斥（也就是所说的 Gessel - Viennot cancellation，其实在 [这篇博客](https://xyix.gitee.io/posts/?page=1&postid=39) 的 LGV 引理一节时我们已经遇到了）。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
 
 - 令 $\gamma$ 是使得 $\tau_j(U)$ 中存在一个节点颜色大于 $j$ 的最大的 $j$；
 - 令 $\beta$ 是 $\tau_j(U)$ 中最大的颜色。
@@ -294,16 +298,14 @@ $$
 $$
 \sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\sum_{A\in\mathcal G^{(k)}}\text{sgn}(\kappa(A))\Psi(A)
 $$
+
 现在考虑对 $\kappa$，$A\in\mathcal G^{(k)},\kappa(A)=\kappa$ 的带符号权值和。容易考虑出它是
 $$
-\left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\text{sgn}(\kappa)\cdot\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot \left\{\left(\prod_{i=k+1}^m\dfrac{\part}{\part f_i}\right)H(\mathbf f)\right\}\cdot\prod_{i=k+1}^m\dfrac{\part f_{\kappa_j}}{\part x_j}
+\left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\text{sgn}(\kappa)\cdot\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot \left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial f_i}\right)H(\mathbf f)\right\}\cdot\prod_{i=k+1}^m\dfrac{\partial f_{\kappa_j}}{\partial x_j}
 $$
+
 对 $\kappa$ 求和即得到一个行列式的形式，正是原定理。
 
 $\blacksquare$
 
 综合左式和右式的处理即得到原定理。
-
-啊，终于讲完了。让我们以一句含蓄中带着霸气的话作为结尾：
-
-Hence, the Principal Minor Lagrange Inversion Theorem.
