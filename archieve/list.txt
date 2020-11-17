@@ -304,7 +304,7 @@ algorithm
 1
 linear-algebra
 multi-lagrange-inv
-多元拉反和矩阵树定理
+矩阵树定理和多元拉反
 algorithm
 2
 linear-algebra

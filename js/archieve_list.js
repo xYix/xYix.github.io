@@ -374,7 +374,7 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '54',
 		'post_name' : 'multi-lagrange-inv',
-		'post_chinese_name' : '多元拉反和矩阵树定理',
+		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
 		'tag' : ['linear-algebra','lagrange-inversion',],
 	};

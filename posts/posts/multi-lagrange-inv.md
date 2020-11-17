@@ -82,7 +82,7 @@ $$
 
 - 令 $V(\mathbf n)=\{(i,j):1\le i\le m,1\le j\le n_i\}$，说人话就是有 $m$ 种颜色的点，第 $i$ 种颜色的有 $n_i$ 个。
 - 记 $V_0(\mathbf n)=\{0\}\cup V(\mathbf n)$，称这个新加的 $0$ 节点的颜色为 $0$。
-
+- 记 $(i,n_i)$ 为 $M_i$。只是一个代表元素，用于下面的构造。
 
 下面定义**函数图**。
 
@@ -118,9 +118,9 @@ $$
 - 对于某个 $T\in \mathcal A_0(\mathbf n)$，它的**路图** $P(T)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图，它如此构造：首先令已经处理的颜色序列为 $\sigma$。
 
 - - 令 $\mu=\max([1..m]/\{\sigma_1 , ...,\sigma_j\}).$ 
-  - 找出 $T$ 中的单向路径 $\rho$，它从 $(\mu,n_\mu)$ 延伸到第一个颜色为 $0$ 或其颜色已被处理的节点 $x.$
+  - 找出 $T$ 中的单向路径 $\rho$，它从 $M_\mu$ 延伸到第一个颜色为 $0$ 或其颜色已被处理的节点 $x.$
 
-  - $\rho$ 上有边 $y\rightarrow x$，令离 $(\mu,n_\mu)$ 最近且与 $y$ 同色的节点为 $z$（它当然可以为 $(\mu,n_\mu)$ 自身）。
+  - $\rho$ 上有边 $y\rightarrow x$，令离 $M_\mu$ 最近且与 $y$ 同色的节点为 $z$（它当然可以为 $(\mu,n_\mu)$ 自身）。
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
   - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
@@ -134,7 +134,7 @@ $$
 
 > **引理 2.** 路图具有以下性质：
 >
-> - 如果 $\sigma_j$ 是 rlmax 的，那么 $F_{\sigma_j}=(\sigma_j,n_{\sigma_j})$。否则 $F_{\sigma_j}=K_{\sigma_{j+1}}$。
+> - 如果 $\sigma_j$ 是 rlmax 的，那么 $F_{\sigma_j}=M_{\sigma_j}$。否则 $F_{\sigma_j}=K_{\sigma_{j+1}}$。
 >
 > - $P^{(j)}(T)$ 皆是以 $0$ 为根的内向树，且其最小叶子为 $\sigma_j$。
 >
@@ -142,7 +142,7 @@ $$
 
 证明不表，因为均可直接由构造过程得出。
 
-- 对于某个 $D\in\mathcal F_0(\mathbf n)$，它的**色图**（草生）$C(D)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图。如果在 $D$ 中存在 $(i,n_i)\rightarrow(j,*)$ 则在其色图中连边 $i\rightarrow j$。
+- 对于某个 $D\in\mathcal F_0(\mathbf n)$，它的**色图**（草生）$C(D)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图。如果在 $D$ 中存在 $M_i\rightarrow(j,*)$ 则在其色图中连边 $i\rightarrow j$。
 
 这两种概括的意义在于，我们即将通过它们建立一个震撼的双射。先进行一些准备工作：研究一些被称为**保权值**的变换：变换前后两个图的权值相等。
 
@@ -165,19 +165,19 @@ $$
 **证明.** 对于 $P(A)=T$ 的 $A$，对 $j=1...m$，施以下面的变换
 
 - $(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
-- $(j_2)$：转换 $((\sigma_j,n_{\sigma_j}),F_{\sigma_j})$；
+- $(j_2)$：转换 $(M_{\sigma_j},F_{\sigma_j})$；
 
 接下来我们只需要证明：最终得出的图 $D$ 满足 $C(D)=T$，而且这组变换是一个双射。
 
 首先指出，第 $j$ 组变换只会影响颜色为 $j$ 的节点的函数值，又根据引理 2.3，故当第 $j$ 组变换被施行时，$\pi_{\sigma_j}$ 是“完好无损”的。
 
-于是，当 $(j_1)$ 结束，我们有 $D(F_{\sigma_j})=K_{\sigma_j}$，也就是说 $(j_2)$ 结束时 $D((\sigma_j,n_{\sigma_j}))=K_{\sigma_j}$。从而，最终，$C(D)=T$。
+于是，当 $(j_1)$ 结束，我们有 $D(F_{\sigma_j})=K_{\sigma_j}$，也就是说 $(j_2)$ 结束时 $D(M_{\sigma_j})=K_{\sigma_j}$。从而，最终，$C(D)=T$。
 
 接下来我们展示上面的变换的可逆性。
 
 - 首先，我们的确可以恢复 $\sigma$，只需要重复使用引理 2.2。
 
-- 通过 $D((\sigma_j,n_{\sigma_j}))=K_{\sigma_j}$ 和引理 2.1，我们可以恢复 $K$ 和 $F$。
+- 通过 $D(M_{\sigma_j})=K_{\sigma_j}$ 和引理 2.1，我们可以恢复 $K$ 和 $F$。
 
 - 显然 $(j_2)$ 是可逆的。
 - 下面说明 $(j_1)$ 也是可逆的。我们找到图中环上有 $\sigma_j$ 但没有 $\{0\}\cup\{\sigma_1,...,\sigma_{j-1}\}$ 的那些基环树，环上面颜色为 $\sigma_j$ 中标号最大的元素就是原来的 $w$，逆也就显然了。
@@ -198,7 +198,7 @@ $\blacksquare$
 $$
 \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h\cdot\prod\mathbf g^{\mathbf n}
 $$
-现在考虑 $C(D)=T$。此时元素 $(i,n_i)$ 的父亲就被钦定为了某个颜色，那个颜色的生成函数中必须挖去一个 $i$ 的位置留给它，而且标号还必须是 $n_i$，这正是对 $i$ 求偏导。
+现在考虑 $C(D)=T$。此 $M_i$ 的父亲就被钦定为了某个颜色，那个颜色的生成函数中必须挖去一个 $i$ 的位置留给它，而且标号还必须是 $n_i$，这正是对 $i$ 求偏导。
 
 $\blacksquare$
 
@@ -221,7 +221,74 @@ $\blacksquare$
 $$
 \sum_{A\in\mathcal A_0(\mathbf n),P(A)=T}\Psi(A)=\sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\part(h,\mathbf g^{\mathbf n})}{\part T}
 $$
-我们的目的是，对规定的 $k$，对这样的 $T$ 求上式的和：$T$ 中存在边 $(k+1,0),...,(m,0)$，这样的 $T$ 的集合称为 $\mathcal F_0^{(k)}(\mathbf 1)$。显然可以不失一般性地从 $\{k+1,...,m\}$ 扩展到任意集合 $\alpha$。
+我们的目的是，对规定的 $k$，对下面这样的 $T$ 求上式的和：$T$ 中存在边 $(k+1,0),...,(m,0)$，这样的 $T$ 的集合称为 $\mathcal J^{(k)}$。显然可以不失一般性地从 $\{k+1,...,m\}$ 扩展到任意集合 $\alpha$。
 
 ### 右式的处理
 
+>  **定理 2.** 
+> $$
+> \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
+> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\part}{\part x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\part g_i}{\part x_j}\right)_{[1...k]}
+> $$
+
+**证明.** 只需要对引理 3 运用矩阵树定理即可。还有别忘了 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\part}{\part x_i}$。
+
+$\blacksquare$
+
+### 左式的处理
+
+接下来，我们介绍 **Gessel - Viennot cancellation**。先对 $A\in\mathcal A_{0}(\mathbf n)$ 引入下面的记号。
+
+- 对于 $j\in[1...m]$，找出 $M_j$ 到 $0$ 的路径，记 $0$ 之前的最后一个点为 $N_j$。记 $M_j$ 到 $N_j$ 的路径为 $\tau_j$。
+- 令 $L_i(\tau_j)$ 是 $\tau_j$ 中离 $N_j$ 最近的，颜色为 $i$ 的节点。显然，它可能没有定义。
+
+下面定义一种树集 $\mathcal G^{(k)}$，满足
+
+- 对于 $i=k+1,...,m$，$\tau_i$ 两两不交
+- 对于 $i=k+1,...,m$，记 $N_i(A)$ 的颜色为 $\kappa_i(A)$，$\kappa(A)$ 恰好构成 $[k+1...m]$ 的一个排列。
+
+如果还满足下面的条件，则称其属于 $\mathcal R^{(k)}$；否则称其为 $\mathcal U^{(k)}$。
+
+- 对于 $i=k+1,...,m$，$\tau_i$ 中不含颜色大于 $i$ 的节点。这意味着 $\kappa(A)$ 就是 $[k+1...m]$ 本身。
+
+我们认识到，$\mathcal R^{(k)}$ 恰好等于 $A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}$ 的 $A$ 构成的集合。容易验证。
+
+> **定理 3.**
+> $$
+> \sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\\
+> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{1}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\part}{\part f_i}\right)H(\mathbf f)\right\}\cdot\text{det}\left(x_j\dfrac{\part f_i}{\part x_j}\right)_{[k+1...m]}
+> $$
+
+**证明.**
+
+首先，我们有
+$$
+\sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\sum_{A\in\mathcal R^{(k)}}\Psi(A)=\sum_{A\in\mathcal R^{(k)}}\text{sgn}(\kappa(A))\Psi(A)
+$$
+下面我们来证明
+$$
+\sum_{A\in\mathcal U^{(k)}}\text{sgn}(\kappa(A))\Psi(A)=0
+$$
+这其实是一个容斥。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
+
+- 令 $\gamma$ 是使得 $\tau_j(U)$ 中存在一个节点颜色大于 $j$ 的最大的 $j$；
+- 令 $\beta$ 是 $\tau_j(U)$ 中最大的颜色。
+- 对 $U$ 施以转换 $(L_{\beta}(\tau_\beta),L_\beta(\tau_\gamma))$，其结果便是 $\phi(U)$。
+
+可见的是 $\phi$ 保权值，$\phi(\phi(U))=U$，且 $U$ 和 $\phi(U)$ 的 $\text{sgn}(\kappa)$ 相反，从而 $U$ 和 $\phi(U)$ 的贡献抵消了。
+
+综上，我们得到
+$$
+\sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\sum_{A\in\mathcal G^{(k)}}\text{sgn}(\kappa(A))\Psi(A)
+$$
+现在考虑对 $\kappa$，$A\in\mathcal G^{(k)},\kappa(A)=\kappa$ 的带符号权值和。容易考虑出它是
+$$
+\left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\text{sgn}(\kappa)\cdot\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot \left\{\left(\prod_{i=k+1}^m\dfrac{\part}{\part f_i}\right)H(\mathbf f)\right\}\cdot\prod_{i=k+1}^m\dfrac{\part f_{\kappa_j}}{\part x_j}
+$$
+对 $\kappa$ 求和即得到一个行列式的形式，正是原定理。
+
+$\blacksquare$
+
+啊，终于讲完了。让我们以一句含蓄中带着霸气的话作为结尾：
+
+Hence, the Principal Minor Lagrange Inversion Theorem.
