@@ -8,7 +8,7 @@ title: 多元拉反和矩阵树定理
 
 [2] [Multivariable Lagrange Inversion, Gessel-Viennot Cancellation, and the Matrix Tree Theorem](https://uwaterloo.ca/math/sites/ca.math/files/uploads/files/gkulkjcta1997.pdf)
 
-[3] [A bijetive proof for the arboresent form of the multivariable Lagrange inversion formula](http://www.cecm.sfu.ca/~cchauve/Publications/MCS00.ps)
+[3] [A Bijetive Proof for the Arboresent Form of the Multivariable Lagrange Inversion Formula](http://www.cecm.sfu.ca/~cchauve/Publications/MCS00.ps)
 
 在此之前，我们需要先深刻地理解矩阵树定理。
 
@@ -90,7 +90,52 @@ $$
 
 ## 内向树形式的组合解释
 
+先扔出一大坨定义：
 
+- 令 $V(\mathbf n)=\{(i,j):1\le i\le m,1\le j\le n_i\}$，说人话就是有 $m$ 种颜色的点，第 $i$ 种颜色的有 $n_i$ 个。
+- 记 $V_0(\mathbf n)=\{0\}\cup V(\mathbf n)$，称这个新加的 $0$ 节点的颜色为 $0$。
+
+
+上面是点集的符号，下面定义 $\text{funcional digraph}$。
+
+- $\text{functional digraph}$ 是一种有向图，每个点有且仅有一条出边，这个图对应一个函数 $F$：边 $(a,b)$ 意味着 $F(a)=b$。
+- 记 $\mathcal F_0(\mathbf n)$ 是从 $V(\mathbf n)$ 到 $V_0(\mathbf n)$ 的 $\text{funcional digraphs}$ 构成的集合，也就是说这个函数的定义域为 $V(\mathbf n)$，到达域为 $V_0(\mathbf n)$。容易发现 $\mathcal F_0(\mathbf n)$ 中的函数是由一个包含 $0$ 的内向树和一些内向基环树构成的。
+- 而 $\mathcal A_0(\mathbf n)$ 是其中的以 $0$ 为根的内向树（又出现了）的集合。
+
+接下来定义权值。
+
+- 对于某个 $D\in\mathcal F_0(\mathbf n)$，其中的节点 $v$ 的权值 $w_D(v)$ 定义如下：令 $j_l$ 为颜色为 $l$ 的，映射到 $v$ 的节点数量，则
+
+- $$
+  w_D(v)=\begin{cases}\left[\dfrac{\mathbf x^{\mathbf j}}{\prod\mathbf j!}\right]g_{i}&(v\neq 0)\\\left[\dfrac{\mathbf x^{\mathbf j}}{\prod\mathbf j!}\right]H&(v=0)\end{cases}
+  $$
+
+- 定义 $\Psi(D)=\prod w_D(v)$。
+
+这时我们可以立即解释 $f_i$：考虑以某个颜色为 $i$ 的点为根的内向树集合的生成函数 $\hat f_i$ 满足
+$$
+\hat f_i=x_i\sum_{\mathbf j}g_{i,\mathbf j}\prod_{l=1}^m \hat f_l^{j_l}=x_ig_i(\hat {\mathbf f})
+$$
+正是我们最开始提到的方程组，即 $\hat f=f$。从而有引理
+
+> **引理 1.**
+> $$
+> h(\mathbf f(\mathbf t))\ 是\ \mathcal F_0\ 的权值和的生成函数。
+> $$
+
+- 对于某个 $D\in\mathcal F_0(\mathbf n)$，它的**色图**（草生）$C(D)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图。如果在 $D$ 中存在 $(i,1)\rightarrow(j,*)$ 则在其色图中连边 $i\rightarrow j$。
+
+- 对于某个 $T\in \mathcal A_0(\mathbf n)$，它的**路图** $P(T)$ 如此构造：首先令已经处理的颜色序列为 $\sigma$。
+
+- - 令 $\mu=\max([1..m]/\{\sigma_1 , ...,\sigma_j\}).$ 
+  - 找出 $T$ 中的单向路径 $\rho$，它从 $(\mu,1)$ 延伸到第一个颜色为 $0$ 或其颜色已被处理的节点 $x.$
+
+  - $\rho$ 上有边 $y\rightarrow x$，令离 $(\mu,1)$ 最近且于 $y$ 色的节点为 $z$（它当然可以为 $(\mu,1)$ 自身）。
+  - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
+
+- 例子：（此图中选取的不是 $(\mu,1)$ 而是 $(\mu,n_\mu)$，反正差不多）
+
+<div style="width:70%;margin:auto"><img src="/images/path-abor.png" alt=""></div>
 
 还有一个奇妙的扩展。
 
@@ -105,33 +150,3 @@ $$
 
 ## 主子式扩展的组合解释
 
-先扔出一大坨定义：
-
-- 令 $V(\mathbf n)=\{(i,j):1\le i\le m,1\le j\le n_i\}$，说人话就是有 $m$ 种颜色的点，第 $i$ 种颜色的有 $n_i$ 个。
-- 记 $V_0(\mathbf n)=\{0\}\cup V(\mathbf n)$，称这个新加的 $0$ 节点的颜色为 $0$。
-
-- 记 $M_i:=(i,n_i)$。
-
-上面是点集的符号，下面定义 $\text{funcional digraph}$。
-
-- $\text{functional digraph}$ 是一种有向图，每个点有且仅有一条出边，这个图对应一个函数 $F$：边 $(a,b)$ 意味着 $F(a)=b$。
-- 记 $\mathcal F_0(\mathbf n)$ 是从 $V(\mathbf n)$ 到 $V_0(\mathbf n)$ 的 $\text{funcional digraphs}$ 构成的集合，也就是说这个函数的定义域为 $V(\mathbf n)$，到达域为 $V_0(\mathbf n)$。容易发现 $\mathcal F_0(\mathbf n)$ 中的函数是由一个包含 $0$ 的内向树和一些内向基环树构成的。
-- 而 $\mathcal A_0(\mathbf n)$ 是其中的以 $0$ 为根的内向树（又出现了）的集合。
-
-接下来定义权值。
-
-- 对于某个 $D\in\mathcal F_0(\mathbf n)$，其中的节点 $v$ 的权值 $w_D(v)$ 定义如下：令 $j_l$ 为颜色为 $l$ 的，映射到 $v$ 的节点数量，则
-
-- $$
-  w_D(v)=\begin{cases}g_{i,\mathbf j}&(v\neq 0)\\H_{\mathbf j}&(v=0)\end{cases}
-  $$
-
-- 其中 $g_{i,\mathbf j}$ 是 $g_i$ 的系数，$H_{\mathbf j}$ 亦如此。
-
-- 定义 $\Psi(D)=\prod w_D(v)$。
-
-这时我们可以立即解释 $f_i$：考虑一个各颜色的点数目无限的图，以某个颜色为 $i$ 的点为根的内向树集合的生成函数 $\hat f_i$ 满足
-$$
-\hat f_i=x_i\sum_{\mathbf j}g_{i,\mathbf j}\prod_{l=1}^m \hat f_l^{j_l}=x_ig_i(\hat {\mathbf f})
-$$
-正是我们最开始提到的方程组。
