@@ -306,6 +306,8 @@ linear-algebra
 multi-lagrange-inv
 矩阵树定理和多元拉反
 algorithm
-2
+4
 linear-algebra
 lagrange-inversion
+counting
+generating-function

@@ -376,6 +376,6 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'tag' : ['linear-algebra','lagrange-inversion',],
+		'tag' : ['linear-algebra','lagrange-inversion','counting','generating-function',],
 	};
 })(document);

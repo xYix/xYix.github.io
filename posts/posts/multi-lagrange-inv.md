@@ -269,7 +269,7 @@ $$
 $$
 \sum_{A\in\mathcal U^{(k)}}\text{sgn}(\kappa(A))\Psi(A)=0
 $$
-这其实是一个容斥。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
+这其实是一个容斥（也就是所说的 Gessel - Viennot cancellation，其实在[这篇博客](https://xyix.gitee.io/posts/?page=1&postid=39)的 LGV 引理一节时我们已经遇到了）。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
 
 - 令 $\gamma$ 是使得 $\tau_j(U)$ 中存在一个节点颜色大于 $j$ 的最大的 $j$；
 - 令 $\beta$ 是 $\tau_j(U)$ 中最大的颜色。
@@ -288,6 +288,8 @@ $$
 对 $\kappa$ 求和即得到一个行列式的形式，正是原定理。
 
 $\blacksquare$
+
+综合左式和右式的处理即得到原定理。
 
 啊，终于讲完了。让我们以一句含蓄中带着霸气的话作为结尾：
 
