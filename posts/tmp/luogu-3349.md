@@ -1,15 +1,15 @@
----
-title: luoguP3349 题解 - [ZJOI2016]小星星
----
-
-好耶，是集合幂级数。称原来的图为 $G$，希望用树 $T$ 匹配它。设集合幂级数 $[x^s]F_{i,u}$ 表示 $i$ 的子树对应 $G$ 中点集 $s$，其中 $i$ 对应 $u$ 的方案数。则有 DP
 $$
-F_{i,u}=\prod_{j\in son_i}\sum _{(u,v)}F_{j,v}
+\begin{aligned}
+F_u&=\min_{d_u-d_v\le l}F_ v+p_u(d_u-d_v)+q_u\\
+&=p_ud_u+q_u+\min_{d_u-d_v\le l}F_v-p_ud_v
+\end{aligned}
 $$
-其中乘积是子集卷积。目标是将其优化到 $O(2 ^nn^2)$。
 
-接下来进行一些精细考虑：
-
-- 得知 $F_{i,*}$ 序列后可以遍历图完成 $\sum_{(*,*)}F_{i,*}$ 的处理，并非瓶颈。
-- 中间过程不还原 FWT，此时
+$$
+\begin{aligned}
+F_{v1}\prec F_{v_2}&\Leftrightarrow F_{v1}-p_ud_{v1}<F_{v_2}-p_ud_{v2}\\
+&\Leftrightarrow F_{v1}-F_{v2}<p_u(d_{v1}-d_{v2})\\
+&\Leftrightarrow (d_{v1}<d_{v2})\operatorname{xor}\left(\dfrac{F_{v1}-F_{v2}}{d_{v1}-d_{v2}}<p_u\right)
+\end{aligned}
+$$
 
