@@ -382,7 +382,7 @@
 		'postid' : '55',
 		'post_name' : 'luogu-2305',
 		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
-		'type_name' : '2',
-		'tag' : [],
+		'type_name' : 'solution',
+		'tag' : ['d-and-c-on-tree','monotonicity-of-decision',],
 	};
 })(document);

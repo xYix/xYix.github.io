@@ -314,6 +314,7 @@ counting
 generating-function
 luogu-2305
 luoguP2305 题解 - [NOI2014]购票
+solution
 2
 d-and-c-on-tree
 monotonicity-of-decision
