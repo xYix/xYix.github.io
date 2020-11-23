@@ -355,7 +355,7 @@
 		'post_name' : 'ioi2020hw',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡',
 		'type_name' : 'solution',
-		'tag' : ['construction','counting','lmoliver',],
+		'tag' : ['construction','counting','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '52',
@@ -377,5 +377,12 @@
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
 		'tag' : ['linear-algebra','lagrange-inversion','counting','generating-function',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '55',
+		'post_name' : 'luogu-2305',
+		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
+		'type_name' : '2',
+		'tag' : [],
 	};
 })(document);

@@ -26,4 +26,5 @@
 	win.tags_list['d-and-c-on-tree'] = '树分治';
 	win.tags_list['construction'] = '构造';
 	win.tags_list['lmoliver'] = '明哥题（ad hoc）';
+	win.tags_list['monotonicity-of-decision'] = '决策单调性';
 })(document);
