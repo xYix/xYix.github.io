@@ -318,3 +318,8 @@ solution
 2
 d-and-c-on-tree
 monotonicity-of-decision
+luogu-6910
+luoguP6910 题解 - [ICPC2015 WF]Pipe Stream
+solution
+1
+lmoliver

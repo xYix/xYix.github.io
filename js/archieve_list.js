@@ -385,4 +385,11 @@
 		'type_name' : 'solution',
 		'tag' : ['d-and-c-on-tree','monotonicity-of-decision',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '56',
+		'post_name' : 'luogu-6910',
+		'post_chinese_name' : 'luoguP6910 题解 - [ICPC2015 WF]Pipe Stream',
+		'type_name' : 'solution',
+		'tag' : ['lmoliver',],
+	};
 })(document);

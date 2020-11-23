@@ -36,6 +36,6 @@ $$
 
 - 称一个态射 $f$ 是**单态射**，如果对于任意对象 $Z$ 和一对态射 $g,h:Z\rightarrow X$，有 $fg=fh\Leftrightarrow g = h$。<span style='color: #36C48B'>【左消去】</span>
 - 称一个态射 $f$ 是**满态射**，如果对于任意对象 $Z$ 和一对态射 $g,h:Z\rightarrow X$，有 $gf=hf\Leftrightarrow g = h$。<span style='color: #36C48B'>【右消去】</span>
-- 注意**既单且满**并不意味着可逆。
+- 注意**既单且满**并不意味着可逆。例如，在范畴 $\text{Top}$：所有豪斯多夫拓扑空间构成的范畴，态射定义为连续映射中，一个态射满只意味着它的像稠密。
 - 若存在 $gf=\text{id}_X$，则 $f$ **左可逆**；若存在 $fg=\text{id}_Y$，则 $f$ **右可逆**。一个态射可逆当且仅当它左右都可逆。
 
