@@ -10,8 +10,6 @@ title: 简明易懂的范畴论基础
 
 有一些颜色为 <span style="color: #36C48B">#36C48B</span> 的文字，它们是批注和讲解。
 
-前方你将会遇到**巨量**的箭头：对象之间的箭头（态射），范畴之间的箭头（函子），范畴之间箭头的“自然”箭头（自然变换）；还有**巨量**的同构和等价，对象之间的同构，范畴之间的同构和等价。
-
 # 1 基础定义
 
 一个范畴 $\mathcal C$ 指的是：
@@ -34,9 +32,10 @@ $$
 
 记 $\text{End}_{\mathcal C}(X)=\text{Hom}_{\mathcal C}(X,X)$ 是 $X$ 到自身的态射的集合，称为**自同态**，$\text{Aut}_{\mathcal C}(X)=\text{Isom}_{\mathcal C}(X,X)$ 则是**自同构**。显然它们在 $\circ$ 下封闭。
 
-称 $\mathcal C'$ 是 $\mathcal C$ 的**子范畴**，如果它的对象、态射、恒等态射、来源/目标映射、合成全是由 $\mathcal C$ 限制而来的。如果还有 $\text{Hom}_{\mathcal C'}(X,Y)=\text{Hom}_{\mathcal C}(X,Y)$，即只要两个对象都存在，它们之间的所有箭头就会原封不动地搬进 $\mathcal C'$，则 $\mathcal C'$ 是 $\mathcal C$ 的**全子范畴**。
+称 $\mathcal C'$ 是 $\mathcal C$ 的**子范畴**，如果它的对象、态射、恒等态射、来源/目标映射、合成全是由 $\mathcal C$ 限制而来的。如果还有 $\text{Hom}_{\mathcal C'}(X,Y)=\text{Hom}_{\mathcal C}(X,Y)$<span style='color: #36C48B'>【即只要两个对象都存在，它们之间的所有箭头就会原封不动地搬进 $\mathcal C'$】</span>，则 $\mathcal C'$ 是 $\mathcal C$ 的**全子范畴**。
 
-- 称一个态射 $f$ 是**单态射**，如果对于任意对象 $Z$ 和一对态射 $g,h:Z\rightarrow X$，有 $fg=fh\Leftrightarrow g = h$。（左消去律）
-
-- 称一个态射 $f$ 是**满态射**，如果对于任意对象 $Z$ 和一对态射 $g,h:Z\rightarrow X$，有 $gf=hf\Leftrightarrow g = h$。（右消去律）
+- 称一个态射 $f$ 是**单态射**，如果对于任意对象 $Z$ 和一对态射 $g,h:Z\rightarrow X$，有 $fg=fh\Leftrightarrow g = h$。<span style='color: #36C48B'>【左消去】</span>
+- 称一个态射 $f$ 是**满态射**，如果对于任意对象 $Z$ 和一对态射 $g,h:Z\rightarrow X$，有 $gf=hf\Leftrightarrow g = h$。<span style='color: #36C48B'>【右消去】</span>
+- 注意**既单且满**并不意味着可逆。
 - 若存在 $gf=\text{id}_X$，则 $f$ **左可逆**；若存在 $fg=\text{id}_Y$，则 $f$ **右可逆**。一个态射可逆当且仅当它左右都可逆。
+
