@@ -3,7 +3,7 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '1',
 		'post_name' : 'hello-world',
-		'post_chinese_name' : '测试用博文',
+		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
 		'tag' : [],
 	};
