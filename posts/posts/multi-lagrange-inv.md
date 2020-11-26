@@ -1,7 +1,3 @@
----
-title: 矩阵树定理和多元拉反
----
-
 参考资料：
 
 [1] [A Multivariate Lagrange Inversion Formula for Asymptotic Calculations](https://www.researchgate.net/publication/2313679_A_Multivariate_Lagrange_Inversion_Formula_for_Asymptotic_Calculations)
@@ -10,6 +6,12 @@ title: 矩阵树定理和多元拉反
 
 [3] [A Bijetive Proof for the Arboresent Form of the Multivariable Lagrange Inversion Formula](http://www.cecm.sfu.ca/~cchauve/Publications/MCS00.ps)
 
+[4] [Determinants, Paths, and Plane Partitions](http://people.brandeis.edu/~gessel/homepage/papers/pp.pdf)
+
+博客同步发表至 [uoj](https://x-yi-x.blog.uoj.ac/blog/6511)。
+
+其实就是把论文翻译了一遍（
+
 # 0 目录
 
 - 1 矩阵树定理的组合解释
@@ -17,8 +19,8 @@ title: 矩阵树定理和多元拉反
 - - 2.1 内向树形式
   - 2.2 多元拉反的组合解释
   - - 2.2.1 基础定义
-    - 2.2.2 函数图的概括
-    - 2.2.3 树形概括双射定理
+    - 2.2.2 函数图的子结构
+    - 2.2.3 树形子结构双射定理
     - 2.2.4 结局
   - 2.3 主子式扩展
   - 2.4 主子式扩展的组合解释
@@ -33,7 +35,7 @@ $$
 \text{Det}=\sum_p\text{sgn}(p)w(p)
 $$
 
-其中 $p$ 是任意置换，$w(p)=\prod_{i} a_{i,p_i}$。我们考虑它的循环分解
+其中 $p$ 是任意置换，$w(p)=\prod_{i} a_{i,p_i}$。我们考虑它的循环分解 $p=\cup\{q\}$，其中 $q$ 都是循环
 
 $$
 \text{Det}=\sum_{}[\cup q_i=[1..n]][\forall i,j,q_i\cap q_j =\varnothing]\prod_i\text{sgn}(q_i)w(q_i)
@@ -47,7 +49,7 @@ $$
 \text{Det}=\sum[\cup q_i=[2..n]][\forall i,j,q_i\cap q_j =\varnothing]\prod_i\begin{cases}deg_{q}&(|q|=1)\\-1&(q\ \text{is a cycle in}\ G)\end{cases}
 $$
 
-我们默认去掉的是第一行和第一列。这个东西有一个精妙的解释。
+我们默认去掉的是第一行和第一列。这个东西可以这么解释：
 
 - 首先，为每个 $2..n$ 的点随机选一个父亲，这解释了度数的出现；
 - 这时显然会有环，那么我们把环给容斥掉即可，无环的情况就是生成树。这解释了系数 $-1$。
@@ -60,7 +62,7 @@ $$
 
 下面把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf m$。原谅 x义x 对它的滥用，因为滥用实在是太香了。
 
-现有一列形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
+现有一列 $m$ 个 $m$ 元形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
 $$
 f_i=x_ig_i(\mathbf f)
 $$
@@ -68,8 +70,10 @@ $$
 那么我们有
 > **多元拉格朗日反演**.
 > $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
 > $$
+
+其中：$\mathbf t^{\mathbf n}$ 表示 $(t_1^{n_1},t_2^{n_2},...)$，其余类似；行列式中的关于 $i,j$ 的式子表示矩阵在第 $i$ 行第 $j$ 列的值。
 
 我们暴力展开行列式。中间过程不表，类似之前对矩阵树定理的证明，只有一个观察是 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。这得到一个有趣的新形式
 
@@ -124,9 +128,9 @@ $$
 > h(\mathbf f(\mathbf t))\ 是\ \mathcal A_0\ 的权值和的指数生成函数。
 > $$
 
-### 2.2.2 函数图的概括
+### 2.2.2 函数图的子结构
 
-接下来我们定义两种对函数图的**概括**（原文为 substructure 子结构，原谅我擅自如此翻译）。
+接下来我们定义两种函数图的**子结构**。
 
 - 对于某个 $T\in \mathcal A_0(\mathbf n)$，它的**路图** $P(T)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图，它如此构造：首先令已经处理的颜色序列为 $\sigma$。
 
@@ -168,9 +172,9 @@ $$
 
 现在我们终于可以给出下面这个定理。
 
-### 2.2.3 树形概括双射定理
+### 2.2.3 树形子结构双射定理
 
-> **定理 1.（树形概括双射）**
+> **定理 1.（树形子结构双射）**
 > $$
 > \sum_{A\in\mathcal A_0(\mathbf n),P(A)=T}\Psi(A)=\sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)
 > $$
@@ -216,6 +220,8 @@ $$
 
 $\blacksquare$
 
+然后对每一个内向树 $T$ 求和即得到原定理（注意引理 2.2）。
+
 还有一个奇妙的扩展。
 
 ## 2.3 主子式扩展
@@ -223,7 +229,7 @@ $\blacksquare$
 > **多元拉格朗日反演：主子式扩展.**
 > $$
 > \boxed{\left[\dfrac{\mathbf t^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf f(\mathbf t))\det\left(t_j\dfrac{\partial f_i}{\partial t_j}\right)_\alpha=\\
-> \qquad \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\prod_{k\in\alpha}x_k\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{\overline\alpha}}
+> \qquad \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\prod_{k\in\alpha}x_k\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{\overline\alpha}}
 > $$
 > 其中 $\det \alpha$ 表示仅留下原矩阵的 $\alpha$ 中的行列的子矩阵（主子式）的行列式。$\overline \alpha$ 表示 $\alpha$ 的补。
 
@@ -243,7 +249,7 @@ $$
 >  **定理 2.** 
 > $$
 > \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
-> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left(I-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
+> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
 > $$
 
 **证明.** 只需要对引理 3 运用矩阵树定理即可。还有别忘了 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。
@@ -252,7 +258,7 @@ $\blacksquare$
 
 ### 2.4.2 左式的处理
 
-接下来，我们介绍 **Gessel - Viennot cancellation**。先对 $A\in\mathcal A_{0}(\mathbf n)$ 引入下面的记号。
+接下来，我们介绍 **Gessel - Viennot cancellation**（可以参见参考资料 [4]，但不必要）。先对 $A\in\mathcal A_{0}(\mathbf n)$ 引入下面的记号。
 
 - 对于 $j\in[1...m]$，找出 $M_j$ 到 $0$ 的路径，记 $0$ 之前的最后一个点为 $N_j$。记 $M_j$ 到 $N_j$ 的路径为 $\tau_j$。
 - 令 $L_i(\tau_j)$ 是 $\tau_j$ 中离 $N_j$ 最近的，颜色为 $i$ 的节点。显然，它可能没有定义。
@@ -286,7 +292,7 @@ $$
 \sum_{A\in\mathcal U^{(k)}}\text{sgn}(\kappa(A))\Psi(A)=0
 $$
 
-这其实是一个容斥（也就是所说的 Gessel - Viennot cancellation，其实在 [这篇博客](https://xyix.gitee.io/posts/?page=1&postid=39) 的 LGV 引理一节时我们已经遇到了）。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
+这其实是一个容斥（也就是所说的 Gessel - Viennot cancellation）。考虑这样一个定义在 $\mathcal U^{(k)}$ 上的映射 $\phi(U)$。
 
 - 令 $\gamma$ 是使得 $\tau_j(U)$ 中存在一个节点颜色大于 $j$ 的最大的 $j$；
 - 令 $\beta$ 是 $\tau_j(U)$ 中最大的颜色。
@@ -299,7 +305,7 @@ $$
 \sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\sum_{A\in\mathcal G^{(k)}}\text{sgn}(\kappa(A))\Psi(A)
 $$
 
-现在考虑对 $\kappa$，$A\in\mathcal G^{(k)},\kappa(A)=\kappa$ 的带符号权值和。容易考虑出它是
+现在考虑对 $\kappa$，$A\in\mathcal G^{(k)},\kappa(A)=\kappa$ 的带符号权值和。容易得到它是
 $$
 \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\text{sgn}(\kappa)\cdot\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot \left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial f_i}\right)H(\mathbf f)\right\}\cdot\prod_{i=k+1}^m\dfrac{\partial f_{\kappa_j}}{\partial x_j}
 $$
