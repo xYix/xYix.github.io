@@ -323,3 +323,9 @@ luoguP6910 题解 - [ICPC2015 WF]Pipe Stream
 solution
 1
 lmoliver
+uoj-91
+uoj91 题解 - 【集训队互测2015】最大异或和
+solution
+2
+linear-algebra
+nimber

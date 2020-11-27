@@ -392,4 +392,11 @@
 		'type_name' : 'solution',
 		'tag' : ['lmoliver',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '57',
+		'post_name' : 'uoj-91',
+		'post_chinese_name' : 'uoj91 题解 - 【集训队互测2015】最大异或和',
+		'type_name' : 'solution',
+		'tag' : ['linear-algebra','nimber',],
+	};
 })(document);
