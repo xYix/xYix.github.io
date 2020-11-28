@@ -27,4 +27,5 @@
 	win.tags_list['construction'] = '构造';
 	win.tags_list['lmoliver'] = '明哥题（ad hoc）';
 	win.tags_list['monotonicity-of-decision'] = '决策单调性';
+	win.tags_list['randomization'] = '随机化';
 })(document);

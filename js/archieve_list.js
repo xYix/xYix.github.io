@@ -399,4 +399,11 @@
 		'type_name' : 'solution',
 		'tag' : ['linear-algebra','nimber',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '58',
+		'post_name' : 'uoj-207',
+		'post_chinese_name' : 'uoj207 题解 - 共价大爷游长沙',
+		'type_name' : 'solution',
+		'tag' : ['d-and-c-on-tree','randomization',],
+	};
 })(document);
