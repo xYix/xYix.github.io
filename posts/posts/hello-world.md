@@ -36,6 +36,6 @@ x义x 的朋友们：
 
 [孔姥爷的病历](https://www.cnblogs.com/Flying2018/)
 
-[毛蔷忆的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
+[毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，或杜王町一中校草的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
 
 [周指导的博客](https://www.cnblogs.com/zhouzhendong/)

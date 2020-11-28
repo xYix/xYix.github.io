@@ -406,4 +406,11 @@
 		'type_name' : 'solution',
 		'tag' : ['d-and-c-on-tree','randomization',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '59',
+		'post_name' : 'luogu-3295',
+		'post_chinese_name' : 'luoguP3295 题解 - [SCOI2016]萌萌哒',
+		'type_name' : 'solution',
+		'tag' : [],
+	};
 })(document);
