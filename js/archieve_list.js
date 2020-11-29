@@ -395,14 +395,14 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '57',
 		'post_name' : 'uoj-91',
-		'post_chinese_name' : 'uoj91 题解 - 【集训队互测2015】最大异或和',
+		'post_chinese_name' : 'uoj#91 题解 - 【集训队互测2015】最大异或和',
 		'type_name' : 'solution',
 		'tag' : ['linear-algebra','nimber',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '58',
 		'post_name' : 'uoj-207',
-		'post_chinese_name' : 'uoj207 题解 - 共价大爷游长沙',
+		'post_chinese_name' : 'uoj#207 题解 - 共价大爷游长沙',
 		'type_name' : 'solution',
 		'tag' : ['d-and-c-on-tree','randomization',],
 	};
@@ -412,5 +412,12 @@
 		'post_chinese_name' : 'luoguP3295 题解 - [SCOI2016]萌萌哒',
 		'type_name' : 'solution',
 		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '60',
+		'post_name' : 'uoj-424',
+		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
+		'type_name' : 'solution',
+		'tag' : ['counting',],
 	};
 })(document);

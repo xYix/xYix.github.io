@@ -324,13 +324,13 @@ solution
 1
 lmoliver
 uoj-91
-uoj91 题解 - 【集训队互测2015】最大异或和
+uoj#91 题解 - 【集训队互测2015】最大异或和
 solution
 2
 linear-algebra
 nimber
 uoj-207
-uoj207 题解 - 共价大爷游长沙
+uoj#207 题解 - 共价大爷游长沙
 solution
 2
 d-and-c-on-tree
@@ -339,3 +339,8 @@ luogu-3295
 luoguP3295 题解 - [SCOI2016]萌萌哒
 solution
 0
+uoj-424
+uoj#424 题解 - 【集训队作业2018】count
+solution
+1
+counting
