@@ -25,6 +25,9 @@ a{
 a:hover{
     text-decoration: underline;
 }
+th{
+    height: 42px;
+}
 .content-block{
     padding: 0;
     margin: 20px 20px;
