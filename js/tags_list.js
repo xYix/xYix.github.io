@@ -1,12 +1,12 @@
 (function(win){
 	win.tags_list={};
-	win.tags_list['counting'] = '计数';
+	win.tags_list['counting'] = '计数（弃用）';
 	win.tags_list['generating-function'] = '生成函数';
 	win.tags_list['lagrange-inversion'] = '拉格朗日反演';
 	win.tags_list['polynomial'] = '多项式';
 	win.tags_list['number-theory'] = '数论';
 	win.tags_list['min25-sieve'] = 'min25筛';
-	win.tags_list['probability-expectation'] = '概率期望';
+	win.tags_list['probability-expectation'] = '概率期望（弃用）';
 	win.tags_list['calculating-geometry'] = '计算几何';
 	win.tags_list['lagrange-interpolation'] = '拉格朗日插值';
 	win.tags_list['linear-algebra'] = '线性代数';

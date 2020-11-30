@@ -352,3 +352,7 @@ luoguP3565 题解 - [POI2014]HOT-Hotels
 solution
 1
 d-and-c-on-tree
+uoj-96
+uoj#96 题解 - 【集训队互测2015】胡策的小树
+solution
+0

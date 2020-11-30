@@ -427,4 +427,11 @@
 		'type_name' : 'solution',
 		'tag' : ['d-and-c-on-tree',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '62',
+		'post_name' : 'uoj-96',
+		'post_chinese_name' : 'uoj#96 题解 - 【集训队互测2015】胡策的小树',
+		'type_name' : 'solution',
+		'tag' : [],
+	};
 })(document);

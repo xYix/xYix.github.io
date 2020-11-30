@@ -1,5 +1,5 @@
 counting
-计数
+计数（弃用）
 generating-function
 生成函数
 lagrange-inversion
@@ -11,7 +11,7 @@ number-theory
 min25-sieve
 min25筛
 probability-expectation
-概率期望
+概率期望（弃用）
 calculating-geometry
 计算几何
 lagrange-interpolation
