@@ -420,4 +420,11 @@
 		'type_name' : 'solution',
 		'tag' : ['counting',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '61',
+		'post_name' : 'luogu-3565',
+		'post_chinese_name' : 'luoguP3565 题解 - [POI2014]HOT-Hotels',
+		'type_name' : 'solution',
+		'tag' : ['d-and-c-on-tree',],
+	};
 })(document);
