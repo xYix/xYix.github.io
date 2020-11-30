@@ -506,6 +506,19 @@
             TagsRow.appendChild(TagsRow2);
             TagsTable.appendChild(TagsRow);
         }
+        if(postinfo.tag.length === 0) {
+            let TagsRow = win.createElement('tr');
+                let TagsRow1 = win.createElement('th');
+                let TagsRow1p = win.createElement('p');
+                TagsRow1p.textContent = '这篇文章没有任何 tag';
+                TagsRow1.appendChild(TagsRow1p);
+            TagsRow.appendChild(TagsRow1);
+                let TagsRow2 = win.createElement('th');
+                let TagsRow2p = win.createElement('p');
+                TagsRow2p.textContent = 'N/A';
+                TagsRow2.appendChild(TagsRow2p);
+            TagsRow.appendChild(TagsRow2);
+        }
         TagsBlock.appendChild(TagsTable);
         data.appendChild(TagsBlock);
     }
