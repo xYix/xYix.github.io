@@ -339,9 +339,9 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '49',
 		'post_name' : 'd-and-c',
-		'post_chinese_name' : '分治学习笔记',
+		'post_chinese_name' : '分治概说',
 		'type_name' : 'algorithm',
-		'tag' : ['d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '50',
@@ -383,7 +383,7 @@
 		'post_name' : 'luogu-2305',
 		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
 		'type_name' : 'solution',
-		'tag' : ['d-and-c-on-tree','monotonicity-of-decision',],
+		'tag' : ['d-and-c-on-tree','monotonicity-of-decision','calculating-geometry',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '56',
@@ -418,7 +418,7 @@
 		'post_name' : 'uoj-424',
 		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
 		'type_name' : 'solution',
-		'tag' : ['counting',],
+		'tag' : ['counting','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '61',

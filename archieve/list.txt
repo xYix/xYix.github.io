@@ -278,10 +278,11 @@ algorithm
 counting
 generating-function
 d-and-c
-分治学习笔记
+分治概说
 algorithm
-1
+2
 d-and-c-on-tree
+offline
 how-to-solve-sone1
 论如何通过 sone1
 solution
@@ -315,9 +316,10 @@ generating-function
 luogu-2305
 luoguP2305 题解 - [NOI2014]购票
 solution
-2
+3
 d-and-c-on-tree
 monotonicity-of-decision
+calculating-geometry
 luogu-6910
 luoguP6910 题解 - [ICPC2015 WF]Pipe Stream
 solution
@@ -342,8 +344,9 @@ solution
 uoj-424
 uoj#424 题解 - 【集训队作业2018】count
 solution
-1
+2
 counting
+construction
 luogu-3565
 luoguP3565 题解 - [POI2014]HOT-Hotels
 solution
