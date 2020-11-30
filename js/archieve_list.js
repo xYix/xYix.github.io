@@ -12,35 +12,35 @@
 		'post_name' : 'alkane-counting',
 		'post_chinese_name' : '烷烃计数',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function',],
+		'tag' : ['generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '3',
 		'post_name' : 'cactus-counting',
 		'post_chinese_name' : '有标号仙人掌计数',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function',],
+		'tag' : ['generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '4',
 		'post_name' : 'biconnected-graph-counting',
 		'post_chinese_name' : '边/点双连通图计数',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function','lagrange-inversion',],
+		'tag' : ['generating-function','lagrange-inversion',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '5',
 		'post_name' : 'loj-6275',
 		'post_chinese_name' : 'loj#6275 题解 - 棋盘',
 		'type_name' : 'solution',
-		'tag' : ['counting','generating-function','polynomial',],
+		'tag' : ['generating-function','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '6',
 		'post_name' : 'uoj-420',
 		'post_chinese_name' : 'uoj#420 题解 - 【集训队作业2018】矩形',
 		'type_name' : 'solution',
-		'tag' : ['counting',],
+		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '7',
@@ -103,7 +103,7 @@
 		'post_name' : 'agc-038-e',
 		'post_chinese_name' : 'AGC038E 题解 - Gachapon',
 		'type_name' : 'solution',
-		'tag' : ['counting','generating-function','probability-expectation',],
+		'tag' : ['generating-function','probability-expectation',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '16',
@@ -117,7 +117,7 @@
 		'post_name' : 'sx2020',
 		'post_chinese_name' : '省选 2020 补题记录',
 		'type_name' : 'solution',
-		'tag' : ['string','lyndon-tech','counting','generating-function','probability-expectation','lagrange-inversion','linear-algebra','linear-programming',],
+		'tag' : ['string','lyndon-tech','generating-function','probability-expectation','lagrange-inversion','linear-algebra','linear-programming',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '18',
@@ -131,7 +131,7 @@
 		'post_name' : 'bzoj-3684',
 		'post_chinese_name' : 'BZOJ3684 题解 - 大朋友和多叉树',
 		'type_name' : 'solution',
-		'tag' : ['counting','generating-function','lagrange-inversion',],
+		'tag' : ['generating-function','lagrange-inversion',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '20',
@@ -145,7 +145,7 @@
 		'post_name' : 'luogu-4500',
 		'post_chinese_name' : 'luoguP4500 题解 - [ZJOI2018]树',
 		'type_name' : 'solution',
-		'tag' : ['counting','group-counting','generating-function','probability-expectation',],
+		'tag' : ['group-counting','generating-function','probability-expectation',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '22',
@@ -215,14 +215,14 @@
 		'post_name' : 'euler-trans-in-group-theory',
 		'post_chinese_name' : '群论视角下的欧拉变换',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function','group-counting',],
+		'tag' : ['generating-function','group-counting',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '32',
 		'post_name' : 'loj-6077',
 		'post_chinese_name' : 'loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对',
 		'type_name' : 'solution',
-		'tag' : ['counting',],
+		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '33',
@@ -243,7 +243,7 @@
 		'post_name' : 'set-power-series',
 		'post_chinese_name' : '集合幂级数学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function','set-power-series',],
+		'tag' : ['generating-function','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '36',
@@ -313,7 +313,7 @@
 		'post_name' : 'combinatorics',
 		'post_chinese_name' : '组合结构符号化学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function','group-counting',],
+		'tag' : ['generating-function','group-counting',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '46',
@@ -327,14 +327,14 @@
 		'post_name' : 'loj-6703',
 		'post_chinese_name' : 'loj#6703 题解 - 小 Q 的序列',
 		'type_name' : 'solution',
-		'tag' : ['counting','generating-function','lagrange-interpolation',],
+		'tag' : ['generating-function','lagrange-interpolation',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '48',
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '容斥符号化 - 更炫酷的反演魔术',
 		'type_name' : 'algorithm',
-		'tag' : ['counting','generating-function',],
+		'tag' : ['generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '49',
@@ -355,7 +355,7 @@
 		'post_name' : 'ioi2020hw',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡',
 		'type_name' : 'solution',
-		'tag' : ['construction','counting','lmoliver','pigeon',],
+		'tag' : ['construction','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '52',
@@ -376,7 +376,7 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'tag' : ['linear-algebra','lagrange-inversion','counting','generating-function',],
+		'tag' : ['linear-algebra','lagrange-inversion','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '55',
@@ -418,7 +418,7 @@
 		'post_name' : 'uoj-424',
 		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
 		'type_name' : 'solution',
-		'tag' : ['counting','construction',],
+		'tag' : ['construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '61',

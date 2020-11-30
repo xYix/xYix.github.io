@@ -54,3 +54,5 @@ monotonicity-of-decision
 决策单调性
 randomization
 随机化
+interact
+交互
