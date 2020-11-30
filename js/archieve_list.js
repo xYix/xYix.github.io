@@ -306,7 +306,7 @@
 		'post_name' : 'luogu-4565',
 		'post_chinese_name' : 'luoguP4565 题解 - [CTSC2018]暴力写挂',
 		'type_name' : 'solution',
-		'tag' : ['d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','data-structure',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '45',
@@ -341,7 +341,7 @@
 		'post_name' : 'd-and-c',
 		'post_chinese_name' : '分治概说',
 		'type_name' : 'algorithm',
-		'tag' : ['d-and-c-on-tree','offline',],
+		'tag' : ['data-structure','d-and-c-on-tree','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '50',
@@ -383,7 +383,7 @@
 		'post_name' : 'luogu-2305',
 		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
 		'type_name' : 'solution',
-		'tag' : ['d-and-c-on-tree','monotonicity-of-decision','calculating-geometry',],
+		'tag' : ['data-structure','d-and-c-on-tree','monotonicity-of-decision','calculating-geometry',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '56',
@@ -404,14 +404,14 @@
 		'post_name' : 'uoj-207',
 		'post_chinese_name' : 'uoj#207 题解 - 共价大爷游长沙',
 		'type_name' : 'solution',
-		'tag' : ['d-and-c-on-tree','randomization',],
+		'tag' : ['data-structure','d-and-c-on-tree','randomization',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '59',
 		'post_name' : 'luogu-3295',
 		'post_chinese_name' : 'luoguP3295 题解 - [SCOI2016]萌萌哒',
 		'type_name' : 'solution',
-		'tag' : [],
+		'tag' : ['data-structure',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '60',
@@ -433,5 +433,12 @@
 		'post_chinese_name' : 'uoj#96 题解 - 【集训队互测2015】胡策的小树',
 		'type_name' : 'solution',
 		'tag' : ['combinatorics',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '63',
+		'post_name' : 'uoj-191',
+		'post_chinese_name' : 'uoj#191 题解 - 【集训队互测2016】Unknown',
+		'type_name' : 'solution',
+		'tag' : ['data-structure','d-and-c-on-tree',],
 	};
 })(document);

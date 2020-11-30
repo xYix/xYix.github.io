@@ -29,4 +29,5 @@
 	win.tags_list['randomization'] = '随机化';
 	win.tags_list['interact'] = '交互';
 	win.tags_list['exc-inc'] = '容斥';
+	win.tags_list['data-structure'] = '数据结构';
 })(document);

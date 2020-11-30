@@ -251,8 +251,9 @@ game-theory
 luogu-4565
 luoguP4565 题解 - [CTSC2018]暴力写挂
 solution
-1
+2
 d-and-c-on-tree
+data-structure
 combinatorics
 组合结构符号化学习笔记
 algorithm
@@ -283,7 +284,8 @@ generating-function
 d-and-c
 分治概说
 algorithm
-2
+3
+data-structure
 d-and-c-on-tree
 offline
 how-to-solve-sone1
@@ -321,7 +323,8 @@ generating-function
 luogu-2305
 luoguP2305 题解 - [NOI2014]购票
 solution
-3
+4
+data-structure
 d-and-c-on-tree
 monotonicity-of-decision
 calculating-geometry
@@ -339,13 +342,15 @@ nimber
 uoj-207
 uoj#207 题解 - 共价大爷游长沙
 solution
-2
+3
+data-structure
 d-and-c-on-tree
 randomization
 luogu-3295
 luoguP3295 题解 - [SCOI2016]萌萌哒
 solution
-0
+1
+data-structure
 uoj-424
 uoj#424 题解 - 【集训队作业2018】count
 solution
@@ -363,3 +368,9 @@ uoj#96 题解 - 【集训队互测2015】胡策的小树
 solution
 1
 combinatorics
+uoj-191
+uoj#191 题解 - 【集训队互测2016】Unknown
+solution
+2
+data-structure
+d-and-c-on-tree
