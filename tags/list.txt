@@ -1,5 +1,5 @@
-counting
-计数（弃用）
+combinatorics
+组合数学
 generating-function
 生成函数
 lagrange-inversion
@@ -10,8 +10,6 @@ number-theory
 数论
 min25-sieve
 min25筛
-probability-expectation
-概率期望（弃用）
 calculating-geometry
 计算几何
 lagrange-interpolation
@@ -56,3 +54,5 @@ randomization
 随机化
 interact
 交互
+exc-inc
+容斥

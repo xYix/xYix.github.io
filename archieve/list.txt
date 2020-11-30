@@ -5,29 +5,34 @@ none
 alkane-counting
 烷烃计数
 algorithm
-1
+2
+combinatorics
 generating-function
 cactus-counting
 有标号仙人掌计数
 algorithm
-1
+2
+combinatorics
 generating-function
 biconnected-graph-counting
 边/点双连通图计数
 algorithm
-2
+3
+combinatorics
 generating-function
 lagrange-inversion
 loj-6275
 loj#6275 题解 - 棋盘
 solution
-2
+3
+combinatorics
 generating-function
 polynomial
 uoj-420
 uoj#420 题解 - 【集训队作业2018】矩形
 solution
-0
+1
+combinatorics
 51nod-1222
 51nod1222 题解 - 最小公倍数计数
 solution
@@ -36,12 +41,14 @@ number-theory
 about-FFT
 关于 FFT
 algorithm
-1
+2
+combinatorics
 polynomial
 euler-maclaurin-formula
 欧拉-麦克劳林级数的推导
 algorithm
-1
+2
+combinatorics
 generating-function
 fast-factorial-calculating
 快速阶乘算法
@@ -58,14 +65,14 @@ number-theory
 min25-powerfulnum
 Min25 筛和 Powerful Number 筛
 algorithm
-2
+3
+exc-inc
 number-theory
 min25-sieve
 probability-expectation
 概率和期望
 algorithm
-1
-probability-expectation
+0
 SPOJ-26073
 SPOJ26073 题解 - DIVCNT1
 solution
@@ -76,8 +83,8 @@ agc-038-e
 AGC038E 题解 - Gachapon
 solution
 2
+combinatorics
 generating-function
-probability-expectation
 linear-algebra
 线性代数学习笔记
 algorithm
@@ -87,18 +94,17 @@ sx2020
 省选 2020 补题记录
 solution
 7
+combinatorics
 string
 lyndon-tech
 generating-function
-probability-expectation
 lagrange-inversion
 linear-algebra
 linear-programming
 uoj-372
 uoj#372 题解 - 【UR#17】滑稽树前做游戏
 solution
-1
-probability-expectation
+0
 bzoj-3684
 BZOJ3684 题解 - 大朋友和多叉树
 solution
@@ -108,20 +114,21 @@ lagrange-inversion
 loj-6054
 loj#6055 题解 - 「from CommonAnts」一道数学题
 solution
-1
+2
+combinatorics
 lagrange-interpolation
 luogu-4500
 luoguP4500 题解 - [ZJOI2018]树
 solution
-3
+4
+exc-inc
+combinatorics
 group-counting
 generating-function
-probability-expectation
 luogu-5155
 luoguP5155 题解 - [USACO18DEC]Balance Beam P
 solution
-2
-probability-expectation
+1
 calculating-geometry
 simplex-alg
 单纯形法学习笔记
@@ -146,13 +153,12 @@ game-theory
 agc-032-f
 AGC032F 题解 - One Third
 solution
-1
-probability-expectation
+0
 agc-034-f
 AGC034F 题解 - RNG and XOR
 solution
 2
-probability-expectation
+combinatorics
 set-power-series
 cf-1286-f
 CF1286F 题解 - Harry the Potter
@@ -167,13 +173,15 @@ set-DP
 euler-trans-in-group-theory
 群论视角下的欧拉变换
 algorithm
-2
+3
+combinatorics
 generating-function
 group-counting
 loj-6077
 loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对
 solution
-0
+1
+combinatorics
 luogu-5050
 多点求值的新做法
 solution
@@ -187,7 +195,8 @@ polynomial
 set-power-series
 集合幂级数学习笔记
 algorithm
-2
+3
+combinatorics
 generating-function
 set-power-series
 sx2019
@@ -198,17 +207,21 @@ pigeon
 uoj-272
 uoj#272 题解 - 【清华集训2016】石家庄的工人阶级队伍比较坚强
 solution
-1
+2
+combinatorics
 set-power-series
 uoj-310
 uoj#310 题解 - 【UNR#2】黎明前的巧克力
 solution
-1
+2
+combinatorics
 set-power-series
 young-tableau
 杨表学习笔记
 algorithm
-1
+3
+exc-inc
+combinatorics
 young-tableau
 isotonic-regression
 保序回归学习笔记
@@ -243,24 +256,29 @@ d-and-c-on-tree
 combinatorics
 组合结构符号化学习笔记
 algorithm
-2
+3
+combinatorics
 generating-function
 group-counting
 luogu-6667
 luoguP6667 题解 - [清华集训2016] 如何优雅地求和
 solution
-1
+2
+combinatorics
 generating-function
 loj-6703
 loj#6703 题解 - 小 Q 的序列
 solution
-2
+3
+combinatorics
 generating-function
 lagrange-interpolation
 exc-inc
 容斥符号化 - 更炫酷的反演魔术
 algorithm
-1
+3
+exc-inc
+combinatorics
 generating-function
 d-and-c
 分治概说
@@ -276,7 +294,9 @@ d-and-c-on-tree
 ioi2020hw
 IOI2020 集训队作业 AT 部分口胡
 solution
-3
+5
+exc-inc
+combinatorics
 construction
 lmoliver
 pigeon
@@ -292,7 +312,9 @@ linear-algebra
 multi-lagrange-inv
 矩阵树定理和多元拉反
 algorithm
-3
+5
+exc-inc
+combinatorics
 linear-algebra
 lagrange-inversion
 generating-function
@@ -327,7 +349,9 @@ solution
 uoj-424
 uoj#424 题解 - 【集训队作业2018】count
 solution
-1
+3
+exc-inc
+combinatorics
 construction
 luogu-3565
 luoguP3565 题解 - [POI2014]HOT-Hotels
@@ -337,4 +361,5 @@ d-and-c-on-tree
 uoj-96
 uoj#96 题解 - 【集训队互测2015】胡策的小树
 solution
-0
+1
+combinatorics

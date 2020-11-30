@@ -12,35 +12,35 @@
 		'post_name' : 'alkane-counting',
 		'post_chinese_name' : '烷烃计数',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function',],
+		'tag' : ['combinatorics','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '3',
 		'post_name' : 'cactus-counting',
 		'post_chinese_name' : '有标号仙人掌计数',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function',],
+		'tag' : ['combinatorics','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '4',
 		'post_name' : 'biconnected-graph-counting',
 		'post_chinese_name' : '边/点双连通图计数',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function','lagrange-inversion',],
+		'tag' : ['combinatorics','generating-function','lagrange-inversion',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '5',
 		'post_name' : 'loj-6275',
 		'post_chinese_name' : 'loj#6275 题解 - 棋盘',
 		'type_name' : 'solution',
-		'tag' : ['generating-function','polynomial',],
+		'tag' : ['combinatorics','generating-function','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '6',
 		'post_name' : 'uoj-420',
 		'post_chinese_name' : 'uoj#420 题解 - 【集训队作业2018】矩形',
 		'type_name' : 'solution',
-		'tag' : [],
+		'tag' : ['combinatorics',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '7',
@@ -54,14 +54,14 @@
 		'post_name' : 'about-FFT',
 		'post_chinese_name' : '关于 FFT',
 		'type_name' : 'algorithm',
-		'tag' : ['polynomial',],
+		'tag' : ['combinatorics','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '9',
 		'post_name' : 'euler-maclaurin-formula',
 		'post_chinese_name' : '欧拉-麦克劳林级数的推导',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function',],
+		'tag' : ['combinatorics','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '10',
@@ -82,14 +82,14 @@
 		'post_name' : 'min25-powerfulnum',
 		'post_chinese_name' : 'Min25 筛和 Powerful Number 筛',
 		'type_name' : 'algorithm',
-		'tag' : ['number-theory','min25-sieve',],
+		'tag' : ['exc-inc','number-theory','min25-sieve',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '13',
 		'post_name' : 'probability-expectation',
 		'post_chinese_name' : '概率和期望',
 		'type_name' : 'algorithm',
-		'tag' : ['probability-expectation',],
+		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '14',
@@ -103,7 +103,7 @@
 		'post_name' : 'agc-038-e',
 		'post_chinese_name' : 'AGC038E 题解 - Gachapon',
 		'type_name' : 'solution',
-		'tag' : ['generating-function','probability-expectation',],
+		'tag' : ['combinatorics','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '16',
@@ -117,14 +117,14 @@
 		'post_name' : 'sx2020',
 		'post_chinese_name' : '省选 2020 补题记录',
 		'type_name' : 'solution',
-		'tag' : ['string','lyndon-tech','generating-function','probability-expectation','lagrange-inversion','linear-algebra','linear-programming',],
+		'tag' : ['combinatorics','string','lyndon-tech','generating-function','lagrange-inversion','linear-algebra','linear-programming',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '18',
 		'post_name' : 'uoj-372',
 		'post_chinese_name' : 'uoj#372 题解 - 【UR#17】滑稽树前做游戏',
 		'type_name' : 'solution',
-		'tag' : ['probability-expectation',],
+		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '19',
@@ -138,21 +138,21 @@
 		'post_name' : 'loj-6054',
 		'post_chinese_name' : 'loj#6055 题解 - 「from CommonAnts」一道数学题',
 		'type_name' : 'solution',
-		'tag' : ['lagrange-interpolation',],
+		'tag' : ['combinatorics','lagrange-interpolation',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '21',
 		'post_name' : 'luogu-4500',
 		'post_chinese_name' : 'luoguP4500 题解 - [ZJOI2018]树',
 		'type_name' : 'solution',
-		'tag' : ['group-counting','generating-function','probability-expectation',],
+		'tag' : ['exc-inc','combinatorics','group-counting','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '22',
 		'post_name' : 'luogu-5155',
 		'post_chinese_name' : 'luoguP5155 题解 - [USACO18DEC]Balance Beam P',
 		'type_name' : 'solution',
-		'tag' : ['probability-expectation','calculating-geometry',],
+		'tag' : ['calculating-geometry',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '23',
@@ -187,14 +187,14 @@
 		'post_name' : 'agc-032-f',
 		'post_chinese_name' : 'AGC032F 题解 - One Third',
 		'type_name' : 'solution',
-		'tag' : ['probability-expectation',],
+		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '28',
 		'post_name' : 'agc-034-f',
 		'post_chinese_name' : 'AGC034F 题解 - RNG and XOR',
 		'type_name' : 'solution',
-		'tag' : ['probability-expectation','set-power-series',],
+		'tag' : ['combinatorics','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '29',
@@ -215,14 +215,14 @@
 		'post_name' : 'euler-trans-in-group-theory',
 		'post_chinese_name' : '群论视角下的欧拉变换',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function','group-counting',],
+		'tag' : ['combinatorics','generating-function','group-counting',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '32',
 		'post_name' : 'loj-6077',
 		'post_chinese_name' : 'loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对',
 		'type_name' : 'solution',
-		'tag' : [],
+		'tag' : ['combinatorics',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '33',
@@ -243,7 +243,7 @@
 		'post_name' : 'set-power-series',
 		'post_chinese_name' : '集合幂级数学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function','set-power-series',],
+		'tag' : ['combinatorics','generating-function','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '36',
@@ -257,21 +257,21 @@
 		'post_name' : 'uoj-272',
 		'post_chinese_name' : 'uoj#272 题解 - 【清华集训2016】石家庄的工人阶级队伍比较坚强',
 		'type_name' : 'solution',
-		'tag' : ['set-power-series',],
+		'tag' : ['combinatorics','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '38',
 		'post_name' : 'uoj-310',
 		'post_chinese_name' : 'uoj#310 题解 - 【UNR#2】黎明前的巧克力',
 		'type_name' : 'solution',
-		'tag' : ['set-power-series',],
+		'tag' : ['combinatorics','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '39',
 		'post_name' : 'young-tableau',
 		'post_chinese_name' : '杨表学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['young-tableau',],
+		'tag' : ['exc-inc','combinatorics','young-tableau',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '40',
@@ -313,28 +313,28 @@
 		'post_name' : 'combinatorics',
 		'post_chinese_name' : '组合结构符号化学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function','group-counting',],
+		'tag' : ['combinatorics','generating-function','group-counting',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '46',
 		'post_name' : 'luogu-6667',
 		'post_chinese_name' : 'luoguP6667 题解 - [清华集训2016] 如何优雅地求和',
 		'type_name' : 'solution',
-		'tag' : ['generating-function',],
+		'tag' : ['combinatorics','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '47',
 		'post_name' : 'loj-6703',
 		'post_chinese_name' : 'loj#6703 题解 - 小 Q 的序列',
 		'type_name' : 'solution',
-		'tag' : ['generating-function','lagrange-interpolation',],
+		'tag' : ['combinatorics','generating-function','lagrange-interpolation',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '48',
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '容斥符号化 - 更炫酷的反演魔术',
 		'type_name' : 'algorithm',
-		'tag' : ['generating-function',],
+		'tag' : ['exc-inc','combinatorics','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '49',
@@ -355,7 +355,7 @@
 		'post_name' : 'ioi2020hw',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡',
 		'type_name' : 'solution',
-		'tag' : ['construction','lmoliver','pigeon',],
+		'tag' : ['exc-inc','combinatorics','construction','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '52',
@@ -376,7 +376,7 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'tag' : ['linear-algebra','lagrange-inversion','generating-function',],
+		'tag' : ['exc-inc','combinatorics','linear-algebra','lagrange-inversion','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '55',
@@ -418,7 +418,7 @@
 		'post_name' : 'uoj-424',
 		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
 		'type_name' : 'solution',
-		'tag' : ['construction',],
+		'tag' : ['exc-inc','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '61',
@@ -432,6 +432,6 @@
 		'post_name' : 'uoj-96',
 		'post_chinese_name' : 'uoj#96 题解 - 【集训队互测2015】胡策的小树',
 		'type_name' : 'solution',
-		'tag' : [],
+		'tag' : ['combinatorics',],
 	};
 })(document);
