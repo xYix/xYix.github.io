@@ -518,6 +518,7 @@
                 TagsRow2p.textContent = 'N/A';
                 TagsRow2.appendChild(TagsRow2p);
             TagsRow.appendChild(TagsRow2);
+            TagsTable.appendChild(TagsRow);
         }
         TagsBlock.appendChild(TagsTable);
         data.appendChild(TagsBlock);
