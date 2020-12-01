@@ -81,15 +81,20 @@ time_t get_mtime(string filename) {
     }
     return -1;
 }
+string Get_Mtime(string filename) {
+	time_t T = get_mtime(filename);
+	tm *ascT = localtime(&T);
+	char Tbuf[60];
+	strftime(Tbuf, sizeof(Tbuf), "%Y-%m-%d", ascT);
+	string strTbuf(Tbuf, Tbuf + strlen(Tbuf));
+	return strTbuf;
+}
 
 string site_name = "https://xyix.gitee.io/";
 void PRINT_INDEX_INFO(string filename) {
 	printf("	<url>\n		<loc>%s%s</loc>\n", site_name.c_str(), filename.c_str());
-	time_t T = get_mtime(filename);
-	tm *ascT = localtime(&T);
-	char Tbuf[60];
-	strftime(Tbuf, sizeof(Tbuf), "%Y-%m-%d", ascT); 		
-	printf("		<lastmod>%s</lastmod>\n	</url>\n", Tbuf);
+	string Tbuf = Get_Mtime(filename);
+	printf("		<lastmod>%s</lastmod>\n	</url>\n", Tbuf.c_str());
 }
 
 int main(){
@@ -122,6 +127,7 @@ int main(){
 		cout<<"		'post_name' : '"<<post_name<<"',\n";
 		cout<<"		'post_chinese_name' : '"<<GBToUTF8(post_chinese_name.c_str())<<"',\n";
 		cout<<"		'type_name' : '"<<type_name<<"',\n";
+		cout<<"		'last_modi' : '"<<Get_Mtime("posts/posts/" + post_name + ".html")<<"',\n";
 		cout<<"		'tag' : [";
 		for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
 		cout<<"],\n	};\n";
@@ -134,7 +140,8 @@ int main(){
 			PRINT_INDEX_INFO("xjoi/probs/index.html");
 			PRINT_INDEX_INFO("xjoi/fakenews/index.html");
 		PRINT_INDEX_INFO("tags/index.html");
-		PRINT_INDEX_INFO("archieve/index.html");
+		for(int i = 0; i <= (post_cnt - 1) / 30; i++)
+			PRINT_INDEX_INFO("archieve/index.html?page=" + to_string(i));
 		cin.clear();
 		freopen("archieve/list.txt","r",stdin);
 		post_cnt=0;

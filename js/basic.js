@@ -376,6 +376,11 @@
                 Postinfo_tags.appendChild(Postinfo_tags_p);
             }
         PostinfoBlock.appendChild(Postinfo_tags);
+            let Postinfo_last_modi = win.createElement('th');
+            let Postinfo_last_modi_p = win.createElement('p');
+            Postinfo_last_modi_p.textContent = postinfo.last_modi;
+            Postinfo_last_modi.appendChild(Postinfo_last_modi_p);
+        PostinfoBlock.appendChild(Postinfo_last_modi);
         data.appendChild(PostinfoBlock);
     }
     //判断文章是否合法
@@ -402,17 +407,21 @@
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.style='width: 40%';
+            Titleh1.style='width: 30%';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
-            Titleh2.style='width: 12%';
+            Titleh2.style='width: 10%';
             Titleh2.appendChild(win.createTextNode('分类'));
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
-            Titleh3.style='width: 43%';
+            Titleh3.style='width: 25%';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
+            let Titleh4=win.createElement('th');
+            Titleh4.style='width: 30%';
+            Titleh4.appendChild(win.createTextNode('修改时间'));
+        ArchieveTitle.appendChild(Titleh4);
         ArchieveTable.appendChild(ArchieveTitle);
         for(let i=0;i<win.archieve_list.length;i=i+1)
             if(win.isLegalPost(win.archieve_list[i],win.post_count)){

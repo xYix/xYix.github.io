@@ -21,8 +21,16 @@
 		<lastmod>2020-10-05</lastmod>
 	</url>
 	<url>
-		<loc>https://xyix.gitee.io/archieve/index.html</loc>
-		<lastmod>2020-10-08</lastmod>
+		<loc>https://xyix.gitee.io/archieve/index.html?page=0</loc>
+		<lastmod></lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/archieve/index.html?page=1</loc>
+		<lastmod></lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/archieve/index.html?page=2</loc>
+		<lastmod></lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/hello-world.html</loc>
