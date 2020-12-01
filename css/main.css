@@ -92,6 +92,7 @@ button{
 }
 th{
     font-weight: normal;
+    padding: 1px 10px;
 }
 .inline-blog{
     width: 100%;
