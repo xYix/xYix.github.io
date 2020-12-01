@@ -68,7 +68,7 @@
 		'post_name' : 'fast-factorial-calculating',
 		'post_chinese_name' : '快速阶乘算法',
 		'type_name' : 'solution',
-		'tag' : ['polynomial','lagrange-interpolation',],
+		'tag' : ['lagrange-interpolation','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '11',
@@ -82,7 +82,7 @@
 		'post_name' : 'min25-powerfulnum',
 		'post_chinese_name' : 'Min25 筛和 Powerful Number 筛',
 		'type_name' : 'algorithm',
-		'tag' : ['exc-inc','number-theory','min25-sieve',],
+		'tag' : ['exc-inc','min25-sieve','number-theory',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '13',
@@ -96,7 +96,7 @@
 		'post_name' : 'SPOJ-26073',
 		'post_chinese_name' : 'SPOJ26073 题解 - DIVCNT1',
 		'type_name' : 'solution',
-		'tag' : ['number-theory','calculating-geometry',],
+		'tag' : ['calculating-geometry','number-theory',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '15',
@@ -117,7 +117,7 @@
 		'post_name' : 'sx2020',
 		'post_chinese_name' : '省选 2020 补题记录',
 		'type_name' : 'solution',
-		'tag' : ['combinatorics','string','lyndon-tech','generating-function','lagrange-inversion','linear-algebra','linear-programming',],
+		'tag' : ['combinatorics','generating-function','lagrange-inversion','linear-algebra','linear-programming','lyndon-tech','string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '18',
@@ -145,7 +145,7 @@
 		'post_name' : 'luogu-4500',
 		'post_chinese_name' : 'luoguP4500 题解 - [ZJOI2018]树',
 		'type_name' : 'solution',
-		'tag' : ['exc-inc','combinatorics','group-counting','generating-function',],
+		'tag' : ['combinatorics','exc-inc','generating-function','group-counting',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '22',
@@ -271,21 +271,21 @@
 		'post_name' : 'young-tableau',
 		'post_chinese_name' : '杨表学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['exc-inc','combinatorics','young-tableau',],
+		'tag' : ['combinatorics','exc-inc','young-tableau',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '40',
 		'post_name' : 'isotonic-regression',
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
-		'tag' : ['offline','overall-binary-search','isotonic-regression','pigeon',],
+		'tag' : ['isotonic-regression','offline','overall-binary-search','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '41',
 		'post_name' : 'nimber',
 		'post_chinese_name' : 'nimber 运算和扩展',
 		'type_name' : 'algorithm',
-		'tag' : ['nimber','game-theory','generating-function',],
+		'tag' : ['game-theory','generating-function','nimber',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '42',
@@ -299,7 +299,7 @@
 		'post_name' : 'cube-root-of-two',
 		'post_chinese_name' : '2 的立方根是多少（详细揭秘）',
 		'type_name' : 'algorithm',
-		'tag' : ['nimber','game-theory',],
+		'tag' : ['game-theory','nimber',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '44',
@@ -334,14 +334,14 @@
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '容斥符号化 - 更炫酷的反演魔术',
 		'type_name' : 'algorithm',
-		'tag' : ['exc-inc','combinatorics','generating-function',],
+		'tag' : ['combinatorics','exc-inc','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '49',
 		'post_name' : 'd-and-c',
 		'post_chinese_name' : '分治概说',
 		'type_name' : 'algorithm',
-		'tag' : ['data-structure','d-and-c-on-tree','offline',],
+		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '50',
@@ -355,7 +355,7 @@
 		'post_name' : 'ioi2020hw',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡',
 		'type_name' : 'solution',
-		'tag' : ['exc-inc','combinatorics','construction','lmoliver','pigeon',],
+		'tag' : ['combinatorics','construction','exc-inc','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '52',
@@ -376,14 +376,14 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'tag' : ['exc-inc','combinatorics','linear-algebra','lagrange-inversion','generating-function',],
+		'tag' : ['combinatorics','exc-inc','generating-function','lagrange-inversion','linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '55',
 		'post_name' : 'luogu-2305',
 		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
 		'type_name' : 'solution',
-		'tag' : ['data-structure','d-and-c-on-tree','monotonicity-of-decision','calculating-geometry',],
+		'tag' : ['calculating-geometry','d-and-c-on-tree','data-structure','monotonicity-of-decision',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '56',
@@ -404,7 +404,7 @@
 		'post_name' : 'uoj-207',
 		'post_chinese_name' : 'uoj#207 题解 - 共价大爷游长沙',
 		'type_name' : 'solution',
-		'tag' : ['data-structure','d-and-c-on-tree','randomization',],
+		'tag' : ['d-and-c-on-tree','data-structure','randomization',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '59',
@@ -418,7 +418,7 @@
 		'post_name' : 'uoj-424',
 		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
 		'type_name' : 'solution',
-		'tag' : ['exc-inc','combinatorics','construction',],
+		'tag' : ['combinatorics','construction','exc-inc',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '61',
@@ -439,13 +439,13 @@
 		'post_name' : 'uoj-191',
 		'post_chinese_name' : 'uoj#191 题解 - 【集训队互测2016】Unknown',
 		'type_name' : 'solution',
-		'tag' : ['offline','data-structure','d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '64',
 		'post_name' : 'luogu-5291',
 		'post_chinese_name' : 'luoguP5291 题解 - [十二省联考2019]希望',
 		'type_name' : 'solution',
-		'tag' : ['offline','data-structure','d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 })(document);
