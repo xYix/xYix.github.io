@@ -63,18 +63,38 @@ void PRINT_POST_INFO(){
 	}
 }
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#ifndef WIN32
+#include <unistd.h>
+#endif
+ 
+#ifdef WIN32
+#define stat _stat
+#endif
+ 
+time_t get_mtime(string filename) {
+    struct stat result;
+    if (stat(filename.c_str(), &result) == 0) {
+        time_t mod_time = result.st_mtime;
+        return mod_time;
+    }
+    return -1;
+}
+
+string site_name = "https://xyix.gitee.io/";
+void PRINT_INDEX_INFO(string filename) {
+	printf("	<url>\n		<loc>%s%s</loc>\n", site_name.c_str(), filename.c_str());
+	time_t T = get_mtime(filename);
+	tm *ascT = localtime(&T);
+	char Tbuf[60];
+	strftime(Tbuf, sizeof(Tbuf), "%Y-%m-%d", ascT); 		
+	printf("		<lastmod>%s</lastmod>\n	</url>\n", Tbuf);
+}
+
 int main(){
-	/*
-		list ��ʽ��
-		- Ӣ����
-		- ������ 
-		- ����
-		- ��ǩ�� 
-		- ��ǩ 
-	*/
-	
-	freopen("D:\\����blog\\tags\\list.txt","r",stdin);
-	freopen("D:\\����blog\\js\\tags_list.js","w",stdout);
+	freopen("tags/list.txt","r",stdin);
+	freopen("js/tags_list.js","w",stdout);
 	cout<<"(function(win){\n	win.tags_list={};\n";
 	string tmp_tag_name,tmp_tag_chinese_name;
 	while(getline(cin,tmp_tag_name)){
@@ -85,8 +105,8 @@ int main(){
 	}
 	printf("})(document);");
 	cin.clear();
-	freopen("D:\\����blog\\archieve\\list.txt","r",stdin);
-	freopen("D:\\����blog\\js\\archieve_list.js","w",stdout);
+	freopen("archieve/list.txt","r",stdin);
+	freopen("js/archieve_list.js","w",stdout);
 	cout<<"(function(win){\n	win.archieve_list=[];\n";
 	int post_cnt=0;
 	while(getline(cin,post_name)){
@@ -106,4 +126,25 @@ int main(){
 		cout<<"],\n	};\n";
 	}
 	printf("})(document);");
+	freopen("sitemap.xml","w",stdout);
+	printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
+	PRINT_INDEX_INFO("index.html");
+		PRINT_INDEX_INFO("xjoi/index.html");
+			PRINT_INDEX_INFO("xjoi/probs/index.html");
+			PRINT_INDEX_INFO("xjoi/fakenews/index.html");
+		PRINT_INDEX_INFO("tags/index.html");
+		PRINT_INDEX_INFO("archieve/index.html");
+		cin.clear();
+		freopen("archieve/list.txt","r",stdin);
+		post_cnt=0;
+		while(getline(cin,post_name)){
+			post_cnt++;
+			getline(cin,post_chinese_name);
+			post_chinese_name=UTF8ToGB(post_chinese_name.c_str());
+			getline(cin,type_name);
+			cin>>tag_cnt;getline(cin,trash);
+			for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
+			PRINT_INDEX_INFO("posts/posts/" + post_name + ".html");
+		}
+	printf("</urlset>");
 } 
