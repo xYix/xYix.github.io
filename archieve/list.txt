@@ -371,6 +371,14 @@ combinatorics
 uoj-191
 uoj#191 题解 - 【集训队互测2016】Unknown
 solution
-2
+3
+offline
+data-structure
+d-and-c-on-tree
+luogu-5291
+luoguP5291 题解 - [十二省联考2019]希望
+solution
+3
+offline
 data-structure
 d-and-c-on-tree

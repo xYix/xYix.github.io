@@ -439,6 +439,13 @@
 		'post_name' : 'uoj-191',
 		'post_chinese_name' : 'uoj#191 题解 - 【集训队互测2016】Unknown',
 		'type_name' : 'solution',
-		'tag' : ['data-structure','d-and-c-on-tree',],
+		'tag' : ['offline','data-structure','d-and-c-on-tree',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '64',
+		'post_name' : 'luogu-5291',
+		'post_chinese_name' : 'luoguP5291 题解 - [十二省联考2019]希望',
+		'type_name' : 'solution',
+		'tag' : ['offline','data-structure','d-and-c-on-tree',],
 	};
 })(document);
