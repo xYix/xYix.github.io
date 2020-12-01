@@ -419,7 +419,7 @@
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
             let Titleh4=win.createElement('th');
-            Titleh4.style='width: 12%';
+            Titleh4.style='width: 11%';
             Titleh4.appendChild(win.createTextNode('修改时间'));
         ArchieveTitle.appendChild(Titleh4);
         ArchieveTable.appendChild(ArchieveTitle);
