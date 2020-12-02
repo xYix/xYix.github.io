@@ -332,12 +332,12 @@
     //绘制文章信息
     win.WritePostinfo = function(data,postinfo){
         let PostinfoBlock=win.createElement('tr');
-            let Postinfo_id=win.createElement('th');
+            let Postinfo_id=win.createElement('td');
             let Postinfo_id_p=win.createElement('p');
             Postinfo_id_p.textContent=postinfo.postid;
             Postinfo_id.appendChild(Postinfo_id_p);
         PostinfoBlock.appendChild(Postinfo_id);
-            let Postinfo_title=win.createElement('th');
+            let Postinfo_title=win.createElement('td');
             let Postinfo_title_a=win.createElement('a');
             if(location.search.length !== 0)
                 Postinfo_title_a.href='/posts/'+location.search+'&postid='+postinfo.postid;
@@ -345,7 +345,7 @@
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title.appendChild(Postinfo_title_a);
         PostinfoBlock.appendChild(Postinfo_title);
-            let Postinfo_type=win.createElement('th');
+            let Postinfo_type=win.createElement('td');
             if(postinfo.type_name !== 'none'){
                 let Postinfo_type_a=win.createElement('a');
                 Postinfo_type_a.href='/archieve/'+
@@ -361,7 +361,7 @@
                 Postinfo_type.appendChild(Postinfo_type_p);
             }
         PostinfoBlock.appendChild(Postinfo_type);
-            let Postinfo_tags=win.createElement('th');
+            let Postinfo_tags=win.createElement('td');
             for(let i=0;i<postinfo.tag.length;i=i+1){
                 let Postinfo_tags_a=win.createElement('a');
                 Postinfo_tags_a.href='/archieve/'+
@@ -376,7 +376,7 @@
                 Postinfo_tags.appendChild(Postinfo_tags_p);
             }
         PostinfoBlock.appendChild(Postinfo_tags);
-            let Postinfo_last_modi = win.createElement('th');
+            let Postinfo_last_modi = win.createElement('td');
             let Postinfo_last_modi_p = win.createElement('p');
             Postinfo_last_modi_p.textContent = postinfo.last_modi;
             Postinfo_last_modi.appendChild(Postinfo_last_modi_p);
@@ -400,14 +400,14 @@
     win.post_count={value : 0};
     win.WriteArchieve = function(data){
         let ArchieveTable = win.createElement('table');
-        ArchieveTable.border='1';ArchieveTable.rules='all';ArchieveTable.style='width: 100%';
-        let ArchieveTitle = win.createElement('tr');
+        ArchieveTable.border='1'; ArchieveTable.rules='all'; ArchieveTable.style='width: 100%; table-layout: fixed';
+        let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
             let Titleh0=win.createElement('th');
             Titleh0.style='width: 2em';
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.style='width: calc(50% - 6.25em)';
+            Titleh1.style='width: calc(50% - 6.25em - 15px)';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
@@ -415,7 +415,7 @@
             Titleh2.appendChild(win.createTextNode('分类'));
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
-            Titleh3.style='width: calc(50% - 6.25em)';
+            Titleh3.style='width: calc(50% - 6.25em - 15px)';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
             let Titleh4=win.createElement('th');
