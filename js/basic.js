@@ -389,7 +389,7 @@
                             win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]],Page : 0}));
                         Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
                     Postinfo_tags.appendChild(Postinfo_tags_a);
-                    if(i!==postinfo.tag.length-1) Postinfo_tags_c.appendChild(win.createTextNode(','));
+                    if(i!==postinfo.tag.length-1) Postinfo_tags.appendChild(win.createTextNode(','));
                 }
                 if(postinfo.tag.length === 0){
                     let Postinfo_tags_p=win.createElement('p');
