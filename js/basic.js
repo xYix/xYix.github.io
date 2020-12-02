@@ -338,7 +338,7 @@
             Postinfo_id_p.textContent=postinfo.postid;
             Postinfo_id_c.appendChild(Postinfo_id_p);
             Postinfo_id.appendChild(Postinfo_id_c);
-            Postinfo_id.width = '3em';
+            Postinfo_last_modi.style = 'width: 3em';
         PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('td');
             let Postinfo_title_c=win.createElement('center');
@@ -368,7 +368,7 @@
                 Postinfo_type_c.appendChild(Postinfo_type_p);
             }
             Postinfo_type.appendChild(Postinfo_type_c);
-            Postinfo_type.width = '7em';
+            Postinfo_last_modi.style = 'width: 7em';
         PostinfoBlock.appendChild(Postinfo_type);
             let Postinfo_tags=win.createElement('td');
             let Postinfo_tags_c = win.createElement('center');
@@ -394,7 +394,7 @@
             Postinfo_last_modi_p.textContent = postinfo.last_modi;
             Postinfo_last_modi_c.appendChild(Postinfo_last_modi_p);
             Postinfo_last_modi.appendChild(Postinfo_last_modi_c);
-            Postinfo_last_modi.width = '7em';
+            Postinfo_last_modi.style = 'width: 7em';
         PostinfoBlock.appendChild(Postinfo_last_modi);
         data.appendChild(PostinfoBlock);
     }
