@@ -417,15 +417,15 @@
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.style='width: calc(50% - 8em - 30px)';
+            Titleh1.style='width: calc(50% - 8.5em - 30px)';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
-            Titleh2.style='width: 6em';
+            Titleh2.style='width: 7em';
             Titleh2.appendChild(win.createTextNode('分类'));
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
-            Titleh3.style='width: calc(50% - 8em - 30px)';
+            Titleh3.style='width: calc(50% - 8.5em - 30px)';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
             let Titleh4=win.createElement('th');
