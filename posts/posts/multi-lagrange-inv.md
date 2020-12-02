@@ -1,3 +1,8 @@
+---
+title: 矩阵树定理和多元拉反
+
+---
+
 参考资料：
 
 [1] [A Multivariate Lagrange Inversion Formula for Asymptotic Calculations](https://www.researchgate.net/publication/2313679_A_Multivariate_Lagrange_Inversion_Formula_for_Asymptotic_Calculations)
@@ -68,6 +73,7 @@ f_i=x_ig_i(\mathbf f)
 $$
 
 那么我们有
+
 > **多元拉格朗日反演**.
 > $$
 > \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
@@ -85,7 +91,7 @@ $$
 > $$
 > 其中 $\mathcal T$ 是完全图 $[0..m]$ 的所有以 $0$ 为根的内向树，而
 > $$
-\dfrac{\partial \mathbf f}{\partial G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
+> \dfrac{\partial \mathbf f}{\partial G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
 > $$
 
 我们给出对内向树形式的一个**组合解释**。
@@ -139,7 +145,7 @@ $$
 
   - $\rho$ 上有边 $y\rightarrow x$，令离 $M_\mu$ 最近且与 $y$ 同色的节点为 $z$（它当然可以为 $(\mu,n_\mu)$ 自身）。
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
-  - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
+  - 在 $P(T)$ 中连边 $的颜色\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
 - 这里给出一个[例子](https://xyix.gitee.io/images/path-abor.png)。
 
@@ -181,7 +187,7 @@ $$
 
 **证明.** 对于 $P(A)=T$ 的 $A$，对 $j=1...m$，施以下面的变换
 
-- $(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
+- $：(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
 - $(j_2)$：转换 $(M_{\sigma_j},F_{\sigma_j})$；
 
 接下来我们只需要证明：最终得出的图 $D$ 满足 $C(D)=T$，而且这组变换是一个双射。
@@ -209,7 +215,6 @@ $\blacksquare$
 > $$
 > \sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial T}
 > $$
-> 
 
 **证明.** 如果不管 $C(D)=T$ 的限制，那么儿子是可以任意选的，只要所有点恰好被作为一次儿子。那么答案即为
 $$
@@ -247,10 +252,10 @@ $$
 ### 2.4.1 右式的处理
 
 >  **定理 2.** 
-> $$
-> \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
-> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
-> $$
+>  $$
+>  \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
+>  \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
+>  $$
 
 **证明.** 只需要对引理 3 运用矩阵树定理即可。还有别忘了 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。
 
