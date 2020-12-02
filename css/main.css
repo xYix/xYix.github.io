@@ -25,9 +25,6 @@ a{
 a:hover{
     text-decoration: underline;
 }
-th{
-    height: 34px;
-}
 .content-block{
     padding: 0;
     margin: 20px 20px;
@@ -92,11 +89,13 @@ button{
 }
 th{
     font-weight: normal;
-    padding: 1px 3px;
+    padding: 4px 2px;
+    height: 34px;
 }
 td{
     font-weight: normal;
-    padding: 1px 3px;
+    padding: 4px 2px;
+    height: 34px;
 }
 .inline-blog{
     width: 100%;
