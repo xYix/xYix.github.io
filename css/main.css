@@ -94,6 +94,10 @@ th{
     font-weight: normal;
     padding: 1px 3px;
 }
+td{
+    font-weight: normal;
+    padding: 1px 3px;
+}
 .inline-blog{
     width: 100%;
     border: 1px outset #36C48B;
