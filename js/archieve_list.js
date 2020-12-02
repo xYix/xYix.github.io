@@ -523,7 +523,7 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '66',
 		'post_name' : 'loj-3385',
-		'post_chinese_name' : 'title: loj#3385 题解 - 「COCI 2020.11」Svjetlo',
+		'post_chinese_name' : 'loj#3385 题解 - 「COCI 2020.11」Svjetlo',
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-02',
 		'tag' : ['lmoliver',],

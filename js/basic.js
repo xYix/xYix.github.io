@@ -332,10 +332,10 @@
 
     //绘制文章信息
     win.archieve_id_style = 'width: 4%';
-    win.archieve_title_style = 'width: 46%';
-    win.archieve_type_style = 'width: 10%';
-    win.archieve_tags_style = 'width: 30%';
-    win.archieve_last_modi_style = 'width: 10%';
+    win.archieve_title_style = 'width: 43%';
+    win.archieve_type_style = 'width: 12%';
+    win.archieve_tags_style = 'width: 29%';
+    win.archieve_last_modi_style = 'width: 12%';
     win.WritePostinfo = function(data,postinfo){
         let PostinfoBlock = win.createElement('tr');
 
