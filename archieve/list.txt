@@ -382,3 +382,14 @@ solution
 offline
 data-structure
 d-and-c-on-tree
+loj-3370
+loj#3370 题解 - 「COCI 2020.10」3D Histogram
+solution
+2
+data-structure
+calculating-geometry
+loj-3385
+title: loj#3385 题解 - 「COCI 2020.11」Svjetlo
+solution
+1
+lmoliver

@@ -512,4 +512,20 @@
 		'last_modi' : '2020-12-01',
 		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '65',
+		'post_name' : 'loj-3370',
+		'post_chinese_name' : 'loj#3370 题解 - 「COCI 2020.10」3D Histogram',
+		'type_name' : 'solution',
+		'last_modi' : '2020-12-02',
+		'tag' : ['calculating-geometry','data-structure',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '66',
+		'post_name' : 'loj-3385',
+		'post_chinese_name' : 'title: loj#3385 题解 - 「COCI 2020.11」Svjetlo',
+		'type_name' : 'solution',
+		'last_modi' : '2020-12-02',
+		'tag' : ['lmoliver',],
+	};
 })(document);
