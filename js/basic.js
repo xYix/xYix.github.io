@@ -413,11 +413,11 @@
         ArchieveTable.border='1'; ArchieveTable.rules='all'; ArchieveTable.style='width: 100%; table-layout: fixed';
         let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
             let Titleh0=win.createElement('th');
-            Titleh0.style='width: 2em';
+            Titleh0.style='width: 3em';
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.style='width: calc(50% - 7em - 30px)';
+            Titleh1.style='width: calc(50% - 8em - 30px)';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
@@ -425,11 +425,11 @@
             Titleh2.appendChild(win.createTextNode('分类'));
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
-            Titleh3.style='width: calc(50% - 7em - 30px)';
+            Titleh3.style='width: calc(50% - 8em - 30px)';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
             let Titleh4=win.createElement('th');
-            Titleh4.style='width: 6em';
+            Titleh4.style='width: 7em';
             Titleh4.appendChild(win.createTextNode('修改时间'));
         ArchieveTitle.appendChild(Titleh4);
         ArchieveTable.appendChild(ArchieveTitle);
