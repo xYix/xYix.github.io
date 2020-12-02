@@ -422,7 +422,7 @@
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.style='width: calc(0.37 * (100% - 17em - 60px))';
+            Titleh1.style='width: calc(0.63 * (100% - 17em - 60px))';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
