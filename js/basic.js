@@ -338,6 +338,7 @@
             Postinfo_id_p.textContent=postinfo.postid;
             Postinfo_id_c.appendChild(Postinfo_id_p);
             Postinfo_id.appendChild(Postinfo_id_c);
+            Postinfo_id.style = 'width: 3em';
         PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('td');
             let Postinfo_title_c=win.createElement('center');
@@ -348,6 +349,7 @@
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title_c.appendChild(Postinfo_title_a);
             Postinfo_title.appendChild(Postinfo_title_c);
+            Postinfo_title.style='width: calc(0.63 * (100% - 17em - 60px))';
         PostinfoBlock.appendChild(Postinfo_title);
             let Postinfo_type=win.createElement('td');
             let Postinfo_type_c = win.createElement('center');
@@ -366,6 +368,7 @@
                 Postinfo_type_c.appendChild(Postinfo_type_p);
             }
             Postinfo_type.appendChild(Postinfo_type_c);
+            Postinfo_type.style='width: 7em';
         PostinfoBlock.appendChild(Postinfo_type);
             let Postinfo_tags=win.createElement('td');
             let Postinfo_tags_c = win.createElement('center');
@@ -383,6 +386,7 @@
                 Postinfo_tags_c.appendChild(Postinfo_tags_p);
             }
             Postinfo_tags.appendChild(Postinfo_tags_c);
+            Postinfo_tags.style='width: calc(0.37 * (100% - 17em - 60px))';
         PostinfoBlock.appendChild(Postinfo_tags);
             let Postinfo_last_modi = win.createElement('td');
             let Postinfo_last_modi_c = win.createElement('center');
@@ -390,6 +394,7 @@
             Postinfo_last_modi_p.textContent = postinfo.last_modi;
             Postinfo_last_modi_c.appendChild(Postinfo_last_modi_p);
             Postinfo_last_modi.appendChild(Postinfo_last_modi_c);
+            Postinfo_last_modi.style='width: 7em';
         PostinfoBlock.appendChild(Postinfo_last_modi);
         data.appendChild(PostinfoBlock);
     }
