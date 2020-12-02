@@ -385,7 +385,7 @@
             Postinfo_tags.appendChild(Postinfo_tags_c);
         PostinfoBlock.appendChild(Postinfo_tags);
             let Postinfo_last_modi = win.createElement('td');
-            let Postinfo_last_modi_c = win.createElement('c');
+            let Postinfo_last_modi_c = win.createElement('center');
             let Postinfo_last_modi_p = win.createElement('p');
             Postinfo_last_modi_p.textContent = postinfo.last_modi;
             Postinfo_last_modi_c.appendChild(Postinfo_last_modi_p);
