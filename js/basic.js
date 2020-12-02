@@ -334,8 +334,8 @@
     win.archieve_id_style = 'width: 2em';
     win.archieve_title_style = 'width: calc(63% - 8em)';
     win.archieve_type_style = 'width: 5.5em';
-    win.archieve_tags_style = 'width: calc(37% - 5em)';
-    win.archieve_last_modi_style = 'width: 5.5em';
+    win.archieve_tags_style = 'width: calc(37% - 5.5em)';
+    win.archieve_last_modi_style = 'width: 6em';
     win.WritePostinfo = function(data,postinfo){
         let PostinfoBlock=win.createElement('tr');
                 let Postinfo_id=win.createElement('td');
