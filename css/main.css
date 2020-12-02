@@ -87,6 +87,9 @@ button{
 .button-block{
     padding: 10px 1px 24px 1px;
 }
+table{
+    table-layout: fixed;
+}
 th{
     font-weight: normal;
     height: 34px;
