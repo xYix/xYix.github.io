@@ -331,80 +331,78 @@
     }
 
     //绘制文章信息
-    win.archieve_id_style = 'width: 2em';
-    win.archieve_title_style = 'width: calc(63% - 8em)';
-    win.archieve_type_style = 'width: 5.5em';
-    win.archieve_tags_style = 'width: calc(37% - 5.5em)';
-    win.archieve_last_modi_style = 'width: 6em';
+    win.archieve_id_style = '4%';
+    win.archieve_title_style = '46%';
+    win.archieve_type_style = '10%';
+    win.archieve_tags_style = '30%';
+    win.archieve_last_modi_style = '10%';
     win.WritePostinfo = function(data,postinfo){
-        let PostinfoBlock=win.createElement('tr');
-                let Postinfo_id=win.createElement('td');
-                    let Postinfo_id_c = win.createElement('center');
-                        let Postinfo_id_p=win.createElement('p');
-                            Postinfo_id_p.textContent=postinfo.postid;
-                        Postinfo_id_c.appendChild(Postinfo_id_p);
-                    Postinfo_id.appendChild(Postinfo_id_c);
-                Postinfo_id.style = win.archieve_id_style;
+        let PostinfoBlock = win.createElement('tr');
+
+            //编号
+            let Postinfo_id=win.createElement('td');
+
+                let Postinfo_id_p=win.createElement('p');
+                    Postinfo_id_p.textContent=postinfo.postid;
+                Postinfo_id.appendChild(Postinfo_id_p);
+
+            Postinfo_id.style = win.archieve_id_style;
             PostinfoBlock.appendChild(Postinfo_id);
-            
-                let Postinfo_title=win.createElement('td');
-                    let Postinfo_title_c=win.createElement('center');
-                        let Postinfo_title_a=win.createElement('a');
-                            if(location.search.length !== 0)
-                                Postinfo_title_a.href='/posts/'+location.search+'&postid='+postinfo.postid;
-                            else Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
-                            Postinfo_title_a.textContent=postinfo.post_chinese_name;
-                        Postinfo_title_c.appendChild(Postinfo_title_a);
-                    Postinfo_title.appendChild(Postinfo_title_c);
-                Postinfo_title.style = win.archieve_title_style;
+            //标题
+            let Postinfo_title=win.createElement('td');
+
+                let Postinfo_title_a=win.createElement('a');
+
+                    if(location.search.length !== 0)
+                        Postinfo_title_a.href='/posts/'+location.search+'&postid='+postinfo.postid;
+                    else Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
+                    Postinfo_title_a.textContent=postinfo.post_chinese_name;
+
+                Postinfo_title.appendChild(Postinfo_title_a);
+
+            Postinfo_title.style = win.archieve_title_style;
             PostinfoBlock.appendChild(Postinfo_title);
-            
-                let Postinfo_type=win.createElement('td');
-                    let Postinfo_type_c = win.createElement('center');
-                        if(postinfo.type_name !== 'none'){
-                            let Postinfo_type_a=win.createElement('a');
-                                Postinfo_type_a.href='/archieve/'+
-                                    win.ezylanASearch(win.NextSearch(win.TrueSearch,{Type : postinfo.type_name,Page : 0}));
-                                if(postinfo.type_name === 'solution') Postinfo_type_a.textContent='题解';
-                                else if(postinfo.type_name === 'algorithm') Postinfo_type_a.textContent='算法/知识点';
-                                else Postinfo_type_a.textContent='游记/其他';
-                            Postinfo_type_c.appendChild(Postinfo_type_a);
-                        }
-                        else{
-                            let Postinfo_type_p=win.createElement('p');
-                            Postinfo_type_p.textContent='无';
-                            Postinfo_type_c.appendChild(Postinfo_type_p);
-                        }
-                    Postinfo_type.appendChild(Postinfo_type_c);
+            //类型
+            let Postinfo_type=win.createElement('td');
+                if(postinfo.type_name !== 'none'){
+                    let Postinfo_type_a=win.createElement('a');
+                        Postinfo_type_a.href = '/archieve/'+
+                        win.ezylanASearch(win.NextSearch(win.TrueSearch, {Type : postinfo.type_name, Page : 0}));
+                        if(postinfo.type_name === 'solution') Postinfo_type_a.textContent = '题解';
+                        else if(postinfo.type_name === 'algorithm') Postinfo_type_a.textContent = '算法/知识点';
+                        else Postinfo_type_a.textContent = '游记/其他';
+                    Postinfo_type.appendChild(Postinfo_type_a);
+                }
+                else{
+                    let Postinfo_type_p = win.createElement('p');
+                        Postinfo_type_p.textContent = '无';
+                    Postinfo_type.appendChild(Postinfo_type_p);
+                }
                 Postinfo_type.style = win.archieve_type_style;
             PostinfoBlock.appendChild(Postinfo_type);
-
-                let Postinfo_tags=win.createElement('td');
-                    let Postinfo_tags_c = win.createElement('center');
-                        for(let i=0;i<postinfo.tag.length;i=i+1){
-                            let Postinfo_tags_a=win.createElement('a');
-                                Postinfo_tags_a.href='/archieve/'+
-                                    win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]],Page : 0}));
-                                Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
-                            Postinfo_tags_c.appendChild(Postinfo_tags_a);
-                            if(i!==postinfo.tag.length-1) Postinfo_tags_c.appendChild(win.createTextNode(','));
-                        }
-                        if(postinfo.tag.length === 0){
-                            let Postinfo_tags_p=win.createElement('p');
-                                Postinfo_tags_p.textContent='无';
-                            Postinfo_tags_c.appendChild(Postinfo_tags_p);
-                        }
-                    Postinfo_tags.appendChild(Postinfo_tags_c);
-                Postinfo_tags.style = win.archieve_tags_style;
+            //标签
+            let Postinfo_tags = win.createElement('td');
+            Postinfo_tags.style = win.archieve_tags_style;
+                for(let i = 0; i < postinfo.tag.length; i = i + 1) {
+                    let Postinfo_tags_a = win.createElement('a');
+                        Postinfo_tags_a.href='/archieve/'+
+                            win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]],Page : 0}));
+                        Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
+                    Postinfo_tags.appendChild(Postinfo_tags_a);
+                    if(i!==postinfo.tag.length-1) Postinfo_tags_c.appendChild(win.createTextNode(','));
+                }
+                if(postinfo.tag.length === 0){
+                    let Postinfo_tags_p=win.createElement('p');
+                        Postinfo_tags_p.textContent='无';
+                    Postinfo_tags.appendChild(Postinfo_tags_p);
+                }
             PostinfoBlock.appendChild(Postinfo_tags);
-            
-                let Postinfo_last_modi = win.createElement('td');
-                    let Postinfo_last_modi_c = win.createElement('center');
-                        let Postinfo_last_modi_p = win.createElement('p');
-                            Postinfo_last_modi_p.textContent = postinfo.last_modi;
-                        Postinfo_last_modi_c.appendChild(Postinfo_last_modi_p);
-                    Postinfo_last_modi.appendChild(Postinfo_last_modi_c);
-                Postinfo_last_modi.style = win.archieve_last_modi_style;
+            //修改时间
+            let Postinfo_last_modi = win.createElement('td');
+            Postinfo_last_modi.style = win.archieve_last_modi_style;
+                let Postinfo_last_modi_p = win.createElement('p');
+                    Postinfo_last_modi_p.textContent = postinfo.last_modi;
+                Postinfo_last_modi.appendChild(Postinfo_last_modi_p);
             PostinfoBlock.appendChild(Postinfo_last_modi);
 
         data.appendChild(PostinfoBlock);
@@ -428,7 +426,8 @@
     win.post_count={value : 0};
     win.WriteArchieve = function(data){
         let ArchieveTable = win.createElement('table');
-        ArchieveTable.border='1'; ArchieveTable.rules='all'; ArchieveTable.style='width: 100%';
+        ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
+        ArchieveTable.className = 'mycenter';
 
         let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
 

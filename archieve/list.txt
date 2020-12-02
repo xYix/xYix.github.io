@@ -389,7 +389,7 @@ solution
 data-structure
 calculating-geometry
 loj-3385
-title: loj#3385 题解 - 「COCI 2020.11」Svjetlo
+loj#3385 题解 - 「COCI 2020.11」Svjetlo
 solution
 1
 lmoliver
