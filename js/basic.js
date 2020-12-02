@@ -349,7 +349,7 @@
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title_c.appendChild(Postinfo_title_a);
             Postinfo_title.appendChild(Postinfo_title_c);
-            Postinfo_title.style='width: calc(0.37 * (100% - 17em - 60px))';
+            Postinfo_title.style='width: calc(0.63 * (100% - 17em - 60px))';
         PostinfoBlock.appendChild(Postinfo_title);
             let Postinfo_type=win.createElement('td');
             let Postinfo_type_c = win.createElement('center');
