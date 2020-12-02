@@ -329,12 +329,13 @@
         TagsBlock.appendChild(TagsTable);
         data.appendChild(TagsBlock);
     }
+
     //绘制文章信息
     win.archieve_id_style = 'width: 2em';
-    win.archieve_title_style = 'width: 63% - 8em';
+    win.archieve_title_style = 'width: calc(63% - 8em)';
     win.archieve_type_style = 'width: 5.5em';
-    win.archieve_tags_style = 'width: 37% - 5em';
-    win.archieve_last_modi_style = '5.5em';
+    win.archieve_tags_style = 'width: calc(37% - 5em)';
+    win.archieve_last_modi_style = 'width: 5.5em';
     win.WritePostinfo = function(data,postinfo){
         let PostinfoBlock=win.createElement('tr');
                 let Postinfo_id=win.createElement('td');
@@ -408,6 +409,7 @@
 
         data.appendChild(PostinfoBlock);
     }
+
     //判断文章是否合法
     win.isLegalPost = function(postinfo,post_count){
         if(win.Type !== undefined){
@@ -421,7 +423,8 @@
         if(post_count.value>(win.Page+1)*win.post_per_page) return 0;
         return 1;
     }
-    //绘制文章一览
+
+    //绘制 archieve 列表
     win.post_count={value : 0};
     win.WriteArchieve = function(data){
         let ArchieveTable = win.createElement('table');
@@ -470,6 +473,7 @@
             data.appendChild(ErrorText);
         }
     }
+
     //绘制翻页按钮
     win.WritePageButton = function(data,pcount,pper_page){
         let ButtonBlock = document.createElement('div');
@@ -506,6 +510,8 @@
         ButtonBlock.appendChild(PageSucc);
         data.appendChild(ButtonBlock);
     }
+
+    //绘制文章内容
     win.WriteBlog = function(data,postid){
         let Blog = win.createElement('iframe');
         Blog.frameBorder =1;
@@ -517,6 +523,8 @@
         }
         data.appendChild(Blog);
     }
+
+    //文章下面的小标签列表
     win.WriteTagsList2 = function (data,postinfo){
         let TagsBlock = win.createElement('center');
         let TagsTable = win.createElement('table');
