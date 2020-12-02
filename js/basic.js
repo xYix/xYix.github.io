@@ -349,7 +349,7 @@
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
             Postinfo_title_c.appendChild(Postinfo_title_a);
             Postinfo_title.appendChild(Postinfo_title_c);
-            Postinfo_title.width = 'calc(63% - 10.71em - 37.8px)';
+            Postinfo_title.width = '63%';
         PostinfoBlock.appendChild(Postinfo_title);
             let Postinfo_type=win.createElement('td');
             let Postinfo_type_c = win.createElement('center');
@@ -386,7 +386,7 @@
                 Postinfo_tags_c.appendChild(Postinfo_tags_p);
             }
             Postinfo_tags.appendChild(Postinfo_tags_c);
-            Postinfo_tags.width = 'calc(37% - 6.29em - 22.2px)';
+            Postinfo_tags.width = '37%';
         PostinfoBlock.appendChild(Postinfo_tags);
             let Postinfo_last_modi = win.createElement('td');
             let Postinfo_last_modi_c = win.createElement('center');
@@ -415,14 +415,14 @@
     win.post_count={value : 0};
     win.WriteArchieve = function(data){
         let ArchieveTable = win.createElement('table');
-        ArchieveTable.border='1'; ArchieveTable.rules='all'; ArchieveTable.style='width: 100%; table-layout: fixed';
+        ArchieveTable.border='1'; ArchieveTable.rules='all'; ArchieveTable.style='width: 100%';
         let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
             let Titleh0=win.createElement('th');
             Titleh0.width = '3em';
             Titleh0.appendChild(win.createTextNode('编号'));
         ArchieveTitle.appendChild(Titleh0);
             let Titleh1=win.createElement('th');
-            Titleh1.width = 'calc(63% - 10.71em - 37.8px)';
+            Titleh1.width = '63%';
             Titleh1.appendChild(win.createTextNode('标题'));
         ArchieveTitle.appendChild(Titleh1);
             let Titleh2=win.createElement('th');
@@ -431,7 +431,7 @@
         ArchieveTitle.appendChild(Titleh2);
             let Titleh3=win.createElement('th');
             // 100% - 17em - 60px
-            Titleh3.width = 'calc(37% - 6.29em - 22.2px)';
+            Titleh3.width = '37%';
             Titleh3.appendChild(win.createTextNode('标签'));
         ArchieveTitle.appendChild(Titleh3);
             let Titleh4=win.createElement('th');
