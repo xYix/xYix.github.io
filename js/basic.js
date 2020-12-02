@@ -333,19 +333,24 @@
     win.WritePostinfo = function(data,postinfo){
         let PostinfoBlock=win.createElement('tr');
             let Postinfo_id=win.createElement('td');
+            let Postinfo_id_c = win.createElement('center');
             let Postinfo_id_p=win.createElement('p');
             Postinfo_id_p.textContent=postinfo.postid;
-            Postinfo_id.appendChild(Postinfo_id_p);
+            Postinfo_id_c.appendChild(Postinfo_id_p);
+            Postinfo_id.appendChild(Postinfo_id_c);
         PostinfoBlock.appendChild(Postinfo_id);
             let Postinfo_title=win.createElement('td');
+            let Postinfo_title_c=win.createElement('center');
             let Postinfo_title_a=win.createElement('a');
             if(location.search.length !== 0)
                 Postinfo_title_a.href='/posts/'+location.search+'&postid='+postinfo.postid;
             else Postinfo_title_a.href='/posts/?postid='+postinfo.postid;
             Postinfo_title_a.textContent=postinfo.post_chinese_name;
-            Postinfo_title.appendChild(Postinfo_title_a);
+            Postinfo_title_c.appendChild(Postinfo_title_a);
+            Postinfo_title.appendChild(Postinfo_title_c);
         PostinfoBlock.appendChild(Postinfo_title);
             let Postinfo_type=win.createElement('td');
+            let Postinfo_type_c = win.createElement('center');
             if(postinfo.type_name !== 'none'){
                 let Postinfo_type_a=win.createElement('a');
                 Postinfo_type_a.href='/archieve/'+
@@ -353,33 +358,38 @@
                 if(postinfo.type_name === 'solution') Postinfo_type_a.textContent='题解';
                 else if(postinfo.type_name === 'algorithm') Postinfo_type_a.textContent='算法/知识点';
                 else Postinfo_type_a.textContent='游记/其他';
-                Postinfo_type.appendChild(Postinfo_type_a);
+                Postinfo_type_c.appendChild(Postinfo_type_a);
             }
             else{
                 let Postinfo_type_p=win.createElement('p');
                 Postinfo_type_p.textContent='无';
-                Postinfo_type.appendChild(Postinfo_type_p);
+                Postinfo_type_c.appendChild(Postinfo_type_p);
             }
+            Postinfo_type.appendChild(Postinfo_type_c);
         PostinfoBlock.appendChild(Postinfo_type);
             let Postinfo_tags=win.createElement('td');
+            let Postinfo_tags_c = win.createElement('center');
             for(let i=0;i<postinfo.tag.length;i=i+1){
                 let Postinfo_tags_a=win.createElement('a');
                 Postinfo_tags_a.href='/archieve/'+
                     win.ezylanASearch(win.NextSearch(win.TrueSearch,{Tags : [postinfo.tag[i]],Page : 0}));
                 Postinfo_tags_a.textContent=win.tags_list[postinfo.tag[i]];
-                Postinfo_tags.appendChild(Postinfo_tags_a);
-                if(i!==postinfo.tag.length-1) Postinfo_tags.appendChild(win.createTextNode(','));
+                Postinfo_tags_c.appendChild(Postinfo_tags_a);
+                if(i!==postinfo.tag.length-1) Postinfo_tags_c.appendChild(win.createTextNode(','));
             }
             if(postinfo.tag.length === 0){
                 let Postinfo_tags_p=win.createElement('p');
                 Postinfo_tags_p.textContent='无';
-                Postinfo_tags.appendChild(Postinfo_tags_p);
+                Postinfo_tags_c.appendChild(Postinfo_tags_p);
             }
+            Postinfo_tags.appendChild(Postinfo_tags_c);
         PostinfoBlock.appendChild(Postinfo_tags);
             let Postinfo_last_modi = win.createElement('td');
+            let Postinfo_last_modi_c = win.createElement('c');
             let Postinfo_last_modi_p = win.createElement('p');
             Postinfo_last_modi_p.textContent = postinfo.last_modi;
-            Postinfo_last_modi.appendChild(Postinfo_last_modi_p);
+            Postinfo_last_modi_c.appendChild(Postinfo_last_modi_p);
+            Postinfo_last_modi.appendChild(Postinfo_last_modi_c);
         PostinfoBlock.appendChild(Postinfo_last_modi);
         data.appendChild(PostinfoBlock);
     }
