@@ -2,14 +2,20 @@
     'use strict';
     const DAILY_MESSAGES=[
         //致敬经典
+        //挑战：你能找出其中每一个典故的出处吗？
         'IMOliver&喝喝粥 分杯NOI2021',
         '拒绝虚假的膜拜，也拒绝真诚的膜拜（恼）',
         '你强归你强，Siyuan 比你强',
         '你不能通过按住 Enter 来快速点击一个按钮。',
         'Siyuan 是我们的红太阳，没有她我们会死！',
+        '这肯定是全世界最烂的博客……不管怎样，x_Yi_x\'s Blog 欢迎您！',
+        '欢迎来到 x_Yi_x 的博客！希望我们能相互交流，共同进步～',
         'hehezhou 的小粉丝，姓叉，就叫 x义x 吧',
         'hehezhou 的小粉丝，姓叉，就阿 hehezhou 吧',
         'I could not have endured darkness even if I had never seen the sun.',
+        'Summation, Counting, Polynomial.',
+        '用一生证明 一个永恒的美丽',
+        '在线博客系统 新版上线 x_Yi_x\'s Blog since 2020',
         //吐槽
         '今天也是x义x被卡常的一天',
         '网页开发怎么这么难啊啊啊啊啊',
@@ -51,6 +57,7 @@
         '你的勇敢无人知晓，你的坚持引人发笑。',
         'x义x 的人生目标：1. 机械化身体；2. 符号化思想和情感；3. 去月球。有趣的是，把它们倒过来就是 x义x 最讨厌的东西。',
         '我什么都没有做错。我什么都没有做错。我什么都没有做错。我什么都没有做错。我什么都没有做错。',
+        'Surprising Combinatorial Proof',
         //膜拜
         '愿 hehezhou 指引我们找到救赎',
         '愿 瑇 指引我们找到启示',
