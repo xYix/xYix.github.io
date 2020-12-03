@@ -393,3 +393,9 @@ loj#3385 题解 - 「COCI 2020.11」Svjetlo
 solution
 1
 lmoliver
+uoj-228
+uoj#228 题解 - 基础数据结构练习题
+solution
+2
+data-structure
+amortized-analysis

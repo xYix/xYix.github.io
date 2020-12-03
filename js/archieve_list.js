@@ -429,7 +429,7 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-11-26',
+		'last_modi' : '2020-12-02',
 		'tag' : ['combinatorics','exc-inc','generating-function','lagrange-inversion','linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -527,5 +527,13 @@
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-02',
 		'tag' : ['lmoliver',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '67',
+		'post_name' : 'uoj-228',
+		'post_chinese_name' : 'uoj#228 题解 - 基础数据结构练习题',
+		'type_name' : 'solution',
+		'last_modi' : '2020-12-03',
+		'tag' : ['amortized-analysis','data-structure',],
 	};
 })(document);

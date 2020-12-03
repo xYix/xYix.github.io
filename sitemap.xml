@@ -246,7 +246,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/multi-lagrange-inv.html</loc>
-		<lastmod>2020-11-26</lastmod>
+		<lastmod>2020-12-02</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/luogu-2305.html</loc>
@@ -295,5 +295,9 @@
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/loj-3385.html</loc>
 		<lastmod>2020-12-02</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/posts/posts/uoj-228.html</loc>
+		<lastmod>2020-12-03</lastmod>
 	</url>
 </urlset>

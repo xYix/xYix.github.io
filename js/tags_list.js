@@ -31,4 +31,5 @@
 	win.tags_list['exc-inc'] = '容斥';
 	win.tags_list['data-structure'] = '数据结构';
 	win.tags_list['sqrt-tech'] = '根号科技';
+	win.tags_list['amortized-analysis'] = '均摊分析';
 })(document);

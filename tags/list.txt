@@ -60,3 +60,5 @@ data-structure
 数据结构
 sqrt-tech
 根号科技
+amortized-analysis
+均摊分析
