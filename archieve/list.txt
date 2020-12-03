@@ -394,8 +394,14 @@ solution
 1
 lmoliver
 uoj-228
-uoj#228 题解 - 基础数据结构练习题
-solution
+uoj#228 题解 - 基础数据结构练习题 - 兼均摊分析学习笔记
+algorithm
 2
 data-structure
 amortized-analysis
+uoj-328
+uoj#328 题解 - 【UTR #3】量子破碎
+solution
+2
+randomization
+interact

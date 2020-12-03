@@ -531,9 +531,17 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '67',
 		'post_name' : 'uoj-228',
-		'post_chinese_name' : 'uoj#228 题解 - 基础数据结构练习题',
-		'type_name' : 'solution',
+		'post_chinese_name' : 'uoj#228 题解 - 基础数据结构练习题 - 兼均摊分析学习笔记',
+		'type_name' : 'algorithm',
 		'last_modi' : '2020-12-03',
 		'tag' : ['amortized-analysis','data-structure',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '68',
+		'post_name' : 'uoj-328',
+		'post_chinese_name' : 'uoj#328 题解 - 【UTR #3】量子破碎',
+		'type_name' : 'solution',
+		'last_modi' : '2020-12-03',
+		'tag' : ['interact','randomization',],
 	};
 })(document);
