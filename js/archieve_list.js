@@ -544,4 +544,12 @@
 		'last_modi' : '2020-12-03',
 		'tag' : ['interact','randomization',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '69',
+		'post_name' : 'noip-2020',
+		'post_chinese_name' : 'NOIP2020 退役记',
+		'type_name' : 'other',
+		'last_modi' : '2020-12-06',
+		'tag' : ['construction',],
+	};
 })(document);
