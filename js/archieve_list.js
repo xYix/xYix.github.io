@@ -552,4 +552,12 @@
 		'last_modi' : '2020-12-06',
 		'tag' : ['construction',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '70',
+		'post_name' : 'string-tech',
+		'post_chinese_name' : '字符串学习笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2020-12-07',
+		'tag' : ['lyndon-tech','string',],
+	};
 })(document);
