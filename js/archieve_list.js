@@ -557,7 +557,15 @@
 		'post_name' : 'string-tech',
 		'post_chinese_name' : '字符串学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-07',
+		'last_modi' : '2020-12-08',
 		'tag' : ['lyndon-tech','string',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '71',
+		'post_name' : 'cf-923-e',
+		'post_chinese_name' : 'CF923E 题解 - Perpetual Subtraction',
+		'type_name' : 'solution',
+		'last_modi' : '2020-12-08',
+		'tag' : ['generating-function','linear-algebra',],
 	};
 })(document);

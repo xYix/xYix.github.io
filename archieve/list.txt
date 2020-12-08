@@ -416,3 +416,9 @@ algorithm
 2
 string
 lyndon-tech
+cf-923-e
+CF923E 题解 - Perpetual Subtraction
+solution
+2
+generating-function
+linear-algebra
