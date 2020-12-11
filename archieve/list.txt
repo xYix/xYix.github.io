@@ -354,10 +354,11 @@ data-structure
 uoj-424
 uoj#424 题解 - 【集训队作业2018】count
 solution
-3
+4
 exc-inc
 combinatorics
 construction
+bijective-proof
 luogu-3565
 luoguP3565 题解 - [POI2014]HOT-Hotels
 solution
@@ -422,3 +423,10 @@ solution
 2
 generating-function
 linear-algebra
+bpp
+bijective proof problems 选做 - 代数方法戒毒笔记
+algorithm
+3
+combinatorics
+construction
+bijective-proof

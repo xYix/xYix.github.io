@@ -389,7 +389,7 @@
 		'post_name' : 'd-and-c',
 		'post_chinese_name' : '分治概说',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-11-29',
+		'last_modi' : '2020-12-12',
 		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -478,7 +478,7 @@
 		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-29',
-		'tag' : ['combinatorics','construction','exc-inc',],
+		'tag' : ['bijective-proof','combinatorics','construction','exc-inc',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '61',
@@ -565,7 +565,15 @@
 		'post_name' : 'cf-923-e',
 		'post_chinese_name' : 'CF923E 题解 - Perpetual Subtraction',
 		'type_name' : 'solution',
-		'last_modi' : '2020-12-08',
+		'last_modi' : '2020-12-09',
 		'tag' : ['generating-function','linear-algebra',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '72',
+		'post_name' : 'bpp',
+		'post_chinese_name' : 'bijective proof problems 选做 - 代数方法戒毒笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2020-12-12',
+		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 })(document);
