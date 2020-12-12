@@ -140,8 +140,7 @@ int main(){
 			PRINT_INDEX_INFO("xjoi/probs/index.html");
 			PRINT_INDEX_INFO("xjoi/fakenews/index.html");
 		PRINT_INDEX_INFO("tags/index.html");
-		for(int i = 0; i <= (post_cnt - 1) / 30; i++)
-			PRINT_INDEX_INFO("archieve/index.html?page=" + to_string(i));
+		PRINT_INDEX_INFO("archieve/index.html");
 		cin.clear();
 		freopen("archieve/list.txt","r",stdin);
 		post_cnt=0;

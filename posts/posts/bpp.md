@@ -117,5 +117,9 @@ title: bijective proof problems 选做 - 代数方法戒毒笔记
 >
 > 然后到这里我就做不下去了……还是 EIls 靠谱。
 >
-> <div style="width:70%;margin:auto"><img src="/images/bpp1.png" alt=""></div>
+> <div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp1.png" alt=""></div>
+>
+> 其实和上面的思路是一样的，但是 EIls 的解释确实更容易联系到右式。剩下的工作已经很显然了。
+>
+> $\blacksquare$
 
