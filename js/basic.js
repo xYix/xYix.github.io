@@ -513,7 +513,7 @@
     //绘制文章内容
     win.WriteBlog = function(data,postid) {
         let Blog = win.createElement('iframe');
-        Blog.opacity = 1.0;
+        Blog.style.opacity = 1.0;
         Blog.frameBorder = 1;
         Blog.className = 'inline-blog';
         Blog.src = '/posts/posts/'+win.archieve_list[postid].post_name+".html";
