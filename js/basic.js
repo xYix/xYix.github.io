@@ -511,10 +511,11 @@
     }
 
     //绘制文章内容
-    win.WriteBlog = function(data,postid){
+    win.WriteBlog = function(data,postid) {
         let Blog = win.createElement('iframe');
-        Blog.frameBorder =1;
-        Blog.className='inline-blog';
+        Blog.opacity = 1.0;
+        Blog.frameBorder = 1;
+        Blog.className = 'inline-blog';
         Blog.src = '/posts/posts/'+win.archieve_list[postid].post_name+".html";
         Blog.scrolling = "no";
         Blog.onload = function () {
