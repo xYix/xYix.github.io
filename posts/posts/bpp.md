@@ -228,7 +228,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-原题要求证明任意奇数的情况，所以评到了 [3]。
+原题要求证明任意奇数的情况，所以评到了 [3]。原话：This is easy if n is prime.
 
 **21.**
 
