@@ -65,8 +65,10 @@
         '避群星而行之旅……那样的故事，明明听起来很好啊。',
         '你的勇敢无人知晓，你的坚持引人发笑。',
         'x义x 的人生目标：1. 机械化身体；2. 符号化思想和情感；3. 去月球。有趣的是，把它们倒过来就是 x义x 最讨厌的东西。',
-        '我什么都没有做错。我什么都没有做错。我什么都没有做错。我什么都没有做错。我什么都没有做错。',
         'Surprising Combinatorial Proof',
+        '回答回答回答回答回答回答回答回答',
+        '我们再尚未出生时便已签下了契约，要在这霓虹的囚笼中待一辈子。报偿是几块狗饼干。',
+        '知不可乎骤得　托遗响于悲风',
         //膜拜
         '愿 hehezhou 指引我们找到救赎',
         '愿 瑇 指引我们找到启示',
@@ -187,19 +189,22 @@
             //蓝色极星
             '夜空を(夜空を) 浮かんで(浮かんで)　キミとまた巡り逢う　ただいま(ただいま) おかえり(おかえり)　ふたりごとは星になって',
             //四有
-            '人の子も どの子も 生まれが総て 宝籤外せば 孤独と無力',
+            '人の子も　どの子も　生まれが総て　宝籤外せば　孤独と無力',
             'THIS IS LIFE (WOW!)',
             '最低の犠牲者に愛を——',
             'どうしてこれをつくったの',
             'どうしてここまでほうっておいたの',
             'どうしてこのこをうんだの',
             'どうしてそこにうまれてしまったの',
+            //bitter choco decoration
+            'bitter choco decoration　兎角言わずにたんと召し上がれ',
+            'bitter choco decoration　食わず嫌いはちゃんと直さなきゃ',
             //String Theocracy
             'Maybe we\'re all cold machines / stuffed in the human skins / with human sins / sewed up by the gods of cities',
             //Wildfire
             'my lungs are failing from inhaling / all the charcoal from this circle / of the hate and the lies',
-            'Deny, Ignite, and Close Your Eyes.',
-            'But I\'m a pyromaniac / and your veins are full of gas you\'re / burning higher, higher / I\'m storming this wildfire',
+            'Deny, Ignite, and Close · Your · Eyes.',
+            'But I\'m a PYROMANIAC / and your veins are full of gas you\'re / burning higher, higher / I\'m storming this wildfire',
             //Echo
             'What the hell\'s going on / can someone tell me please / why am I switching faster than the channels on TV',
             'I am black then I\'m white / No! something isn\'t right / my enemy\'s invisible I don\'t know how to fight',
@@ -207,6 +212,9 @@
             'I\'m gonna burn my house down into an ugly black',
             'I\'m gonna run away now and never look back',
             //Let the maggots sing
+            'Let the maggots sing / A tiny little song / Tiniest voices sang all night long',
+            'Let the maggots sing / No audience to be found / Muted voices sang all life long',
+            'Let the maggots dream / No matter right or wrong / Let us dream on, dream on',
             'Is this where I belong? / The furthest I could have gone?',
         //游戏台词
         'Fate Chosen',
