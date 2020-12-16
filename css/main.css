@@ -1,0 +1,116 @@
+html{
+    font-family: "微软雅黑";
+}
+div{
+}
+h1{
+    color: #555555;
+}
+h2{
+    color: #555555;
+}
+h3{
+    color: #555555;
+}
+h4{
+    color: #555555;
+}
+p{
+    color: #555555;
+}
+a{
+    color: #1A5A40;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.content-block{
+    padding: 0;
+    margin: 20px 20px;
+}
+.sidebar-content-block{
+    padding: 0;
+    margin: 10px 10px;
+}
+.sidebar{
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
+                0 3px 1px -2px rgba(0,0,0,0.06), 
+                0 1px 5px 0 rgba(0,0,0,0.12);
+    box-sizing: border-box;
+    float: left;
+    width: 260px;
+    opacity: 0.85;
+    left: 18px;
+    position: fixed;
+}
+.cover{
+    z-index: -1;
+    width: 2000px;
+    height: 20000px;
+    position: fixed;
+    background-color: #36C48B;
+    left: 0;top: 0;
+}
+.lil-p{
+    font-size: smaller;
+}
+.post-block{
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
+                0 3px 1px -2px rgba(0,0,0,0.06), 
+                0 1px 5px 0 rgba(0,0,0,0.12);
+    box-sizing: border-box;
+    float: left;
+    opacity: 0.85;
+    margin: auto 20px;
+    width: calc(100% - 300px);
+    left: 268px;
+    position: relative;
+}
+.bodybody{
+    position: absolute;
+    margin: 10px 0 19px 0;
+    width: calc(100% - 16px);
+}
+.title{
+    position: relative;
+    margin: 0 0 0 0;
+}
+button{
+    border: 1px outset #1A5A40;
+    border-radius: 5px;
+    font-size: medium;
+    color: #1A5A40;
+}
+.button-block{
+    padding: 10px 1px 24px 1px;
+}
+table{
+    table-layout: fixed;
+}
+th{
+    font-weight: normal;
+    height: 34px;
+}
+td{
+    font-weight: normal;
+    padding: 2px 6px;
+    height: 47px;
+}
+.mycenter{
+    text-align: center;
+}
+.inline-blog{
+    width: 100%;
+    border: 1px outset #36C48B;
+}
+.xjoi-submit{
+    width: 190px;
+    height: 40px;
+    background-color: #36C48B;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
