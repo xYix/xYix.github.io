@@ -6,30 +6,23 @@ title: bijective proof problems 选做
 
 建 议 改 为：代 数 方 法 戒 毒 笔 记
 
-**记号和笔记.**
+**记号和声明.**
 
+- 注意双射意味着**单**和**满**。单往往是显然的，满则等价于唯一可逆。
 - $Y^X=X\rightarrow Y$ 代表从集合 $X$ 到 $Y$ 的映射。
 - $x\mapsto\xi$ 代表一个把元素 $x$ 映射到 $\xi$ 的映射。
 - $C(S,m)$ 代表从 $S$ 的所有大小为 $m$ 的子集。当然也可以看作 $\{f\in\{0,1\}^S,\sum_{i=1}^nf(i)=m\}$。
 - $[n]=\{1,2,...,n\}$。
-<<<<<<< HEAD
 - $\#S$ 表示集合 $S$ 的大小。
 - 向量 $(c_1,c_2,...,c_n)$ 记为 $\mathbf c$。
-=======
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
 - 既然是双射证明题集，此处所有题目的解答**只允许使用组合意义**，准确来说是 **bijective proof**（通过构造从 $S$ 到 $T$ 的双射来证明 $|S|=|T|$）。被禁止的手段包括但不限于
 - - 归纳
   - 递归 / 递推
   - 生成函数
   - 组合恒等式，即使该组合恒等式可以用组合意义证明
-<<<<<<< HEAD
 - ~~事实上很大概率你也用不了（悲）~~
 - 另外还要尽量使证明足够优雅。
 - 有可能会插入一些 EC 里的好题。
-=======
-- 另外还要尽量使证明足够优雅。
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
-- 注意双射意味着**单**和**满**。单往往是显然的，满则等价于唯一可逆。
 
 **题目难度解释.**
 
@@ -206,7 +199,6 @@ title: bijective proof problems 选做
 
 就离谱，这双射是人能想出来的？建议评分 [3+]
 
-<<<<<<< HEAD
 **教程关：置换和循环.**
 
 > **问题.**
@@ -262,8 +254,6 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-=======
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
 **18.[3]**
 
 > **问题.**
@@ -299,19 +289,14 @@ title: bijective proof problems 选做
 
 原题要求证明任意奇数的情况，所以评到了 [3]。原话：This is easy if n is prime.
 
-<<<<<<< HEAD
 被 D 傻了（悲）
 
-**21.[2]**
-=======
-**21.**
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
+**21[2].**
 
 > **题目.**
 >
 > 证明如果 $p$ 是质数，$a^p-a$ 在模 $p$ 意义下为 $0$。
 
-<<<<<<< HEAD
 > **解答.**
 >
 > 大体思路是，选取一个大小为 $a^p-a$ 的集合，然后将其分为数份，每份大小均为 $p$。
@@ -350,10 +335,11 @@ title: bijective proof problems 选做
 > $$
 > \#\{w\in\mathfrak S_n,\text{inv}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k\}
 > $$
+> 换句话说，$\mathbf{inv}$ **和** $\mathbf{maj}$ **是等分布（equidistribution）的。**
 
 **解答.**
 
-此处的证明并不是完全双射的，~~[A direct bijective proof would be of great interest.jpg](https://www.luogu.com.cn/blog/zyxxs/bijective-proof-problems-zhong-di-yi-suo-sheng-cao-ping-lun)~~，这种类型的双射被称为 recursive bijection。
+此处的证明并不是完全双射的，~~[A direct bijective proof would be of great interest.jpg](https://www.luogu.com.cn/blog/zyxxs/bijective-proof-problems-zhong-di-yi-suo-sheng-cao-ping-lun)~~，这种类型的双射被称为 recursive bijection，即构造长度为 $n$ 时的映射需要使用长度为 $n-1$ 时的映射。
 
 > 下面构造双射 $\phi:\{w\in\mathfrak S_n,\text{maj}(w)=k\}\rightarrow\{w\in\mathfrak S_n,\text{inv}(w)=k\}$。
 >
@@ -369,9 +355,18 @@ title: bijective proof problems 选做
 >   - 把所有部分向右循环移一位。
 > - 最后令 $\phi_{n}(w)=w_n$。
 >
+> $\phi$ 显然是可逆的。
+>
 > 接下来我们来展示，$\text{maj}(w)=\text{inv}(\phi(w))$。
 >
-> > 
-
-=======
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
+> > 归纳假设：$\text{maj}((w_1,w_2,...,w_{n-1})=\text{inv}(v)$。
+> >
+> > 若 $w_{n-1}<w_{n}$，我们来证明上面描述的操作恰会使 $v$ 的逆序对数不变。
+> >
+> > - 首先我们不必考虑不同部分之间的影响，因为它们之间根本没有相对位置改变。
+> > - 旋转前的某个长为 $l$ 的部分一定是由 $l-1$ 个 $>w_n$ 的元素和一个 $<w_n$ 的元素构成的。循环移位会使之失去末尾元素与其他所有元素的逆序对，即 $l-1$。
+> > - 对所有部分求和即 $n-1-\#\{i:w_i<w_n\}=\#\{i:w_i>w_n\}$。恰和插入 $w_n$ 代来的影响抵消。
+> >
+> > 不再赘述 $w_{n-1}>w_n$ 的部分，这和上面的证明完全一样。
+>
+> $\blacksquare$
