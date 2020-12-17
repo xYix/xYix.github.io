@@ -6,7 +6,7 @@ title: bijective proof problems 选做
 
 建 议 改 为：代 数 方 法 戒 毒 笔 记
 
-**记号和声明.**
+#### **记号和声明.**
 
 - 注意双射意味着**单**和**满**。单往往是显然的，满则等价于唯一可逆。
 - $Y^X=X\rightarrow Y$ 代表从集合 $X$ 到 $Y$ 的映射。
@@ -24,7 +24,7 @@ title: bijective proof problems 选做
 - 另外还要尽量使证明足够优雅。
 - 有可能会插入一些 EC 里的好题。
 
-**题目难度解释.**
+#### **题目难度解释.**
 
 - $+$ 和 $-$ 表示微调。
 
@@ -35,7 +35,7 @@ title: bijective proof problems 选做
 - [5]：尚未解决。（草）
 - 此处难度皆标注以题单中标注的难度。
 
-**5.[2]**
+#### **5.[2]**
 
 > **问题.**
 >
@@ -59,7 +59,7 @@ title: bijective proof problems 选做
 
 话说这不应该是 [1]？
 
-**12.[2-]**
+#### **12.[2-]**
 
 > **问题.**
 >
@@ -77,7 +77,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**13.[3]**
+#### **13.[3]**
 
 > **问题.**
 >
@@ -109,7 +109,7 @@ title: bijective proof problems 选做
 
 有趣的是一位老哥头铁地直接构造了一个从 $S$ 到 $T$ 的[双射](https://math.stackexchange.com/a/72661)。
 
-**14.[3-]**
+#### **14.[3-]**
 
 > **问题.**
 >
@@ -144,7 +144,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**15.[3-]**
+#### **15.[3-]**
 
 > **问题.**
 >
@@ -169,7 +169,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**16.[3-]**
+#### **16.[3-]**
 
 > **问题.**
 >
@@ -199,7 +199,7 @@ title: bijective proof problems 选做
 
 就离谱，这双射是人能想出来的？建议评分 [3+]
 
-**教程关：置换和循环.**
+#### **教程关：置换和循环.**
 
 > **问题.**
 >
@@ -228,7 +228,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**EC 117.[2+]**
+#### **EC 117.[2+]**
 
 > **问题.**
 >
@@ -242,7 +242,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**EC 120.[2+]**
+#### **EC 120.[2+]**
 
 > **问题.**
 >
@@ -254,7 +254,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**18.[3]**
+#### **18.[3]**
 
 > **问题.**
 >
@@ -291,7 +291,7 @@ title: bijective proof problems 选做
 
 被 D 傻了（悲）
 
-**21[2].**
+#### **21[2].**
 
 > **题目.**
 >
@@ -307,7 +307,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**22.a.[2]**
+#### **22.a.[2]**
 
 > **题目.**
 >
@@ -321,7 +321,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-**教程关：逆序对，Descents，和 Major index.**
+#### **教程关：逆序对，Descents，和 Major index（上）.**
 
 > **定义.**
 >
@@ -331,11 +331,10 @@ title: bijective proof problems 选做
 
 > **题目.**
 >
-> 证明
+> 证明，$\mathbf{inv}$ **和** $\mathbf{maj}$ **是等分布（equidistribution）的。**换句话说
 > $$
 > \#\{w\in\mathfrak S_n,\text{inv}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k\}
 > $$
-> 换句话说，$\mathbf{inv}$ **和** $\mathbf{maj}$ **是等分布（equidistribution）的。**
 
 **解答.**
 
@@ -359,6 +358,8 @@ title: bijective proof problems 选做
 >
 > 接下来我们来展示，$\text{maj}(w)=\text{inv}(\phi(w))$。
 >
+> > 对 $n=1$ 显然成立。
+> >
 > > 归纳假设：$\text{maj}((w_1,w_2,...,w_{n-1})=\text{inv}(v)$。
 > >
 > > 若 $w_{n-1}<w_{n}$，我们来证明上面描述的操作恰会使 $v$ 的逆序对数不变。
@@ -370,3 +371,16 @@ title: bijective proof problems 选做
 > > 不再赘述 $w_{n-1}>w_n$ 的部分，这和上面的证明完全一样。
 >
 > $\blacksquare$
+
+#### **教程关：逆序对，Descents，和 Major index（下）.**
+
+> **题目.**
+>
+> 证明，$\mathbf{inv}$ **和** $\mathbf{maj}$ **是对称交分布（symmetric joint distribution）的。**换句话说
+> $$
+> \#\{w\in\mathfrak S_n,\text{inv}(w)=j,\text{maj}(w)=k\}=\#\{w\in\mathfrak S_n,\text{inv}(w)=k,\text{maj}(w)=j\}
+> $$
+
+> **证明.**
+>
+> 
