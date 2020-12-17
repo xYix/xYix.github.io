@@ -571,15 +571,9 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '72',
 		'post_name' : 'bpp',
-<<<<<<< HEAD
 		'post_chinese_name' : 'bijective proof problems 选做',
 		'type_name' : 'algorithm',
 		'last_modi' : '2020-12-13',
-=======
-		'post_chinese_name' : 'bijective proof problems 选做 - 代数方法戒毒笔记',
-		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-12',
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 })(document);
