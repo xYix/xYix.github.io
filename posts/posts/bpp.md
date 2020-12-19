@@ -6,7 +6,7 @@ title: bijective proof problems 选做
 
 建 议 改 为：代 数 方 法 戒 毒 笔 记
 
-#### **记号和声明.**
+### **记号和声明.**
 
 - 注意双射意味着**单**和**满**。单往往是显然的，满则等价于唯一可逆。
 - $Y^X=X\rightarrow Y$ 代表从集合 $X$ 到 $Y$ 的映射。
@@ -23,19 +23,21 @@ title: bijective proof problems 选做
 - ~~事实上很大概率你也用不了（悲）~~
 - 另外还要尽量使证明足够优雅。
 - 有可能会插入一些 EC 里的好题。
+- 教程关皆是 EC 里的叙述，加入的原因是：如果读者不熟悉这部分的双射和结论，则很可能对下面的题目掉线。
 
-#### **题目难度解释.**
+### **题目难度解释.**
 
 - $+$ 和 $-$ 表示微调。
-
 - [1]：显然或直接。
 - [2]：困难或比较技巧性。[2+] 是应当给研究生留的作业题的难度上界。 
-- [3]：极其困难。一些学生可能能做出 [3-]。几乎没有人可以在合理的时间内做出 [3]。
+- [3]：极其困难。一些学生可能能做出 [3-]。几乎没有人可以在合理的时间内做出 [3]。（有时候用相对简单的方法做出 [3] 级题是可以发论文的……）
 - [4]：令人害怕地困难。
 - [5]：尚未解决。（草）
 - 此处难度皆标注以题单中标注的难度。
 
-#### **5.[2]**
+## 基础部分
+
+### **5.[2]**
 
 > **问题.**
 >
@@ -59,7 +61,7 @@ title: bijective proof problems 选做
 
 话说这不应该是 [1]？
 
-#### **12.[2-]**
+### **12.[2-]**
 
 > **问题.**
 >
@@ -77,7 +79,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-#### **13.[3]**
+### **13.[3]**
 
 > **问题.**
 >
@@ -109,7 +111,7 @@ title: bijective proof problems 选做
 
 有趣的是一位老哥头铁地直接构造了一个从 $S$ 到 $T$ 的[双射](https://math.stackexchange.com/a/72661)。
 
-#### **14.[3-]**
+### **14.[3-]**
 
 > **问题.**
 >
@@ -144,7 +146,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-#### **15.[3-]**
+### **15.[3-]**
 
 > **问题.**
 >
@@ -169,7 +171,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-#### **16.[3-]**
+### **16.[3-]**
 
 > **问题.**
 >
@@ -199,7 +201,25 @@ title: bijective proof problems 选做
 
 就离谱，这双射是人能想出来的？建议评分 [3+]
 
-#### **教程关：置换和循环.**
+### **66.[*]**
+
+> **题目.**
+>
+> 证明，
+> $$
+> \dfrac{(2m)!(2n)!}{m!n!(m+n)!}
+> $$
+> 总是整数。
+>
+> $\blacksquare$
+
+> **解答.**
+>
+> 这个问题在 2014 年得到了[解决](https://arxiv.org/abs/1403.5246)。
+
+## 置换和循环
+
+### **教程关：置换和循环.**
 
 > **问题.**
 >
@@ -216,7 +236,7 @@ title: bijective proof problems 选做
 > $$
 > n!=\#\mathfrak S^{\mathbf c}_{[n]}\prod_{i}i^{c_i}c_i!
 > $$
-> 首先我们先展示一个从 $\mathfrak S_{[n]}$ 到自身的双射，被称为**基本双射**。
+> 首先我们先展示一个从 $\mathfrak S_{[n]}$ 到自身的双射，被称为**基本双射**。ctrl+F 搜索本网页的“基本双射”，你就会知道为何它配得上如此称号。
 >
 > > 将 $w$ 的所有循环写为以其最大元素开头，称为代表元素，然后以代表元素的大小排列各循环。最后删掉括号。
 > >
@@ -228,7 +248,22 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-#### **EC 117.[2+]**
+### **51.[3]**
+
+> **题目.**
+>
+> 记 $D(n)$ 是 $n$ 的错排数，证明：
+> $$
+> D(n)=nD(n-1)+(-1)^n
+> $$
+
+> **解答.**
+>
+> 比较复杂，参见：[A bijective proof of a derangement recurrence](https://www.fq.math.ca/Papers1/55-5/BenjaminOrnstein.pdf)。
+>
+> $\blacksquare$
+
+### **57. && EC 117.[2+]**
 
 > **问题.**
 >
@@ -242,7 +277,7 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-#### **EC 120.[2+]**
+### **EC 120.[2+]**
 
 > **问题.**
 >
@@ -254,7 +289,36 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
-#### **18.[3]**
+### **58.**
+
+> **问题.**
+>
+> - (a)[2] 令 $w$ 是 $[n]$ 的随机排列，证明，$1,2$ 在同一个循环的概率为 $\dfrac 12$。
+>
+> - (b)[2+] 推广 (a) 至下面的结论：$1,...,\lambda_1$ 在同一个循环，$\lambda_1+1,...,\lambda_1+\lambda_2$ 在和 $1,...,\lambda_1$ 不同的另一个循环，……，一直到 $\lambda_l$，其出现概率为
+>
+> - $$
+>   P_{\lambda}=\dfrac{\prod(\lambda-1)!}{(\sum \lambda)!}
+>   $$
+
+> **解答.**
+>
+> 对于 [a]，解法是显然的。
+>
+> - 构造映射 $\phi$ 为交换 $w_1$ 和 $w_2$。它把 $1,2$ 在同一个循环的排列双射至 $1,2$ 不在同一个循环的排列。
+>
+> 对于 [b]，我们还是考虑**基本双射**。为了方便稍稍修改其为：把最小的元素固定为循环开头，把循环按最小元素降序排列。
+>
+> - 回忆 [a]。满足 [a] 的条件等价于 $1$ 在 $2$ 之前出现。
+> - 思考如何扩展到此处：只需要：
+> - - $2,...,\lambda$ 皆在 $1$ 之后出现；
+>   - $\lambda_1+2,...,\lambda_1+\lambda_2$ 皆在 $\lambda_1+1$ 之后出现；且 $\lambda_1+1,...,\lambda_1+\lambda_2$ 皆在 $1$ 之前出现；
+>   - ……
+> - 剩下的工作已经显然了。
+
+## 置换和等价类
+
+### **18.[3]**
 
 > **问题.**
 >
@@ -293,7 +357,7 @@ title: bijective proof problems 选做
 
 UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一般情况的[双射](https://arxiv.org/abs/1802.03507)。~~为什么近年来发数数论文的看名字全是中国人或华裔，难道这是血统加成？~~
 
-#### **21[2].**
+### **21[2].**
 
 > **题目.**
 >
@@ -309,7 +373,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
-#### **22.a.[2]**
+### **22.a.[2]**
 
 > **题目.**
 >
@@ -323,7 +387,9 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
-#### **教程关：逆序对，Descents，和 Major index（上）.**
+## 排列上的统计（statistics）
+
+### **教程关：逆序对，Descents，和 Major index（上）.**
 
 > **定义.**
 >
@@ -338,10 +404,10 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > \#\{w\in\mathfrak S_n,\text{inv}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k\}
 > $$
 
-**解答.**
-
 此处的证明并不是完全双射的，~~[A direct bijective proof would be of great interest.jpg](https://www.luogu.com.cn/blog/zyxxs/bijective-proof-problems-zhong-di-yi-suo-sheng-cao-ping-lun)~~，这种类型的双射被称为 recursive bijection，即构造长度为 $n$ 时的映射需要使用长度为 $n-1$ 时的映射。
 
+> **解答.**
+>
 > 下面构造双射 $\phi:\{w\in\mathfrak S_n,\text{maj}(w)=k\}\rightarrow\{w\in\mathfrak S_n,\text{inv}(w)=k\}$。
 >
 > 取 $\text{maj}(w)=k$ 的 $w$。令 $v=\phi((w_1,w_2,...,w_{n-1}))$。
@@ -374,17 +440,150 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
-#### **教程关：逆序对，Descents，和 Major index（下）.**
+### **教程关：逆序对，Descents，和 Major index（中）.**
+
+> **定义.**
+>
+> 记 $\text{ID}(w)=D(w^{-1})$。对于 $w$ 并非排列的情况必须稍稍声明一下：只需要认为序列 $(w_1,w_2,...,w_n)$ 描述了函数 $f(\min w)=w_1,...,f(\max w)=w_n$ 即可。
 
 > **题目.**
 >
-> 证明，$\mathbf{inv}$ **和** $\mathbf{maj}$ **是对称交分布（symmetric joint distribution）的。**换句话说
+> 证明，上文的 $\phi$ 是保 $\text{ID}$ 的。也即 $\text{ID}(w)=\text{ID}(\phi(w))$。
+
+> **解答.**
+>
+> 事实上，$\text{ID}$ 还可如此解释：
+>
+> - 找到 $w$ 中的 $1$，然后往后查找找 $2$，之后找 $3$……如果根本不存在就跳过。
+>- 如果找到了 $n$ 便立即结束。
+> - 每当没找到（即下一个元素的位置小于刚读的元素的位置）便把当前已经找到的元素个数写下并回到 $w$ 的开头。写下的集合便是 $\text{ID}(w)$。
+> 
+> 该解释（下称为阅读过程）和 $\text{ID}$ 的基础定义显然是直接一致的。不过它的确更直观。
+>
+> 下面我们开始证明原命题。
+>
+> 对 $n=1$ 显然成立。
+>
+> 归纳假设：$\text{ID}((w_1,w_2,...,w_{n-1}))=\text{ID}(v)$。
+> 
+> 当然我们还是要分 $w_{n-1}$ 是否小于 $w_n$ 来讨论。
+> 
+> 若 $w_{n-1}<w_n$：
+> 
+> - 显然 $w$ 和 $\phi(w)$ 在读到 $w_n$ 之前的行为都是完全一致的：这部分有没有 $w_n$ 没区别。
+> - 则我们读到第一个小于 $w_n$ 的元素后（这个元素总是存在，毕竟有 $w_{n-1}$）一定能读到 $w_n$，这时我们会回到序列的开头。对于 $\phi_n(w)$ 也是如此。我们还需要核对接下来的行为。
+> - 注意到 $\phi_n(w)$ 根本没有改变 $w_i>w_n$ 的元素之间的相对顺序，于是便得证了。
+> 
+> 而若 $w_{n-1}>w_n$，注意到阅读是可反向的（这不是说可逆，而是说我们从 $n$ 开始反向查找得到的结果相同），我们反着读即可。
+> 
+> $\blacksquare$
+
+### **教程关：逆序对，Descents，和 Major index（下）.**
+
+> **定义.**
+>
+> 记 $\text{imaj}(w)=\text{maj}(w^{-1})$。
+
+> **题目.**
+>
+> 证明，$\mathbf{inv}$ **和** $\mathbf{maj}$ **和** $\mathbf{imaj}$ **是两两交对称分布（symmetric joint distribution）的。**换句话说
 > $$
 > \#\{w\in\mathfrak S_n,\text{inv}(w)=j,\text{maj}(w)=k\}=\#\{w\in\mathfrak S_n,\text{inv}(w)=k,\text{maj}(w)=j\}
 > $$
+>
+> $$
+> \#\{w\in\mathfrak S_n,\text{inv}(w)=j,\text{imaj}(w)=k\}=\#\{w\in\mathfrak S_n,\text{inv}(w)=k,\text{imaj}(w)=j\}
+> $$
+>
+> $$
+> \#\{w\in\mathfrak S_n,\text{maj}(w)=j,\text{imaj}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k,\text{imaj}(w)=j\}
+> $$
 
-> **证明.**
+> **解答.**
 >
-> 记 $\text{ID}(w)=D(w^{-1})$。对于 $w$ 并非排列的情况必须稍稍声明一下：只需要认为序列 $(w_1,w_2,...,w_n)$ 描述了函数 $f(\min w)=w_1,...,f(\max w)=w_n$ 即可。
+> 我们首先来说明 $\text{maj}$ 和 $\text{imaj}$ 是交对称分布的：显然映射 $w\mapsto w^{-1}$ 可反转 $\text{maj}$ 和 $\text{imaj}$。
 >
-> 我们先来证明关于刚才的映射 $\phi$ 的一个奇妙性质：$\phi$ 是保 $\text{ID}$ 的。
+> 而 $\phi$ 是保 $\text{ID}$ 的，故当然是保 $\text{maj}$ 的。于是便立即得证。
+>
+> $\blacksquare$
+
+### **63.[2+] && 64.[2-]**
+
+> **题目.**
+>
+> 63. 定义一个排列的 **excedance** 是 $w_i>i$ 的位置的数量。证明，excedance 的数量和 descents 的数量是等分布的。
+>
+> 64. 证明，一个排列的 **weak excedance**（$w_i\ge i$ 的位置）的数量满足
+>
+> $$
+> \#\{w\in\mathfrak S_n,\text{wexc}(w)=k\}=\#\{w\in\mathfrak S_n,\text{des}(w)=k-1\}
+> $$
+
+> **解答.**
+>
+> 考虑 $w$ 在基本双射下的像 $w'$。容易发现，$w'(i)<w'(i+1)$ 当且仅当：
+>
+> - $w(w'(i))\neq w'(i+1)$（$w'(i)$ 是循环的结尾）
+> - 或 $w(w'(i))=w'(i+1)\land w'(i+1)>w'(i)$。
+>
+> 也就等价于，$w'(i)\le w(w'(i))$。
+>
+> 而反过来说，$w'(i)\le w(w'(i))$ 当且仅当 $w'(i)<w'(i+1)\lor {\color{red}i=n}$。
+>
+> 总结：
+> $$
+> n-\text{des}(w')=\text{wexc}(w)
+> $$
+> 至此我们证明了，
+> $$
+> \#\{w\in\mathfrak S_n,\text{wexc}(w)=k\}=\#\{w\in\mathfrak S_n,\text{des}(w)=n-k\}
+> $$
+> 注意到 reverse 整个序列会使 $\text{des}(w)\mapsto n-1-\text{des}(w)$，我们已然证明了 64。
+>
+> 至于 63 也很显然，我们只需要考虑双射 $\phi_i(w)=n+1-w_{n+1-i}$，它使得
+> $$
+> n-\text{wexc}(w)=\text{exc}(\phi(w))
+> $$
+> $\blacksquare$
+
+### **教程关：Descents 和 $\mathbf w$- 兼容性（compatibility）（上）.**
+
+> **定义.**
+>
+> 称函数 $f:[n]\rightarrow\mathbb N$ 是 **$\mathbf w$- 兼容的**，如果：
+>
+> - $f(w_1)\ge f(w_2)\ge ...\ge f(w_n)$；
+> - 若有 $w_i>w_{i+1}$ 则必须有 $f(w_i)>f(w_{i+1})$。
+
+> **题目.**
+>
+> 证明，任意函数 $f:[n]\rightarrow\mathbb N$ 总是与且只与某个排列兼容。
+
+> **解答.**
+>
+> 首先我们可以靠值把 $f$ 分成数段。
+>
+> 考虑段 $f(i_1)=f(i_2)=...=f(i_l)$。显然，$\{i_1,i_2,...,i_l\}$ 是一段连续的 $\{w_l,w_{l+1},...,w_r\}$。我们又注意到段内 $w_i<w_{i+1}$，这便构造了一个唯一的与 $f$ 兼容的排列。
+>
+> $\blacksquare$
+
+### **教程关：Descents 和 $\mathbf w$- 兼容性（compatibility）（下）.**
+
+> **定义.**
+>
+> 定义 $\mathcal A_m(w)=\{\}$
+
+### **65.[3-]**
+
+> **题目.**
+>
+> 记
+> $$
+> A(n,k)=\#\{w\in\mathfrak S_n,\text{wexc}(w)=k\}
+> $$
+> 证明：
+> $$
+> \sum_{n\ge 0}n^kx^n=\dfrac{\sum_{i=1}^nA(n,k)x^n}{(1-x)^{k+1}}
+> $$
+
+此题在 bijective proof problems 中出现时几乎没有给出关于 w- 兼容性的介绍（只给了一个简短的 note 介绍定义），故评到了 [3-]。
