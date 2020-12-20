@@ -2,10 +2,47 @@
 title: bijective proof problems 选做
 ---
 
+<style>
+    button{
+        border: 1px outset #1A5A40;
+        border-radius: 5px;
+        font-size: medium;
+        color: #1A5A40;
+        background-color: #ffffff;
+    }
+</style>
 [pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
 
 建 议 改 为：代 数 方 法 戒 毒 笔 记
 
+<script>
+    document.get_button_click = function(blockid) {
+        return function() {
+            let my_blockquote = document.getElementsByTagName("blockquote")[blockid];
+            if(my_blockquote.style.display === 'none') {
+                my_blockquote.style.display = "block";
+                this.childNodes[0].textContent = '-隐藏解答';
+            }
+            else {
+                my_blockquote.style.display = 'none';
+                this.childNodes[0].textContent = '+显示解答';
+            }
+        };
+	};
+    document.last_block = -1;
+    document.new_button = function(blockid) {
+        document.last_block = blockid = document.last_block + blockid;
+        let my_button = document.createElement('button');
+        	let button_content = document.createElement('span');
+        	button_content.style = 'font-family: consolas';
+        	button_content.textContent = '+显示解答';
+        	my_button.appendChild(button_content);
+       	my_button.onmouseover = function(){this.style = 'background-color: #dddddd;cursor: pointer;';};
+        my_button.onmouseout = function(){this.style = 'background-color: #ffffff;cursor: pointer;';};
+        my_button.onclick = document.get_button_click(blockid);
+        document.body.childNodes[1].appendChild(my_button);
+	};
+</script>
 ### **记号和声明.**
 
 - 注意双射意味着**单**和**满**。单往往是显然的，满则等价于唯一可逆。
@@ -15,7 +52,7 @@ title: bijective proof problems 选做
 - $[n]=\{1,2,...,n\}$。
 - $\#S$ 表示集合 $S$ 的大小。
 - 向量 $(c_1,c_2,...,c_n)$ 记为 $\mathbf c$。
-- 既然是双射证明题集，此处所有题目的解答**只允许使用组合意义**，准确来说是 **bijective proof**（通过构造从 $S$ 到 $T$ 的双射来证明 $|S|=|T|$）。被禁止的手段包括但不限于
+- 既然是双射证明题集，此处所有问题的解答**只允许使用组合意义**，准确来说是 **bijective proof**（通过构造从 $S$ 到 $T$ 的双射来证明 $|S|=|T|$）。被禁止的手段包括但不限于
 - - 归纳
   - 递归 / 递推
   - 生成函数
@@ -23,9 +60,9 @@ title: bijective proof problems 选做
 - ~~事实上很大概率你也用不了（悲）~~
 - 另外还要尽量使证明足够优雅。
 - 有可能会插入一些 EC 里的好题。
-- 教程关皆是 EC 里的叙述，加入的原因是：如果读者不熟悉这部分的双射和结论，则很可能对下面的题目掉线。
+- 教程关皆是 EC 里的叙述，加入的原因是：如果读者不熟悉这部分的双射和结论，则很可能对下面的问题掉线。
 
-### **题目难度解释.**
+### **问题难度解释.**
 
 - $+$ 和 $-$ 表示微调。
 - [1]：显然或直接。
@@ -47,6 +84,10 @@ title: bijective proof problems 选做
 > - $S_i$ 两两不交。
 > - $\bigcap S=\varnothing$。
 
+<script>
+  	document.new_button(2);
+</script>
+
 > **解答.**
 >
 > 第一问：容易建立从 $\{1\sim k +1\}^{[n]}$ 到指定集合的双射：$f(i)$ 表示第 $i$ 个元素首次出现是在 $S_{f(i)}$，$f(i)=k+1$ 表示从未出现。
@@ -57,6 +98,9 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 开胃小菜，没啥好说的。
 
 话说这不应该是 [1]？
@@ -71,6 +115,9 @@ title: bijective proof problems 选做
 > $$
 > 不妨假定 $x$ 为正整数。（因为等式两边都是关于 $x$ 的有限次多项式，证明了正整数的情况也就证明了一般情况）
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 考虑集合 $C([x+n+1],n)$，我们的目的是将其元素 $\mathbf S$ 用如下二元组描述：$(k, S)$，其中 $S\in C(x+k,k)$。
@@ -78,6 +125,10 @@ title: bijective proof problems 选做
 > 这一双射是显然的，我们只需要令 $n-k$ 等于 $\mathbf S$ 中末尾那一长串 $1$ 的长度，$S$ 为剩下的 $[x+k]$ 的情况。注意 $\mathbf S(x+k+1)$ 必定为 $0$，不需要也不能用 $S$ 描述。
 >
 > $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 ### **13.[3]**
 
@@ -88,6 +139,9 @@ title: bijective proof problems 选做
 > \sum_{k=0}^n{2k\choose k}{2(n-k)\choose n-k}=4^n
 > $$
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 注意到 $2n\choose n$ 是从 $(0,0)$ 走到 $(n,n)$，每一步只能向上一步或是向右一步的方案数（该双射是显然的）。
@@ -108,8 +162,12 @@ title: bijective proof problems 选做
 > > 剩下只是一些处理组合数的工作，略去不谈。
 >
 > $\blacksquare$
+> 
+> 有趣的是一位老哥头铁地直接构造了一个从 $S$ 到 $T$ 的[双射](https://math.stackexchange.com/a/72661)。
 
-有趣的是一位老哥头铁地直接构造了一个从 $S$ 到 $T$ 的[双射](https://math.stackexchange.com/a/72661)。
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 ### **14.[3-]**
 
@@ -119,6 +177,10 @@ title: bijective proof problems 选做
 > $$
 > \sum_{i=0}^{\min(a,b)}{x+y+i\choose i}{y\choose a-i}{x\choose b-i}={x+a\choose b}{y+b\choose a}
 > $$
+
+<script>
+  	document.new_button(3);
+</script>
 
 > **解答.**
 >
@@ -146,6 +208,9 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 ### **15.[3-]**
 
 > **问题.**
@@ -155,6 +220,9 @@ title: bijective proof problems 选做
 > \sum_{k=0}^n{n\choose k}^2x^k=\sum_{k=0}^n{2n-k\choose n-k,n-k,k}(x-1)^k
 > $$
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 等式左边可理解为三元组 $(S,T,f)$，其中 $S,T\subseteq [n]$ 且大小相等，$f$ 是从 $S$ 到 $[x]$ 的映射。
@@ -171,6 +239,10 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **16.[3-]**
 
 > **问题.**
@@ -180,6 +252,9 @@ title: bijective proof problems 选做
 > \sum_{i+j+k=n}{i+j\choose i}{j+k\choose j}{k+i\choose k}=\sum_{r=0}^n{2r\choose r}
 > $$
 
+<script>
+  	document.new_button(3);
+</script>
 > **解答.**
 >
 > 不会，贺了题解。
@@ -199,11 +274,15 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 就离谱，这双射是人能想出来的？建议评分 [3+]
 
 ### **66.[*]**
 
-> **题目.**
+> **问题.**
 >
 > 证明，
 > $$
@@ -213,9 +292,16 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 这个问题在 2014 年得到了[解决](https://arxiv.org/abs/1403.5246)。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 ## 置换和循环
 
@@ -228,9 +314,12 @@ title: bijective proof problems 选做
 > {n\choose c_1,c_2,...,c_n}\prod_{i}\dfrac{1}{i^{c_i}}
 > $$
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
-> 记题目描述中的所有置换构成集合 $\mathfrak S^{\mathbf c}_{[n]}$，这种置换称为类型为 $\mathbf c$ 的置换。
+> 记问题描述中的所有置换构成集合 $\mathfrak S^{\mathbf c}_{[n]}$，这种置换称为类型为 $\mathbf c$ 的置换。
 >
 > 故而只需要证明
 > $$
@@ -248,20 +337,31 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **51.[3]**
 
-> **题目.**
+> **问题.**
 >
 > 记 $D(n)$ 是 $n$ 的错排数，证明：
 > $$
 > D(n)=nD(n-1)+(-1)^n
 > $$
 
+<script>
+  	document.new_button(4);
+</script>
 > **解答.**
 >
 > 比较复杂，参见：[A bijective proof of a derangement recurrence](https://www.fq.math.ca/Papers1/55-5/BenjaminOrnstein.pdf)。
 >
 > $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 ### **57. && EC 117.[2+]**
 
@@ -269,6 +369,9 @@ title: bijective proof problems 选做
 >
 > 从 $[n]$ 的所有排列中等概率随机一个排列 $w$，求 $1$ 所在循环大小为 $k$ 的概率。
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 答案为：与 $k$ 无关，皆为 $\frac 1n$。
@@ -277,17 +380,28 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **EC 120.[2+]**
 
 > **问题.**
 >
 > 令 $E_k(n)$ 为 $[n]$ 的排列中长度为 $k$ 的循环数量的期望。证明，$E_k(n)=\dfrac{1}{k}$。
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 由 117 直接得 $E_k(n)=\dfrac 1k\sum_{i=1}P(i 所在循环大小为 k)=\dfrac 1k$。
 >
 > $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 ### **58.**
 
@@ -301,6 +415,9 @@ title: bijective proof problems 选做
 >   P_{\lambda}=\dfrac{\prod(\lambda-1)!}{(\sum \lambda)!}
 >   $$
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 对于 [a]，解法是显然的。
@@ -316,6 +433,10 @@ title: bijective proof problems 选做
 >   - ……
 > - 剩下的工作已经显然了。
 
+<script>
+    document.getElementsByTagName("blockquote")[27].style.display="none";
+</script>
+
 ## 置换和等价类
 
 ### **18.[3]**
@@ -325,9 +446,11 @@ title: bijective proof problems 选做
 > 证明，当 $n$ 为质数时，下面两个集合的元素个数相等。
 >
 > - 所有满足其和在模 $n$ 意义下为 $0$ 的 $[0...n-1]$ 的子集
->
-> - 所有有 $n$ 个珠子的黑白项链在旋转变换下的等价类
+>- 所有有 $n$ 个珠子的黑白项链在旋转变换下的等价类
 
+<script>
+  	document.new_button(2);
+</script>
 > **解答.**
 >
 > 我们来证明两者皆是 $\dfrac{2(n-1)+2^n}n$。
@@ -351,6 +474,10 @@ title: bijective proof problems 选做
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 原题要求证明任意奇数的情况，所以评到了 [3]。原话：This is easy if n is prime.
 
 被 D 傻了（悲）
@@ -359,9 +486,13 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 
 ### **21[2].**
 
-> **题目.**
+> **问题.**
 >
 > 证明如果 $p$ 是质数，$a^p-a$ 在模 $p$ 意义下为 $0$。
+
+<script>
+  	document.new_button(4);
+</script>
 
 > **解答.**
 >
@@ -373,11 +504,18 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 ### **22.a.[2]**
 
-> **题目.**
+> **问题.**
 >
 > 证明，如果 $p$ 是质数，那么 ${2p\choose p}-2$ 被 $p^2$ 整除。
+
+<script>
+  	document.new_button(2);
+</script>
 
 > **解答.**
 >
@@ -387,6 +525,9 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 ## 排列上的统计（statistics）
 
 ### **教程关：逆序对，Descents，和 Major index（上）.**
@@ -397,12 +538,16 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > - 一个排列（准确来说可直接推广至元素不重复的序列）的 Descents（可译为“下降”）Set 是集合 $D(w)=\{w_i>w_{i+1},i\in[n-1]\}$。
 > - $\text{maj}(w)=\sum_{i\in D(w)}i$。
 
-> **题目.**
+> **问题.**
 >
 > 证明，$\mathbf{inv}$ **和** $\mathbf{maj}$ **是等分布（equidistribution）的。**换句话说
 > $$
 > \#\{w\in\mathfrak S_n,\text{inv}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k\}
 > $$
+
+<script>
+  	document.new_button(3);
+</script>
 
 此处的证明并不是完全双射的，~~[A direct bijective proof would be of great interest.jpg](https://www.luogu.com.cn/blog/zyxxs/bijective-proof-problems-zhong-di-yi-suo-sheng-cao-ping-lun)~~，这种类型的双射被称为 recursive bijection，即构造长度为 $n$ 时的映射需要使用长度为 $n-1$ 时的映射。
 
@@ -410,7 +555,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > 下面构造双射 $\phi:\{w\in\mathfrak S_n,\text{maj}(w)=k\}\rightarrow\{w\in\mathfrak S_n,\text{inv}(w)=k\}$。
 >
-> 取 $\text{maj}(w)=k$ 的 $w$。令 $v=\phi((w_1,w_2,...,w_{n-1}))$。
+> 令 $v=\phi((w_1,w_2,...,w_{n-1}))$。
 >
 > 在 $v$ 的基础上如此构造 $\phi(w)$：
 >
@@ -440,15 +585,23 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **教程关：逆序对，Descents，和 Major index（中）.**
 
 > **定义.**
 >
 > 记 $\text{ID}(w)=D(w^{-1})$。对于 $w$ 并非排列的情况必须稍稍声明一下：只需要认为序列 $(w_1,w_2,...,w_n)$ 描述了函数 $f(\min w)=w_1,...,f(\max w)=w_n$ 即可。
 
-> **题目.**
+> **问题.**
 >
 > 证明，上文的 $\phi$ 是保 $\text{ID}$ 的。也即 $\text{ID}(w)=\text{ID}(\phi(w))$。
+
+<script>
+  	document.new_button(4);
+</script>
 
 > **解答.**
 >
@@ -478,13 +631,17 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > 
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **教程关：逆序对，Descents，和 Major index（下）.**
 
 > **定义.**
 >
 > 记 $\text{imaj}(w)=\text{maj}(w^{-1})$。
 
-> **题目.**
+> **问题.**
 >
 > 证明，$\mathbf{inv}$ **和** $\mathbf{maj}$ **和** $\mathbf{imaj}$ **是两两交对称分布（symmetric joint distribution）的。**换句话说
 > $$
@@ -499,6 +656,10 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > \#\{w\in\mathfrak S_n,\text{maj}(w)=j,\text{imaj}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k,\text{imaj}(w)=j\}
 > $$
 
+<script>
+  	document.new_button(3);
+</script>
+
 > **解答.**
 >
 > 我们首先来说明 $\text{maj}$ 和 $\text{imaj}$ 是交对称分布的：显然映射 $w\mapsto w^{-1}$ 可反转 $\text{maj}$ 和 $\text{imaj}$。
@@ -507,9 +668,13 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **63.[2+] && 64.[2-]**
 
-> **题目.**
+> **问题.**
 >
 > 63. 定义一个排列的 **excedance** 是 $w_i>i$ 的位置的数量。证明，excedance 的数量和 descents 的数量是等分布的。
 >
@@ -518,6 +683,10 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > $$
 > \#\{w\in\mathfrak S_n,\text{wexc}(w)=k\}=\#\{w\in\mathfrak S_n,\text{des}(w)=k-1\}
 > $$
+
+<script>
+  	document.new_button(2);
+</script>
 
 > **解答.**
 >
@@ -546,6 +715,10 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > $$
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **教程关：Descents 和 $\mathbf w$- 兼容性（compatibility）（上）.**
 
 > **定义.**
@@ -555,9 +728,13 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > - $f(w_1)\ge f(w_2)\ge ...\ge f(w_n)$；
 > - 若有 $w_i>w_{i+1}$ 则必须有 $f(w_i)>f(w_{i+1})$。
 
-> **题目.**
+> **问题.**
 >
 > 证明，任意函数 $f:[n]\rightarrow\mathbb N$ 总是与且只与某个排列兼容。
+
+<script>
+  	document.new_button(3);
+</script>
 
 > **解答.**
 >
@@ -567,15 +744,30 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > $\blacksquare$
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 ### **教程关：Descents 和 $\mathbf w$- 兼容性（compatibility）（下）.**
 
 > **定义.**
 >
-> 定义 $\mathcal A_m(w)=\{\}$
+> - $\mathcal A(w)=\{f:[n]\rightarrow \mathbb N,f\ 兼容于\ w\}$。
+>
+> - $\mathcal A_m(w)=\{f\in[n]^{[m]},f\ 兼容于\ w\}$。
+
+> **问题.**
+>
+> 证明，
+> $$
+> \#\mathcal A_m(w)={m+n-1-\text{des}(w)\choose n}
+> $$
+
+> **解答.**
 
 ### **65.[3-]**
 
-> **题目.**
+> **问题.**
 >
 > 记
 > $$

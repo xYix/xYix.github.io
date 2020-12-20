@@ -424,11 +424,7 @@ solution
 generating-function
 linear-algebra
 bpp
-<<<<<<< HEAD
 bijective proof problems 选做
-=======
-bijective proof problems 选做 - 代数方法戒毒笔记
->>>>>>> 66be6e1edabd0c8110b18b47098b9c1a99de906e
 algorithm
 3
 combinatorics
