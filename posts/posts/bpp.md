@@ -270,7 +270,7 @@ title: bijective proof problems 选做
 > - 将 $\alpha$ 的第 $i$ 个 $\text{a}$ 替换为 $\text{c}^{\gamma_i}\text{d}$，第 $i$ 个 $b$ 替换为 $\text{d}^{\beta_i}\text{c}$。其中 $\text{c}^r$ 表示 $r$ 个 $\text{c}$。
 > - 此时 $\alpha$ 必以 $\text{c}$ 开头，以 $\text{d}(\text{dc})^r$（满足该形式的后缀显然是唯一的）的形式结尾。删掉它们。
 >
-> 这构建了一个从左到右的双射。
+> 这构建了一个从左到右的双射。（其逆并不非常复杂，留给读者）
 >
 > $\blacksquare$
 
@@ -545,11 +545,11 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > \#\{w\in\mathfrak S_n,\text{inv}(w)=k\}=\#\{w\in\mathfrak S_n,\text{maj}(w)=k\}
 > $$
 
+此处的证明并不是完全双射的，~~[A direct bijective proof would be of great interest.jpg](https://www.luogu.com.cn/blog/zyxxs/bijective-proof-problems-zhong-di-yi-suo-sheng-cao-ping-lun)~~，这种类型的双射被称为 recursive bijection，即构造长度为 $n$ 时的映射需要使用长度为 $n-1$ 时的映射。
+
 <script>
   	document.new_button(3);
 </script>
-
-此处的证明并不是完全双射的，~~[A direct bijective proof would be of great interest.jpg](https://www.luogu.com.cn/blog/zyxxs/bijective-proof-problems-zhong-di-yi-suo-sheng-cao-ping-lun)~~，这种类型的双射被称为 recursive bijection，即构造长度为 $n$ 时的映射需要使用长度为 $n-1$ 时的映射。
 
 > **解答.**
 >
@@ -758,7 +758,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 
 > **问题.**
 >
-> 证明，
+> (a) 证明，
 > $$
 > \#\mathcal A_m(w)={m+n-1-\text{des}(w)\choose n}
 > $$
