@@ -1,5 +1,5 @@
 ---
-title: bijective proof problems 选做
+title: bijective proof problems 选做（上）
 ---
 
 <style>
@@ -11,9 +11,8 @@ title: bijective proof problems 选做
         background-color: #ffffff;
     }
 </style>
-[pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
 
-建 议 改 为：代 数 方 法 戒 毒 笔 记
+[pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
 
 由于一些奇怪的问题（页面高度固定），建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp.html)。
 
@@ -71,11 +70,12 @@ title: bijective proof problems 选做
 - [1]：显然或直接。
 - [2]：困难或比较技巧性。[2+] 是应当给研究生留的作业题的难度上界。 
 - [3]：极其困难。一些学生可能能做出 [3-]。几乎没有人可以在合理的时间内做出 [3]。（有时候用相对简单的方法做出 [3] 级题是可以发论文的……）
-- [4]：令人害怕地困难。
-- [5]：尚未解决。（草）
+- [*]：尚未解决。（草）
 - 此处难度皆标注以题单中标注的难度。
 
 ## 基础部分
+
+主要关于组合数。
 
 ### **5.[2]**
 
@@ -305,8 +305,9 @@ title: bijective proof problems 选做
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ## 置换和循环
+
+排列 / 置换显然是一个重要的话题：没有排列 / 置换我们就无从描述一大类等价。
 
 ### **教程关：置换和循环.**
 
@@ -411,18 +412,17 @@ title: bijective proof problems 选做
 > **问题.**
 >
 > - (a)[2] 令 $w$ 是 $[n]$ 的随机排列，证明，$1,2$ 在同一个循环的概率为 $\dfrac 12$。
+> - (b)[2+] 推广 (a) 至下面的结论：$1,...,\lambda_1$ 在同一个循环，$\lambda_1+1,...,\lambda_1+\lambda_2$ 在和 $1,...,\lambda_1$ 不同的另一个循环，……，一直到 $\lambda_{\ell}$，其出现概率为
 >
-> - (b)[2+] 推广 (a) 至下面的结论：$1,...,\lambda_1$ 在同一个循环，$\lambda_1+1,...,\lambda_1+\lambda_2$ 在和 $1,...,\lambda_1$ 不同的另一个循环，……，一直到 $\lambda_{l}$，其出现概率为
->
-> - $$
->   P_{\lambda}=\dfrac{\prod(\lambda-1)!}{(\sum \lambda)!}
->   $$
+> $$
+> P_{\lambda}=\dfrac{\prod(\lambda-1)!}{(\sum \lambda)!}
+> $$
 >
 > - (c)[3-] 描述同 (b)，但是 $w$ 从 $[n]$ 的**偶置换**中选取。证明概率为
 >
-> - $$
->   Q_{\lambda}=\dfrac{\prod(\lambda-1)!}{(-2+\sum\lambda)!}\cdot \left(\dfrac{1}{(\sum\lambda-1)\sum\lambda}+\dfrac{(-1)^{n-l}}{(n-1)n}\right)
->   $$
+> $$
+> Q_{\lambda}=\dfrac{\prod(\lambda-1)!}{(-2+\sum\lambda)!}\cdot \left(\dfrac{1}{(\sum\lambda-1)\sum\lambda}+\dfrac{(-1)^{n-l}}{(n-1)n}\right)
+> $$
 
 <script>
   	document.new_button(2);
@@ -448,15 +448,56 @@ title: bijective proof problems 选做
 > - - $v,v'$ 中必然有一个满足 $v_1,v_2$ 在同一个循环，另一个满足：$v_1,v_2$ 之一自成循环，另一个还在原来的循环里。于是交换 $v_1,v_2$ 反转了后者所在循环的长度奇偶性，也就反转了整个置换的奇偶性。
 > - 除此之外，若 $v'$ 满足条件，则
 > - - 要么 $v$ 也满足条件；
->   - 要么 $v_2=\lambda_1+...+\lambda_{l-1}+1$ 且 $v_2<v_1\le \sum \lambda$。
+>   - 要么 $v_2=\lambda_1+...+\lambda_{\ell-1}+1$ 且 $v_2<v_1\le \sum \lambda$。
 > - 剩下的部分已经显然了。
 
 <script>
     document.getElementsByTagName("blockquote")[27].style.display="none";
 </script>
 
+### 76[2] && 77[3].
+
+> **问题.**
+>
+> 证明：
+>
+> 76. [2] 环长皆能被 $k\ge 2$ 整除的 $[n]$ 的排列的数量为
+>
+> $$
+> \prod_{i=1}^n(n-i+\left[k\ |\ i\right])
+> $$
+>
+> 77. [3] 环长皆**不**能被 $k\ge 2$ 整除的 $[n]$ 的排列的数量为
+>
+> $$
+> \prod_{i=1}^n(i-[k\ |\ i])
+> $$
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 对于 76 只需要做如下考虑：
+>
+> - 首先决定 $w(1)$，这有 $n-1$ 种选择（不能连回 $1$）。
+> - 然后决定 $w(w(1)),w(w(w(1)))$……，分别有 $n-2,n-3$……种选择。
+> - 直到我们试图决定 $w^{\left<k\right>}(1)$，这时我们除了 $n-k$ 种选择之外还有一种可能：连回 $1$。如果选择连会 $1$，这之后我们从第一个尚未决定的 $w(i)$ 开始继续流程。
+>
+> 显然每一步的选择数量和之前的选择完全无关，而上述流程显然是可逆的，从而它是一个从所有描述的排列到 $\prod_{i=1}^n(n-i+[k\ |\ i])$ 的直接双射。
+>
+> 对于 77……我所能找到的唯一一份[文献](https://pdf.sciencedirectassets.com/272565/1-s2.0-S0097316500X01082/1-s2.0-0097316580900126/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIG8m%2Bol%2Bx3tt7cZCtRclv0QgGYcabFXqBQabh62aRtpxAiBGOp0PFBb1Rowhx%2FYxdVb7ahX6Mc%2BlOhEoEN%2FhPBmWLSq9AwiJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAMaDDA1OTAwMzU0Njg2NSIMz8pZaz2RoMCK42B7KpEDP6J%2B1pVDZA0DHk1ruwHUFtO4urpUocOwNxWe2dUQT8DWMnLeKhK3toSnkyj7%2FCJFBPojrGV0fUlBtjHZMgZiHJKVXGaTdS0v9sQt01PgFkhfdHwZNChkTPjkntK4CZrgUL9GxjrN1LBi1rHkC9vS6IHp78lSZ1haCrwykWDifm%2B7908bp9tk0FEfyQtePm2A%2Fti%2B6YD8TibddDJM%2FSAUdNSSIf5C7DytVtLP%2BMDbMtbx0UkSjb2I5E8wvIk3nBciPAinDTDCHuy%2B2e2UDzRRCJGIUY3BOMIuNOKRQInjBgM5stCfdIK6Bs1grIVuse%2BLvdijugWjC35JHucAiqyvQFuq%2BEikIpD6A6Ofz%2B89yWo4ccLaVT1nqceAlAh8JyyXKtj68Rn3%2Fq2EOoGlLx06nvVLCUZAwcLmlMW43DjU6KOW3RnOpXgmjxG9QH7LzZuLRm0YX4aS0jRasX%2F7rpryn2EkubHGEzUyUMOUM9ftQcIoMMjTReYzsovtFHfHrUnLYKazgZGghLrcNulN6Y8b7Skw26CB%2FwU67AFr%2FPLktkItJkzD2l7vsh%2B7ZYCw7fjRSslxivpwh3zgTc3L5TV9zebK9aQC%2B2Ye2QxkqgS5YEqgmaNAWF%2FcjZJ0c7MYDBSAhKe9dqOD9uu7SMkucg78C98bpsT2v%2BnK2fVBo%2FmnZ5hAGCx4%2FVIncz36DYx2yTSF%2F4osprcQtH6S2gz%2BOiQ2FBxdC%2FI5ENThnExxl2ofaS0A%2FE%2FzTBoT6nqP%2BIT7BOFFgJOIVA3puXo3ME6LU17VJ7mDZ2TjoQ9hz2TbRoPCs9InTji09k4CJwd5363YMItLDxjMfM4I6f39OBNmA14zS7WvMlc5oQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201221T080917Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYT4BKZE3H%2F20201221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=2a6d10a4287c5fb4d91e83de3a7111c4fe135a1e69a4009219f8289fe1a43f42&hash=26af4f9f17e42ece010fb70d4eacbeefa21f4c8c6bd702f5e0f391ec8d6c56a2&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=0097316580900126&tid=spdf-4cf30eae-9c7a-4172-a142-b52528aaede8&sid=f27d352e4ec1d943869a64a-1bcd5a1a0876gxrqa&type=client)复杂得离谱，而我根本找不到别的做法。实在是没办法了。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 ## 置换和等价类
+
+等价类的研究和应用。
 
 ### **18.[3]**
 
@@ -548,6 +589,8 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
 ## 排列上的统计（statistics）
+
+一个排列可能有极多的特征，其中一些特征神奇地有着极其紧密的联系。
 
 ### **教程关：逆序对，Descents，和 Major index（上）&& 70.**
 
@@ -759,7 +802,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > 首先我们可以靠值把 $f$ 分成数段。
 >
-> 考虑段 $f(i_1)=f(i_2)=...=f(i_l)$。显然，$\{i_1,i_2,...,i_l\}$ 是一段连续的 $\{w_l,w_{l+1},...,w_r\}$。我们又注意到段内 $w_i<w_{i+1}$，这便构造了一个唯一的与 $f$ 兼容的排列。
+> 考虑段 $f(i_1)=f(i_2)=...=f(i_{\ell})$。显然，$\{i_1,i_2,...,i_{\ell}\}$ 是一段连续的 $\{w_l,w_{l+1},...,w_r\}$。我们又注意到段内 $w_i<w_{i+1}$，这便构造了一个唯一的与 $f$ 兼容的排列。
 >
 > $\blacksquare$
 
@@ -850,7 +893,54 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
 
-### 72[2].
+## 多重集的排列
 
-## 划分
+为了研究划分我们必须先介绍一下。
+
+### 教程关：多重集排列.
+
+> **定义.**
+>
+> - 记 $\mathbf{(n)!}$ 为 $\dfrac{1-x^n}{1-x}$。
+> - 记
+>
+> $$
+> \mathbf{{n\choose a_1,a_2,...,a_m}=\dfrac{(n)!}{(a_1)!(a_2)!...(a_m)!}}
+> $$
+>
+> 注意类似于组合数的记号是有一定原因的，比如有
+> $$
+> \mathbf{{n\choose k}={n-1\choose k}}+x^{n-k}\mathbf{n-1\choose k-1}
+> $$
+>
+> - 定义多重集 $M$（其中有 $a_i$ 个 $i$，整个多重集也记作 $\{1^{a_1},2^{a_2},....,m^{a_m}\}$）上的排列为 $|M|\rightarrow m$ 的函数，且函数值中恰好有 $a_i$ 个 $i$。
+> - 澄清：我们定义多重集排列的逆序对为 $\sum_{i<j}[w_i<w_j]$。
+
+> **问题.**
+>
+> 证明
+> $$
+> \sum_{w\in\mathfrak S_{M}}x^{\text{inv}(w)}=\mathbf{n\choose a_1,a_2,...,a_m}
+> $$
+
+<script>
+  	document.new_button(3);
+</script>
+
+> **解答.**
+>
+> 我们有双射 $\phi$：
+> $$
+> \mathfrak S_M\times\mathfrak S_{[a_1]}\times\mathfrak S_{[a_2]}\times\dots\times\mathfrak S_{[a_m]}\xrightarrow{\phi}\mathfrak S_{|M|}\\(w_0,w_1,w_2,...,w_m)\xmapsto{\phi}\mathfrak w
+> $$
+> 其内容为，若 $w_0(i)$ 是第 $j$ 个 $w_0(i)$，则令 $\mathfrak w(i)=w_{w_0(i)}(j)+\sum_{d<w_0(i)}a_d$。
+>
+> 注意到有 $\text{inv}(\mathfrak w)=\text{inv}(w_0)+\text{inv}(w_1)+...$，于是就得证了。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+<center><a href='/posts/posts/bpp2.html'>to be continued...</a></center>
 

@@ -424,7 +424,14 @@ solution
 generating-function
 linear-algebra
 bpp
-bijective proof problems 选做
+bijective proof problems 选做（上）
+algorithm
+3
+combinatorics
+construction
+bijective-proof
+bpp2
+bijective proof problems 选做（中）
 algorithm
 3
 combinatorics
