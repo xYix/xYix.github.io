@@ -1,6 +1,5 @@
 ---
 title: 矩阵树定理和多元拉反
-
 ---
 
 参考资料：
@@ -145,7 +144,7 @@ $$
 
   - $\rho$ 上有边 $y\rightarrow x$，令离 $M_\mu$ 最近且与 $y$ 同色的节点为 $z$（它当然可以为 $(\mu,n_\mu)$ 自身）。
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
-  - 在 $P(T)$ 中连边 $的颜色\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
+  - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
 - 这里给出一个[例子](https://xyix.gitee.io/images/path-abor.png)。
 
@@ -187,7 +186,7 @@ $$
 
 **证明.** 对于 $P(A)=T$ 的 $A$，对 $j=1...m$，施以下面的变换
 
-- $：(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
+- $：：：(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
 - $(j_2)$：转换 $(M_{\sigma_j},F_{\sigma_j})$；
 
 接下来我们只需要证明：最终得出的图 $D$ 满足 $C(D)=T$，而且这组变换是一个双射。

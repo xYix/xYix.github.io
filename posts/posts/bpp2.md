@@ -241,3 +241,84 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+
+## 树
+
+经典永流传。由于树的问题差不多都被生成函数研究光了，所以本节的主要目的是重新证明那些生成函数结论。
+
+### 128.[3-]
+
+> **题目.**
+>
+> 证明，$n$ 个节点的有标号无根树有 $n^{n-2}$ 棵。
+
+<script>
+  	document.new_button(7);
+</script>
+
+> **解答.**
+>
+> 不会吧不会吧不会真有人不知道 [Prüfer 序列](https://oi-wiki.org/graph/prufer/) 就敢来做这个题单吧？？？
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 135.[2]
+
+> **题目.**
+>
+> 证明：
+> $$
+> \sum_{n\ge 0}(n+1)^n\dfrac{x^n}{n!}={\color{blue}\left(\sum_{n\ge 0}n^{n}\dfrac{x^{n}}{n!}\right)}\left(\sum_{n\ge 0}(n+1)^{n-1}\dfrac{x^{n}}{n!}\right)
+> $$
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 显然左式描述了标号为 $0\sim n$ 的有根树。
+>
+> - 若根是 $0$，则方案数即为无根树数量（所有无根树钦定根为 $0$ 后便得到以 $0$ 为根的树），在右式中表现为<span style='color: blue'>蓝色</span>部分取 $n=0$。
+> - 否则根 $rt\neq 0$，则我们考虑切断 $0$ 到 $rt$ 的路径上的第一条边 $(0, u)$。$rt$ 所在部分是有根树（根为 $u$），而且要额外选出 $rt$，故方案数为 $n^n$。$0$ 所在部分是无根树，故方案数为 $(n+1)^{n-1}$。
+> - 而容易验证他们的合并的确是二项卷积（如果你不明确这一点，可以参考[这里](https://xyix.gitee.io/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf)的习题集 1 一节），于是便得证了。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### EXTRA.[???]
+
+> **问题.**
+>
+> 证明下述的**多元拉格朗日反演**。
+>
+> 把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf m$。
+>
+> 现有一列 $m$ 个 $m$ 元形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
+> $$
+> f_i=x_ig_i(\mathbf f)
+> $$
+>
+> 那么我们有
+> $$
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
+> $$
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
