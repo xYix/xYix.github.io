@@ -80,6 +80,84 @@ title: bijective proof problems 选做（中）
 > - 考虑能在如上映射下转化到 $\lambda$ 的 $\lambda'$ 的数量，这恰好是 $f_{\lambda}(k)$（$v=1,2,...,\lambda_k$）。
 >
 > 这样一个有向图的总出入度自然相等，于是得证。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 91.[2+]
+
+> **问题.**
+>
+> 定义 $f(\lambda)=\sum_{i=1}^{\ell}[\lambda_i=2],g(\lambda)=\sum_{i=1}^{n}[1=\sum_{j=1}^{\ell}[\lambda_j=i]]$。
+>
+> 证明
+> $$
+> \sum_{\lambda\vdash n}f(\lambda)=\sum_{\lambda\vdash n-1}g(\lambda)
+> $$
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 根据上题结论，我们有 $\sum_{\lambda\vdash n}f(\lambda)=\sum_{\lambda\vdash n}\sum_{i=1}^n[2\le\sum_{j=1}^{\ell}[\lambda_j=i]]$。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 92.[2-]
+
+> **问题.**
+>
+> 证明，把 $n$ 划分为数个 $2$ 的幂的方案数总是偶数。
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 我们只需要证明，所有这样的方案数总是一半长度为奇一半长度为偶。
+>
+> 如此构造双射：
+>
+> - 如果 $\lambda$ 的最大元素 $2^r$ 只出现一次，则将其映射到 $(2^{r-1},2^{r-1},...)$；
+> - 否则把两个 $2^r$ 合并为 $2^{r+1}$。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 94.[2]
+
+>**问题.**
+>
+>证明，把 $n$ 划分为数个奇数的方案数和把 $n$ 划分为数个互不相同的数的方案数相等。
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 我们给出两个解法。
+>
+> > **法一.** 双射如下：把奇数二进制合并，比如 $5$ 个 $7$ 会被合并为 $28+7$。逆也显然，只需要不断把偶数拆成原来的一半。
+>
+> > **法二.**
+> >
+> > <div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
+> >
+> > 上图已足以说明。它的逆的确唯一存在，虽然不是很显然。
+>
+> $\blacksquare$
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
