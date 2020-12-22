@@ -72,6 +72,8 @@
         '爱是如此沉重以至于我只想把它们扔进垃圾桶',
         '他们以为一切事情只要赔钱了事就好……',
         '如今我们已陷入符号的包围，用符号指代符号，用隐喻暗示隐喻，每一句话皆有典可循，每一条消息皆有梗可查。',
+        '即使爱与梦想说的再光鲜亮丽，这种行径也着实令人恶心。',
+        '所谓教育不过是献祭孩童召唤恶魔的斜校仪式。',
         //冷知识
         '十二重计数法的英文名是 twelvefold path，是佛教用语“八圣道 eightfold path”的魔改。',
         //膜拜
@@ -221,13 +223,14 @@
             'Let the maggots sing / No audience to be found / Muted voices sang all life long',
             'Let the maggots dream / No matter right or wrong / Let us dream on, dream on',
             'Is this where I belong? / The furthest I could have gone?',
-        //游戏台词
+        //游戏 / 动漫台词
         'Fate Chosen',
         'Reroll Your Destiny',
         'Blood Laser Barrage',
         'I feel all', 'I know all', 'I am all',
         '不！熊！！！',
         '高塔沉睡了，那我也该睡了……',
+        '你最大的罪恶，就是压根都不认为自己是『罪人』……那才是最『万恶不赦』的。',
         //迫害CF/XJ
         'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',

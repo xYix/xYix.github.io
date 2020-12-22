@@ -139,7 +139,10 @@ title: bijective proof problems 选做（中）
 
 >**问题.**
 >
->证明，把 $n$ 划分为数个奇数的方案数和把 $n$ 划分为数个互不相同的数的方案数相等。
+>证明，把 $n$ 划分为数个奇数的方案数和把 $n$ 划分为数个互不相同的数的方案数相等。或者说，
+>$$
+>\prod_{n=1}^{\infty}(1-x^{2n-1})^{-1}=\prod_{n=1}^{\infty}(1+x^n)
+>$$
 
 <script>
   	document.new_button(2);
@@ -156,6 +159,82 @@ title: bijective proof problems 选做（中）
 > > <div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
 > >
 > > 上图已足以说明。它的逆的确唯一存在，虽然不是很显然。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 103.[3] && 104.[2] && 105.[3]
+
+> **问题.**
+>
+> 103. 证明
+>
+> $$
+> [x^n]\prod_{i=1}^{\infty}(1-x^i)=\begin{cases}(-1)^k&,\text{if}\ n=k(3k\pm 1)/2\\0&,\text{otherwise}\end{cases}
+> $$
+>
+> 104. 证明
+>
+> $$
+> [x^n]\sum_{i=1}^{\infty}(-1)^ix^i\prod_{j=1}^i(1+x^j)=\begin{cases}1&,\text{if}\ n= k(3k-1)/2\\-1&,\text{if}\ n=k(3k+1)/2\\0&,\text{otherwise}\end{cases}
+> $$
+>
+> 105. 证明
+>
+> $$
+> [x^n]\sum_{i=2*+1}^{\infty}x^i\prod_{j>i}(1-(-x)^j)=\begin{cases}1&,\text{if}\  n= k^2\\0&, \text{otherwise}\end{cases}
+> $$
+
+<script>
+  	document.new_button(4);
+</script>
+
+> **解答.**
+>
+> 103. 左式可理解为：
+>
+> > 所有 $n$ 的元素互不相同，且长度为偶数的划分的数量 $-$ 所有 $n$ 的元素互不相同，且长度为奇数的划分的数量
+>
+> 因此我们希望建立一个从左到右的“几乎双射”。该双射如下（来自 [wiki](https://en.wikipedia.org/wiki/Pentagonal_number_theorem)）。
+>
+> > 令 $t(\lambda)$ 为从最大的 $\lambda_1$ 开始，连续段 $\lambda_1,\lambda_1-1,\lambda_1-2,...$ 的最长长度。
+> >
+> > - 若 $t(\lambda)\ge \lambda_{\ell}$，则移除 $\lambda_\ell$ 并令 $\lambda_{1}\sim \lambda_{\lambda_\ell}$ 增加 $1$；
+> > - 否则 $t(\lambda)<\lambda_{\ell}$，则令 $\lambda_1\sim\lambda_{t(\lambda)}$ 减 $1$，增加一个 $\lambda_{\ell+1}=t(\lambda)$。
+> >
+> > 这个映射是它自己的逆。
+> >
+> > 这个双射总是把划分长度的奇偶性反转——除非 $t(\lambda)=\lambda_{\ell}=\ell$，这时双射直接失败，因为移除 $\lambda_\ell$ 后根本不存在 $\lambda_{\lambda_\ell}=\lambda_{\ell}$ 以供增加；或者 $t(\lambda)=\lambda_\ell-1=\ell$，增加的 $\lambda_{\ell+1}$ 和减一后的 $\lambda_\ell$ 相等，双射也失败。
+> >
+> > 剩下的工作只是确认这两种情况在什么时候发生及其影响，这直接引出结论。
+>
+> 104. 可解释为：
+>
+> > 所有 $n$ 的元素互不相同，且 $\lambda_1$ 为偶数的划分的数量 $-$ 所有 $n$ 的元素互不相同，且 $\lambda_1$ 为奇数的划分的数量
+>
+> 继续应用上述双射即可。
+>
+> 105. 可解释为：
+>
+> > 所有 $n$ 的 $\lambda_{\ell}$ 为奇数，且偶元素个数为偶数，且元素互不相同的划分的数量 $-$ 所有 $n$ 的 $\lambda_{\ell}$ 为奇数，且偶元素个数为奇数，且元素互不相同的划分的数量
+>
+> 考虑我们所希望的映射要具有的性质：
+>
+> - 在且只在 $(2k-1,2k-3,...,3,1)$ 处失效（这是一个很强的条件，一个映射要怎么只在从 $1$ 开始的连续奇数时失效却不在缺少任何一些奇数时失效？）
+> - 反转偶元素数量的奇偶性
+>
+> 因此我们构造如下映射：
+>
+> > 找出最小的偶元素 $b$。
+> >
+> > - 如果它的确存在，删除它，令 $\lambda_1\sim\lambda_{b/2}$ 增加 $1$；
+> >
+> > 如果它不存在，找到最长的连续段 $\lambda_1,\lambda_1-2,\lambda_1-4,...$，把它们全部 $-2$，增加一个等量的偶元素。
+>
+> 这个双射有与之前类似的性质，不再赘述。
 >
 > $\blacksquare$
 
