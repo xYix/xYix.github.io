@@ -196,7 +196,7 @@ title: bijective proof problems 选做（中）
 >
 > 103. 左式可理解为：
 >
-> > 所有 $n$ 的元素互不相同，且长度为偶数的划分的数量 $-$ 所有 $n$ 的元素互不相同，且长度为奇数的划分的数量
+> > 所有 $n$ 的元素互不相同、且长度为偶数的划分的数量 $-$ 所有 $n$ 的元素互不相同、且长度为奇数的划分的数量
 >
 > 因此我们希望建立一个从左到右的“几乎双射”。该双射如下（来自 [wiki](https://en.wikipedia.org/wiki/Pentagonal_number_theorem)）。
 >
@@ -213,13 +213,13 @@ title: bijective proof problems 选做（中）
 >
 > 104. 可解释为：
 >
-> > 所有 $n$ 的元素互不相同，且 $\lambda_1$ 为偶数的划分的数量 $-$ 所有 $n$ 的元素互不相同，且 $\lambda_1$ 为奇数的划分的数量
+> > 所有 $n$ 的元素互不相同、且 $\lambda_1$ 为偶数的划分的数量 $-$ 所有 $n$ 的元素互不相同、且 $\lambda_1$ 为奇数的划分的数量
 >
 > 继续应用上述双射即可。
 >
 > 105. 可解释为：
 >
-> > 所有 $n$ 的 $\lambda_{\ell}$ 为奇数，且偶元素个数为偶数，且元素互不相同的划分的数量 $-$ 所有 $n$ 的 $\lambda_{\ell}$ 为奇数，且偶元素个数为奇数，且元素互不相同的划分的数量
+> > 所有 $n$ 的 $\lambda_{\ell}$ 为奇数、且偶元素个数为偶数、且元素互不相同的划分的数量 $-$ 所有 $n$ 的 $\lambda_{\ell}$ 为奇数、且偶元素个数为奇数、且元素互不相同的划分的数量
 >
 > 考虑我们所希望的映射要具有的性质：
 >
@@ -274,6 +274,7 @@ title: bijective proof problems 选做（中）
 > $$
 > \sum_{n\ge 0}(n+1)^n\dfrac{x^n}{n!}={\color{blue}\left(\sum_{n\ge 0}n^{n}\dfrac{x^{n}}{n!}\right)}\left(\sum_{n\ge 0}(n+1)^{n-1}\dfrac{x^{n}}{n!}\right)
 > $$
+> 注意你不应该对式子进行任何，哪怕只是提出一个 $x$ 的改动。
 
 <script>
   	document.new_button(2);
@@ -292,14 +293,48 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+### 137.[3]
+
+> **问题.**
+>
+> 定义一棵树上的逆序对是二元组 $(i,j)$，同时满足 $i>j$ 和 $i$ 是 $j$ 的祖先。记节点数为 $n$ 的树 $\tau$ 的逆序对数为为 $\text{inv}(\tau)$。
+>
+> 定义 $I_n(t)=\sum_{\tau}t^{\text{inv}(\tau)}$。
+>
+> 证明，
+> $$
+> t^{n-1}I_n(t+1)=\sum_{G}t^{e(G)}
+> $$
+> 其中 $G$ 取遍所有 $n$ 个节点的连通无向图。 $e(G)$ 是其边数。
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> $t^{\color{red} n-1}$ 无疑让我们想到生成树。我们如此~~钦定~~一棵 $G$ 的特定生成树 $\tau_G$：
+>
+> - 从 $1$ 出发一条边一条边移动，每次走当前能走到的最大节点，如果无边可走就回溯。
+>
+> 首先显然 $G$ 中没有横杈边（即所有边要么属于 $\tau_G$ 要么恰好链接一个节点和其某个祖先）。
+>
+> 考虑剩下的非树边 $(i,j)$ 且 $i$ 是 $j$ 的一个祖先，显然必须有 $i$ 到 $j$ 路径上的第一个节点 $k>j$，从而是一对逆序对。这显然构建了从非树边到逆序对的单射。原式的含义也就很显然了，$t\leftarrow t+1$ 正代表了每个逆序对可以自由地转化或不转化成非树边。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 
 ### EXTRA.[???]
 
 > **问题.**
 >
-> 证明下述的**多元拉格朗日反演**。
+> 证明下述的**多元拉格朗日反演**，或称 **Good-Lagrange 公式**。~~一元的拉反是不是可以叫做 Bad-Lagrange 公式~~
 >
-> 把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf m$。
+> 把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf x$。
 >
 > 现有一列 $m$ 个 $m$ 元形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
 > $$
@@ -317,8 +352,11 @@ title: bijective proof problems 选做（中）
 
 > **解答.**
 >
-> 见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。
+> 最早能找到的双射的翻译可见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。[这份英文文献](https://core.ac.uk/download/pdf/82394044.pdf)给出了额外 4 种双射。
+>
+> $\blacksquare$
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+

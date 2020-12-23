@@ -223,6 +223,13 @@
             'Let the maggots sing / No audience to be found / Muted voices sang all life long',
             'Let the maggots dream / No matter right or wrong / Let us dream on, dream on',
             'Is this where I belong? / The furthest I could have gone?',
+            //Sloth
+            'Wanna escape? Somewhere far away.',
+            '\'Cause everyone wants to be a judge / They\'ll never admit that you\'re enough',
+            'Pretend there\'s no one around but yourself / See? In the mirror / There\'s a sloth.',
+            'Can\'t you hear the cries / Coming from the mirror? / There\'s a sloth.',
+            'With an awkward blackened smile / It\'s fine you can\'t love yourself / But can\'t you love a sloth?',
+            'And the whole thing made me extremely sad / I thought / \'How long will the future last?\'',
         //游戏 / 动漫台词
         'Fate Chosen',
         'Reroll Your Destiny',
