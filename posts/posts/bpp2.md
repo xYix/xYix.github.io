@@ -1,6 +1,5 @@
 ---
-title: bijective proof problems 选做（中）
-
+title: bijective proof problems 选做（下）
 ---
 
 <style>
@@ -340,7 +339,7 @@ title: bijective proof problems 选做（中）
 下面两题是 x义x 自己加的。它们都与拉格朗日反演有关……哦，应该说，它们自己就是拉格朗日反演。
 
 
-### EXTRA-1.[2+]
+### EXTRA-1.[2]
 
 > **问题.**
 >
@@ -382,7 +381,7 @@ title: bijective proof problems 选做（中）
 > \begin{cases}[x^d/d!]g&(u\neq 0)\\ d[x^d/d!]h&(u=0)\end{cases}
 > $$
 >
-> - 令 $g$ 的权值 $\hat w(g)$ 为其所有节点的权值之积除以 $n!$。
+> - 令 $g$ 的权值 $w(g)$ 为其所有节点的权值之积除以 $n!$。
 >
 > 于是 RHS 便是所有 $g$ 的权值之和。
 >
@@ -411,8 +410,9 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+### EXTRA-2.[3#]
 
-### EXTRA-2.[3+]
+\# 号表示“++++”。（
 
 > **问题.**
 >
@@ -454,5 +454,96 @@ title: bijective proof problems 选做（中）
 
 生成函数的阴影无法触及的领域。双射方法终于得以生活在阳光之下。（
 
-### 教程关：杨表，RSK 算法.
+### 教程关：杨表，RSK 算法 && 203[2-].
 
+> **定义.**
+>
+> 一个划分 $\lambda$ 的**杨图**大概就是一个长成这样的东西：
+>
+> <div style="width:70%;margin:auto"><img src="/images/youngtable.png" alt=""></div>
+>
+> 你要往里面填 $[n]$ 的排列，使得行单调增列单调增，这样的一种填充称为**标准杨表**。记形状为 $\lambda$ 的标准杨表数量为 $f^{\lambda}$。
+
+> **题目.**
+>
+> 证明
+> $$
+> \sum_{\lambda\vdash n}(f^{\lambda})^2=n!
+> $$
+
+<script>
+  	document.new_button(3);
+</script>
+
+
+> **解答.**
+>
+> 我们来介绍 **RSK 算法**。
+>
+> > #### 行插入
+> >
+> > 定义 $P\leftarrow x$ 是把 $x$ 从第一行**行插入**进近似标准杨表（即填入的元素不必恰好是 $[n]$）$P$ 中。流程如下：
+> >
+> > - 找到本行最小的比 $x$ 大的数 $y$。如果找不到这样的 $y$，则把 $x$ 放在本行末尾并结束算法。
+> > - 交换 $x,y$。将 $y$ **行插入**下一行。
+>
+> 如下演示了一个行插入过程。
+>
+> <div style="width:70%;margin:auto"><img src="/images/RSK1.png" alt=""></div>
+>
+> 显然最后新增的格子一定在边角，即其下方和右方都没有格子。
+>
+> 对于对 $P$ 的第 $i$ 插入，在另一个杨表 $Q$ 中在新增的格子上写上 $i$（注意不是插入）。显然 $Q$ 是标准杨表。我们称 $P$ 为**插入表**，$Q$ 为**记录表**。
+>
+> > #### 删除
+> >
+> > 下面定义从 $P$ 中删除格子 $p$。尽管看起来不必要，我们还是规定 $p$ 必须是边角。记 $p$ 中填的数是 $x$。流程如下：
+> >
+> > - 如果这是第一行，结束算法。
+> >
+> > - 找到上一行最大的比 $x$ 小的数 $y$（显然一定存在）
+> >
+> > - 交换 $x,y$，移到上一行继续算法。
+> >
+> > 结束算法后删掉已经没有数的格子 $p$。
+>
+> 如下演示了一个删除过程。
+>
+> <div style="width:70%;margin:auto"><img src="/images/RSK2.png" alt=""></div>
+>
+> 很明显删除就是行插入的逆操作。
+>
+> 考虑一个 $1...n$ 的排列，依次插入即可得到两个杨表 $(P,Q)$；给定 $(P,Q)$，显然 $Q$ 中最大元素一定在边角，于是我们可以按 $Q$ 的指导去删除 $P$ 来还原原来的排列。
+>
+> 于是也就得到了以下的 *Robinson–Schensted correspondence*：
+>
+> > 上述算法构成了 $(P,Q)$ 到 $\mathfrak S_n$ 的双射。
+> 
+> $\blacksquare$
+
+<script>
+document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 教程关：标准杨表的钩长公式.[3]
+
+> **问题.**
+>
+> 定义一个格子 $u$ 的**钩长** $h(u)$ 是它下方的格子数 $+$ 右方的格子数 $+1$。
+>
+> 证明，
+> $$
+> f^{\lambda}=\dfrac{n!}{\prod_uh(u)}
+> $$
+
+<script>
+  	document.new_button(5);
+</script>
+
+> **解答.**
+>
+> 复杂，参见 [这里](https://www.dmtcs.org/dmtcs-ojs/index.php/dmtcs/article/view/76/135.html)。
+
+<script>
+document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>

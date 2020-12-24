@@ -431,7 +431,7 @@ combinatorics
 construction
 bijective-proof
 bpp2
-bijective proof problems 选做（中）
+bijective proof problems 选做（下）
 algorithm
 3
 combinatorics
