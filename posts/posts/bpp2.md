@@ -337,8 +337,10 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+下面两题是 x义x 自己加的。它们都与拉格朗日反演有关……哦，应该说，它们自己就是拉格朗日反演。
 
-### EXTRA-1.[???]
+
+### EXTRA-1.[2+]
 
 > **问题.**
 >
@@ -367,9 +369,9 @@ title: bijective proof problems 选做（中）
 > \begin{cases}[x^d/d!]g&(u\neq 0)\\ [x^d/d!]h&(u=0)\end{cases}
 > $$
 >
-> - 令 $\tau$ 的权值 $w(\tau)$ 为其所有节点的权值之积。
+> - 令 $\tau$ 的权值 $w(\tau)$ 为其所有节点的权值之积除以 $n!$。
 >
-> 于是 LHS 便是所有 $\tau$ 的权值之和。
+> 于是 LHS（Left Hand Side，左式）便是所有 $\tau$ 的权值之和。
 >
 > 接下来解释 RHS。考虑这样的有向图 $g$：
 >
@@ -380,7 +382,9 @@ title: bijective proof problems 选做（中）
 > \begin{cases}[x^d/d!]g&(u\neq 0)\\ d[x^d/d!]h&(u=0)\end{cases}
 > $$
 >
-> - 令 $g$ 的权值 $\hat w(g)$ 为其所有节点的权值之积。
+> - 令 $g$ 的权值 $\hat w(g)$ 为其所有节点的权值之积除以 $n!$。
+>
+> 于是 RHS 便是所有 $g$ 的权值之和。
 >
 > 考虑 $0$ 的度数为 $k$，其余点中有 $m_i$ 个度数为 $i$ 的那些 $\tau$ 和 $g$。显然 $\tau,g$ 的权值和它们本身的细节无关，且总是有
 > $$
@@ -407,7 +411,8 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-### EXTRA-2.[???]
+
+### EXTRA-2.[3+]
 
 > **问题.**
 >
@@ -430,18 +435,17 @@ title: bijective proof problems 选做（中）
 > $$
 
 <script>
-document.new_button(2);
+  	document.new_button(2);
 </script>
 
 > **解答.**
->
-> 其中一种双射的翻译可见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。[这份英文文献](https://core.ac.uk/download/pdf/82394044.pdf)给出了额外 4 种双射。
->
-> $\blacksquare$
+> 
+> 此处不给出解答。其中一种双射的中文翻译可见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+
 ## 卡塔兰数
 
 卡塔兰数有 [214 种](https://www.cambridge.org/cn/academic/subjects/mathematics/discrete-mathematics-information-theory-and-coding/catalan-numbers?format=PB&isbn=9781107427747) 组合解释，你知道么？
