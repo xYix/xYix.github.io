@@ -525,7 +525,7 @@ title: bijective proof problems 选做（下）
 document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
 
-### 教程关：标准杨表的钩长公式.[3]
+### 教程关：标准杨表的钩长公式 && 201.[3]
 
 > **问题.**
 >
@@ -543,6 +543,24 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 > **解答.**
 >
 > 复杂，参见 [这里](https://www.dmtcs.org/dmtcs-ojs/index.php/dmtcs/article/view/76/135.html)。
+
+<script>
+document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 204.[3]
+
+> **问题.**
+>
+> 证明，$n$ 个格子的杨表总数与 $\mathfrak S_n$ 中的**对合**~~内卷~~（即逆为自身）总数相等。
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 我们来证明，若 $\text{RSK}:w\mapsto(P,Q)$，则必有 $\text{RSK}:w^{-1}\mapsto (Q,P)$。从而那些对合总是被映射到 $(P,P)$，也就证明了原题。
 
 <script>
 document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
