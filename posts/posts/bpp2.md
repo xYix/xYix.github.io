@@ -1,5 +1,6 @@
 ---
 title: bijective proof problems 选做（中）
+
 ---
 
 <style>
@@ -11,7 +12,6 @@ title: bijective proof problems 选做（中）
         background-color: #ffffff;
     }
 </style>
-
 [pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
 
 由于一些奇怪的问题（页面高度固定），建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp2.html)。
@@ -44,7 +44,6 @@ title: bijective proof problems 选做（中）
         document.body.childNodes[1].appendChild(my_button);
 	};
 </script>
-
 <center><a href='/posts/posts/bpp.html'>前情提要</a></center>
 
 ## 划分
@@ -69,7 +68,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(3);
 </script>
-
 > **解答.**
 >
 > 首先能观察到的是一个映射：某个 $\lambda$ 可以通过把 $k$ 个 $v$ 转化成 $v$ 个 $k$。然而这既非单射（$v$ 的取值不明确）更不把等量的 $g$ 转化成 $f$，看起来难以利用。
@@ -86,7 +84,6 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ### 91.[2+]
 
 > **问题.**
@@ -101,7 +98,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(2);
 </script>
-
 > **解答.**
 >
 > 根据上题结论，我们有 $\sum_{\lambda\vdash n}f(\lambda)=\sum_{\lambda\vdash n}\sum_{i=1}^n[2\le\sum_{j=1}^{\ell}[\lambda_j=i]]$。
@@ -109,7 +105,6 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ### 92.[2-]
 
 > **问题.**
@@ -119,7 +114,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(2);
 </script>
-
 > **解答.**
 >
 > 我们只需要证明，所有这样的方案数总是一半长度为奇一半长度为偶。
@@ -134,7 +128,6 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ### 94.[2]
 
 >**问题.**
@@ -147,7 +140,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(2);
 </script>
-
 > **解答.**
 >
 > 我们给出两个解法。
@@ -165,7 +157,6 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ### 103.[3] && 104.[2] && 105.[3]
 
 > **问题.**
@@ -191,7 +182,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(4);
 </script>
-
 > **解答.**
 >
 > 103. 左式可理解为：
@@ -241,7 +231,6 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ## 树
 
 经典永流传。由于树的问题差不多都被生成函数研究光了，所以本节的主要目的是重新证明那些生成函数结论。
@@ -255,7 +244,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(7);
 </script>
-
 > **解答.**
 >
 > 不会吧不会吧不会真有人不知道 [Prüfer 序列](https://oi-wiki.org/graph/prufer/) 就敢来做这个题单吧？？？
@@ -265,7 +253,6 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
 ### 135.[2]
 
 > **题目.**
@@ -279,7 +266,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(2);
 </script>
-
 > **解答.**
 >
 > 显然左式描述了标号为 $0\sim n$ 的有根树。
@@ -293,6 +279,7 @@ title: bijective proof problems 选做（中）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+
 ### 137.[3]
 
 > **问题.**
@@ -310,7 +297,6 @@ title: bijective proof problems 选做（中）
 <script>
   	document.new_button(2);
 </script>
-
 > **解答.**
 >
 > $t^{\color{red} n-1}$ 无疑让我们想到生成树。我们如此~~钦定~~一棵 $G$ 的特定生成树 $\tau_G$：
@@ -319,31 +305,48 @@ title: bijective proof problems 选做（中）
 >
 > 首先显然 $G$ 中没有横杈边（即所有边要么属于 $\tau_G$ 要么恰好链接一个节点和其某个祖先）。
 >
-> 考虑剩下的非树边 $(i,j)$ 且 $i$ 是 $j$ 的一个祖先，显然必须有 $i$ 到 $j$ 路径上的第一个节点 $k>j$，从而是一对逆序对。这显然构建了从非树边到逆序对的单射。原式的含义也就很显然了，$t\leftarrow t+1$ 正代表了每个逆序对可以自由地转化或不转化成非树边。
+> 考虑剩下的非树边 $(i,j)$ 且 $i$ 是 $j$ 的一个祖先，显然必须有 $i$ 到 $j$ 路径上的第一个节点 $k>j$，从而是一对逆序对。这显然构建了从非树边到逆序对的单射（当然，这个映射与 $\tau$ 有关，但是 $\tau$ 不相等时它们也同样遵循我们想要的性质）。于是也就构建了从 $\tau_G=\tau$ 的 $G$ 到 $\text{inv}(\tau)\rightarrow\{0,1\}$ 的双射。
+>
+> 原式的含义也就很显然了，$t\leftarrow t+1$ 正代表了每个逆序对可以自由地转化或不转化成非树边。
 >
 > $\blacksquare$
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-
-
-### EXTRA.[???]
+### 138.[3] && 139.[3-]
 
 > **问题.**
 >
-> 证明下述的**多元拉格朗日反演**，或称 **Good-Lagrange 公式**。~~一元的拉反是不是可以叫做 Bad-Lagrange 公式~~
+> 138. 定义一棵树是**交错**的，如果不存在三元组 $(i,j,k)$，满足 $i<j<k$ 且 $(i,j)$ 有边且 $(j,k)$ 有边。记标号为 $0\sim n$ 的交错树的数量为 $f(n)$，证明
 >
-> 把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf x$。
->
-> 现有一列 $m$ 个 $m$ 元形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
 > $$
-> f_i=x_ig_i(\mathbf f)
+> f(n)=\dfrac{1}{2^n}\sum_{k=0}^n{n\choose k}(k+1)^{n-1}
 > $$
 >
-> 那么我们有
+> 139. 一个**局部二叉搜索树**是一棵有根二叉树，任何一个节点都小于它的右儿子但大于它的左儿子（请注意不是小于（大于）它的右子树（左子树），这就是所谓“局部”的来源）。证明，标号为 $[n]$ 的局部二叉搜索树数量等于上述 $f(n)$。
+
+<script>
+  	document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 复杂，参考[这里](https://core.ac.uk/download/pdf/82315359.pdf)。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### EXTRA-1.[???]
+
+> **问题.**
+>
+> 证明下述的**拉格朗日反演**。
+>
+> 若有形式幂级数 $f=xg(f)$，则有
 > $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
+> \boxed{[x^n]h(f)=\dfrac 1n[x^{n-1}]h'g^n}
 > $$
 
 <script>
@@ -352,11 +355,100 @@ title: bijective proof problems 选做（中）
 
 > **解答.**
 >
-> 最早能找到的双射的翻译可见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。[这份英文文献](https://core.ac.uk/download/pdf/82394044.pdf)给出了额外 4 种双射。
+> 我们只需要证明
+> $$
+> n[x^n]h(f)=[x^n](xh')g^n
+> $$
+> 首先考虑到条件 $f=xg(f)$，我们构造这样的树 $\tau$：
+> - 编号为 $0\sim n$，根为 $0$
+> - 一个节点 $u$ 若度数为 $d_u$，则其权值为
+>
+> $$
+> \begin{cases}[x^d/d!]g&(u\neq 0)\\ [x^d/d!]h&(u=0)\end{cases}
+> $$
+>
+> - 令 $\tau$ 的权值 $w(\tau)$ 为其所有节点的权值之积。
+>
+> 于是 LHS 便是所有 $\tau$ 的权值之和。
+>
+> 接下来解释 RHS。考虑这样的有向图 $g$：
+>
+> - 编号为 $0\sim n$，每个除 $0$ 以外的点恰有一条出边（从而 $g$ 一定是一棵内向树和若干内向基环树）
+> - 一个节点 $u$ 若入度为 $d_u$，则其权值为
+>
+> $$
+> \begin{cases}[x^d/d!]g&(u\neq 0)\\ d[x^d/d!]h&(u=0)\end{cases}
+> $$
+>
+> - 令 $g$ 的权值 $\hat w(g)$ 为其所有节点的权值之积。
+>
+> 考虑 $0$ 的度数为 $k$，其余点中有 $m_i$ 个度数为 $i$ 的那些 $\tau$ 和 $g$。显然 $\tau,g$ 的权值和它们本身的细节无关，且总是有
+> $$
+> w(g)=kw(\tau)
+> $$
+> 于是为了证明拉格朗日反演，我们只需要说明
+> $$
+> \dfrac nk\#\tau=\#g
+> $$
+> 根据 Prüfer 序列，
+> $$
+> \#\tau=\dfrac{(n-1)!}{(k-1)!1!^{m_1}2!^{m_2}....}{n\choose m_1,m_2,...}
+> $$
+> 对于 $\#g$，直接考虑每条边连向谁即可，
+> $$
+> \#g=\dfrac{n!}{k!1!^{m_1}2!^{m_2}...}{n\choose m_1,m_2,...}
+> $$
+> 立即得证。
+>
+> 从而拉格朗日反演只是套了个皮的 Prüfer 序列……
 >
 > $\blacksquare$
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
+### EXTRA-2.[???]
+
+> **问题.**
+>
+> 证明下述的**多元拉格朗日反演**，或称 **Good-Lagrange 公式**。~~一元的拉反是不是可以叫做 Bad-Lagrange 公式~~
+>
+> 下面把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 简记为 $\mathbf x$。（其他一些诡异的符号比如 $\mathbf f(\mathbf t)$ 和 $\mathbf g^{\mathbf n}$ 相信可以由读者自己猜出意思）
+>
+> 现有一列 $m$ 个 $m$ 元形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
+> $$
+> f_i=x_ig_i(\mathbf f)
+> $$
+>
+> 那么我们有
+> $$
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
+> $$
+> 其中 $\mathcal T$ 是完全图 $0\sim m$ 的所有以 $0$ 为根的内向生成树，而
+> $$
+> \dfrac{\partial \mathbf f}{\partial G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
+> $$
+
+<script>
+document.new_button(2);
+</script>
+
+> **解答.**
+>
+> 其中一种双射的翻译可见[此处](https://x-yi-x.blog.uoj.ac/blog/6511)。[这份英文文献](https://core.ac.uk/download/pdf/82394044.pdf)给出了额外 4 种双射。
+>
+> $\blacksquare$
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+## 卡塔兰数
+
+卡塔兰数有 [214 种](https://www.cambridge.org/cn/academic/subjects/mathematics/discrete-mathematics-information-theory-and-coding/catalan-numbers?format=PB&isbn=9781107427747) 组合解释，你知道么？
+
+## 杨表
+
+生成函数的阴影无法触及的领域。双射方法终于得以生活在阳光之下。（
+
+### 教程关：杨表，RSK 算法.
 

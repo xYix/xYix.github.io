@@ -12,7 +12,7 @@ title: 矩阵树定理和多元拉反
 
 [4] [Determinants, Paths, and Plane Partitions](http://people.brandeis.edu/~gessel/homepage/papers/pp.pdf)
 
-博客同步发表至 [uoj](https://x-yi-x.blog.uoj.ac/blog/6511)。
+博客同步发表至 [uoj](https://x-yi-x.blog.uoj.ac/blog/6511)。由于我本地的 Typora 已经被公式轰炸到爆炸了，修订可能不及时，所以推荐看 uoj 版本。
 
 其实就是把论文翻译了一遍（
 
