@@ -460,7 +460,7 @@ title: bijective proof problems 选做（下）
 >
 > 一个划分 $\lambda$ 的**杨图**大概就是一个长成这样的东西：
 >
-> <div style="width:70%;margin:auto"><img src="/images/youngtable.png" alt=""></div>
+> <div style="width:50%;margin:auto"><img src="/images/youngtable.png" alt=""></div>
 >
 > 你要往里面填 $[n]$ 的排列，使得行单调增列单调增，这样的一种填充称为**标准杨表**。记形状为 $\lambda$ 的标准杨表数量为 $f^{\lambda}$。
 
@@ -474,8 +474,6 @@ title: bijective proof problems 选做（下）
 <script>
   	document.new_button(3);
 </script>
-
-
 > **解答.**
 >
 > 我们来介绍 **RSK 算法**。

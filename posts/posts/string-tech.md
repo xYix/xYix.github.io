@@ -370,7 +370,7 @@ SAM 的构建过程可以扩展到 Trie 上。
 
 # 后缀数组
 
-把 $s$ 的所有后缀 $\{s\left[i:\right]\}$ 按字典序排列：$\{s\left[\text{sa}_i:\right]\}$。记 $s\left[i:\right]$ 的排名为 $\text{rank}_i$。
+把 $s$ 的所有后缀 $\{s\left[i:\right]\}$ 按字典序排列：$\{s\left[\text{sa}(i):\right]\}$。记 $s\left[i:\right]$ 的排名为 $\text{rank}(i)$。
 
 ## 后缀数组 / 经典做法
 
@@ -384,13 +384,61 @@ SAM 的构建过程可以扩展到 Trie 上。
 
 ### 后缀数组 / 应用 / Height
 
+定义 $h(i)=\text{lcp}(s\left[\text{sa}(i-1):\right],s\left[\text{sa}(i):\right])$。
 
+> **引理 1.**
+> $$
+> \text{lcp}(s\left[\text{sa}(u):\right],s\left[\text{sa}(v):\right])=\min_{u<i\le v} h(i)
+> $$
+
+**证明.**
+
+显然 LHS 大于等于 RHS（$\min h$ 这一部分至始至终相等），接下来只要证明 LHS 小于等于 RHS。假设不然，那么显然 $u$ 和 $v$ 应当排在一起，而不是在中间插着一个 $\min h$。
+
+$\blacksquare$
+
+可见 Height 数组是非常有用的（~~可惜的是它等价于 parent 树上求 LCA~~）（然而字符集极大的时候 SA 有优势（正论）），接下来考虑怎么求它。
+
+我想看过了这么多引理，你猜都能猜出来我们接下来要证明
+
+> **引理 2.**
+> $$
+> h(\text{rank}(i))\ge h(\text{rank}(i-1))-1
+> $$
+
+**证明.**
+
+从引理 1 的证明容易发现，后缀排序会让 $\text{lcp}$ 大的后缀尽量排在一起，从而总是有 $h_u\ge \text{lcp}(s\left[\text{sa}(u):\right],s\left[\text{sa}(v):\right])$。
+
+我们只需要取 $u=\text{rank}(i),v=\text{rank}(\text{sa}(i-1)-1)+1$ 即可。
+
+$\blacksquare$
 
 ## 后缀数组 / 后缀平衡树
 
+> **问题.**
+>
+> 要求在线支持字符串开头添加字符 $\mathbf c$，维护后缀数组。
+
+首先开头加字符不会改变其他后缀的大小关系，只会加一个新的后缀，于是不难想到平衡树维护。我们只需要找到新后缀的位置。
+
+考虑 $(\mathbf c)+s$ 和 $t$ 的关系。$t$ 可以看成 $(\mathbf c')+t'$，而 $s$ 和 $t'$ 的关系是已知的。
+
+还剩一个问题：如何 $\Theta(1)$ 判断两个后缀的大小关系？你可能会想，维护排名不就好了，但是你仔细分析会发现排名还真没那么好维护，会多一个 $\log$ 出来。
+
+一个显然的想法是维护一个不变动的“绝对排名”。具体来说，我们对每个节点记录其子树的排名区间 $[l,r]$，它自身的绝对排名即 $(l+r)/2$。
+
+当不平衡时我们重构树的结构和绝对排名即可。
+
 # Lyndon 科技
 
+介绍一些好用的符号：
+
+- 
+
 ## Lyndon 科技 / Lyndon 分解
+
+首先我们来定义 **Lyndon Word**。
 
 ## Lyndon 科技 / Runs
 

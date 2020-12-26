@@ -901,7 +901,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 
 > **定义.**
 >
-> - 记 $\mathbf{(n)!}$ 为 $\dfrac{1-x^n}{1-x}$。
+> - 记 $\mathbf{(n)!}$ 为 $\dfrac{1-q}{1-q}\cdot\dfrac{1-q^2}{1-q}\cdot\ldots\cdot\dfrac{1-q^n}{1-q}$。
 > - 记
 >
 > $$
@@ -910,9 +910,13 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > 注意类似于组合数的记号是有一定原因的，比如有
 > $$
-> \mathbf{{n\choose k}={n-1\choose k}}+x^{n-k}\mathbf{n-1\choose k-1}
+> \mathbf{{n\choose k}={n-1\choose k}}+q^{n-k}\mathbf{n-1\choose k-1}
 > $$
 >
+> 注意当 $q=1$ 时这个记号回到正常的组合数。所以这个记号被我们叫做**组合数的 q-模拟**。q-模拟当然是有其价值的，但那就是另一个故事了。这里我们只是借用一下它的符号。
+>
+> 另外，正常的组合数可解释为严格递增集合链 $\varnothing\subsetneq S_1\subsetneq S_2\subsetneq...\subsetneq S_{n-1}\subsetneq [n]$ 的数量，而 q-模拟组合数可解释为严格递增线性子空间链 $\varnothing\subsetneq V_1\subsetneq...\subsetneq V_{n-1}\subsetneq \mathbb F_q^n$ 的数量。
+> 
 > - 定义多重集 $M$（其中有 $a_i$ 个 $i$，整个多重集也记作 $\{1^{a_1},2^{a_2},....,m^{a_m}\}$）上的排列为 $|M|\rightarrow m$ 的函数，且函数值中恰好有 $a_i$ 个 $i$。
 > - 澄清：我们定义多重集排列的逆序对为 $\sum_{i<j}[w_i<w_j]$。
 
@@ -920,7 +924,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 >
 > 证明
 > $$
-> \sum_{w\in\mathfrak S_{M}}x^{\text{inv}(w)}=\mathbf{n\choose a_1,a_2,...,a_m}
+> \sum_{w\in\mathfrak S_{M}}q^{\text{inv}(w)}=\mathbf{n\choose a_1,a_2,...,a_m}
 > $$
 
 <script>
