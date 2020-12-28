@@ -75,6 +75,9 @@
         '即使爱与梦想说的再光鲜亮丽，这种行径也着实令人恶心。',
         '所谓教育不过是献祭孩童召唤恶魔的斜校仪式。',
         '我现在已经平和下来了。毕竟三年后不带着精神疾病走出【】才是最重要的嘛。',
+        '为什么我们能承认人不吃饭就会死，却拒绝承认精神上的需求是必要的？',
+        '👽',
+        '每一天都和前一天一模一样。',
         //冷知识
         '十二重计数法的英文名是 twelvefold path，是佛教用语“八圣道 eightfold path”的魔改。',
         //膜拜
@@ -228,6 +231,13 @@
             'Can\'t you hear the cries / Coming from the mirror? / There\'s a sloth.',
             'With an awkward blackened smile / It\'s fine you can\'t love yourself / But can\'t you love a sloth?',
             'And the whole thing made me extremely sad / I thought / \'How long will the future last?\'',
+            //utopiosphere
+            'Step through the gate into utopia',
+            'Sink into a world of melodia',
+            'Tick, tock / Time doesn\'t stop / Prepare, your doubts, eat them up',
+            'The sky is painted in lunacia / Florets slashed open the vein of tears',
+            'Misfortuna / There is no escape, my dear',
+            'The world undergoes photosynthesia / Transform endless anger to ecstasia',
         //游戏 / 动漫台词
         'Fate Chosen',
         'Reroll Your Destiny',
@@ -247,6 +257,8 @@
         'Believe there is a great power silently working all things for good',
         '为什么不去看看 ×√ 日报呢？',
         '今天你 AC 了吗',
+        '跑步！！！起来跑步！！！',
+        '抓紧时间洗漱！！！',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');

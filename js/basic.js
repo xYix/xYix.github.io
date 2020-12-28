@@ -516,10 +516,19 @@
         Blog.style.opacity = 1.0;
         Blog.frameBorder = 1;
         Blog.className = 'inline-blog';
-        Blog.src = '/posts/posts/' + win.archieve_list[postid].post_name + ".html";
-        Blog.scrolling = "no";
-        Blog.onload = function () {
-            Blog.style.height = Blog.contentDocument.body.scrollHeight;
+        if(postid === 45) {
+            Blog.src = '/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf';
+            Blog.scrolling = "yes";
+            Blog.onload = function () {
+                Blog.style.height = '100%';
+            }
+        }
+        else {
+            Blog.src = '/posts/posts/' + win.archieve_list[postid].post_name + ".html";
+            Blog.scrolling = "no";
+            Blog.onload = function () {
+                Blog.style.height = Blog.contentDocument.body.scrollHeight;
+            }
         }
         data.appendChild(Blog);
     }
