@@ -414,9 +414,10 @@ construction
 string-tech
 字符串学习笔记
 algorithm
-2
+3
 string
 lyndon-tech
+writing
 cf-923-e
 CF923E 题解 - Perpetual Subtraction
 solution
@@ -433,7 +434,8 @@ bijective-proof
 bpp2
 bijective proof problems 选做（下）
 algorithm
-3
+4
 combinatorics
 construction
 bijective-proof
+writing
