@@ -253,6 +253,14 @@
                 AddText(win, data, '高度机密', 'p');
                 AddText(win, data, 'Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
                 AddText(win, data, 'Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+                //<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
+                let picblock = win.createElement('div');
+                picblock.style = 'margin: auto';
+                    let mypic = win.createElement('img');
+                    mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
+                    mypic.alt = '致命模因';
+                picblock.appendChild(mypic);
+                data.appendChild(picblock)
             }
             else AddText(win, data, '您似乎跃迁到了银河系之外', 'h1');
         else {
