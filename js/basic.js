@@ -98,9 +98,8 @@
         let AddText = function (tdata, ttext, eletag) {
             let Ttext = win.createElement(eletag);
             Ttext.textContent = ttext;
-            let TTtext = win.createElement('center');
-            TTtext.appendChild(Ttext);
-            tdata.appendChild(TTtext);
+            Ttext.style = 'text-align: center';
+            tdata.appendChild(Ttext);
         }
         let SideBar = win.createElement('div');
         SideBar.className = 'sidebar';
