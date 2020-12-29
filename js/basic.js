@@ -255,9 +255,10 @@
                 AddText(win, data, 'Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
                 AddText(win, data, 'Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
                 data.appendChild(win.createElement('br'));
-                AddText(win, data, 'Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡 Ξ', 'p');
+                AddText(win, data, 'Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
+                AddText(win, data, 'Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
                 AddText(win, data, '你已经被警告过了。', 'p');
-                for (let i = 0; i < 10; i = i + 1)
+                for (let i = 0; i < 50; i = i + 1)
                     data.appendChild(win.createElement('br'));
                 //<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
                 let picblock = win.createElement('div');
