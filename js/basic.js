@@ -110,6 +110,11 @@
         }
         else SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
         SideBarTitle.appendChild(SideBarTitleContent1);
+        if(funval === undefined && win.Pathname[0] !== 'xjoi') {
+            let SideBarBanner = win.createElement('p');
+            SideBarBanner.textContent = 'Surprising Combinatorial Proof';
+            SideBarTitle.appendChild(SideBarBanner);
+        }
         let SideBarTitleContent2 = win.createElement('p');
         if (funval !== undefined) { //彩蛋
             SideBarTitleContent2.appendChild(win.createTextNode('离线评测系统'));
@@ -250,7 +255,7 @@
         }
         if (win.Pathname.length === 0)
             if (win.isError === 0) {
-                AddText(win, data, 'Ξ 警告：刻希未来学会资料库属于 Ξ', 'p');
+                AddText(win, data, 'Ξ 警告：基金会资料库属于 Ξ', 'p');
                 AddText(win, data, '高度机密', 'p');
                 AddText(win, data, 'Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
                 AddText(win, data, 'Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
@@ -260,14 +265,15 @@
                 AddText(win, data, '你已经被警告过了。', 'p');
                 for (let i = 0; i < 50; i = i + 1)
                     data.appendChild(win.createElement('br'));
-                //<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
                 let picblock = win.createElement('div');
                 picblock.style = 'margin: auto; text-align: center';
                     let mypic = win.createElement('img');
                     mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
                     mypic.alt = '致命模因';
                 picblock.appendChild(mypic);
-                data.appendChild(picblock)
+                data.appendChild(picblock);
+                for (let i = 0; i < 5; i = i + 1)
+                    data.appendChild(win.createElement('br'));
             }
             else AddText(win, data, '您似乎跃迁到了银河系之外', 'h1');
         else {
