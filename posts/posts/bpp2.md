@@ -462,7 +462,7 @@ title: bijective proof problems 选做（下）
 >
 > <div style="width:50%;margin:auto"><img src="/images/youngtable.png" alt=""></div>
 >
-> 你要往里面填 $[n]$ 的排列，使得行单调增列单调增，这样的一种填充称为**标准杨表**。记形状为 $\lambda$ 的标准杨表数量为 $f^{\lambda}$。
+> 你要往里面填 $[n]$ 的排列，使得行单调增列单调增，这样的一种填充称为**标准杨表**（简称 SYT，Standard Young Tableau）。记形状为 $\lambda$ 的标准杨表数量为 $f^{\lambda}$。
 >
 > 杨表 $\lambda$ 的第 $i$ 行第 $j$ 列的元素记作 $\lambda^{(i,j)}$。
 
@@ -482,7 +482,7 @@ title: bijective proof problems 选做（下）
 >
 > > #### 行插入
 > >
-> > 定义 $P\leftarrow x$ 是把 $x$ 从第一行**行插入**进近似标准杨表（即填入的元素不必恰好是 $[n]$）$P$ 中。流程如下：
+> > 定义 $P\leftarrow x$ 是把 $x$ 从第一行**行插入**进近似 SYT（即填入的元素不必恰好是 $[n]$）$P$ 中。流程如下：
 > >
 > > - 找到本行最小的比 $x$ 大的数 $y$。如果找不到这样的 $y$，则把 $x$ 放在本行末尾并结束算法。
 > > - 交换 $x,y$。将 $y$ **行插入**下一行。
@@ -493,7 +493,7 @@ title: bijective proof problems 选做（下）
 >
 > 显然最后新增的格子一定在边角，即其下方和右方都没有格子。
 >
-> 对于对 $P$ 的第 $i$ 插入，在另一个杨表 $Q$ 中在新增的格子上写上 $i$（注意不是插入）。显然 $Q$ 是标准杨表。我们称 $P$ 为**插入表**，$Q$ 为**记录表**。
+> 对于对 $P$ 的第 $i$ 次插入，在另一个表 $Q$ 中在新增的格子上写上 $i$（注意只是单纯地写上，而不是插入）。显然 $Q$ 是 SYT。我们称 $P$ 为**插入表**，$Q$ 为**记录表**。
 >
 > > #### 删除
 > >
@@ -513,7 +513,7 @@ title: bijective proof problems 选做（下）
 >
 > 很明显删除就是行插入的逆操作。
 >
-> 考虑一个 $1...n$ 的排列，依次插入即可得到两个杨表 $(P,Q)$；给定 $(P,Q)$，显然 $Q$ 中最大元素一定在边角，于是我们可以按 $Q$ 的指导去删除 $P$ 来还原原来的排列。
+> 考虑一个 $1...n$ 的排列，依次插入即可得到两个 SYT $(P,Q)$；给定 $(P,Q)$，显然 $Q$ 中最大元素一定在边角，于是我们可以按 $Q$ 的指导去删除 $P$ 来还原原来的排列。
 >
 > 于是也就得到了以下的 *Robinson–Schensted correspondence*：
 >
@@ -552,7 +552,7 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 
 > **问题.**
 >
-> 证明，$n$ 个格子的杨表总数与 $\mathfrak S_n$ 中的**对合**~~内卷~~（即逆为自身的排列）总数相等。
+> 证明，$n$ 个格子的 SYT 总数与 $\mathfrak S_n$ 中的**对合**~~内卷~~（即逆为自身的排列）总数相等。
 
 <script>
   	document.new_button(2);
@@ -589,6 +589,29 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 > 也就是说我们证明了对 $w$，原定理在第一行的确成立。
 >
 > 构造一个新序列，它是依次写下 $w$ 中被插入第二行的元素形成的序列（显然，插入第二行的顺序不一定在是 $w$ 中的顺序）。只要它满足原定理，$w$ 也就满足原定理。于是归纳即可。
+>
+> $\blacksquare$
+
+<script>
+document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+### 205.[3]
+
+> **问题.**
+>
+> 证明，$2n$ 个格子，且每行格子数均为偶数的 SYT 总数等于
+> $$
+> (2n-1)!!=1\cdot 3\cdot 5 \cdot\ldots\cdot (2n-1)
+> $$
+
+<script>
+  	document.new_button(4);
+</script>
+
+> **解答.**
+>
+> 根据 204，我们只需要证明，只有那些完全由长度为 $2$ 的循环构成的对合才会映射到上述杨表。
 >
 > $\blacksquare$
 
