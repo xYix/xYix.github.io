@@ -388,7 +388,7 @@
             Postinfo_tags_a.href = '/archieve/' +
                 win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
             Postinfo_tags_a.textContent = win.tags_list[postinfo.tag[i]];
-            if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: yellow';
+            if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
@@ -559,6 +559,8 @@
             let TagsRow1strong = win.createElement('strong');
             TagsRow1strong.textContent = win.tags_list[Tag];
             TagsRow1a.appendChild(TagsRow1strong);
+            if(Tag === 'writing') TagsRow1a.style = 'color: orange';
+            if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
             let TagsRow2 = win.createElement('th');
