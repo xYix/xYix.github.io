@@ -549,7 +549,7 @@
 		'post_name' : 'noip-2020',
 		'post_chinese_name' : 'NOIP2020 退役记',
 		'type_name' : 'other',
-		'last_modi' : '2020-12-06',
+		'last_modi' : '',
 		'tag' : ['construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -558,7 +558,7 @@
 		'post_chinese_name' : '字符串学习笔记',
 		'type_name' : 'algorithm',
 		'last_modi' : '2020-12-08',
-		'tag' : ['lyndon-tech','string',],
+		'tag' : ['lyndon-tech','string','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '71',
@@ -573,7 +573,7 @@
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-21',
+		'last_modi' : '2020-12-29',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -581,7 +581,7 @@
 		'post_name' : 'bpp2',
 		'post_chinese_name' : 'bijective proof problems 选做（下）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-24',
-		'tag' : ['bijective-proof','combinatorics','construction',],
+		'last_modi' : '2020-12-29',
+		'tag' : ['bijective-proof','combinatorics','construction','writing',],
 	};
 })(document);
