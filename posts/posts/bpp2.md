@@ -13,7 +13,7 @@ title: bijective proof problems 选做（下）
 </style>
 [pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
 
-由于一些奇怪的问题（页面高度固定），建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp2.html)。
+由于一些奇怪的问题，建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp2.html)（请用鼠标中键或右键加 T 打开）。
 
 <script>
     document.get_button_click = function(blockid) {
@@ -558,7 +558,9 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 
 > **解答.**
 >
-> 我们来证明，若 $\text{RSK}:w\mapsto(P,Q)$，则必有 $\text{RSK}:w^{-1}\mapsto (Q,P)$。从而那些对合总是被映射到 $(P,P)$，也就证明了原题。
+> 我们只需要证明，若 $\text{RSK}:w\mapsto(P,Q)$，则必有 $\text{RSK}:w^{-1}\mapsto (Q,P)$。从而那些对合总是被映射到 $(P,P)$，也就证明了原题。
+>
+> 下面的证明来自 IOI2019 候选队论文集。
 
 <script>
 document.getElementsByTagName("blockquote")[document.last_block].style.display="none";

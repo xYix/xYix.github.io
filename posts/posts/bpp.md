@@ -14,7 +14,7 @@ title: bijective proof problems 选做（上）
 
 [pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
 
-由于一些奇怪的问题（页面高度固定），建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp.html)。
+由于一些奇怪的问题，建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp.html)（请用鼠标中键或右键加 T 打开）。
 
 <script>
     document.get_button_click = function(blockid) {
@@ -603,6 +603,8 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > \boxed{\sum_{g\in\mathcal G}\prod_{i}xt_{f_i}=\text{exp}\left(\sum_{i=1}^{\infty}\dfrac {x^i}i\sum_{f\in\mathcal F}t^i_f\right)}
 > $$
 > 其中 $t_{f},x$ 皆是形式幂级数变元。
+>
+> 这个定理是欧拉变换的加强版：普通的欧拉变换就是它取 $t_f=y^{|f|},x=1$ 的特殊情况。
 
 <script>
   	document.new_button(2);
@@ -616,13 +618,13 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 > $$
 > \sum_{n\ge 1}n!G_n\dfrac{x^n}{n!}
 > $$
-> 其中，根据原式，$G_n$ 的意义是：$\sum_{\ell(g)=n}\prod_{i}t_{f_i}$。
+> 其中，根据原式可直接得出，$G_n$ 的意义是：$\sum_{\ell(g)=n}\prod_{i}t_{f_i}$。可以看成一个上述的 $g$ 和一个排列 $w$ 组成的有序对。
 >
-> 左边则可这样考虑：$\sum_{i=1}^{\infty}(i-1)!\dfrac{x^i}{i!}$ 可解释为所有循环。想象我们可以给某个循环染上一个颜色 $f\in\mathcal F$，定义该循环在该染色下的权值为 $t_f^{\ell}$，然后定义一个置换的权值为其所有循环的权值之积。
+> 右边则可这样考虑：$\sum_{i=1}^{\infty}(i-1)!\dfrac{x^i}{i!}$ 可解释为所有循环。想象我们可以给某个循环染上一个颜色 $f\in\mathcal F$，定义该循环在该染色下的权值为 $t_f^{\ell}$，然后定义一个置换的权值为其所有循环的权值之积。
 >
 > 考虑到 $\text{exp}$ 的组合意义，于是左式可解释为**所有置换的所有染色方案的权值之和**的 EGF。
 >
-> 最后，我们考虑基本双射就可得到左右式之间的双射，具体来说：考虑排列 $w$，将其按 $g$ 染色，然后逆向使用基本双射。
+> 最后，我们考虑**基本双射**就可得到左右式之间的双射。具体对本题来说：考虑排列 $w$，将其按 $g$ 染色，然后逆向使用基本双射。显然这个变换是保权值的，于是我们便证明了原定理。
 >
 > $\blacksquare$
 
