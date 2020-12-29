@@ -242,7 +242,7 @@
             let Ttext = twin.createElement(eletag);
             if (win.Funval !== undefined && eletag === 'h1') Ttext.textContent = '集天下毒瘤题 恶心天下人';
             else Ttext.textContent = ttext;
-            if(ttext === '高度机密') Ttext.style = 'color: #600';
+            if(ttext === '高度机密') Ttext.style = 'color: #600; font-size: 400%';
             let TTtext = twin.createElement('center');
             TTtext.appendChild(Ttext);
             tdata.appendChild(TTtext);
@@ -250,7 +250,7 @@
         if (win.Pathname.length === 0)
             if (win.isError === 0) {
                 AddText(win, data, 'Ξ 警告：刻希未来学会资料库属于 Ξ', 'p');
-                AddText(win, data, '高度机密', 'h1');
+                AddText(win, data, '高度机密', 'p');
                 AddText(win, data, 'Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
                 AddText(win, data, 'Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
             }
