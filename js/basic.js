@@ -243,6 +243,7 @@
             if (win.Funval !== undefined && eletag === 'h1') Ttext.textContent = '集天下毒瘤题 恶心天下人';
             else Ttext.textContent = ttext;
             if(ttext === '高度机密') Ttext.style = 'color: #600; font-size: 400%; font-weight: bold; margin: 0';
+            if(ttext === '你已经被警告过了。') Ttext.style = 'color: #600; font-size: 250%; font-weight: bold; margin: 0';
             let TTtext = twin.createElement('center');
             TTtext.appendChild(Ttext);
             tdata.appendChild(TTtext);
@@ -253,9 +254,14 @@
                 AddText(win, data, '高度机密', 'p');
                 AddText(win, data, 'Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
                 AddText(win, data, 'Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+                data.appendChild(win.createElement('br'));
+                AddText(win, data, 'Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡 Ξ', 'p');
+                AddText(win, data, '你已经被警告过了。', 'p');
+                for (let i = 0; i < 10; i = i + 1)
+                    data.appendChild(win.createElement('br'));
                 //<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
                 let picblock = win.createElement('div');
-                picblock.style = 'margin: auto';
+                picblock.style = 'margin: auto; text-align: center';
                     let mypic = win.createElement('img');
                     mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
                     mypic.alt = '致命模因';
