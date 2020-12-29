@@ -596,25 +596,6 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
 
-### 205.[3]
+## 后记
 
-> **问题.**
->
-> 证明，$2n$ 个格子，且每行格子数均为偶数的 SYT 总数等于
-> $$
-> (2n-1)!!=1\cdot 3\cdot 5 \cdot\ldots\cdot (2n-1)
-> $$
-
-<script>
-  	document.new_button(4);
-</script>
-
-> **解答.**
->
-> 根据 204，我们只需要证明，只有那些完全由长度为 $2$ 的循环构成的对合才会映射到上述杨表。
->
-> $\blacksquare$
-
-<script>
-document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
-</script>
+放弃了，做不动力

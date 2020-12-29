@@ -582,6 +582,6 @@
 		'post_chinese_name' : 'bijective proof problems 选做（下）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2020-12-29',
-		'tag' : ['bijective-proof','combinatorics','construction','writing',],
+		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 })(document);

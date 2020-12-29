@@ -434,8 +434,7 @@ bijective-proof
 bpp2
 bijective proof problems 选做（下）
 algorithm
-4
+3
 combinatorics
 construction
 bijective-proof
-writing
