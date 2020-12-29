@@ -111,9 +111,9 @@
         else SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
         SideBarTitle.appendChild(SideBarTitleContent1);
         if(funval === undefined && win.Pathname[0] !== 'xjoi') {
-            SideBarTitleContent2.appendChild(win.createTextNode('Surprising'));
-            SideBarTitleContent2.appendChild(win.createTextNode('Combinatorial'));
-            SideBarTitleContent2.appendChild(win.createTextNode('Proof'));
+            SideBarTitle.appendChild(win.createTextNode('Surprising'));
+            SideBarTitle.appendChild(win.createTextNode('Combinatorial'));
+            SideBarTitle.appendChild(win.createTextNode('Proof'));
         }
         let SideBarTitleContent2 = win.createElement('p');
         if (funval !== undefined) { //彩蛋
