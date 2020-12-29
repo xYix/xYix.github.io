@@ -242,6 +242,7 @@
             let Ttext = twin.createElement(eletag);
             if (win.Funval !== undefined && eletag === 'h1') Ttext.textContent = '集天下毒瘤题 恶心天下人';
             else Ttext.textContent = ttext;
+            if(ttext === '高度机密') Ttext.style = 'color: #600';
             let TTtext = twin.createElement('center');
             TTtext.appendChild(Ttext);
             tdata.appendChild(TTtext);
