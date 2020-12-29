@@ -339,7 +339,7 @@ title: bijective proof problems 选做（下）
 下面两题是 x义x 自己加的。它们都与拉格朗日反演有关……哦，应该说，它们自己就是拉格朗日反演。
 
 
-### EXTRA-1.[2]
+### EXTRA-2.[2]
 
 > **问题.**
 >
@@ -410,7 +410,7 @@ title: bijective proof problems 选做（下）
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-### EXTRA-2.[3#]
+### EXTRA-3.[3#]
 
 \# 号表示“++++”。（
 
@@ -427,11 +427,11 @@ title: bijective proof problems 选做（下）
 >
 > 那么我们有
 > $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - \mathbf 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
 > $$
 > 其中 $\mathcal T$ 是完全图 $0\sim m$ 的所有以 $0$ 为根的内向生成树，而
 > $$
-> \dfrac{\partial \mathbf f}{\partial G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
+> \dfrac{\partial \mathbf f}{\partial G}=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
 > $$
 
 <script>
@@ -454,7 +454,7 @@ title: bijective proof problems 选做（下）
 
 生成函数的阴影无法触及的领域。双射方法终于得以生活在阳光之下。（
 
-### 教程关：杨表，RSK 算法 && 203[2-].
+### 教程关：标准杨表，RSK 算法 && 203[2-].
 
 > **定义.**
 >
@@ -463,6 +463,8 @@ title: bijective proof problems 选做（下）
 > <div style="width:50%;margin:auto"><img src="/images/youngtable.png" alt=""></div>
 >
 > 你要往里面填 $[n]$ 的排列，使得行单调增列单调增，这样的一种填充称为**标准杨表**。记形状为 $\lambda$ 的标准杨表数量为 $f^{\lambda}$。
+>
+> 杨表 $\lambda$ 的第 $i$ 行第 $j$ 列的元素记作 $\lambda^{(i,j)}$。
 
 > **题目.**
 >
@@ -546,11 +548,11 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
 
-### 204.[3]
+### 教程关：RSK 算法和最长上升子序列 && 204.[3]
 
 > **问题.**
 >
-> 证明，$n$ 个格子的杨表总数与 $\mathfrak S_n$ 中的**对合**~~内卷~~（即逆为自身）总数相等。
+> 证明，$n$ 个格子的杨表总数与 $\mathfrak S_n$ 中的**对合**~~内卷~~（即逆为自身的排列）总数相等。
 
 <script>
   	document.new_button(2);
@@ -558,9 +560,37 @@ document.getElementsByTagName("blockquote")[document.last_block].style.display="
 
 > **解答.**
 >
-> 我们只需要证明，若 $\text{RSK}:w\mapsto(P,Q)$，则必有 $\text{RSK}:w^{-1}\mapsto (Q,P)$。从而那些对合总是被映射到 $(P,P)$，也就证明了原题。
+> 我们只需要证明以下定理：若 $\text{RSK}:w\mapsto(P,Q)$，则必有 $\text{RSK}:w^{-1}\mapsto (Q,P)$。
 >
-> 下面的证明来自 IOI2019 候选队论文集。
+> 从而被 RSK 算法映射到 $(P,P)$ 当且仅当这个排列是对合，也就证明了原题。
+>
+> > 考虑 $w$ 中的这样一条子序列：$A=(w(i_1),w(i_2),...,w(i_{\ell}))$，其中 $i_*$ 皆满足 $\forall j<i_*,w(j)>w(i_*)$，且 $i_{*}<i_{*+1}$。
+> >
+> > 显然它们会依次替换掉 $P^{(1,1)}$，而 $P^{(1,1)}$ 被替换出后，在下一行不可能有能与之匹敌的对手，于是必然插入 $P^{(2,1)}$，原来的 $P^{(2,1)}$ 必然插入 $P^{(3,1)}$，依次类推。
+> >
+> > 于是我们如此总结：$P^{(1,1)}=w(i_{\ell}),Q^{(1,1)}=i_{1}$。对于 $P^{(2,1)}$，只需要考虑在 $w$ 中抽掉 $A$ 再进行类似构造即可。
+> >
+> > （但是注意上述结论不能得出有关 $P^{(*,1)}$ 的信息，因为该格的来源的可能性相对较复杂）
+>
+> 注意 $A$ 可看成从排列 $w$ 到子序列 $A$ 的映射，所以我们下面可能会使用 $A(w),i(w)$ 等记号。
+>
+> 回过头来考虑 $w$ 和 $w^{-1}$ 的关系。我们指出，如果交换 $A(w)$ 的下标和元素值，然后再 $\text{reverse} $ 整个序列，则得到的恰好是 $A(w^{-1})$。下面我们来说明为何会这样。
+>
+> > 上面的结论写的明确一些就是：$i_*(w^{-1})=w(i_{\ell+1-*}(w))$。
+> >
+> > $i_*(w^{-1})<i_{*+1}(w^{-1})$ 是显然的，所以我们只需要验证
+> > $$
+> > \begin{aligned}\forall j<i_*(w^{-1}),w^{-1}(j)>w^{-1}(i_*(w^{-1}))\\
+> > \Longleftrightarrow\forall w(k)<w(i_{\ell +1 -*}(w)),k>i_{\ell+1-*}(w)
+> > \end{aligned}
+> > $$
+> > 这的确和 $i(w)$ 的定义等价。
+>
+> 也就是说我们证明了对 $w$，原定理在第一行的确成立。
+>
+> 构造一个新序列，它是依次写下 $w$ 中被插入第二行的元素形成的序列（显然，插入第二行的顺序不一定在是 $w$ 中的顺序）。只要它满足原定理，$w$ 也就满足原定理。于是归纳即可。
+>
+> $\blacksquare$
 
 <script>
 document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
