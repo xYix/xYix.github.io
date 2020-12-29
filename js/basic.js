@@ -95,6 +95,13 @@
     }
     win.InitAnalyze();
     win.WriteSideBar = function (data, title, funval) {
+        let AddText = function (tdata, ttext, eletag) {
+            let Ttext = win.createElement(eletag);
+            Ttext.textContent = ttext;
+            let TTtext = win.createElement('center');
+            TTtext.appendChild(Ttext);
+            tdata.appendChild(TTtext);
+        }
         let SideBar = win.createElement('div');
         SideBar.className = 'sidebar';
         let SideBarConBlock = win.createElement('div');
@@ -111,17 +118,15 @@
         else SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
         SideBarTitle.appendChild(SideBarTitleContent1);
         if(funval === undefined && win.Pathname[0] !== 'xjoi') {
-            SideBarTitle.appendChild(win.createTextNode('Surprising'));
-            SideBarTitle.appendChild(win.createTextNode('Combinatorial'));
-            SideBarTitle.appendChild(win.createTextNode('Proof'));
+            AddText(SideBarTitle, 'Surprising', 'p');
+            AddText(SideBarTitle, 'Combinatorial', 'p');
+            AddText(SideBarTitle, 'Proof', 'p');
         }
         let SideBarTitleContent2 = win.createElement('p');
         if (funval !== undefined) { //彩蛋
-            SideBarTitleContent2.appendChild(win.createTextNode('离线评测系统'));
-            SideBarTitleContent2.appendChild(win.createElement('br'));
-            SideBarTitleContent2.appendChild(win.createTextNode('新版下线'));
-            SideBarTitleContent2.appendChild(win.createElement('br'));
-            SideBarTitleContent2.appendChild(win.createTextNode('since 2020'));
+            AddText(SideBarTitleContent2, '离线评测系统', 'p');
+            AddText(SideBarTitleContent2, '新版下线', 'p');
+            AddText(SideBarTitleContent2, 'since 2020', 'p');
         }
         else {
             for (let i = 0; i < title.length; i = i + 1) {
