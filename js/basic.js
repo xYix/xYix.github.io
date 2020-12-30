@@ -130,13 +130,12 @@
         SideBarCon.className = 'content';
         let write_link = function(text1, text2) {
             let Text = win.createElement('p');
-            Text.style = 'font-weight: bold';
-            Text.textContent = '· ' + text1;
-            let aText = win.createElement('a');
-            aText.setAttribute('href', '/' + text2 + win.ezylanASearch(win.TrueSearch));
-            aText.appendChild(Text);
-            SideBarCon.appendChild(aText);
-            SideBarCon.appendChild(win.createElement('br'));
+                let aText = win.createElement('a');
+                aText.style = 'font-weight: bold';
+                aText.textContent = '· ' + text1;
+                aText.setAttribute('href', '/' + text2 + win.ezylanASearch(win.TrueSearch));
+            Text.appendChild(aText);
+            SideBarCon.appendChild(Text);
         }
         write_link('回到首页', '');
         write_link('文章一览', 'archieve/');
@@ -308,9 +307,9 @@
             let TagsRow1 = win.createElement('th');
             let TagsRow1a = win.createElement('a');
             TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
+            //
             let TagsRow1strong = win.createElement('strong');
             TagsRow1strong.textContent = win.tags_list[Tag];
-            TagsRow1a.appendChild(TagsRow1strong);
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
             let TagsRow2 = win.createElement('th');
