@@ -210,25 +210,25 @@
     }
     win.title = 'x义x 的 blog - ' + win.Title[0];
     win.WriteTitle2 = function (data) {
-        let AddText = function (tdata, ttext, eletag) {
+        let AddText = function (ttext, eletag) {
             let Ttext = win.createElement(eletag);
             Ttext.textContent = ttext;
             if(ttext === '高度机密') Ttext.style = 'color: #600; font-size: 400%; font-weight: bold; margin: 0';
             if(ttext === '你已经被警告过了。') Ttext.style = 'color: #600; font-size: 250%; font-weight: bold; margin: 0';
             let TTtext = win.createElement('center');
             TTtext.appendChild(Ttext);
-            tdata.appendChild(TTtext);
+            data.appendChild(TTtext);
         }
         if (win.Pathname.length === 0)
             if (win.isError === 0) {
-                AddText(data, 'Ξ 警告：基金会资料库属于 Ξ', 'p');
-                AddText(data, '高度机密', 'p');
-                AddText(data, 'Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
-                AddText(data, 'Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+                AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
+                AddText('高度机密', 'p');
+                AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
+                AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
                 data.appendChild(win.createElement('br'));
-                AddText(data, 'Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
-                AddText(data, 'Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
-                AddText(data, '你已经被警告过了。', 'p');
+                AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
+                AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
+                AddText('你已经被警告过了。', 'p');
                 for (let i = 0; i < 50; i = i + 1)
                     data.appendChild(win.createElement('br'));
                 let picblock = win.createElement('div');
@@ -241,26 +241,26 @@
                 for (let i = 0; i < 5; i = i + 1)
                     data.appendChild(win.createElement('br'));
             }
-            else AddText(data, '您似乎跃迁到了银河系之外', 'h1');
+            else AddText('您似乎跃迁到了银河系之外', 'h1');
         else {
-            if (win.Pathname[0] === 'archieve') AddText(data, '文章一览', 'h1');
-            if (win.Pathname[0] === 'tags') AddText(data, '标签一览', 'h1');
-            if (win.Pathname[0] === 'songlist') AddText(data, '网义云音乐', 'h1');
-            if (win.Pathname[0] === 'help') AddText(data, '帮助', 'h1');
-            if (win.Pathname[0] === 'posts') AddText(data, win.archieve_list[win.Postid - 1].post_chinese_name, 'h1');
+            if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
+            if (win.Pathname[0] === 'tags') AddText('标签一览', 'h1');
+            if (win.Pathname[0] === 'songlist') AddText('网义云音乐', 'h1');
+            if (win.Pathname[0] === 'help') AddText('帮助', 'h1');
+            if (win.Pathname[0] === 'posts') AddText(win.archieve_list[win.Postid - 1].post_chinese_name, 'h1');
             if (win.Pathname[0] === 'xjoi') {
-                if (win.Pathname[1] !== 'probs') AddText(data, '集天下毒瘤题 恶心天下人', 'h1');
-                if (win.Pathname[1] === 'contest') AddText(data, '比赛列表', 'h2');
-                if (win.Pathname[1] === 'problemset') AddText(data, '题目列表', 'h2');
-                if (win.Pathname[1] === 'abnormal') AddText(data, '评测记录', 'h2');
+                if (win.Pathname[1] !== 'probs') AddText('集天下毒瘤题 恶心天下人', 'h1');
+                if (win.Pathname[1] === 'contest') AddText('比赛列表', 'h2');
+                if (win.Pathname[1] === 'problemset') AddText('题目列表', 'h2');
+                if (win.Pathname[1] === 'abnormal') AddText('评测记录', 'h2');
                 if (win.Pathname[1] === 'probs')
-                    AddText(data, win.prob_chinese_name[win.Probname], 'h1'),
-                        AddText(data, '作者：' + win.prob_author[win.Probname], 'p');
+                    AddText(win.prob_chinese_name[win.Probname], 'h1'),
+                        AddText('作者：' + win.prob_author[win.Probname], 'p');
                 if (win.Pathname[1] === 'fakenews') {
                     var d = new Date();
-                    AddText(data, '×√日报', 'h2'),
-                        AddText(data, '地球日期：' + d.getFullYear() + ' 年 ' + (d.getMonth() + 1) + ' 月 ' + d.getDate() + ' 日', 'h3'),
-                        AddText(data, '奶油糖日期：' + Math.floor(Math.random() * 10000) + ' 年 ' + Math.floor(Math.random() * 23) +
+                    AddText('×√日报', 'h2'),
+                        AddText('地球日期：' + d.getFullYear() + ' 年 ' + (d.getMonth() + 1) + ' 月 ' + d.getDate() + ' 日', 'h3'),
+                        AddText('奶油糖日期：' + Math.floor(Math.random() * 10000) + ' 年 ' + Math.floor(Math.random() * 23) +
                             ' 月 ' + Math.floor(Math.random() * 17) + ' 日', 'h3');
                 }
             }
@@ -271,7 +271,7 @@
                     else if (win.Type == 'algorithm') Typeinfo += '算法/知识点';
                     else if (win.Type == 'other') Typeinfo += '游记/其他';
                     else Typeinfo += '不明分类';
-                    AddText(data, Typeinfo, 'h3');
+                    AddText(Typeinfo, 'h3');
                 }
                 if (win.Tags.length !== 0) {
                     let Taginfo = '具有标签：';
@@ -281,9 +281,9 @@
                         else Taginfo += '不明标签';
                         if (i !== win.Tags.length - 1) Taginfo += '，';
                     }
-                    AddText(data, Taginfo, 'h3');
+                    AddText(Taginfo, 'h3');
                 }
-                AddText(data, '第 ' + (win.Page + 1) + ' 页', 'h3');
+                AddText('第 ' + (win.Page + 1) + ' 页', 'h3');
             }
         }
     }
