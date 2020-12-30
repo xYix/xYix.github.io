@@ -128,54 +128,27 @@
         SideBarConBlock.appendChild(SideBarTitle);
         let SideBarCon = win.createElement('div');
         SideBarCon.className = 'content';
-        let Text1 = win.createElement('strong');
-        Text1.textContent = '· 回到首页';
-        let aText1 = win.createElement('a');
-        aText1.setAttribute('href', '/' + win.ezylanASearch(win.TrueSearch));
-        aText1.appendChild(Text1);
-        SideBarCon.appendChild(aText1);
-        SideBarCon.appendChild(win.createElement('p'));
-        let Text2 = win.createElement('strong');
-        Text2.textContent = '· 文章一览';
-        let aText2 = win.createElement('a');
-        aText2.setAttribute('href', '/archieve/' + win.ezylanASearch(win.TrueSearch));
-        aText2.appendChild(Text2);
-        SideBarCon.appendChild(aText2);
-        SideBarCon.appendChild(win.createElement('p'));
-        let Text3 = win.createElement('strong');
-        Text3.textContent = '· 标签一览';
-        let aText3 = win.createElement('a');
-        aText3.setAttribute('href', '/tags/' + win.ezylanASearch(win.TrueSearch));
-        aText3.appendChild(Text3);
-        SideBarCon.appendChild(aText3);
-        SideBarCon.appendChild(win.createElement('p'));
-        let Text4 = win.createElement('strong');
-        Text4.textContent = '· 网义云音乐';
-        let aText4 = win.createElement('a');
-        aText4.setAttribute('href', '/songlist/' + win.ezylanASearch(win.TrueSearch));
-        aText4.appendChild(Text4);
-        SideBarCon.appendChild(aText4);
-        SideBarCon.appendChild(win.createElement('p'));
-        let Text5 = win.createElement('strong');
-        Text5.textContent = '· 需要帮助？';
-        let aText5 = win.createElement('a');
-        aText5.setAttribute('href', '/help/' + win.ezylanASearch(win.TrueSearch));
-        aText5.appendChild(Text5);
-        SideBarCon.appendChild(aText5);
-        SideBarCon.appendChild(win.createElement('p'));
+        let write_link = function(text1, text2) {
+            let Text = win.createElement('strong');
+            Text.textContent = '· ' + text1;
+            let aText = win.createElement('a');
+            aText.setAttribute('href', '/' + text2 + win.ezylanASearch(win.TrueSearch));
+            aText.appendChild(Text);
+            SideBarCon.appendChild(aText);
+            SideBarCon.appendChild(win.createElement('br'));
+        }
+        write_link('回到首页', '');
+        write_link('文章一览', 'archieve/');
+        write_link('标签一览', 'tags/');
+        write_link('网义云音乐', 'songlist/');
         let Text6 = win.createElement('strong');
         Text6.textContent = '· 一键清除 tag';
         let aText6 = win.createElement('a');
         aText6.setAttribute('href', location.pathname);
         aText6.appendChild(Text6);
         SideBarCon.appendChild(aText6);
-        SideBarCon.appendChild(win.createElement('p'));
-        let Text7 = win.createElement('strong');
-        Text7.textContent = '· ×√OI';
-        let aText7 = win.createElement('a');
-        aText7.setAttribute('href', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
-        aText7.appendChild(Text7);
-        SideBarCon.appendChild(aText7);
+        SideBarCon.appendChild(win.createElement('br'));
+        write_link('×√OI', 'xjoi/');
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
@@ -452,6 +425,9 @@
         ArchieveTable.className = 'mycenter';
 
         let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
+
+        // let writeTh = function () {
+        // }
 
         let Titleh0 = win.createElement('th');
         Titleh0.style = win.archieve_id_style;
