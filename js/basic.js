@@ -108,32 +108,21 @@
         let SideBarTitle = win.createElement('center');
         SideBarTitle.className = 'title';
         let SideBarTitleContent1 = win.createElement('h1');
-        // if (funval !== undefined || win.Pathname[0] === 'xjoi') {
-        //     SideBarTitleContent1.textContent = '×√OI';
-        //     if (win.Pathname[1] === 'fakenews') SideBarTitleContent1.textContent += '：新闻';
-        //     if (win.Pathname[1] === 'contest') SideBarTitleContent1.textContent += '：比赛';
-        //     if (win.Pathname[1] === 'problemset') SideBarTitleContent1.textContent += '：题库';
-        // }
-        /*else */SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
+        SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
         SideBarTitle.appendChild(SideBarTitleContent1);
-        if(/*funval === undefined && */win.Pathname[0] !== 'xjoi') {
-            win.AddText(SideBarTitle, 'Surprising', 'p');
-            win.AddText(SideBarTitle, 'Combinatorial', 'p');
-            win.AddText(SideBarTitle, 'Proof', 'p');
+        if(win.Pathname[0] !== 'xjoi') {
+            let SCPblock = win.createElement('center');
+            win.AddText(SCPblock, 'Surprising', 'p');
+            win.AddText(SCPblock, 'Combinatorial', 'p');
+            win.AddText(SCPblock, 'Proof', 'p');
+            SideBarTitle.appendChild(SCPblock);
         }
         let SideBarTitleContent2 = win.createElement('p');
-        // if (funval !== undefined) { //彩蛋
-        //     win.AddText(SideBarTitleContent2, '离线评测系统', 'p');
-        //     win.AddText(SideBarTitleContent2, '新版下线', 'p');
-        //     win.AddText(SideBarTitleContent2, 'since 2020', 'p');
-        // }
-        // else {
-            for (let i = 0; i < title.length; i = i + 1) {
-                if (i == 0) SideBarTitleContent2.appendChild(win.createTextNode('您现在在：' + title[i]));
-                else SideBarTitleContent2.appendChild(win.createTextNode(title[i]));
-                if (i < title.length - 1) SideBarTitleContent2.appendChild(win.createElement('br'));
-            }
-        // }
+        for (let i = 0; i < title.length; i = i + 1) {
+            if (i == 0) SideBarTitleContent2.appendChild(win.createTextNode('您现在在：' + title[i]));
+            else SideBarTitleContent2.appendChild(win.createTextNode(title[i]));
+            if (i < title.length - 1) SideBarTitleContent2.appendChild(win.createElement('br'));
+        }
         SideBarTitle.appendChild(SideBarTitleContent2);
         SideBarConBlock.appendChild(SideBarTitle);
         let SideBarCon = win.createElement('div');
