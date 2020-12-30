@@ -129,7 +129,8 @@
         let SideBarCon = win.createElement('div');
         SideBarCon.className = 'content';
         let write_link = function(text1, text2) {
-            let Text = win.createElement('strong');
+            let Text = win.createElement('p');
+            Text.style = 'font-weight: bold';
             Text.textContent = '· ' + text1;
             let aText = win.createElement('a');
             aText.setAttribute('href', '/' + text2 + win.ezylanASearch(win.TrueSearch));
@@ -426,33 +427,18 @@
 
         let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
 
-        // let writeTh = function () {
-        // }
+        let writeTh = function (text1, text2) {
+            let Titleh = win.createElement('th');
+            Titleh.style = win.archieve_id_style;
+            Titleh.appendChild(win.createTextNode(text2));
+            ArchieveTitle.appendChild(Titleh);
+        }
 
-        let Titleh0 = win.createElement('th');
-        Titleh0.style = win.archieve_id_style;
-        Titleh0.appendChild(win.createTextNode('编号'));
-        ArchieveTitle.appendChild(Titleh0);
-
-        let Titleh1 = win.createElement('th');
-        Titleh1.style = win.archieve_title_style;
-        Titleh1.appendChild(win.createTextNode('标题'));
-        ArchieveTitle.appendChild(Titleh1);
-
-        let Titleh2 = win.createElement('th');
-        Titleh2.style = win.archieve_type_style;
-        Titleh2.appendChild(win.createTextNode('分类'));
-        ArchieveTitle.appendChild(Titleh2);
-
-        let Titleh3 = win.createElement('th');
-        Titleh3.style = win.archieve_tags_style;
-        Titleh3.appendChild(win.createTextNode('标签'));
-        ArchieveTitle.appendChild(Titleh3);
-
-        let Titleh4 = win.createElement('th');
-        Titleh4.style = win.archieve_last_modi_style;
-        Titleh4.appendChild(win.createTextNode('修改时间'));
-        ArchieveTitle.appendChild(Titleh4);
+        writeTh(win.archieve_id_style, '编号');
+        writeTh(win.archieve_title_style, '标题');
+        writeTh(win.archieve_type_style, '分类');
+        writeTh(win.archieve_tags_style, '标签');
+        writeTh(win.archieve_last_modi_style, '修改时间');
 
         ArchieveTable.appendChild(ArchieveTitle);
 
