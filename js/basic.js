@@ -94,13 +94,13 @@
         };
     }
     win.InitAnalyze();
+    win.AddText = function (tdata, ttext, eletag) {
+        let Ttext = win.createElement(eletag);
+        Ttext.textContent = ttext;
+        Ttext.style = 'text-align: center; margin: 0';
+        tdata.appendChild(Ttext);
+    }
     win.WriteSideBar = function (data, title, funval) {
-        let AddText = function (tdata, ttext, eletag) {
-            let Ttext = win.createElement(eletag);
-            Ttext.textContent = ttext;
-            Ttext.style = 'text-align: center';
-            tdata.appendChild(Ttext);
-        }
         let SideBar = win.createElement('div');
         SideBar.className = 'sidebar';
         let SideBarConBlock = win.createElement('div');
@@ -108,32 +108,32 @@
         let SideBarTitle = win.createElement('center');
         SideBarTitle.className = 'title';
         let SideBarTitleContent1 = win.createElement('h1');
-        if (funval !== undefined || win.Pathname[0] === 'xjoi') {
-            SideBarTitleContent1.textContent = '×√OI';
-            if (win.Pathname[1] === 'fakenews') SideBarTitleContent1.textContent += '：新闻';
-            if (win.Pathname[1] === 'contest') SideBarTitleContent1.textContent += '：比赛';
-            if (win.Pathname[1] === 'problemset') SideBarTitleContent1.textContent += '：题库';
-        }
-        else SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
+        // if (funval !== undefined || win.Pathname[0] === 'xjoi') {
+        //     SideBarTitleContent1.textContent = '×√OI';
+        //     if (win.Pathname[1] === 'fakenews') SideBarTitleContent1.textContent += '：新闻';
+        //     if (win.Pathname[1] === 'contest') SideBarTitleContent1.textContent += '：比赛';
+        //     if (win.Pathname[1] === 'problemset') SideBarTitleContent1.textContent += '：题库';
+        // }
+        /*else */SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
         SideBarTitle.appendChild(SideBarTitleContent1);
-        if(funval === undefined && win.Pathname[0] !== 'xjoi') {
-            AddText(SideBarTitle, 'Surprising', 'p');
-            AddText(SideBarTitle, 'Combinatorial', 'p');
-            AddText(SideBarTitle, 'Proof', 'p');
+        if(/*funval === undefined && */win.Pathname[0] !== 'xjoi') {
+            win.AddText(SideBarTitle, 'Surprising', 'p');
+            win.AddText(SideBarTitle, 'Combinatorial', 'p');
+            win.AddText(SideBarTitle, 'Proof', 'p');
         }
         let SideBarTitleContent2 = win.createElement('p');
-        if (funval !== undefined) { //彩蛋
-            AddText(SideBarTitleContent2, '离线评测系统', 'p');
-            AddText(SideBarTitleContent2, '新版下线', 'p');
-            AddText(SideBarTitleContent2, 'since 2020', 'p');
-        }
-        else {
+        // if (funval !== undefined) { //彩蛋
+        //     win.AddText(SideBarTitleContent2, '离线评测系统', 'p');
+        //     win.AddText(SideBarTitleContent2, '新版下线', 'p');
+        //     win.AddText(SideBarTitleContent2, 'since 2020', 'p');
+        // }
+        // else {
             for (let i = 0; i < title.length; i = i + 1) {
                 if (i == 0) SideBarTitleContent2.appendChild(win.createTextNode('您现在在：' + title[i]));
                 else SideBarTitleContent2.appendChild(win.createTextNode(title[i]));
                 if (i < title.length - 1) SideBarTitleContent2.appendChild(win.createElement('br'));
             }
-        }
+        // }
         SideBarTitle.appendChild(SideBarTitleContent2);
         SideBarConBlock.appendChild(SideBarTitle);
         let SideBarCon = win.createElement('div');
@@ -207,7 +207,7 @@
         if (win.Pathname[0] === 'help') win.Title[0] = '帮助';
         if (win.Pathname[0] === 'xjoi') {
             win.Title[0] = '×√OI', win.Title[1] = '离线评测系统',
-                win.Title[2] = '新版下线', win.Title[3] = 'since 2020';
+            win.Title[2] = '新版下线', win.Title[3] = 'since 2020';
             if (win.Pathname[1] === 'problemset') {
                 win.Title[0] += '：题库';
                 win.Title[4] = win.Title[3]; win.Title[3] = win.Title[2]; win.Title[2] = win.Title[1];
@@ -249,8 +249,7 @@
     win.WriteTitle2 = function (data) {
         let AddText = function (twin, tdata, ttext, eletag) {
             let Ttext = twin.createElement(eletag);
-            if (win.Funval !== undefined && eletag === 'h1') Ttext.textContent = '集天下毒瘤题 恶心天下人';
-            else Ttext.textContent = ttext;
+            Ttext.textContent = ttext;
             if(ttext === '高度机密') Ttext.style = 'color: #600; font-size: 400%; font-weight: bold; margin: 0';
             if(ttext === '你已经被警告过了。') Ttext.style = 'color: #600; font-size: 250%; font-weight: bold; margin: 0';
             let TTtext = twin.createElement('center');
