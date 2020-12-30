@@ -304,19 +304,19 @@
         TagsTable.appendChild(TagsTitle);
         for (var Tag in win.tags_list) {
             let TagsRow = win.createElement('tr');
-            let TagsRow1 = win.createElement('th');
-            let TagsRow1a = win.createElement('a');
-            TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
-            //
-            let TagsRow1strong = win.createElement('strong');
-            TagsRow1strong.textContent = win.tags_list[Tag];
-            TagsRow1.appendChild(TagsRow1a);
-            TagsRow.appendChild(TagsRow1);
-            let TagsRow2 = win.createElement('th');
-            let TagsRow2p = win.createElement('p');
-            TagsRow2p.textContent = Tag;
-            TagsRow2.appendChild(TagsRow2p);
-            TagsRow.appendChild(TagsRow2);
+                let TagsRow1 = win.createElement('th');
+                let TagsRow1a = win.createElement('a');
+                TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
+                TagsRow1a.textContent = win.tags_list[Tag];
+                TagsRow1a.style = 'font-weight: bold';
+                TagsRow1.appendChild(TagsRow1a);
+                TagsRow.appendChild(TagsRow1);
+                
+                let TagsRow2 = win.createElement('th');
+                let TagsRow2p = win.createElement('p');
+                TagsRow2p.textContent = Tag;
+                TagsRow2.appendChild(TagsRow2p);
+                TagsRow.appendChild(TagsRow2);
             TagsTable.appendChild(TagsRow);
         }
         TagsBlock.appendChild(TagsTable);
@@ -428,7 +428,7 @@
 
         let writeTh = function (text1, text2) {
             let Titleh = win.createElement('th');
-            Titleh.style = win.archieve_id_style;
+            Titleh.style = text1;
             Titleh.appendChild(win.createTextNode(text2));
             ArchieveTitle.appendChild(Titleh);
         }
