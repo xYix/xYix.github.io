@@ -97,7 +97,7 @@
     win.AddText = function (tdata, ttext, eletag) {
         let Ttext = win.createElement(eletag);
         Ttext.textContent = ttext;
-        Ttext.style = 'text-align: center; margin: 0';
+        Ttext.style = 'text-align: left; margin: 0';
         tdata.appendChild(Ttext);
     }
     win.WriteSideBar = function (data, title, funval) {
@@ -112,6 +112,7 @@
         SideBarTitle.appendChild(SideBarTitleContent1);
         if(win.Pathname[0] !== 'xjoi') {
             let SCPblock = win.createElement('center');
+            SCPblock.style = 'width: 70%';
             win.AddText(SCPblock, 'Surprising', 'p');
             win.AddText(SCPblock, 'Combinatorial', 'p');
             win.AddText(SCPblock, 'Proof', 'p');
