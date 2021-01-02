@@ -133,16 +133,16 @@
                 let aText = win.createElement('a');
                 aText.style = 'font-weight: bold';
                 aText.textContent = '· ' + text1;
-                aText.setAttribute('href', text2 + win.ezylanASearch(win.TrueSearch));
+                aText.setAttribute('href', text2);
             Text.appendChild(aText);
             SideBarCon.appendChild(Text);
         }
-        write_link('回到首页', '/');
-        write_link('文章一览', '/archieve/');
-        write_link('标签一览', '/tags/');
-        write_link('网义云音乐', '/songlist/');
+        write_link('回到首页', '/' + win.ezylanASearch(win.TrueSearch));
+        write_link('文章一览', '/archieve/' + win.ezylanASearch(win.TrueSearch));
+        write_link('标签一览', '/tags/' + win.ezylanASearch(win.TrueSearch));
+        write_link('网义云音乐', '/songlist/' + win.ezylanASearch(win.TrueSearch));
         write_link('一键清除 tag', location.pathname);
-        write_link('×√OI', 'xjoi/');
+        write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
