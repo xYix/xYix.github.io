@@ -1,5 +1,5 @@
 ---
-title: ioi2020 集训队作业 AT 部分口胡
+title: ioi2020 集训队作业 AT 部分口胡（上）
 ---
 
 你可能会很惊讶，标题是打错了吧，应该是 ioi2021 吧
@@ -12,10 +12,6 @@ title: ioi2020 集训队作业 AT 部分口胡
 - $\color{blue}\text{skipped}$：题解~~口胡~~已完成，代码鸽了
 - $\color{green}\text{accepted}$：题解已完成，代码已经通过
 - $\color{red}\text{unsolvable}$：xyx 认定此题不可做，于是跳过
-
-请注意题目中文翻译中可能有一些极度信雅达的生草东西（
-
-思考了一下写这个东西的意义在于什么，也许是对通用的思考题目的方法的探索？也许通用的方法其实并不存在。不过要是能描下这个幽灵现身时的幻影也不错了。
 
 |  题号   |                            题目名                            |             状态             | 是否看题解 |
 | :-----: | :----------------------------------------------------------: | :--------------------------: | :--------: |
@@ -40,8 +36,12 @@ title: ioi2020 集训队作业 AT 部分口胡
 | AGC026E | [Synchronized Subsequence](https://atcoder.jp/contests/agc026/tasks/agc026_e) | $\color{green}\text{accepted}$ | 是 |
 | AGC026F | [Manju Game](https://atcoder.jp/contests/agc026/tasks/agc026_f) | $\color{blue}\text{skipped}$ | 否 |
 | AGC027D | [Modulo Matrix](https://atcoder.jp/contests/agc027/tasks/agc027_d) | $\color{blue}\text{skipped}$ | 是 |
-| AGC027E | [ABBreviate](https://atcoder.jp/contests/agc027/tasks/agc027_e) | $\text{queuing}$ | |
-| AGC027F | [Grafting](https://atcoder.jp/contests/agc027/tasks/agc027_f) | $\text{queuing}$ | |
+| AGC027E | [ABBreviate](https://atcoder.jp/contests/agc027/tasks/agc027_e) | $\color{green}\text{accepted}$ | 否 |
+| AGC027F | [Grafting](https://atcoder.jp/contests/agc027/tasks/agc027_f) | $\color{green}\text{accepted}$ | 是 |
+| AGC028C | [Min Cost Cycle](https://atcoder.jp/contests/agc028/tasks/agc028_c) | $\color{blue}\text{skipped}$ | 否 |
+| AGC028D | [Chords](https://atcoder.jp/contests/agc028/tasks/agc028_d) | $\color{green}\text{accepted}$ | 否 |
+| AGC028E | [High Elements](https://atcoder.jp/contests/agc028/tasks/agc028_e) | $\color{blue}\text{skipped}$ | 是 |
+| AGC028F | [Reachable Cells](https://atcoder.jp/contests/agc028/tasks/agc028_e) |  |  |
 
 # AGC020D - 最大重复的最小值
 
@@ -301,7 +301,7 @@ int main() {
 }
 ```
 
-# AGC023E - 逆序
+# AGC023E - 逆序对
 
 ⑧会，爬了
 
@@ -385,7 +385,7 @@ int main() {
 
 暴力选取根即可。
 
-# AGC024E - 生长的序列 Hard
+# AGC024E - 生长序列 Hard
 
 ⑧会，爬了
 
@@ -517,7 +517,7 @@ int main() {
 
 **观察 2.** $ab$ 交替的串不能进行任何操作。
 
-**观察 3. ** 设一个串的权值为 $\sum s_i = a\ ?\ 1: 2$，则操作后权值不变。
+**观察 3. ** 设一个串的权值为 $\sum (s_i = a\ ?\ 1: 2)\bmod 3$，则操作后权值不变。
 
 **观察 4.** 如果不 $ab$ 交替，几乎必定（仅有的例外：$aaa,bbb$）存在一种操作方法使得操作结果不 $ab$ 交替。
 
@@ -528,3 +528,231 @@ int main() {
 - 要么可以变为 $ab,ba$ 中任选其一
 - 要么 $ab$ 交替
 
+回到原问题。若 $t$ 能被 $s$ 变成，则 $t$ 的每一个字符必然对应 $s$ 中的一段字符。又注意到 $ab/ba+s$ 必定可通过恰当地选择 $ab/ba$ 使其能转化为 $s$，这提示我们下面的判定方法：$s$ 可转变为 $t$ 当且仅当 $s$ 可划为不是 $ab$ 交替的数段，每段权值等于 $t$ 的对应字符。
+
+DP 时为了保证 $t$ 唯一，总是选取尽量短的段。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int p = 1000000007, maxn = 100005;
+
+int n; char s[maxn];
+int f[maxn], nxt[maxn][2];
+
+int main() {
+	scanf("%s", s + 1); n = strlen(s + 1);
+	bool flg = 1;
+	for(int i = 2; i <= n; i++) if(s[i] == s[i - 1]) { flg = 0; break; }
+	if(flg) { printf("1\n"); return 0; }
+	
+	f[n + 1] = 1;
+	nxt[n + 1][0] = nxt[n + 1][1] = nxt[n + 2][0] = nxt[n + 2][1] = n + 2;
+	int sval = 0;
+	for(int i = n; i; i--) {
+		sval = (sval + s[i] - 'a' + 1) % 3;
+		if(s[i] == 'a') nxt[i][0] = i + 1;
+		else if(s[i + 1] == 'b') nxt[i][0] = i + 2;
+		else nxt[i][0] = nxt[i + 2][0];
+		if(s[i] == 'b') nxt[i][1] = i + 1;
+		else if(s[i + 1] == 'a') nxt[i][1] = i + 2;
+		else nxt[i][1] = nxt[i + 2][1];
+		f[i] = (f[nxt[i][0]] + f[nxt[i][1]] + (sval == 0)) % p;
+	}
+	printf("%d\n", (f[1] - (sval == 0) + p) % p);
+}
+```
+
+# AGC027F - 嫁接
+
+⑧会，爬了
+
+假如有一个不能动的根则会好做很多。我们直接枚举第一步操作了哪个节点和它操作到了哪里（注意它们不一定在 $B$ 中有边）。由于每个点至多操作一次，该点便可看作是一个根。下面所说的 $A,B$ 树上祖先关系皆以该点为根。
+
+接下来有如下的观察：
+
+**观察 1.** 若 $A$ 中某点不需要（也不能）被操作，而它的父亲却需要被操作，则必然无解。
+
+**观察 2.** 某点若需要操作，则必定早于其 $A$ 中父亲被操作。（否则轮到其父亲时不能行动）
+
+**观察 3.** 某点若需要操作，则必定晚于其 $B$ 中父亲被操作。（否则轮到其父亲时不能行动）
+
+可见上面的限制就是全部了，直接拓扑排序即可。加上上面的暴力枚举，复杂度 $\Omicron (Tn^3)$。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 55;
+int n;
+vector<int> Ta[maxn], Tb[maxn];
+int fa[maxn], fb[maxn];
+
+void dfs_(int x, int f[], const vector<int>g[]) {
+	for(int y : g[x]) if(y != f[x]) f[y] = x, dfs_(y, f, g);
+}
+void dfsA(int x) { fa[x] = 0; dfs_(x, fa, Ta); }
+void dfsB(int x) { fb[x] = 0; dfs_(x, fb, Tb); }
+
+vector<int> g[maxn]; int deg[maxn];
+int q[maxn], h, t;
+bool c(int u) { return fa[u] != fb[u]; }
+int calc() {
+	int ans = 0;
+	for(int i = 1; i <= n; i++) g[i].clear(), deg[i] = 0;
+	for(int i = 1; i <= n; i++) {
+		ans += c(i);
+		if(fa[i] && !c(i) && c(fa[i])) return -1;
+		if(fa[i] && c(i) && c(fa[i])) g[fa[i]].push_back(i), deg[i]++;
+		if(fb[i] && c(i) && c(fb[i])) g[i].push_back(fb[i]), deg[fb[i]]++;
+	}
+	h = t = 0;
+	for(int i = 1; i <= n; i++) if(c(i) && deg[i] == 0) q[++t] = i;
+	while(h != t) {
+		int u = q[++h];
+		for(int v : g[u]) if(!--deg[v]) q[++t] = v;
+	}
+	if(t != ans) return -1;
+	return ans + 1;
+}
+
+void solve() {
+	scanf("%d", &n);
+	for(int i = 1; i <= n; i++) Ta[i].clear(), Tb[i].clear();
+	for(int i = 1; i < n; i++) {
+		int u, v; scanf("%d%d", &u, &v);
+		Ta[u].push_back(v), Ta[v].push_back(u);
+	}
+	for(int i = 1; i < n; i++) {
+		int u, v; scanf("%d%d", &u, &v);
+		Tb[u].push_back(v), Tb[v].push_back(u);
+	}
+	
+	dfsA(1); dfsB(1);
+	bool flg = 1;
+	for(int i = 1; i <= n; i++) flg &= fa[i] == fb[i];
+	if(flg) { printf("0\n"); return; }
+	
+	int ans = -1;
+	for(int i = 1; i <= n; i++) if(Ta[i].size() == 1) {
+		dfsB(i);
+		for(int j = 1; j <= n; j++) if(i != j) {
+			dfsA(j); fa[j] = i; fa[i] = 0;
+			int tmp = calc();
+			if(tmp != -1) ans = ans == -1 ? tmp : min(tmp, ans);
+		}
+	}
+	printf("%d\n", ans);
+}
+
+int main() {
+	int t; scanf("%d", &t);
+	while(t--) {
+		solve();
+	}
+}
+```
+
+# AGC028C - 最小代价哈密顿回路
+
+考虑一个经典转化：
+
+- 我们不强制取最小值，而是想选哪个选哪个，反正最终求出来肯定是一样的。
+
+那么我们直接考虑每个点的贡献情况有 $4$ 种：
+
+- $a,b$ 皆有贡献；
+- $a,b$ 皆无贡献；
+- 仅 $a$ 有贡献；
+- 仅 $b$ 有贡献。
+
+那么整个贡献情况能串成一条链，当且仅当：
+
+- 前两种点的数量不为零且相等；
+- 前两种点的数量为零，且后两种点有一种数量也为零。
+
+大力特判即可。
+
+# AGC028D - 弦
+
+> 两个块不连通当且仅当存在一条线能把圆切成分别包含两块之一的两部分。那么我们所要计数的就是每条分割线存在的概率。
+
+然后你就假了，原因是类似 ``3 3 1 2 3 4 5 6`` 的结构，分割线和连通块数可能不能一一对应。
+
+不过这至少给了我们一点启发：在某个具体划分方案中我们可以用左右端点来唯一确定块，于是我们只需要考虑每个左右端点对存在的概率。剩下的工作就比较简单了，上述信息只需要一个容斥 DP 就可以求。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int p = 1000000007;
+int qpow(int a, int k) {
+	int ans = 1;
+	while(k) {
+		if(k & 1) ans = 1LL * ans * a % p;
+		a = 1LL * a * a % p;
+		k >>= 1;
+	}
+	return ans;
+}
+
+int n;
+int lnk[605];
+int f[605][605];
+int fac[605];
+
+int main() {
+	scanf("%d", &n);
+	int k, tot; scanf("%d", &k); tot = n - k;
+	while (k--) {
+		int u, v; scanf("%d%d", &u, &v);
+		lnk[u] = v, lnk[v] = u;
+	}
+	fac[0] = 1; for(int i = 1; i <= tot; i++) fac[i] = 1LL * fac[i - 1] * (2 * i - 1) % p;
+	
+	n *= 2;
+	int ans = 0;
+	for(int i = 1; i <= n; i++)
+	for(int j = i + 1; j <= n; j += 2) {
+		bool flg = 1; int cnt = 0;
+		for(int k = i; k <= j; k++) {
+			cnt += !lnk[k];
+			if(lnk[k] && (lnk[k] < i || lnk[k] > j)) { flg = 0; break; }
+		}
+		if(!flg) continue;
+		assert(cnt % 2 == 0);
+		f[i][j] = fac[cnt / 2];
+		cnt = 0;
+		for(int k = j; k > i; k--) {
+			cnt += !lnk[k];
+			if(!(cnt & 1)) f[i][j] = (f[i][j] - 1LL * f[i][k - 1] * fac[cnt / 2] % p + p) % p;
+		}
+		cnt += !lnk[i];
+		ans = (ans + 1LL * f[i][j] * fac[tot - cnt / 2] % p) % p;
+	}
+	printf("%d\n", ans);
+}
+```
+
+# AGC028E - High 元素
+
+⑧会，爬了
+
+贪心地从前往后能取 $0$ 则取 $0$。问题来了，如何判定一个状况可以操作成合法？我们需要一些对“前缀最大值”的更深刻理解。
+
+下面简记“是前缀最大值”为 High。（赛高尼 High 铁鸭子哒！）
+
+**观察 1.** 若某元素在 $p$ 中 High，则它被分配后也一定 High。
+
+**观察 2.** 若某元素在 $p$ 中不 High 却在分配后 High，则如果把它换到另一边就一定不 High。
+
+那么，合法时如果两个序列皆有 $p$ 中不 High 却在分配后 High 的元素，则我们可以交换它们而不改变合法性。最终必有一个序列中（不妨认为是 $x$），High 的元素都在 $p$ 中就已经 High 了。
+
+那么有：记 $u$ 为 $y$ 中填的已经 High 的元素的个数，$v$ 为 $y$ 中填的后来才 High 的元素的个数，则方案合法等价于 $2u+v$ 等于某一常数 $C$。
+
+**观察 3.** 若 $C$ 能达成，则 $C-2$ 也必定能达成。
+
+从而分别求出 $C$ 为奇数偶数时的最大值即可，可以使用线段树优化一个 DP。
+
+# AGC028F - 可达方块

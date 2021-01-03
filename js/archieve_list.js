@@ -403,10 +403,10 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '51',
 		'post_name' : 'ioi2020hw',
-		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡',
+		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（上）',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-10',
-		'tag' : ['combinatorics','construction','exc-inc','lmoliver','pigeon',],
+		'tag' : ['combinatorics','construction','exc-inc','lmoliver','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '52',
@@ -549,7 +549,7 @@
 		'post_name' : 'noip-2020',
 		'post_chinese_name' : 'NOIP2020 退役记',
 		'type_name' : 'other',
-		'last_modi' : '',
+		'last_modi' : '2021-01-03',
 		'tag' : ['construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
