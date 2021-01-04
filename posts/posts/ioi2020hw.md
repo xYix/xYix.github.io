@@ -41,7 +41,7 @@ title: ioi2020 集训队作业 AT 部分口胡（上）
 | AGC028C | [Min Cost Cycle](https://atcoder.jp/contests/agc028/tasks/agc028_c) | $\color{blue}\text{skipped}$ | 否 |
 | AGC028D | [Chords](https://atcoder.jp/contests/agc028/tasks/agc028_d) | $\color{green}\text{accepted}$ | 否 |
 | AGC028E | [High Elements](https://atcoder.jp/contests/agc028/tasks/agc028_e) | $\color{blue}\text{skipped}$ | 是 |
-| AGC028F | [Reachable Cells](https://atcoder.jp/contests/agc028/tasks/agc028_e) |  |  |
+| AGC028F | [Reachable Cells](https://atcoder.jp/contests/agc028/tasks/agc028_e) | $\color{blue}\text{skipped}$ | 是 |
 
 # AGC020D - 最大重复的最小值
 
@@ -756,3 +756,12 @@ int main() {
 从而分别求出 $C$ 为奇数偶数时的最大值即可，可以使用线段树优化一个 DP。
 
 # AGC028F - 可达方块
+
+⑧会，爬了
+
+考虑格子 $(i,j)$ 能达到的格子，显然如果 $(i+1,j),(i,j+1)$ 中有一个格子
+
+<center>
+    <a href="/posts/?page=1&postid=75">to be continued...</a>
+</center>
+
