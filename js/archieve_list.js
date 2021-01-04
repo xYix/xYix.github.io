@@ -405,7 +405,7 @@
 		'post_name' : 'ioi2020hw',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（上）',
 		'type_name' : 'solution',
-		'last_modi' : '2020-11-10',
+		'last_modi' : '2021-01-03',
 		'tag' : ['combinatorics','construction','exc-inc','lmoliver','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -583,5 +583,13 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2020-12-29',
 		'tag' : ['bijective-proof','combinatorics','construction',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '74',
+		'post_name' : 'circle-union',
+		'post_chinese_name' : '圆面积并的靠谱做法',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-01-04',
+		'tag' : ['calculating-geometry',],
 	};
 })(document);

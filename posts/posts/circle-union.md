@@ -53,3 +53,87 @@ $$
 
 那么问题来了，如何找出边界呢？只需要对每个点，求出其他所有圆和它的交点，排个序处理一下就可以得到其“暴露在外”的部分了。
 
+代码如下。
+
+```cpp
+#include<bits/stdc++.h>
+typedef double db;
+using namespace std;
+
+struct Vec {
+	db x, y;
+	Vec () { x = 0; y = 0; }
+	Vec (db x0, db y0) : x(x0), y(y0) {};
+	db arg() { return atan2(y, x); }
+	db norm() { return x * x + y * y; }
+	Vec operator +(const Vec v) const { return {x + v.x, y + v.y}; }
+	Vec operator -(const Vec v) const { return {x - v.x, y - v.y}; }
+};
+Vec operator *(const db l, const Vec u) { return {l * u.x, l * u.y}; }
+struct Circ {
+	Vec O; db r;
+};
+
+const db eps = 1e-9, pi = acos(-1);
+bool ge(const db u, const db v) { return u + eps > v; }
+bool gne(const db u, const db v) { return u > v + eps; }
+bool le(const db u, const db v) { return u < v + eps; }
+bool lne(const db u, const db v) { return u + eps < v; }
+bool eq(const db u, const db v) { return abs(u - v) < eps; }
+
+db Dis(const Vec u, const Vec v) {
+	return sqrt((u - v).norm());
+}
+
+int n;
+Circ c[1005];
+
+db calc(const Circ u, db tht) {
+	return u.r * u.O.x * sin(tht) + u.r * u.r / 4 * (sin(2 * tht) + 2 * tht);
+}
+db ans;
+void solve(int i) {
+	vector<pair<db, int> > tht;
+	tht.push_back(make_pair(pi, 0));
+	int cnt = 0;
+	for(int j = 1; j <= n; j++) if(j != i) {
+		#define u c[i]
+		#define v c[j]
+		db Odis = Dis(u.O, v.O);
+		if(le(u.r + Odis, v.r)) return;
+		if(le(v.r + Odis, u.r) || le(v.r + u.r, Odis)) continue;
+		db p = (Vec){v.O.x - u.O.x, v.O.y - u.O.y}.arg();
+		db q = acos((u.r * u.r + Odis * Odis - v.r * v.r) / (2 * u.r * Odis));
+		db l = p - q, r = p + q;
+		if(lne(l, -pi)) l += 2 * pi; if(gne(r, pi)) r -= 2 * pi;
+		if(l > r) cnt++;
+		tht.push_back(make_pair(l, 1)); tht.push_back(make_pair(r, -1));
+	}
+	sort(tht.begin(), tht.end());
+	if(cnt == 0) ans += calc(c[i], tht[0].first) - calc(c[i], -pi);
+	for(int j = 0; j < tht.size(); cnt += tht[j++].second)
+		if(j && cnt == 0) ans += calc(c[i], tht[j].first) - calc(c[i], tht[j - 1].first);
+}
+
+vector<int> c_[1005];
+
+int main() {
+	int n_; scanf("%d", &n_);
+	for(int i = 1; i <= n_; i++) c_[i].resize(3), scanf("%d%d%d", &c_[i][0], &c_[i][1], &c_[i][2]);
+	sort(c_ + 1, c_ + n_ + 1); n_ = unique(c_ + 1, c_ + n_ + 1) - c_ - 1;
+	n = n_;
+	for(int i = 1; i <= n; i++) c[i].O.x = c_[i][0], c[i].O.y = c_[i][1], c[i].r = c_[i][2];
+	for(int i = 1; i <= n; i++) solve(i);
+	printf("%.3lf\n", ans);
+}
+```
+
+## 例题和扩展
+
+### [圆形](https://uoj.ac/problem/419)
+
+垃圾题，动态维护“暴露在外”的部分即可。
+
+### 球面圆面积并
+
+参见论文集 2020 中 zrf 的部分。
