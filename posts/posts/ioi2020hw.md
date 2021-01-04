@@ -11,7 +11,7 @@ title: ioi2020 集训队作业 AT 部分口胡（上）
 - $\text{queuing}$：尚无题解
 - $\color{blue}\text{skipped}$：题解~~口胡~~已完成，代码鸽了
 - $\color{green}\text{accepted}$：题解已完成，代码已经通过
-- $\color{red}\text{unsolvable}$：xyx 认定此题不可做，于是跳过
+- $\color{red}\text{unsolved}$：xyx 认定此题他不会做，于是跳过
 
 |  题号   |                            题目名                            |             状态             | 是否看题解 |
 | :-----: | :----------------------------------------------------------: | :--------------------------: | :--------: |
@@ -31,7 +31,7 @@ title: ioi2020 集训队作业 AT 部分口胡（上）
 | AGC024F | [Simple Subsequence Problem](https://atcoder.jp/contests/agc024/tasks/agc024_f) | $\color{blue}\text{skipped}$ | 否 |
 | AGC025D | [Choosing Points](https://atcoder.jp/contests/agc025/tasks/agc025_d) | $\color{blue}\text{skipped}$ | 否 |
 | AGC025E | [Walking on a Tree](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\color{blue}\text{skipped}$ | 是 |
-| AGC025F | [Addition and Andition](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\color{blue}\text{skipped}$ | 是 |
+| AGC025F | [Addition and Andition](https://atcoder.jp/contests/agc025/tasks/agc025_e) | $\color{red}\text{unsolved}$ | 是 |
 | AGC026D | [Histogram Coloring](https://atcoder.jp/contests/agc026/tasks/agc026_d) | $\color{blue}\text{skipped}$ | 否 |
 | AGC026E | [Synchronized Subsequence](https://atcoder.jp/contests/agc026/tasks/agc026_e) | $\color{green}\text{accepted}$ | 是 |
 | AGC026F | [Manju Game](https://atcoder.jp/contests/agc026/tasks/agc026_f) | $\color{blue}\text{skipped}$ | 否 |
@@ -41,7 +41,7 @@ title: ioi2020 集训队作业 AT 部分口胡（上）
 | AGC028C | [Min Cost Cycle](https://atcoder.jp/contests/agc028/tasks/agc028_c) | $\color{blue}\text{skipped}$ | 否 |
 | AGC028D | [Chords](https://atcoder.jp/contests/agc028/tasks/agc028_d) | $\color{green}\text{accepted}$ | 否 |
 | AGC028E | [High Elements](https://atcoder.jp/contests/agc028/tasks/agc028_e) | $\color{blue}\text{skipped}$ | 是 |
-| AGC028F | [Reachable Cells](https://atcoder.jp/contests/agc028/tasks/agc028_e) | $\color{blue}\text{skipped}$ | 是 |
+| AGC028F | [Reachable Cells](https://atcoder.jp/contests/agc028/tasks/agc028_e) | $\color{red}\text{unsolved}$ | 是 |
 
 # AGC020D - 最大重复的最小值
 
@@ -759,7 +759,7 @@ int main() {
 
 ⑧会，爬了
 
-考虑格子 $(i,j)$ 能达到的格子，显然如果 $(i+1,j),(i,j+1)$ 中有一个格子
+题解没看懂 qaq
 
 <center>
     <a href="/posts/?page=1&postid=75">to be continued...</a>

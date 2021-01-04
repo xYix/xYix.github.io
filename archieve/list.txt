@@ -296,12 +296,11 @@ d-and-c-on-tree
 ioi2020hw
 IOI2020 集训队作业 AT 部分口胡（上）
 solution
-5
+4
 exc-inc
 combinatorics
 construction
 lmoliver
-writing
 csp-2020-fst
 CSP2020 游记
 other
@@ -443,3 +442,12 @@ circle-union
 algorithm
 1
 calculating-geometry
+ioi2020hw2
+IOI2020 集训队作业 AT 部分口胡（下）
+solution
+5
+exc-inc
+combinatorics
+construction
+lmoliver
+writing
