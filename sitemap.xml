@@ -226,7 +226,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/ioi2020hw.html</loc>
-		<lastmod>2021-01-03</lastmod>
+		<lastmod>2021-01-04</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/csp-2020-fst.html</loc>
@@ -298,7 +298,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/noip-2020.html</loc>
-		<lastmod>2021-01-03</lastmod>
+		<lastmod>2021-01-04</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/string-tech.html</loc>
@@ -319,5 +319,9 @@
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/circle-union.html</loc>
 		<lastmod>2021-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/posts/posts/ioi2020hw2.html</loc>
+		<lastmod>2021-01-05</lastmod>
 	</url>
 </urlset>
