@@ -456,3 +456,11 @@ uoj#577 题解 - 【ULR #1】打击复读
 solution
 1
 string
+lagrange-inv-bij
+拉格朗日反演的组合意义证明
+algorithm
+4
+combinatorics
+construction
+bijective-proof
+generating-function

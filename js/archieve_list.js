@@ -608,4 +608,12 @@
 		'last_modi' : '2021-01-06',
 		'tag' : ['string',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '77',
+		'post_name' : 'lagrange-inv-bij',
+		'post_chinese_name' : '拉格朗日反演的组合意义证明',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-01-06',
+		'tag' : ['bijective-proof','combinatorics','construction','generating-function',],
+	};
 })(document);
