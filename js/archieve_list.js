@@ -600,4 +600,12 @@
 		'last_modi' : '2021-01-05',
 		'tag' : ['combinatorics','construction','exc-inc','lmoliver','writing',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '76',
+		'post_name' : 'uoj-577',
+		'post_chinese_name' : 'uoj#577 题解 - 【ULR #1】打击复读',
+		'type_name' : 'solution',
+		'last_modi' : '2021-01-06',
+		'tag' : ['string',],
+	};
 })(document);

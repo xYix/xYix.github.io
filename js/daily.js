@@ -80,7 +80,8 @@
         'wqs 二分在国外叫做 Aliens\' trick，得名于 IOI2016 Aliens。',
         'Tutte 多项式刚被发明时，由于是色多项式的二元扩展，所以 Tutte 希望它的名字里有“色”“双重”。于是 Tutte 把它命名为了“重铬酸盐”……',
         //膜拜
-        '我最喜欢的古人是苏轼，我最喜欢他《江城子·密州出猎》中的“会挽雕弓如满月，西北望，射天狼”，我能从中感受到他那种豪迈的气概，我也想迫切地感受这种豪迈的气概',
+        '我最喜欢的古人是苏轼，我最喜欢他《江城子·密州出猎》中的“会挽雕弓如满月，西北望，射天狼”，我能从中感受到他那种豪'+
+        '迈的气概，我也想迫切地感受这种豪迈的气概',
         'あなたはステラ　僕は瑇！',
         //歌词
             //Andromeda Andromeda
@@ -110,6 +111,12 @@
             '笑って　笑って　さいごにワルツを踊ろう　この星なら、涙も見えないように泣けるから',
             '「思い出すこと、二度とないかな　忘れること、できやしないから——」',
             '——忘れないから',
+            //Mystery Cycle
+            '自転車　海岸線　走る　走る / 「少しかわってよ！」　ぼくは言う',
+            'とおくの日が落ちる　落ちる / 知らずに手と手が触れている',
+            '光の真相へ　あと数10メートル / ぼくらが見たものは——',
+            '夏が終われば　こんな旅も　もう、できなくなるから',
+            '夏が終わる。どうか、ずっとお元気で。',
             //Alien Alien
             '眼光 赤色にキラキラ　ナニカが起こる胸騒ぎ',
             'Alien　わたしAlien　あなたの心を惑わせる',
@@ -179,7 +186,8 @@
             //乙女座流星群
             'あの変光星で　乙女心は乱高下　吹き荒れるは流星群',
             '愛してるって一回　ただ一回　あなたからくれたら　あたし　もっとあげるのに',
-            'ふたり愛しあう合図を　ききたいの　あなたのほうから　勘違いって思ってる？　この視線やこの熱は　理由があるって気付いて　いますぐ！',
+            'ふたり愛しあう合図を　ききたいの　あなたのほうから　勘違いって思ってる？',
+            'この視線やこの熱は　理由があるって気付いて　いますぐ！',
             '愛してるならもっと　いや、ちょっとでも　勇気出してくれたら　あたしの全部あげるよ　ねぇ',
             //木星节拍
             '木星のbeatに乗っかって　君と宇宙へ行こう',
@@ -194,7 +202,8 @@
             'きみは一瞬だけの永遠に　ぼくの永遠だけが一瞬にまたたいた',
             '最期の電燈　そこに淡い世界が浮かんだ　そこできみの涙をみたんだ',
             //蓝色极星
-            '夜空を(夜空を) 浮かんで(浮かんで)　キミとまた巡り逢う　ただいま(ただいま) おかえり(おかえり)　ふたりごとは星になって',
+            '夜空を(夜空を) 浮かんで(浮かんで)　キミとまた巡り逢う',
+            'ただいま(ただいま) おかえり(おかえり)　ふたりごとは星になって',
             //四有
             '人の子も　どの子も　生まれが総て　宝籤外せば　孤独と無力',
             'THIS IS LIFE (WOW!)',
@@ -207,11 +216,12 @@
             'bitter choco decoration　兎角言わずにたんと召し上がれ',
             'bitter choco decoration　食わず嫌いはちゃんと直さなきゃ',
             //String Theocracy
-            'Maybe we\'re all cold machines / stuffed in the human skins / with human sins / sewed up by the gods of cities',
+            'Maybe we\'re all cold machines / stuffed in the human skins / with human sins',
             //Wildfire
             'my lungs are failing from inhaling / all the charcoal from this circle / of the hate and the lies',
             'Deny, Ignite, and Close · Your · Eyes.',
-            'But I\'m a PYROMANIAC / and your veins are full of gas you\'re / burning higher, higher / I\'m storming this wildfire',
+            'But I\'m a PYROMANIAC / and your veins are full of gas',
+            'you\'re / burning higher, higher / I\'m storming this wildfire',
             //Echo
             'What the hell\'s going on / can someone tell me please / why am I switching faster than the channels on TV',
             'I am black then I\'m white / No! something isn\'t right / my enemy\'s invisible I don\'t know how to fight',
@@ -244,7 +254,10 @@
         'I feel all', 'I know all', 'I am all',
         '不！熊！！！',
         '高塔沉睡了，那我也该睡了……',
-        '你最大的罪恶，就是压根都不认为自己是『罪人』……那才是最『万恶不赦』的。',
+            //jojo
+            '我是罗大佑，看着我 / 他是曾志伟，二姑妈你说摸裤头，骑着俺的金坷垃',
+            '这次我敢去摸内裤 / 三大姨你探亲不看我',
+            '你最大的罪恶，就是压根都不认为自己是『罪人』……那才是最『万恶不赦』的。',
         //迫害CF/XJ
         'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
