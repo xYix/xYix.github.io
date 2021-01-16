@@ -429,7 +429,7 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-24',
+		'last_modi' : '',
 		'tag' : ['combinatorics','exc-inc','generating-function','lagrange-inversion','linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -615,5 +615,13 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-01-06',
 		'tag' : ['bijective-proof','combinatorics','construction','generating-function',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '78',
+		'post_name' : 'dft-acceleration',
+		'post_chinese_name' : 'DIT 和 DIF：DFT 的优化',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-01-16',
+		'tag' : ['polynomial',],
 	};
 })(document);

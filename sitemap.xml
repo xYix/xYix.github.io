@@ -238,7 +238,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/multi-lagrange-inv.html</loc>
-		<lastmod>2020-12-24</lastmod>
+		<lastmod></lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/luogu-2305.html</loc>
@@ -331,5 +331,9 @@
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/lagrange-inv-bij.html</loc>
 		<lastmod>2021-01-06</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/posts/posts/dft-acceleration.html</loc>
+		<lastmod>2021-01-16</lastmod>
 	</url>
 </urlset>
