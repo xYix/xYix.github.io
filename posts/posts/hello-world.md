@@ -36,6 +36,7 @@ x义x 的朋友们：
 
 [孔姥爷的病历](https://www.cnblogs.com/Flying2018/)
 
-[毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，或杜王町一中校草的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
+[毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
 
 [周指导的博客](https://www.cnblogs.com/zhouzhendong/)
+

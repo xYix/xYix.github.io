@@ -73,7 +73,7 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 - 态射间的映射 $F: \text{Mor}(\mathcal C)\rightarrow \text{Mor}(\mathcal C')$；
 - $s_{\mathcal C}F=Fs_{\mathcal C'},t_{\mathcal C}F=Ft_{\mathcal C'}$。可以见下图。<span style='color: #36C48E'>【注意这不意味着 $F$ 是单射（多个 $\mathcal C'$ 中的箭头可以映射到一个箭头），也不意味着 $F$ 是满射（$\mathcal C$ 中的箭头可以不是 $\mathcal C'$ 中箭头的像）】</span>
 
-<div style="width:70%;margin:auto"><img src="/images/cate1.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/cate1.png" alt=""></div>
 
 函子的合成是显然的：只需要把对对象的映射和对态射的映射分别合成。
 
