@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2020-11-28',
+		'last_modi' : '2021-01-30',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -622,6 +622,14 @@
 		'post_chinese_name' : 'DIT 和 DIF：DFT 的优化',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-01-16',
+		'tag' : ['polynomial',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '79',
+		'post_name' : 'uoj-596',
+		'post_chinese_name' : 'uoj#596 题解 - 【集训队互测2021】三维立体混元劲',
+		'type_name' : 'solution',
+		'last_modi' : '2021-01-31',
 		'tag' : ['polynomial',],
 	};
 })(document);

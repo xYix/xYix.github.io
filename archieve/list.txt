@@ -469,3 +469,8 @@ DIT 和 DIF：DFT 的优化
 algorithm
 1
 polynomial
+uoj-596
+uoj#596 题解 - 【集训队互测2021】三维立体混元劲
+solution
+1
+polynomial

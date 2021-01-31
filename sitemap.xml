@@ -26,7 +26,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/hello-world.html</loc>
-		<lastmod>2020-11-28</lastmod>
+		<lastmod>2021-01-30</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/alkane-counting.html</loc>
@@ -335,5 +335,9 @@
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/dft-acceleration.html</loc>
 		<lastmod>2021-01-16</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/posts/posts/uoj-596.html</loc>
+		<lastmod>2021-01-31</lastmod>
 	</url>
 </urlset>

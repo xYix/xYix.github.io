@@ -96,14 +96,14 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 
 - 给定函子 $F,G:\mathcal C'\rightarrow\mathcal C$，它们之间的自然变换 $\theta$ 是一组**态射** $\theta_X:FX\rightarrow GX$，满足对于任意态射 $f\in\text{Hom}(X,Y)$，$Gf\circ \theta_X=\theta_Y\circ Ff$ 。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/cate2.png" alt=""></div>
+<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/cate2.png" alt=""></div>
 
 函子 $F,G$ 之间若有自然变换 $F\xrightarrow{\sim }G$，则称有 $F$ 到 $G$ 的**自然同态**。自然有了**自然同构**等概念。
 
 - 如果有 $F\circ G\xrightarrow{\sim}\text{id}_{\mathcal C'}$ 和 $G\circ F\xrightarrow{\sim}\text{id}_{\mathcal C}$，则称 $F,G$ 互为**拟逆**，$F$ 是范畴 $\mathcal C'$ 到 $\mathcal C$ 的**等价**，$G$ 是 $\mathcal C$ 到 $\mathcal C'$ 的等价。
 - 如果更进一步有 $F\circ G=\text{id}_{\mathcal C'}$ 和 $G\circ F=\text{id}_{\mathcal C}$，则称 $F,G$ 互为**逆**，$F,G$ 是范畴间的**同构**。
 
-# 4 直积，直和，泛性质
+# 4 泛性质
 
 ## 4.0 引入
 
@@ -113,7 +113,7 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 
 第二个问题：如何在 $\mathsf{Set}$ 中找出那些大小为 $1$ 的集合？（注意我们显然不可能分清大小为 $1$ 的集合互相的区别）答案也很简单：任何集合到它皆有**唯一**的映射。
 
-第三个问题：如何在 $\mathsf {Set}$ 中找出那些大小为 $2$ 的集合？或者我们再激进一点，如何找出两个集合的**直和**？这个问题就困难多了。
+第三个问题：如何在 $\mathsf {Set}$ 中找出那些大小为 $2$ 的集合？或者我们再往前一点，如何找出一些集合的**直和**？这个问题就困难多了。
 
 抽象地说我们遇到了这样一个问题：要构造一个满足某种性质的对象。解决方法是把这个性质转化为用范畴方法表述的**泛性质**然后确定之。
 
@@ -135,6 +135,23 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 
 <span style='color: #36C48E'>【$\theta$ 的含义也就很清晰了：它把所有的 $f_i$“压缩”到了一起。】</span>
 
-<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/cate3.png" alt=""></div>
+<div style="width:37%;margin:auto"><img src="https://xyix.gitee.io/images/cate3.png" alt=""></div>
 
-<span style='color: #36C48E'>【做得好，博士。欢迎来到超现实部。】</span>
+容易证明，一组 $A$ 的直积（如果存在）是唯一的，精确到同构。
+
+对偶地，我们考虑下面这个构造：
+
+- 令 $\mathcal C$ 是一个范畴，$A_i,i\in I$ 是 $\mathcal C$ 中的一组对象，$I$ 是指标集。$A_i$ 的**直和**（你可把直和看作一组不交集合的并，事实上在 $\mathsf{Grp}$ 范畴内也无法定义交）是以下资料
+- - $\mathcal C$ 中的对象 $\coprod A$。
+  - 态射族 $p_i:A_i\rightarrow \coprod A$。
+- 直和满足如下条件：
+- - 对于任意的 $\mathcal C$ 中对象 $X$，总是存在唯一的态射 $\theta:\coprod A\rightarrow X$， 使得对于任意态射列 $f_i:A_i\rightarrow X$，有 $\theta\circ p_i=f_i$。
+
+<span style='color: #36C48E'>【图就不画了，因为只是翻转上图的所有箭头。</span>
+
+<span style='color: #36C48E'>【如果把 $\mathcal C$ 理解为 $\mathsf{Grp}$，则此处的态射族 $p$ 直接是恒等映射。$\theta$ 可看成是 $f$ 的直和。】</span>
+
+可见的是积竟与和有着神奇的对偶关系……不过这只是范畴论神奇之处的一点罢了。
+
+# 4.2 核
+
