@@ -247,7 +247,12 @@
             'The sky is painted in lunacia / Florets slashed open the vein of tears',
             'Misfortuna / There is no escape, my dear',
             'The world undergoes photosynthesia / Transform endless anger to ecstasia',
-        //游戏 / 动漫台词
+            //children of the city
+            'the children of the city see only the neon stars',
+            'don\'t ask me why / I desperately wish to be included in the city\'s night',
+            'don\'t ask me why / I desperately wish to be noticed by the city\'s eye',
+            'Do not go home until you finish reading the value of e / 2.71828182845904523536028747135266249775...',
+        //游戏 / 动漫 / 基金会名句
         'Fate Chosen',
         'Reroll Your Destiny',
         'Blood Laser Barrage',
@@ -258,6 +263,8 @@
             '我是罗大佑，看着我 / 他是曾志伟，二姑妈你说摸裤头，骑着俺的金坷垃',
             '这次我敢去摸内裤 / 三大姨你探亲不看我',
             '你最大的罪恶，就是压根都不认为自己是『罪人』……那才是最『万恶不赦』的。',
+            //基金会
+            '太阳熄灭了。',
         //迫害CF/XJ
         'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
