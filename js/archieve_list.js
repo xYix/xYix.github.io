@@ -597,7 +597,7 @@
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-01-05',
+		'last_modi' : '2021-02-04',
 		'tag' : ['combinatorics','construction','exc-inc','lmoliver','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -631,5 +631,13 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-01-31',
 		'tag' : ['polynomial',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '80',
+		'post_name' : 'parallel-series',
+		'post_chinese_name' : '广义串并联图学习笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-02-04',
+		'tag' : ['d-and-c-on-tree',],
 	};
 })(document);

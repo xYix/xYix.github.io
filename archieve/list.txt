@@ -474,3 +474,8 @@ uoj#596 题解 - 【集训队互测2021】三维立体混元劲
 solution
 1
 polynomial
+parallel-series
+广义串并联图学习笔记
+algorithm
+1
+d-and-c-on-tree
