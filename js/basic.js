@@ -130,6 +130,7 @@
         SideBarCon.className = 'content';
         let write_link = function(text1, text2) {
             let Text = win.createElement('p');
+            Text.className = 'sidebar-link';
                 let aText = win.createElement('a');
                 aText.style = 'font-weight: bold';
                 aText.textContent = '· ' + text1;
