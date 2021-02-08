@@ -76,7 +76,7 @@ a:hover{
 }
 .title{
     position: relative;
-    margin: 0 0 0 0;
+    margin: 5px 20px;
 }
 button{
     border: 1px outset #1A5A40;
