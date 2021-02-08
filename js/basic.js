@@ -110,14 +110,14 @@
         let SideBarTitleContent1 = win.createElement('h1');
         SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
         SideBarTitle.appendChild(SideBarTitleContent1);
-        if(win.Pathname[0] !== 'xjoi') {
+        // if(win.Pathname[0] !== 'xjoi') {
             let SCPblock = win.createElement('center');
             SCPblock.style = 'width: 70%';
             win.AddText(SCPblock, 'Surprising', 'p');
             win.AddText(SCPblock, 'Combinatorial', 'p');
             win.AddText(SCPblock, 'Proof', 'p');
             SideBarTitle.appendChild(SCPblock);
-        }
+        // }
         let SideBarTitleContent2 = win.createElement('p');
         for (let i = 0; i < title.length; i = i + 1) {
             if (i == 0) SideBarTitleContent2.appendChild(win.createTextNode('您现在在：' + title[i]));
@@ -141,10 +141,9 @@
         write_link('回到首页', '/' + win.ezylanASearch(win.TrueSearch));
         write_link('文章一览', '/archieve/' + win.ezylanASearch(win.TrueSearch));
         write_link('标签一览', '/tags/' + win.ezylanASearch(win.TrueSearch));
-        write_link('网义云音乐', '/songlist/' + win.ezylanASearch(win.TrueSearch));
         write_link('一键清除 tag', location.pathname);
         // write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
-        SideBarCon.appendChild(win.createElement('br'));
+        SideBarCon.appendChild(win.createElement('p'));
         write_link('关于作者 & 友链', '/posts/?page=0&postid=1');
         write_link('luogu 上的x义x', 'https://www.luogu.com.cn/blog/zyxxs/');
         write_link('github 上的x义x', 'https://xyix.github.io');
@@ -166,25 +165,7 @@
             win.Title[1] = win.archieve_list[win.Postid - 1].post_chinese_name;
         }
         if (win.Pathname[0] === 'tags') win.Title[0] = '标签一览';
-        if (win.Pathname[0] === 'songlist') win.Title[0] = '网义云音乐';
         if (win.Pathname[0] === 'help') win.Title[0] = '帮助';
-        if (win.Pathname[0] === 'xjoi') {
-            win.Title[0] = '×√OI', win.Title[1] = '离线评测系统',
-            win.Title[2] = '新版下线', win.Title[3] = 'since 2020';
-            if (win.Pathname[1] === 'problemset') {
-                win.Title[0] += '：题库';
-                win.Title[4] = win.Title[3]; win.Title[3] = win.Title[2]; win.Title[2] = win.Title[1];
-                win.Title[1] = '第 ' + (win.Page + 1) + ' 页';
-            }
-            if (win.Pathname[1] === 'probs') {
-                win.Title[0] += '：题目内容';
-                win.Title[4] = win.Title[3]; win.Title[3] = win.Title[2]; win.Title[2] = win.Title[1];
-                win.Title[1] = win.prob_chinese_name[win.Probname];
-            }
-            if (win.Pathname[1] === 'contest') win.Title[0] += '：比赛';
-            if (win.Pathname[1] === 'fakenews') win.Title[0] += '：新闻';
-            if (win.Pathname[1] === 'abnormal') win.Title[0] += '：评测记录';
-        }
         if (win.Pathname[0] === 'archieve') {
             if (win.Type !== undefined) {
                 let nowlen = win.Title.length;
@@ -245,25 +226,8 @@
         else {
             if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
             if (win.Pathname[0] === 'tags') AddText('标签一览', 'h1');
-            if (win.Pathname[0] === 'songlist') AddText('网义云音乐', 'h1');
             if (win.Pathname[0] === 'help') AddText('帮助', 'h1');
             if (win.Pathname[0] === 'posts') AddText(win.archieve_list[win.Postid - 1].post_chinese_name, 'h1');
-            if (win.Pathname[0] === 'xjoi') {
-                if (win.Pathname[1] !== 'probs') AddText('集天下毒瘤题 恶心天下人', 'h1');
-                if (win.Pathname[1] === 'contest') AddText('比赛列表', 'h2');
-                if (win.Pathname[1] === 'problemset') AddText('题目列表', 'h2');
-                if (win.Pathname[1] === 'abnormal') AddText('评测记录', 'h2');
-                if (win.Pathname[1] === 'probs')
-                    AddText(win.prob_chinese_name[win.Probname], 'h1'),
-                        AddText('作者：' + win.prob_author[win.Probname], 'p');
-                if (win.Pathname[1] === 'fakenews') {
-                    var d = new Date();
-                    AddText('×√日报', 'h2'),
-                        AddText('地球日期：' + d.getFullYear() + ' 年 ' + (d.getMonth() + 1) + ' 月 ' + d.getDate() + ' 日', 'h3'),
-                        AddText('奶油糖日期：' + Math.floor(Math.random() * 10000) + ' 年 ' + Math.floor(Math.random() * 23) +
-                            ' 月 ' + Math.floor(Math.random() * 17) + ' 日', 'h3');
-                }
-            }
             if (win.Pathname[0] === 'archieve') {
                 if (win.Type !== undefined) {
                     let Typeinfo = '分类为：';
