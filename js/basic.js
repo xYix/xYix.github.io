@@ -147,6 +147,7 @@
         write_link('关于作者 & 友链', '/posts/?page=0&postid=1');
         write_link('luogu 上的x义x', 'https://www.luogu.com.cn/blog/zyxxs/');
         write_link('github 上的x义x', 'https://xyix.github.io');
+        write_link('codeforces 上的x义x', 'https://codeforces.com/profile/Comet_Honeymoon');
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
