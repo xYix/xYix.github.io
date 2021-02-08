@@ -107,8 +107,8 @@
         SideBarConBlock.className = 'sidebar-content-block';
         let SideBarTitle = win.createElement('center');
         SideBarTitle.className = 'title';
-        let SideBarTitleContent1 = win.createElement('h1');
-        SideBarTitleContent1.textContent = 'x义x 的自制 BLOG';
+        let SideBarTitleContent1 = win.createElement('h2');
+        SideBarTitleContent1.textContent = '基金会超常组合数学部';
         SideBarTitle.appendChild(SideBarTitleContent1);
         // if(win.Pathname[0] !== 'xjoi') {
             let SCPblock = win.createElement('center');
