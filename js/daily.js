@@ -50,6 +50,8 @@
         'loj 没有最慢榜了，爷的青春结束了',
         '你当然可以直接 F12 然后看生成一言的 js。但是不断按 F5 看看有什么新的刷出来也别有一番趣味，不是吗？',
         '没用的 数学没前途 你数学再好 CCF 不考白搭',
+        '越是追求抽象，越是发觉自己只能用具体的例子才能理解抽象的理论……我不做人啦，JOJO！',
+        '得癌症去世了肯定是你的问题，别人怎么都撑下来了？还不是意志力！还不是你不努力！',
         //奇妙bug/翻译
         'x锟斤拷x 锟斤拷锟斤拷锟斤拷 BLOG',
         '快速计算方法 问题方案 多项目类型,Rakuraro Nikki',
@@ -272,6 +274,8 @@
             '你最大的罪恶，就是压根都不认为自己是『罪人』……那才是最『万恶不赦』的。',
             //基金会
             '太阳熄灭了。',
+            '天堂就是地狱 / 地狱就是天堂 / 生命如此美好',
+            '通道的顶端、永无止尽的大厅、无处不在的光。走啊走啊直到心也碎裂。',
         //迫害CF/XJ
         'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
