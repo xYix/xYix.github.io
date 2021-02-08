@@ -143,6 +143,10 @@
         write_link('网义云音乐', '/songlist/' + win.ezylanASearch(win.TrueSearch));
         write_link('一键清除 tag', location.pathname);
         // write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
+        SideBarCon.appendChild('br');
+        write_link('关于作者 & 友链', '/posts/?page=0&postid=1');
+        write_link('luogu 上的x义x', 'https://www.luogu.com.cn/blog/zyxxs/');
+        write_link('github 上的x义x', 'https://xyix.github.io');
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
