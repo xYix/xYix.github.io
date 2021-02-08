@@ -142,7 +142,7 @@
         write_link('标签一览', '/tags/' + win.ezylanASearch(win.TrueSearch));
         write_link('网义云音乐', '/songlist/' + win.ezylanASearch(win.TrueSearch));
         write_link('一键清除 tag', location.pathname);
-        write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
+        // write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
