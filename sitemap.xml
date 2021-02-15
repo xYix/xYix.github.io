@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://xyix.gitee.io/index.html</loc>
-		<lastmod>2020-12-30</lastmod>
+		<lastmod>2021-02-08</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/xjoi/index.html</loc>
-		<lastmod>2020-10-09</lastmod>
+		<lastmod></lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/xjoi/probs/index.html</loc>
-		<lastmod>2020-11-23</lastmod>
+		<lastmod></lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/xjoi/fakenews/index.html</loc>
-		<lastmod>2020-11-23</lastmod>
+		<lastmod></lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/tags/index.html</loc>
@@ -26,7 +26,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/hello-world.html</loc>
-		<lastmod>2021-01-30</lastmod>
+		<lastmod>2021-02-08</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/alkane-counting.html</loc>
@@ -347,5 +347,13 @@
 	<url>
 		<loc>https://xyix.gitee.io/posts/posts/matroid.html</loc>
 		<lastmod>2021-02-08</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/posts/posts/priority-queue-disabled.html</loc>
+		<lastmod>2021-02-15</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.gitee.io/posts/posts/exc-inc-ex.html</loc>
+		<lastmod></lastmod>
 	</url>
 </urlset>

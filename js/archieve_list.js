@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-01-30',
+		'last_modi' : '2021-02-08',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -646,6 +646,22 @@
 		'post_chinese_name' : '拟阵通俗演义',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-02-08',
+		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '82',
+		'post_name' : 'priority-queue-disabled',
+		'post_chinese_name' : '一个有趣的，吊打单调序列的 trick',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-02-15',
+		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '83',
+		'post_name' : 'exc-inc-ex',
+		'post_chinese_name' : '高端容斥',
+		'type_name' : '1',
+		'last_modi' : '',
 		'tag' : [],
 	};
 })(document);
