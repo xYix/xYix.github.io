@@ -274,13 +274,6 @@ solution
 combinatorics
 generating-function
 lagrange-interpolation
-exc-inc
-容斥符号化 - 更炫酷的反演魔术
-algorithm
-3
-exc-inc
-combinatorics
-generating-function
 d-and-c
 分治概说
 algorithm
@@ -487,7 +480,10 @@ priority-queue-disabled
 一个有趣的，吊打单调序列的 trick
 algorithm
 0
-exc-inc-ex
-高端容斥
-1
 exc-inc
+更炫酷的反演魔术
+algorithm
+3
+exc-inc
+combinatorics
+generating-function
