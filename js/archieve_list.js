@@ -653,7 +653,7 @@
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '更炫酷的反演魔术',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-10-27',
+		'last_modi' : '2021-02-18',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
 	};
 })(document);
