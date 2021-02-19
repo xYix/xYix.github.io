@@ -31,7 +31,7 @@ set-power-series
 set-DP
 子集DP
 pigeon
-鸽掉的文章
+🕊鸽掉的文章🕊
 young-tableau
 杨表
 isotonic-regression
@@ -65,4 +65,4 @@ amortized-analysis
 bijective-proof
 双射法
 writing
-!正在施工!
+⚠正在施工⚠
