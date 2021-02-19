@@ -403,13 +403,6 @@ NOIP2020 退役记
 other
 1
 construction
-string-tech
-字符串学习笔记
-algorithm
-3
-string
-lyndon-tech
-writing
 cf-923-e
 CF923E 题解 - Perpetual Subtraction
 solution
@@ -487,3 +480,10 @@ algorithm
 exc-inc
 combinatorics
 generating-function
+string-tech
+字符串学习笔记
+algorithm
+3
+string
+lyndon-tech
+writing

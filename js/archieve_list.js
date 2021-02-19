@@ -546,14 +546,6 @@
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '69',
-		'post_name' : 'string-tech',
-		'post_chinese_name' : '字符串学习笔记',
-		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-08',
-		'tag' : ['lyndon-tech','string','writing',],
-	};
-	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '70',
 		'post_name' : 'cf-923-e',
 		'post_chinese_name' : 'CF923E 题解 - Perpetual Subtraction',
 		'type_name' : 'solution',
@@ -561,7 +553,7 @@
 		'tag' : ['generating-function','linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '71',
+		'postid' : '70',
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
@@ -569,7 +561,7 @@
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '72',
+		'postid' : '71',
 		'post_name' : 'bpp2',
 		'post_chinese_name' : 'bijective proof problems 选做（下）',
 		'type_name' : 'algorithm',
@@ -577,7 +569,7 @@
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '73',
+		'postid' : '72',
 		'post_name' : 'circle-union',
 		'post_chinese_name' : '圆面积并的靠谱做法',
 		'type_name' : 'algorithm',
@@ -585,7 +577,7 @@
 		'tag' : ['calculating-geometry',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '74',
+		'postid' : '73',
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
@@ -593,7 +585,7 @@
 		'tag' : ['combinatorics','construction','exc-inc','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '75',
+		'postid' : '74',
 		'post_name' : 'uoj-577',
 		'post_chinese_name' : 'uoj#577 题解 - 【ULR #1】打击复读',
 		'type_name' : 'solution',
@@ -601,7 +593,7 @@
 		'tag' : ['string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '76',
+		'postid' : '75',
 		'post_name' : 'lagrange-inv-bij',
 		'post_chinese_name' : '拉格朗日反演的组合意义证明',
 		'type_name' : 'algorithm',
@@ -609,7 +601,7 @@
 		'tag' : ['bijective-proof','combinatorics','construction','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '77',
+		'postid' : '76',
 		'post_name' : 'dft-acceleration',
 		'post_chinese_name' : 'DIT 和 DIF：DFT 的优化',
 		'type_name' : 'algorithm',
@@ -617,7 +609,7 @@
 		'tag' : ['polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '78',
+		'postid' : '77',
 		'post_name' : 'uoj-596',
 		'post_chinese_name' : 'uoj#596 题解 - 【集训队互测2021】三维立体混元劲',
 		'type_name' : 'solution',
@@ -625,7 +617,7 @@
 		'tag' : ['polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '79',
+		'postid' : '78',
 		'post_name' : 'parallel-series',
 		'post_chinese_name' : '广义串并联图学习笔记',
 		'type_name' : 'algorithm',
@@ -633,7 +625,7 @@
 		'tag' : ['d-and-c-on-tree',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '80',
+		'postid' : '79',
 		'post_name' : 'matroid',
 		'post_chinese_name' : '拟阵通俗演义',
 		'type_name' : 'algorithm',
@@ -641,7 +633,7 @@
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '81',
+		'postid' : '80',
 		'post_name' : 'priority-queue-disabled',
 		'post_chinese_name' : '一个有趣的，吊打单调序列的 trick',
 		'type_name' : 'algorithm',
@@ -649,11 +641,19 @@
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
-		'postid' : '82',
+		'postid' : '81',
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '更炫酷的反演魔术',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-02-18',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '82',
+		'post_name' : 'string-tech',
+		'post_chinese_name' : '字符串学习笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-02-19',
+		'tag' : ['lyndon-tech','string','writing',],
 	};
 })(document);
