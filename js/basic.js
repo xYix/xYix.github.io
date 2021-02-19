@@ -154,7 +154,7 @@
     }
     win.findpost = function (postname) {
         for (var postinfo in win.archieve_list)
-            if (postinfo.post_name == postname) return postinfo;
+            if (postinfo.post_name === postname) return postinfo;
         return 'error';
     }
     // Title
