@@ -83,8 +83,7 @@
         if (win.Search['page'] === undefined) win.Page = 0;
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
-        win.Postid = win.Search['postid']; //Postid 非常特殊，不保存
-        win.Probname = win.Search['probname']; //整个 xjoi 都不保存任何 tag
+        win.Postname = win.Search['postname'];
         win.TrueSearch = {
             Tags: win.Tags,
             Type: win.Type,
@@ -144,7 +143,7 @@
         write_link('一键清除 tag', location.pathname);
         // write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
         SideBarCon.appendChild(win.createElement('p'));
-        write_link('关于作者 & 友链', '/posts/?page=0&postid=1');
+        write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
         write_link('luogu 上的x义x', 'https://www.luogu.com.cn/blog/zyxxs/');
         write_link('github 上的x义x', 'https://xyix.github.io');
         write_link('codeforces 上的x义x', 'https://codeforces.com/profile/Comet_Honeymoon');
@@ -152,6 +151,11 @@
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
         data.appendChild(SideBar);
+    }
+    win.findpost = function (postname) {
+        for (var postinfo in archieve_list)
+            if (postinfo.post_name == postname) return postinfo;
+        return 'error';
     }
     // Title
     win.Title = [];
@@ -162,7 +166,7 @@
         if (win.Pathname[0] === 'archieve') win.Title[0] = '文章一览';
         if (win.Pathname[0] === 'posts') {
             win.Title[0] = '文章内容';
-            win.Title[1] = win.archieve_list[win.Postid - 1].post_chinese_name;
+            win.Title[1] = win.findpost(win.Postname).post_chinese_name;
         }
         if (win.Pathname[0] === 'tags') win.Title[0] = '标签一览';
         if (win.Pathname[0] === 'help') win.Title[0] = '帮助';
@@ -227,7 +231,7 @@
             if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
             if (win.Pathname[0] === 'tags') AddText('标签一览', 'h1');
             if (win.Pathname[0] === 'help') AddText('帮助', 'h1');
-            if (win.Pathname[0] === 'posts') AddText(win.archieve_list[win.Postid - 1].post_chinese_name, 'h1');
+            if (win.Pathname[0] === 'posts') AddText(win.findpost(win.Postname).post_chinese_name, 'h1');
             if (win.Pathname[0] === 'archieve') {
                 if (win.Type !== undefined) {
                     let Typeinfo = '分类为：';
@@ -311,8 +315,8 @@
         let Postinfo_title_a = win.createElement('a');
 
         if (location.search.length !== 0)
-            Postinfo_title_a.href = '/posts/' + location.search + '&postid=' + postinfo.postid;
-        else Postinfo_title_a.href = '/posts/?postid=' + postinfo.postid;
+            Postinfo_title_a.href = '/posts/' + location.search + '&postname=' + postinfo.post_name;
+        else Postinfo_title_a.href = '/posts/?postname=' + postinfo.post_name;
         Postinfo_title_a.textContent = postinfo.post_chinese_name;
 
         Postinfo_title.appendChild(Postinfo_title_a);

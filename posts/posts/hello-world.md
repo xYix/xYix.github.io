@@ -10,11 +10,11 @@ x义x 的朋友们：
 
 - XJ2019
 
-[![](https://cdn.luogu.com.cn/upload/usericon/49725.png)](https://www.luogu.com.cn/user/49725)[![](https://cdn.luogu.com.cn/upload/usericon/28145.png)](https://www.luogu.com.cn/user/28145)[![](https://cdn.luogu.com.cn/upload/usericon/31381.png)](https://www.luogu.com.cn/user/31381)[![](https://cdn.luogu.com.cn/upload/usericon/49458.png)](https://www.luogu.com.cn/user/49458)[![](https://cdn.luogu.com.cn/upload/usericon/36770.png)](https://www.luogu.com.cn/user/36770)
+[![](https://cdn.luogu.com.cn/upload/usericon/49725.png)](https://www.luogu.com.cn/user/49725)[![](https://cdn.luogu.com.cn/upload/usericon/28145.png)](https://www.luogu.com.cn/user/28145)[![](https://cdn.luogu.com.cn/upload/usericon/31381.png)](https://www.luogu.com.cn/user/31381)[![](https://cdn.luogu.com.cn/upload/usericon/49458.png)](https://www.luogu.com.cn/user/49458)[![](https://cdn.luogu.com.cn/upload/usericon/36770.png)](https://www.luogu.com.cn/user/36770)[![](https://cdn.luogu.com.cn/upload/usericon/25512.png)](https://www.luogu.com.cn/user/25512)
 
 - XJ2020
 
-[![](https://cdn.luogu.com.cn/upload/usericon/44805.png)](https://www.luogu.com.cn/user/44805)[![](https://cdn.luogu.com.cn/upload/usericon/68030.png)](https://www.luogu.com.cn/user/68030)[![](https://cdn.luogu.com.cn/upload/usericon/206488.png)](https://www.luogu.com.cn/user/206488)[![](https://cdn.luogu.com.cn/upload/usericon/52902.png)](https://www.luogu.com.cn/user/52902)[![](https://cdn.luogu.com.cn/upload/usericon/73142.png)](https://www.luogu.com.cn/user/73142)[![](https://cdn.luogu.com.cn/upload/usericon/67371.png)](https://www.luogu.com.cn/user/67371)[![](https://cdn.luogu.com.cn/upload/usericon/98618.png)](https://www.luogu.com.cn/user/98618)[![](https://cdn.luogu.com.cn/upload/usericon/61430.png)](https://www.luogu.com.cn/user/61430)[![](https://cdn.luogu.com.cn/upload/usericon/51692.png)](https://www.luogu.com.cn/user/51692)[![](https://cdn.luogu.com.cn/upload/usericon/150879.png)](https://www.luogu.com.cn/user/150879)[![](https://cdn.luogu.com.cn/upload/usericon/206998.png)](https://www.luogu.com.cn/user/206998)
+[![](https://cdn.luogu.com.cn/upload/usericon/44805.png)](https://www.luogu.com.cn/user/44805)[![](https://cdn.luogu.com.cn/upload/usericon/68030.png)](https://www.luogu.com.cn/user/68030)[![](https://cdn.luogu.com.cn/upload/usericon/206488.png)](https://www.luogu.com.cn/user/206488)[![](https://cdn.luogu.com.cn/upload/usericon/52902.png)](https://www.luogu.com.cn/user/52902)[![](https://cdn.luogu.com.cn/upload/usericon/73142.png)](https://www.luogu.com.cn/user/73142)[![](https://cdn.luogu.com.cn/upload/usericon/67371.png)](https://www.luogu.com.cn/user/67371)[![](https://cdn.luogu.com.cn/upload/usericon/98618.png)](https://www.luogu.com.cn/user/98618)[![](https://cdn.luogu.com.cn/upload/usericon/61430.png)](https://www.luogu.com.cn/user/61430)[![](https://cdn.luogu.com.cn/upload/usericon/51692.png)](https://www.luogu.com.cn/user/51692)[![](https://cdn.luogu.com.cn/upload/usericon/150879.png)](https://www.luogu.com.cn/user/150879)[![](https://cdn.luogu.com.cn/upload/usericon/206998.png)](https://www.luogu.com.cn/user/206998)[![](https://cdn.luogu.com.cn/upload/usericon/101984.png)](https://www.luogu.com.cn/user/101984)
 
 - XJ2021
 
@@ -36,7 +36,7 @@ x义x 的朋友们：
 
 [孔姥爷的病历](https://www.cnblogs.com/Flying2018/)
 
-[毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
+[毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太祖，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
 
 [周指导的博客](https://www.cnblogs.com/zhouzhendong/)
 

@@ -432,9 +432,18 @@ $\blacksquare$
 
 # Lyndon 科技
 
-介绍一些好用的符号：
+介绍一些符号：
 
-- 
+- $\epsilon$ 表示空串。
+- 记字符集为 $\Sigma$，所有由 $\Sigma$ 拼成的字符串为 $\Sigma^*$，再记 $\Sigma^+=\Sigma^*/\{\epsilon\}$。
+
+- 若字符串 $a$ 的字典序小于 $b$ 则记 $a<b$。
+- 若 $a$ 是 $b$ 的前缀则记 $a\sqsubseteq b$。
+- - 若还有 $a\neq b$ 则记 $a\sqsubset b$。
+  - 若 $a<b$ 且 $a\not\sqsubseteq b$，则记 $a\triangleleft b$。
+- $ab$ 表示拼接字符串 $a$ 和 $b$。
+- - $a^n$ 表示 $a$ 重复 $n$ 次。
+- $\text{pref}(a)$
 
 ## Lyndon 科技 / Lyndon 分解
 
