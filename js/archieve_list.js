@@ -589,8 +589,8 @@
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-04',
-		'tag' : ['combinatorics','construction','exc-inc','lmoliver','writing',],
+		'last_modi' : '2021-02-19',
+		'tag' : ['combinatorics','construction','exc-inc','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '75',
