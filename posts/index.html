@@ -16,9 +16,9 @@
     <div class="post-block">
         <div class="content-block" id='post'>
             <script>document.WriteTitle2(document.querySelector('#post'));</script>
-            <script>document.WriteBlog(document.querySelector('#post'),document.Postid-1);</script>
+            <script>document.WriteBlog(document.querySelector('#post'),document.findpost(document.Postname));</script>
             <center><h1>标签</h1></center>
-            <script>document.WriteTagsList2(document.querySelector('#post'),document.archieve_list[document.Postid-1]);</script>
+            <script>document.WriteTagsList2(document.querySelector('#post'),document.findpost(document.Postname));</script>
         </div>
     </div>
     

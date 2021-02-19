@@ -462,12 +462,12 @@
     }
 
     //绘制文章内容
-    win.WriteBlog = function (data, postid) {
+    win.WriteBlog = function (data, postinfo) {
         let Blog = win.createElement('iframe');
         Blog.style.opacity = 1.0;
         Blog.frameBorder = 1;
         Blog.className = 'inline-blog';
-        if(postid === 44) {
+        if(postinfo.postid === 44) {
             Blog.src = '/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf';
             Blog.scrolling = "yes";
             Blog.onload = function () {
@@ -475,7 +475,7 @@
             }
         }
         else {
-            Blog.src = '/posts/posts/' + win.archieve_list[postid].post_name + ".html";
+            Blog.src = '/posts/posts/' + postinfo.post_name + ".html";
             Blog.scrolling = "no";
             Blog.onload = function () {
                 Blog.style.height = Blog.contentDocument.body.scrollHeight;
