@@ -16,7 +16,7 @@
 	win.tags_list['game-theory'] = '博弈论';
 	win.tags_list['set-power-series'] = '集合幂级数';
 	win.tags_list['set-DP'] = '子集DP';
-	win.tags_list['pigeon'] = '??鸽掉的文章??';
+	win.tags_list['pigeon'] = '🕊鸽掉的文章🕊';
 	win.tags_list['young-tableau'] = '杨表';
 	win.tags_list['isotonic-regression'] = '保序回归';
 	win.tags_list['overall-binary-search'] = '整体二分';
@@ -33,5 +33,5 @@
 	win.tags_list['sqrt-tech'] = '根号科技';
 	win.tags_list['amortized-analysis'] = '均摊分析';
 	win.tags_list['bijective-proof'] = '双射法';
-	win.tags_list['writing'] = '?正在施工?';
+	win.tags_list['writing'] = '⚠正在施工⚠';
 })(document);
