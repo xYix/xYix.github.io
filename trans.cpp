@@ -109,7 +109,7 @@ int main(){
 //		cout<<"	win.tags_list['"<<tmp_tag_name<<"'] = '"<<GBToUTF8(tmp_tag_chinese_name.c_str())<<"';\n";
 	}
 //	printf("})(document);");
-//	cin.clear();
+	cin.clear();
 	freopen("archieve/list.txt","r",stdin);
 	freopen("js/archieve_list.js","w",stdout);
 	cout<<"(function(win){\n	win.archieve_list=[];\n";
