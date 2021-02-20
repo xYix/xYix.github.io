@@ -283,10 +283,10 @@
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '36',
 		'post_name' : 'sx2019',
-		'post_chinese_name' : '省选 2019 补题记录',
+		'post_chinese_name' : '浙江省选 2019 补题记录',
 		'type_name' : 'solution',
-		'last_modi' : '2020-10-07',
-		'tag' : ['pigeon',],
+		'last_modi' : '2021-02-20',
+		'tag' : ['calculating-geometry','combinatorics','data-structure','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '37',
