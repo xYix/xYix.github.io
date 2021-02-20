@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-02-08',
+		'last_modi' : '2021-02-19',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -37,7 +37,7 @@
 		'post_name' : 'loj-6275',
 		'post_chinese_name' : 'loj#6275 题解 - 棋盘',
 		'type_name' : 'solution',
-		'last_modi' : '2020-10-03',
+		'last_modi' : '2020-09-28',
 		'tag' : ['combinatorics','generating-function','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -197,7 +197,7 @@
 		'post_name' : 'agc-016-d',
 		'post_chinese_name' : 'AGC016D 题解 - XOR Replace',
 		'type_name' : 'solution',
-		'last_modi' : '2020-10-04',
+		'last_modi' : '2020-09-28',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -205,7 +205,7 @@
 		'post_name' : 'agc-016-f',
 		'post_chinese_name' : 'AGC016F 题解 - Games on DAG',
 		'type_name' : 'solution',
-		'last_modi' : '2020-10-04',
+		'last_modi' : '2020-09-28',
 		'tag' : ['game-theory',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -237,7 +237,7 @@
 		'post_name' : 'cf-1305-g',
 		'post_chinese_name' : 'CF1305G 题解 - Kuroni and Antihype',
 		'type_name' : 'solution',
-		'last_modi' : '2020-10-04',
+		'last_modi' : '2020-09-28',
 		'tag' : ['set-DP',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -317,7 +317,7 @@
 		'post_name' : 'isotonic-regression',
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-10-07',
+		'last_modi' : '2020-10-08',
 		'tag' : ['isotonic-regression','offline','overall-binary-search','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -333,7 +333,7 @@
 		'post_name' : 'csp-2020-precontest',
 		'post_chinese_name' : 'CSP2020 初赛游记',
 		'type_name' : 'other',
-		'last_modi' : '2020-10-17',
+		'last_modi' : '2021-02-20',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -341,7 +341,7 @@
 		'post_name' : 'cube-root-of-two',
 		'post_chinese_name' : '2 的立方根是多少（详细揭秘）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-10-12',
+		'last_modi' : '2021-02-20',
 		'tag' : ['game-theory','nimber',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -381,7 +381,7 @@
 		'post_name' : 'd-and-c',
 		'post_chinese_name' : '分治概说',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-12',
+		'last_modi' : '2021-02-20',
 		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -397,7 +397,7 @@
 		'post_name' : 'ioi2020hw',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（上）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-01-04',
+		'last_modi' : '2021-02-20',
 		'tag' : ['combinatorics','construction','exc-inc','lmoliver',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -413,7 +413,7 @@
 		'post_name' : 'det-eq-exp-trace-log',
 		'post_chinese_name' : 'det = exp trace log',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-11-16',
+		'last_modi' : '2021-02-20',
 		'tag' : ['linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -421,7 +421,7 @@
 		'post_name' : 'multi-lagrange-inv',
 		'post_chinese_name' : '矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-06',
+		'last_modi' : '2020-12-24',
 		'tag' : ['combinatorics','exc-inc','generating-function','lagrange-inversion','linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -429,7 +429,7 @@
 		'post_name' : 'luogu-2305',
 		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
 		'type_name' : 'solution',
-		'last_modi' : '2020-11-23',
+		'last_modi' : '2020-11-29',
 		'tag' : ['calculating-geometry','d-and-c-on-tree','data-structure','monotonicity-of-decision',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -493,7 +493,7 @@
 		'post_name' : 'uoj-191',
 		'post_chinese_name' : 'uoj#191 题解 - 【集训队互测2016】Unknown',
 		'type_name' : 'solution',
-		'last_modi' : '2020-11-30',
+		'last_modi' : '2021-02-20',
 		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -501,7 +501,7 @@
 		'post_name' : 'luogu-5291',
 		'post_chinese_name' : 'luoguP5291 题解 - [十二省联考2019]希望',
 		'type_name' : 'solution',
-		'last_modi' : '2020-12-01',
+		'last_modi' : '2021-02-20',
 		'tag' : ['d-and-c-on-tree','data-structure','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -541,7 +541,7 @@
 		'post_name' : 'noip-2020',
 		'post_chinese_name' : 'NOIP2020 退役记',
 		'type_name' : 'other',
-		'last_modi' : '2021-01-04',
+		'last_modi' : '2020-12-06',
 		'tag' : ['construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -549,7 +549,7 @@
 		'post_name' : 'cf-923-e',
 		'post_chinese_name' : 'CF923E 题解 - Perpetual Subtraction',
 		'type_name' : 'solution',
-		'last_modi' : '2020-12-09',
+		'last_modi' : '2021-02-20',
 		'tag' : ['generating-function','linear-algebra',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -557,7 +557,7 @@
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-29',
+		'last_modi' : '2021-02-20',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -581,7 +581,7 @@
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-19',
+		'last_modi' : '2021-02-20',
 		'tag' : ['combinatorics','construction','exc-inc','lmoliver','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -597,7 +597,7 @@
 		'post_name' : 'lagrange-inv-bij',
 		'post_chinese_name' : '拉格朗日反演的组合意义证明',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-01-06',
+		'last_modi' : '2021-02-20',
 		'tag' : ['bijective-proof','combinatorics','construction','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -605,7 +605,7 @@
 		'post_name' : 'dft-acceleration',
 		'post_chinese_name' : 'DIT 和 DIF：DFT 的优化',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-01-16',
+		'last_modi' : '2021-02-20',
 		'tag' : ['polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -637,7 +637,7 @@
 		'post_name' : 'priority-queue-disabled',
 		'post_chinese_name' : '一个有趣的，吊打单调序列的 trick',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-15',
+		'last_modi' : '2021-02-13',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -653,7 +653,7 @@
 		'post_name' : 'string-tech',
 		'post_chinese_name' : '字符串学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-19',
+		'last_modi' : '2021-02-20',
 		'tag' : ['lyndon-tech','string','writing',],
 	};
 })(document);

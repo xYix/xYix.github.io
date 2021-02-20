@@ -91,9 +91,10 @@ string Get_Mtime(string filename) {
 }
 
 string site_name = "https://xyix.gitee.io/";
-void PRINT_INDEX_INFO(string filename) {
+void PRINT_INDEX_INFO(string filename, string mdfile = "") {
 	printf("	<url>\n		<loc>%s%s</loc>\n", site_name.c_str(), filename.c_str());
-	string Tbuf = Get_Mtime(filename);
+	string Tbuf;
+	if (mdfile == "") Tbuf = Get_Mtime(filename); else Tbuf = Get_Mtime(mdfile);
 	printf("		<lastmod>%s</lastmod>\n	</url>\n", Tbuf.c_str());
 }
 
@@ -127,7 +128,7 @@ int main(){
 		cout<<"		'post_name' : '"<<post_name<<"',\n";
 		cout<<"		'post_chinese_name' : '"<<GBToUTF8(post_chinese_name.c_str())<<"',\n";
 		cout<<"		'type_name' : '"<<type_name<<"',\n";
-		cout<<"		'last_modi' : '"<<Get_Mtime("posts/posts/" + post_name + ".html")<<"',\n";
+		cout<<"		'last_modi' : '"<<Get_Mtime("posts/posts/" + post_name + ".md")<<"',\n";
 		cout<<"		'tag' : [";
 		for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
 		cout<<"],\n	};\n";
@@ -135,7 +136,7 @@ int main(){
 	printf("})(document);");
 	freopen("sitemap.xml","w",stdout);
 	printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
-	PRINT_INDEX_INFO("index.html");
+	PRINT_INDEX_INFO("index");
 		PRINT_INDEX_INFO("xjoi/index.html");
 			PRINT_INDEX_INFO("xjoi/probs/index.html");
 			PRINT_INDEX_INFO("xjoi/fakenews/index.html");
@@ -152,7 +153,7 @@ int main(){
 			cin>>tag_cnt;getline(cin,trash);
 			for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
 			sort(post_tag + 1, post_tag + tag_cnt + 1);
-			PRINT_INDEX_INFO("posts/posts/" + post_name + ".html");
+			PRINT_INDEX_INFO("posts/posts/" + post_name + ".html", "posts/posts/" + post_name + ".md");
 		}
 	printf("</urlset>");
 } 

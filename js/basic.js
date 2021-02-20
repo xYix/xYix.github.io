@@ -84,6 +84,10 @@
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
         win.Postname = win.Search['postname'];
+        if (win.Search['postid'] != undefined) {
+            win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
+            win.location.replace('/posts/?page=0&postname=' + win.Postname);
+        }
         win.TrueSearch = {
             Tags: win.Tags,
             Type: win.Type,
@@ -467,7 +471,7 @@
         Blog.style.opacity = 1.0;
         Blog.frameBorder = 1;
         Blog.className = 'inline-blog';
-        if(postinfo.postid === 44) {
+        if(postinfo.postname === 'combinatorics') {
             Blog.src = '/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf';
             Blog.scrolling = "yes";
             Blog.onload = function () {

@@ -2,7 +2,7 @@
 title: 2 的立方根是多少（详细揭秘）
 ---
 
-[前置知识](/posts/?page=1&postid=41)
+[前置知识](/posts/?page=1&postname=nimber)
 
 > $2$ 的 nimber 立方根是多少？
 

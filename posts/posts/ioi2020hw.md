@@ -762,6 +762,6 @@ int main() {
 题解没看懂 qaq
 
 <center>
-    <a href="/posts/?page=1&postid=75">to be continued...</a>
+    <a href="/posts/?page=1&postname=ioi2020hw2">to be continued...</a>
 </center>
 
