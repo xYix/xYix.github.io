@@ -431,11 +431,12 @@ calculating-geometry
 ioi2020hw2
 IOI2020 集训队作业 AT 部分口胡（下）
 solution
-5
+6
 exc-inc
 combinatorics
 construction
 lmoliver
+network-flow
 pigeon
 uoj-577
 uoj#577 题解 - 【ULR #1】打击复读
