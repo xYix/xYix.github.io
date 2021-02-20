@@ -238,7 +238,7 @@
 		'post_chinese_name' : 'CF1305G 题解 - Kuroni and Antihype',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : ['set-DP',],
+		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '31',
@@ -390,7 +390,7 @@
 		'post_chinese_name' : '论如何通过 sone1',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-02',
-		'tag' : ['d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','data-structure',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '50',
@@ -655,5 +655,13 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-02-20',
 		'tag' : ['lyndon-tech','string','writing',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '83',
+		'post_name' : 'luogu-5470',
+		'post_chinese_name' : 'luoguP5470 题解 - [NOI2019]序列',
+		'type_name' : 'solution',
+		'last_modi' : '2021-02-20',
+		'tag' : ['network-flow',],
 	};
 })(document);

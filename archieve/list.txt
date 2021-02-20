@@ -168,8 +168,7 @@ set-power-series
 cf-1305-g
 CF1305G 题解 - Kuroni and Antihype
 solution
-1
-set-DP
+0
 euler-trans-in-group-theory
 群论视角下的欧拉变换
 algorithm
@@ -284,8 +283,9 @@ offline
 how-to-solve-sone1
 论如何通过 sone1
 solution
-1
+2
 d-and-c-on-tree
+data-structure
 ioi2020hw
 IOI2020 集训队作业 AT 部分口胡（上）
 solution
@@ -487,3 +487,8 @@ algorithm
 string
 lyndon-tech
 writing
+luogu-5470
+luoguP5470 题解 - [NOI2019]序列
+solution
+1
+network-flow
