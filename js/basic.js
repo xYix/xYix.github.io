@@ -153,8 +153,8 @@
         data.appendChild(SideBar);
     }
     win.findpost = function (postname) {
-        for (var postinfo in win.archieve_list)
-            if (postinfo.post_name === postname) return postinfo;
+        for (var i = 0; i < win.archieve_list.length; i = i + 1)
+            if (win.archieve_list[i].post_name === postname) return win.archieve_list[i];
         return 'error';
     }
     // Title
