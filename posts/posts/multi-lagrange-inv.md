@@ -1,7 +1,3 @@
----
-title: 矩阵树定理和多元拉反
----
-
 参考资料：
 
 [1] [A Multivariate Lagrange Inversion Formula for Asymptotic Calculations](https://www.researchgate.net/publication/2313679_A_Multivariate_Lagrange_Inversion_Formula_for_Asymptotic_Calculations)
@@ -12,7 +8,9 @@ title: 矩阵树定理和多元拉反
 
 [4] [Determinants, Paths, and Plane Partitions](http://people.brandeis.edu/~gessel/homepage/papers/pp.pdf)
 
-博客同步发表至 [uoj](https://x-yi-x.blog.uoj.ac/blog/6511)。由于我本地的 Typora 已经被公式轰炸到爆炸了，修订可能不及时，所以推荐看 uoj 版本。
+[5] [Two bijective proofs for the arborescent form of the Good–Lagrange formula and some applications to colored rooted trees and cacti](https://core.ac.uk/download/pdf/82394044.pdf)
+
+（↑ [5] 说的 cacti 其实指的是 constellation，不是 OI 里的仙人掌）
 
 其实就是把论文翻译了一遍（
 
@@ -64,7 +62,7 @@ $$
 
 # 2 多元拉格朗日反演
 
-下面把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf m$。原谅 x义x 对它的滥用，因为滥用实在是太香了。
+下面把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf x$。原谅作者为使得公式整洁对它的滥用，相信读者可以自行推断出符号的具体含义。
 
 现有一列 $m$ 个 $m$ 元形式幂级数 $f_1(\mathbf x),f_2(\mathbf x),...,f_m(\mathbf x)$，它们满足下面的方程组
 $$
@@ -72,7 +70,6 @@ f_i=x_ig_i(\mathbf f)
 $$
 
 那么我们有
-
 > **多元拉格朗日反演**.
 > $$
 > \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
@@ -86,12 +83,18 @@ $$
 
 > **多元拉格朗日反演：内向树形式.**
 > $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - \mathbf 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
 > $$
-> 其中 $\mathcal T$ 是完全图 $[0..m]$ 的所有以 $0$ 为根的内向树，而
+> 其中 $\mathcal T$ 是完全图 $[0..m]$ 的所有以 $0$ 为根的生成内向树，而
 > $$
-> \dfrac{\partial \mathbf f}{\partial G}:=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
+\dfrac{\partial \mathbf f}{\partial G}=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
 > $$
+
+这里的符号可能引起一些歧义，说明一下：
+
+- $\mathbf f(\mathbf t)$ 指的是 $(f_1(\mathbf t),f_2(\mathbf t),...)$。
+
+- 但 $\mathbf g^{\mathbf n}$ 指的是 $(g_1^{n_1},g_2^{n_2},...)$。
 
 我们给出对内向树形式的一个**组合解释**。
 
@@ -164,9 +167,11 @@ $$
 
 证明不表，因为均可直接由构造过程得出。
 
-- 对于某个 $D\in\mathcal F_0(\mathbf n)$，它的**色图**（草生）$C(D)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图。如果在 $D$ 中存在 $M_i\rightarrow(j,*)$ 则在其色图中连边 $i\rightarrow j$。
+- 对于某个 $D\in\mathcal F_0(\mathbf n)$，它的**色图** $C(D)$ 是一个 $\mathcal F_0(\mathbf 1)$ 图。如果在 $D$ 中存在 $M_i\rightarrow(j,*)$ 则在其色图中连边 $i\rightarrow j$。
 
-这两种概括的意义在于，我们即将通过它们建立一个震撼的双射。先进行一些准备工作：研究一些被称为**保权值**的变换：变换前后两个图的权值相等。
+这两种子结构的意义在于，我们即将通过它们建立一个从某类内向树到某类函数图的双射。（你可能会注意到内向树是函数图的一个子集，但是对无限集来说，某集合是另一集合的子集并不妨碍它们之间可以双射）
+
+先进行一些准备工作：研究一些被称为**保权值**的变换：变换前后两个图的权值相等。
 
 - 首先我们可以交换两个相同颜色节点 $u,v$ 的父亲，称为 **转换 (u,v)**，这显然是保权值的。
 - 先选定颜色为 $c$ 的两个节点 $u,v$，其中间有一条有向路径 $\pi$ 自 $u$ 到 $v$。下面这个变换称为 **c - 剥皮**：
@@ -186,7 +191,7 @@ $$
 
 **证明.** 对于 $P(A)=T$ 的 $A$，对 $j=1...m$，施以下面的变换
 
-- $：：：(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
+- $(j_1)：$$\sigma_j$ - 剥下 $\pi_{\sigma_j}$；
 - $(j_2)$：转换 $(M_{\sigma_j},F_{\sigma_j})$；
 
 接下来我们只需要证明：最终得出的图 $D$ 满足 $C(D)=T$，而且这组变换是一个双射。
@@ -214,6 +219,7 @@ $\blacksquare$
 > $$
 > \sum_{D\in\mathcal F_0(\mathbf n),C(D)=T}\Psi(D)=\left[\dfrac{\mathbf x^{\mathbf n-\mathbf 1}}{\prod(\mathbf n-\mathbf 1)!}\right]\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial T}
 > $$
+> 
 
 **证明.** 如果不管 $C(D)=T$ 的限制，那么儿子是可以任意选的，只要所有点恰好被作为一次儿子。那么答案即为
 $$
@@ -230,7 +236,7 @@ $\blacksquare$
 
 ## 2.3 主子式扩展
 
-> **多元拉格朗日反演：主子式扩展.**
+> **主子式多元拉格朗日反演.**
 > $$
 > \boxed{\left[\dfrac{\mathbf t^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf f(\mathbf t))\det\left(t_j\dfrac{\partial f_i}{\partial t_j}\right)_\alpha=\\
 > \qquad \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\prod_{k\in\alpha}x_k\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{\overline\alpha}}
@@ -251,10 +257,10 @@ $$
 ### 2.4.1 右式的处理
 
 >  **定理 2.** 
->  $$
->  \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
->  \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
->  $$
+> $$
+> \sum_{D\in\mathcal F_0(\mathbf n),C(D)\in \mathcal J^{(k)}}\Psi(D)=\\
+> \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot\left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial x_i}\right)H(\mathbf x)\right\}\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_j}{g_i}\dfrac{\partial g_i}{\partial x_j}\right)_{[1...k]}
+> $$
 
 **证明.** 只需要对引理 3 运用矩阵树定理即可。还有别忘了 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。
 
@@ -309,7 +315,8 @@ $$
 \sum_{A\in\mathcal A_0(\mathbf n),P(A)\in\mathcal J^{(k)}}\Psi(A)=\sum_{A\in\mathcal G^{(k)}}\text{sgn}(\kappa(A))\Psi(A)
 $$
 
-现在考虑对 $\kappa$，$A\in\mathcal G^{(k)},\kappa(A)=\kappa$ 的带符号权值和。容易得到它是
+现在只需要考虑对 $\kappa$，$A\in\mathcal G^{(k)},\kappa(A)=\kappa$ 的带符号权值和。容易得到它是
+
 $$
 \left[\dfrac{\mathbf x^{\mathbf n}}{\prod\mathbf n!}\right]\text{sgn}(\kappa)\cdot\prod_{i=k+1}^m\dfrac{x_i}{n_i}\cdot \left\{\left(\prod_{i=k+1}^m\dfrac{\partial}{\partial f_i}\right)H(\mathbf f)\right\}\cdot\prod_{i=k+1}^m\dfrac{\partial f_{\kappa_j}}{\partial x_j}
 $$
@@ -319,3 +326,14 @@ $$
 $\blacksquare$
 
 综合左式和右式的处理即得到原定理。
+
+# 3 多元拉反的不太组合的解释
+
+多谢 EI 哥哥让我想起来了这玩意还没更（
+
+先摆一个原式在这里
+$$
+\boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
+$$
+我们已经看到多元拉反的左式有直接的组合意义，下面我们用一个~~不那么阴间~~的方法来解释右式。$h(\mathbf x)\cdot\prod \mathbf g^{\mathbf n}(\mathbf x)$ 可看成是让每个节点先任意选择自己的儿子（如果你无法理解这点，可以看[这里](https://xyix.gitee.io/posts/?page=2&postname=lagrange-inv-bij)），诚然这样会有环的情况，接下来我们来说明后面的行列式其实是一个容斥。（伏笔回收）
+
