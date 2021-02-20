@@ -474,6 +474,7 @@
         if(postinfo.post_name === 'combinatorics') {
             Blog.src = '/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf';
             Blog.scrolling = "yes";
+            Blog.opacity = 1.0;
             Blog.onload = function () {
                 Blog.style.height = document.body.offsetHeight * 0.8;
             }
