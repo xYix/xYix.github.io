@@ -12,6 +12,8 @@
 
 （↑ [5] 说的 cacti 其实指的是 constellation，不是 OI 里的仙人掌）
 
+[6] EI 的 WC2021 员交课件
+
 其实就是把论文翻译了一遍（
 
 # 0 目录
@@ -327,7 +329,7 @@ $\blacksquare$
 
 综合左式和右式的处理即得到原定理。
 
-# 3 多元拉反的不太组合的解释
+# 3 多元拉反的不是非常组合的解释
 
 多谢 EI 哥哥让我想起来了这玩意还没更（
 
@@ -336,4 +338,10 @@ $$
 \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
 $$
 我们已经看到多元拉反的左式有直接的组合意义，下面我们用一个~~不那么阴间~~的方法来解释右式。$h(\mathbf x)\cdot\prod \mathbf g^{\mathbf n}(\mathbf x)$ 可看成是让每个节点先任意选择自己的儿子（如果你无法理解这点，可以看[这里](https://xyix.gitee.io/posts/?page=2&postname=lagrange-inv-bij)），诚然这样会有环的情况，接下来我们来说明后面的行列式其实是一个容斥。（伏笔回收）
+
+考虑
+$$
+\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\part g_j(\mathbf x)}{\part x_i}
+$$
+它可以想象为在原来的 $g_j$ 中标记一条的 $j\rightarrow i$ 的边，那么参考矩阵树定理的解释，后面行列式的意义也就不言自明了。
 
