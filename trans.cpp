@@ -34,29 +34,6 @@ char* GBToUTF8(const char* gb2312)
 	return str;
 }
 
-void PRINT_POST_INFO(){
-	cout<<"<tr><th><a href=\"/posts/"<<post_name<<".html\"><strong>"<<post_chinese_name<<"</strong></a></th>\n";
-	
-	if(type_name=="solution")
-		cout<<"<th><a href=\"/archieve/solution/\"><strong>���</strong></a></th>\n";
-	else if(type_name=="algorithm")
-		cout<<"<th><a href=\"/archieve/algorithm/\"><strong>�㷨/֪ʶ��</strong></a></th>\n";
-	else
-		cout<<"<th><p>��</p></th>\n";
-	
-	if(tag_cnt==0) cout<<"<th><p>��</p></th>\n";
-	else{
-		cout<<"<th>";
-		for(int i=1;i<=tag_cnt;i++){
-			cout<<"<a href=\"/tags/"<<post_tag[i]<<"/\"><strong>";
-			if(!TAG.count(post_tag[i])){cerr<<"ERROR tag not found "<<post_tag[i]<<"\n";exit(0);}
-			cout<<TAG[post_tag[i]]<<"</strong></a>";
-			if(i!=tag_cnt) cout<<",";
-		}
-		cout<<"</th>\n";
-	}
-}
-
 #include <sys/types.h>
 #include <sys/stat.h>
 #ifndef WIN32
