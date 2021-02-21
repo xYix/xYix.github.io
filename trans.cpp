@@ -34,12 +34,6 @@ char* GBToUTF8(const char* gb2312)
 	return str;
 }
 
-void PRINT_HEAD(string title){
-	cout<<"<head><meta http-equiv=\"content-type\" content=\"text/html;charset=gbk\" /><meta charset=\"UTF-8\"><title>x��x �� blog - ����һ��</title><link rel=\"icon\" type=\"images/png\" sizes=\"32x32\" href=\"/images/favicon32.png\"><link rel=\"icon\" type=\"images/png\" sizes=\"32x32\" href=\"/images/favicon16.png\"><link rel=\"stylesheet\" href=\"/css/main.css\"></head>\n";
-	cout<<"<div class=\"cover\"></div><div class=\"bodybody\"><div class=\"sidebar\"><div class=\"title\"><center><h1>x��x ������ BLOG</h1><p><h3>�������ڣ�"<<title<<"</h3></p></center>";
-    cout<<"</div><div class=\"content-block\"><div class=\"content\"><center><p class=\"lil-p\">���������ǵ���Ʊ��Ҳ�ǿ��Եİɣ�</p></center><a href=\"/\"><strong>�� �ص���ҳ</strong></a>";
-    cout<<"<p></p><a href=\"/archieve/\"><strong>�� ����һ��</strong></a><p></p><a href=\"/tags/\"><strong>�� ��ǩһ��</strong></a><p></p><a href=\"/songlist/\"><strong>�� ����������</strong></a></div><script type=\"text/javascript\" src=\"/daily/daily.js\" charset=\"UTF-8\"></script></div></div>";
-}
 void PRINT_POST_INFO(){
 	cout<<"<tr><th><a href=\"/posts/"<<post_name<<".html\"><strong>"<<post_chinese_name<<"</strong></a></th>\n";
 	

@@ -301,11 +301,6 @@ csp-2020-fst
 CSP2020 游记
 other
 0
-det-eq-exp-trace-log
-det = exp trace log
-algorithm
-1
-linear-algebra
 multi-lagrange-inv
 矩阵树定理和多元拉反
 algorithm
@@ -496,3 +491,11 @@ luoguP5470 题解 - [NOI2019]序列
 solution
 1
 network-flow
+det-eq-exp-trace-log
+det = exp trace log 和矩阵树定理和多元拉反
+algorithm
+4
+linear-algebra
+exc-inc
+combinatorics
+generating-function

@@ -1,6 +1,10 @@
 html{
     font-family: consolas, "微软雅黑";
 }
+body {
+    margin: 8px;
+    background: #36c48e;
+}
 div{
 }
 h1{
@@ -45,14 +49,14 @@ a:hover{
     left: 18px;
     position: fixed;
 }
-.cover{
+/* .cover{
     z-index: -1;
     width: 2000px;
     height: 20000px;
     position: fixed;
     background-color: #36C48B;
     left: 0;top: 0;
-}
+} */
 .lil-p{
     font-size: smaller;
 }
