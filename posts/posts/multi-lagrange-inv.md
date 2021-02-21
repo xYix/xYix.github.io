@@ -10,9 +10,9 @@
 
 [5] [Two bijective proofs for the arborescent form of the Good–Lagrange formula and some applications to colored rooted trees and cacti](https://core.ac.uk/download/pdf/82394044.pdf)
 
-（↑ [5] 说的 cacti 其实指的是 constellation，不是 OI 里的仙人掌）
+（↑ [5] 说的 cactus 其实指的是 constellation，不是 OI 里的仙人掌）
 
-[6] EI 的 WC2021 员交课件
+[6] 生成函数的一丶进展（WC2021 营员交流）
 
 其实就是把论文翻译了一遍（
 
@@ -20,8 +20,11 @@
 
 - 1 矩阵树定理的组合解释
 - 2 多元拉格朗日反演
+- - 2.0 多元拉反的组合解释
+  - - 2.0.1 基础定义
+    - 2.0.2 具体解释
 - - 2.1 内向树形式
-  - 2.2 多元拉反的组合解释
+  - 2.2 多元拉反的双射证明
   - - 2.2.1 基础定义
     - 2.2.2 函数图的子结构
     - 2.2.3 树形子结构双射定理
@@ -60,8 +63,6 @@ $$
 
 去掉第一行第一列正代表了选取一个根。这也解释了为什么如果不去掉第一行第一列，基尔霍夫矩阵的行列式为 $0$，因为这时不论怎么选总存在一个环。
 
-因为一些奇怪的原因，矩阵树定理和多元拉格朗日反演有着紧密的联系，我们来介绍它。你很快会看到这是为什么。
-
 # 2 多元拉格朗日反演
 
 下面把 $m$ 维向量 $(x_1,x_2,...,x_m)$ 记为 $\mathbf x$。原谅作者为使得公式整洁对它的滥用，相信读者可以自行推断出符号的具体含义。
@@ -79,30 +80,9 @@ $$
 
 其中：$\mathbf t^{\mathbf n}$ 表示 $(t_1^{n_1},t_2^{n_2},...)$，其余类似；行列式中的关于 $i,j$ 的式子表示矩阵在第 $i$ 行第 $j$ 列的值。
 
-我们暴力展开行列式。中间过程不表，类似之前对矩阵树定理的证明，只有一个观察是 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。这得到一个有趣的新形式
+## 2.0 多元拉反的组合解释
 
-## 2.1 内向树形式
-
-> **多元拉格朗日反演：内向树形式.**
-> $$
-> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - \mathbf 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
-> $$
-> 其中 $\mathcal T$ 是完全图 $[0..m]$ 的所有以 $0$ 为根的生成内向树，而
-> $$
-\dfrac{\partial \mathbf f}{\partial G}=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
-> $$
-
-这里的符号可能引起一些歧义，说明一下：
-
-- $\mathbf f(\mathbf t)$ 指的是 $(f_1(\mathbf t),f_2(\mathbf t),...)$。
-
-- 但 $\mathbf g^{\mathbf n}$ 指的是 $(g_1^{n_1},g_2^{n_2},...)$。
-
-我们给出对内向树形式的一个**组合解释**。
-
-## 2.2 多元拉反的组合解释
-
-### 2.2.1 基础定义
+### 2.0.1 基础定义
 
 定义我们研究的点集：
 
@@ -137,6 +117,43 @@ $$
 > $$
 > h(\mathbf f(\mathbf t))\ 是\ \mathcal A_0\ 的权值和的指数生成函数。
 > $$
+
+### 2.0.2 具体解释
+
+我们已经看到多元拉反的左式有直接的组合意义，下面我们来解释右式。$h(\mathbf x)\cdot\prod \mathbf g^{\mathbf n}(\mathbf x)$ 可看成是让每个节点先任意选择自己的儿子（如果你无法理解这点，可以看[这里](https://xyix.gitee.io/posts/?page=2&postname=lagrange-inv-bij)），诚然这样会有环的情况，接下来我们来说明后面的行列式其实是一个和矩阵树定理差不多的容斥。
+
+考虑
+$$
+\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\part g_j(\mathbf x)}{\part x_i}
+$$
+它可以想象为在原来的 $g_j$ 中标记一条的 $j\rightarrow i$ 的边。那么参考矩阵树定理的解释，后面行列式的意义也就不言自明了。
+
+## 2.1 内向树形式
+
+当然也可以暴力展开行列式。中间过程不表，类似之前对矩阵树定理的证明，只有一个观察是 $[\mathbf x^{\mathbf n}]\dfrac{n_i}{x_i}=[\mathbf x^{\mathbf n}]\dfrac{\partial}{\partial x_i}$。这得到一个有趣的新形式：
+
+> **多元拉格朗日反演（内向树形式）.**
+> $$
+> \boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=\dfrac{1}{\prod\mathbf n}[\mathbf x^{\mathbf n - \mathbf 1}]\sum_{\mathcal T}\dfrac{\partial(h,\mathbf g^{\mathbf n})}{\partial \mathcal T}}
+> $$
+> 其中 $\mathcal T$ 是完全图 $[0..m]$ 的所有以 $0$ 为根的生成内向树，而
+> $$
+\dfrac{\partial \mathbf f}{\partial G}=\prod_{j=0}^m\left(\prod_{(i,j)\in G}\dfrac{\partial}{\partial x_i}\right)f_j
+> $$
+
+这里的符号可能引起一些歧义，说明一下：
+
+- $\mathbf f(\mathbf t)$ 指的是 $(f_1(\mathbf t),f_2(\mathbf t),...)$。
+
+- 但 $\mathbf g^{\mathbf n}$ 指的是 $(g_1^{n_1},g_2^{n_2},...)$。
+
+我们给出对内向树形式的一个**双射证明**。
+
+## 2.2 多元拉反的双射证明
+
+### 2.2.1 基础定义
+
+沿用之前的点集等定义。
 
 ### 2.2.2 函数图的子结构
 
@@ -234,9 +251,9 @@ $\blacksquare$
 
 然后对每一个内向树 $T$ 求和即得到原定理（注意引理 2.2）。
 
-还有一个奇妙的扩展。
-
 ## 2.3 主子式扩展
+
+还有一个奇妙的扩展，也一并介绍好了。
 
 > **主子式多元拉格朗日反演.**
 > $$
@@ -328,20 +345,4 @@ $$
 $\blacksquare$
 
 综合左式和右式的处理即得到原定理。
-
-# 3 多元拉反的不是非常组合的解释
-
-多谢 EI 哥哥让我想起来了这玩意还没更（
-
-先摆一个原式在这里
-$$
-\boxed{[\mathbf t^{\mathbf n}]h(\mathbf f(\mathbf t))=[\mathbf x^{\mathbf n}]h(\mathbf x)\cdot\prod\mathbf g^{\mathbf n}(\mathbf x)\cdot\text{det}\left([i=j]-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\partial g_j(\mathbf x)}{\partial x_i}\right)}
-$$
-我们已经看到多元拉反的左式有直接的组合意义，下面我们用一个~~不那么阴间~~的方法来解释右式。$h(\mathbf x)\cdot\prod \mathbf g^{\mathbf n}(\mathbf x)$ 可看成是让每个节点先任意选择自己的儿子（如果你无法理解这点，可以看[这里](https://xyix.gitee.io/posts/?page=2&postname=lagrange-inv-bij)），诚然这样会有环的情况，接下来我们来说明后面的行列式其实是一个容斥。（伏笔回收）
-
-考虑
-$$
-\dfrac{x_i}{g_j(\mathbf x)}\dfrac{\part g_j(\mathbf x)}{\part x_i}
-$$
-它可以想象为在原来的 $g_j$ 中标记一条的 $j\rightarrow i$ 的边，那么参考矩阵树定理的解释，后面行列式的意义也就不言自明了。
 
