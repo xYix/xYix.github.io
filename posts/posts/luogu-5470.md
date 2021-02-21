@@ -27,4 +27,91 @@ title: luoguP5470 题解 - [NOI2019] 序列
 
 你会发现这不就是所谓反悔贪心吗……其实模拟费用流就是玄学反悔贪心的理论基础。
 
-代码实在是有点![](https://xyix.gitee.io/images/qq/tuu.png)，我先鸽为敬
+代码如下。
+
+```cpp
+#include<bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+
+struct node {
+	int p, v;
+	bool operator < (const node b) const { return v < b.v; }
+};
+typedef priority_queue<node> H;
+
+const int maxn = 400005;
+
+int n, K, L;
+int a[maxn];
+int clr[maxn];
+H A0, B0, A1, B1, AB00;
+
+void clear(H *h) { while (!h -> empty()) h -> pop(); }
+int opp(int x) { return x > n ? x - n : x + n; }
+node top(H *A) {
+	if (A -> empty()) return (node){-1, -1};
+	return A -> top();
+}
+
+void solve() {
+	scanf("%d%d%d", &n, &K, &L);
+	for (int i = 1; i <= n + n; i++) scanf("%d", &a[i]);
+	
+	memset(clr, 0, 8 * n + 4);
+	clear(&A0), clear(&B0), clear(&A1), clear(&B1), clear(&AB00);
+	for (int i = 1; i <= n; i++)
+		A0.push((node){i, a[i]}), B0.push((node){i + n, a[i + n]}),
+		AB00.push((node){i, a[i] + a[i + n]});
+		
+	L = K - L;
+	ll ans = 0;
+	while (K) {
+		K--;
+		while (!A0.empty() && clr[A0.top().p]) A0.pop();
+		while (!B0.empty() && clr[B0.top().p]) B0.pop();
+		while (!A1.empty() && clr[A1.top().p + n] != 1) A1.pop();
+		while (!B1.empty() && clr[B1.top().p - n] != 1) B1.pop();
+		while (!AB00.empty() && (clr[AB00.top().p] || clr[AB00.top().p + n])) AB00.pop();
+		if (L) {
+			L--;
+			assert(!A0.empty()), assert(!B0.empty());
+			node u = top(&A0), v = top(&B0); A0.pop(), B0.pop();
+			ans += u.v + v.v; clr[u.p] = clr[v.p] = 1;
+			if (u.p + n != v.p) {
+				if (clr[u.p + n]) L++, clr[u.p] = clr[u.p + n] = 2;
+				else B1.push((node){u.p + n, a[u.p + n]});
+				if (clr[v.p - n]) L++, clr[v.p] = clr[v.p - n] = 2;
+				else A1.push((node){v.p - n, a[v.p - n]});
+			}
+			else L++, clr[u.p] = clr[v.p] = 2;
+		}
+		else {
+			node w1 = top(&AB00);
+			node u2 = top(&A0), v2 = top(&B1);
+			node u3 = top(&A1), v3 = top(&B0);
+			if (w1.v >= u2.v + v2.v && w1.v >= u3.v + v3.v) 
+				ans += w1.v, clr[w1.p] = clr[w1.p + n] = 2;
+			else if (u2.v + v2.v >= u3.v + v3.v) {
+				ans += u2.v + v2.v;
+				clr[u2.p] = 1, clr[v2.p] = clr[v2.p - n] = 2;
+				if (clr[u2.p + n]) L++, clr[u2.p] = clr[u2.p + n] = 2;
+				else B1.push((node){u2.p + n, a[u2.p + n]});
+			}
+			else {
+				ans += u3.v + v3.v;
+				clr[u3.p] = clr[u3.p + n] = 2, clr[v3.p] = 1;
+				if (clr[v3.p - n]) L++, clr[v3.p] = clr[v3.p - n] = 2;
+				else A1.push((node){v3.p - n, a[v3.p - n]});
+			}
+		}
+	}
+	printf("%lld\n", ans);
+}
+
+int main() {
+	int t; scanf("%d", &t);
+	while(t--) solve();
+}
+```
+
