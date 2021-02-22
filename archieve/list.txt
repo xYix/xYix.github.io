@@ -503,3 +503,9 @@ hhz-bigraphy
 喝喝粥传（评注版）
 other
 0
+luogu-6774
+luoguP6774 题解 - 时瑇的眼泪
+solution
+2
+dara-structure
+sqrt-tech

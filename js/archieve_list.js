@@ -549,7 +549,7 @@
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-20',
+		'last_modi' : '2021-02-22',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -557,7 +557,7 @@
 		'post_name' : 'bpp2',
 		'post_chinese_name' : 'bijective proof problems 选做（下）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-12-29',
+		'last_modi' : '2021-02-22',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -671,5 +671,13 @@
 		'type_name' : 'other',
 		'last_modi' : '2021-02-22',
 		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '85',
+		'post_name' : 'luogu-6774',
+		'post_chinese_name' : 'luoguP6774 题解 - 时瑇的眼泪',
+		'type_name' : 'solution',
+		'last_modi' : '2021-02-22',
+		'tag' : ['dara-structure','sqrt-tech',],
 	};
 })(document);
