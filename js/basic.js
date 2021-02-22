@@ -485,7 +485,7 @@
             Blog.onload = function () {
                 Blog.style.height = Blog.contentDocument.body.scrollHeight;
                 // setTimeout('console.log(\'qaq\')', 2000);
-                setTimeout('document.querySelector(\'iframe\').style.height = document.querySelector(\'iframe\').contentDocument.body.scrollHeight;', 2000);
+                setTimeout('document.querySelector(\'iframe\').style.height = document.querySelector(\'iframe\').contentDocument.body.scrollHeight;', 200);
             }
         }
         data.appendChild(Blog);
