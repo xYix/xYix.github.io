@@ -11,10 +11,7 @@ title: bijective proof problems 选做（上）
         background-color: #ffffff;
     }
 </style>
-
 [pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
-
-由于一些奇怪的问题，建议直接看[这里](https://xyix.gitee.io/posts/posts/bpp.html)（请用鼠标中键或右键加 T 打开）。
 
 <script>
     document.get_button_click = function(blockid) {
