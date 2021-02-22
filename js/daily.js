@@ -265,7 +265,7 @@
             'Do not go home until you finish reading the value of e',
             //sustain++
             'If abstraction is the definition of beauty / Are those of us chasing after clarity'+ 
-            '/ a representation of ugly?',
+            ' / a representation of ugly?',
         //游戏 / 动漫 / 基金会名句
         'Fate Chosen',
         'Reroll Your Destiny',

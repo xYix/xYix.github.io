@@ -1,0 +1,554 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>喝喝粥传（批注版）</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:2em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><p><span>最近 UPD：2021/2/22</span></p><p><span>由人工智能“彩云小梦”生成。人工写的剧情用斜体表示。</span></p><h1><a name="一信息赛与周指导" class="md-header-anchor"></a><em><span>一、信息赛与周指导</span></em></h1><p><span> </span><em><span>2017年9月，周航锐入读金华五中，分在初一（10）班。他的数学成绩挺好的，有两次，他发现做的题目似乎有点问题，就端着卷子来找老师。一次是一道选择题，四个答案都不对，那么对的那个在哪里呢？还有一道题目两个条件之间相互矛盾了。班主任王艳香虽然是教语文的，但是她一看心里就乐了：这孩子不错啊，能看出题目中的错来，还来问老师，说明他对学习很投入呢！当时，班里有两个孩子正在准备信息赛，王老师觉得，信息赛很要动脑筋，对周航锐来说肯定合适，就建议他也去参加。</span></em><span> 周航锐也是非常聪明的，当然不会拒绝。这样，两人就一起去了。</span></p><blockquote><p><span>王老师也去了草</span></p></blockquote><p><span>第一次的比赛，周航锐赢了，第三名也是他的，而第一名的奖励是十元钱，他拿着十块钱就高兴的跑回家。</span></p><blockquote><p><span>开马甲打比赛的 hhz 是屑</span></p></blockquote><p><span>周航锐的父亲是一个工厂职工，有一个优秀的儿子，也是一件非常自豪的事情。当他知道儿子考试的成绩之后，也高兴的不得了，给儿子打电话：&quot;儿子啊，你真厉害，考试成绩都出来了。&quot;周航锐也是高兴的不得了，他对自己非常满意，觉得这次考试是对他的最大鼓舞。</span></p><p><span>周航锐觉得，如果他一直保持这种学习的状态，将来说不定他会成为一个大企业家呢！</span></p><blockquote><p><span>带资本家 hhz</span></p></blockquote><p><span>当他拿着十元钱回到家里，他的爸爸妈妈就问他考得怎么样。周航锐告诉他们说，考了一百零一分，爸爸妈妈也非常高兴，他们说：&quot;咱们家航锐真棒！&quot;这时候他们也非常骄傲，因为周航锐考得这么好，让他们也感觉到脸上非常有面子。</span></p><p><span>周航锐又拿着十块钱，来到学校门口的报亭买报纸，他一买就买了两份， </span><em><span>第一份就是《柯桥日报》。这天的《柯桥日报》上刊登了一篇叫做《围棋滑板样样精通，小小年纪当上小老师》的报导，他看了之后才知道还有一个和他差不多强的人叫周镇东，在之前的信息学比赛中取得了第二名。</span></em><span> </span></p><p><span>周航锐一边看着一边摇头，看来自己这些年的努力并没有白费，自己也算是成长了很多，他觉得现在已经有资格挑战那位小老师了。周航锐把两张报纸放进了书包里面，就朝学校走去。</span></p><p><span>今天是周六，所有同学都休假。周航锐也不例外，他刚走进学校，就看到许多同学都聚集在操场上玩滑板。</span></p><p><span>&quot;周航锐，快过来玩滑板呀！&quot;这是一个非常熟悉的声音，他转身一看，原来是周镇东。&quot;你怎么会在这里？&quot;周航锐疑惑的问。&quot;怎么，我不能在这里吗？&quot;</span></p><p><span>周航锐想了想：&quot;也没什么，我是想问问你在这里干什么，你这个大忙人，怎么会有空来这里玩呢？&quot;</span></p><p><span>&quot;这里有好玩的事情啊，你来啦，一起玩啊！&quot;周镇东说道。</span></p><p><span>&quot;我不玩！我是来读书的！&quot;周航锐坚决的说。</span></p><p><span>&quot;哦，是吗？我也是来读书的啊！&quot;周镇东说道。</span></p><blockquote><p><span>卷怪本性暴露</span></p></blockquote><p><span>&quot;你不会是来读书的吧！&quot;周航锐惊奇的说。</span></p><p><span>周镇东点点头。周航锐更加震撼了：&quot;这么说来，你的成绩也是全校最低，也是全市第二了！你这样的学习成绩竟然还来参加信息赛，我真佩服你啊！&quot;</span></p><blockquote><p><span>¿</span></p></blockquote><p><span>周镇东得意洋洋的说：&quot;我当然是最厉害的了。我的成绩是全国前五十的。怎么样，怕了吗？&quot;</span></p><blockquote><p><span>（指集训队）</span></p></blockquote><p><span>&quot;你真是太变态了！我要向你学习！&quot;周航锐崇拜的说。</span></p><p><span>&quot;哈哈！你要向我学习什么？&quot;</span></p><p><span>&quot;我也想像你一样变态！&quot;</span></p><blockquote><p><span>¿</span></p></blockquote><h1><a name="二初识刘涛" class="md-header-anchor"></a><em><span>二、初识刘涛</span></em></h1><p><span>两人在操场上玩了几圈滑板，周航锐就回宿舍了。他一回到寝室，就听到他的室友</span><em><span>马爷爷</span></em><span>在那里嚷嚷：&quot;周航锐，听说</span><em><span>明天中午</span></em><span>有一个大学生模拟赛，你也一起去参加吧？你是不知道，这些大学生可是都会点功夫的，他们可是一流的啊！&quot;</span></p><blockquote><p><span>此处室友本来是一个唐突冒出的神必人，我改成了马爷爷</span></p></blockquote><blockquote><p><span>这里时间 bug 了，所以我手动修了一下</span></p></blockquote><p><span>周航锐听到马爷爷的话，心里也痒痒起来了，他也很想体验一下，他就点头说道：&quot;那行，我一定会去参加的。&quot;</span></p><p><span>周航锐也想看看这个大学生的水平到底如何。</span></p><p><span>第二天早上，周航锐早早的就爬了起来，他今天早晨还要去食堂吃饭，吃过饭之后，他就赶往大礼堂，因为比赛是在中午举行的，他要早点赶到。</span></p><p><span>在大礼堂的入口处，有不少人等待着。</span></p><p><span>这是一个非常庞大的广场，大约占地有二千多亩，广场中间是两栋楼房，两栋楼房上挂满了各种各样的标志牌，每栋楼的门口都站着两个穿着黑色西装的保镖，看上去气势不凡。这是一个专门用于比赛的场所，每天都是排队等候进入，然后由专门的工作人员带领进去比赛场所。这里有专门的观众席，可以看见比赛台，可以看见比赛的过程和结束。</span></p><p><span>周航锐在队伍中找到了一个空桌坐了下来。周航锐刚坐下来，一个男生就走到了周航锐的跟前，坐在了他的旁边。他的手搭在周航锐的肩膀上，笑嘻嘻的问：&quot;嗨，弟弟，你好，你也是来参加这个比赛的吗？&quot;</span></p><p><span>周航锐转过头看了他一眼。&quot;对啊！我叫周航锐，是一名信息系的学生。&quot;周航锐说道。&quot;哇，你好厉害，你是我见过最厉害的人了，竟然会是一名信息系的学生，我很羡慕你啊！&quot;男生说道，他用手摸了摸周航锐的额头。</span></p><p><span>&quot;我叫周航锐，不用羡慕我的，只要你努力学习，你一定会超越我的，我相信你！&quot;周航锐认真的说，&quot;我也会超越你的！&quot;</span></p><blockquote><p><span>互相超越草，果然学习水平不形成偏序关系</span></p></blockquote><p><span>&quot;真的啊？我很期待哦！不过我也相信你！你的成绩肯定会很厉害的，你一定会在信息学上有大成就的！&quot;男生说道，然后他伸出右手：&quot;我叫刘涛，你呢？你也叫周航锐吧？&quot;</span></p><blockquote><p><span>注意刘涛这个名字是 AI 自己 rand 出来的……</span></p></blockquote><p><span>周航锐看着这个男生，笑了笑，他说道：&quot;我叫周航锐！&quot;</span></p><p><span>刘涛伸出手，握住了周航锐的手，&quot;你的手好温柔啊，像是女生的手！&quot;他一边握着周航锐的手，一边说道，眼神里充满了</span><span>*</span><span>*</span><span>。</span></p><blockquote><p><span>原文就是两个星号</span></p></blockquote><p><span>周航锐的手被刘涛握住，心里一惊，他急忙抽出手来，脸红了，他的心跳的飞快。周航锐没有想到，他刚来就遇到这么一个不安分的男生，还想趁机占他便宜，他真想揍他。</span></p><p><span>&quot;你叫周航锐？你是哪所大学的呀？你是怎么考上大学的呀？&quot;刘涛继续问，一副很想知道答案的表情。&quot;我是大城市来的，我们学校是省重点高中。&quot;周航锐说道。&quot;省重点高中啊？真厉害。对了，我叫刘涛，你叫我涛子哥吧，我也叫你弟弟吧！&quot;</span></p><p><span>&quot;不好吧？我叫周航锐，叫弟弟，不合适，再说，你是男生，我是女生，我还是叫你哥哥吧！&quot;周航锐说道。</span></p><blockquote><p><span>hhz 性别成谜的开始（一个合理的解释是，注意到别人都称 hhz 为男性，hhz 却总是自称女性，所以 hhz 是木桶饭</span><img src="https://xyix.gitee.io/images/qq/jy.png" referrerpolicy="no-referrer"><span>）</span></p></blockquote><p><span>&quot;弟弟就叫弟弟吧，这有什么不好意思的。&quot;刘涛一脸的笑容，&quot;你今年多大了？&quot;</span></p><p><span>&quot;21岁，我今年已经22岁了。&quot;周航锐说道。</span></p><blockquote><p><span>hhz 年龄成谜的开始</span></p></blockquote><p><span>&quot;哇，你这么小，竟然这么厉害。不愧是大城市来的，真的是了不起啊。&quot;刘涛夸赞道。&quot;好了，既然你是我的弟弟，那我们就不说别的了。我们一起去参加比赛吧！&quot;</span></p><p><span>&quot;嗯，好的。&quot;周航锐点头说道。</span></p><p><span>两人走到了比赛场所，看到比赛台的前方有一块大屏幕，屏幕里显示的正是这届的比赛的规则，本次比赛会淘汰一半的选手，最终留下一百人。而且这一次淘汰的选手会按照成绩给他们发奖金，当然了，也会有一定的惩罚措施。</span></p><p><span>周航锐看着大屏幕上的比赛规则和奖励内容，他的心里暗暗的激动起来。他知道这次比赛的胜负对他来说至关重要。</span></p><p><span>如果这一次赢了，那他将会拥有一笔数目巨大的钱财；如果输了，那他将面临失业或者失踪的危险，毕竟这一次的大学生模拟赛，对他来说，实在是一件非常困难的事情。</span></p><blockquote><p><span>你可能会很惊讶为什么 OI/ACM 比赛会让人失踪，接着看就知道了</span></p><p><span>失业可能指的是落下残疾导致丢掉工作吧（悲）</span></p></blockquote><p><span>他现在只希望自己能够尽量的获得前三名，这样他就会有丰厚的奖品，那样他就可以继续在大学里读书，继续完成自己的梦想，继续去追求自己的爱情和理想。</span></p><blockquote><p><span>“爱情”是伏笔</span></p></blockquote><p><span>他相信，凭借自己的能力，自己肯定能够拿下一个前三名的。</span></p><p><span>比赛的时间是一刻钟以后才开始，这段时间，周航锐可以在比赛场地里随意逛逛。</span></p><p><span>他也可以去买一些必须的设备什么的，这样一来，他在比赛中就会多了很多的防护措施和应对措施。</span></p><blockquote><p><img src="https://xyix.gitee.io/images/qq/jk.png" referrerpolicy="no-referrer"><span> </span></p></blockquote><p><span>时间很快过去，终于轮到他们进场了。</span></p><p><span>&quot;周航锐，加油！&quot;刘涛拍着他的肩膀说道。</span></p><p><span>周航锐点头，说：&quot;谢谢你的鼓励！&quot;</span></p><p><span>刘涛哈哈一笑，走进了比赛现场。</span></p><h1><a name="三内定冠军" class="md-header-anchor"></a><em><span>三、内定冠军</span></em></h1><p><span>刘涛进入比赛场地以后，他直接朝比赛台冲了过去，这个时候周航锐也来到了比赛台上，看到周航锐上来了，主持人喊道：&quot;各位同学，欢迎你们来参加这个比赛。我们大学生大赛，每一个班级将会出三十名参与比赛的选手。现在，让我们一起欢迎今年大学生大赛的冠军，他是周航锐，他就是咱们学校的一名学生，今年大三了，现在，请他上来讲话。&quot;</span></p><blockquote><p><span>¿</span></p></blockquote><p><span>&quot;啪啪......&quot;</span></p><p><span>掌声响起，周航锐在一群人的注视之下，缓慢的走了上来。</span></p><p><em><span>刘涛惊愕得说不出话。什么？比赛结果早就内定好了吗？还在大厅广众下公然钦定？</span></em></p><blockquote><p><span>AI 完全没有意识到这里钦定了比赛结果，故强行回到正确的逻辑</span></p></blockquote><p><span>他们到底把比赛当做什么了？</span></p><p><span>周航锐深吸了一口气，他调整好了自己的呼吸，慢慢的走上了比赛台，然后走到了裁判席前。他站定脚步，看着面前的四十名学生们。</span></p><p><span>这里的四十名学生都是大四或者大二的学生，他们看着周航锐，都露出了不屑的眼光。</span></p><p><span>&quot;我想问一句，你们觉得你们能够通过这一场比赛吗？&quot;周航锐开口了，他看着台下的这些学生，淡淡的问道。他的语气非常的轻松，但是却有一股霸气从他身上释放出来。</span></p><p><span>台下的学生们全部都是愣住了，谁都没有料到周航锐的胆子这么大，他们都用一种奇怪的目光看着周航锐。</span></p><p><span>周航锐并没有理睬台下那些人的目光，他接着说道：&quot;我想告诉你们的是，你们不能够通过今天的比赛，因为，这一场比赛的结局只有一个，就是失败！你们的实力和我相差太远了！我想，我一根指头就能够捏死你们！&quot;</span></p><p><span>听到周航锐的话，台下的学生们全部都炸锅了。</span></p><p><span>周航锐说道：&quot;怎么了，你们是害怕了吗？害怕的话现在就滚下比赛台，我不强迫你们下台，也不会让人强行把你们拉下比赛台。但是，如果你们继续坚持留在比赛台，那我也只能够让人强行拉你们离开比赛台了！&quot;</span></p><blockquote><p><span>百草园</span></p></blockquote><p><span>&quot;你......&quot;刘涛愤怒的瞪着周航锐，他没有想到周航锐竟然敢这样嚣张！</span></p><p><span>周航锐看着刘涛，说道：&quot;我怎么了？怎么？不服气是吗？不服气就上台来跟我比试比试！我倒是想看看你有什么本事？&quot;</span></p><p><span>刘涛被气坏了，他狠狠的瞪着周航锐，咬牙切齿的说：&quot;小子，我记住你了，等你上台了，我看你怎么死的。&quot;</span></p><p><span>裁判开口说道，&quot;现在，我宣布比赛正式开始了！第一轮的比赛分两组比赛，我宣布，一号擂台的周航锐对阵七号擂台的刘涛。现在，我宣布，比赛正式开始。&quot;</span></p><p><span>&quot;周航锐，你可一定要争取获得第一哦！&quot;刘涛冲着周航锐眨眨眼睛，做了一个挑衅的表情，然后便走上比赛台。</span></p><blockquote><p><span>阴阳怪气的 Krimson</span></p></blockquote><p><span>&quot;刘涛，你给我等着！&quot;周航锐冷哼一声，也转身走上了比赛台。</span></p><p><span>两人分别站在比赛台的两端，彼此瞪着对方。</span></p><p><span>周航锐看着刘涛，然后开口说道：&quot;开始吧！&quot;</span></p><p><span>&quot;好，那我们就开始吧！&quot;刘涛说道。</span></p><blockquote><p><span>下面的武戏采用了大量魔改，原因如下：</span></p><ul><li><span>AI 的武戏太平淡了，永远只有拳头拳头铁拳铁拳</span></li><li><span>这不是应该是个 OI/ACM 比赛吗……</span></li></ul></blockquote><p><span>周航锐点点头，说道：&quot;那就开始吧！&quot;说完，两人便同时向对方攻击而去，他们都使用的是</span><em><span>容斥原理</span></em><span>。</span></p><p><span>&quot;啪！&quot;的一声脆响，两人的</span><em><span>容斥系数</span></em><span>撞击在了一起，发出一声闷响。</span></p><p><span>刘涛被周航锐的力量震退了一步，他的嘴角</span><em><span>泄露出了一丝内存</span></em><span>。</span></p><p><span>&quot;好大的力气，周航锐，你还真是让我吃惊啊！&quot;刘涛说。</span></p><p><span>周航锐淡淡的说：&quot;我只是用了 </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.74ex" height="2.577ex" viewBox="0 -806.1 2041 1109.7" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E2-MJMATHI-4F" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path stroke-width="0" id="E2-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E2-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E2-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJMATHI-4F" x="0" y="0"></use><use xlink:href="#E2-MJMAIN-28" x="763" y="0"></use><use xlink:href="#E2-MJMAIN-31" x="1152" y="0"></use><use xlink:href="#E2-MJMAIN-29" x="1652" y="0"></use></g></svg></span><script type="math/tex">O(1)</script><span> 的力量，否则，你早就趴下了。我劝你赶紧认输，否则，你会伤得更重的。&quot;</span></p><p><span>&quot;哼！我不会输的，我要让你输得非常惨。&quot;刘涛咬牙切齿的说道。说完，他又一次向周航锐冲了过来，他的速度极快，犹如</span><em><span>松排</span></em><span>一般。</span></p><p><span>周航锐看到刘涛又来进攻了，他连忙躲避，他的速度极快，一个 </span><em><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.87ex" height="2.577ex" viewBox="0 -806.1 4680.3 1109.7" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E3-MJMATHI-4F" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path stroke-width="0" id="E3-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E3-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path><path stroke-width="0" id="E3-MJMAIN-6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path stroke-width="0" id="E3-MJMAIN-6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z"></path><path stroke-width="0" id="E3-MJMAIN-67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z"></path><path stroke-width="0" id="E3-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMATHI-4F" x="0" y="0"></use><use xlink:href="#E3-MJMAIN-28" x="763" y="0"></use><use xlink:href="#E3-MJMATHI-45" x="1152" y="0"></use><g transform="translate(2082,0)"><use xlink:href="#E3-MJMAIN-6C"></use><use xlink:href="#E3-MJMAIN-6F" x="278" y="0"></use><use xlink:href="#E3-MJMAIN-67" x="778" y="0"></use></g><use xlink:href="#E3-MJMATHI-45" x="3527" y="0"></use><use xlink:href="#E3-MJMAIN-29" x="4291" y="0"></use></g></svg></span><script type="math/tex">O(E\log E)</script><span> 最小树形图</span></em><span>，直奔刘涛的</span><em><span>回车键</span></em><span>踹去。</span></p><p><span>&quot;砰！&quot;的一声，刘涛被周航锐的腿踢飞了出去，直接砸碎了旁边的一张椅子。他摔倒在地上，他艰难的爬了起来，捂着胸口，大口的喘息，脸色苍白。</span></p><p><span>台下，那些学生们纷纷议论了起来。</span></p><p><span>&quot;哎呀，这下糟糕了。&quot;</span></p><p><span>&quot;是啊，没想到周航锐的</span><em><span>常数这么小</span></em><span>，这下，刘涛估计是 </span><em><span>RE</span></em><span> 了。&quot;</span></p><p><span>周围的学生们议论着，他们的神情非常焦急。</span></p><p><span>周航锐走过去，站在刘涛的身旁，看着他，笑呵呵的说道：&quot;怎么样？服气了吗？&quot;</span></p><p><span>刘涛愤怒的说：&quot;认输？我不服！我要再战！&quot;说完，刘涛再一次朝着周航锐冲了过去，这次他使用的是 </span><em><span>min25筛</span></em><span>。</span></p><p><span>周航锐看了看刘涛的攻击，他微微的皱了皱眉，他没有想到刘涛的</span><em><span>码力</span></em><span>这么大，竟然可以</span><em><span>写穿带多点求值的毒瘤数论</span></em><span>，如果换作其他的学生，恐怕就算是用</span><em><span>周指导的 7k 缺省源</span></em><span>也不能够做到这样的程度啊。</span></p><p><span>他心中暗叫一声不妙，如果这一拳落在他的胸口，那可就麻烦了。想到这儿，周航锐连忙向左边跳开。</span></p><p><em><span>谁知，刘涛的武艺是留学海外时由辛普森大师亲自教授，这一记 min25 筛，竟是一记“辛普森自适应 min25 筛“！min25 筛灵活地转动，直直朝着周航锐而来！</span></em></p><p><span>周航锐躲避不及，&quot;砰！&quot;的一声，刘涛的铁拳打在了周航锐的</span><em><span>对拍脚本</span></em><span>上，顿时，周航锐被震得向后退了几步。周航锐的身体晃动了一下，但是，他没有倒地。</span></p><p><span>刘涛看到这一幕，他惊讶的说道：&quot;你竟然能够承受得住我这一拳，厉害，真的很厉害！&quot;</span></p><p><span>周航锐没有回答刘涛的话，因为，他刚才只用了八成的力量而已，他不想欺负刘涛，但是，刘涛一而再再而三的逼他，那就别怪他不客气了。</span></p><p><em><span>&quot;竟然逼我用这招，你真的很强大。&quot;周航锐抬起了手，比赛台的地板上冒出一个个透明的球体，那是……肥皂泡？&quot;这是我的杀手锏，三维球体积并。&quot;</span></em></p><p><em><span>&quot;什么？！&quot;刘涛惊讶地说，&quot;JOJO8 还没完结你就把四蛋的替身给偷了，害的东方家团灭，你可真是个带恶人！&quot;</span></em></p><p><span>&quot;我是大恶人，但是，你不也是吗？你是个卑鄙小人，竟然用这种方法对付一个弱女孩子。这是你所谓的男人吗？我真是看错你了，亏得我还对你有点好感！&quot;周航锐嘲讽道。</span></p><blockquote><p><span>注意 hhz 再次自称女性</span></p></blockquote><p><span>&quot;哼！&quot;刘涛冷哼一声，&quot;我是男人还是女人不需要向你解释。你只需要知道，今天，你必须要输掉比赛就行了！&quot;</span></p><p><span>&quot;是吗？那我倒是很期待呢，不知道你能够把我的三维球体积并打败吗？&quot;周航锐冷笑着说道。</span></p><p><span>刘涛说道：&quot;放心吧，我不仅可以把你的三维球体积并打败，还可以把你的女朋友打败。&quot;</span></p><blockquote><p><span>欺负女人，毫无绅士精神的屑 Krimson</span></p></blockquote><p><span>&quot;你......&quot;听到这句话，周航锐脸色阴沉了下来，他盯着刘涛，一字一句的说：&quot;你再敢侮辱她，我就杀了你！&quot;周航锐说着就拿起了枪，准备开枪。</span></p><blockquote><p><span>大人，时代变了</span></p></blockquote><p><span>刘涛见状，连忙喊道：&quot;别开枪，我不玩儿了。&quot;</span></p><p><span>周航锐听了之后，将枪放了下来。&quot;哼！你最好老老实实的回去，不要再找事儿了，否则，我不介意让你知道知道花儿为什么这样红！&quot;周航锐又对裁判说道，&quot;好了，比赛结束了，你可以下去了。&quot;</span></p><blockquote><p><span>注意主语，草</span></p></blockquote><p><span>裁判点点头，走下了比赛台。</span></p><h1><a name="四东亚国家队" class="md-header-anchor"></a><em><span>四、东亚国家队</span></em></h1><p><span>刘涛从地面上缓慢的站了起来，他低垂着脑袋，不再说话，仿佛像是一尊雕塑一样站立在原地，整个人显得十分的颓废。</span></p><p><span>周航锐看着刘涛这幅模样，心里面也有些于心不忍，毕竟，他跟刘涛的关系还不错，他不想把关系搞成这样，不想和他闹翻。</span></p><p><span>他叹息了一声，对刘涛说道：&quot;你输了，我不杀你，我也不想再和你斗下去了，我想，你也不想跟我斗下去了吧？&quot;</span></p><p><span>刘涛听到这句话，他抬起了头，目光复杂的盯着周航锐。他想说什么，但是却没有说。</span></p><p><span>&quot;你回去吧！&quot;周航锐说道。</span></p><p><span>刘涛看了一眼周航锐，他叹了口气，然后，摇摇头，他转身离开了。</span></p><p><span>刘涛刚走到场边，就看到一群人围了上来，他一愣，然后，他看清楚了，他是东亚国家队的队长</span><em><span>李</span></em><span>建，他们东亚国家队的队员全部都在场上，他们正是来帮助刘涛的。</span></p><blockquote><p><span>原为刘建</span></p></blockquote><p><span>刘涛看到自己的队友来了，他立刻高兴的大喊：&quot;队长，我被周航锐打败了！&quot;</span></p><blockquote><p><span>¿</span></p></blockquote><p><span>&quot;什么？周航锐？你怎么被周航锐给打败了？你不是跆拳道黑带九段吗？怎么会被他一脚就踢败？&quot;李建十分诧异的问道。</span></p><p><span>刘涛苦涩地一笑，说道：&quot;唉！周航锐的武术很厉害，我根本打不过他，如果他用全力，我现在肯定已经死了。&quot;</span></p><p><span>周航锐看到李建等人过来，他立马迎了上去，他和李建等人握了握手。</span>
+<span>&quot;你就是周航锐吧？我是东亚国家队的队长李建。&quot;李建说道。</span></p><p><span>&quot;我是周航锐，你们的名号，我都听说过。你们是世界冠军的队伍。我也听过你们的威风。&quot;周航锐说道。</span></p><p><span>&quot;周航锐先生，我们想请您加入东亚国家队。&quot;李建诚恳的说。</span></p><blockquote><p><span>光 速 投 降</span></p></blockquote><p><span>听到这话，周航锐愣了一下，他说道：&quot;我加入东亚国家队，那么，他们就会让我做主教练吗？你觉得，我的实力能够胜任吗？&quot;</span></p><blockquote><p><span>狮子大开口的屑</span></p></blockquote><p><span>&quot;不不不！&quot;李建连忙摆摆手，他急忙说道，&quot;周航锐先生的实力我是知道的，而且，你的技巧也十分精湛，你绝对可以胜任我们东亚国家队的主教练！你放心，我不会让你做什么事情的。你只要做一件事情就行了。&quot;</span></p><p><span>&quot;什么事情？&quot;周航锐好奇地问道。</span></p><p><span>&quot;保护我们国家的公主，我相信，以你的实力，保护公主绰绰有余！&quot;李建说道。</span></p><p><span>&quot;我保护公主，你们的公主就会喜欢我吗？&quot;周航锐说道。</span></p><p><span>&quot;当然！周航锐先生，你的魅力值已经足够吸引公主了！&quot;李建说道。</span></p><blockquote><p><span>这是你最后一次见到东亚公主（悲）所有人都再也不会记得她了</span></p></blockquote><p><span>&quot;哦。&quot;周航锐轻轻的嗯了一声，他看了一眼刘涛，淡淡的说道：&quot;好，既然这样，那就这样决定吧，我加入东亚国家队，不过，你们可不能够欺负我女朋友啊！&quot;</span></p><p><span>李建笑着说道：&quot;不会的，绝对不会的，你就放心吧！&quot;</span></p><p><span>随即，周航锐看了看刘涛，他冷笑着，说道：&quot;刘涛同学，我不管你们国家有多么的厉害，不过，你想要打败我的女朋友，那是不可能的事情！&quot;</span></p><p><span>说完这些话，周航锐便转身离开了。</span></p><p><span>李建和众人看到周航锐转身离开的背影，他们的嘴角勾起了一丝冷笑，他们心里想着：&quot;周航锐啊周航锐，你还真是狂妄！等着吧！有你哭的时候！&quot;</span></p><blockquote><p><span>原来李建竟是诈降！我错怪你了</span></p></blockquote><p><span>李建的心里面对周航锐十分的恼怒，他恨不得狠狠的揍周航锐一顿，但是，他也知道，这件事情，还轮不到他插手，他们东亚国家队的训练计划，还没有完成呢，这次，他们是代表东亚国参赛的，他们必须要按照东亚国的规矩办事，不能违反东亚国的规定。</span></p><p><span>周航锐走出比赛室，他的眉头紧皱，不知道为什么，他心中总有一股隐隐不安的感觉。</span></p><p><span>就在此时，他接到了陈浩</span><em><span>倡</span></em><span>的电话。</span></p><blockquote><p><span>原为陈浩南</span></p></blockquote><p><span>&quot;喂？师父，怎么啦？&quot;周航锐接通了电话，他问道。</span></p><p><span>&quot;你现在在哪里呢？&quot;陈浩倡问道。</span></p><p><span>周航锐说道：&quot;我现在在比赛室呢。&quot;</span></p><p><span>&quot;哦，这么快就打赢了？&quot;陈浩倡有些惊讶的问道。</span></p><p><span>&quot;嗯，没错，我已经把他们打趴下了。&quot;周航锐骄傲的说道。</span></p><p><span>&quot;呵呵呵，这个结果，我早就猜到了，你可是我的徒弟啊！你一定会赢的！&quot;陈浩倡笑着说道。</span></p><p><span>&quot;嘿嘿嘿！&quot;周航锐笑了笑，说道，&quot;不过，师父，我这么厉害，你会不会生气啊？&quot;</span></p><p><span>&quot;我当然会生气，不过，我更希望看到你的表现！好好干，别让我失望！&quot;陈浩倡说道。</span></p><p><span>&quot;放心吧，师父，你就瞧好吧！&quot;周航锐说道。</span></p><p><span>&quot;好的，那我挂电话了。&quot;</span></p><p><span>&quot;好！&quot;周航锐应了一声，然后便将电话给收了起来。</span></p><p><span>他看了一眼周围的人，笑眯眯地问道：&quot;各位，刚才的比赛结果你们都听到了吧？我赢了，我现在已经是东亚国家队的一员了，你们可不许欺负我的女朋友啊！&quot;</span></p><blockquote><p><span>对女朋友有着莫名执念的 hhz</span></p></blockquote><p><span>众人纷纷哈哈大笑了起来，一个个拍胸脯答应着。</span></p><p><span>周航锐这才满意的点点头，他说道：&quot;既然如此，那我就先去休息一会儿了，你们继续训练吧！&quot;</span></p><p><span>&quot;是！周航锐先生！&quot;众人齐声说道。</span></p><p><span>&quot;周航锐先生！&quot;刘涛也喊了一声。</span></p><p><span>&quot;你还是叫我周航锐好了，不然，听起来怪别扭的，我听到的话，我会不舒服的，明白吗？&quot;周航锐笑道。</span></p><p><span>&quot;是！&quot;刘涛点了点头，&quot;周航锐，你的实力很强，不过，我不认为，你可以胜任东亚国家队的主教练，所以，如果你愿意，你可以来当东亚国家队的副队长。&quot;</span></p><p><span>周航锐摇摇头，拒绝了刘涛的提议，他说道：&quot;不用，我觉得，我挺适合做主教练的。&quot;</span></p><p><span>&quot;你还是考虑一下，毕竟，我们东亚国家队的主教练是一个非常危险的职业，你可以去试探一下，如果你不行的话，你再回来找我们也不迟！&quot;刘涛说道。</span></p><blockquote><p><span>危险的职业</span><img src="https://xyix.gitee.io/images/qq/jy.png" referrerpolicy="no-referrer"></p></blockquote><p><span>周航锐笑眯眯地说道：&quot;不用，我已经决定了，我就是要去东亚国家队做教练。&quot;</span></p><p><span>周航锐已经决定好了，他不会因为刘涛几句话就改变自己的决定，他不可能会改变自己的想法的。</span></p><p><span>刘涛听到周航锐的话，无奈的摇了摇头，他心想，周航锐，你小子可千万不要后悔啊！</span></p><p><span>周航锐走进了训练室，他看着躺在地上的两人，冷哼一声，对着他们冷喝道：&quot;你们两个都给我滚，从此以后，不要让我再见到你们，如果再让我见到你们，别怪我不客气！&quot;</span></p><blockquote><p><span>一来就开除两人，好硬的手段！</span></p></blockquote><p><span>&quot;是，是......周航锐先生！&quot;躺在地上的两人急忙爬了起来，灰溜溜的离开了。</span></p><p><span>他们离开之后，其他人也跟着离开了，很快，偌大的训练室，就只剩下了周航锐和刘涛两个人了。</span></p><blockquote><p><span>不堪受辱而一齐出走的鉴队员，仰天大笑出门去，我辈岂是蓬蒿人！</span></p></blockquote><p><span>&quot;周航锐，你怎么突然决定要做这个东亚国家队的主教练了呢？&quot;刘涛好奇地问道。</span></p><p><span>周航锐淡淡的说道：&quot;因为我发现，我现在有了一个新的敌人，我想要找机会教训他！&quot;</span></p><p><span>&quot;敌人？谁呀？&quot;刘涛问道。</span></p><p><span>周航锐笑道：&quot;这个敌人就是陈浩倡。&quot;</span></p><p><span>听到陈浩倡的名字，刘涛浑身一震，他的脸色瞬间变得凝重起来了，他沉默了一会儿，他才抬起头，问道：</span><em><span>&quot;可是，陈浩倡不是你的师父吗？&quot;</span></em></p><blockquote><p><span>逻辑崩了，强行扳正</span></p></blockquote><p><span>周航锐点点头，说道：&quot;是的，我的师父确实是我的师父，不过，他也曾经对付过我，所以，我现在不想再叫他师父了，不然，我会心里很难受的，我已经不需要师父的帮助了，我要靠着自己的努力，让师父看到我的价值。&quot;</span></p><p><span>&quot;嗯，我支持你。&quot;刘涛坚定的说道。</span></p><p><span>周航锐看着刘涛，说道：&quot;对了，你们是不是有一个国际性质的联谊会啊？&quot;</span></p><p><span>&quot;没错。&quot;刘涛说道，&quot;这次的联谊会，是我们东亚国家队，还有东南亚国家队举办的。我们国家队和东南亚国家队，在几年前就达成了协议，我们两支队伍，每隔一段时间，都要举行一次比赛，而且，我们每一场比赛的冠军和季军，都要送给对方，这样，双方的实力，也算是旗鼓相当了。&quot;</span></p><blockquote><p><span>有考虑过去暴雪当游戏平衡策划吗</span></p></blockquote><p><span>&quot;原来如此。&quot;周航锐点点头，说道，&quot;既然如此，那我就陪你去参加那个联谊会，怎么样？&quot;</span></p><p><span>刘涛点点头，说道：&quot;好啊，这次的联谊会，我已经预订了位置，就在我们东亚国家队的基地旁边的咖啡馆举行。&quot;</span></p><p><span>&quot;行，我也去！&quot;周航锐高兴地点点头，说道。</span></p><p><span>两人聊了一会儿之后，刘涛说道：&quot;我还有一些工作，你先回去休息吧！&quot;</span></p><p><span>周航锐点了点头，便离开了。</span></p><p><span>等到周航锐离开之后，刘涛便拿出手机，拨通了陈浩倡的号码。</span></p><p><span>很快，陈浩倡便接通了电话，他问道：&quot;喂，刘涛，怎么了？是不是有消息了？&quot;</span></p><p><span>刘涛点点头，说道：&quot;陈老爷子，你猜得没错，确实有消息了，周航锐，确实是你徒弟。&quot;</span></p><blockquote><p><span>合理的推测：火车司机得了某种失忆症，记不住 hhz</span></p></blockquote><p><span>&quot;哦？这么快啊，看来，我这个徒弟还真是挺争气的嘛！&quot;陈浩倡笑眯眯地说道。</span></p><p><span>&quot;嗯，周航锐的实力，确实很不错，他的身体素质非常不错，虽然不能像你那么恐怖，但是，也绝对不是我们能够想象的。&quot;刘涛说道。</span></p><p><span>陈浩倡闻言，他沉吟了一下，然后，他开口说道：&quot;刘涛，既然周航锐的天赋如此好，那么，你们的主教练职位，他是不是可以坐上去了呢？&quot;</span></p><p><span>&quot;当然可以，周航锐现在已经是我们东亚国家队的主教练了。&quot;刘涛说道。</span></p><p><span>&quot;那就太好了，这样一来，周航锐就是我们的人了，这次的联谊会，你可不要忘记带上他，他也参加这个联谊会，我要看看他到底有多大的本事。&quot;陈浩倡严肃地说道。</span></p><p><span>&quot;嗯，我知道了。&quot;刘涛郑重的点了点头，说道。</span></p><p><span>挂断了电话，陈浩倡便陷入了沉思中。</span></p><h1><a name="五联谊会" class="md-header-anchor"></a><em><span>五、联谊会</span></em></h1><p><span>周航锐离开了基地之后，他便朝着咖啡馆走去。</span></p><p><span>周航锐走到咖啡厅的门口，看到了门口站岗的保镖，他微微皱起了眉头，说道：&quot;这两个垃圾，怎么还站在这里，我都已经离开训练营一年多了，他们居然还不知道换班吗？&quot;</span></p><blockquote><p><span>站岗站了一年，像个 12 班一样，真可怜！</span></p></blockquote><p><span>&quot;是啊，他们两个，真是越来越不懂规矩了。&quot;刘涛叹了一口气，说道。</span></p><p><span>&quot;行了，我们去吧。&quot;周航锐说道。</span></p><p><span>说完，两人便直接向着咖啡厅里面走去。</span></p><p><span>周航锐和刘涛刚走到咖啡厅，便看到一群人正聚集在咖啡厅里面，他们正指指点点，议论纷纷。</span></p><p><span>&quot;咦？他们是什么人？&quot;周航锐疑惑的看着咖啡厅内的人，问道。</span></p><p><span>&quot;呵呵，那就是东南亚国家队了。&quot;刘涛解释道，&quot;周航锐，你现在的身份和他们是平级的，你应该叫他们一声前辈吧？&quot;</span></p><blockquote><p><span>¿</span></p><p><span>注意从此之后 hhz 的性格就彻底转变了……</span></p></blockquote><p><span>&quot;嗯，前辈。&quot;周航锐恭敬地点点头，说道，&quot;前辈，你们这是在讨论些什么啊？&quot;</span></p><p><span>&quot;你们东亚国家队，不是号称是最好的信息队伍吗？可是，今年你们国家队的主教练，却是一个新来的，我想知道，这是怎么回事？&quot;一名东南亚国家队的 </span><em><span>OIer</span></em><span> 不屑的说道。</span></p><p><span>周航锐看着那名东南亚国家队的 </span><em><span>OIer</span></em><span>，笑着说道：&quot;前辈，我叫周航锐，是东亚国家队的主教练。&quot;</span></p><p><span>&quot;嗯？&quot;东南亚国家队的oier闻言，眼睛猛然睁大了，&quot;你是东亚国家队的主教练？你是不是弄错了？&quot;</span></p><p><span>周航锐摇了摇头，说道：&quot;前辈，我没有弄错，我就是东亚国家队的主教练。&quot;</span></p><p><span>东南亚国家队的oier惊呆了。</span></p><p><span>周航锐居然是东亚国家队的主教练？这怎么可能？他才二十岁啊，他才二十岁，怎么可能是东亚国家队的主教练？</span></p><blockquote><p><span>你到底几岁？（ 恼）</span></p></blockquote><p><span>&quot;前辈，你不相信吗？&quot;周航锐笑眯眯地看着oier。</span></p><p><span>oier连忙摇摇头，笑着说道：&quot;不是，不是，怎么可能？我怎么可能不相信呢，我当然相信你了，不知道你能否告诉我们，你到底是怎么当上这个东亚国家队的主教练的呢？&quot;</span></p><p><span>&quot;这个嘛，我也不瞒前辈，实际上，我也是偶然之间，得到了我们东亚国的秘密武器的资料，然后我便开始研究，然后研究着研究着，我就发现，这种特殊的武器，居然是我们东亚国的神医陈浩倡前辈亲自设计研制出来的，陈浩倡前辈在研制出来这种武器之后，他便把这种特殊的武器给了我们，让我们用来对付倭国的超级战士，我就这么简单的当上了东亚国家队的主教练。&quot;周航锐笑着说道。</span></p><blockquote><p><span>信息量过大</span></p></blockquote><p><span>周航锐说的很轻松，就好像在讲述一件无关紧要的小事一般，根本就不当一回事。</span></p><p><span>&quot;周航锐，这个消息属实吗？&quot;另外一个东南亚国家队的人，惊讶地看着周航锐，说道。</span></p><p><span>&quot;当然是属实了。&quot;周航锐笑着说道，&quot;我骗谁也不敢骗你们啊！&quot;</span></p><p><span>周航锐说着，从口袋里掏出了一张纸，递给了那个东南亚国家队的人。</span></p><p><span>那个东南亚国家队的人，接过周航锐手中的纸，低头看了看，顿时，他的脸色变得铁青起来。</span></p><p><span>&quot;你......你......你怎么会有这种武器？&quot;那个东南亚国家队的队长颤抖着声音说道。</span></p><p><span>周航锐淡淡地说道：&quot;这个你不必管，你只要知道，你们东南亚国家队不是我们的对手就足够了。&quot;</span></p><p><span>&quot;哼。&quot;那个东南亚国家队的队长冷哼了一声，然后将手中的纸撕碎了，丢进了垃圾桶里面。</span></p><p><span>&quot;前辈，我们先进去吧，我们的时间不多了，要是迟到了的话，会被处分的。&quot;周航锐笑着说道。</span></p><p><span>&quot;好。&quot;刘涛点点头，说道，&quot;咱们快点进去吧，这个世界上，有很多人喜欢吹牛，你要小心了，不要让别人钻了空子，知道吗？&quot;</span></p><blockquote><p><span>再次阴阳怪气</span></p></blockquote><p><span>&quot;放心吧，我不会的。&quot;周航锐说道，&quot;我们东亚国家队的球员，可是很有信誉的。&quot;</span></p><blockquote><p><span>（大嘘）</span></p></blockquote><p><span>说着，周航锐率先往前面走去。</span></p><p><span>周航锐和刘涛两人走进了咖啡厅，然后找了一个靠窗的座位坐了下来，两人刚刚坐定，那个东亚国家队的队长也坐了下来。</span></p><p><span>&quot;前辈，你们喝点什么？&quot;周航锐问道。</span></p><p><span>&quot;随便来一杯就行了。&quot;oier摆了摆手，说道。</span></p><p><span>&quot;好嘞，我马上去准备。&quot;周航锐说着，便站了起来，离开了咖啡厅，去为两人准备饮品。</span></p><blockquote><p><span>hhz，原来你还会做咖啡啊！</span></p><p><span>走出咖啡厅是想选个没人的地方加迷药吗（沙……致死量）</span></p></blockquote><p><span>周航锐离开之后，那个东南亚国家队的队长，便看着刘涛，说道：&quot;刘教练，听说，我们东南亚国家队的主教练，是陈浩倡的亲传弟子，你认识陈浩倡，所以，你们两人之间是不是发生了什么事情？&quot;</span></p><p><span>&quot;前辈，您是想多了，我和陈浩倡老师，没有任何关系，更谈不上有任何矛盾了，我们两人之间，只是因为一些误会，才发生了一点小冲突，我已经和他和好了。&quot;刘涛笑着说道。</span></p><p><span>听到刘涛的话之后，oier点点头，他相信刘涛的话。</span></p><p><span>&quot;那就好。&quot;oier点点头，然后便闭目养神了。</span></p><p><span>不久之后，周航锐便端来了他们的饮品，并且送来了两盘甜点。</span></p><p><span>&quot;两位请慢用，有什么需要的话再叫我。&quot;周航锐笑着说道。</span></p><p><span>&quot;谢谢。&quot;刘涛笑着点点头，道了声谢谢之后，便拿起叉子，叉起一块蛋糕，慢悠悠地吃了起来。</span></p><p><span>周航锐笑了笑，便转身，朝着咖啡厅外面走去，准备去其它的咖啡厅了。</span></p><blockquote><p><span>¿</span></p></blockquote><p><span>看到周航锐准备出去，那个oier，便对着周航锐喊住了他，说道：&quot;等一下。&quot;</span></p><p><span>&quot;嗯？&quot;周航锐停住脚步，转过身，看着oier。</span></p><p><span>&quot;周航锐，我想问一句，我们东南亚国家队的主教练，到底是不是你？&quot;oier问道。</span></p><p><span>&quot;这个嘛，你猜呢？&quot;周航锐笑着反问道。</span></p><p><span>&quot;如果是你的话，你就是第一个成为主教练的东亚国人，而且，我看你的表现，似乎也挺适合当我们东亚国家队的主教练。&quot;oier笑着说道。</span></p><p><span>&quot;呵呵，多谢前辈夸奖，我可担待不起，我只不过是运气比较好罢了。&quot;周航锐谦虚地说道。</span></p><p><span>&quot;运气也是实力的一部分，不能只看运气的。&quot;oier笑着说道，&quot;如果我猜测的没错的话，你肯定是通过陈浩倡的关系，才当上了这个主教练的吧？&quot;</span></p><p><span>&quot;呵呵，前辈真聪明。&quot;周航锐笑着点点头，说道。</span></p><blockquote><p><span>百草园</span></p></blockquote><p><span>oier微微一笑，说道：&quot;好了，我还有事，就先走了，祝你好运。&quot;</span></p><p><span>说着，oier便离开了咖啡厅，朝着门口走去，走了几步之后，又转身，对着周航锐挥了挥手，笑着说道：&quot;周航锐，我们东南亚有句古话，叫做&#39;君子坦荡荡、小人常戚戚&#39;，既然我们东南亚国家队输了你们东亚国国家队，我们自然也不会再找你们麻烦，希望我们两国的友谊，永远都这么好下去！&quot;</span></p><p><span>&quot;多谢前辈吉言。&quot;周航锐笑着回答道，&quot;希望我们国家队，能够继续强盛下去！&quot;</span></p><p><span>oier离开了咖啡厅之后，便快速地跑向自己的车子，开车扬长而去。</span></p><p><span>周航锐目送着oier离开之后，便转身，走进了咖啡厅。</span></p><p><span>&quot;嘿嘿，刘教练，您还有什么吩咐？&quot;周航锐看着刘涛笑着说道。</span></p><p><span>&quot;呵呵，你小子，还算机灵。&quot;刘涛笑着说道，&quot;我还真的有个吩咐。&quot;</span></p><p><span>&quot;您尽管吩咐，我一定办好。&quot;周航锐连忙恭敬地说道。</span></p><p><span>刘涛看了周航锐一眼，说道：&quot;你们东亚有一句话叫做，君子坦荡荡，小人常戚戚，我想，你应该懂吧？&quot;</span></p><blockquote><p><span>兄啊，这句话到底是哪里的俗语？</span></p></blockquote><p><span>周航锐愣了一下，说道：&quot;刘教练，您这话是什么意思？&quot;</span></p><p><span>&quot;什么意思？你自己心里清楚。&quot;刘涛笑着说道，&quot;你要记住了，不要去招惹你惹不起的人，否则的话，后果，不是你能承受的。&quot;</span></p><p><span>&quot;好的，谢谢您的提醒。&quot;周航锐连忙点头道。</span></p><p><span>刘涛满意地笑了笑，他相信，自己的威胁，对周航锐，还是非常有作用的，因为，周航锐是一个聪明的人，他应该知道怎么样做。</span></p><p><span>&quot;对了，周航锐，你现在也是一名主教练了，那么，我们东亚国家队里，有没有一个人，是你的竞争对手呢？&quot;刘涛笑着说道。</span></p><p><span>听到刘涛的话之后，周航锐摇了摇头，说道：&quot;刘教练，我的竞争对手不是别人，就是那个陈浩倡！我和陈浩倡的交锋，已经不止一次了，每一次，我都败在了陈浩倡的手里，我也曾经想过，我一定要赢他，但是，不知道为什么，我总感觉自己和他差距越来越大，我也曾经想过，我一定要努力练习我们东亚国家队的功夫，但是，练习功夫不是一蹴而就的，所以，我现在还是一个新人，我的实力，还远远不及陈浩倡。&quot;</span></p></div>
+</body>
+</html>
