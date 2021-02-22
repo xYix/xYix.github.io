@@ -589,7 +589,7 @@
 		'post_name' : 'lagrange-inv-bij',
 		'post_chinese_name' : '拉格朗日反演的组合意义证明',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-20',
+		'last_modi' : '2021-02-21',
 		'tag' : ['bijective-proof','combinatorics','construction','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -653,7 +653,7 @@
 		'post_name' : 'luogu-5470',
 		'post_chinese_name' : 'luoguP5470 题解 - [NOI2019]序列',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-20',
+		'last_modi' : '2021-02-21',
 		'tag' : ['network-flow',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -663,5 +663,13 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-02-21',
 		'tag' : ['combinatorics','exc-inc','generating-function','linear-algebra',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '84',
+		'post_name' : 'hhz-bigraphy',
+		'post_chinese_name' : '喝喝粥传（评注版）',
+		'type_name' : 'other',
+		'last_modi' : '2021-02-22',
+		'tag' : [],
 	};
 })(document);
