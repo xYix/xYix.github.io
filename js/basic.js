@@ -484,6 +484,7 @@
             Blog.scrolling = "no";
             Blog.onload = function () {
                 Blog.style.height = Blog.contentDocument.body.scrollHeight;
+                setTimeout('Blog.style.height = Blog.contentDocument.body.scrollHeight;', 2000);
             }
         }
         data.appendChild(Blog);
