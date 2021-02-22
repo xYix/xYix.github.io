@@ -678,6 +678,6 @@
 		'post_chinese_name' : 'luoguP6774 题解 - 时瑇的眼泪',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-22',
-		'tag' : ['dara-structure','sqrt-tech',],
+		'tag' : ['data-structure','sqrt-tech',],
 	};
 })(document);
