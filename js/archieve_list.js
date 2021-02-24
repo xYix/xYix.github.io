@@ -669,7 +669,7 @@
 		'post_name' : 'hhz-bigraphy',
 		'post_chinese_name' : '喝喝粥传（评注版）',
 		'type_name' : 'other',
-		'last_modi' : '2021-02-22',
+		'last_modi' : '2021-02-24',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -677,7 +677,7 @@
 		'post_name' : 'luogu-6774',
 		'post_chinese_name' : 'luoguP6774 题解 - 时瑇的眼泪',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-22',
+		'last_modi' : '2021-02-23',
 		'tag' : ['data-structure','sqrt-tech',],
 	};
 })(document);
