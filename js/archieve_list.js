@@ -680,4 +680,12 @@
 		'last_modi' : '2021-02-24',
 		'tag' : ['data-structure','sqrt-tech',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '86',
+		'post_name' : 'luogu-4500-ex',
+		'post_chinese_name' : 'ZJOI2018 树 —— 没有群论相关',
+		'type_name' : 'solution',
+		'last_modi' : '2021-02-25',
+		'tag' : ['combinatorics','exc-inc','generating-function',],
+	};
 })(document);
