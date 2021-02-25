@@ -4,6 +4,8 @@ title: ZJOI2018 树 —— 没有群论相关
 
 这道刻在 DNA 里的好题想必大家都很熟悉，这里就不写题意了。
 
+# 1. 起手式
+
 - 记 $\mathcal T$ 是所有无根树的集合。$t$ 一般是无根树的记号。$|t|$ 表示 $t$ 的节点数。
 
 - 记 $w(t)$ 为给 $t$ 分配 $k$ 次标号的方案数。不难看到
@@ -11,8 +13,6 @@ title: ZJOI2018 树 —— 没有群论相关
 - $$
   w((t_1,t_2))=w(t_1)w(t_2){|t_1|+|t_2|\choose |t_1|}^k
   $$
-
-- 
 
 - 那么不妨搞一个神奇的 GF，
 
@@ -30,6 +30,8 @@ $$
 $$
 
 > 如果你不懂 Symbolic Method 可以看[这个](https://xyix.gitee.io/posts/?page=1&postname=combinatorics)作一个简单的入门。
+
+# 2. 找出组合构造对应的代数运算
 
 $^{\square}$ 的逆构造所对应的“积分”自然很简单，它的意义要符合“加上根”，此题根的标号一定最小故不影响 $w$，于是它就是 $x^n\rightarrow \dfrac{x^{n+1}}{(n+1)^k}$。
 
@@ -53,6 +55,8 @@ $$
 $$
 我们分配了 $k$ 次标号，自然就要除以 $(i!)^k$。
 
+# 3. 处理 xexp 的失败尝试
+
 记 $\sum_{i=0}^{\infty}\dfrac{x^i}{(i!)^k}$ 为 $\operatorname{xexp}x$。所谓“$\text{MSET}$”就是
 $$
 \prod_{a\in\mathcal A}\operatorname{xexp}\color{orange}T(\{a\})
@@ -68,7 +72,7 @@ $$
 $$
 如果 $\ln\circ\operatorname{xexp}$ 是个线性映射，那就很舒服了，直接把 $\Sigma$ 换进去变成 $T(\mathcal A)$。但事实不是如此。但的确有办法使得 $\ln\circ\operatorname{xexp}$ 是线性映射。
 
-----
+# 4. 重新开始
 
 下面这一步是最为关键的一步，我们把 $T(\mathcal A)$ 改成二元生成函数
 $$
@@ -79,6 +83,8 @@ $$
 > 其中要注意 $\color{red}w^i(a)$ 其实指的是 $k=i$ 时的分配标号方案数，不过它也的确显然就是 $w_1^i(a)$，所以我们就忽略 $_1$ 算了。
 
 既然重新编了生成函数，自然也要重新处理构造。
+
+# 5. 找出组合构造对应的代数运算
 
 可见笛卡尔积现在对应“$x$ 上的卷积，$y$ 上的点积”。
 
@@ -95,11 +101,15 @@ $$
 $$
 \text{xexp}:{\color{orange}T(\{a\};x,y)=\dfrac{x^{|a|}}{1-w(a)y/(|a|!)}}\mapsto\sum_{i=0}^{\infty}y^i\color{blue}\sum_{j=0}^{\infty}\dfrac{w^{ij}(a)x^{|a|j}}{(|a|!)^{ij}(j!)^i}
 $$
-注意整个 $\text{xexp}$ 全是我们按想要的组合意义编出来的。上面只是知道了 $\text{xexp}$ 的一系列点值，剩下的点值我们全都可以自由发挥。
+注意整个 $\text{xexp}$ 完全是我们按想要的组合意义编出来的。上面只是知道了 $\text{xexp}$ 的一系列点值，剩下的点值我们全都可以自由发挥。
 
 之前不能自由发挥的原因也很简单，就是因为给的点值太多了。
 
 > 具体一点来说，我们新编的 $T$ 的自由之处在于 $\sum T(\{a\})$ 不那么容易等于某个 $T(\{a'\})$。这是因为多了一维 $y$ 的影响。
+
+# 6. xexp 具体该编成什么样
+
+## 6.1. 对于单个元素
 
 现在我们强制要求 $\ln\circ\operatorname{xexp}$ 是线性映射。自然地我们会问，$\ln\circ\operatorname{xexp}$ 是多少？
 $$
@@ -114,6 +124,8 @@ $$
 \ln{\color{blue}\sum_{j=0}^{\infty}\dfrac{x^j}{(j!)^k}}=\sum_{j=0}^{\infty}f_jx^j
 $$
 那么之前的式子就是将 $x=w^kx$ 代入其中。
+
+## 6.2. 对于整个组合类
 
 然而当我们把目光转回 $T(\mathcal A)$ 时，我们注意到有一个困难是似乎要把 $T(\mathcal A)$ 解析成 $\sum\tfrac{x^{*}}{1-wy}$ 的形式，我们接下来说明这是不必要的。
 
@@ -132,7 +144,7 @@ $$
 [y^k]\ln\circ\operatorname{xexp}{\color{orange}T}=\sum_{j=0}^{\infty}f_j[y^{jk}]\color{green}T(\mathcal A;x^j,y)
 $$
 
-----
+# 7. 结束
 
 最后我们回到原式。
 $$
