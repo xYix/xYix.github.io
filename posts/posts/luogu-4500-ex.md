@@ -151,6 +151,4 @@ $$
 [y^k]T=\int\text{exp}\sum_{j=0}^{\infty}f_j[y^{jk}]T(\mathcal A;x^j,y)
 $$
 
-其中 $D$ 表示求导。
-
 这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://www.luogu.com.cn/blog/zyxxs/solution-p4500)。
