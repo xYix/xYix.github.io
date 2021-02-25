@@ -10,15 +10,15 @@ title: ZJOI2018 树 —— 没有群论相关
 
 - 记 $w(t)$ 为给 $t$ 分配 $k$ 次标号的方案数。不难看到
 
-- $$
-  w((t_1,t_2))=w(t_1)w(t_2){|t_1|+|t_2|\choose |t_1|}^k
-  $$
+$$
+w((t_1,t_2))=w(t_1)w(t_2){|t_1|+|t_2|\choose |t_1|}^k
+$$
 
 - 那么不妨搞一个神奇的 GF，
 
-- $$
-  \color{orange}T(\mathcal A;x)=\sum_{a\in\mathcal A}\dfrac{w(a)x^{|a|}}{|a|^k}
-  $$
+$$
+\color{orange}T(\mathcal A;x)=\sum_{a\in\mathcal A}\dfrac{w(a)x^{|a|}}{|a|^k}
+$$
 
 - 有时为了简略我们会简写为 $T(\mathcal A)$。
 
