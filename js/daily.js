@@ -257,13 +257,34 @@
             'Misfortuna / There is no escape, my dear',
             'The world undergoes photosynthesia / Transform endless anger to ecstasia',
             //children of the city
-            'the children of the city sees only the neon stars',
+            'going through the shelves picking out my prewritten persona',
+            'the children of the city see only the neon stars',
             'don\'t ask me why / I desperately wish to be included in the city\'s night',
             'don\'t ask me why / I desperately wish to be noticed by the city\'s eye',
             'Do not go home until you finish reading the value of e',
+            //bathtub mermaid
+            'If I\'m covered in scars will you look at me?',
+            'and then I gave you my eyes / to see all the colors',
+            'and then I gave you my ears / to hear all the sirens',
+            'and then I gave you my heart / to fill the emptiness in your chest',
+            'and then I gave you my brain / so that you can learn to love',
+            'Twist my legs to one  / and mind to none',
+            //extension of you
+            'My ribs open up / made room for a beating heat',
+            'My head open up / made room for deeper thoughts',
+            'I\'ve became what I thought was human',
+            'Does it feel good to love / to hand out your all / to hand out your all',
+            'Does it feel good to hate / to shelter oneself / to shelter oneself',
+            'Does it feel good to live / to treasure the now / to treasure the now',
+            'Does it feel good to die / to live your next life / to live your next life',
             //sustain++
             'If abstraction is the definition of beauty / Are those of us chasing after clarity'+ 
             ' / a representation of ugly?',
+            //summoning 101
+            'Take my paws, take my paws, Show me wonders of your world',
+            'The autumn leaves, the summer breeze, Your shiny hair like mahogany',
+            'Take my paw, take my paw, You\'re the wonder of my world',
+            'The wrinkled face, the silver hair, Your crystal eyes stay a beautiful pair',
         //游戏 / 动漫 / 基金会名句
         'Fate Chosen',
         'Reroll Your Destiny',
