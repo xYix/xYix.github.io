@@ -637,7 +637,7 @@
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '更炫酷的反演魔术',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-18',
+		'last_modi' : '2021-02-27',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -685,7 +685,7 @@
 		'post_name' : 'luogu-4500-ex',
 		'post_chinese_name' : 'ZJOI2018 树 —— 没有群论相关',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-25',
+		'last_modi' : '2021-02-27',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
 	};
 })(document);

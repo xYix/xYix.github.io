@@ -166,7 +166,7 @@ $$
 \boxed{check(x)=\sum_{x'\ge x}c(x')}
 $$
 $$
-\boxed{check(y)=\sum_{y'\ge y}c(y')}
+\boxed{check(y)=\sum_{y'\ge y}d(y')}
 $$
 - 其偏序关系定义为：$(x_1,y_1)\le_{X\times Y}(x_2,y_2)$ 当且仅当 $x_1\le_Xx_2\land y_1\le_Yy_2$。
 
@@ -175,7 +175,7 @@ $$
 - 显然，其核心为
 
 - $$
-  \boxed{check((x,y))=\sum_{x'\ge x,y'\ge y}c(x')c(y')}
+  \boxed{check((x,y))=\sum_{x'\ge x,y'\ge y}c(x')d(y')}
 $$
 
 于是就直接得到了原式的正确性。
