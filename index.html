@@ -10,6 +10,14 @@
 </head>
 
 <div class='bodybody'>
+    <script>
+        if (win.ThemeColor === undefined || win.ThemeColor === 'Z') {
+            win.querySelector('body').style='--main-color: #36c48e; --dark-main-color: #1a5a40';
+        }
+        if (win.ThemeColor === 'Y') {
+            win.querySelector('body').style='--main-color: #ea6965; --dark-main-color: #753432';
+        }
+    </script>
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
         <div class="content-block" id='post'>
