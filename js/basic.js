@@ -24,9 +24,6 @@
             ret[ret.length] = t;
         return ret;
     }
-    win.putError = function () {
-        win.location.replace('/404.html');
-    }
     //生成后继链接
     win.NextSearch = function (PrevSearch, deltaSearch) {
         let tmpSearch = {};
@@ -100,9 +97,16 @@
             Sortby: win.Sortby,
             Page: win.Page,
             Funval: win.Funval,
+            ThemeColor: win.ThemeColor,
         };
     }
     win.InitAnalyze();
+    win.putError = function () {
+        let notfoundpage = '/404.html';
+        if (win.ThemeColor !== undefined)
+        notfoundpage = notfoundpage + '?themecolor=' + win.ThemeColor;
+        win.location.replace(notfoundpage);
+    }
     win.AddText = function (tdata, ttext, eletag) {
         let Ttext = win.createElement(eletag);
         Ttext.textContent = ttext;
