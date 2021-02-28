@@ -1,7 +1,7 @@
 (function (win) {
     'use strict',
         // 格式： xyix.gitee.io/.../.../?tags=...+...&type=...&sortby=&page=
-        win.isError = 0;
+    win.isError = 0;
     win.post_per_page = 30;
     win.AnalyzeSearch = function (s) {
         let ret = {}, t, r;
@@ -44,6 +44,7 @@
         if (deltaSearch.Sortby !== undefined) tmpSearch.Sortby = deltaSearch.Sortby;
         if (deltaSearch.Page !== undefined) tmpSearch.Page = deltaSearch.Page;
         if (deltaSearch.Funval !== undefined) tmpSearch.Funval = deltaSearch.Funval;
+        if (deltaSearch.ThemeColor !== undefined) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
         return tmpSearch;
     }
     win.ezylanASearch = function (Search) {
@@ -72,6 +73,10 @@
             if (flg === 1) flg = 0; else ret += '&';
             ret += 'funval=' + Search.Funval;
         }
+        if (Search.ThemeColor !== undefined) {
+            if (flg === 1) flg = 0; else ret += '&';
+            ret += 'themecolor=' + Search.ThemeColor;
+        }
         return ret;
     }
     win.InitAnalyze = function () {
@@ -83,6 +88,7 @@
         if (win.Search['page'] === undefined) win.Page = 0;
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
+        win.ThemeColor = win.Search['themecolor'];
         win.Postname = win.Search['postname'];
         if (win.Search['postid'] != undefined) {
             win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
