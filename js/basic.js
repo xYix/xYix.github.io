@@ -89,6 +89,12 @@
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
         win.ThemeColor = win.Search['themecolor'];
+        if (win.ThemeColor === undefined || win.ThemeColor === 'Z') {
+            win.querySelector('body').style='--main-color: #36c48e; --dark-main-color: #1a5a40';
+        }
+        if (win.ThemeColor === 'Y') {
+            win.querySelector('body').style='--main-color: #ea6965; --dark-main-color: #753432';
+        }
         win.Postname = win.Search['postname'];
         if (win.Search['postid'] != undefined) {
             win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
