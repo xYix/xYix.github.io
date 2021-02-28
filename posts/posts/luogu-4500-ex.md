@@ -77,15 +77,11 @@ $$
 $$
 \ln\circ\operatorname{xexp}{\color{orange}T(\{a\})}=\ln \color{blue}\sum_{j=0}^{\infty}\dfrac{w^{jk}(a)x^{|a|j}}{(|a|!)^{jk}(j!)^k}
 $$
-不妨令 $|a|=1$，则
-$$
-\ln\circ\operatorname{xexp}{\color{orange}\dfrac{x}{1-wy}}=\ln\color{blue}\sum_{j=0}^{\infty}\dfrac{(w^kx)^j}{(j!)^k}
-$$
-可以预处理。下面不妨记
+事实上可以预处理。下面不妨记
 $$
 \ln{\color{blue}\sum_{j=0}^{\infty}\dfrac{x^j}{(j!)^k}}=\sum_{j=0}^{\infty}f_jx^j
 $$
-那么之前的式子就是将 $x=w^kx$ 代入其中。
+那么之前的式子就是将 $x=w^kx^{|a|}$ 代入其中。
 
 ## 3.2. 对于整个组合类
 
@@ -106,7 +102,7 @@ $$
 $$
 说人话就是保存 $k$ 为任意值时的答案。$y$ 的次数就是 $k$ 的值。
 
-> 其中要注意 $\color{red}w^i(a)$ 其实指的是 $k=i$ 时的分配标号方案数，不过它也的确显然就是 $w_1^i(a)$，所以我们就忽略 $_1$ 算了。
+> 其中要注意 $\color{red}w^i(a)$ 其实指的是 $k=i$ 时的分配标号方案数，不过它也的确显然就是 $k=1$ 时的 $i$ 次方，所以我们就这么记算了。
 
 既然重新编了生成函数，自然也要重新处理构造。
 
