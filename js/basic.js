@@ -157,11 +157,16 @@
         write_link('一键清除 tag', location.pathname);
         let changecolor = location.pathname;
         if (win.ThemeColor === undefined || win.ThemeColor === 'Z')
-            changecolor = changecolor + win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'X'}));
+            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'X'}));
         if (win.ThemeColor === 'Y')
-            changecolor = changecolor + win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Z'}));
+            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Z'}));
         if (win.ThemeColor === 'X')
-            changecolor = changecolor + win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Y'}));
+            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Y'}));
+        if (win.Postname !== undefined) {
+            if (changecolor[changecolor.length - 1] === '/')
+                changecolor += '?postname=' + win.Postname;
+            else changecolor += '&postname=' + win.Postname;
+        }
         write_link('更换主题颜色', changecolor);
         SideBarCon.appendChild(win.createElement('p'));
         write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
