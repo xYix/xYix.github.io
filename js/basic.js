@@ -155,7 +155,14 @@
         write_link('文章一览', '/archieve/' + win.ezylanASearch(win.TrueSearch));
         write_link('标签一览', '/tags/' + win.ezylanASearch(win.TrueSearch));
         write_link('一键清除 tag', location.pathname);
-        // write_link('×√OI', '/xjoi/' + win.ezylanASearch(win.TrueSearch));
+        let changecolor = location.pathname;
+        if (win.ThemeColor === undefined || win.ThemeColor === 'Z')
+            changecolor = changecolor + win.ezylanASearch(win.NextSeach(win.TrueSearch,{ThemeColor: 'X'}));
+        if (win.ThemeColor === 'Y')
+            changecolor = changecolor + win.ezylanASearch(win.NextSeach(win.TrueSearch,{ThemeColor: 'Z'}));
+        if (win.ThemeColor === 'X')
+            changecolor = changecolor + win.ezylanASearch(win.NextSeach(win.TrueSearch,{ThemeColor: 'Y'}));
+        write_link('更换主题颜色', changecolor);
         SideBarCon.appendChild(win.createElement('p'));
         write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
         write_link('luogu 上的x义x', 'https://www.luogu.com.cn/blog/zyxxs/');
