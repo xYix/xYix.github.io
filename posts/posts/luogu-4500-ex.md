@@ -17,7 +17,7 @@ $$
 - 那么不妨搞一个神奇的 GF，
 
 $$
-\color{orange}T(\mathcal A;x)=\sum_{a\in\mathcal A}\dfrac{w(a)x^{|a|}}{|a|^k}
+\color{orange}T(\mathcal A;x)=\sum_{a\in\mathcal A}\dfrac{w(a)x^{|a|}}{(|a|!)^k}
 $$
 
 - 有时为了简略我们会简写为 $T(\mathcal A)$。
@@ -144,4 +144,4 @@ $$
 \boxed{[y^k]T(\mathcal T)=\int\text{exp}\sum_{j=0}^{\infty}f_j[y^{jk}]T(\mathcal T;x^j,y)}
 $$
 
-这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://www.luogu.com.cn/blog/zyxxs/solution-p4500)。
+这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://xyix.gitee.io/posts/?page=0&postname=luogu-4500)。

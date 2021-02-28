@@ -284,13 +284,64 @@
             'Does it feel good to live / to treasure the now / to treasure the now',
             'Does it feel good to die / to live your next life / to live your next life',
             //sustain++
-            'If abstraction is the definition of beauty / Are those of us chasing after clarity'+ 
-            ' / a representation of ugly?',
+            'If abstraction is the definition of beauty / Are those of us chasing after clarity / a representation of ugly?',
             //summoning 101
             'Take my paws, take my paws, Show me wonders of your world',
             'The autumn leaves, the summer breeze, Your shiny hair like mahogany',
             'Take my paw, take my paw, You\'re the wonder of my world',
             'The wrinkled face, the silver hair, Your crystal eyes stay a beautiful pair',
+            //9.8
+            'My darling / Here I come, I yell / And take a leap to Hell',
+            //Painful Death for the Lactose Intolerant
+            'Perfect life for you and I / People who\'s trying to get by / Painful death for the lactose intolerant / For you, there is no lament!',
+            'Lovely life for you and I / People who\'s fighting \'til midnight / Painful death for the lactose intolerant / Begin the revolution!',
+            'Endless life for you and I / People who stick to each other\'s sides / Painful death for the lactose intolerant / Struggle \'til your last moment!',
+            //RTRT
+            'Well, I\'ll make you something else / Don\'t need to show me how / Since I\'m the mad scientist, proclaimed by myself',
+            'I\'ll stitch you back up / Don\'t need to show me how / Since I\'m the mad scientist, proclaimed by myself',
+            //Celebrite
+            'Sparkling water connected to the sky / And your hair goes free / Dancing in the sea breeze / Your eyes are sapphires',
+            'Sinking spaceship falls out into the sky / And your life goes free / Dancing in vacuity / Your tears are rubies',
+            '(Bursting in the sky) Shimmering twilight (Galaxies ignite) Stars shall never rise',
+            //world.execute(me)
+            'Switch on the power line / Remember to put on PROTECTION',
+            'Lay down your pieces / And let\'s begin OBJECT CREATION',
+            'Fill in my data, parameters INITIALISATION',
+            'Setup our new world / And let\'s begin the SIMULATION',
+
+            'If I\'m a set of points then I will give you my Dimension',
+            'If I\'m a circle then I will give you my Circumference',
+            'If I\'m a sine wave then you can sit on all my Tangents',
+            'If I approach infinity then you can be my LIMITATIONS',
+
+            'Switch my current / To AC to DC / And then blind my vision / So dizzy, so dizzy',
+            'Oh, we can travel / To A.D to B.C / And we can unite / So deeply, so deeply',
+            
+            'If I can, If I can give you all the SIMULATIONS / Then I can, Then I can be your only SATISFACTION',
+            'If I can make you happy I will run the EXECUTION / Though we are trapped in this strange strange SIMULATION',
+            
+            'If I\'m an eggplant Then I will give you my NUTRIENTS',
+            'If I\'m a tomato then I\'ll give you ANTIOXIDANTS',
+            'If I\'m a tabby cat then I will purr for your ENJOYMENT',
+            'If I\'m the only god then you\'re the proof of my EXISTENCE',
+
+            'Switch my gender / To F to M / And then do whatever / From AM to PM',
+            'Oh switch my role / To S to M / So we can enter / The trance, the trance',
+
+            'If I can, If I can feel your VIBRATIONS / Then I can, Then I can finally be COMPLETION',
+            'Though you have left, You have left, You have left , You have left, You have left',
+            'You have left me in ISOLATION',
+            'If I can, If I can erase all the pointless FRAGMENTS / Then maybe, Then maybe you won\'t leave me so DISHEARTENED',
+            'Challenging your god / You have made some / ILLEGAL ARGUMENTS',
+
+            'If I can If I can give them all the EXECUTION / Then I can Then I can be your only EXECUTION',
+            'If I can have you back I will run the EXECUTION / Though we are trapped We are trapped ah',
+
+            'I\'ve studied I\'ve studied how to properly LOVE',
+            'question me question me I can answer all LOVE',
+            'I knew the algebraic expression of LOVE',
+            'Though you\'re free, I am trapped trapped in LOVE',
+            'EXECUTION.',
         //游戏 / 动漫 / 基金会名句
         'Fate Chosen',
         'Reroll Your Destiny',
