@@ -101,12 +101,12 @@
         };
     }
     win.InitAnalyze();
-    win.putError = function () {
-        let notfoundpage = '/404.html';
-        if (win.ThemeColor !== undefined)
-        notfoundpage = notfoundpage + '?themecolor=' + win.ThemeColor;
-        win.location.replace(notfoundpage);
-    }
+    // win.putError = function () {
+    //     let notfoundpage = '/404.html';
+    //     if (win.ThemeColor !== undefined)
+    //     notfoundpage = notfoundpage + '?themecolor=' + win.ThemeColor;
+    //     win.location.replace(notfoundpage);
+    // }
     win.AddText = function (tdata, ttext, eletag) {
         let Ttext = win.createElement(eletag);
         Ttext.textContent = ttext;
