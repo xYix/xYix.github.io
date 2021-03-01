@@ -685,7 +685,15 @@
 		'post_name' : 'luogu-4500-ex',
 		'post_chinese_name' : 'ZJOI2018 树 —— 没有群论相关',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-27',
+		'last_modi' : '2021-02-28',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '87',
+		'post_name' : 'cf-1270-h',
+		'post_chinese_name' : 'CF1270H 题解 - Number of Components',
+		'type_name' : 'solution',
+		'last_modi' : '2021-03-01',
+		'tag' : [],
 	};
 })(document);

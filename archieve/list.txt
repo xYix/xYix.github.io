@@ -516,3 +516,7 @@ solution
 exc-inc
 combinatorics
 generating-function
+cf-1270-h
+CF1270H 题解 - Number of Components
+solution
+0
