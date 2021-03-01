@@ -123,14 +123,14 @@
         let SideBarTitleContent1 = win.createElement('h2');
         SideBarTitleContent1.textContent = '基金会超常组合数学部';
         SideBarTitle.appendChild(SideBarTitleContent1);
-        // if(win.Pathname[0] !== 'xjoi') {
-            let SCPblock = win.createElement('center');
-            SCPblock.style = 'width: 70%';
-            win.AddText(SCPblock, 'Surprising', 'p');
-            win.AddText(SCPblock, 'Combinatorial', 'p');
-            win.AddText(SCPblock, 'Proof', 'p');
-            SideBarTitle.appendChild(SCPblock);
-        // }
+        
+        let SCPblock = win.createElement('center');
+        SCPblock.style = 'width: 70%';
+        win.AddText(SCPblock, 'Surprising', 'p');
+        win.AddText(SCPblock, 'Combinatorial', 'p');
+        win.AddText(SCPblock, 'Proof', 'p');
+        SideBarTitle.appendChild(SCPblock);
+        
         let SideBarTitleContent2 = win.createElement('p');
         for (let i = 0; i < title.length; i = i + 1) {
             if (i == 0) SideBarTitleContent2.appendChild(win.createTextNode('您现在在：' + title[i]));
@@ -185,9 +185,7 @@
     }
     // Title
     win.Title = [];
-    if (win.Pathname.length === 0)
-        if (win.isError === 0) win.Title[0] = '首页';
-        else win.Title[0] = '未知页面';
+    if (win.Pathname.length === 0) win.Title[0] = '首页';
     else {
         if (win.Pathname[0] === 'archieve') win.Title[0] = '文章一览';
         if (win.Pathname[0] === 'posts') {
