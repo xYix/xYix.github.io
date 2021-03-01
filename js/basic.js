@@ -14,7 +14,6 @@
         let ret = [], t;
         for (t of (s.startsWith('/') ? s.substr(1) : s).split('/'))
             if (t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog' && t !== '') ret[ret.length] = t;
-            else if (t === '404.html') win.isError = 1;
         return ret;
     }
     win.AnalyzeTags = function (s) {
@@ -185,7 +184,8 @@
     }
     // Title
     win.Title = [];
-    if (win.Pathname.length === 0) win.Title[0] = '首页';
+    if (win.isError) win.Title = '……我也不知道您在哪'
+    else if (win.Pathname.length === 0) win.Title[0] = '首页';
     else {
         if (win.Pathname[0] === 'archieve') win.Title[0] = '文章一览';
         if (win.Pathname[0] === 'posts') {
@@ -206,7 +206,7 @@
             if (win.Tags.length !== 0) {
                 let nowlen = win.Title.length;
                 win.Title[nowlen] = '具有标签：';
-                for (let i = 0; i < win.Tags.length; i = i + 1) {
+                for (let i = 0; i < win.Tags.length; i += 1) {
                     if (win.tags_list[win.Tags[i]] !== undefined)
                         win.Title[nowlen] += win.tags_list[win.Tags[i]];
                     else win.Title[nowlen] += '不明标签';
@@ -228,29 +228,30 @@
             TTtext.appendChild(Ttext);
             data.appendChild(TTtext);
         }
-        if (win.Pathname.length === 0)
-            if (win.isError === 0) {
-                AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
-                AddText('高度机密', 'p');
-                AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
-                AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+        if (win.isError === 1) {
+            AddText('您似乎跃迁到了银河系之外', 'h1');
+        }
+        else if (win.Pathname.length === 0) {
+            AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
+            AddText('高度机密', 'p');
+            AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
+            AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+            data.appendChild(win.createElement('br'));
+            AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
+            AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
+            AddText('你已经被警告过了。', 'p');
+            for (let i = 0; i < 50; i += 1)
                 data.appendChild(win.createElement('br'));
-                AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
-                AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
-                AddText('你已经被警告过了。', 'p');
-                for (let i = 0; i < 50; i = i + 1)
-                    data.appendChild(win.createElement('br'));
-                let picblock = win.createElement('div');
-                picblock.style = 'margin: auto; text-align: center';
-                    let mypic = win.createElement('img');
-                    mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
-                    mypic.alt = '致命模因';
-                picblock.appendChild(mypic);
-                data.appendChild(picblock);
-                for (let i = 0; i < 5; i = i + 1)
-                    data.appendChild(win.createElement('br'));
-            }
-            else AddText('您似乎跃迁到了银河系之外', 'h1');
+            let picblock = win.createElement('div');
+            picblock.style = 'margin: auto; text-align: center';
+                let mypic = win.createElement('img');
+                mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
+                mypic.alt = '致命模因';
+            picblock.appendChild(mypic);
+            data.appendChild(picblock);
+            for (let i = 0; i < 5; i += 1)
+                data.appendChild(win.createElement('br'));
+        }
         else {
             if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
             if (win.Pathname[0] === 'tags') AddText('标签一览', 'h1');
@@ -368,7 +369,7 @@
         //标签
         let Postinfo_tags = win.createElement('td');
         Postinfo_tags.style = win.archieve_tags_style;
-        for (let i = 0; i < postinfo.tag.length; i = i + 1) {
+        for (let i = 0; i < postinfo.tag.length; i += 1) {
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
                 win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
@@ -400,7 +401,7 @@
         if (win.Type !== undefined) {
             if (postinfo.type_name !== win.Type) return 0;
         }
-        for (let i = 0; i < win.Tags.length; i = i + 1) {
+        for (let i = 0; i < win.Tags.length; i += 1) {
             if (postinfo.tag.indexOf(win.Tags[i]) === -1) return 0;
         }
         post_count.value = post_count.value + 1;
@@ -433,7 +434,7 @@
 
         ArchieveTable.appendChild(ArchieveTitle);
 
-        for (let i = 0; i < win.archieve_list.length; i = i + 1)
+        for (let i = 0; i < win.archieve_list.length; i += 1)
             if (win.isLegalPost(win.archieve_list[i], win.post_count)) {
                 win.WritePostinfo(ArchieveTable, win.archieve_list[i]);
             }
@@ -525,7 +526,7 @@
         Titleh2.appendChild(win.createTextNode('英文名'));
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
-        for (var i = 0; i < postinfo.tag.length; i = i + 1) {
+        for (var i = 0; i < postinfo.tag.length; i += 1) {
             var Tag = postinfo.tag[i];
             let TagsRow = win.createElement('tr');
             let TagsRow1 = win.createElement('th');
