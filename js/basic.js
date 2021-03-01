@@ -184,8 +184,7 @@
     }
     // Title
     win.Title = [];
-    if (win.isError) win.Title = '……我也不知道您在哪'
-    else if (win.Pathname.length === 0) win.Title[0] = '首页';
+    if (win.Pathname.length === 0) win.Title[0] = '首页';
     else {
         if (win.Pathname[0] === 'archieve') win.Title[0] = '文章一览';
         if (win.Pathname[0] === 'posts') {
