@@ -89,6 +89,7 @@
             localStorage.setItem("themecolor", win.ThemeColor);
         }
         else {
+            console.log(localStorage.getItem('themecolor'));
             if (localStorage.getItem('themecolor') === null)
                 localStorage.setItem("themecolor", 'Z');
             win.ThemeColor = localStorage.getItem('themecolor');
