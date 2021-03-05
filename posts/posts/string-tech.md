@@ -443,11 +443,45 @@ $\blacksquare$
   - 若 $a<b$ 且 $a\not\sqsubseteq b$，则记 $a\triangleleft b$。
 - $ab$ 表示拼接字符串 $a$ 和 $b$。
 - - $a^n$ 表示 $a$ 重复 $n$ 次。
-- $\text{pref}(a)$
+- $|s|$ 表示 $s$ 的长度，$s\left[l:r\right]$ 表示一个子串，下标从 $0$ 开始。
 
 ## Lyndon 科技 / Lyndon 分解
 
-首先我们来定义 **Lyndon Word**。
+> **定义 1.**
+>
+> 一个非空字符串 $w$ 被称为一个 **Lyndon Word**，当且仅当 $w$ 小于任何一个它的真后缀。
+
+下面记所有 Lyndon Word 的集合为 $\mathfrak L$。
+
+有一个显然的引理：
+
+> **引理 1.**
+>
+> $u,v\in\mathfrak L,u<v\Longrightarrow uv\in\mathfrak L$。
+
+记把一个串 $s$ 划分为数个 Lyndon Word 的方案为 $\text{CFL}(s)$。$\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给出了求解 $\text{CFL}(s)$ 的算法。
+
+> **引理 2.**
+>
+> 令 $w=u^ku'$，其中 $u\in\mathfrak L$，$u'$ 是 $u$ 的一个可空但不为 $u$ 的前缀。现在考虑一个新串 $dw=wa$，其中 $a$ 是单个字符。
+>
+> - 若 $a>u\left[|u'|+1\right]$，则 $wa\in\mathfrak L$。
+> - 若 $a<u\left[|u'|+1\right]$，则 $u$ 是任意 $wa****\ldots$ 的最长 Lyndon Word 前缀。换言之，在 $\text{CFL}(s)$ 中置入 $k$ 个 $u$，对于 $u'a$ 直接暴力退回再求解。
+> - 否则相当于延长了 $u'$。
+
+很直观，亦不给出证明。
 
 ## Lyndon 科技 / Runs
+
+> **定义 2.**
+>
+> 一个字符串 $s$ 有**周期** $p$，当且仅当总有 $s\left[i\right]=s\left[i+p\right]$。注意不必有 $p\operatorname{|}|s|$。
+>
+> 一个二元组 $(l,r)$ 被称为 $s$ 的一个 **run**，当且仅当：
+>
+> - $s\left[l:r\right]$ 的最小周期 $p$ 满足 $2p\le r-l+1$。
+> - 如果 $l\neq 0$，还需满足 $s\left[l-1:r\right]$ 不满足第一条。
+> - 如果 $r\neq |s|-1$，还需满足 $s\left[l:r+1\right]$ 不满足第一条。
+>
+> 某 run 的**指数**为 $(r-l+1)/p$，它自然可以不是整数。
 

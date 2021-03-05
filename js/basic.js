@@ -85,8 +85,14 @@
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
         win.ThemeColor = win.Search['themecolor'];
+        if (win.ThemeColor !== undefined) {
+            localStorage.setItem("themecolor", win.ThemeColor);
+        }
+        else {
+            win.ThemeColor = localStorage.getItem('themecolor');
+        }
         win.Postname = win.Search['postname'];
-        if (win.Search['postid'] != undefined) {
+        if (win.Search['postid'] !== undefined) {
             win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
             win.location.replace('/posts/?page=0&postname=' + win.Postname);
         }
