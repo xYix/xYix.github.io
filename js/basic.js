@@ -162,11 +162,13 @@
         write_link('一键清除 tag', location.pathname);
         let changecolor = location.pathname;
         if (win.ThemeColor === undefined || win.ThemeColor === 'Z')
-            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'X'}));
+            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'N'}));
         if (win.ThemeColor === 'Y')
             changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Z'}));
         if (win.ThemeColor === 'X')
             changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Y'}));
+        if (win.ThemeColor === 'N')
+            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'X'}));
         if (win.Postname !== undefined) {
             if (changecolor[changecolor.length - 1] === '/')
                 changecolor += '?postname=' + win.Postname;
