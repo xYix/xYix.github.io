@@ -10,17 +10,7 @@
 </head>
 
 <div class='bodybody'>
-    <script>
-        if (document.ThemeColor === undefined || document.ThemeColor === 'Z') {
-            document.querySelector('body').style='--main-color: #36c48e; --dark-main-color: #1a5a40';
-        }
-        if (document.ThemeColor === 'Y') {
-            document.querySelector('body').style='--main-color: #ea6965; --dark-main-color: #753432';
-        }
-        if (document.ThemeColor === 'X') {
-            document.querySelector('body').style='--main-color: #3dbeee; --dark-main-color: #1e5f77';
-        }
-    </script>
+    <script src='/js/load_theme.js'></script>
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
         <div class="content-block" id='post'>
