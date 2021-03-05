@@ -89,6 +89,8 @@
             localStorage.setItem("themecolor", win.ThemeColor);
         }
         else {
+            if (localStorage.getItem('themecolor') === null)
+                localStorage.setItem("themecolor", 'Z');
             win.ThemeColor = localStorage.getItem('themecolor');
         }
         win.Postname = win.Search['postname'];
