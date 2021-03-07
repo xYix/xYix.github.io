@@ -436,7 +436,6 @@ $\blacksquare$
 
 - $\epsilon$ 表示空串。
 - 记字符集为 $\Sigma$，所有由 $\Sigma$ 拼成的字符串为 $\Sigma^*$，再记 $\Sigma^+=\Sigma^*/\{\epsilon\}$。
-
 - 若字符串 $a$ 的字典序小于 $b$ 则记 $a<b$。
 - 若 $a$ 是 $b$ 的前缀则记 $a\sqsubseteq b$。
 - - 若还有 $a\neq b$ 则记 $a\sqsubset b$。
@@ -444,6 +443,8 @@ $\blacksquare$
 - $ab$ 表示拼接字符串 $a$ 和 $b$。
 - - $a^n$ 表示 $a$ 重复 $n$ 次。
 - $|s|$ 表示 $s$ 的长度，$s\left[l:r\right]$ 表示一个子串，下标从 $0$ 开始。
+- 记 $\$$ 是一个特殊字符，小于任何 $\Sigma$ 中的字符。
+- - 记 $\hat w=w\$$。
 
 ## Lyndon 科技 / Lyndon 分解
 
@@ -459,9 +460,25 @@ $\blacksquare$
 >
 > $u,v\in\mathfrak L,u<v\Longrightarrow uv\in\mathfrak L$。
 
-记把一个串 $s$ 划分为数个 Lyndon Word 的方案为 $\text{CFL}(s)$。$\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给出了求解 $\text{CFL}(s)$ 的算法。
+> **证明.**
+>
+> 只需要证明 $uv<v$。
+>
+> - 若 $u\triangleleft v$：根据 $\triangleleft$ 的定义显然。
+> - 若 $u\sqsubseteq v$：则记 $v=uw$，$uv=u^2w$。故只需要证明 $v<w$。而根据 $v\in\mathfrak L$ 这是自然的。
+>
+> $\square$
 
-> **引理 2.**
+记把一个串 $s$：
+
+- 划分为数个 Lyndon Word，
+- 且对于其中任意的 Lyndon Word 它的下一位都不大于它，
+
+的方案为 $\text{CFL}(s)$。
+
+$\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给出了求解 $\text{CFL}(s)$ 的算法。
+
+> **引理 2. && 算法 1.**
 >
 > 令 $w=u^ku'$，其中 $u\in\mathfrak L$，$u'$ 是 $u$ 的一个可空但不为 $u$ 的前缀。现在考虑一个新串 $dw=wa$，其中 $a$ 是单个字符。
 >
@@ -484,8 +501,39 @@ $\blacksquare$
 > - 如果 $r\neq |s|-1$，还需满足 $s\left[l:r+1\right]$ 不满足第一条。
 >
 > 某 run 的**指数**为 $(r-l+1)/p$，它自然可以不是整数。
+>
+> 记 $\text{Runs}(s)$ 为 $s$ 中的所有 run。
+>
+> 某 run 的 **Lyndon Root** 是它的那些长度为 $p$ 的 Lyndon Word 子串。每个 run 至少有一个 Lyndon Root。（这是因为 $s\left[l:l+p-1\right],s\left[l+1:l+p\right],\ldots$ 中必有一个最小者）
+
+下面我们考虑两个分别由两个完全相反的在 $\Sigma$ 上的偏序关系引出的字典序，分别记为 $<_0$ 和 $<_1$。（$|\Sigma|=1$ 的平凡情况可以忽略。）$<_\ell$ 引出的 Lyndon Word 等称为 Lyndon Word$_\ell$。记 $1-\ell=\overline \ell$。
+
+注意：对于任何 $a\in\Sigma,\$<_0a,a<_1\$$。
+
+我们自然会问关于 Lyndon Root 的更多信息。
 
 > **定义 3.**
 >
-> 
+> 定义 $\mathcal L_\ell(l)$ 是串 $(\hat s)\left[l:r\right]$，其中 $r$ 是最大的使得 $(\hat s)\left[l:r\right]$ 是 Lyndon Word$_\ell$ 的 $r$。它被称为 **Lyndon Array**。
 
+下面这两个引理非常显然但很强。
+
+> **引理 4.**
+>
+> 对于任意 $l$，总是有一个 $\ell$ 满足 $\mathcal L_\ell(l)=s\left[l\right]$，而 $\overline\ell$ 不满足。
+
+> **引理 5.**
+>
+> 对于某 run $(l,r)$，令 $\ell$ 是使得 $(\hat s)\left[r+1\right]<_\ell(\hat s)\left[r+1-p\right]$ 的那个 $\ell$。
+>
+> 该 run 的所有 Lyndon Root$_\ell$ $(L,R)$ 都满足 $\mathcal L_{\ell}(L)=R$。
+>
+> **hint**：引理 2 的直接推论。
+
+于是可见 Lyndon Array 对 Runs 的求解非常重要。下面这个算法给出了求解 $\mathcal L$ 的方法。
+
+> **算法 2.**
+
+> **引理 6.**
+>
+> 
