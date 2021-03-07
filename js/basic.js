@@ -85,7 +85,7 @@
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
         win.ThemeColor = win.Search['themecolor'];
-        if (win.ThemeColor !== undefined) {
+        if (win.ThemeColor) {
             localStorage.setItem("themecolor", win.ThemeColor);
         }
         else {
