@@ -476,9 +476,15 @@ $\blacksquare$
 
 的方案为 $\text{CFL}(s)$。
 
-$\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给出了求解 $\text{CFL}(s)$ 的算法。
+$\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然但有用的引理：
 
-> **引理 2. && 算法 1.**
+> **引理 2.**
+>
+> $\text{CFL}(s)$ 的第一个词一定是 $s$ 的最长 Lyndon 前缀，最后一个词一定是 $s$ 的最长 Lyndon 后缀。
+
+下面给出求解 $\text{CFL}(s)$ 的算法。
+
+> **算法 1.**
 >
 > 令 $w=u^ku'$，其中 $u\in\mathfrak L$，$u'$ 是 $u$ 的一个可空但不为 $u$ 的前缀。现在考虑一个新串 $dw=wa$，其中 $a$ 是单个字符。
 >
@@ -486,7 +492,7 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给�
 > - 若 $a<u\left[|u'|+1\right]$，则 $u$ 是任意 $wa****\ldots$ 的最长 Lyndon Word 前缀。换言之，在 $\text{CFL}(s)$ 中置入 $k$ 个 $u$，对于 $u'a$ 直接暴力退回再求解。
 > - 否则相当于延长了 $u'$。
 
-很直观，亦不给出证明。
+很直观，亦不给出证明。由于暴力退回的长度不会多于推进的长度，故总复杂度为 $O(|s|)$。
 
 ## Lyndon 科技 / Runs
 
@@ -526,6 +532,8 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给�
 >
 > 对于某 run $(l,r)$，令 $\ell$ 是使得 $(\hat s)\left[r+1\right]<_\ell(\hat s)\left[r+1-p\right]$ 的那个 $\ell$。
 >
+> （根据 run 的定义，$(\hat s)\left[r+1\right]\neq(\hat s)\left[r+1-p\right]$，于是它自然是存在的。）
+>
 > 该 run 的所有 Lyndon Root$_\ell$ $(L,R)$ 都满足 $\mathcal L_{\ell}(L)=R$。
 >
 > **hint**：引理 2 的直接推论。
@@ -533,7 +541,9 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。下面这个引理给�
 于是可见 Lyndon Array 对 Runs 的求解非常重要。下面这个算法给出了求解 $\mathcal L$ 的方法。
 
 > **算法 2.**
-
-> **引理 6.**
 >
-> 
+> 该算法的核心思想是直接维护当前后缀 $s\left[i:\right]$ 的 Lyndon 分解。
+>
+> 每次令 $i\leftarrow i-1$，把 $s\left[i\right]$ 视为一个新的 Lyndon 串，反复与 $\text{CFL}(s\left[i+1:\right])$ 的第一个词合并直到不能合并为止。
+
+至于比较两个 Lyndon 串的大小，强行求 LCP 就行了。下文你会看到，想做到线性求 Runs 不管怎么样都需要一个能 $O(1)$ 求 LCP 的后缀数据结构。

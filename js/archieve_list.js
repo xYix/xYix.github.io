@@ -645,7 +645,7 @@
 		'post_name' : 'string-tech',
 		'post_chinese_name' : '字符串学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-20',
+		'last_modi' : '2021-03-08',
 		'tag' : ['lyndon-tech','string','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -695,5 +695,13 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-01',
 		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '88',
+		'post_name' : '4-russian',
+		'post_chinese_name' : '四毛子学习笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-03-08',
+		'tag' : ['data-structure',],
 	};
 })(document);

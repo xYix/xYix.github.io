@@ -520,3 +520,8 @@ cf-1270-h
 CF1270H 题解 - Number of Components
 solution
 0
+4-russian
+四毛子学习笔记
+algorithm
+1
+data-structure
