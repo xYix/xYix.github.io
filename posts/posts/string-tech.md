@@ -448,7 +448,7 @@ $\blacksquare$
 
 ## Lyndon 科技 / Lyndon 分解
 
-> **定义 1.**
+> **定义 1. (Lyndon Word)**
 >
 > 一个非空字符串 $w$ 被称为一个 **Lyndon Word**，当且仅当 $w$ 小于任何一个它的真后缀。
 
@@ -484,7 +484,7 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 
 下面给出求解 $\text{CFL}(s)$ 的算法。
 
-> **算法 1.**
+> **算法 1. (Lyndon 分解)**
 >
 > 令 $w=u^ku'$，其中 $u\in\mathfrak L$，$u'$ 是 $u$ 的一个可空但不为 $u$ 的前缀。现在考虑一个新串 $dw=wa$，其中 $a$ 是单个字符。
 >
@@ -496,7 +496,7 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 
 ## Lyndon 科技 / Runs
 
-> **定义 2.**
+> **定义 2. (Runs 和 Lyndon Root)**
 >
 > 一个字符串 $s$ 有**周期** $p$，当且仅当总有 $s\left[i\right]=s\left[i+p\right]$。注意不必有 $p\operatorname{|}|s|$。
 >
@@ -506,19 +506,17 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 > - 如果 $l\neq 0$，还需满足 $s\left[l-1:r\right]$ 不满足第一条。
 > - 如果 $r\neq |s|-1$，还需满足 $s\left[l:r+1\right]$ 不满足第一条。
 >
-> 某 run 的**指数**为 $(r-l+1)/p$，它自然可以不是整数。
->
 > 记 $\text{Runs}(s)$ 为 $s$ 中的所有 run。
 >
 > 某 run 的 **Lyndon Root** 是它的那些长度为 $p$ 的 Lyndon Word 子串。每个 run 至少有一个 Lyndon Root。（这是因为 $s\left[l:l+p-1\right],s\left[l+1:l+p\right],\ldots$ 中必有一个最小者）
 
-下面我们考虑两个分别由两个完全相反的在 $\Sigma$ 上的偏序关系引出的字典序，分别记为 $<_0$ 和 $<_1$。（$|\Sigma|=1$ 的平凡情况可以忽略。）$<_\ell$ 引出的 Lyndon Word 等称为 Lyndon Word$_\ell$。记 $1-\ell=\overline \ell$。
+下面我们考虑两个分别由两个完全相反的在 $\Sigma$ 上的偏序关系引出的字典序，分别记为 $<_0$ 和 $<_1$。（$|\Sigma|=1$ 的平凡情况可以忽略。）由 $<_\ell$ 引出的 Lyndon Word 等现在改称为 Lyndon Word$_\ell$。记 $1-\ell=\overline \ell$。
 
 注意：对于任何 $a\in\Sigma,\$<_0a,a<_1\$$。
 
 我们自然会问关于 Lyndon Root 的更多信息。
 
-> **定义 3.**
+> **定义 3. (Lyndon Array)**
 >
 > 定义 $\mathcal L_\ell(l)$ 是串 $(\hat s)\left[l:r\right]$，其中 $r$ 是最大的使得 $(\hat s)\left[l:r\right]$ 是 Lyndon Word$_\ell$ 的 $r$。它被称为 **Lyndon Array**。
 
@@ -540,10 +538,20 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 
 于是可见 Lyndon Array 对 Runs 的求解非常重要。下面这个算法给出了求解 $\mathcal L$ 的方法。
 
-> **算法 2.**
+> **算法 2. (Lyndon Array)**
 >
 > 该算法的核心思想是直接维护当前后缀 $s\left[i:\right]$ 的 Lyndon 分解。
 >
 > 每次令 $i\leftarrow i-1$，把 $s\left[i\right]$ 视为一个新的 Lyndon 串，反复与 $\text{CFL}(s\left[i+1:\right])$ 的第一个词合并直到不能合并为止。
 
 至于比较两个 Lyndon 串的大小，强行求 LCP 就行了。下文你会看到，想做到线性求 Runs 不管怎么样都需要一个能 $O(1)$ 求 LCP 的后缀数据结构。
+
+最后我们终于得到了求解 Runs 的算法。
+
+> **算法 3. (Runs)**
+>
+> 对于 $\mathcal L_\ell(l)=s\left[l:r\right]$ 找到最长的以它为周期的串（求公共前后缀即可（呕）），这就找到了一个 run。
+
+## Lyndon 科技 / Lyndon Tree
+
+## Lyndon 科技 / 应用
