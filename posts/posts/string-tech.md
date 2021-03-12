@@ -554,4 +554,20 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 
 ## Lyndon 科技 / Lyndon Tree
 
+🕊
+
 ## Lyndon 科技 / 应用
+
+### Lyndon 科技 / 应用 / 最小表示法
+
+>**题目大意.**
+>
+>给出一个字符串 $s$，求它的**最小表示法**。
+>
+>$n\le 3\cdot 10^6$。
+>
+>一个串的最小表示法是它的字典序最小的循环移位。
+
+直接对着 $\text{CFL}(ss)$ 搞一下就行。
+
+<center><a href='/posts/posts/string-prob.html'>to be continued...</a></center>
