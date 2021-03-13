@@ -710,6 +710,6 @@
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-13',
-		'tag' : ['lyndon-tech','string-tech',],
+		'tag' : ['lyndon-tech','string',],
 	};
 })(document);

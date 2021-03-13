@@ -529,5 +529,5 @@ string-prob
 字符串题集
 solution
 2
-string-tech
+string
 lyndon-tech
