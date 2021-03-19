@@ -669,7 +669,7 @@
 		'post_name' : 'hhz-bigraphy',
 		'post_chinese_name' : '喝喝粥传（评注版）',
 		'type_name' : 'other',
-		'last_modi' : '2021-02-24',
+		'last_modi' : '2021-03-13',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -709,7 +709,15 @@
 		'post_name' : 'string-prob',
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
-		'last_modi' : '2021-03-13',
+		'last_modi' : '2021-03-19',
 		'tag' : ['lyndon-tech','string',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '90',
+		'post_name' : 'k-th-shortest-path',
+		'post_chinese_name' : 'k 短路及其延伸',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-03-19',
+		'tag' : [],
 	};
 })(document);
