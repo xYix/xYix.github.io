@@ -645,8 +645,8 @@
 		'post_name' : 'string-tech',
 		'post_chinese_name' : '字符串学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-03-13',
-		'tag' : ['lyndon-tech','string','writing',],
+		'last_modi' : '2021-03-19',
+		'tag' : ['lyndon-tech','string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '82',
@@ -669,7 +669,7 @@
 		'post_name' : 'hhz-bigraphy',
 		'post_chinese_name' : '喝喝粥传（评注版）',
 		'type_name' : 'other',
-		'last_modi' : '2021-03-13',
+		'last_modi' : '2021-03-19',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -709,8 +709,8 @@
 		'post_name' : 'string-prob',
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
-		'last_modi' : '2021-03-19',
-		'tag' : ['lyndon-tech','string',],
+		'last_modi' : '2021-03-20',
+		'tag' : ['lyndon-tech','string','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '90',
@@ -719,5 +719,13 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-03-19',
 		'tag' : [],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '91',
+		'post_name' : 'category-theory',
+		'post_chinese_name' : '范畴论通俗演义',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-03-21',
+		'tag' : ['pigeon',],
 	};
 })(document);

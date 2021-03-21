@@ -482,10 +482,9 @@ generating-function
 string-tech
 字符串学习笔记
 algorithm
-3
+2
 string
 lyndon-tech
-writing
 luogu-5470
 luoguP5470 题解 - [NOI2019]序列
 solution
@@ -528,10 +527,16 @@ data-structure
 string-prob
 字符串题集
 solution
-2
+3
 string
 lyndon-tech
+writing
 k-th-shortest-path
 k 短路及其延伸
 algorithm
 0
+category-theory
+范畴论通俗演义
+algorithm
+1
+pigeon
