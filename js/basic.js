@@ -86,6 +86,7 @@
         win.Funval = win.Search['funval'];
         // win.ThemeColor = win.Search['themecolor'];
         if (win.Search['themecolor']) {
+            console.log('themecolor = ' + win.Search['themecolor']);
             localStorage.setItem("themecolor", win.Search['themecolor']);
             location.replace(location.pathname + win.ezylanASearch(
                 {
