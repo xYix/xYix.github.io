@@ -84,16 +84,26 @@
         if (win.Search['page'] === undefined) win.Page = 0;
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
-        win.ThemeColor = win.Search['themecolor'];
-        if (win.ThemeColor) {
+        // win.ThemeColor = win.Search['themecolor'];
+        if (win.Search['themecolor']) {
             localStorage.setItem("themecolor", win.ThemeColor);
+            location.replace(location.pathname + win.ezylanASearch(
+                {
+                    Tags: win.Tags,
+                    Type: win.Type,
+                    Sortby: win.Sortby,
+                    Page: win.Page,
+                    Funval: win.Funval,
+                    ThemeColor: undefined,
+                }
+            ));
         }
-        else {
+        // else {
             console.log(localStorage.getItem('themecolor'));
             if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
                 localStorage.setItem("themecolor", 'Z');
             win.ThemeColor = localStorage.getItem('themecolor');
-        }
+        // }
         win.Postname = win.Search['postname'];
         if (win.Search['postid'] !== undefined) {
             win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
