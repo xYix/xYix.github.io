@@ -86,7 +86,7 @@
         win.Funval = win.Search['funval'];
         // win.ThemeColor = win.Search['themecolor'];
         if (win.Search['themecolor']) {
-            localStorage.setItem("themecolor", win.ThemeColor);
+            localStorage.setItem("themecolor", win.Search['themecolor']);
             location.replace(location.pathname + win.ezylanASearch(
                 {
                     Tags: win.Tags,
