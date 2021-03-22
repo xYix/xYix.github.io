@@ -93,9 +93,41 @@ title: 字符串题集
 - 分块维护哈希值来支持字符串比较。
 - 如果区间被完整修改，那么 ASS 不变；但是要一路 pushup 上去。
 
-顺带一题，这题数据水得令人发指……这个字符串暴力比较的[鬼暴力](https://yhx-12243.github.io/OI-transit/records/lydsy4877%3Blg5211%3Buoj296%3Bloj2572.html)都能过原题数据。
+顺带一提，这题数据水得令人发指……下面这个字符串暴力比较的鬼暴力都能过原题数据。
 
-下一题。
+```cpp
+int cmp(int *p1, int *p2, int len) {
+	while (len) {
+		if (*p1 != *p2) return *p1 - *p2;
+		len--; p1++; p2++;
+	}
+	return 0;
+}
+struct node {
+	int l, r;
+	vector<int> lis;
+} T[maxn << 2];
+void merge(const node &nL, const node &nR, node &ans) {
+	ans.lis = nR.lis;
+	for (int v : nL.lis) {
+		while (ans.lis.size()) {
+			int u = ans.lis[ans.lis.size() - 1];
+			int flg = cmp(s + u, s + v, nR.r + 1 - u);
+			if (flg < 0) goto qaq;
+			if (flg == 0) {
+				if (2 * (nR.r + 1 - u) > nR.r + 1 - v) ans.lis.pop_back();
+				ans.lis.push_back(v);
+				goto qaq;
+			}
+			ans.lis.pop_back();
+		}
+		ans.lis.push_back(v);
+		qaq:;
+	}
+}
+```
+
+另一个有重要启发的题目。
 
 > **题目大意. ([JSOI2019]节日庆典)**
 >
@@ -105,7 +137,69 @@ title: 字符串题集
 
 由之前的讨论显然有 $O(n\log n)$ 的做法。注意到最终比较各表示法时可以转化为一个后缀与原串的比较，这正是 Z 函数。这个观察大大减小了该算法的常数，已经可以通过。
 
-然而还可以继续考虑线性算法。
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+char s[3000005];
+int z[3000005];
+
+void getz(char S[], int n) {
+	z[1] = n;
+	for(int i = 2, j = 1, r = 1; i <= n; i++) {
+		if(i <= r) z[i] = min(r - i + 1, z[i - j + 1]);
+		else z[i] = 0;
+		while(i + z[i] <= n && S[z[i] + 1] == S[i + z[i]]) z[i]++;
+		if(i + z[i] - 1 > r) j = i, r = i + z[i] - 1;
+	}
+}
+
+vector<int> lis;
+
+int main() {
+//	freopen("4.in", "r", stdin);
+//	freopen("WA.out", "w", stdout);
+	scanf("%s", s + 1);
+	int n = strlen(s + 1);
+	getz(s, n);
+	
+	lis.push_back(1); printf("%d ", 1);
+	for (int i = 2; i <= n; i++) {
+		vector<int> nlis; nlis.push_back(i);
+		for (int v : lis) {
+			while (nlis.size()) {
+				int u = nlis.back();
+				int flg = s[v + i - u] - s[i];
+				if (flg > 0) goto qaq;
+				if (flg == 0) {
+					if (2 * (i + 1 - u) > i + 1 - v) nlis.pop_back();
+					nlis.push_back(v);
+					goto qaq;
+				}
+				nlis.pop_back();
+			}
+			nlis.push_back(v);
+			qaq:;
+		}
+		lis = nlis;
+		int v = nlis[0];
+		for (int u : nlis) {
+			int p = i - v + u + 1;
+			if (p + z[p] <= i)	{
+				if (s[p + z[p]] <= s[1 + z[p]]) v = u;
+			}
+			else {
+				p = i - p + 2;
+				int len = min(z[p], v - 1 - p);
+				if (s[1 + len] <= s[p + len]) v = u;
+			}
+		}
+		printf("%d ", v);
+	}
+}
+```
+
+然而还可以继续考虑线性算法。（🕊）
 
 # 本原平方串
 
