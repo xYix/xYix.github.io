@@ -22,7 +22,7 @@ x义x 的朋友们：
 
 - 外校
 
-[![](https://cdn.luogu.com.cn/upload/usericon/60990.png)](https://www.luogu.com.cn/user/60990)[![](https://cdn.luogu.com.cn/upload/usericon/96580.png)](https://www.luogu.com.cn/user/96580)[![](https://cdn.luogu.com.cn/upload/usericon/112381.png)](https://www.luogu.com.cn/user/112381)
+[![](https://cdn.luogu.com.cn/upload/usericon/60990.png)](https://www.luogu.com.cn/user/60990)[![](https://cdn.luogu.com.cn/upload/usericon/96580.png)](https://www.luogu.com.cn/user/96580)[![](https://cdn.luogu.com.cn/upload/usericon/112381.png)](https://www.luogu.com.cn/user/112381)[![](https://cdn.luogu.com.cn/upload/usericon/58705.png)](https://www.luogu.com.cn/user/58705)[![](https://cdn.luogu.com.cn/upload/usericon/75840.png)](https://www.luogu.com.cn/user/75840)
 
 友链：
 
@@ -36,7 +36,10 @@ x义x 的朋友们：
 
 [孔姥爷的病历](https://www.cnblogs.com/Flying2018/)
 
-[毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太祖，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体的博客](https://www.luogu.com.cn/blog/qwe2715772231/)
+~~毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太祖，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体的博客~~（已 AFO 并删文）
 
 [周指导的博客](https://www.cnblogs.com/zhouzhendong/)
 
+[点王的博客](https://www.cnblogs.com/Point-King/)
+
+[俄猫的博客](https://commune.ml/)
