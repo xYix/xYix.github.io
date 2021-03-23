@@ -528,9 +528,9 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 
 > **引理 5.**
 >
-> 对于某 run $(l,r)$，令 $\ell$ 是使得 $(\hat s)\left[r+1\right]<_\ell(\hat s)\left[r+1-p\right]$ 的那个 $\ell$。
+> 对于某 run $(l,r)$，令 $\ell$ 是使得 $(\hat s)\left[r+1\right]<_{\ell}(\hat s)\left[r+1-p\right]$ 的那个 $\ell$。
 >
-> （根据 run 的定义，$(\hat s)\left[r+1\right]\neq(\hat s)\left[r+1-p\right]$，于是它自然是存在的。）
+> （根据 run 的定义，$(\hat s)\left[r+1\right]\neq(\hat s)\left[r+1-p\right]$，它一定是存在的。）
 >
 > 该 run 的所有 Lyndon Root$_\ell$ $(L,R)$ 都满足 $\mathcal L_{\ell}(L)=R$。
 >
