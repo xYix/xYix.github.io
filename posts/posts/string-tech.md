@@ -29,6 +29,19 @@ title: 字符串学习笔记
   - 应用
   - - endpos
     - 广义 SAM
+    - 区间本质不同子串
+- 后缀数组
+- - 经典做法
+  - SAIS（🕊）
+  - 应用
+  - - Height
+  - 后缀平衡树
+- Lyndon 科技
+- - Lyndon 分解
+  - Runs
+  - Lyndon Tree（🕊）
+  - 应用
+  - - 最小表示法
 
 # 一些记号
 
