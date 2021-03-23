@@ -552,6 +552,82 @@ $\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然�
 >
 > 对于 $\mathcal L_\ell(l)=s\left[l:r\right]$ 找到最长的以它为周期的串（求公共前后缀即可（呕）），这就找到了一个 run。
 
+参考瑇🐎如下：此处用了 hash 求 lcp。
+
+```cpp
+#include<bits/stdc++.h>
+typedef unsigned long long ull;
+using namespace std;
+
+const ull g = 1000003;
+
+int n;
+char s[1000005];
+ull hsh[1000005], powg[1000005];
+ull gethsh(int l, int r) { return hsh[r] - hsh[l - 1] * powg[r - l + 1]; }
+int lcp(int u, int v) {
+	int L = 0, R = min(n - u + 1, n - v + 1);
+	while (L != R) {
+		int mid = (L + R + 1) >> 1;
+		if (gethsh(u, u + mid - 1) == gethsh(v, v + mid - 1)) L = mid;
+		else R = mid - 1;
+	}
+	return L;
+}
+int lcs(int u, int v) {
+	int L = 0, R = min(u, v);
+	while (L != R) {
+		int mid = (L + R + 1) >> 1;
+		if (gethsh(u - mid + 1, u) == gethsh(v - mid + 1, v)) L = mid;
+		else R = mid - 1;
+	}
+	return L;
+}
+int cmp(int ul, int ur, int vl, int vr) {
+	int len = lcp(ul, vl);
+	if (len >= ur - ul + 1) return ur - ul - (vr - vl);
+	return s[ul + len] - s[vl + len];
+}
+
+vector<vector<int> > RUNS;
+
+void inithsh() {
+	powg[0] = 1;
+	for (int i = 1; i <= n; i++)
+		hsh[i] = hsh[i - 1] * g + s[i] - 'a',
+		powg[i] = powg[i - 1] * g;
+}
+int LA[1000005];
+void getLA() {
+	int CFL[100005], cnt = 0;
+	for (int i = n; i; i--) {
+		CFL[++cnt] = i;
+		while (cnt > 1 && cmp(i, CFL[cnt], CFL[cnt] + 1, CFL[cnt - 1]) < 0) cnt--;
+		LA[i] = CFL[cnt];
+	}
+}
+void getRuns() {
+	for (int i = 1; i <= n; i++) {
+		int l = i, r = LA[i], L = l - lcs(l - 1, r), R = r + lcp(l, r + 1);
+		if (R - L + 1 >= 2 * (r - l + 1)) RUNS.push_back({L, R, r - l + 1});
+	}
+}
+
+int main() {
+	scanf("%s", s + 1), n = strlen(s + 1);
+	
+	inithsh(); getLA(); getRuns();
+	for (int i = 1; i <= n; i++) s[i] = 'z' - s[i] + 'a';
+	inithsh(); getLA(); getRuns();
+	
+	sort(RUNS.begin(), RUNS.end());
+    RUNS.erase(unique(RUNS.begin(), RUNS.end()), RUNS.end());
+	printf("%d\n", RUNS.size());
+	for (vector<int> qaq : RUNS)
+		printf("%d %d %d\n", qaq[0], qaq[1], qaq[2]);
+}
+```
+
 ## Lyndon 科技 / Lyndon Tree
 
 🕊
