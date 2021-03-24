@@ -169,14 +169,18 @@ printf("%d ", v);
 > 若本原平方串 $u,v,w$ 互相有后缀关系，且 $|u|<|v|<|w|$，则 $|u|+|v|<|w|$。
 >
 > 注意这个结论直接得出本原平方串的数量为 $O(|s|\log |s|)$。
+>
+> 注意这个结论直接得出所有 Runs 的 $r-l-2p$ 之和的大小为 $O(|s|\log|s|)$。
 
-直观来说，很容易猜到这个结论，但是证明很复杂，此处不表。
+直观来说，很容易猜到这个结论，但是证明非常复杂，此处不表。
 
 > **引理 3.**
 >
 > 本质不同的本原平方串是 $O(|s|)$ 的。
 >
-> **hint.** 只需要证明每个位置最多只会新增两个本质不同的本原平方串。
+> **hint.** 只需要证明每个位置最多只会新增两个本质不同的本原平方串；其他的已经统计过了。
+>
+> 注意上面实际上还证明了，各 Runs 内的本质不同本原平方串之和是 $O(|s|)$ 的，而 $p$ 之和小于等于它，自然也是 $O(|s|)$ 的。
 
 以上引理还可以延伸到
 
@@ -220,3 +224,101 @@ printf("%d ", v);
 > 求划分方案数。
 >
 > $|s|\le2\times10^5$。
+
+注意到相邻的两个相同子串必定导出一个循环串，这两个条件其实是极有关系的。我们钦定循环串必须按周期划分，这样就只剩下了条件二，而答案不变。
+
+条件仍然极难（完全不可能）直接保证，考虑容斥。易得 DP
+$$
+f(i)=-\sum_j(-1)^{e(s\left[j+1:i\right])}f(j)
+$$
+其中 $e(s)$ 是 $s$ 的最大指数，非循环串自然就是 $1$。
+
+自然联想到 Runs。为了方便考量我们关注对 $f(i)$ 产生负贡献的那些 $j$，$s\left[j + 1:i\right]$ 必须是一个平方串，而 **定理 1** 告诉我们怒扫 Runs 是可以的，于是就做完了。
+
+```cpp
+#include<bits/stdc++.h>
+typedef unsigned long long ull;
+using namespace std;
+
+const ull g = 1000003, p_ = 998244353;
+const int maxn = 200005;
+
+int n;
+char s[maxn];
+ull hsh[maxn], powg[maxn];
+ull gethsh(int l, int r) { return (hsh[r] - hsh[l - 1] * powg[r - l + 1] % p_ + p_) % p_; }
+int lcp(int u, int v) {
+	int L = 0, R = min(n - u + 1, n - v + 1);
+	while (L != R) {
+		int mid = (L + R + 1) >> 1;
+		if (gethsh(u, u + mid - 1) == gethsh(v, v + mid - 1)) L = mid;
+		else R = mid - 1;
+	}
+	return L;
+}
+int lcs(int u, int v) {
+	int L = 0, R = min(u, v);
+	while (L != R) {
+		int mid = (L + R + 1) >> 1;
+		if (gethsh(u - mid + 1, u) == gethsh(v - mid + 1, v)) L = mid;
+		else R = mid - 1;
+	}
+	return L;
+}
+int cmp(int ul, int ur, int vl, int vr) {
+	int len = lcp(ul, vl);
+	if (len >= ur - ul + 1) return ur - ul - (vr - vl);
+	return s[ul + len] - s[vl + len];
+}
+
+const int p = 998244353;
+struct RUN {
+	int R, P, S;
+}; vector<RUN> Q[maxn];
+
+set<ull> qaq;
+
+void getRuns() {
+	powg[0] = 1;
+	for (int i = 1; i <= n; i++)
+		hsh[i] = (hsh[i - 1] * g + s[i] - 'a' + 1) % p_,
+		powg[i] = powg[i - 1] * g % p_;
+	int CFL[maxn], cnt = 0;
+	int LA[maxn];
+	for (int i = n; i; i--) {
+		CFL[++cnt] = i;
+		while (cnt > 1 && cmp(i, CFL[cnt], CFL[cnt] + 1, CFL[cnt - 1]) < 0) cnt--;
+		LA[i] = CFL[cnt];
+	}
+	for (int i = 1; i <= n; i++) {
+		int l = i, r = LA[i], L = l - lcs(l - 1, r), R = r + lcp(l, r + 1);
+		if (R - L + 1 >= 2 * (r - l + 1) && !qaq.count((ull)R * n + L)) {
+			qaq.insert((ull)R * n + L);
+			int P = 2 * (r - l + 1);
+			for (int i = 0; i < P; i++) if (L - 1 + i + P <= R)
+				Q[L - 1 + i].push_back((RUN){R, P, 0});
+		}
+	}
+}
+
+int f[maxn];
+
+int main() {
+	scanf("%s", s + 1), n = strlen(s + 1);
+	
+	getRuns();
+	for (int i = 1; i <= n; i++) s[i] = 'z' - s[i] + 'a';
+	getRuns();
+	
+	int sum = 1;
+	for (RUN r : Q[0]) if (r.P <= r.R) Q[r.P].push_back((RUN){r.R, r.P, (r.S + 1) % p});
+	for (int i = 1; i <= n; i++) {
+		f[i] = sum;
+		for (RUN r : Q[i]) f[i] = (f[i] - 2 * r.S % p + p) % p;
+		sum = (f[i] + sum) % p;
+		for (RUN r : Q[i]) if (i + r.P <= r.R) Q[i + r.P].push_back((RUN){r.R, r.P, (r.S + f[i]) % p});
+	}
+	printf("%d\n", f[n]);
+}
+```
+
