@@ -1,4 +1,4 @@
-我是 x义x，ZJ 高一 OIer~~，本质是纳米机器人组合体，受泰伯尔同族体帝国委托前来[侵略](https://zh.moegirl.org.cn/%E6%B0%B4%E8%89%B2%E4%BE%B5%E7%95%A5))地球~~。
+我是 x义x，ZJ 高一 OIer~~，本质是纳米机器人组合体，受泰伯尔同族体帝国委托前来[侵略](https://zh.moegirl.org.cn/%E6%B0%B4%E8%89%B2%E4%BE%B5%E7%95%A5)地球~~。
 
 爱好是[ナユタン星人](https://twitter.com/NayutalieN)的曲、rougelike 游戏和塔防游戏。还有组合数学。最近可能又对P🐍游戏感兴趣了？
 
