@@ -84,6 +84,7 @@
         if (win.Search['page'] === undefined) win.Page = 0;
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
+        win.Postname = win.Search['postname'];
         if (win.Search['themecolor']) {
             localStorage.setItem("themecolor", win.Search['themecolor']);
             location.replace(location.pathname + win.ezylanASearch(
@@ -100,7 +101,6 @@
         if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
             localStorage.setItem("themecolor", 'Z');
         win.ThemeColor = localStorage.getItem('themecolor');
-        win.Postname = win.Search['postname'];
         if (win.Search['postid'] !== undefined) {
             win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
             win.location.replace('/posts/?page=0&postname=' + win.Postname);
