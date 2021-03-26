@@ -44,35 +44,24 @@
         return tmpSearch;
     }
     win.ezylanASearch = function (Search) {
-        let ret = '?', flg = 1;
-        if (Search.Type !== undefined) {
-            if (flg === 1) flg = 0; else ret += '&';
-            ret += 'type=' + Search.Type;
-        }
+        let ret = '?';
+        if (Search.Type !== undefined)
+            ret += '&type=' + Search.Type;
         if (Search.Tags.length !== 0) {
-            if (flg === 1) flg = 0; else ret += '&';
-            ret += 'tags=';
+            ret += '&tags=';
             for (let i = 0; i < Search.Tags.length; i++) {
                 if (i !== 0) ret += '+';
                 ret += Search.Tags[i];
             }
         }
-        if (Search.Sortby !== undefined) {
-            if (flg === 1) flg = 0; else ret += '&';
-            ret += 'sortby=' + Search.Sortby;
-        }
-        if (Search.Page !== undefined) {
-            if (flg === 1) flg = 0; else ret += '&';
-            ret += 'page=' + Search.Page;
-        }
-        if (Search.Funval !== undefined) {
-            if (flg === 1) flg = 0; else ret += '&';
-            ret += 'funval=' + Search.Funval;
-        }
-        if (Search.ThemeColor !== undefined) {
-            if (flg === 1) flg = 0; else ret += '&';
-            ret += 'themecolor=' + Search.ThemeColor;
-        }
+        if (Search.Sortby !== undefined) 
+            ret += '&sortby=' + Search.Sortby;
+        if (Search.Page !== undefined)
+            ret += '&page=' + Search.Page;
+        if (Search.Funval !== undefined)
+            ret += '&funval=' + Search.Funval;
+        if (Search.ThemeColor !== undefined) 
+            ret += '&themecolor=' + Search.ThemeColor;
         return ret;
     }
     win.InitAnalyze = function () {
@@ -87,7 +76,7 @@
         win.Postname = win.Search['postname'];
         if (win.Search['themecolor']) {
             localStorage.setItem("themecolor", win.Search['themecolor']);
-            location.replace(location.pathname + win.ezylanASearch(
+            let newloc = location.pathname + win.ezylanASearch(
                 {
                     Tags: win.Tags,
                     Type: win.Type,
@@ -96,7 +85,9 @@
                     Funval: win.Funval,
                     ThemeColor: undefined,
                 }
-            ));
+            );
+            if (win.Postname) newloc += '&postname=' + win.Postname;
+            location.replace(newloc);
         }
         if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
             localStorage.setItem("themecolor", 'Z');
