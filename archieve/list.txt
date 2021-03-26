@@ -120,11 +120,12 @@ lagrange-interpolation
 luogu-4500
 luoguP4500 题解 - [ZJOI2018]树
 solution
-4
+5
 exc-inc
 combinatorics
 group-counting
 generating-function
+supreme-divine
 luogu-5155
 luoguP5155 题解 - [USACO18DEC]Balance Beam P
 solution
@@ -543,7 +544,8 @@ pigeon
 uoj-199
 uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞
 solution
-3
+4
 string
 combinatorics
-superme-divine
+exc-inc
+supreme-divine
