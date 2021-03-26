@@ -35,5 +35,5 @@
 	win.tags_list['bijective-proof'] = '双射法';
 	win.tags_list['writing'] = '⚠正在施工⚠';
 	win.tags_list['network-flow'] = '网络流';
-	win.tags_list['supreme-divine'] = '⚡至高神性⚡（极度困难）';
+	win.tags_list['supreme-divine'] = '🏆至高神性🏆';
 })(document);
