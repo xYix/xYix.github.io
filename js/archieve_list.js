@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-02-19',
+		'last_modi' : '2021-03-25',
 		'tag' : [],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -645,7 +645,7 @@
 		'post_name' : 'string-tech',
 		'post_chinese_name' : '字符串学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-03-19',
+		'last_modi' : '2021-03-25',
 		'tag' : ['lyndon-tech','string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -709,7 +709,7 @@
 		'post_name' : 'string-prob',
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
-		'last_modi' : '2021-03-20',
+		'last_modi' : '2021-03-24',
 		'tag' : ['lyndon-tech','string','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -727,5 +727,13 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-03-21',
 		'tag' : ['pigeon',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '92',
+		'post_name' : 'uoj-199',
+		'post_chinese_name' : 'uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞',
+		'type_name' : 'solution',
+		'last_modi' : '2021-03-26',
+		'tag' : ['combinatorics','string','superme-divine',],
 	};
 })(document);

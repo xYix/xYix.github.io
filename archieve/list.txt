@@ -540,3 +540,10 @@ category-theory
 algorithm
 1
 pigeon
+uoj-199
+uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞
+solution
+3
+string
+combinatorics
+superme-divine
