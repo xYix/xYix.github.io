@@ -738,7 +738,7 @@
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '93',
-		'post_name' : 'SPOJ-33039',
+		'post_name' : 'spoj-33039',
 		'post_chinese_name' : 'SPOJ33039 题解 - AFS3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-27',
