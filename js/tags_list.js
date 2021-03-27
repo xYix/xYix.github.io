@@ -5,7 +5,7 @@
 	win.tags_list['generating-function'] = '生成函数';
 	win.tags_list['lagrange-inversion'] = '拉格朗日反演';
 	win.tags_list['polynomial'] = 'x多项式x';
-	win.tags_list['number-theory'] = '数论';
+	win.tags_list['number-theory'] = '🐢数论🐢';
 	win.tags_list['min25-sieve'] = 'min25筛';
 	win.tags_list['calculating-geometry'] = '📏计算几何📏';
 	win.tags_list['lagrange-interpolation'] = '拉格朗日插值';
