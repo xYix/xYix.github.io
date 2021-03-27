@@ -733,7 +733,15 @@
 		'post_name' : 'uoj-199',
 		'post_chinese_name' : 'uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞',
 		'type_name' : 'solution',
-		'last_modi' : '2021-03-26',
+		'last_modi' : '2021-03-27',
 		'tag' : ['combinatorics','exc-inc','string','supreme-divine',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '93',
+		'post_name' : 'SPOJ-33039',
+		'post_chinese_name' : 'SPOJ33039 题解 - AFS3',
+		'type_name' : 'solution',
+		'last_modi' : '2021-03-27',
+		'tag' : ['calculating-geometry','number-theory',],
 	};
 })(document);

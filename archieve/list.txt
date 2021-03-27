@@ -549,3 +549,9 @@ string
 combinatorics
 exc-inc
 supreme-divine
+SPOJ-33039
+SPOJ33039 题解 - AFS3
+solution
+2
+number-theory
+calculating-geometry
