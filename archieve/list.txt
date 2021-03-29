@@ -555,3 +555,10 @@ solution
 2
 number-theory
 calculating-geometry
+luogu-7440
+luoguP7440 题解 -「KrOI2021」Feux Follets
+solution
+3
+generating-function
+linear-algebra
+polynomial
