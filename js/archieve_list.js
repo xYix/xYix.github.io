@@ -14,7 +14,7 @@
 		'post_chinese_name' : '烷烃计数',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','generating-function',],
+		'tag' : ['combinatorics','euclid','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '3',
@@ -22,7 +22,7 @@
 		'post_chinese_name' : '有标号仙人掌计数',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','generating-function',],
+		'tag' : ['combinatorics','euclid','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '4',
@@ -30,7 +30,7 @@
 		'post_chinese_name' : '边/点双连通图计数',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','generating-function','lagrange-inversion',],
+		'tag' : ['combinatorics','euclid','generating-function','lagrange-inversion',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '5',
@@ -38,7 +38,7 @@
 		'post_chinese_name' : 'loj#6275 题解 - 棋盘',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : ['combinatorics','generating-function','polynomial',],
+		'tag' : ['combinatorics','generating-function','polynomial','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '6',
@@ -46,7 +46,7 @@
 		'post_chinese_name' : 'uoj#420 题解 - 【集训队作业2018】矩形',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics',],
+		'tag' : ['combinatorics','euclid',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '7',
@@ -54,7 +54,7 @@
 		'post_chinese_name' : '51nod1222 题解 - 最小公倍数计数',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['number-theory',],
+		'tag' : ['number-theory','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '8',
@@ -78,7 +78,7 @@
 		'post_chinese_name' : '快速阶乘算法',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-10',
-		'tag' : ['lagrange-interpolation','polynomial',],
+		'tag' : ['keter','lagrange-interpolation','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '11',
@@ -110,7 +110,7 @@
 		'post_chinese_name' : 'SPOJ26073 题解 - DIVCNT1',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['calculating-geometry','number-theory',],
+		'tag' : ['calculating-geometry','keter','number-theory',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '15',
@@ -118,7 +118,7 @@
 		'post_chinese_name' : 'AGC038E 题解 - Gachapon',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','generating-function',],
+		'tag' : ['combinatorics','generating-function','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '16',
@@ -134,7 +134,7 @@
 		'post_chinese_name' : '省选 2020 补题记录',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','generating-function','lagrange-inversion','linear-algebra','linear-programming','lyndon-tech','string',],
+		'tag' : ['combinatorics','generating-function','keter','lagrange-inversion','linear-algebra','linear-programming','lyndon-tech','string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '18',
@@ -142,7 +142,7 @@
 		'post_chinese_name' : 'uoj#372 题解 - 【UR#17】滑稽树前做游戏',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
-		'tag' : [],
+		'tag' : ['keter',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '19',
@@ -150,7 +150,7 @@
 		'post_chinese_name' : 'BZOJ3684 题解 - 大朋友和多叉树',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['generating-function','lagrange-inversion',],
+		'tag' : ['generating-function','lagrange-inversion','safes',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '20',
@@ -158,7 +158,7 @@
 		'post_chinese_name' : 'loj#6055 题解 - 「from CommonAnts」一道数学题',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','lagrange-interpolation',],
+		'tag' : ['combinatorics','euclid','lagrange-interpolation',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '21',
@@ -174,7 +174,7 @@
 		'post_chinese_name' : 'luoguP5155 题解 - [USACO18DEC]Balance Beam P',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['calculating-geometry',],
+		'tag' : ['calculating-geometry','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '23',
@@ -198,7 +198,7 @@
 		'post_chinese_name' : 'AGC016D 题解 - XOR Replace',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : [],
+		'tag' : ['safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '26',
@@ -206,7 +206,7 @@
 		'post_chinese_name' : 'AGC016F 题解 - Games on DAG',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : ['game-theory',],
+		'tag' : ['euclid','game-theory',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '27',
@@ -214,7 +214,7 @@
 		'post_chinese_name' : 'AGC032F 题解 - One Third',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
-		'tag' : [],
+		'tag' : ['euclid',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '28',
@@ -222,7 +222,7 @@
 		'post_chinese_name' : 'AGC034F 题解 - RNG and XOR',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-09',
-		'tag' : ['combinatorics','set-power-series',],
+		'tag' : ['combinatorics','safe','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '29',
@@ -230,7 +230,7 @@
 		'post_chinese_name' : 'CF1286F 题解 - Harry the Potter',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
-		'tag' : ['set-power-series',],
+		'tag' : ['euclid','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '30',
@@ -238,7 +238,7 @@
 		'post_chinese_name' : 'CF1305G 题解 - Kuroni and Antihype',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : [],
+		'tag' : ['safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '31',
@@ -254,7 +254,7 @@
 		'post_chinese_name' : 'loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
-		'tag' : ['combinatorics',],
+		'tag' : ['combinatorics','euclid',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '33',
@@ -286,7 +286,7 @@
 		'post_chinese_name' : '浙江省选 2019 补题记录',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['calculating-geometry','combinatorics','data-structure','generating-function',],
+		'tag' : ['calculating-geometry','combinatorics','data-structure','generating-function','keter',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '37',
@@ -294,7 +294,7 @@
 		'post_chinese_name' : 'uoj#272 题解 - 【清华集训2016】石家庄的工人阶级队伍比较坚强',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
-		'tag' : ['combinatorics','set-power-series',],
+		'tag' : ['combinatorics','safe','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '38',
@@ -302,7 +302,7 @@
 		'post_chinese_name' : 'uoj#310 题解 - 【UNR#2】黎明前的巧克力',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
-		'tag' : ['combinatorics','set-power-series',],
+		'tag' : ['combinatorics','safe','set-power-series',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '39',
@@ -350,7 +350,7 @@
 		'post_chinese_name' : 'luoguP4565 题解 - [CTSC2018]暴力写挂',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-17',
-		'tag' : ['d-and-c-on-tree','data-structure',],
+		'tag' : ['d-and-c-on-tree','data-structure','euclid',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '45',
@@ -366,7 +366,7 @@
 		'post_chinese_name' : 'luoguP6667 题解 - [清华集训2016] 如何优雅地求和',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-22',
-		'tag' : ['combinatorics','generating-function',],
+		'tag' : ['combinatorics','euclid','generating-function',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '47',
@@ -374,7 +374,7 @@
 		'post_chinese_name' : 'loj#6703 题解 - 小 Q 的序列',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-23',
-		'tag' : ['combinatorics','generating-function','lagrange-interpolation',],
+		'tag' : ['combinatorics','generating-function','lagrange-interpolation','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '48',
@@ -390,7 +390,7 @@
 		'post_chinese_name' : '论如何通过 sone1',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-02',
-		'tag' : ['d-and-c-on-tree','data-structure',],
+		'tag' : ['apollyon','d-and-c-on-tree','data-structure',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '50',
@@ -398,7 +398,7 @@
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（上）',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['combinatorics','construction','exc-inc','lmoliver',],
+		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '51',
@@ -422,7 +422,7 @@
 		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-29',
-		'tag' : ['calculating-geometry','d-and-c-on-tree','data-structure','monotonicity-of-decision',],
+		'tag' : ['calculating-geometry','d-and-c-on-tree','data-structure','euclid','monotonicity-of-decision',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '54',
@@ -430,7 +430,7 @@
 		'post_chinese_name' : 'luoguP6910 题解 - [ICPC2015 WF]Pipe Stream',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-23',
-		'tag' : ['lmoliver',],
+		'tag' : ['keter','lmoliver',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '55',
@@ -438,7 +438,7 @@
 		'post_chinese_name' : 'uoj#91 题解 - 【集训队互测2015】最大异或和',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-27',
-		'tag' : ['linear-algebra','nimber',],
+		'tag' : ['keter','linear-algebra','nimber',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '56',
@@ -446,7 +446,7 @@
 		'post_chinese_name' : 'uoj#207 题解 - 共价大爷游长沙',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-28',
-		'tag' : ['d-and-c-on-tree','data-structure','randomization',],
+		'tag' : ['d-and-c-on-tree','data-structure','euclid','randomization',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '57',
@@ -454,7 +454,7 @@
 		'post_chinese_name' : 'luoguP3295 题解 - [SCOI2016]萌萌哒',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-28',
-		'tag' : ['data-structure',],
+		'tag' : ['data-structure','euclid',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '58',
@@ -462,7 +462,7 @@
 		'post_chinese_name' : 'uoj#424 题解 - 【集训队作业2018】count',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-29',
-		'tag' : ['bijective-proof','combinatorics','construction','exc-inc',],
+		'tag' : ['bijective-proof','combinatorics','construction','exc-inc','keter',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '59',
@@ -470,7 +470,7 @@
 		'post_chinese_name' : 'luoguP3565 题解 - [POI2014]HOT-Hotels',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-30',
-		'tag' : ['d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '60',
@@ -478,7 +478,7 @@
 		'post_chinese_name' : 'uoj#96 题解 - 【集训队互测2015】胡策的小树',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-30',
-		'tag' : ['combinatorics',],
+		'tag' : ['combinatorics','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '61',
@@ -486,7 +486,7 @@
 		'post_chinese_name' : 'uoj#191 题解 - 【集训队互测2016】Unknown',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['d-and-c-on-tree','data-structure','offline',],
+		'tag' : ['d-and-c-on-tree','data-structure','keter','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '62',
@@ -494,7 +494,7 @@
 		'post_chinese_name' : 'luoguP5291 题解 - [十二省联考2019]希望',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['d-and-c-on-tree','data-structure','offline',],
+		'tag' : ['d-and-c-on-tree','data-structure','keter','offline',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '63',
@@ -502,7 +502,7 @@
 		'post_chinese_name' : 'loj#3370 题解 - 「COCI 2020.10」3D Histogram',
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-02',
-		'tag' : ['calculating-geometry','data-structure',],
+		'tag' : ['calculating-geometry','data-structure','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '64',
@@ -510,7 +510,7 @@
 		'post_chinese_name' : 'loj#3385 题解 - 「COCI 2020.11」Svjetlo',
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-02',
-		'tag' : ['lmoliver',],
+		'tag' : ['keter','lmoliver',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '65',
@@ -526,7 +526,7 @@
 		'post_chinese_name' : 'uoj#328 题解 - 【UTR #3】量子破碎',
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-03',
-		'tag' : ['interact','randomization',],
+		'tag' : ['interact','randomization','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '67',
@@ -542,7 +542,7 @@
 		'post_chinese_name' : 'CF923E 题解 - Perpetual Subtraction',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['generating-function','linear-algebra',],
+		'tag' : ['generating-function','linear-algebra','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '69',
@@ -574,7 +574,7 @@
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['combinatorics','construction','exc-inc','lmoliver','network-flow','pigeon',],
+		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','pigeon',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '73',
@@ -582,7 +582,7 @@
 		'post_chinese_name' : 'uoj#577 题解 - 【ULR #1】打击复读',
 		'type_name' : 'solution',
 		'last_modi' : '2021-01-06',
-		'tag' : ['string',],
+		'tag' : ['keter','string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '74',
@@ -606,7 +606,7 @@
 		'post_chinese_name' : 'uoj#596 题解 - 【集训队互测2021】三维立体混元劲',
 		'type_name' : 'solution',
 		'last_modi' : '2021-01-31',
-		'tag' : ['polynomial',],
+		'tag' : ['keter','polynomial',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '77',
@@ -654,7 +654,7 @@
 		'post_chinese_name' : 'luoguP5470 题解 - [NOI2019]序列',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-21',
-		'tag' : ['network-flow',],
+		'tag' : ['network-flow','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '83',
@@ -678,7 +678,7 @@
 		'post_chinese_name' : 'luoguP6774 题解 - 时瑇的眼泪',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-24',
-		'tag' : ['data-structure','sqrt-tech',],
+		'tag' : ['data-structure','keter','sqrt-tech',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '86',
@@ -686,7 +686,7 @@
 		'post_chinese_name' : 'ZJOI2018 树 —— 没有群论相关',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-28',
-		'tag' : ['combinatorics','exc-inc','generating-function',],
+		'tag' : ['combinatorics','exc-inc','generating-function','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '87',
@@ -694,7 +694,7 @@
 		'post_chinese_name' : 'CF1270H 题解 - Number of Components',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-01',
-		'tag' : [],
+		'tag' : ['euclid',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '88',
@@ -710,7 +710,7 @@
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-24',
-		'tag' : ['lyndon-tech','string','writing',],
+		'tag' : ['keter','lyndon-tech','string','writing',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '90',
@@ -742,7 +742,7 @@
 		'post_chinese_name' : 'SPOJ33039 题解 - AFS3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-27',
-		'tag' : ['calculating-geometry','number-theory',],
+		'tag' : ['calculating-geometry','number-theory','safe',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '94',
@@ -750,6 +750,6 @@
 		'post_chinese_name' : 'luoguP7440 题解 -「KrOI2021」Feux Follets',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-29',
-		'tag' : ['generating-function','linear-algebra','polynomial',],
+		'tag' : ['euclid','generating-function','linear-algebra','polynomial',],
 	};
 })(document);

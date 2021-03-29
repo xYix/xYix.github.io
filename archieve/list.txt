@@ -5,38 +5,44 @@ none
 alkane-counting
 烷烃计数
 solution
-2
+3
+euclid
 combinatorics
 generating-function
 cactus-counting
 有标号仙人掌计数
 solution
-2
+3
+euclid
 combinatorics
 generating-function
 biconnected-graph-counting
 边/点双连通图计数
 solution
-3
+4
+euclid
 combinatorics
 generating-function
 lagrange-inversion
 loj-6275
 loj#6275 题解 - 棋盘
 solution
-3
+4
+safe
 combinatorics
 generating-function
 polynomial
 uoj-420
 uoj#420 题解 - 【集训队作业2018】矩形
 solution
-1
+2
+euclid
 combinatorics
 51nod-1222
 51nod1222 题解 - 最小公倍数计数
 solution
-1
+2
+safe
 number-theory
 about-FFT
 关于 FFT
@@ -53,7 +59,8 @@ generating-function
 fast-factorial-calculating
 快速阶乘算法
 solution
-2
+3
+keter
 polynomial
 lagrange-interpolation
 dirichlet-GF
@@ -76,13 +83,15 @@ algorithm
 SPOJ-26073
 SPOJ26073 题解 - DIVCNT1
 solution
-2
+3
+keter
 number-theory
 calculating-geometry
 agc-038-e
 AGC038E 题解 - Gachapon
 solution
-2
+3
+safe
 combinatorics
 generating-function
 linear-algebra
@@ -93,7 +102,8 @@ linear-algebra
 sx2020
 省选 2020 补题记录
 solution
-7
+8
+keter
 combinatorics
 string
 lyndon-tech
@@ -104,17 +114,20 @@ linear-programming
 uoj-372
 uoj#372 题解 - 【UR#17】滑稽树前做游戏
 solution
-0
+1
+keter
 bzoj-3684
 BZOJ3684 题解 - 大朋友和多叉树
 solution
-2
+3
+safes
 generating-function
 lagrange-inversion
 loj-6054
 loj#6055 题解 - 「from CommonAnts」一道数学题
 solution
-2
+3
+euclid
 combinatorics
 lagrange-interpolation
 luogu-4500
@@ -129,7 +142,8 @@ apollyon
 luogu-5155
 luoguP5155 题解 - [USACO18DEC]Balance Beam P
 solution
-1
+2
+safe
 calculating-geometry
 simplex-alg
 单纯形法学习笔记
@@ -145,31 +159,37 @@ game-theory
 agc-016-d
 AGC016D 题解 - XOR Replace
 solution
-0
+1
+safe
 agc-016-f
 AGC016F 题解 - Games on DAG
 solution
-1
+2
+euclid
 game-theory
 agc-032-f
 AGC032F 题解 - One Third
 solution
-0
+1
+euclid
 agc-034-f
 AGC034F 题解 - RNG and XOR
 solution
-2
+3
+safe
 combinatorics
 set-power-series
 cf-1286-f
 CF1286F 题解 - Harry the Potter
 solution
-1
+2
+euclid
 set-power-series
 cf-1305-g
 CF1305G 题解 - Kuroni and Antihype
 solution
-0
+1
+safe
 euler-trans-in-group-theory
 群论视角下的欧拉变换
 algorithm
@@ -180,7 +200,8 @@ group-counting
 loj-6077
 loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对
 solution
-1
+2
+euclid
 combinatorics
 luogu-5050
 多点求值的新做法
@@ -202,21 +223,24 @@ set-power-series
 sx2019
 浙江省选 2019 补题记录
 solution
-4
+5
 combinatorics
 generating-function
 calculating-geometry
 data-structure
+keter
 uoj-272
 uoj#272 题解 - 【清华集训2016】石家庄的工人阶级队伍比较坚强
 solution
-2
+3
+safe
 combinatorics
 set-power-series
 uoj-310
 uoj#310 题解 - 【UNR#2】黎明前的巧克力
 solution
-2
+3
+safe
 combinatorics
 set-power-series
 young-tableau
@@ -254,7 +278,8 @@ game-theory
 luogu-4565
 luoguP4565 题解 - [CTSC2018]暴力写挂
 solution
-2
+3
+euclid
 d-and-c-on-tree
 data-structure
 combinatorics
@@ -267,13 +292,15 @@ group-counting
 luogu-6667
 luoguP6667 题解 - [清华集训2016] 如何优雅地求和
 solution
-2
+3
+euclid
 combinatorics
 generating-function
 loj-6703
 loj#6703 题解 - 小 Q 的序列
 solution
-3
+4
+safe
 combinatorics
 generating-function
 lagrange-interpolation
@@ -287,13 +314,15 @@ offline
 how-to-solve-sone1
 论如何通过 sone1
 solution
-2
+3
+apollyon
 d-and-c-on-tree
 data-structure
 ioi2020hw
 IOI2020 集训队作业 AT 部分口胡（上）
 solution
-4
+5
+keter
 exc-inc
 combinatorics
 construction
@@ -314,7 +343,8 @@ generating-function
 luogu-2305
 luoguP2305 题解 - [NOI2014]购票
 solution
-4
+5
+euclid
 data-structure
 d-and-c-on-tree
 monotonicity-of-decision
@@ -322,30 +352,35 @@ calculating-geometry
 luogu-6910
 luoguP6910 题解 - [ICPC2015 WF]Pipe Stream
 solution
-1
+2
+keter
 lmoliver
 uoj-91
 uoj#91 题解 - 【集训队互测2015】最大异或和
 solution
-2
+3
+keter
 linear-algebra
 nimber
 uoj-207
 uoj#207 题解 - 共价大爷游长沙
 solution
-3
+4
+euclid
 data-structure
 d-and-c-on-tree
 randomization
 luogu-3295
 luoguP3295 题解 - [SCOI2016]萌萌哒
 solution
-1
+2
+euclid
 data-structure
 uoj-424
 uoj#424 题解 - 【集训队作业2018】count
 solution
-4
+5
+keter
 exc-inc
 combinatorics
 construction
@@ -353,37 +388,43 @@ bijective-proof
 luogu-3565
 luoguP3565 题解 - [POI2014]HOT-Hotels
 solution
-1
+2
+safe
 d-and-c-on-tree
 uoj-96
 uoj#96 题解 - 【集训队互测2015】胡策的小树
 solution
-1
+2
+safe
 combinatorics
 uoj-191
 uoj#191 题解 - 【集训队互测2016】Unknown
 solution
-3
+4
+keter
 offline
 data-structure
 d-and-c-on-tree
 luogu-5291
 luoguP5291 题解 - [十二省联考2019]希望
 solution
-3
+4
+keter
 offline
 data-structure
 d-and-c-on-tree
 loj-3370
 loj#3370 题解 - 「COCI 2020.10」3D Histogram
 solution
-2
+3
+safe
 data-structure
 calculating-geometry
 loj-3385
 loj#3385 题解 - 「COCI 2020.11」Svjetlo
 solution
-1
+2
+keter
 lmoliver
 uoj-228
 uoj#228 题解 - 基础数据结构练习题 - 兼均摊分析学习笔记
@@ -394,7 +435,8 @@ amortized-analysis
 uoj-328
 uoj#328 题解 - 【UTR #3】量子破碎
 solution
-2
+3
+safe
 randomization
 interact
 noip-2020
@@ -405,7 +447,8 @@ construction
 cf-923-e
 CF923E 题解 - Perpetual Subtraction
 solution
-2
+3
+safe
 generating-function
 linear-algebra
 bpp
@@ -430,7 +473,8 @@ calculating-geometry
 ioi2020hw2
 IOI2020 集训队作业 AT 部分口胡（下）
 solution
-6
+7
+keter
 exc-inc
 combinatorics
 construction
@@ -440,7 +484,8 @@ pigeon
 uoj-577
 uoj#577 题解 - 【ULR #1】打击复读
 solution
-1
+2
+keter
 string
 lagrange-inv-bij
 拉格朗日反演的组合意义证明
@@ -458,7 +503,8 @@ polynomial
 uoj-596
 uoj#596 题解 - 【集训队互测2021】三维立体混元劲
 solution
-1
+2
+keter
 polynomial
 parallel-series
 广义串并联图学习笔记
@@ -489,7 +535,8 @@ lyndon-tech
 luogu-5470
 luoguP5470 题解 - [NOI2019]序列
 solution
-1
+2
+safe
 network-flow
 det-eq-exp-trace-log
 det = exp trace log 和矩阵树定理和多元拉反
@@ -506,20 +553,23 @@ other
 luogu-6774
 luoguP6774 题解 - 时瑇的眼泪
 solution
-2
+3
+keter
 data-structure
 sqrt-tech
 luogu-4500-ex
 ZJOI2018 树 —— 没有群论相关
 solution
-3
+4
+safe
 exc-inc
 combinatorics
 generating-function
 cf-1270-h
 CF1270H 题解 - Number of Components
 solution
-0
+1
+euclid
 4-russian
 四毛子学习笔记
 algorithm
@@ -528,7 +578,8 @@ data-structure
 string-prob
 字符串题集
 solution
-3
+4
+keter
 string
 lyndon-tech
 writing
@@ -552,13 +603,15 @@ apollyon
 spoj-33039
 SPOJ33039 题解 - AFS3
 solution
-2
+3
+safe
 number-theory
 calculating-geometry
 luogu-7440
 luoguP7440 题解 -「KrOI2021」Feux Follets
 solution
-3
+4
+euclid
 generating-function
 linear-algebra
 polynomial
