@@ -205,9 +205,9 @@
             if (win.Type !== undefined) {
                 let nowlen = win.Title.length;
                 win.Title[nowlen] = '分类为：';
-                if (win.Type == 'solution') win.Title[nowlen] += '题解';
-                else if (win.Type == 'algorithm') win.Title[nowlen] += '算法/知识点';
-                else if (win.Type == 'other') win.Title[nowlen] += '游记/其他';
+                if (win.Type == 'solution') win.Title[nowlen] += '收容物';
+                else if (win.Type == 'algorithm') win.Title[nowlen] += 'Thaumiel级';
+                else if (win.Type == 'other') win.Title[nowlen] += '外勤记录';
                 else win.Title[nowlen] += '不明分类';
             }
             if (win.Tags.length !== 0) {
@@ -267,9 +267,9 @@
             if (win.Pathname[0] === 'archieve') {
                 if (win.Type !== undefined) {
                     let Typeinfo = '分类为：';
-                    if (win.Type == 'solution') Typeinfo += '题解';
-                    else if (win.Type == 'algorithm') Typeinfo += '算法/知识点';
-                    else if (win.Type == 'other') Typeinfo += '游记/其他';
+                    if (win.Type == 'solution') Typeinfo += '收容物';
+                    else if (win.Type == 'algorithm') Typeinfo += 'Thaumiel级';
+                    else if (win.Type == 'other') Typeinfo += '外勤记录';
                     else Typeinfo += '不明分类';
                     AddText(Typeinfo, 'h3');
                 }
@@ -361,9 +361,9 @@
             let Postinfo_type_a = win.createElement('a');
             Postinfo_type_a.href = '/archieve/' +
                 win.ezylanASearch(win.NextSearch(win.TrueSearch, { Type: postinfo.type_name, Page: 0 }));
-            if (postinfo.type_name === 'solution') Postinfo_type_a.textContent = '题解';
-            else if (postinfo.type_name === 'algorithm') Postinfo_type_a.textContent = '算法/知识点';
-            else Postinfo_type_a.textContent = '游记/其他';
+            if (postinfo.type_name === 'solution') Postinfo_type_a.textContent = '收容物';
+            else if (postinfo.type_name === 'algorithm') Postinfo_type_a.textContent = 'Thaumiel级';
+            else Postinfo_type_a.textContent = '外勤记录';
             Postinfo_type.appendChild(Postinfo_type_a);
         }
         else {
