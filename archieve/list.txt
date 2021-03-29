@@ -125,7 +125,7 @@ exc-inc
 combinatorics
 group-counting
 generating-function
-supreme-divine
+apollyon
 luogu-5155
 luoguP5155 题解 - [USACO18DEC]Balance Beam P
 solution
@@ -548,7 +548,7 @@ solution
 string
 combinatorics
 exc-inc
-supreme-divine
+apollyon
 spoj-33039
 SPOJ33039 题解 - AFS3
 solution
