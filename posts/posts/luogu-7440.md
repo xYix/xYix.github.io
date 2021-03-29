@@ -88,7 +88,7 @@ $$
 $$
 \sum_{i=0}^{\infty}\left(\mathcal A^i\right)_{00**}=G=\sum_{i=0}^{\infty}x^i\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00}
 $$
-两边的超矩阵同时“反转”，反映在它的投影：普通矩阵上就是转置。于是
+两边的超矩阵同时“反转”，反映在它的投影——普通矩阵上就是转置。于是
 $$
 \boxed{G=\sum_{i=0}^{\infty}y^i\left(\begin{bmatrix}1&0\end{bmatrix}A^T_1A^T_{2}...A_i^T\right)_{00}}
 $$
