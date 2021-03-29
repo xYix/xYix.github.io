@@ -214,8 +214,8 @@
                 let nowlen = win.Title.length;
                 win.Title[nowlen] = '具有标签：';
                 for (let i = 0; i < win.Tags.length; i += 1) {
-                    if (win.tags_list[win.Tags[i]] !== undefined)
-                        win.Title[nowlen] += win.tags_list[win.Tags[i]];
+                    if (win.tags_chinese[win.Tags[i]] !== undefined)
+                        win.Title[nowlen] += win.tags_chinese[win.Tags[i]];
                     else win.Title[nowlen] += '不明标签';
                     if (i !== win.Tags.length - 1) win.Title[nowlen] += '，';
                 }
@@ -276,8 +276,8 @@
                 if (win.Tags.length !== 0) {
                     let Taginfo = '具有标签：';
                     for (let i = 0; i < win.Tags.length; i = i + 1) {
-                        if (win.tags_list[win.Tags[i]] !== undefined)
-                            Taginfo += win.tags_list[win.Tags[i]];
+                        if (win.tags_chinese[win.Tags[i]] !== undefined)
+                            Taginfo += win.tags_chinese[win.Tags[i]];
                         else Taginfo += '不明标签';
                         if (i !== win.Tags.length - 1) Taginfo += '，';
                     }
@@ -302,12 +302,12 @@
         Titleh2.appendChild(win.createTextNode('英文名'));
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
-        for (var Tag in win.tags_list) {
+        for (var Tag in win.tags_chinese) {
             let TagsRow = win.createElement('tr');
                 let TagsRow1 = win.createElement('th');
                 let TagsRow1a = win.createElement('a');
                 TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
-                TagsRow1a.textContent = win.tags_list[Tag];
+                TagsRow1a.textContent = win.tags_chinese[Tag];
                 TagsRow1a.style = 'font-weight: bold';
                 TagsRow1.appendChild(TagsRow1a);
                 TagsRow.appendChild(TagsRow1);
@@ -380,7 +380,7 @@
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
                 win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
-            Postinfo_tags_a.textContent = win.tags_list[postinfo.tag[i]];
+            Postinfo_tags_a.textContent = win.tags_chinese[postinfo.tag[i]];
             if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
             Postinfo_tags.appendChild(Postinfo_tags_a);
@@ -540,7 +540,7 @@
             let TagsRow1a = win.createElement('a');
             TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
             let TagsRow1strong = win.createElement('strong');
-            TagsRow1strong.textContent = win.tags_list[Tag];
+            TagsRow1strong.textContent = win.tags_chinese[Tag];
             TagsRow1a.appendChild(TagsRow1strong);
             if(Tag === 'writing') TagsRow1a.style = 'color: orange';
             if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';

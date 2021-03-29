@@ -4,7 +4,7 @@ using namespace std;
 
 string post_name,post_chinese_name,type_name;
 string post_tag[20];int tag_cnt;
-map<string,string> TAG;
+map<string,string> TAG; map<string, string> TAG_VAL;
 string trash;
 
 char* UTF8ToGB(const char* utf8)
@@ -70,18 +70,6 @@ void PRINT_INDEX_INFO(string filename, string mdfile = "") {
 }
 
 int main(){
-	freopen("tags/list.txt","r",stdin);
-//	freopen("js/tags_list.js","w",stdout);
-//	cout<<"(function(win){\n	win.tags_list={};\n";
-	string tmp_tag_name,tmp_tag_chinese_name;
-	while(getline(cin,tmp_tag_name)){
-		getline(cin,tmp_tag_chinese_name);
-		tmp_tag_chinese_name=UTF8ToGB(tmp_tag_chinese_name.c_str());
-		TAG[tmp_tag_name]=tmp_tag_chinese_name;
-//		cout<<"	win.tags_list['"<<tmp_tag_name<<"'] = '"<<GBToUTF8(tmp_tag_chinese_name.c_str())<<"';\n";
-	}
-//	printf("})(document);");
-	cin.clear();
 	freopen("archieve/list.txt","r",stdin);
 	freopen("js/archieve_list.js","w",stdout);
 	cout<<"(function(win){\n	win.archieve_list=[];\n";
@@ -101,7 +89,7 @@ int main(){
 		cout<<"		'type_name' : '"<<type_name<<"',\n";
 		cout<<"		'last_modi' : '"<<Get_Mtime("posts/posts/" + post_name + ".md")<<"',\n";
 		cout<<"		'tag' : [";
-		for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
+			for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
 		cout<<"],\n	};\n";
 	}
 	printf("})(document);");
