@@ -12,7 +12,7 @@
 		'postid' : '2',
 		'post_name' : 'alkane-counting',
 		'post_chinese_name' : '烷烃计数',
-		'type_name' : 'algorithm',
+		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['combinatorics','generating-function',],
 	};
@@ -20,7 +20,7 @@
 		'postid' : '3',
 		'post_name' : 'cactus-counting',
 		'post_chinese_name' : '有标号仙人掌计数',
-		'type_name' : 'algorithm',
+		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['combinatorics','generating-function',],
 	};
@@ -28,7 +28,7 @@
 		'postid' : '4',
 		'post_name' : 'biconnected-graph-counting',
 		'post_chinese_name' : '边/点双连通图计数',
-		'type_name' : 'algorithm',
+		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['combinatorics','generating-function','lagrange-inversion',],
 	};
