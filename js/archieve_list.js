@@ -166,7 +166,7 @@
 		'post_chinese_name' : 'luoguP4500 题解 - [ZJOI2018]树',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','exc-inc','generating-function','group-counting','supreme-divine',],
+		'tag' : ['apollyon','combinatorics','exc-inc','generating-function','group-counting',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '22',
@@ -734,7 +734,7 @@
 		'post_chinese_name' : 'uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-28',
-		'tag' : ['combinatorics','exc-inc','string','supreme-divine',],
+		'tag' : ['apollyon','combinatorics','exc-inc','string',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
 		'postid' : '93',
