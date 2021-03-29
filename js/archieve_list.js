@@ -752,4 +752,5 @@
 		'last_modi' : '2021-03-29',
 		'tag' : ['euclid','generating-function','linear-algebra','polynomial',],
 	};
+	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
 })(document);

@@ -92,6 +92,7 @@ int main(){
 			for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
 		cout<<"],\n	};\n";
 	}
+	printf("	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});\n");
 	printf("})(document);");
 	freopen("sitemap.xml","w",stdout);
 	printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");

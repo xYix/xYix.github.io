@@ -13,14 +13,14 @@
     win.AnalyzePathname = function (s) {
         let ret = [], t;
         for (t of (s.startsWith('/') ? s.substr(1) : s).split('/'))
-            if (t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog' && t !== '') ret[ret.length] = t;
+            if (t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog' && t !== '') ret.push(t);
         return ret;
     }
     win.AnalyzeTags = function (s) {
         if (s === undefined) return [];
         let ret = [], t;
         for (t of s.split('+'))
-            ret[ret.length] = t;
+            ret.push(t);
         return ret;
     }
     //生成后继链接
@@ -35,7 +35,7 @@
         }
         if (deltaSearch.Tags !== undefined)
             for (let i = 0; i < deltaSearch.Tags.length; i++) if (tmpSearch.Tags.indexOf(deltaSearch.Tags[i]) === -1)
-                tmpSearch.Tags[tmpSearch.Tags.length] = deltaSearch.Tags[i];
+                tmpSearch.Tags.push(deltaSearch.Tags[i]);
         if (deltaSearch.Type !== undefined) tmpSearch.Type = deltaSearch.Type;
         if (deltaSearch.Sortby !== undefined) tmpSearch.Sortby = deltaSearch.Sortby;
         if (deltaSearch.Page !== undefined) tmpSearch.Page = deltaSearch.Page;
@@ -68,6 +68,7 @@
         win.Pathname = win.AnalyzePathname(location.pathname);
         win.Search = win.AnalyzeSearch(location.search);
         win.Tags = win.AnalyzeTags(win.Search['tags']);
+        win.Tags.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
         win.Type = win.Search['type'];
         win.Sortby = win.Search['sortby'];
         if (win.Search['page'] === undefined) win.Page = 0;
@@ -302,8 +303,8 @@
         Titleh2.appendChild(win.createTextNode('英文名'));
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
-        for (var Tag in win.tags_chinese) {
-            let TagsRow = win.createElement('tr');
+        for (var i in win.tags_list) {
+            let Tag = win.tags_list[i], TagsRow = win.createElement('tr');
                 let TagsRow1 = win.createElement('th');
                 let TagsRow1a = win.createElement('a');
                 TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
