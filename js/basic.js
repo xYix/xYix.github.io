@@ -60,8 +60,8 @@
             ret += '&page=' + Search.Page;
         if (Search.Funval !== undefined)
             ret += '&funval=' + Search.Funval;
-        if (Search.ThemeColor !== undefined) 
-            ret += '&themecolor=' + Search.ThemeColor;
+        // if (Search.ThemeColor !== undefined) 
+        //     ret += '&themecolor=' + Search.ThemeColor;
         return ret;
     }
     win.InitAnalyze = function () {
@@ -83,7 +83,7 @@
                     Sortby: win.Sortby,
                     Page: win.Page,
                     Funval: win.Funval,
-                    ThemeColor: undefined,
+                    // ThemeColor: undefined,
                 }
             );
             if (win.Postname) newloc += '&postname=' + win.Postname;
@@ -102,7 +102,7 @@
             Sortby: win.Sortby,
             Page: win.Page,
             Funval: win.Funval,
-            ThemeColor: win.ThemeColor,
+            // ThemeColor: win.ThemeColor,
         };
     }
     win.InitAnalyze();
@@ -162,13 +162,13 @@
         write_link('一键清除 tag', location.pathname);
         let changecolor = location.pathname;
         if (win.ThemeColor === undefined || win.ThemeColor === 'Z')
-            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'N'}));
+            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=N';
         if (win.ThemeColor === 'Y')
-            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Z'}));
+            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=Z';
         if (win.ThemeColor === 'X')
-            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'Y'}));
+            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=Y';
         if (win.ThemeColor === 'N')
-            changecolor += win.ezylanASearch(win.NextSearch(win.TrueSearch,{ThemeColor: 'X'}));
+            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=X';
         if (win.Postname !== undefined) {
             if (changecolor[changecolor.length - 1] === '/')
                 changecolor += '?postname=' + win.Postname;
