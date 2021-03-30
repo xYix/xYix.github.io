@@ -758,7 +758,7 @@
 		'post_chinese_name' : 'CFgym102978C 题解 -【XXI Opencup GP of Tokyo】Count Min Ratio',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-30',
-		'tag' : ['bijective-proof','combinatorics','keter',],
+		'tag' : ['bijective-proof','combinatorics','construction','keter',],
 	};
 	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
 })(document);

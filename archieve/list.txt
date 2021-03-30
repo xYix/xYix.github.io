@@ -618,7 +618,8 @@ polynomial
 cf-gym-102978-c
 CFgym102978C 题解 -【XXI Opencup GP of Tokyo】Count Min Ratio
 solution
-3
+4
 keter
 combinatorics
 bijective-proof
+construction
