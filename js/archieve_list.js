@@ -752,5 +752,13 @@
 		'last_modi' : '2021-03-29',
 		'tag' : ['euclid','generating-function','linear-algebra','polynomial',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '95',
+		'post_name' : 'cf-gym-102978-c',
+		'post_chinese_name' : 'CFgym102978C 题解 -【XXI Opencup GP of Tokyo】Count Min Ratio',
+		'type_name' : 'solution',
+		'last_modi' : '2021-03-30',
+		'tag' : ['bijective-proof','combinatorics','keter',],
+	};
 	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
 })(document);
