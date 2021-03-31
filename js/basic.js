@@ -74,6 +74,7 @@
         if (win.Search['page'] === undefined) win.Page = 0;
         else win.Page = parseInt(win.Search['page']);
         win.Funval = win.Search['funval'];
+        win.Funval = 41; //April Fools
         win.Postname = win.Search['postname'];
         if (win.Search['themecolor']) {
             localStorage.setItem("themecolor", win.Search['themecolor']);
@@ -84,7 +85,6 @@
                     Sortby: win.Sortby,
                     Page: win.Page,
                     Funval: win.Funval,
-                    // ThemeColor: undefined,
                 }
             );
             if (win.Postname) newloc += '&postname=' + win.Postname;
@@ -103,16 +103,10 @@
             Sortby: win.Sortby,
             Page: win.Page,
             Funval: win.Funval,
-            // ThemeColor: win.ThemeColor,
         };
     }
     win.InitAnalyze();
-    // win.putError = function () {
-    //     let notfoundpage = '/404.html';
-    //     if (win.ThemeColor !== undefined)
-    //     notfoundpage = notfoundpage + '?themecolor=' + win.ThemeColor;
-    //     win.location.replace(notfoundpage);
-    // }
+
     win.AddText = function (tdata, ttext, eletag) {
         let Ttext = win.createElement(eletag);
         Ttext.textContent = ttext;
@@ -128,13 +122,22 @@
         SideBarTitle.className = 'title';
         let SideBarTitleContent1 = win.createElement('h2');
         SideBarTitleContent1.textContent = '基金会超常组合数学部';
+        if (win.Funval === 41) 
+            SideBarTitleContent1.textContent = '数据结构分裂者';
         SideBarTitle.appendChild(SideBarTitleContent1);
         
         let SCPblock = win.createElement('center');
         SCPblock.style = 'width: 70%';
-        win.AddText(SCPblock, 'Surprising', 'p');
-        win.AddText(SCPblock, 'Combinatorial', 'p');
-        win.AddText(SCPblock, 'Proof', 'p');
+        if (win.Funval === 41) {
+            win.AddText(SCPblock, '数点', 'p');
+            win.AddText(SCPblock, '重构', 'p');
+            win.AddText(SCPblock, '剖分', 'p');
+        }
+        else {
+            win.AddText(SCPblock, 'Surprising', 'p');
+            win.AddText(SCPblock, 'Combinatorial', 'p');
+            win.AddText(SCPblock, 'Proof', 'p');
+        }
         SideBarTitle.appendChild(SCPblock);
         
         let SideBarTitleContent2 = win.createElement('p');
