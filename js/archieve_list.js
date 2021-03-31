@@ -760,5 +760,13 @@
 		'last_modi' : '2021-03-30',
 		'tag' : ['bijective-proof','combinatorics','construction','keter',],
 	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '96',
+		'post_name' : 'nytoi-2021-a',
+		'post_chinese_name' : 'NayutanOI2021A 题解 - アンドロメダアンドロメダ',
+		'type_name' : '5',
+		'last_modi' : '2021-03-31',
+		'tag' : [],
+	};
 	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
 })(document);

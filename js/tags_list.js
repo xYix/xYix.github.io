@@ -39,6 +39,7 @@
 	win.tags_chinese['euclid'] = '😅euclid😅';
 	win.tags_chinese['keter'] = '😱keter😱';
 	win.tags_chinese['apollyon'] = '😈apollyon😈';
+	win.tags_chinese['x-yi-x'] = '👽自制👽';
 
 	win.tags_val={};
 	win.tags_val['combinatorics'] = 1;
@@ -79,6 +80,7 @@
 	win.tags_val['euclid'] = -58568;
 	win.tags_val['keter'] = -58569;
 	win.tags_val['apollyon'] = -58570;
+	win.tags_val['x-yi-x'] = -998244353;
 
 	win.tags_list = [];
 	for (var Tag in win.tags_chinese) win.tags_list.push(Tag);
