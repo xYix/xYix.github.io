@@ -625,6 +625,7 @@ bijective-proof
 construction
 nytoi-2021-a
 NayutanOI2021A 题解 - アンドロメダアンドロメダ
+solution
 5
 x-yi-x
 keter

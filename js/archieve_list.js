@@ -764,9 +764,9 @@
 		'postid' : '96',
 		'post_name' : 'nytoi-2021-a',
 		'post_chinese_name' : 'NayutanOI2021A 题解 - アンドロメダアンドロメダ',
-		'type_name' : '5',
+		'type_name' : 'solution',
 		'last_modi' : '2021-03-31',
-		'tag' : [],
+		'tag' : ['bijective-proof','combinatorics','construction','keter','x-yi-x',],
 	};
 	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
 })(document);
