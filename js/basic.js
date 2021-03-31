@@ -227,10 +227,11 @@
     }
     win.title = 'x义x 的 blog - ' + win.Title[0];
     win.WriteTitle2 = function (data) {
-        let AddText = function (ttext, eletag) {
-            let Ttext = win.createElement(eletag);
+        let AddText = function (ttext, eletag, tstyle) {
+            let Ttext = document.createElement(eletag);
             Ttext.textContent = ttext;
-            let TTtext = win.createElement('center');
+            if (tstyle !== undefined) Ttext.style = tstyle;
+            let TTtext = document.createElement('center');
             TTtext.appendChild(Ttext);
             data.appendChild(TTtext);
         }

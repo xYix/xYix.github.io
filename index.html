@@ -14,8 +14,8 @@
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
         <div class="content-block" id='post'>
-            <script>document.WriteTitle2(document.querySelector('#post'));</script>
             <script>
+                document.Funval = 41;
                 let data = document.querySelector('#post');
                 let AddText = function (ttext, eletag, tstyle) {
                     let Ttext = document.createElement(eletag);
@@ -25,25 +25,46 @@
                     TTtext.appendChild(Ttext);
                     data.appendChild(TTtext);
                 }
-                AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
-                AddText('高度机密', 'p', 'color: #600; font-size: 400%; font-weight: bold; margin: 0');
-                AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
-                AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
-                data.appendChild(document.createElement('br'));
-                AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
-                AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
-                AddText('你已经被警告过了。', 'p', 'color: #600; font-size: 250%; font-weight: bold; margin: 0');
-                for (let i = 0; i < 50; i += 1)
+                if (document.Funval === 41) {
+                    AddText('这里不应该是超常组合数学部吗？这是什么玩意？', 'p');
                     data.appendChild(document.createElement('br'));
-                let picblock = document.createElement('div');
-                picblock.style = 'margin: auto; text-align: center';
-                    let mypic = document.createElement('img');
-                    mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
-                    mypic.alt = '致命模因';
-                picblock.appendChild(mypic);
-                data.appendChild(picblock);
-                for (let i = 0; i < 5; i += 1)
+                    AddText('你好，这里是数据结构分裂者！基金会超常组合数学部的站点已经被我们攻占了！', 'p', 'font-size: 250%; font-weight: bold; margin: 0');
                     data.appendChild(document.createElement('br'));
+                    AddText('我看你们是闲着没事连只有一个人的分部也要欺负。', 'p');
+                    data.appendChild(document.createElement('br'));
+                    AddText('那不重要，重要的是超常组合数学部的模因触媒已经被我们删除了，现在超常组合数学部的所有文档都不再是秘密！！！!1', 'p', 'font-size: 250%; font-weight: bold; margin: 0');
+                    data.appendChild(document.createElement('br'));
+                    AddText('……可是它本来也不是。', 'p');
+                    data.appendChild(document.createElement('br'));
+                    AddText('我们还删除了超常组合数学部站点内的资料本地文件，这样一来他们就无法做出任何更新！!1', 'p', 'font-size: 250%; font-weight: bold; margin: 0');
+                    data.appendChild(document.createElement('br'));
+                    AddText('这玩意是托管在 gitee 和 github 上的，删本地文件有个锤用？？？', 'p');
+                    data.appendChild(document.createElement('br'));
+                    AddText('不管不管！反正复活伟大的数据结构之神的任务又往前推进了一大步！！！！!1我们要继续向下一个站点 alpha1022.me 进发了！', 'p', 'font-size: 250%; font-weight: bold; margin: 0');
+                    data.appendChild(document.createElement('br'));
+                    AddText('……走好不送。', 'p');
+                }
+                else {
+                    AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
+                    AddText('高度机密', 'p', 'color: #600; font-size: 400%; font-weight: bold; margin: 0');
+                    AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
+                    AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+                    data.appendChild(document.createElement('br'));
+                    AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
+                    AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
+                    AddText('你已经被警告过了。', 'p', 'color: #600; font-size: 250%; font-weight: bold; margin: 0');
+                    for (let i = 0; i < 50; i += 1)
+                        data.appendChild(document.createElement('br'));
+                    let picblock = document.createElement('div');
+                    picblock.style = 'margin: auto; text-align: center';
+                        let mypic = document.createElement('img');
+                        mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
+                        mypic.alt = '致命模因';
+                    picblock.appendChild(mypic);
+                    data.appendChild(picblock);
+                    for (let i = 0; i < 5; i += 1)
+                        data.appendChild(document.createElement('br'));
+                }
             </script>
             <p>嗯？致命模因触媒没有干掉……草，图片挂了。算了算了，欢迎你，访客。</p>
             <h2>关于超常组合数学部</h2>
