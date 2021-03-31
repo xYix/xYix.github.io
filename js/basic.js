@@ -246,8 +246,6 @@
         }
         else {
             if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
-            if (win.Pathname[0] === 'tags') AddText('标签一览', 'h1');
-            if (win.Pathname[0] === 'posts') AddText(win.findpost(win.Postname).post_chinese_name, 'h1');
             if (win.Pathname[0] === 'archieve') {
                 if (win.Type !== undefined) {
                     let Typeinfo = '分类为：';

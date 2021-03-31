@@ -14,7 +14,12 @@
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
         <div class="content-block" id='post'>
-            <script>document.WriteTitle2(document.querySelector('#post'));</script>
+            <script>
+                let Ttext = document.createElement('h1');
+                Ttext.textContent = document.findpost(document.Postname).post_chinese_name;
+                Ttext.style = 'text-align: center';
+                document.querySelector('#post').appendChild(Ttext);
+            </script>
             <script>document.WriteBlog(document.querySelector('#post'),document.findpost(document.Postname));</script>
             <center><h1>标签</h1></center>
             <script>document.WriteTagsList2(document.querySelector('#post'),document.findpost(document.Postname));</script>
