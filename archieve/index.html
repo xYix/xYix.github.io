@@ -14,7 +14,37 @@
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class='post-block'>
         <div class='content-block' id='post'>
-            <script>document.WriteTitle2(document.querySelector('#post'));</script>
+            <script>
+                let data = document.querySelector('#post');
+                let AddText = function (ttext, eletag, tstyle) {
+                    let Ttext = document.createElement(eletag);
+                    Ttext.textContent = ttext;
+                    if (tstyle !== undefined) Ttext.style = tstyle;
+                    let TTtext = document.createElement('center');
+                    TTtext.appendChild(Ttext);
+                    data.appendChild(TTtext);
+                }
+                AddText('文章一览', 'h1');
+                if (document.Type !== undefined) {
+                    let Typeinfo = '分类为：';
+                    if (document.Type == 'solution') Typeinfo += '收容物';
+                    else if (document.Type == 'algorithm') Typeinfo += 'Thaumiel级';
+                    else if (document.Type == 'other') Typeinfo += '外勤记录';
+                    else Typeinfo += '不明分类';
+                    AddText(Typeinfo, 'h3');
+                }
+                if (document.Tags.length !== 0) {
+                    let Taginfo = '具有标签：';
+                    for (let i = 0; i < document.Tags.length; i = i + 1) {
+                        if (document.tags_chinese[document.Tags[i]] !== undefined)
+                            Taginfo += document.tags_chinese[document.Tags[i]];
+                        else Taginfo += '不明标签';
+                        if (i !== document.Tags.length - 1) Taginfo += '，';
+                    }
+                    AddText(Taginfo, 'h3');
+                }
+                AddText('第 ' + (document.Page + 1) + ' 页', 'h3');
+            </script>
             <script>document.WriteArchieve(document.querySelector('#post'));</script>
             <script>document.WritePageButton(document.querySelector('#post'),
                 document.post_count,document.post_per_page);</script>

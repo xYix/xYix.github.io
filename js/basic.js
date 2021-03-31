@@ -229,46 +229,6 @@
         }
     }
     win.title = 'x义x 的 blog - ' + win.Title[0];
-    win.WriteTitle2 = function (data) {
-        let AddText = function (ttext, eletag, tstyle) {
-            let Ttext = document.createElement(eletag);
-            Ttext.textContent = ttext;
-            if (tstyle !== undefined) Ttext.style = tstyle;
-            let TTtext = document.createElement('center');
-            TTtext.appendChild(Ttext);
-            data.appendChild(TTtext);
-        }
-        if (win.isError === 1) {
-            AddText('您似乎跃迁到了银河系之外', 'h1');
-        }
-        else if (win.Pathname.length === 0) {
-            //qaq
-        }
-        else {
-            if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
-            if (win.Pathname[0] === 'archieve') {
-                if (win.Type !== undefined) {
-                    let Typeinfo = '分类为：';
-                    if (win.Type == 'solution') Typeinfo += '收容物';
-                    else if (win.Type == 'algorithm') Typeinfo += 'Thaumiel级';
-                    else if (win.Type == 'other') Typeinfo += '外勤记录';
-                    else Typeinfo += '不明分类';
-                    AddText(Typeinfo, 'h3');
-                }
-                if (win.Tags.length !== 0) {
-                    let Taginfo = '具有标签：';
-                    for (let i = 0; i < win.Tags.length; i = i + 1) {
-                        if (win.tags_chinese[win.Tags[i]] !== undefined)
-                            Taginfo += win.tags_chinese[win.Tags[i]];
-                        else Taginfo += '不明标签';
-                        if (i !== win.Tags.length - 1) Taginfo += '，';
-                    }
-                    AddText(Taginfo, 'h3');
-                }
-                AddText('第 ' + (win.Page + 1) + ' 页', 'h3');
-            }
-        }
-    }
     //绘制标签表格
     win.WriteTagsList = function (data) {
         let TagsBlock = win.createElement('center');
