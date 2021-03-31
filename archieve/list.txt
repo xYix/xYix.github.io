@@ -632,3 +632,8 @@ keter
 combinatorics
 bijective-proof
 construction
+loj-2834
+loj#2834 题解 - 「JOISC 2018 Day 2」修行
+solution
+1
+safe

@@ -309,7 +309,7 @@
 		'post_name' : 'young-tableau',
 		'post_chinese_name' : '杨表学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-10-04',
+		'last_modi' : '2021-03-31',
 		'tag' : ['combinatorics','exc-inc','young-tableau',],
 	};
 	win.archieve_list[win.archieve_list.length] = {
@@ -767,6 +767,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-31',
 		'tag' : ['bijective-proof','combinatorics','construction','keter','x-yi-x',],
+	};
+	win.archieve_list[win.archieve_list.length] = {
+		'postid' : '97',
+		'post_name' : 'loj-2834',
+		'post_chinese_name' : 'loj#2834 题解 - 「JOISC 2018 Day 2」修行',
+		'type_name' : 'solution',
+		'last_modi' : '2021-03-31',
+		'tag' : ['safe',],
 	};
 	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
 })(document);
