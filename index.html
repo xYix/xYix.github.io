@@ -15,6 +15,35 @@
     <div class="post-block">
         <div class="content-block" id='post'>
             <script>document.WriteTitle2(document.querySelector('#post'));</script>
+            <script>
+                let AddText = function (ttext, eletag, tstyle) {
+                    let Ttext = win.createElement(eletag);
+                    Ttext.textContent = ttext;
+                    if (tstyle !== undefined) Ttext.style = tstyle;
+                    let TTtext = win.createElement('center');
+                    TTtext.appendChild(Ttext);
+                    data.appendChild(TTtext);
+                }
+                AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
+                AddText('高度机密', 'p', 'color: #600; font-size: 400%; font-weight: bold; margin: 0');
+                AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
+                AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
+                data.appendChild(win.createElement('br'));
+                AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
+                AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
+                AddText('你已经被警告过了。', 'p', 'color: #600; font-size: 250%; font-weight: bold; margin: 0');
+                for (let i = 0; i < 50; i += 1)
+                    data.appendChild(win.createElement('br'));
+                let picblock = win.createElement('div');
+                picblock.style = 'margin: auto; text-align: center';
+                    let mypic = win.createElement('img');
+                    mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
+                    mypic.alt = '致命模因';
+                picblock.appendChild(mypic);
+                data.appendChild(picblock);
+                for (let i = 0; i < 5; i += 1)
+                    data.appendChild(win.createElement('br'));
+            </script>
             <p>嗯？致命模因触媒没有干掉……草，图片挂了。算了算了，欢迎你，访客。</p>
             <h2>关于超常组合数学部</h2>
             <p>超常组合数学部是<a href='http://scp-wiki-cn.wikidot.com/scp-5650'><strong>基金会战术数学部</strong></a>的一个下属部门，主要负责收容并解密组合数学类异常。现在超常组合数学部已有成员 1 人，收容物近百件，远远超过同行机构！（迫真）</p>

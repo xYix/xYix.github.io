@@ -230,8 +230,6 @@
         let AddText = function (ttext, eletag) {
             let Ttext = win.createElement(eletag);
             Ttext.textContent = ttext;
-            if(ttext === '高度机密') Ttext.style = 'color: #600; font-size: 400%; font-weight: bold; margin: 0';
-            if(ttext === '你已经被警告过了。') Ttext.style = 'color: #600; font-size: 250%; font-weight: bold; margin: 0';
             let TTtext = win.createElement('center');
             TTtext.appendChild(Ttext);
             data.appendChild(TTtext);
@@ -240,30 +238,11 @@
             AddText('您似乎跃迁到了银河系之外', 'h1');
         }
         else if (win.Pathname.length === 0) {
-            AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
-            AddText('高度机密', 'p');
-            AddText('Ξ 严禁未经授权的人员进行访问 Ξ', 'p');
-            AddText('Ξ 肇事者将被监控、定位并处理 Ξ', 'p');
-            data.appendChild(win.createElement('br'));
-            AddText('Ξ 任何未经授权之人员访问文档将立即被模因抹杀触媒处决。Ξ', 'p');
-            AddText('Ξ 在未接种合适模因疫苗的情況下向下滚动页面将立刻导致心脏骤停死亡。Ξ', 'p');
-            AddText('你已经被警告过了。', 'p');
-            for (let i = 0; i < 50; i += 1)
-                data.appendChild(win.createElement('br'));
-            let picblock = win.createElement('div');
-            picblock.style = 'margin: auto; text-align: center';
-                let mypic = win.createElement('img');
-                mypic.src = 'https://xyix.gitee.io/images/deadly_meme.png';
-                mypic.alt = '致命模因';
-            picblock.appendChild(mypic);
-            data.appendChild(picblock);
-            for (let i = 0; i < 5; i += 1)
-                data.appendChild(win.createElement('br'));
+            //qaq
         }
         else {
             if (win.Pathname[0] === 'archieve') AddText('文章一览', 'h1');
             if (win.Pathname[0] === 'tags') AddText('标签一览', 'h1');
-            if (win.Pathname[0] === 'help') AddText('帮助', 'h1');
             if (win.Pathname[0] === 'posts') AddText(win.findpost(win.Postname).post_chinese_name, 'h1');
             if (win.Pathname[0] === 'archieve') {
                 if (win.Type !== undefined) {
