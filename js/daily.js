@@ -421,6 +421,7 @@
         '她真的很讨厌男人的哭泣，因为，一旦他们的哭声传遍大街小巷的话，他们的女朋友，或者未婚妻，都会被吸引过来，围观他们。',
     ];
     const DAILY_PIC=[
+        '/images/daiak2.png',
         '/images/duckpet.gif',
         '/images/modai1.png',
         '/images/modai2.png',
