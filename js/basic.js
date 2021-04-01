@@ -3,20 +3,20 @@
         // 格式： xyix.gitee.io/.../.../?tags=...+...&type=...&sortby=&page=
     win.isError = 0;
     win.post_per_page = 30;
-    win.AnalyzeSearch = function (s) {
+    AnalyzeSearch = function (s) {
         let ret = {}, t, r;
         for (t of (s.startsWith('?') ? s.substr(1) : s).split('&'))
             if (r = t.split('='), r[1])
                 ret[decodeURIComponent(r[0])] = decodeURIComponent(r[1]);
         return ret;
     }
-    win.AnalyzePathname = function (s) {
+    AnalyzePathname = function (s) {
         let ret = [], t;
         for (t of (s.startsWith('/') ? s.substr(1) : s).split('/'))
             if (t.match('[.]') === null && t !== 'D:' && t !== '%E8%BF%AB%E7%9C%9Fblog' && t !== '') ret.push(t);
         return ret;
     }
-    win.AnalyzeTags = function (s) {
+    AnalyzeTags = function (s) {
         if (s === undefined) return [];
         let ret = [], t;
         for (t of s.split('+'))
@@ -24,7 +24,7 @@
         return ret;
     }
     //生成后继链接
-    win.NextSearch = function (PrevSearch, deltaSearch) {
+    NextSearch = function (PrevSearch, deltaSearch) {
         let tmpSearch = {};
         for (var x in PrevSearch) if (x !== 'Tags')
             tmpSearch[x] = PrevSearch[x];
@@ -43,7 +43,7 @@
         if (deltaSearch.ThemeColor !== undefined) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
         return tmpSearch;
     }
-    win.ezylanASearch = function (Search) {
+    ezylanASearch = function (Search) {
         let ret = '?';
         if (Search.Type !== undefined)
             ret += '&type=' + Search.Type;
@@ -64,9 +64,9 @@
         //     ret += '&themecolor=' + Search.ThemeColor;
         return ret;
     }
-    win.Pathname = win.AnalyzePathname(location.pathname);
-    win.Search = win.AnalyzeSearch(location.search);
-    win.Tags = win.AnalyzeTags(win.Search['tags']);
+    win.Pathname = AnalyzePathname(location.pathname);
+    win.Search = AnalyzeSearch(location.search);
+    win.Tags = AnalyzeTags(win.Search['tags']);
     win.Tags.sort(function(a, b){ return tags_val[a] - tags_val[b]});
     win.Type = win.Search['type'];
     win.Sortby = win.Search['sortby'];
@@ -77,7 +77,7 @@
     win.Postname = win.Search['postname'];
     if (win.Search['themecolor']) {
         localStorage.setItem("themecolor", win.Search['themecolor']);
-        let newloc = location.pathname + win.ezylanASearch(
+        let newloc = location.pathname + ezylanASearch(
             {
                 Tags: win.Tags,
                 Type: win.Type,
@@ -104,13 +104,13 @@
         Funval: win.Funval,
     };
 
-    win.AddText = function (tdata, ttext, eletag) {
-        let Ttext = win.createElement(eletag);
-        Ttext.textContent = ttext;
-        Ttext.style = 'text-align: left; margin: 0';
-        tdata.appendChild(Ttext);
-    }
     win.WriteSideBar = function (data, title, funval) {
+        let AddText = function (tdata, ttext, eletag) {
+            let Ttext = win.createElement(eletag);
+            Ttext.textContent = ttext;
+            Ttext.style = 'text-align: left; margin: 0';
+            tdata.appendChild(Ttext);
+        }
         let SideBar = win.createElement('div');
         SideBar.className = 'sidebar';
         let SideBarConBlock = win.createElement('div');
@@ -126,14 +126,14 @@
         let SCPblock = win.createElement('center');
         SCPblock.style = 'width: 70%';
         if (win.Funval === '41') {
-            win.AddText(SCPblock, '数点', 'p');
-            win.AddText(SCPblock, '重构', 'p');
-            win.AddText(SCPblock, '剖分', 'p');
+            AddText(SCPblock, '数点', 'p');
+            AddText(SCPblock, '重构', 'p');
+            AddText(SCPblock, '剖分', 'p');
         }
         else {
-            win.AddText(SCPblock, 'Surprising', 'p');
-            win.AddText(SCPblock, 'Combinatorial', 'p');
-            win.AddText(SCPblock, 'Proof', 'p');
+            AddText(SCPblock, 'Surprising', 'p');
+            AddText(SCPblock, 'Combinatorial', 'p');
+            AddText(SCPblock, 'Proof', 'p');
         }
         SideBarTitle.appendChild(SCPblock);
         
@@ -157,19 +157,19 @@
             Text.appendChild(aText);
             SideBarCon.appendChild(Text);
         }
-        write_link('回到首页', '/' + win.ezylanASearch(win.TrueSearch));
-        write_link('文章一览', '/archieve/' + win.ezylanASearch(win.TrueSearch));
-        write_link('标签一览', '/tags/' + win.ezylanASearch(win.TrueSearch));
+        write_link('回到首页', '/' + ezylanASearch(win.TrueSearch));
+        write_link('文章一览', '/archieve/' + ezylanASearch(win.TrueSearch));
+        write_link('标签一览', '/tags/' + ezylanASearch(win.TrueSearch));
         write_link('一键清除 tag', location.pathname);
         let changecolor = location.pathname;
         if (win.ThemeColor === undefined || win.ThemeColor === 'Z')
-            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=N';
+            changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=N';
         if (win.ThemeColor === 'Y')
-            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=Z';
+            changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=Z';
         if (win.ThemeColor === 'X')
-            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=Y';
+            changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=Y';
         if (win.ThemeColor === 'N')
-            changecolor += win.ezylanASearch(win.TrueSearch) + '&themecolor=X';
+            changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=X';
         if (win.Postname !== undefined) {
             if (changecolor[changecolor.length - 1] === '/')
                 changecolor += '?postname=' + win.Postname;
@@ -245,7 +245,7 @@
             let Tag = tags_list[i], TagsRow = win.createElement('tr');
                 let TagsRow1 = win.createElement('th');
                 let TagsRow1a = win.createElement('a');
-                TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
+                TagsRow1a.href = '/archieve/' + ezylanASearch(NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
                 TagsRow1a.textContent = tags_chinese[Tag];
                 TagsRow1a.style = 'font-weight: bold';
                 TagsRow1.appendChild(TagsRow1a);
@@ -299,7 +299,7 @@
         if (postinfo.type_name !== 'none') {
             let Postinfo_type_a = win.createElement('a');
             Postinfo_type_a.href = '/archieve/' +
-                win.ezylanASearch(win.NextSearch(win.TrueSearch, { Type: postinfo.type_name, Page: 0 }));
+                ezylanASearch(NextSearch(win.TrueSearch, { Type: postinfo.type_name, Page: 0 }));
             if (postinfo.type_name === 'solution') Postinfo_type_a.textContent = '收容物';
             else if (postinfo.type_name === 'algorithm') Postinfo_type_a.textContent = 'Thaumiel级';
             else Postinfo_type_a.textContent = '外勤记录';
@@ -318,7 +318,7 @@
         for (let i = 0; i < postinfo.tag.length; i += 1) {
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
-                win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
+                ezylanASearch(NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
             Postinfo_tags_a.textContent = tags_chinese[postinfo.tag[i]];
             if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
@@ -405,7 +405,7 @@
             PagePrev.onmouseover = function () { this.style = 'float: left;background-color: #dddddd;cursor: pointer;'; }
             PagePrev.onmouseout = function () { this.style = 'float: left;background-color: #ffffff;cursor: pointer;'; }
             PagePrev.onclick = function () {
-                location.replace(location.pathname + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Page: win.Page - 1 })));
+                location.replace(location.pathname + ezylanASearch(NextSearch(win.TrueSearch, { Page: win.Page - 1 })));
             }
             PagePrev.textContent = '<<上一页';
         }
@@ -420,7 +420,7 @@
             PageSucc.onmouseover = function () { this.style = 'float: right;background-color: #dddddd;cursor: pointer;'; }
             PageSucc.onmouseout = function () { this.style = 'float: right;background-color: #ffffff;cursor: pointer;'; }
             PageSucc.onclick = function () {
-                location.replace(location.pathname + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Page: win.Page + 1 })));
+                location.replace(location.pathname + ezylanASearch(NextSearch(win.TrueSearch, { Page: win.Page + 1 })));
             }
             PageSucc.textContent = '下一页>>';
         }
