@@ -119,13 +119,13 @@
         SideBarTitle.className = 'title';
         let SideBarTitleContent1 = win.createElement('h2');
         SideBarTitleContent1.textContent = '基金会超常组合数学部';
-        if (win.Funval === 41) 
+        if (win.Funval === '41') 
             SideBarTitleContent1.textContent = '数据结构分裂者';
         SideBarTitle.appendChild(SideBarTitleContent1);
         
         let SCPblock = win.createElement('center');
         SCPblock.style = 'width: 70%';
-        if (win.Funval === 41) {
+        if (win.Funval === '41') {
             win.AddText(SCPblock, '数点', 'p');
             win.AddText(SCPblock, '重构', 'p');
             win.AddText(SCPblock, '剖分', 'p');
