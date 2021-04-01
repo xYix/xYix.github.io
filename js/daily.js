@@ -439,7 +439,7 @@
             let daily_message=document.createElement('img');
             daily_message.src = DAILY_PIC[Math.floor(Math.random()*DAILY_PIC.length)];
             daily_message.alt = '';
-            daily_message.style = 'width: 240px';
+            daily_message.style = 'width: 280px';
             message_box.appendChild(message_title);
             message_box.appendChild(daily_message);
         }

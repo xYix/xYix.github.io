@@ -48,7 +48,7 @@ a:hover{
                 0 1px 5px 0 rgba(0,0,0,0.12);
     box-sizing: border-box;
     float: left;
-    width: 260px;
+    width: 300px;
     /* opacity: 0.85; */
     left: 18px;
     position: fixed;
@@ -74,7 +74,7 @@ a:hover{
     /* opacity: 0.85; */
     margin: auto 20px;
     width: calc(100% - 300px);
-    left: 268px;
+    left: 308px;
     position: relative;
 }
 .bodybody{
