@@ -67,7 +67,7 @@
     win.Pathname = win.AnalyzePathname(location.pathname);
     win.Search = win.AnalyzeSearch(location.search);
     win.Tags = win.AnalyzeTags(win.Search['tags']);
-    win.Tags.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
+    win.Tags.sort(function(a, b){ return tags_val[a] - tags_val[b]});
     win.Type = win.Search['type'];
     win.Sortby = win.Search['sortby'];
     if (win.Search['page'] === undefined) win.Page = 0;
@@ -215,8 +215,8 @@
                 let nowlen = win.Title.length;
                 win.Title[nowlen] = '具有标签：';
                 for (let i = 0; i < win.Tags.length; i += 1) {
-                    if (win.tags_chinese[win.Tags[i]] !== undefined)
-                        win.Title[nowlen] += win.tags_chinese[win.Tags[i]];
+                    if (tags_chinese[win.Tags[i]] !== undefined)
+                        win.Title[nowlen] += tags_chinese[win.Tags[i]];
                     else win.Title[nowlen] += '不明标签';
                     if (i !== win.Tags.length - 1) win.Title[nowlen] += '，';
                 }
@@ -241,12 +241,12 @@
         Titleh2.appendChild(win.createTextNode('英文名'));
         TagsTitle.appendChild(Titleh2);
         TagsTable.appendChild(TagsTitle);
-        for (var i in win.tags_list) {
-            let Tag = win.tags_list[i], TagsRow = win.createElement('tr');
+        for (var i in tags_list) {
+            let Tag = tags_list[i], TagsRow = win.createElement('tr');
                 let TagsRow1 = win.createElement('th');
                 let TagsRow1a = win.createElement('a');
                 TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
-                TagsRow1a.textContent = win.tags_chinese[Tag];
+                TagsRow1a.textContent = tags_chinese[Tag];
                 TagsRow1a.style = 'font-weight: bold';
                 TagsRow1.appendChild(TagsRow1a);
                 TagsRow.appendChild(TagsRow1);
@@ -319,7 +319,7 @@
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
                 win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
-            Postinfo_tags_a.textContent = win.tags_chinese[postinfo.tag[i]];
+            Postinfo_tags_a.textContent = tags_chinese[postinfo.tag[i]];
             if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
             Postinfo_tags.appendChild(Postinfo_tags_a);

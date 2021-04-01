@@ -776,5 +776,5 @@
 		'last_modi' : '2021-04-01',
 		'tag' : ['safe',],
 	};
-	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
+	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
