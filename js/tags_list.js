@@ -1,6 +1,6 @@
 //因为加了 emoji 所以就不用脚本维护了……会出 bug
 (function(win){
-	let tags_chinese = {}, tags_val = {};
+	tags_chinese = {}, tags_val = {};
 	tags_chinese['combinatorics'] = 'Σ组合数学Σ';
 	tags_chinese['generating-function'] = '生成函数';
 	tags_chinese['lagrange-inversion'] = '拉格朗日反演';
