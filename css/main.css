@@ -73,7 +73,7 @@ a:hover{
     float: left;
     /* opacity: 0.85; */
     margin: auto 20px;
-    width: calc(100% - 300px);
+    width: calc(100% - 340px);
     left: 308px;
     position: relative;
 }
