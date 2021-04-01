@@ -93,7 +93,7 @@
         localStorage.setItem("themecolor", 'Z');
     win.ThemeColor = localStorage.getItem('themecolor');
     if (win.Search['postid'] !== undefined) {
-        win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
+        win.Postname = archieve_list[parseInt(win.Search['postid'])-1].post_name;
         win.location.replace('/posts/?page=0&postname=' + win.Postname);
     }
     win.TrueSearch = {
@@ -187,8 +187,8 @@
         data.appendChild(SideBar);
     }
     win.findpost = function (postname) {
-        for (var i = 0; i < win.archieve_list.length; i = i + 1)
-            if (win.archieve_list[i].post_name === postname) return win.archieve_list[i];
+        for (var i = 0; i < archieve_list.length; i = i + 1)
+            if (archieve_list[i].post_name === postname) return archieve_list[i];
         return 'error';
     }
     // Title
@@ -380,9 +380,9 @@
 
         ArchieveTable.appendChild(ArchieveTitle);
 
-        for (let i = 0; i < win.archieve_list.length; i += 1)
-            if (win.isLegalPost(win.archieve_list[i], win.post_count)) {
-                win.WritePostinfo(ArchieveTable, win.archieve_list[i]);
+        for (let i = 0; i < archieve_list.length; i += 1)
+            if (win.isLegalPost(archieve_list[i], win.post_count)) {
+                win.WritePostinfo(ArchieveTable, archieve_list[i]);
             }
 
         data.appendChild(ArchieveTable);

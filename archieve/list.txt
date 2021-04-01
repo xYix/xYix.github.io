@@ -257,7 +257,7 @@ algorithm
 offline
 overall-binary-search
 isotonic-regression
-pigeon
+writing
 nimber
 nimber 运算和扩展
 algorithm

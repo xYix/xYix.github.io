@@ -72,7 +72,7 @@ void PRINT_INDEX_INFO(string filename, string mdfile = "") {
 int main(){
 	freopen("archieve/list.txt","r",stdin);
 	freopen("js/archieve_list.js","w",stdout);
-	cout<<"(function(win){\n	win.archieve_list=[];\n";
+	cout<<"(function(win){\n	let archieve_list=[];\n";
 	int post_cnt=0;
 	while(getline(cin,post_name)){
 		post_cnt++;
@@ -82,7 +82,7 @@ int main(){
 		cin>>tag_cnt;getline(cin,trash);
 		for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
 		sort(post_tag + 1, post_tag + tag_cnt + 1);
-		cout<<"	win.archieve_list[win.archieve_list.length] = {\n";
+		cout<<"	archieve_list[archieve_list.length] = {\n";
 		cout<<"		'postid' : '"<<post_cnt<<"',\n";
 		cout<<"		'post_name' : '"<<post_name<<"',\n";
 		cout<<"		'post_chinese_name' : '"<<GBToUTF8(post_chinese_name.c_str())<<"',\n";
@@ -92,7 +92,7 @@ int main(){
 			for(int i=1;i<=tag_cnt;i++) cout<<"'"<<post_tag[i]<<"',";
 		cout<<"],\n	};\n";
 	}
-	printf("	for (var i in win.archieve_list) win.archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});\n");
+	printf("	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});\n");
 	printf("})(document);");
 	freopen("sitemap.xml","w",stdout);
 	printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
