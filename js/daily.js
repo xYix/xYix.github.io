@@ -420,6 +420,9 @@
         '他怎么也没有想到，这个男子，竟然就是传说中的月宫圣女，月宫的圣女，居然是一个男人，一个长得比女人，还要漂亮的女人',
         '她真的很讨厌男人的哭泣，因为，一旦他们的哭声传遍大街小巷的话，他们的女朋友，或者未婚妻，都会被吸引过来，围观他们。',
     ];
+    const DAILY_PIC=[
+        'https://cdn.luogu.com.cn/upload/image_hosting/w5q6farw.png'
+    ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
         if (Math.floor(Math.random() * 5) != 0) {
@@ -433,8 +436,9 @@
         else {
             let message_title=document.createElement('h3');
             message_title.textContent="广告";
-            let daily_message=document.createElement('p');
-            daily_message.textContent = '广告位招租';
+            let daily_message=document.createElement('img');
+            daily_message.src = DAILY_PIC[Math.floor(Math.random()*DAILY_PIC.length)];
+            daily_message.alt = '';
             message_box.appendChild(message_title);
             message_box.appendChild(daily_message);
         }
