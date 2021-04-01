@@ -22,7 +22,58 @@
             </script>
             <script>document.WriteBlog(document.querySelector('#post'),document.findpost(document.Postname));</script>
             <center><h1>标签</h1></center>
-            <script>document.WriteTagsList2(document.querySelector('#post'),document.findpost(document.Postname));</script>
+            <script>
+                let data = document.querySelector('#post'), postinfo = document.findpost(document.Postname);
+                let TagsBlock = win.createElement('center');
+                let TagsTable = win.createElement('table');
+                TagsTable.border = '1'; TagsTable.rules = 'all'; TagsTable.style = 'width: 70%';
+                let TagsTitle = win.createElement('tr');
+                let Titleh1 = win.createElement('th');
+                Titleh1.style = 'width: 45%';
+                Titleh1.appendChild(win.createTextNode('名称'));
+                TagsTitle.appendChild(Titleh1);
+                let Titleh2 = win.createElement('th');
+                Titleh2.style = 'width: 55%';
+                Titleh2.appendChild(win.createTextNode('英文名'));
+                TagsTitle.appendChild(Titleh2);
+                TagsTable.appendChild(TagsTitle);
+                for (var i = 0; i < postinfo.tag.length; i += 1) {
+                    var Tag = postinfo.tag[i];
+                    let TagsRow = win.createElement('tr');
+                    let TagsRow1 = win.createElement('th');
+                    let TagsRow1a = win.createElement('a');
+                    TagsRow1a.href = '/archieve/' + win.ezylanASearch(win.NextSearch(win.TrueSearch, { Tags: [Tag], Page: 0 }));
+                    let TagsRow1strong = win.createElement('strong');
+                    TagsRow1strong.textContent = win.tags_chinese[Tag];
+                    TagsRow1a.appendChild(TagsRow1strong);
+                    if(Tag === 'writing') TagsRow1a.style = 'color: orange';
+                    if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
+                    TagsRow1.appendChild(TagsRow1a);
+                    TagsRow.appendChild(TagsRow1);
+                    let TagsRow2 = win.createElement('th');
+                    let TagsRow2p = win.createElement('p');
+                    TagsRow2p.textContent = Tag;
+                    TagsRow2.appendChild(TagsRow2p);
+                    TagsRow.appendChild(TagsRow2);
+                    TagsTable.appendChild(TagsRow);
+                }
+                if (postinfo.tag.length === 0) {
+                    let TagsRow = win.createElement('tr');
+                    let TagsRow1 = win.createElement('th');
+                    let TagsRow1p = win.createElement('p');
+                    TagsRow1p.textContent = '这篇文章没有任何 tag';
+                    TagsRow1.appendChild(TagsRow1p);
+                    TagsRow.appendChild(TagsRow1);
+                    let TagsRow2 = win.createElement('th');
+                    let TagsRow2p = win.createElement('p');
+                    TagsRow2p.textContent = 'N/A';
+                    TagsRow2.appendChild(TagsRow2p);
+                    TagsRow.appendChild(TagsRow2);
+                    TagsTable.appendChild(TagsRow);
+                }
+                TagsBlock.appendChild(TagsTable);
+                data.appendChild(TagsBlock);
+            </script>
         </div>
     </div>
     
