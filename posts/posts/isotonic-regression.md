@@ -139,13 +139,9 @@ $$
 
 ## 解法
 
-由于点集有限，从而 $L_p$ 均值和最优解的取值也有限（大不了在一个鬼畜无比的 $n$ 维空间里大力找这个回归的最值点，而且不会有在某个边界子空间里全是最值的情况，因为边界一定是 $z_{i1}=z_{i2}=...$ 的形式，运用**引理 1** 即得到矛盾），我们只需要找一个~~看起来~~足够小的 $\varepsilon$，考虑 $b=a+\varepsilon$。此时 $\tilde w_i$ 变为 $a$ 处回归代价的导数。于是在实数上二分即可。
+由于点集 $(x,y)$ 有限，从而 $L_p$ 均值和最优解的取值也有限（大不了在一个鬼畜无比的 $n$ 维空间里大力找这个回归的最值点，而且不会有在某个边界子空间里全是最值的情况，因为边界一定是 $z_{i1}=z_{i2}=...$ 的形式，即它们取了某个 $L_p$ 均值，运用**引理 1** 即得到矛盾），我们只需要找一个~~看起来~~足够小的 $\varepsilon$，考虑 $b=a+\varepsilon$。此时 $\tilde w_i$ 变为 $a$ 处回归代价的导数。于是在实数上二分即可。
 
 # 技巧和例题
-
-## 网络流
-
-对于 $L_1:S$ 问题，$f_i\le f_j$ 可以看成选了 $f_i$ 就必须选 $f_j$，变为最大权闭合子图问题，是一个经典网络流例题。
 
 ## 偏序关系是一条链的情况
 
@@ -155,15 +151,92 @@ $$
 
 从而我们可以单调栈维护各区间的 $L_p$ 均值，如果后面的均值比前面大那就~~去世了~~，显然合并后这两个区间的取值全会相等，从而重新计算 $L_p$ 均值即可。
 
-由于 $L_p(p>1)$ 均值唯一，所以一般比较好求（比如 $L_2$ 就是加权平均值），但是 $L_1$ 均值是中位数，合并区间的时候需要可并堆。
+由于 $L_p(p>1)$ 均值唯一，所以一般比较好求（比如 $L_2$ 就是加权平均值），但是 $L_1$ 均值是中位数，如果想要 $O(\log n)$ 地合并区间需要用可并堆。当然直接启发式合并 $\log^2 n$ 也行。
 
 ### [[BalticOI 2004]Sequence 数字序列](https://www.luogu.com.cn/problem/P4331)
 
 令 $a_i\leftarrow a_i-i$，就变成了一个标准的 $L_1$ 问题。应用上面的解法即可。
 
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+struct leftist{
+    int c[2];
+    int dis, val;
+    int siz;
+} H[100005];
+void pushup(int x) {
+    if (H[H[x].c[1]].dis < H[H[x].c[0]].dis) swap(H[x].c[0], H[x].c[1]);
+    H[x].dis = H[H[x].c[0]].dis + 1;
+    H[x].siz = H[H[x].c[0]].siz + H[H[x].c[1]].siz + 1;
+}
+int merge(int x, int y) {
+    if (!x || !y) return x + y;
+    if (H[x].val < H[y].val) swap(x, y);
+    H[x].c[0] = merge(H[x].c[0], y);
+    pushup(x);
+    return x;
+}
+
+int n;
+
+struct node {
+    int rt;
+    int true_siz;
+    int val;
+};
+node stk[100005]; int len;
+int tgt[100005];
+
+int main() {
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) 
+        H[i].dis = 1, scanf("%d", &H[i].val), H[i].val -= i, H[i].siz = 1;
+    for (int i = 1; i <= n; i++) {
+        stk[++len] = (node){i, 1, H[i].val};
+        while (len != 1 && stk[len - 1].val > stk[len].val) {
+            len--; stk[len].rt = merge(stk[len].rt, stk[len + 1].rt);
+            stk[len].true_siz += stk[len + 1].true_siz;
+            while (H[stk[len].rt].siz > (stk[len].true_siz + 1) / 2)
+                stk[len].rt = merge(H[stk[len].rt].c[0], H[stk[len].rt].c[1]);
+            stk[len].val = H[stk[len].rt].val;
+        }
+    }
+    int cnt = 0, pos = 0;
+    long long ans = 0;
+    for (int i = 1; i <= n; i++) {
+        if (cnt == 0) cnt += stk[++pos].true_siz;
+        cnt--;
+        tgt[i] = pos;
+        ans += abs(H[i].val - stk[pos].val);
+    }
+    printf("%lld\n", ans);
+    for (int i = 1; i <= n; i++) printf("%d ", stk[tgt[i]].val + i);
+}
+```
+
 ### [[HNOI2019]序列](https://www.luogu.com.cn/problem/P5294)
 
-标准的 $L_2$ 问题，但是需要支持特殊询问。由于最优解显然和我们的单调栈扫描顺序无关，从而我们可以处理出一个元素前缀和后缀的单调栈情况（区间和区间平方和之类的用主席树）。假设修改了的元素是 $x$，显然不和 $x$ 在同一个区间的元素和 $x$ 没有关系，从而直接使用处理好的信息即可。从而问题变为求 $x$ 所在的区间，记为 $[L,R]$。
+要分数取模的最优化问题，已经完全暴露了啊（
+
+标准的 $L_2$ 问题，但是需要支持特殊询问。
+
+由于最优解显然和我们的单调栈扫描顺序无关，从而我们可以处理出一个元素前缀和后缀的单调栈情况。
+
+假设修改了的元素是 $x$，显然不和 $x$ 在同一个区间的元素和 $x$ 没有关系，从而直接使用处理好的信息即可。从而问题变为求 $x$ 所在的区间。
+
+考虑向左合并，其实就是找到最右方的"稳定"左端点，如果已知了 $R$ 它就可以直接二分；而对于向右合并，仍然是注意到合并顺序可以随意，所以左右独立二分即可。
+
+```cpp
+
+```
+
+## 网络流
+
+对于 $L_1:S$ 问题，$f_i\le f_j$ 可以看成选了 $f_i$ 就必须选 $f_j$，变为最大权闭合子图问题，是一个经典网络流例题。
+
+### [[省选联考 2020 A 卷] 魔法商店](https://www.luogu.com.cn/problem/P6621)
 
 # $p=\infty$ 的情况和扩展
 

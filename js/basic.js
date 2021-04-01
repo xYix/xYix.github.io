@@ -64,48 +64,45 @@
         //     ret += '&themecolor=' + Search.ThemeColor;
         return ret;
     }
-    win.InitAnalyze = function () {
-        win.Pathname = win.AnalyzePathname(location.pathname);
-        win.Search = win.AnalyzeSearch(location.search);
-        win.Tags = win.AnalyzeTags(win.Search['tags']);
-        win.Tags.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
-        win.Type = win.Search['type'];
-        win.Sortby = win.Search['sortby'];
-        if (win.Search['page'] === undefined) win.Page = 0;
-        else win.Page = parseInt(win.Search['page']);
-        win.Funval = win.Search['funval'];
-        win.Funval = 41; //April Fools
-        win.Postname = win.Search['postname'];
-        if (win.Search['themecolor']) {
-            localStorage.setItem("themecolor", win.Search['themecolor']);
-            let newloc = location.pathname + win.ezylanASearch(
-                {
-                    Tags: win.Tags,
-                    Type: win.Type,
-                    Sortby: win.Sortby,
-                    Page: win.Page,
-                    Funval: win.Funval,
-                }
-            );
-            if (win.Postname) newloc += '&postname=' + win.Postname;
-            location.replace(newloc);
-        }
-        if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
-            localStorage.setItem("themecolor", 'Z');
-        win.ThemeColor = localStorage.getItem('themecolor');
-        if (win.Search['postid'] !== undefined) {
-            win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
-            win.location.replace('/posts/?page=0&postname=' + win.Postname);
-        }
-        win.TrueSearch = {
-            Tags: win.Tags,
-            Type: win.Type,
-            Sortby: win.Sortby,
-            Page: win.Page,
-            Funval: win.Funval,
-        };
+    win.Pathname = win.AnalyzePathname(location.pathname);
+    win.Search = win.AnalyzeSearch(location.search);
+    win.Tags = win.AnalyzeTags(win.Search['tags']);
+    win.Tags.sort(function(a, b){ return win.tags_val[a] - win.tags_val[b]});
+    win.Type = win.Search['type'];
+    win.Sortby = win.Search['sortby'];
+    if (win.Search['page'] === undefined) win.Page = 0;
+    else win.Page = parseInt(win.Search['page']);
+    win.Funval = win.Search['funval'];
+    // win.Funval = 41; //April Fools
+    win.Postname = win.Search['postname'];
+    if (win.Search['themecolor']) {
+        localStorage.setItem("themecolor", win.Search['themecolor']);
+        let newloc = location.pathname + win.ezylanASearch(
+            {
+                Tags: win.Tags,
+                Type: win.Type,
+                Sortby: win.Sortby,
+                Page: win.Page,
+                Funval: win.Funval,
+            }
+        );
+        if (win.Postname) newloc += '&postname=' + win.Postname;
+        location.replace(newloc);
     }
-    win.InitAnalyze();
+    if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
+        localStorage.setItem("themecolor", 'Z');
+    win.ThemeColor = localStorage.getItem('themecolor');
+    if (win.Search['postid'] !== undefined) {
+        win.Postname = win.archieve_list[parseInt(win.Search['postid'])-1].post_name;
+        win.location.replace('/posts/?page=0&postname=' + win.Postname);
+    }
+    win.TrueSearch = {
+        Tags: win.Tags,
+        Type: win.Type,
+        Sortby: win.Sortby,
+        Page: win.Page,
+        Funval: win.Funval,
+    };
 
     win.AddText = function (tdata, ttext, eletag) {
         let Ttext = win.createElement(eletag);
