@@ -53,7 +53,7 @@ A_i=\begin{bmatrix}\dfrac{i-1}{i}&\dfrac{y+1}{i}\\1&0\end{bmatrix}
 $$
 于是有
 $$
-\boxed{G=\sum_{i=0}^{\infty}x^i\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00}}
+\boxed{[x^i]G=\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00}}
 $$
 
 # 2. 困难的问题
@@ -84,14 +84,20 @@ G=\dfrac{\mathbf e}{\mathcal 1-\mathcal A}=\sum_{i=0}^{\infty}\left(\mathcal A^i
 $$
 而若欲求 $[y^k]$，其实就是把 $\mathcal A$ 换成它的“反转”（**请注意这里不是转置！这里是反转了 $x$ 维和 $y$ 维，而不是反转了 $x_1y_1$ 和 $x_2y_2$！**具体来说， $\mathcal A^R_{x_1y_1x_2y_2}=\mathcal A_{y_1x_1y_2x_2}$）。
 
+注意 $A_i$ 其实也是超矩阵：
+
+- 不妨把 $y^{\star}$ 看作是“对于任意 $*$，都有 $y_1=*,y_2=*+\star$ 的转移”的简写；
+- 而 $x$ 上虽然被压缩到了只有两个坐标，其实当然是可以展开写的。
+
 而我们已经知道
 $$
-\left(\sum_{i=0}^{\infty}\mathcal A^i\right)_{00i*}=[x^i]G=\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00}
+\left(\sum_{i=0}^{\infty}\mathcal A^i\right)_{00i*}=[x^i]G=\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00\_\_}
 $$
-注意 $A_i$ 其实也是超矩阵：不妨把 $y^{\star}$ 看作是 $y$ 维上 $*\rightarrow*+\star$ 的简写。
+注意观察左式中和 $y_2$ 的体现方式。
 
 两边的超矩阵同时“反转”，于是
 $$
 \boxed{[y^i]G=\left(\begin{bmatrix}1&0\end{bmatrix}A^T_1A^T_{2}...A_i^T\right)_{00}}
 $$
 发现自己不会普通多项式转下降幂，代码鸽了。
+
