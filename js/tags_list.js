@@ -82,7 +82,7 @@
 	tags_val['apollyon'] = -58570;
 	tags_val['x-yi-x'] = -998244353;
 
-	let tags_list = [];
+	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);
 	tags_list.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
