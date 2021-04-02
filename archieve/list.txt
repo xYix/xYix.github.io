@@ -253,11 +253,10 @@ young-tableau
 isotonic-regression
 保序回归学习笔记
 algorithm
-4
+3
 offline
 overall-binary-search
 isotonic-regression
-writing
 nimber
 nimber 运算和扩展
 algorithm

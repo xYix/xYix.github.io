@@ -318,7 +318,7 @@
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-04-02',
-		'tag' : ['isotonic-regression','offline','overall-binary-search','writing',],
+		'tag' : ['isotonic-regression','offline','overall-binary-search',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '41',
