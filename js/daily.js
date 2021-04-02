@@ -379,6 +379,7 @@
             '理念是杀得死的。用更好的理念。',
             '欢迎来到逆模因部。不，这不是你第一天上班。',
             '戏里戏外，其实如一。',
+            '这并不好笑，但我们都笑了。',
         //迫害CF/XJ
         'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
