@@ -91,13 +91,13 @@ $$
 
 而我们已经知道
 $$
-\left(\sum_{i=0}^{\infty}\mathcal A^i\right)_{00i*}=[x^i]G=\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00\_\_}
+\left(\sum_{i=0}^{\infty}\mathcal A^i\right)_{00ij}=[x^iy^j]G=\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00ij}
 $$
 注意观察左式中和 $y_2$ 的体现方式。
 
 两边的超矩阵同时“反转”，于是
 $$
-\boxed{[y^i]G=\left(\begin{bmatrix}1&0\end{bmatrix}A^T_1A^T_{2}...A_i^T\right)_{00}}
+\boxed{[x^iy^j]G=\left(\begin{bmatrix}1&0\end{bmatrix}A^T_1A^T_{2}...A_i^T\right)_{00ji}}
 $$
 发现自己不会普通多项式转下降幂，代码鸽了。
 
