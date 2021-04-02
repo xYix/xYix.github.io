@@ -784,5 +784,13 @@
 		'last_modi' : '2021-04-02',
 		'tag' : ['isotonic-regression','safe',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '99',
+		'post_name' : 'luogu-4339',
+		'post_chinese_name' : 'luoguP4339 题解 - [ZJOI2018]迷宫',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-02',
+		'tag' : ['keter','lmoliver',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

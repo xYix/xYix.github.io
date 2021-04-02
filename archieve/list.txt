@@ -642,3 +642,9 @@ solution
 2
 safe
 isotonic-regression
+luogu-4339
+luoguP4339 题解 - [ZJOI2018]迷宫
+solution
+2
+keter
+lmoliver
