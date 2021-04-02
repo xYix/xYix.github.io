@@ -86,10 +86,12 @@ $$
 
 而我们已经知道
 $$
-\sum_{i=0}^{\infty}\left(\mathcal A^i\right)_{00**}=G=\sum_{i=0}^{\infty}x^i\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00}
+\left(\sum_{i=0}^{\infty}\mathcal A^i\right)_{00i*}=[x^i]G=\left(A_iA_{i-1}...A_1\begin{bmatrix}1\\0\end{bmatrix}\right)_{00}
 $$
-两边的超矩阵同时“反转”，反映在它的投影——普通矩阵上就是转置。于是
+注意 $A_i$ 其实也是超矩阵：不妨把 $y^{\star}$ 看作是 $y$ 维上 $*\rightarrow*+\star$ 的简写。
+
+两边的超矩阵同时“反转”，于是
 $$
-\boxed{G=\sum_{i=0}^{\infty}y^i\left(\begin{bmatrix}1&0\end{bmatrix}A^T_1A^T_{2}...A_i^T\right)_{00}}
+\boxed{[y^i]G=\left(\begin{bmatrix}1&0\end{bmatrix}A^T_1A^T_{2}...A_i^T\right)_{00}}
 $$
 发现自己不会普通多项式转下降幂，代码鸽了。
