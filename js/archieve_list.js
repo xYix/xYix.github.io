@@ -1,5 +1,5 @@
 (function(win){
-	let archieve_list=[];
+	archieve_list=[];
 	archieve_list[archieve_list.length] = {
 		'postid' : '1',
 		'post_name' : 'hello-world',

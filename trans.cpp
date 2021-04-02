@@ -72,7 +72,7 @@ void PRINT_INDEX_INFO(string filename, string mdfile = "") {
 int main(){
 	freopen("archieve/list.txt","r",stdin);
 	freopen("js/archieve_list.js","w",stdout);
-	cout<<"(function(win){\n	let archieve_list=[];\n";
+	cout<<"(function(win){\n	archieve_list=[];\n";
 	int post_cnt=0;
 	while(getline(cin,post_name)){
 		post_cnt++;
