@@ -44,7 +44,7 @@
                     let TagsRow1a = document.createElement('a');
                     TagsRow1a.href = '/archieve/' + ezylanASearch(NextSearch(document.TrueSearch, { Tags: [Tag], Page: 0 }));
                     let TagsRow1strong = document.createElement('strong');
-                    TagsRow1strong.textContent = document.tags_chinese[Tag];
+                    TagsRow1strong.textContent = tags_chinese[Tag];
                     TagsRow1a.appendChild(TagsRow1strong);
                     if(Tag === 'writing') TagsRow1a.style = 'color: orange';
                     if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
