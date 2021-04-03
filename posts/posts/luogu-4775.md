@@ -20,10 +20,22 @@ title: luoguP4775 题解 - 【NOI2018】情报中心
 
 下面是最典型的情况：
 
-<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/luogu-4775-1.png" alt=""></div>
+<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/luogu-4775-1.png" alt=""></div>
 
 可见，$X$ 点是最关键的点。下面写出一些事实：
 
 - 这种方案的贡献为 ${\color{red}w}+{\color{blue}w}-\text{dep}(X)+\max({\color{red}\text{dep}(p)},{\color{blue}\text{dep}(p)})$。
 - 这种方案实际存在，当且仅当
-- 
+- $\color{red}p$ 不在 $X$ 的子树（不包括 $X$）中；$\color{blue}p$ 亦然。
+- - 换句话说，$\color{red}u,v$ 不在 $X$ 的同一个分支中；$\color{blue}u,v$ 亦然。
+- $\color{red}u$ 不和 $\color{blue}u$ 在 $X$ 的同一个分支中。
+
+自然能有一个合并子树的大致想法。可是怎么合并？自然会往分治上去想，其实再冷静一下就能想到**线段树合并**。剩下的工作已经显然了。
+
+# 2. LCA 相同
+
+当然我们要枚举 LCA。易见每个 LCA 对应的链是有限的，自然考虑到虚树。
+
+<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/luogu-4775-2.png" alt=""></div>
+
+我们不可能枚举两个 $X$，但是枚举一个 $X$ 也能完成任务，具体来说：

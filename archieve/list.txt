@@ -648,3 +648,10 @@ solution
 2
 keter
 lmoliver
+luogu-4775
+luoguP4775 题解 - 【NOI2018】情报中心
+solution
+3
+d-and-c-on-tree
+data-structrue
+writing

@@ -792,5 +792,13 @@
 		'last_modi' : '2021-04-03',
 		'tag' : ['keter','lmoliver',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '100',
+		'post_name' : 'luogu-4775',
+		'post_chinese_name' : 'luoguP4775 题解 - 【NOI2018】情报中心',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-03',
+		'tag' : ['d-and-c-on-tree','data-structrue','writing',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
