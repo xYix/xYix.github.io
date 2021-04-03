@@ -40,6 +40,7 @@
 	tags_chinese['keter'] = '😱keter😱';
 	tags_chinese['apollyon'] = '😈apollyon😈';
 	tags_chinese['x-yi-x'] = '👽自制👽';
+	tags_chinese['2-sat'] = '2SAT';
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -81,6 +82,7 @@
 	tags_val['keter'] = -58569;
 	tags_val['apollyon'] = -58570;
 	tags_val['x-yi-x'] = -998244353;
+	tags_val['2-sat'] = 40;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);
