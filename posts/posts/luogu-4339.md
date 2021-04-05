@@ -46,7 +46,7 @@ iint gcd(iint a, iint b) {
     if (b == 0) return a;
     return gcd(b, a % b);
 }
-iint calc(iint h, iint d, iint k) { //h : 还剩的点数, d : 将要弃掉的点数
+iint calc(iint h, iint d, iint k) { //h : 还剩的点数, d : 已经有解的点数
     if (h <= 0) return 0;
     iint g = gcd(m, k), k0 = k / g, m0 = m / g;
     if (g == 1) return 0; //无法进行任何合并

@@ -110,7 +110,7 @@
 		'post_chinese_name' : 'SPOJ26073 题解 - DIVCNT1',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['calculating-geometry','keter','number-theory',],
+		'tag' : ['apollyon','calculating-geometry','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '15',
@@ -486,7 +486,7 @@
 		'post_chinese_name' : 'uoj#191 题解 - 【集训队互测2016】Unknown',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['d-and-c-on-tree','data-structure','keter','offline',],
+		'tag' : ['d-and-c-on-tree','data-structure','euclid','offline',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '62',
@@ -494,7 +494,7 @@
 		'post_chinese_name' : 'luoguP5291 题解 - [十二省联考2019]希望',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['d-and-c-on-tree','data-structure','keter','offline',],
+		'tag' : ['d-and-c-on-tree','data-structure','euclid','offline',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '63',
@@ -518,7 +518,7 @@
 		'post_chinese_name' : 'uoj#228 题解 - 基础数据结构练习题 - 兼均摊分析学习笔记',
 		'type_name' : 'algorithm',
 		'last_modi' : '2020-12-03',
-		'tag' : ['amortized-analysis','data-structure',],
+		'tag' : ['amortized-analysis','data-structure','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '66',
@@ -750,7 +750,7 @@
 		'post_chinese_name' : 'luoguP7440 题解 -「KrOI2021」Feux Follets',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-02',
-		'tag' : ['euclid','generating-function','linear-algebra','polynomial',],
+		'tag' : ['generating-function','linear-algebra','polynomial','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '95',
@@ -766,7 +766,7 @@
 		'post_chinese_name' : 'NayutanOI2021A 题解 - アンドロメダアンドロメダ',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-31',
-		'tag' : ['bijective-proof','combinatorics','construction','keter','x-yi-x',],
+		'tag' : ['apollyon','bijective-proof','combinatorics','construction','x-yi-x',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '97',
@@ -789,7 +789,7 @@
 		'post_name' : 'luogu-4339',
 		'post_chinese_name' : 'luoguP4339 题解 - [ZJOI2018]迷宫',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-03',
+		'last_modi' : '2021-04-05',
 		'tag' : ['keter','lmoliver',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -797,8 +797,8 @@
 		'post_name' : 'luogu-4775',
 		'post_chinese_name' : 'luoguP4775 题解 - 【NOI2018】情报中心',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-04',
-		'tag' : ['d-and-c-on-tree','data-structure','keter','writing',],
+		'last_modi' : '2021-04-05',
+		'tag' : ['d-and-c-on-tree','data-structure','euclid','writing',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
