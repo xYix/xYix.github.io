@@ -798,7 +798,7 @@
 		'post_chinese_name' : 'luoguP4775 题解 - 【NOI2018】情报中心',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-05',
-		'tag' : ['d-and-c-on-tree','data-structure','euclid','writing',],
+		'tag' : ['d-and-c-on-tree','data-structure','euclid',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

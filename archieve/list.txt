@@ -652,8 +652,7 @@ lmoliver
 luogu-4775
 luoguP4775 题解 - 【NOI2018】情报中心
 solution
-4
+3
 euclid
 d-and-c-on-tree
 data-structure
-writing
