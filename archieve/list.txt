@@ -131,7 +131,7 @@ euclid
 combinatorics
 lagrange-interpolation
 luogu-4500
-luoguP4500 题解 - [ZJOI2018]树
+luoguP4500 题解 - 【ZJOI2018】树
 solution
 5
 exc-inc
@@ -140,7 +140,7 @@ group-counting
 generating-function
 apollyon
 luogu-5155
-luoguP5155 题解 - [USACO18DEC]Balance Beam P
+luoguP5155 题解 - 【USACO18DEC】Balance Beam P
 solution
 2
 safe
@@ -275,7 +275,7 @@ algorithm
 nimber
 game-theory
 luogu-4565
-luoguP4565 题解 - [CTSC2018]暴力写挂
+luoguP4565 题解 - 【CTSC2018】暴力写挂
 solution
 3
 euclid
@@ -289,7 +289,7 @@ combinatorics
 generating-function
 group-counting
 luogu-6667
-luoguP6667 题解 - [清华集训2016] 如何优雅地求和
+luoguP6667 题解 - 【清华集训2016】 如何优雅地求和
 solution
 3
 euclid
@@ -340,7 +340,7 @@ linear-algebra
 lagrange-inversion
 generating-function
 luogu-2305
-luoguP2305 题解 - [NOI2014]购票
+luoguP2305 题解 - 【NOI2014】购票
 solution
 5
 euclid
@@ -349,7 +349,7 @@ d-and-c-on-tree
 monotonicity-of-decision
 calculating-geometry
 luogu-6910
-luoguP6910 题解 - [ICPC2015 WF]Pipe Stream
+luoguP6910 题解 - 【ICPC2015 WF】Pipe Stream
 solution
 2
 keter
@@ -370,7 +370,7 @@ data-structure
 d-and-c-on-tree
 randomization
 luogu-3295
-luoguP3295 题解 - [SCOI2016]萌萌哒
+luoguP3295 题解 - 【SCOI2016】萌萌哒
 solution
 2
 euclid
@@ -385,7 +385,7 @@ combinatorics
 construction
 bijective-proof
 luogu-3565
-luoguP3565 题解 - [POI2014]HOT-Hotels
+luoguP3565 题解 - 【POI2014】HOT-Hotels
 solution
 2
 safe
@@ -405,7 +405,7 @@ offline
 data-structure
 d-and-c-on-tree
 luogu-5291
-luoguP5291 题解 - [十二省联考2019]希望
+luoguP5291 题解 - 【十二省联考2019】希望
 solution
 4
 euclid
@@ -533,7 +533,7 @@ algorithm
 string
 lyndon-tech
 luogu-5470
-luoguP5470 题解 - [NOI2019]序列
+luoguP5470 题解 - 【NOI2019】序列
 solution
 2
 safe
@@ -608,7 +608,7 @@ safe
 number-theory
 calculating-geometry
 luogu-7440
-luoguP7440 题解 -「KrOI2021」Feux Follets
+luoguP7440 题解 - 【KrOI2021】Feux Follets
 solution
 4
 safe
@@ -633,7 +633,7 @@ combinatorics
 bijective-proof
 construction
 loj-2834
-loj#2834 题解 - 「JOISC 2018 Day 2」修行
+loj#2834 题解 - 【JOISC 2018】修行
 solution
 1
 safe
@@ -644,7 +644,7 @@ solution
 safe
 isotonic-regression
 luogu-4339
-luoguP4339 题解 - [ZJOI2018]迷宫
+luoguP4339 题解 - 【ZJOI2018】迷宫
 solution
 2
 keter
@@ -655,4 +655,11 @@ solution
 3
 euclid
 d-and-c-on-tree
+data-structure
+luogu-5287
+luoguP5287 题解 - 【HNOI2019】JOJO
+solution
+3
+euclid
+string
 data-structure

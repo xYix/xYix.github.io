@@ -163,7 +163,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '21',
 		'post_name' : 'luogu-4500',
-		'post_chinese_name' : 'luoguP4500 题解 - [ZJOI2018]树',
+		'post_chinese_name' : 'luoguP4500 题解 - 【ZJOI2018】树',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['apollyon','combinatorics','exc-inc','generating-function','group-counting',],
@@ -171,7 +171,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '22',
 		'post_name' : 'luogu-5155',
-		'post_chinese_name' : 'luoguP5155 题解 - [USACO18DEC]Balance Beam P',
+		'post_chinese_name' : 'luoguP5155 题解 - 【USACO18DEC】Balance Beam P',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['calculating-geometry','safe',],
@@ -347,7 +347,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '44',
 		'post_name' : 'luogu-4565',
-		'post_chinese_name' : 'luoguP4565 题解 - [CTSC2018]暴力写挂',
+		'post_chinese_name' : 'luoguP4565 题解 - 【CTSC2018】暴力写挂',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-17',
 		'tag' : ['d-and-c-on-tree','data-structure','euclid',],
@@ -363,7 +363,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '46',
 		'post_name' : 'luogu-6667',
-		'post_chinese_name' : 'luoguP6667 题解 - [清华集训2016] 如何优雅地求和',
+		'post_chinese_name' : 'luoguP6667 题解 - 【清华集训2016】 如何优雅地求和',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-22',
 		'tag' : ['combinatorics','euclid','generating-function',],
@@ -419,7 +419,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '53',
 		'post_name' : 'luogu-2305',
-		'post_chinese_name' : 'luoguP2305 题解 - [NOI2014]购票',
+		'post_chinese_name' : 'luoguP2305 题解 - 【NOI2014】购票',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-29',
 		'tag' : ['calculating-geometry','d-and-c-on-tree','data-structure','euclid','monotonicity-of-decision',],
@@ -427,7 +427,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '54',
 		'post_name' : 'luogu-6910',
-		'post_chinese_name' : 'luoguP6910 题解 - [ICPC2015 WF]Pipe Stream',
+		'post_chinese_name' : 'luoguP6910 题解 - 【ICPC2015 WF】Pipe Stream',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-23',
 		'tag' : ['keter','lmoliver',],
@@ -451,7 +451,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '57',
 		'post_name' : 'luogu-3295',
-		'post_chinese_name' : 'luoguP3295 题解 - [SCOI2016]萌萌哒',
+		'post_chinese_name' : 'luoguP3295 题解 - 【SCOI2016】萌萌哒',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-28',
 		'tag' : ['data-structure','euclid',],
@@ -467,7 +467,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '59',
 		'post_name' : 'luogu-3565',
-		'post_chinese_name' : 'luoguP3565 题解 - [POI2014]HOT-Hotels',
+		'post_chinese_name' : 'luoguP3565 题解 - 【POI2014】HOT-Hotels',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-30',
 		'tag' : ['d-and-c-on-tree','safe',],
@@ -491,7 +491,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '62',
 		'post_name' : 'luogu-5291',
-		'post_chinese_name' : 'luoguP5291 题解 - [十二省联考2019]希望',
+		'post_chinese_name' : 'luoguP5291 题解 - 【十二省联考2019】希望',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
 		'tag' : ['d-and-c-on-tree','data-structure','euclid','offline',],
@@ -651,7 +651,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '82',
 		'post_name' : 'luogu-5470',
-		'post_chinese_name' : 'luoguP5470 题解 - [NOI2019]序列',
+		'post_chinese_name' : 'luoguP5470 题解 - 【NOI2019】序列',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-21',
 		'tag' : ['network-flow','safe',],
@@ -747,7 +747,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '94',
 		'post_name' : 'luogu-7440',
-		'post_chinese_name' : 'luoguP7440 题解 -「KrOI2021」Feux Follets',
+		'post_chinese_name' : 'luoguP7440 题解 - 【KrOI2021】Feux Follets',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-02',
 		'tag' : ['generating-function','linear-algebra','polynomial','safe',],
@@ -771,7 +771,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '97',
 		'post_name' : 'loj-2834',
-		'post_chinese_name' : 'loj#2834 题解 - 「JOISC 2018 Day 2」修行',
+		'post_chinese_name' : 'loj#2834 题解 - 【JOISC 2018】修行',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-01',
 		'tag' : ['safe',],
@@ -787,7 +787,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '99',
 		'post_name' : 'luogu-4339',
-		'post_chinese_name' : 'luoguP4339 题解 - [ZJOI2018]迷宫',
+		'post_chinese_name' : 'luoguP4339 题解 - 【ZJOI2018】迷宫',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-05',
 		'tag' : ['keter','lmoliver',],
@@ -797,8 +797,16 @@
 		'post_name' : 'luogu-4775',
 		'post_chinese_name' : 'luoguP4775 题解 - 【NOI2018】情报中心',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-05',
+		'last_modi' : '2021-04-06',
 		'tag' : ['d-and-c-on-tree','data-structure','euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '101',
+		'post_name' : 'luogu-5287',
+		'post_chinese_name' : 'luoguP5287 题解 - 【HNOI2019】JOJO',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-06',
+		'tag' : ['data-structure','euclid','string',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
