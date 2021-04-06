@@ -155,7 +155,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '20',
 		'post_name' : 'loj-6054',
-		'post_chinese_name' : 'loj#6055 题解 - 「from CommonAnts」一道数学题',
+		'post_chinese_name' : 'loj#6055 题解 - 一道数学题',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['combinatorics','euclid','lagrange-interpolation',],
@@ -171,7 +171,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '22',
 		'post_name' : 'luogu-5155',
-		'post_chinese_name' : 'luoguP5155 题解 - 【USACO18DEC】Balance Beam P',
+		'post_chinese_name' : 'luoguP5155 题解 - 【USACO18】Balance Beam P',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
 		'tag' : ['calculating-geometry','safe',],
@@ -251,7 +251,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '32',
 		'post_name' : 'loj-6077',
-		'post_chinese_name' : 'loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对',
+		'post_chinese_name' : 'loj#6077 题解 - 逆序对',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-04',
 		'tag' : ['combinatorics','euclid',],
@@ -427,7 +427,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '54',
 		'post_name' : 'luogu-6910',
-		'post_chinese_name' : 'luoguP6910 题解 - 【ICPC2015 WF】Pipe Stream',
+		'post_chinese_name' : 'luoguP6910 题解 - 【ICPC2015WF】Pipe Stream',
 		'type_name' : 'solution',
 		'last_modi' : '2020-11-23',
 		'tag' : ['keter','lmoliver',],
@@ -499,7 +499,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '63',
 		'post_name' : 'loj-3370',
-		'post_chinese_name' : 'loj#3370 题解 - 「COCI 2020.10」3D Histogram',
+		'post_chinese_name' : 'loj#3370 题解 - 【COCI2020】3D Histogram',
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-02',
 		'tag' : ['calculating-geometry','data-structure','safe',],
@@ -507,7 +507,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '64',
 		'post_name' : 'loj-3385',
-		'post_chinese_name' : 'loj#3385 题解 - 「COCI 2020.11」Svjetlo',
+		'post_chinese_name' : 'loj#3385 题解 - 【COCI 2020】Svjetlo',
 		'type_name' : 'solution',
 		'last_modi' : '2020-12-02',
 		'tag' : ['keter','lmoliver',],

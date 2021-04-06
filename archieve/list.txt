@@ -124,7 +124,7 @@ safes
 generating-function
 lagrange-inversion
 loj-6054
-loj#6055 题解 - 「from CommonAnts」一道数学题
+loj#6055 题解 - 一道数学题
 solution
 3
 euclid
@@ -140,7 +140,7 @@ group-counting
 generating-function
 apollyon
 luogu-5155
-luoguP5155 题解 - 【USACO18DEC】Balance Beam P
+luoguP5155 题解 - 【USACO18】Balance Beam P
 solution
 2
 safe
@@ -198,7 +198,7 @@ combinatorics
 generating-function
 group-counting
 loj-6077
-loj#6077 题解 - 「2017 山东一轮集训 Day7」逆序对
+loj#6077 题解 - 逆序对
 solution
 2
 euclid
@@ -349,7 +349,7 @@ d-and-c-on-tree
 monotonicity-of-decision
 calculating-geometry
 luogu-6910
-luoguP6910 题解 - 【ICPC2015 WF】Pipe Stream
+luoguP6910 题解 - 【ICPC2015WF】Pipe Stream
 solution
 2
 keter
@@ -413,14 +413,14 @@ offline
 data-structure
 d-and-c-on-tree
 loj-3370
-loj#3370 题解 - 「COCI 2020.10」3D Histogram
+loj#3370 题解 - 【COCI2020】3D Histogram
 solution
 3
 safe
 data-structure
 calculating-geometry
 loj-3385
-loj#3385 题解 - 「COCI 2020.11」Svjetlo
+loj#3385 题解 - 【COCI 2020】Svjetlo
 solution
 2
 keter
