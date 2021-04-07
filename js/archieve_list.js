@@ -808,5 +808,13 @@
 		'last_modi' : '2021-04-06',
 		'tag' : ['data-structure','euclid','string',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '102',
+		'post_name' : 'uoj-224',
+		'post_chinese_name' : 'uoj#224 题解 - 【NOI2016】旷野大计算',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-07',
+		'tag' : ['apollyon','submit-answer',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
