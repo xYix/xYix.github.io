@@ -36,8 +36,8 @@
                 if (document.Tags.length !== 0) {
                     let Taginfo = '具有标签：';
                     for (let i = 0; i < document.Tags.length; i = i + 1) {
-                        if (document.tags_chinese[document.Tags[i]] !== undefined)
-                            Taginfo += document.tags_chinese[document.Tags[i]];
+                        if (tags_chinese[document.Tags[i]] !== undefined)
+                            Taginfo += tags_chinese[document.Tags[i]];
                         else Taginfo += '不明标签';
                         if (i !== document.Tags.length - 1) Taginfo += '，';
                     }
