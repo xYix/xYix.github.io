@@ -669,3 +669,9 @@ solution
 2
 apollyon
 submit-answer
+binomial-sum
+《再谈 Binomial Sum》通俗演义
+algorithm
+2
+generating-function
+combinatorics

@@ -813,8 +813,16 @@
 		'post_name' : 'uoj-224',
 		'post_chinese_name' : 'uoj#224 题解 - 【NOI2016】旷野大计算',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-07',
+		'last_modi' : '2021-04-08',
 		'tag' : ['apollyon','submit-answer',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '103',
+		'post_name' : 'binomial-sum',
+		'post_chinese_name' : '《再谈 Binomial Sum》通俗演义',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-04-09',
+		'tag' : ['combinatorics','generating-function',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
