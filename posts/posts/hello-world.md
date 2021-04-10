@@ -40,6 +40,8 @@ x义x 的朋友们~~密切关注中的人类个体~~：
 
 [周指导的博客](https://www.cnblogs.com/zhouzhendong/)
 
+[珂丽囡的博客](https://www.cnblogs.com/cly-none/)
+
 [点王的博客](https://www.cnblogs.com/Point-King/)
 
 [俄猫的博客](https://commune.ml/)
