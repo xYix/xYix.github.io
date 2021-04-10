@@ -277,7 +277,7 @@
 		'post_name' : 'set-power-series',
 		'post_chinese_name' : '集合幂级数学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-11-13',
+		'last_modi' : '2021-04-09',
 		'tag' : ['combinatorics','generating-function','set-power-series',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -823,6 +823,14 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-04-09',
 		'tag' : ['combinatorics','generating-function',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '104',
+		'post_name' : 'zjoi-2021-thusc-2021',
+		'post_chinese_name' : '2021 省选游记兼神秘比赛游记',
+		'type_name' : 'other',
+		'last_modi' : '2021-04-10',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

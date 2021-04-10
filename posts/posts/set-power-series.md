@@ -68,8 +68,7 @@ $$
 \text{Exp}(\sigma)=\sum_{i}\dfrac{\sigma^i}{i!}
 $$
 
-从而有
-
+从而，由于 $\text{FWT}$ 有线性和积性，$[x^S]$ 有线性，我们可以得到
 $$
 \begin{aligned} \left[x^S\right] \text{FWT Exp}(\sigma)&=\sum_{i}\dfrac{\Big([x^S]\text{FWT}(\sigma)\Big)^i}{i!}\end{aligned}
 $$
