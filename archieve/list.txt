@@ -679,3 +679,7 @@ zjoi-2021-thusc-2021
 2021 省选游记兼神秘比赛游记
 other
 0
+agc-031-f
+AGC031F 题解 - Walk on Graph
+solution
+0

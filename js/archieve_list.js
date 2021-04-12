@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-03-25',
+		'last_modi' : '2021-04-10',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -277,7 +277,7 @@
 		'post_name' : 'set-power-series',
 		'post_chinese_name' : '集合幂级数学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-04-09',
+		'last_modi' : '2021-04-12',
 		'tag' : ['combinatorics','generating-function','set-power-series',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -573,7 +573,7 @@
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-20',
+		'last_modi' : '2021-04-12',
 		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','pigeon',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -830,6 +830,14 @@
 		'post_chinese_name' : '2021 省选游记兼神秘比赛游记',
 		'type_name' : 'other',
 		'last_modi' : '2021-04-10',
+		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '105',
+		'post_name' : 'agc-031-f',
+		'post_chinese_name' : 'AGC031F 题解 - Walk on Graph',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-12',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
