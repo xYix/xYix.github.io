@@ -574,7 +574,7 @@
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-13',
-		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','pigeon',],
+		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '73',
@@ -710,7 +710,7 @@
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-24',
-		'tag' : ['keter','lyndon-tech','string','writing',],
+		'tag' : ['keter','lyndon-tech','pigeon','string',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '90',

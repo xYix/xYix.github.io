@@ -480,7 +480,7 @@ combinatorics
 construction
 lmoliver
 network-flow
-pigeon
+writing
 uoj-577
 uoj#577 题解 - 【ULR #1】打击复读
 solution
@@ -582,7 +582,7 @@ solution
 keter
 string
 lyndon-tech
-writing
+pigeon
 k-th-shortest-path
 k 短路及其延伸
 algorithm
