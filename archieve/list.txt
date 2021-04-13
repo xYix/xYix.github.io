@@ -683,3 +683,8 @@ agc-031-f
 AGC031F 题解 - Walk on Graph
 solution
 0
+agc-036-d
+AGC036D 题解 — Negative Cycle
+solution
+1
+graph-theory

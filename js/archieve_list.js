@@ -573,7 +573,7 @@
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-12',
+		'last_modi' : '2021-04-13',
 		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','pigeon',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -839,6 +839,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-12',
 		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '106',
+		'post_name' : 'agc-036-d',
+		'post_chinese_name' : 'AGC036D 题解 — Negative Cycle',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-13',
+		'tag' : ['graph-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
