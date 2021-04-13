@@ -646,9 +646,10 @@ isotonic-regression
 luogu-4339
 luoguP4339 题解 - 【ZJOI2018】迷宫
 solution
-2
+3
 keter
 lmoliver
+number-theory
 luogu-4775
 luoguP4775 题解 - 【NOI2018】情报中心
 solution
@@ -682,9 +683,12 @@ other
 agc-031-f
 AGC031F 题解 - Walk on Graph
 solution
-0
+2
+euclid
+number-theory
 agc-036-d
 AGC036D 题解 — Negative Cycle
 solution
-1
+2
+euclid
 graph-theory

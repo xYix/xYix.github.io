@@ -790,7 +790,7 @@
 		'post_chinese_name' : 'luoguP4339 题解 - 【ZJOI2018】迷宫',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-05',
-		'tag' : ['keter','lmoliver',],
+		'tag' : ['keter','lmoliver','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '100',
@@ -838,7 +838,7 @@
 		'post_chinese_name' : 'AGC031F 题解 - Walk on Graph',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-12',
-		'tag' : [],
+		'tag' : ['euclid','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '106',
@@ -846,7 +846,7 @@
 		'post_chinese_name' : 'AGC036D 题解 — Negative Cycle',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-13',
-		'tag' : ['graph-theory',],
+		'tag' : ['euclid','graph-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
