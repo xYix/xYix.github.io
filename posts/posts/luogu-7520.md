@@ -8,7 +8,7 @@ title: luoguP7520 题解 - 【省选联考 2020】支配
 >
 > 现有 $q$ 次询问，形如：若加上边 $(u,v)$，会有多少个点的受支配集发生变动。
 >
-> $|V|\le 3\times10^4,|E|\le 2|V|,q\le 2\times10^4$。
+> $|V|\le 3\times10^3,|E|\le 2|V|,q\le 2\times10^4$。
 
 **观察 1.** 显然支配具有传递性，且两个点不可能同时支配某点却不互相支配，故支配关系形成了一个树形结构，是为**支配树**。
 
@@ -26,4 +26,88 @@ title: luoguP7520 题解 - 【省选联考 2020】支配
 - $v$ 到 $w$ 是否有不经过 $\text{fa}(w)$ 的路径？这东西可以预处理。抠掉 $\text{fa}(w)$ 从 $w$ 跑一遍即可。
 
 于是就做完了。
+
+```cpp
+#include<bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+
+const int maxn = 3005;
+int n, m, q;
+vector<int> G[maxn], rG[maxn];
+vector<int> H[maxn];
+int fa[maxn];
+bool des[maxn][maxn]; int siz[maxn];
+bool anc[maxn][maxn];
+
+int rt;
+void dfs_(int x, bool flg[]) {
+    flg[x] = 1;
+    for (int y : G[x]) if (y != rt && !flg[y])
+        dfs_(y, flg);
+}
+void solve(int S, bool flg[]) {
+    memset(flg, 0, maxn << 2);
+    dfs_(S, flg);
+}
+
+bool ans[maxn][maxn];
+void rdfs_(int x, bool flg[]) {
+    flg[x] = 1;
+    for (int y : rG[x]) if (y != rt && !flg[y])
+        rdfs_(y, flg);
+}
+void rsolve(int S, bool flg[]) {
+    memset(flg, 0, maxn << 2);
+    rdfs_(S, flg);
+}
+
+int dfn[maxn], idx;
+void get_dfn(int x) {
+    dfn[++idx] = x;
+    for (int y = 1; y <= n; y++) if (fa[y] == x) get_dfn(y);
+}
+
+bool ANS1[maxn], ANS2[maxn];
+
+int main() {
+    scanf("%d%d%d", &n, &m, &q);
+    while (m--) {
+        int u, v; scanf("%d%d", &u, &v);
+        G[u].push_back(v), rG[v].push_back(u);
+    }
+    for (int u = 1; u <= n; u++) {
+        rt = u; if (u != 1) solve(1, des[u]);
+        for (int v = 1; v <= n; v++) 
+            des[u][v] ^= 1, siz[u] += des[u][v];
+        for (int v = 1; v <= n; v++) if (des[u][v]) {
+            // printf("%d -> %d\n", u, v);
+            anc[v][u] = 1; H[u].push_back(v);
+            if (u != v && (fa[v] == 0 || siz[u] < siz[fa[v]])) fa[v] = u;
+        }
+    }
+    for (int u = 2; u <= n; u++) {
+        // printf("fa %d = %d\n", u, fa[u]);
+        rt = fa[u]; rsolve(u, ans[u]);
+    }
+    get_dfn(1);
+    
+    while (q--) {
+        memset(ANS1, 0, sizeof(ANS1));
+        int qu, qv; scanf("%d%d", &qu, &qv);
+        for (int i = 2; i <= n; i++)
+            if (!anc[qu][fa[i]] && ans[i][qv]) ANS1[i] = 1;
+        memset(ANS2, 0, sizeof(ANS2));
+        int ANS = 0;
+        for (int i = 1; i <= n; i++) {
+            int u = dfn[i];
+            if (ANS1[u] && !ANS2[u]) {
+                ANS += siz[u];
+                for (int v : H[u]) ANS2[v] = 1;
+            }
+        }
+        printf("%lld\n", ANS);
+    }
+}
+```
 
