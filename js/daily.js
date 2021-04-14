@@ -441,7 +441,7 @@
         '/images/modai8.png',
         '/images/modai9.png',
         '/images/modai10.png',
-        '/images/modai11.png',
+        '/images/modai11.jpg',
         '/images/modai12.png',
         '/images/modai14.png',
         '/images/modai15.jpg',
