@@ -125,7 +125,7 @@
 		'post_name' : 'linear-algebra',
 		'post_chinese_name' : '线性代数学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-10-03',
+		'last_modi' : '2021-04-13',
 		'tag' : ['linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -573,7 +573,7 @@
 		'post_name' : 'ioi2020hw2',
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-13',
+		'last_modi' : '2021-04-14',
 		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -847,6 +847,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-13',
 		'tag' : ['euclid','graph-theory',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '107',
+		'post_name' : 'luogu-7520',
+		'post_chinese_name' : 'luoguP7520 题解 - 【省选联考 2020】支配',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-14',
+		'tag' : ['graph-theory','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

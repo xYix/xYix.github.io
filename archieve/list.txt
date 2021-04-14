@@ -692,3 +692,9 @@ solution
 2
 euclid
 graph-theory
+luogu-7520
+luoguP7520 题解 - 【省选联考 2020】支配
+solution
+2
+safe
+graph-theory
