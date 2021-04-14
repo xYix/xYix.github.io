@@ -46,4 +46,4 @@ x义x 的朋友们~~密切关注中的人类个体~~：
 
 [俄猫的博客](https://commune.ml/)
 
-[数据结构毒瘤的病历](https://www.luogu.com.cn/blog/DPair2005/)
+[数据结构毒瘤的病历](https://dpair.gitee.io)
