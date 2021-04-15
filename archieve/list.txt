@@ -698,3 +698,9 @@ solution
 2
 safe
 graph-theory
+cf-671-d
+CF671D 题解 - Roads in Yusland
+solution
+2
+safe
+linear-algebra

@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-04-10',
+		'last_modi' : '2021-04-14',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -855,6 +855,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-14',
 		'tag' : ['graph-theory','safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '108',
+		'post_name' : 'cf-671-d',
+		'post_chinese_name' : 'CF671D 题解 - Roads in Yusland',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-15',
+		'tag' : ['linear-algebra','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
