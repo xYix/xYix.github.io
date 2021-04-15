@@ -864,5 +864,13 @@
 		'last_modi' : '2021-04-15',
 		'tag' : ['linear-algebra','safe',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '109',
+		'post_name' : 'unknown-1',
+		'post_chinese_name' : 'Unknown#1 题解 - 我不知道来源但这题的确有来源',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-15',
+		'tag' : ['euclid','string',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
