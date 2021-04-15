@@ -357,7 +357,7 @@
 		'post_name' : 'combinatorics',
 		'post_chinese_name' : '组合结构符号化学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-11-26',
+		'last_modi' : '',
 		'tag' : ['combinatorics','generating-function','group-counting',],
 	};
 	archieve_list[archieve_list.length] = {
