@@ -1,5 +1,5 @@
 ---
-title: AGC036D 题解 — Negative Cycle
+title: AGC036D 题解 - Negative Cycle
 ---
 
 > **题目大意.**

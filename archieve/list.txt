@@ -687,7 +687,7 @@ solution
 euclid
 number-theory
 agc-036-d
-AGC036D 题解 — Negative Cycle
+AGC036D 题解 - Negative Cycle
 solution
 2
 euclid
