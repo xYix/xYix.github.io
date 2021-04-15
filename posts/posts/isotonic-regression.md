@@ -238,8 +238,16 @@ int main() {
 
 ### [[省选联考 2020 A 卷] 魔法商店](https://www.luogu.com.cn/problem/P6621)
 
-因为涉及了其他一些内容，所以干脆[独立成篇](https://xyix.gitee.io/posts/?&postname=luogu-6621)。
+众所周知线性基是[拟阵](https://xyix.gitee.io/posts/?&postname=matroid)。考虑**基交换引理**：
+
+> 现有两个基 $A,B$。对于任意 $x\in A/B$，必存在 $y\in B/A$ 使得 $A/\{x\}\cup\{y\}$ 是一个基。
+
+即，任意两个基都是直接可以通过一次"交换"操作互相到达的。只需要保证："交换"操作无法使 $A$ 变小，也无法使 $B$ 变大。
+
+于是，爆枚举 $A$（respectively，$B$）中的元素和其外的元素，如果能互相替换就有偏序关系。
+
+最后应用上[保序回归](https://xyix.gitee.io/posts/?&postname=isotonic-regression)就做完了！！！
 
 # $p=\infty$ 的情况和扩展
 
-🕊
+🕊了

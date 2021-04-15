@@ -317,7 +317,7 @@
 		'post_name' : 'isotonic-regression',
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-04-02',
+		'last_modi' : '2021-04-16',
 		'tag' : ['isotonic-regression','offline','overall-binary-search',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -778,14 +778,6 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '98',
-		'post_name' : 'luogu-6621',
-		'post_chinese_name' : 'luoguP6621 题解 - 【省选联考 2020 A 卷】魔法商店',
-		'type_name' : 'solution',
-		'last_modi' : '2021-04-02',
-		'tag' : ['isotonic-regression','safe',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '99',
 		'post_name' : 'luogu-4339',
 		'post_chinese_name' : 'luoguP4339 题解 - 【ZJOI2018】迷宫',
 		'type_name' : 'solution',
@@ -793,7 +785,7 @@
 		'tag' : ['keter','lmoliver','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '100',
+		'postid' : '99',
 		'post_name' : 'luogu-4775',
 		'post_chinese_name' : 'luoguP4775 题解 - 【NOI2018】情报中心',
 		'type_name' : 'solution',
@@ -801,7 +793,7 @@
 		'tag' : ['d-and-c-on-tree','data-structure','euclid',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '101',
+		'postid' : '100',
 		'post_name' : 'luogu-5287',
 		'post_chinese_name' : 'luoguP5287 题解 - 【HNOI2019】JOJO',
 		'type_name' : 'solution',
@@ -809,7 +801,7 @@
 		'tag' : ['data-structure','euclid','string',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '102',
+		'postid' : '101',
 		'post_name' : 'uoj-224',
 		'post_chinese_name' : 'uoj#224 题解 - 【NOI2016】旷野大计算',
 		'type_name' : 'solution',
@@ -817,7 +809,7 @@
 		'tag' : ['apollyon','submit-answer',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '103',
+		'postid' : '102',
 		'post_name' : 'binomial-sum',
 		'post_chinese_name' : '《再谈 Binomial Sum》通俗演义',
 		'type_name' : 'algorithm',
@@ -825,7 +817,7 @@
 		'tag' : ['combinatorics','generating-function',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '104',
+		'postid' : '103',
 		'post_name' : 'zjoi-2021-thusc-2021',
 		'post_chinese_name' : '2021 省选游记兼神秘比赛游记',
 		'type_name' : 'other',
@@ -833,7 +825,7 @@
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '105',
+		'postid' : '104',
 		'post_name' : 'agc-031-f',
 		'post_chinese_name' : 'AGC031F 题解 - Walk on Graph',
 		'type_name' : 'solution',
@@ -841,7 +833,7 @@
 		'tag' : ['euclid','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '106',
+		'postid' : '105',
 		'post_name' : 'agc-036-d',
 		'post_chinese_name' : 'AGC036D 题解 - Negative Cycle',
 		'type_name' : 'solution',
@@ -849,7 +841,7 @@
 		'tag' : ['euclid','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '107',
+		'postid' : '106',
 		'post_name' : 'luogu-7520',
 		'post_chinese_name' : 'luoguP7520 题解 - 【省选联考 2020】支配',
 		'type_name' : 'solution',
@@ -857,7 +849,7 @@
 		'tag' : ['graph-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '108',
+		'postid' : '107',
 		'post_name' : 'cf-671-d',
 		'post_chinese_name' : 'CF671D 题解 - Roads in Yusland',
 		'type_name' : 'solution',
@@ -865,7 +857,7 @@
 		'tag' : ['linear-algebra','safe',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '109',
+		'postid' : '108',
 		'post_name' : 'unknown-1',
 		'post_chinese_name' : 'Unknown#1 题解 - 我不知道来源但这题的确有来源',
 		'type_name' : 'solution',
