@@ -2,6 +2,8 @@
 title: Unknown#1 题解 - 我不知道来源但这题的确有来源
 ---
 
+据考证这题应该是一场牛客多校里的，但是没有权限看不了。
+
 > **题目大意.**
 >
 > 令 $s_0=b,s_1=a$，对于 $i\ge 2,s_i=s_{i-1}s_{i-2}$。
@@ -20,6 +22,10 @@ title: Unknown#1 题解 - 我不知道来源但这题的确有来源
 
 下面是 $n=5$ 的图。
 
-<center><div style="width:90%;margin:auto"><img src="https://xyix.gitee.io/images/unknown-1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:100%;margin:0"><img src="https://xyix.gitee.io/images/unknown-1.png" style="width: 70%" alt=""></div></center>
 
-有了后缀自动机，所欲求的问题自然就不难了。我们又发现可以把这个自动机[压缩]()到 $3n$ 个节点，这就得到了一个 $O(n)$ 做法。
+有了后缀自动机，所欲求的问题自然就不难了。我们又发现可以把这个自动机[压缩](https://xyix.gitee.io/posts/?&postname=uoj-577)到 $3n$ 个节点，这就得到了一个 $O(n)$ 做法。
+
+然后你会发现 $x$ 很小，所以只需要前面尽量跳 $1$，只考虑最后 $O(\log x)$ 个节点就够了，这就做完了。
+
+写起来有、恶心。
