@@ -10,7 +10,7 @@ title: k 短路及其延伸
 
 > **引理 1.**
 >
-> $P$ 所代表的路径的权值为 $d(S)+\sum_{(u,v,w)\in P}w-d(v)+d(u)$。
+> $P$ 所代表的路径的权值为 $d(S)+\sum_{(u,v,w)\in P}w-d(u)+d(v)$。
 
 那么问题就剩下怎么生成合法的 $P$。这个生成方法必须精心设计，首先它
 
@@ -20,26 +20,120 @@ title: k 短路及其延伸
 
 注意这组要求看着很自然但其实很强，强到可以直接导出结论：每个 $P$ 被生成的顺序就是它们权值的排序。
 
-下面给出一个符合要求的算法。
+显然有下面的观察：
 
-> **算法 1.**
->
-> 预先给所有边按权值不降的顺序排序，第二关键字可以任意取。下面我们说一条边*小/大于*另一条边都按的是此顺序。
->
-> 初始时令 $P$ 为空。对于当前列表 $P$，记其“顶部”的边为 $(u,v,w)$。不断地把 $P$ 替换为下列二者中权值较小者。
->
-> - 在 $(u,v,w)$ 后接上一条以某个以 $v$ 为祖先的点（包括 $v$）为起点的*最小*边。
-> - 把 $(u,v,w)$ 换成一条能使 $P$ 合法且*大于* $(u,v,w)$ 的*最小*边。
-> - 否则如果没有任何选择，回溯：删去 $(u,v,w)$。
+- $P$ 比 $P+\{e\}$ 权值小。
+- 如果 $e_1$ 的权值比 $e_2$ 小，则 $P+\{e_1\}$ 比 $P+\{e_2\}$ 小。
 
-直接可持久化可并堆即可。hint：支持 2 操作并不难，用 1 操作添加 $(u,v,w)$ 时复制当前可并堆即可。
+可见这个偏序关系把所有的 $P$ 组织成一棵树，我们只需要在这棵树上不停走可扩展的最小节点。
 
-代码🕊了
+具体维护可以使用可持久化可并堆。维护细节此处不表，因为它不关键。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 5005;
+int n, m; double E;
+
+struct edge {
+    int u, v; double w;
+}; vector<edge> G[maxn], rG[maxn];
+int fa[maxn]; double dep[maxn];
+bool flg[maxn];
+
+struct leftist;
+leftist *merge(leftist *x, leftist *y);
+
+struct leftist {
+    vector<edge>::iterator val;
+    leftist *c[2];
+    int dis;
+} *rt[maxn];
+int get_dis(leftist *x) {
+    return x ? x -> dis : 0;
+}
+leftist *merge(leftist *x, leftist *y) {
+    if (!x) return y; if (!y) return x;
+    if (x -> val -> w > y -> val -> w) swap(x, y);
+    leftist *nx = new leftist; *nx = *x;
+    nx -> c[1] = merge(nx -> c[1], y);
+    if (get_dis(nx -> c[0]) < get_dis(nx -> c[1])) swap(nx -> c[0], nx -> c[1]);
+    nx -> dis = get_dis(nx -> c[1]) + 1;
+    return nx;
+}
+
+void get_rt(int x) {
+    if (fa[x]) rt[x] = merge(rt[x], rt[fa[x]]);
+    for (int y = 1; y <= n; y++) if (fa[y] == x)
+        get_rt(y);
+}
+
+int ans;
+
+struct node {
+    leftist *p; double nowE;
+    vector<edge>::iterator e;
+    bool operator < (const node b) const { return nowE > b.nowE; }
+}; priority_queue<node> Q;
+
+int main() {
+    // freopen("C:/Users/x_Yi_x/Documents/1.in", "r", stdin);
+    scanf("%d%d%lf", &n, &m, &E);
+    while (m--) {
+        int u, v; double w; scanf("%d%d%lf", &u, &v, &w);
+        if (u != n)
+            G[u].push_back((edge){u, v, w}),
+            rG[v].push_back((edge){v, u, w});
+    }
+
+    for (int i = 0; i <= n; i++) dep[i] = 1e20;
+    dep[n] = 0;
+    for (int T = 1; T <= n; T++) {
+        int u = 0;
+        for (int i = 1; i <= n; i++) if (!flg[i] && dep[i] < dep[u]) u = i;
+        flg[u] = 1;
+        for (edge e : rG[u]) dep[e.v] = min(dep[e.v], dep[u] + e.w);
+    }
+
+    for (int i = 1; i <= n; i++)
+    for (vector<edge>::iterator e = G[i].begin(); e != G[i].end(); e++)
+        if (!fa[i] && dep[e -> v] + e -> w < dep[i] + 1e-10)
+            fa[i] = e -> v;
+        else {
+            e -> w = e -> w - dep[e -> u] + dep[e -> v];
+            leftist *p = new leftist;
+            *p = (leftist){e, NULL, NULL, 0};
+            rt[i] = merge(rt[i], p);
+        }
+    get_rt(n);
+
+    E -= dep[1]; ans++;
+    if (!rt[1]) { printf("1\n"); return 0; }
+    Q.push((node){rt[1], dep[1] + rt[1] -> val -> w, rt[1] -> val});
+    while (!Q.empty()) {
+        node u = Q.top(); Q.pop();
+        leftist *p = u.p; double nowE = u.nowE; edge e = *u.e;
+        E -= nowE;
+        if (E < -1e-10) break;
+        ans++;
+        if (p -> c[0])
+            Q.push((node){p -> c[0], nowE - e.w + p -> c[0] -> val -> w, p -> c[0] -> val});
+        if (p -> c[1])
+            Q.push((node){p -> c[1], nowE - e.w + p -> c[1] -> val -> w, p -> c[1] -> val});
+        if (rt[e.v])
+            Q.push((node){rt[e.v], nowE + rt[e.v] -> val -> w, rt[e.v] -> val});
+    }
+
+    printf("%d\n", ans);
+}
+```
 
 # 2. 延伸
 
-这里所说的 k 短路问题的延伸，其实就是延伸算法 1 的思想：构造一个总是使得当前方案权值不降的调整法。这个调整法能自然地解决“所有方案中的第 $k$ 大”问题。
+这里所说的 k 短路问题的延伸，其实就是延伸算法 1 的思想：构造一棵所有方案构成的树，我们只需要走其中极小极浅的一部分。
 
 > **例题.**
 >
-> [数据删除]
+> [数据删除，懂的都懂]
+
