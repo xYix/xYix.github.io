@@ -637,7 +637,7 @@
 		'post_name' : 'exc-inc',
 		'post_chinese_name' : '更炫酷的反演魔术',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-27',
+		'last_modi' : '2021-04-16',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -837,7 +837,7 @@
 		'post_name' : 'agc-036-d',
 		'post_chinese_name' : 'AGC036D 题解 - Negative Cycle',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-15',
+		'last_modi' : '2021-04-16',
 		'tag' : ['euclid','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
