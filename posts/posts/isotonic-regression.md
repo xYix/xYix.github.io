@@ -229,7 +229,126 @@ int main() {
 考虑向左合并，其实就是找到最右方的"稳定"左端点 $L$，如果已知了 $R$ 它就可以直接二分；$R$ 套在外面二分即可。
 
 ```cpp
-代码鸽了
+#include<bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+
+const int maxn = 100005, p = 998244353;
+int norm(int x) { return x >= p ? x - p : x; }
+int inv[maxn];
+void init() {
+    inv[1] = 1;
+    for (int i = 2; i < maxn; i++)
+        inv[i] = 1LL * (p - p / i) * inv[p % i] % p;
+}
+
+struct frac {
+    ll a;
+    int l, r;
+    frac operator + (const frac v) const { return (frac){a + v.a, l, v.r}; }
+    bool operator < (const frac v) const {
+        return (__int128)a * (v.r - v.l + 1) < (__int128)v.a * (r - l + 1);
+    }
+} suf[maxn], pre[maxn];
+int suf_val[maxn], pre_val[maxn];
+int ls, lp;
+vector<frac> his_del[maxn];
+
+int n, m;
+int A[maxn];
+ll S1_[maxn];
+int S1[maxn], S2[maxn];
+frac newfrac(int l, int r, int del = 0) { return (frac){S1_[r] - S1_[l - 1] + del, l, r}; }
+int inline getS1(int l, int r) { return norm(S1[r] - S1[l - 1] + p); }
+int inline getavg(int l, int r) { return 1LL * getS1(l, r) * inv[r - l + 1] % p; }
+int inline getS2(int l, int r) { return norm(S2[r] - S2[l - 1] + p); }
+int inline getVAL(int l, int r) {
+    int avg = getavg(l, r);
+    ll ans = getS2(l, r) - 2LL * avg * getS1(l, r) + 1LL * avg * avg % p * (r - l + 1);
+    return norm((int)(ans % p) + p);
+}
+
+struct qry {
+    int val, id;
+}; vector<qry> Qs[maxn];
+int ans[maxn];
+
+int get_L(int del, int R) {
+    int xL = 0, xR = lp;
+    while (xL < xR) {
+        int mid = (xL + xR + 1) >> 1;
+        if (pre[mid] < newfrac(pre[mid].r + 1, R - 1, del)) xL = mid;
+        else xR = mid - 1;
+    }
+    return xL;
+}
+pair<int, int> get_R(int del) {
+    int xL = 0, xR = ls;
+    while (xL < xR) {
+        int mid = (xL + xR + 1) >> 1;
+        int L = get_L(del, suf[mid].l);
+        if (newfrac(pre[L].r + 1, suf[mid].l - 1, del) < suf[mid]) xL = mid;
+        else xR = mid - 1;
+    }
+    return make_pair(get_L(del, suf[xL].l), xL);
+}
+
+int main() {
+    init();
+    scanf("%d%d", &n, &m);
+    for (int i = 1; i <= n; i++)
+        scanf("%d", &A[i]),
+        S1_[i] = S1_[i - 1] + A[i],
+        S1[i] = (S1[i - 1] + A[i]) % p,
+        S2[i] = (S2[i - 1] + 1LL * A[i] * A[i]) % p;
+    for (int i = 1; i <= m; i++) {
+        int pos, val;
+        scanf("%d%d", &pos, &val);
+        Qs[pos].push_back((qry){val - A[pos], i});
+    }
+
+    suf[0] = (frac){1, n + 1, n};
+    for (int i = n; i; i--) {
+        frac now = (frac){A[i], i, i};
+        while (ls && suf[ls] < now) {
+            his_del[i].push_back(suf[ls]);
+            now = now + suf[ls--];
+        }
+        suf[++ls] = now;
+        suf_val[ls] = norm(suf_val[ls - 1] + getVAL(now.l, now.r));
+    }
+    ans[0] = suf_val[ls];
+
+    for (int i = 1; i <= n; i++) {
+        ls--;
+        for (int j = his_del[i].size() - 1; j >= 0; j--) {
+            suf[++ls] = his_del[i][j];
+            suf_val[ls] = norm(suf_val[ls - 1] + getVAL(suf[ls].l, suf[ls].r));
+        }
+
+        for (qry e : Qs[i]) {
+            pair<int, int> qaq = get_R(e.val);
+            ans[e.id] = norm(pre_val[qaq.first] + suf_val[qaq.second]);
+            int l = pre[qaq.first].r + 1, r = suf[qaq.second].l - 1;
+            // printf("%d %d\n", l - 1, r + 1);
+            int avg = 1LL * norm(getS1(l, r) + e.val) * inv[r - l + 1] % p;
+            ll tmp = getS2(l, r) - 1LL * A[i] * A[i] + 1LL * (A[i] + e.val) * (A[i] + e.val);
+            tmp = norm((int)(tmp % p) + p);
+            tmp -= 2LL * avg * norm(getS1(l, r) + e.val);
+            tmp += 1LL * avg * avg % p * (r - l + 1);
+            tmp = norm((int)(tmp % p) + p);
+            ans[e.id] = norm(ans[e.id] + (int)tmp);
+        }
+
+        frac now = (frac){A[i], i, i};
+        while (lp && now < pre[lp])
+            now = pre[lp--] + now;
+        pre[++lp] = now;
+        pre_val[lp] = norm(pre_val[lp - 1] + getVAL(now.l, now.r));
+    }
+    
+    for (int i = 0; i <= m; i++) printf("%d\n", ans[i]);
+}
 ```
 
 ## 网络流
