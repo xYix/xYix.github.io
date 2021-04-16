@@ -1,4 +1,4 @@
-见 https://xyix.gitee.io/。这里记录的是自 2021/4/ 以来的博文更新时间轴。
+见 https://xyix.gitee.io/。这里记录的是自 2021/4/14 以来的博文更新时间轴。
 
 - 2021/4/14：更新一篇博文 [支配](https://xyix.gitee.io/posts/?&page=3&postname=luogu-7520)。[友链](https://xyix.gitee.io/posts/?&page=0&postname=hello-world)中增加了 cly_none 的博客链。
 
