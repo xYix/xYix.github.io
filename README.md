@@ -1,9 +1,8 @@
-见 https://xyix.gitee.io/ QAQ
+见 https://xyix.gitee.io/。这里记录的是自 2021/4/ 以来的博文更新时间轴。
 
-<h2>部分更新</h2>
-<p>- 2021/3/1 : 404 变得更加合理了。鬼知道我是怎么写出之前的 404 的</p>
-<p>- 2021/2/28 : 增加了更改主题颜色的功能！三个颜色分别对应奶油糖的三个专辑（因为我不太喜欢 N 专就开除糖籍了）</p>
-<p>- 2021/2/20 : 发觉到自己经常乱搞 blog 的顺序，所以现在文章地址都以文章名决定而不是以 id 决定。原先的链接已经全部重定向。</p>
-<p>- 2021/2/8 : 解散了 xjoi 部和网义云音乐部。感谢它们一直以来为基金会做出的贡献。博客正式更名为“基金会超常组合数学部”。</p>
-<p>- 2020/12/1 : xyix.gitee.io 终于有站点地图啦！</p>
-<p>- 2020/12/30 : 更新了主页。顺便重写了部分 js。</p>
+- 2021/4/14：更新一篇博文 [支配](https://xyix.gitee.io/posts/?&page=3&postname=luogu-7520)。[友链](https://xyix.gitee.io/posts/?&page=0&postname=hello-world)中增加了 cly_none 的博客链。
+
+- 2021/4/15：更新两篇博文 [Roads in Yusland](https://xyix.gitee.io/posts/?&page=3&postname=cf-671-d) 和 [Unknown#1](https://xyix.gitee.io/posts/?&page=3&postname=unknown-1)。
+
+- 2021/4/16：补充了[保序回归](https://xyix.gitee.io/posts/?&page=1&postname=isotonic-regression)中 HNOI2019 序列的代码。重制了 [k 短路](https://xyix.gitee.io/posts/?&page=2&postname=k-th-shortest-path)。修了[反演魔术](https://xyix.gitee.io/posts/?&page=2&postname=exc-inc)的一个小锅。
+
