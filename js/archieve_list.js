@@ -717,7 +717,7 @@
 		'post_name' : 'k-th-shortest-path',
 		'post_chinese_name' : 'k 短路及其延伸',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-03-19',
+		'last_modi' : '2021-04-16',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
