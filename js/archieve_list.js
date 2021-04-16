@@ -806,7 +806,7 @@
 		'post_chinese_name' : 'uoj#224 题解 - 【NOI2016】旷野大计算',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-08',
-		'tag' : ['apollyon','submit-answer',],
+		'tag' : ['keter','submit-answer',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '102',

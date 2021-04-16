@@ -662,7 +662,7 @@ uoj-224
 uoj#224 题解 - 【NOI2016】旷野大计算
 solution
 2
-apollyon
+keter
 submit-answer
 binomial-sum
 《再谈 Binomial Sum》通俗演义
