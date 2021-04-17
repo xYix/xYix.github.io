@@ -872,5 +872,13 @@
 		'last_modi' : '2021-04-17',
 		'tag' : ['combinatorics','keter','linear-algebra','network-flow','randomization',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '110',
+		'post_name' : 'linear-algebra-in-graph-theory',
+		'post_chinese_name' : '图论中的线性代数 - 论文解析',
+		'type_name' : 'algebra',
+		'last_modi' : '2021-04-17',
+		'tag' : ['combinatorics','linear-algebra','network-flow','randomization',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
