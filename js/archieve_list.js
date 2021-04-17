@@ -864,5 +864,13 @@
 		'last_modi' : '2021-04-15',
 		'tag' : ['euclid','string',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '109',
+		'post_name' : 'loj-6759',
+		'post_chinese_name' : 'loj#6759 题解 - 【2021 集训队论文】传播者',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-17',
+		'tag' : ['combinatorics','keter','linear-algebra','network-flow','randomization',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

@@ -704,3 +704,12 @@ solution
 2
 euclid
 string
+loj-6759
+loj#6759 题解 - 【2021 集训队论文】传播者
+solution
+5
+keter
+combinatorics
+randomization
+linear-algebra
+network-flow
