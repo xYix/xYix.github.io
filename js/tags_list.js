@@ -13,7 +13,7 @@
 	tags_chinese['string'] = '字符串';
 	tags_chinese['lyndon-tech'] = 'lyndon 科技';
 	tags_chinese['linear-programming'] = '线性规划';
-	tags_chinese['group-counting'] = '🎨群论计数🎨';
+	tags_chinese['group-theory'] = '群论';
 	tags_chinese['game-theory'] = '♦博弈论♦';
 	tags_chinese['set-power-series'] = '集合幂级数';
 	tags_chinese['pigeon'] = '🕊鸽掉的文章🕊';
@@ -56,7 +56,7 @@
 	tags_val['string'] = 10;
 	tags_val['lyndon-tech'] = 11;
 	tags_val['linear-programming'] = 12;
-	tags_val['group-counting'] = 13;
+	tags_val['group-theory'] = 13;
 	tags_val['game-theory'] = 14;
 	tags_val['set-power-series'] = 15;
 	tags_val['pigeon'] = 998244353;

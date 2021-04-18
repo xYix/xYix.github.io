@@ -166,7 +166,7 @@
 		'post_chinese_name' : 'luoguP4500 题解 - 【ZJOI2018】树',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['apollyon','combinatorics','exc-inc','generating-function','group-counting',],
+		'tag' : ['apollyon','combinatorics','exc-inc','generating-function','group-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '22',
@@ -246,7 +246,7 @@
 		'post_chinese_name' : '群论视角下的欧拉变换',
 		'type_name' : 'algorithm',
 		'last_modi' : '2020-10-04',
-		'tag' : ['combinatorics','generating-function','group-counting',],
+		'tag' : ['combinatorics','generating-function','group-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '32',
@@ -358,7 +358,7 @@
 		'post_chinese_name' : '组合结构符号化学习笔记',
 		'type_name' : 'algorithm',
 		'last_modi' : '',
-		'tag' : ['combinatorics','generating-function','group-counting',],
+		'tag' : ['combinatorics','generating-function','group-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '46',
@@ -876,9 +876,17 @@
 		'postid' : '110',
 		'post_name' : 'linear-algebra-in-graph-theory',
 		'post_chinese_name' : '图论中的线性代数 - 论文解析',
-		'type_name' : 'algebra',
+		'type_name' : 'algorithm',
 		'last_modi' : '2021-04-17',
 		'tag' : ['combinatorics','linear-algebra','network-flow','randomization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '111',
+		'post_name' : 'loj-548',
+		'post_chinese_name' : 'loj#548 题解 - 【LibreOJ β Round #7】某少女附中的体育课',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-18',
+		'tag' : ['apollyon','group-theory','linear-algebra',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

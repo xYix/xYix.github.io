@@ -136,7 +136,7 @@ solution
 5
 exc-inc
 combinatorics
-group-counting
+group-theory
 generating-function
 apollyon
 luogu-5155
@@ -196,7 +196,7 @@ algorithm
 3
 combinatorics
 generating-function
-group-counting
+group-theory
 loj-6077
 loj#6077 题解 - 逆序对
 solution
@@ -287,7 +287,7 @@ algorithm
 3
 combinatorics
 generating-function
-group-counting
+group-theory
 luogu-6667
 luoguP6667 题解 - 【清华集训2016】 如何优雅地求和
 solution
@@ -715,9 +715,16 @@ linear-algebra
 network-flow
 linear-algebra-in-graph-theory
 图论中的线性代数 - 论文解析
-algebra
+algorithm
 4
 combinatorics
 randomization
 linear-algebra
 network-flow
+loj-548
+loj#548 题解 - 【LibreOJ β Round #7】某少女附中的体育课
+solution
+3
+apollyon
+group-theory
+linear-algebra
