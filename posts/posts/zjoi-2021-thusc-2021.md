@@ -78,3 +78,28 @@ title: 2021 省选游记兼神秘比赛游记
 
 最好情况：100+30+44，是的我 T2 没写 $n=m=3$
 
+# Day2
+
+My laptop isn't beside me now so I am typing on my phone
+
+but there is a bug or something which results in that I can't use Chinese
+
+I was so silly that I didn't even finish the bruteforce of Task 3 (my way to do it was for the deads instead of the alives)
+
+> 注：当时此处想表达的其实是"我的做法很阴间"，但是结果写出来的这个句子也很阴间
+
+Brother Ming told me the solution of Task 3 without O(nlogn) Domination Tree technique, he is so strong!!!
+
+hehezhou was reciting the code
+ of Domination Tree days ago, but he didn't debug it out in the competition
+
+Task 1 and Task 2 seemed easy and was killed by everyone
+
+expected grade ：100+100+0
+
+# Day?
+
+没 fst，D2T3 还捞了 5 分
+
+我 D2T3 打得合理一点就上队线了/fn
+
