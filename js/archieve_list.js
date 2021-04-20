@@ -894,7 +894,7 @@
 		'post_chinese_name' : 'uoj#461 题解 - 新年的 Dog 划分',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-20',
-		'tag' : ['graph-theory','keter',],
+		'tag' : ['graph-theory','interact','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
