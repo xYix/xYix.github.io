@@ -30,7 +30,7 @@
 		'post_chinese_name' : '边/点双连通图计数',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['combinatorics','euclid','generating-function','lagrange-inversion',],
+		'tag' : ['combinatorics','euclid','generating-function','graph-theory','lagrange-inversion',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '5',
@@ -198,7 +198,7 @@
 		'post_chinese_name' : 'AGC016D 题解 - XOR Replace',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : ['safe',],
+		'tag' : ['graph-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '26',
@@ -206,7 +206,7 @@
 		'post_chinese_name' : 'AGC016F 题解 - Games on DAG',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : ['euclid','game-theory',],
+		'tag' : ['euclid','game-theory','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '27',
@@ -238,7 +238,7 @@
 		'post_chinese_name' : 'CF1305G 题解 - Kuroni and Antihype',
 		'type_name' : 'solution',
 		'last_modi' : '2020-09-28',
-		'tag' : ['safe',],
+		'tag' : ['graph-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '31',
@@ -398,7 +398,7 @@
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（上）',
 		'type_name' : 'solution',
 		'last_modi' : '2021-02-20',
-		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver',],
+		'tag' : ['combinatorics','construction','exc-inc','graph-theory','keter','lmoliver',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '51',
@@ -574,7 +574,7 @@
 		'post_chinese_name' : 'IOI2020 集训队作业 AT 部分口胡（下）',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-14',
-		'tag' : ['combinatorics','construction','exc-inc','keter','lmoliver','network-flow','writing',],
+		'tag' : ['combinatorics','construction','exc-inc','graph-theory','keter','lmoliver','network-flow','pigeon',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '73',
@@ -614,7 +614,7 @@
 		'post_chinese_name' : '广义串并联图学习笔记',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-02-04',
-		'tag' : ['d-and-c-on-tree',],
+		'tag' : ['d-and-c-on-tree','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '78',
@@ -782,7 +782,7 @@
 		'post_chinese_name' : 'luoguP4339 题解 - 【ZJOI2018】迷宫',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-05',
-		'tag' : ['keter','lmoliver','number-theory',],
+		'tag' : ['graph-theory','keter','lmoliver','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '99',
@@ -821,7 +821,7 @@
 		'post_name' : 'zjoi-2021-thusc-2021',
 		'post_chinese_name' : '2021 省选游记兼神秘比赛游记',
 		'type_name' : 'other',
-		'last_modi' : '2021-04-10',
+		'last_modi' : '2021-04-20',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -885,8 +885,16 @@
 		'post_name' : 'loj-548',
 		'post_chinese_name' : 'loj#548 题解 - 【LibreOJ β Round #7】某少女附中的体育课',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-18',
+		'last_modi' : '2021-04-19',
 		'tag' : ['apollyon','group-theory','linear-algebra',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '112',
+		'post_name' : 'uoj-461',
+		'post_chinese_name' : 'uoj#461 题解 - 新年的 Dog 划分',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-20',
+		'tag' : ['graph-theory','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

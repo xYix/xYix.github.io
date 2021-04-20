@@ -19,11 +19,12 @@ generating-function
 biconnected-graph-counting
 边/点双连通图计数
 solution
-4
+5
 euclid
 combinatorics
 generating-function
 lagrange-inversion
+graph-theory
 loj-6275
 loj#6275 题解 - 棋盘
 solution
@@ -159,14 +160,16 @@ game-theory
 agc-016-d
 AGC016D 题解 - XOR Replace
 solution
-1
+2
 safe
+graph-theory
 agc-016-f
 AGC016F 题解 - Games on DAG
 solution
-2
+3
 euclid
 game-theory
+graph-theory
 agc-032-f
 AGC032F 题解 - One Third
 solution
@@ -188,8 +191,9 @@ set-power-series
 cf-1305-g
 CF1305G 题解 - Kuroni and Antihype
 solution
-1
+2
 safe
+graph-theory
 euler-trans-in-group-theory
 群论视角下的欧拉变换
 algorithm
@@ -320,12 +324,13 @@ data-structure
 ioi2020hw
 IOI2020 集训队作业 AT 部分口胡（上）
 solution
-5
+6
 keter
 exc-inc
 combinatorics
 construction
 lmoliver
+graph-theory
 csp-2020-fst
 CSP2020 游记
 other
@@ -473,14 +478,15 @@ calculating-geometry
 ioi2020hw2
 IOI2020 集训队作业 AT 部分口胡（下）
 solution
-7
+8
 keter
 exc-inc
 combinatorics
 construction
 lmoliver
 network-flow
-writing
+pigeon
+graph-theory
 uoj-577
 uoj#577 题解 - 【ULR #1】打击复读
 solution
@@ -509,8 +515,9 @@ polynomial
 parallel-series
 广义串并联图学习笔记
 algorithm
-1
+2
 d-and-c-on-tree
+graph-theory
 matroid
 拟阵通俗演义
 algorithm
@@ -640,10 +647,11 @@ safe
 luogu-4339
 luoguP4339 题解 - 【ZJOI2018】迷宫
 solution
-3
+4
 keter
 lmoliver
 number-theory
+graph-theory
 luogu-4775
 luoguP4775 题解 - 【NOI2018】情报中心
 solution
@@ -728,3 +736,9 @@ solution
 apollyon
 group-theory
 linear-algebra
+uoj-461
+uoj#461 题解 - 新年的 Dog 划分
+solution
+2
+keter
+graph-theory
