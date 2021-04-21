@@ -743,3 +743,10 @@ solution
 keter
 graph-theory
 interact
+uoj-504
+uoj#504 - 【JOISC2020】变色龙
+solution
+3
+keter
+graph-theory
+interact

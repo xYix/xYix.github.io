@@ -896,5 +896,13 @@
 		'last_modi' : '2021-04-20',
 		'tag' : ['graph-theory','interact','keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '113',
+		'post_name' : 'uoj-504',
+		'post_chinese_name' : 'uoj#504 - 【JOISC2020】变色龙',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-21',
+		'tag' : ['graph-theory','interact','keter',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
