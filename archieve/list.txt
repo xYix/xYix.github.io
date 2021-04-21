@@ -750,3 +750,9 @@ solution
 keter
 graph-theory
 interact
+agc-001-f
+AGC001F 题解 - Wide Swap
+solution
+2
+keter
+graph-theory

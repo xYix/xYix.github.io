@@ -904,5 +904,13 @@
 		'last_modi' : '2021-04-21',
 		'tag' : ['graph-theory','interact','keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '114',
+		'post_name' : 'agc-001-f',
+		'post_chinese_name' : 'AGC001F 题解 - Wide Swap',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-21',
+		'tag' : ['graph-theory','keter',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
