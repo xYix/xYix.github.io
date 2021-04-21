@@ -6,3 +6,6 @@
 - 2021/4/17：更新了和论文《浅谈线性代数与图论的关系》相关的两篇博文：[这个](https://xyix.gitee.io/posts/?&postname=loj-6759)和[这个](https://xyix.gitee.io/posts/?&postname=linear-algebra-in-graph-theory)。
 - 2021/4/19：更新一篇博文[某少女附中的体育课](https://xyix.gitee.io/posts/?&page=3&postname=loj-548)。
 
+- 2021/4/20：更新一篇博文[新年的Dog划分](https://xyix.gitee.io/posts/?&page=3&postname=uoj-461)。
+- 2021/4/21：更新一篇博文[变色龙](https://xyix.gitee.io/posts/?&page=3&postname=uoj-504)。
+
