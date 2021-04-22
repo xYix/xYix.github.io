@@ -27,14 +27,16 @@ $$
 
 参考之前对矩阵树定理的证明，我们自然有答案即为
 $$
-[x_1x_2...x_n]\prod_i(1+\text{deg}_ix^i)\cdot\operatorname{exp}\operatorname{trace}\ln(I-M)
+[x_1x_2...x_n]\prod_i(1+\text{deg}_ix_i)\cdot\operatorname{exp}\operatorname{trace}\ln(I-M)
 $$
 
 $$
-=[x_1x_2...x_n]\text{det}((1+\text{deg}_ix^i)([i=j]-([(i,j)\in G]x^i))
+=[x_1x_2...x_n]\text{det}((1+\text{deg}_ix_i)([i=j]-[(i,j)\in G]x_i)
 $$
 
-这里我们要做一些分析，考虑行列式的定义 $\prod_p\text{sgn}(p)w(p)$ 并注意前面的 $[x_1x_2...x_n]$。可见 $x^i$ 只能在第一行拿到，而且我们只能拿它仅一次，故上式也可写为
+这里我们要做一些分析，考虑行列式的定义 $\prod_p\text{sgn}(p)w(p)$ 并注意前面的 $[x_1x_2...x_n]$。
+
+可见 $x_i$ 只能在第 $i$ 行拿到，所以第 $i$ 行贡献的必定不是 $[i=j]$；而且显然也必定不是 $\text{deg}_i[(i,j)\in G]x^2_i$。故上式也可写为
 $$
 \text{det}(\text{deg}_i[i=j]-[(i,j)\in G])
 $$
