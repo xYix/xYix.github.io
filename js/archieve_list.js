@@ -909,8 +909,16 @@
 		'post_name' : 'agc-001-f',
 		'post_chinese_name' : 'AGC001F 题解 - Wide Swap',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-21',
+		'last_modi' : '2021-04-22',
 		'tag' : ['graph-theory','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '115',
+		'post_name' : 'loj-6736',
+		'post_chinese_name' : 'loj#6736 题解 - 【2020 集训队论文】最小连通块',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-22',
+		'tag' : ['graph-theory','interact','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);

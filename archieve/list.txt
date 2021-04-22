@@ -756,3 +756,10 @@ solution
 2
 keter
 graph-theory
+loj-6736
+loj#6736 题解 - 【2020 集训队论文】最小连通块
+solution
+3
+keter
+graph-theory
+interact
