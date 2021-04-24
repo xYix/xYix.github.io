@@ -661,7 +661,7 @@
 		'post_name' : 'det-eq-exp-trace-log',
 		'post_chinese_name' : 'det = exp trace log 和矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-21',
+		'last_modi' : '2021-04-22',
 		'tag' : ['combinatorics','exc-inc','generating-function','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -685,7 +685,7 @@
 		'post_name' : 'luogu-4500-ex',
 		'post_chinese_name' : 'ZJOI2018 树 —— 没有群论相关',
 		'type_name' : 'solution',
-		'last_modi' : '2021-02-28',
+		'last_modi' : '2021-04-24',
 		'tag' : ['combinatorics','exc-inc','generating-function','safe',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -763,7 +763,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '96',
 		'post_name' : 'nytoi-2021-a',
-		'post_chinese_name' : 'NayutanOI2021A 题解 - アンドロメダアンドロメダ',
+		'post_chinese_name' : 'NayutanOI2021A 题解 - Andromeda Andromeda',
 		'type_name' : 'solution',
 		'last_modi' : '2021-03-31',
 		'tag' : ['apollyon','bijective-proof','combinatorics','construction','x-yi-x',],
@@ -877,7 +877,7 @@
 		'post_name' : 'linear-algebra-in-graph-theory',
 		'post_chinese_name' : '图论中的线性代数 - 论文解析',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-04-17',
+		'last_modi' : '2021-04-22',
 		'tag' : ['combinatorics','linear-algebra','network-flow','randomization',],
 	};
 	archieve_list[archieve_list.length] = {

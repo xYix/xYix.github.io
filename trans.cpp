@@ -97,9 +97,6 @@ int main(){
 	freopen("sitemap.xml","w",stdout);
 	printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
 	PRINT_INDEX_INFO("index");
-		PRINT_INDEX_INFO("xjoi/index.html");
-			PRINT_INDEX_INFO("xjoi/probs/index.html");
-			PRINT_INDEX_INFO("xjoi/fakenews/index.html");
 		PRINT_INDEX_INFO("tags/index.html");
 		PRINT_INDEX_INFO("archieve/index.html");
 		cin.clear();

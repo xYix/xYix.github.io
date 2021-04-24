@@ -96,7 +96,7 @@ $k=1$ 的时候 $\text{xexp}$ 退化为 $\exp$。$\exp$ 的性质好在 $\exp(a)
 不幸的是 $\text{xexp}$ 两个性质都没有。所以我们只能大力 $\ln$：
 
 $$
-\exp\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}\color{orange}T(\{a\})
+\exp\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}T(\{a\})
 $$
 接下来任务就变成求解 $\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}(T\{a\})$。
 
