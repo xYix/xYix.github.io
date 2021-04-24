@@ -6,138 +6,124 @@ title: ZJOI2018 树 —— 没有群论相关
 
 # 1. 起手式
 
-- 记 $\mathcal T$ 是所有无根树的集合。$t$ 一般是无根树的记号。$|t|$ 表示 $t$ 的节点数。
+如果你不知道 Symbolic Method，下面是一些你可能需要的背景知识。
 
-- 记 $w(t)$ 为给 $t$ 分配 $k$ 次标号的方案数。不难看到
+> - 记 $\mathcal T$ 是所有无标号有根树的集合。
+> - 对于树 $t$，记 $|t|$ 表示 $t$ 的节点数。
+> - 记 $w(t)$ 为给 $t$ **分配标号**（即给每个节点写上一个数字，$1\sim |t|$ 中的数字必须恰好用一次，且每个子树中根节点的编号必须小于其他所有节点）的方案数。
+> - 如果把两棵树 $t_1,t_2$ "捆在一起"成为有序对 $(t_1,t_2)$，那么应该有
+>
+> $$
+> w((t_1,t_2))=w(t_1)w(t_2){|t_1|+|t_2|\choose |t_1|}
+> $$
+>
+> - （相当于选 $|t_1|$ 个标号分给 $t_1$ 让他自己分配，$t_2$ 亦然）
+> - 注意到我们所欲求的是 $\sum_{t\in\mathcal T}[|t|=n]w^k(t)$，于是不妨编一个生成函数
+>
+> $$
+> T_k(\{a\};x)=\dfrac{w^k(a)x^{|a|}}{(|a|!)^k}
+> $$
+>
+> - 对于树的集合 $\mathcal A$，定义它的生成函数是其中的所有树的生成函数之和。
+>
+> $$
+> T_k(\mathcal A;x)=\sum_{a\in\mathcal A}\dfrac{w^k(a)x^{|a|}}{(|a|!)^k}
+> $$
+>
+> - （有时为了简略我们会写为 $T_k(\mathcal A)$）
+> - 不难验证，对于 $\mathcal A\times \mathcal B=\{(a,b),a\in\mathcal A,b\in\mathcal B\}$（称为两个组合类的**笛卡尔积**），有
+>
+> $$
+> T_k(\mathcal A\times\mathcal B)=T_k(\mathcal A)T_k(\mathcal B)
+> $$
+>
+> - 也就是说，<span style="color: red">我们把两个组合类的笛卡尔积对应成了它们生成函数的乘积。</span>
+>
+> - 另外需要注意，有序列表可以看成有序对的不断嵌套，比如 $(((1,2),1),3)$ 其实就是 $(1,2,1,3)$。
 
+我们都知道，任何一棵无标号有根树都可以这样表示：
+
+- 它的根，和它的子树列表（一个由无标号有根树构成的无序列表）。
+
+不妨记为
 $$
-w((t_1,t_2))=w(t_1)w(t_2){|t_1|+|t_2|\choose |t_1|}^k
+\mathcal T^{\square}=\text{MSET}(\mathcal T)
 $$
 
-- 那么不妨搞一个神奇的 GF，
+其中，$^{\square}$ 的意义是去掉根，而 $\text{MSET}(\mathcal A)$ 的意义是"所有由 $\mathcal A$ 中元素构成的无序列表"。下面我们的任务就变成：<span style="color: red">为 $^{\square}$ 和 $\text{MSET}$ 找到对应的生成函数运算。</span>
 
+不妨记 $^{\square}$ 对应的是 $\text{xD}$，$\text{MSET}$ 对应的是 $\text{xexp}$。
+
+# 2. $\text{xD}$ 的部分
+
+$^{\square}$ 反映在生成函数上的效果是显然的：所有对象的节点数 $-1$，而 $w$ 不变。如果对所有对象求和就是
 $$
-\color{orange}T(\mathcal A;x)=\sum_{a\in\mathcal A}\dfrac{w(a)x^{|a|}}{(|a|!)^k}
+\text{xD}:\sum_{a\in\mathcal A}\dfrac{w^k(a)x^{|a|}}{(|a|!)^k}\mapsto\sum_{a\in\mathcal A}\dfrac{w^k(a)x^{|a|}}{((|a|-1)!)^k}
 $$
-
-- 有时为了简略我们会简写为 $T(\mathcal A)$。
-
-- 不难验证它的卷积就是上面描述的笛卡尔积。
-
-那么我们都知道“无根树构成的无序列表加上根是无根树”，不妨记为
+既然如此，我们也就没有必要枚举 $a$ 了，而是可以直接从 $T_k(\mathcal A)$ 的系数得到 $\text{xD}(T_k(\mathcal A))$。
 $$
-\boxed{\mathcal T^{\square}=\text{MSET}(\mathcal T)}
+\text{xD}:\sum_{i=1}^{\infty}\dfrac{f_ix^i}{(i!)^k}\rightarrow\sum_{i=0}^{\infty}\dfrac{f_{i+1}x^i}{(i!)^k}
 $$
+# 3. $\text{xexp}$ 的部分
 
-> 如果你不懂 Symbolic Method 可以看[这个](https://xyix.gitee.io/posts/?page=1&postname=combinatorics)作一个简单的入门。
-
-# 2. 找出组合构造对应的代数运算
-
-$^{\square}$ 的逆构造所对应的“积分”自然很简单，它的意义要符合“加上根”，此题根的标号一定最小故不影响 $w$，于是它就是 $x^n\rightarrow \dfrac{x^{n+1}}{(n+1)^k}$。
-
-那么“$\text{MSET}$”所对应的运算呢？
-
-回忆 OGF 中有个叫 $\text{MSET}$ 的构造，它是
+回忆 OGF 中有个叫"Euler 变换"的东西，它是
 $$
-\prod_{a\in\mathcal A}\dfrac{1}{1-w(a)x^{|a|}}=\prod_{a\in\mathcal A}\sum_{i=0}^{\infty}w^i(a)x^{i|a|}
+\text{Euler}:T_0(\{a\})\mapsto\sum_{i=0}^{\infty}\left(x^{|a|}\right)^i\\
+\text{Euler}:T_0(\mathcal A)\mapsto\prod_{a\in\mathcal A}\sum_{i=0}^{\infty}\left(x^{|a|}\right)^i
 $$
-仔细思考它的含义。说白了不就是枚举每个元素选几个。
+说白了：如果把无序列表看成排序过的有序列表，那么这里就是枚举每个元素用了几个。
 
-回忆 EGF 中有个叫 $\text{SET}$ 的构造，它是
+回忆 EGF 中有个叫 $\exp$ 的东西，它是
 $$
-\text{exp}\sum_{a\in\mathcal A}\dfrac{w(a)x^{|a|}}{|a|!}=\prod_{a\in\mathcal A}\sum_{i=0}^{\infty}\dfrac{w^i(a)x^{i|a|}}{(|a|!)^ii!}
+\exp:T_1(\{a\})\mapsto\sum_{i=0}^{\infty}\dfrac{\left(\frac{w(a)x^{|a|}}{|a|!}\right)^i}{i!}\\
+\exp:T_1(\mathcal A)\mapsto\prod_{a\in\mathcal A}\sum_{i=0}^{\infty}\dfrac{\left(\frac{w(a)x^{|a|}}{|a|!}\right)^i}{i!}
 $$
-考虑它的含义。不就是枚举每个元素选几个，然后如果你选了 $i$ 个 $a$ 在分配标号的时候还要除以 $i!$，因为这 $i$ 个 $a$ 可以而且一定可以（这里是说，原本无法辨别的 $a$ 在分配标号后一定可以互相辨别）随便换。
+考虑它的含义：还是枚举每个元素选几个，然后如果你选了 $i$ 个 $a$，那么在分配标号的时候还要除以 $i!$。
 
-那么我们这里的“$\text{MSET}$”自然也就很明朗了：
+为什么呢？因为你把 $\frac{w(a)x^{|a|}}{|a|!}$ 硬乘时实际上是把 "$i$ 个 $a$" 当有序列表来分配标号的，然而这 $i$ 个 $a$ 之间的标号分配方式可以任意互换，即一些标号分配方式互相等价。然后你又会发现，每个等价类大小恰好是 $i!$，于是就有了上式。
+
+那么我们这里的 $\text{xexp}$ 自然也就很明朗了：
 $$
-\prod_{a\in\mathcal A}\sum_{i=0}^{\infty}\dfrac{\color{orange}w^i(a)x^{i|a|}}{{\color{orange}(|a|!)^{ik}}(i!)^k}
+\text{xexp}:T_k(\{a\})\mapsto\sum_{i=0}^{\infty}\dfrac{\left(\frac{w^k(a)x^{|a|}}{(|a|!)^k}\right)^i}{(i!)^k}\\
+\text{xexp}:T_k(\mathcal A)\mapsto\prod_{a\in\mathcal A}\sum_{i=0}^{\infty}\dfrac{\left(\frac{w^k(a)x^{|a|}}{(|a|!)^k}\right)^i}{(i!)^k}
 $$
 我们分配了 $k$ 次标号，自然就要除以 $(i!)^k$。
 
-记 $\sum_{i=0}^{\infty}\dfrac{x^i}{(i!)^k}$ 为 $\operatorname{xexp}x$。所谓“$\text{MSET}$”就是
-$$
-\prod_{a\in\mathcal A}\operatorname{xexp}\color{orange}T(\{a\})
-$$
-注意，$k=0$ 的时候 $\text{xexp}$ 的性质好在它的乘法逆很简单（从而可以方便地求 $\ln$），$k=1$ 的时候 $\text{xexp}$ 的性质好在 $\text{xexp}(a)\cdot\text{xexp}(b)=\text{xexp}(a+b)$。这可能是它们常用的原因。
+$k=0$ 的时候 $\text{xexp}$ 退化为 $\text{Euler}$ 变换。$\text{Euler}$ 变换的性质好在：对于单个元素， $\text{Euler}$ 变换的乘法逆很简单（从而可以方便地求 $\ln$）。
+
+$k=1$ 的时候 $\text{xexp}$ 退化为 $\exp$。$\exp$ 的性质好在 $\exp(a)\cdot\exp(b)=\exp(a+b)$。
 
 不幸的是 $\text{xexp}$ 两个性质都没有。所以我们只能大力 $\ln$：
-
-> 请区分 $\operatorname{xexp}$ 和 $\exp$，$\operatorname{xln}$ 和 $\ln$！这里的 $\exp$ 指的是保持 $\exp(a)\cdot\exp(b)=\exp(a+b)$ 的那个 $\exp$。
 
 $$
 \exp\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}\color{orange}T(\{a\})
 $$
-接下来任务就变成求解 $\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}(T\{a\})$。注意我们的任务是尽量把它化为一个仅和 $T(\mathcal A)$ 有关的形式，这样我们就可以得到一个两边都是 $T(\mathcal T)$ 的方程了。
-
-# 3. 求解 ln xexp 的失败尝试
+接下来任务就变成求解 $\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}(T\{a\})$。
 
 ## 3.1. 对于单个元素
 
 $$
-\ln\circ\operatorname{xexp}{\color{orange}T(\{a\})}=\ln \color{blue}\sum_{j=0}^{\infty}\dfrac{w^{jk}(a)x^{|a|j}}{(|a|!)^{jk}(j!)^k}
+\ln\circ\operatorname{xexp}T(\{a\})=\ln \sum_{i=0}^{\infty}\dfrac{\left(\frac{w^k(a)x^{|a|}}{(|a|!)^k}\right)^i}{(i!)^k}
 $$
 事实上可以预处理。下面不妨记
 $$
-\ln{\color{blue}\sum_{j=0}^{\infty}\dfrac{x^j}{(j!)^k}}=\sum_{j=0}^{\infty}f_jx^j
+\ln\sum_{i=0}^{\infty}\dfrac{x^i}{(i!)^k}=\sum_{i=0}^{\infty}f_ix^i
 $$
-那么之前的式子就是将 $x=w^kx^{|a|}$ 代入其中。
+那么之前的式子就是将 $x\leftarrow \frac{w^k(a)x^{|a|}}{(|a|!)^k}$ 代入其中。
 
 ## 3.2. 对于整个组合类
 
-下面为了简便，把 $\tfrac{w(a)}{(|a|!)^k}$ 记为 $w$。
 $$
-\sum_{a\in\mathcal A}\ln\circ \operatorname{xexp}{\color{orange}T(\{a\})}=\sum_{a\in\mathcal A}\sum_{j=0}^{\infty}f_j(w^kx^{|a|})^j=\sum_{j=0}^{\infty}f_j\color{green}\sum_{a\in\mathcal A}(w^kx^{|a|})^j
-$$
-
-你会发现这个东西怎么也没法和 $T(\mathcal A)$ 联系在一起。我们失败了。
-
-不过，虽然这东西暂时和 $T(\mathcal A)$ 无关，不过我们可以试试强行让它和 $T(\mathcal A)$ 有关。
-
-# 4. 重新开始
-
-下面这一步是最为关键的一步，我们把 $T(\mathcal A)$ 改成二元生成函数
-$$
-\begin{aligned}{\color{orange}T(\mathcal A;x,y)}&=\sum_{a\in\mathcal A}x^{|a|}\sum_{i=0}^{\infty}\dfrac{{\color{red}w^i(a)}y^i}{(|a|!)^i}\\&=\sum_{a\in\mathcal A}\dfrac{x^{|a|}}{1-w(a)y/(|a|!)}\end{aligned}
-$$
-说人话就是保存 $k$ 为任意值时的答案。$y$ 的次数就是 $k$ 的值。
-
-> 其中要注意 $\color{red}w^i(a)$ 其实指的是 $k=i$ 时的分配标号方案数，不过它也的确显然就是 $k=1$ 时的 $i$ 次方，所以我们就这么记算了。
-
-既然重新编了生成函数，自然也要重新处理构造。
-
-# 5. 找出组合构造对应的代数运算
-
-可见笛卡尔积现在对应“$x$ 上的卷积，$y$ 上的点积”。
-
-$^{\square}$ 对应的“积分”改为
-$$
-\int:{\color{orange}\dfrac{x^{|a|}}{1-w(a)y/(|a|!)}}\mapsto\dfrac{x^{|a+1|}}{1-w(a)y/((|a|+1)!)}
+\begin{aligned}
+\sum_{a\in\mathcal A}\ln\circ \operatorname{xexp}T(\{a\})&=\sum_{a\in\mathcal A}\sum_{j=0}^{\infty}f_i\left(\frac{w^k(a)x^{|a|}}{(|a|!)^k}\right)^i\\
+&=\sum_{i=0}^{\infty}f_i\sum_{a\in\mathcal A}\frac{w^{ik}(a)x^{i|a|}}{(|a|!)^{ik}}\\
+&=\sum_{i=0}^{\infty}f_iT_{ik}(\mathcal A;x^i)
+\end{aligned}
 $$
 
-而且注意根据组合意义积分自然具有线性。
-
-不能死板地使用 $\text{xexp}$：$k$ 都不一样了，自然也不能用之前的定义。易知应重新定义为
+即，
 $$
-\text{xexp}:{\color{orange}T(\{a\};x,y)=\dfrac{x^{|a|}}{1-w(a)y/(|a|!)}}\mapsto\sum_{i=0}^{\infty}y^i\color{blue}\sum_{j=0}^{\infty}\dfrac{w^{ij}(a)x^{|a|j}}{(|a|!)^{ij}(j!)^i}
+\operatorname{xD}T_k(\mathcal A;x)=\exp\sum_{i=0}^{\infty}f_iT_{ik}(\mathcal A;x^i)
 $$
-注意整个 $\text{xexp}$ 完全是我们按想要的组合意义编出来的。没有像 $1+\tfrac{x}{(1!)^k}+\tfrac{x^2}{(2!)^k}+...$ 那样的幂级数表达式也很正常。
-
-# 6. 回到 ln xexp
-
-前面的推导都相同，直到我们刚失败时的那一步：
-$$
-{\color{violet}[y^k]}\sum_{a\in\mathcal A}\ln\circ \operatorname{xexp}{\color{orange}T(\{a\})}=\sum_{j=0}^{\infty}f_j\color{green}\sum_{a\in\mathcal A}(w^kx^{|a|})^j
-$$
-注意到 $\color{green}[y^k]T(\mathcal A)=\sum_{a\in\mathcal A} w^kx^{|a|}$，于是 $\color{green}\sum_{a\in\mathcal A} w^{jk}x^{j|a|}=[y^{jk}]T(\mathcal A;x^j,y)$。
-
-则有
-$$
-[y^k]\sum_{a\in\mathcal A}\ln\circ\operatorname{xexp}{\color{orange}T(\{a\})}=\sum_{j=0}^{\infty}f_j[y^{jk}]\color{green}T(\mathcal A;x^j,y)
-$$
-最后我们回到原式。
-$$
-\boxed{[y^k]T(\mathcal T)=\int\text{exp}\sum_{j=0}^{\infty}f_j[y^{jk}]T(\mathcal T;x^j,y)}
-$$
-
 这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://xyix.gitee.io/posts/?page=0&postname=luogu-4500)。
+
