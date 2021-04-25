@@ -15,8 +15,45 @@ title: UR#20 题解 - 跳蚤电话 / 机器蚤分组 / 金坷垃
 >
 >$n\le 2000$。
 
-自然考虑树形DP。设 $f_u$ 表示 $u$ 有一个不能删的父亲时删光 $u$ 所在子树的方案数。下面为了方便，令 $f_u\leftarrow f_u/\text{siz}(u)$（即，随机选一个操作序列，$f_u$ 能被合法删光的概率）
+自然考虑树形 DP。设 $f_u$ 表示 $u$ 有一个不能删的父亲时删光 $u$ 所在子树的方案数。下面为了方便，令 $f_u\leftarrow f_u/\text{siz}(u)$（即，随机选一个操作序列，$f_u$ 能被合法删光的概率）
 
-枚举子树 $u$ 中最后一个被删的点 $v$，显然它一定是被删的。而 $u$ 到 $v$ 的路径上的点一定都是被缩的，而且是它们"所在的块"中最后一个被消除的。
+枚举子树 $u$ 中最后一个被消除的点 $v$（每个点最后一个被消除的概率都是 $1/\text{siz}_u$），显然它一定是被删的。而 $u$ 到 $v$ 的路径上的点一定都是被缩的，而且是它们"所在的块"中最后一个被消除的。
 
 <center><div style="width:40%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-1.png" style="width: 70%" alt=""></div></center>
+
+导出的 DP 也就显然了。
+$$
+f_u=\dfrac{1}{\text{siz}_u}\sum_{v\in T_u}\prod_{i=0}\dfrac{\prod_{w\in\text{son}(u_i),w\neq u_{i+1}}f_w}{\text{siz}_{u_i}-\text{siz}_{u_{i-1}}}
+$$
+然而你会发现这很浪费，我们这样考虑：一个节点可以自己最后一个被删也可以把"决定谁最后一个被删"的任务丢给自己的某个子树，即
+$$
+f_u=\dfrac{1}{\text{siz}_u}\prod_{v\in\text{son}_u}f_v+\sum_{v\in\text{son}_u}\dfrac{\text{siz}_v}{\text{siz}_u}\cdot f_v\cdot\dfrac{\prod_{w\in\text{son}_u,w\neq v}f_w}{\text{siz}_u-\text{siz}_v}
+$$
+这就做完了。
+
+----
+
+然而还可以继续考虑，原 DP 式就是
+$$
+f_u=\dfrac{1}{\text{siz}_u}\left(1+\sum_{v\in\text{son}_u}\dfrac{\text{siz}_v}{\text{siz}_u-\text{siz}_v}\right)\cdot\prod_{v\in\text{son}_u}f_v
+$$
+于是
+$$
+f_1=\prod_{u}\dfrac{1}{\text{siz}_u}\left(1+\sum_{v\in\text{son}_u}\dfrac{\text{siz}_v}{\text{siz}_u-\text{siz}_v}\right)
+$$
+
+# T2 机器蚤分组
+
+> **题目大意.**
+>
+> 定义两个串的 $\subset$ 关系是：前者是后者的子串。
+>
+> 现在给出一个 $s$ 和 $q$ 次询问：考虑对于 $s[l:r]$ 的所有本质不同子串，求其最长反链。
+>
+> $|s|,q\le 10^5$。
+
+众所周知最小链覆盖等于最长反链。（Dilworth 定理）
+
+这个图显然很有特色：如果串内的每一个字符都不相同，那么整个图恰好是一个塔形。如果有相同的子串再把节点缩起来。
+
+<center><div style="width:40%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-2.png" style="width: 70%" alt=""></div></center>
