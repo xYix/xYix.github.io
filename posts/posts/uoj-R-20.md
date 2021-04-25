@@ -56,4 +56,19 @@ $$
 
 这个图显然很有特色：如果串内的每一个字符都不相同，那么整个图恰好是一个塔形。如果有相同的子串再把节点缩起来。
 
-<center><div style="width:40%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-2.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-2.png" style="width: 70%" alt=""></div></center>
+
+很直观的是，所有链很有可能在某一层全都有点，于是答案就是各层"宽度"的最大值。
+
+这个结论是正确的，果然爱拼才会赢！证明如下。
+
+> 假如有一个串长不全相等的反链，则我们一定可以把它调整为一个串长全相等的反链：
+>
+> 考虑其中长度最短的串们，记其长度为 $L$，从中挑出一个 $[p-1,p+L-2]$ 或 $[p+1,p+L]$ 皆不存在于原反链的串 $[p, p+L-1]$（容易发现它总是存在），然后把它换成 $[p-1,p+L-1]$ 或 $[p,p+L]$。
+>
+> <center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-3.png" style="width: 100%" alt=""></div></center>
+
+然而还是不好做。
+
+
+
