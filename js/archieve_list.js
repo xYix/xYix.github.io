@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-04-14',
+		'last_modi' : '2021-04-25',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -919,6 +919,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-22',
 		'tag' : ['graph-theory','interact','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '116',
+		'post_name' : 'cf-1305-h',
+		'post_chinese_name' : 'CF1305H 题解 - Kuroni the Private Tutor',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-25',
+		'tag' : ['monotonicity-of-decision','network-flow','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
