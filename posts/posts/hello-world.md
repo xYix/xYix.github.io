@@ -2,6 +2,12 @@
 
 爱好是[ナユタン星人](https://twitter.com/NayutalieN)的曲、rougelike 游戏和塔防游戏。还有组合数学。最近可能又对P🐍游戏感兴趣了？
 
+[luogu 上的x义x](https://www.luogu.com.cn/blog/zyxxs/)
+
+[github 上的x义x](https://xyix.github.io)
+
+[codeforces 上的x义x](https://codeforces.com/profile/Comet_Honeymoon)
+
 x义x 的朋友们~~密切关注中的人类个体~~：
 
 - JHFLS

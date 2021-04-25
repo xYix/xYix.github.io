@@ -178,9 +178,7 @@
         write_link('更换主题颜色', changecolor);
         SideBarCon.appendChild(win.createElement('p'));
         write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
-        write_link('luogu 上的x义x', 'https://www.luogu.com.cn/blog/zyxxs/');
-        write_link('github 上的x义x', 'https://xyix.github.io');
-        write_link('codeforces 上的x义x', 'https://codeforces.com/profile/Comet_Honeymoon');
+        write_link('回到中心页', 'http://scpsandboxcn.wikidot.com/xj');
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
