@@ -770,3 +770,10 @@ solution
 safe
 network-flow
 monotonicity-of-decision
+uoj-R-20
+UR#20 题解 - 跳蚤电话 / 机器蚤分组 / 金坷垃
+solution
+3
+keter
+combinatorics
+string

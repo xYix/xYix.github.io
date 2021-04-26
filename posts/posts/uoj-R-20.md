@@ -58,7 +58,9 @@ $$
 
 <center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-2.png" style="width: 70%" alt=""></div></center>
 
-很直观的是，所有链很有可能在某一层全都有点，于是答案就是各层"宽度"的最大值。
+很直观的是，
+
+> 所有链很有可能在某一层全都有点，于是答案就是各层"宽度"的最大值。
 
 这个结论是正确的，果然爱拼才会赢！证明如下。
 
@@ -68,7 +70,51 @@ $$
 >
 > <center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-3.png" style="width: 100%" alt=""></div></center>
 
-然而还是不好做。
+然而还是不好做。下面这一个结论就属实有点难看出来了：
 
+> 答案 $\ge n-k+1$ 当且仅当长度为 $k$ 的所有串互不相同。
 
+证明如下：
+
+> 充分性显然，考虑必要性。
+>
+> 假设现有两个长为 $k$ 的串 $a,b$ 只需要研究长度为 $L<k$ 的所有串，我们来证明它们的数量不会超过 $n-k$。
+>
+> 这其实是显然的，因为 $a,b$ 内部恰有 $k-L+1$ 个长为 $L$ 的串对应相等，故长为 $L$ 的串的数量一定不会超过 $n-L+1-(k-L+1)=n-k$。
+
+于是 SAM+LCT 维护即可。
+
+总结：<span style="color: red; font-weight: bold">字符串题的关键不是在于怎么证而是证什么。</span>
+
+# T3 金坷垃
+
+> 给出固定参数 $m$，现在有 $n$ 个**实数**随机变量 $a_i$ 分别在 $[b_i,b_i+m]$ 中均匀随机。对 $1\le i\le n$ 求第 $i$ 大的随机变量的期望。
+>
+> $n\le 2000,m\le 10^8$。
+
+记 $A_i(x)$ 为 $a_i>x$ 的概率，是个分段函数。
+
+自然考虑 rank $i$ 大于 $x$ 的概率：把这个东西积一下就是答案。我们会写出
+$$
+\sum_{|S|\ge i}\prod_{u\in S}A_u(x)\cdot\prod_{u\notin S}(1-A_u(x))
+$$
+不妨记
+$$
+\begin{aligned}
+F(i,x)&=\sum_{|S|{\color{red}=}i}\prod_{u\in S}A_u(x)\cdot\prod_{u\notin S}(1-A_u(x))\\
+&=\sum_{|S|\ge i}(-1)^{|S|-i}{|S|\choose i}\prod_{u\in S}A_u(x)
+\end{aligned}
+$$
+再一次，不妨记
+$$
+F(i,x)=\sum_{j\ge i}(-1)^{j-i}{j\choose i}G(j,x)\\
+G(i,x)=\sum_{|S|=i}\prod_{u\in S}A_u(x)
+$$
+剩下的问题就是怎么求 $G$。
+
+对于 $G$ 的某一段，所有的 $A$ 都是一次函数且斜率要么为 $0$ 要么为 $\frac1m$。斜率为 $0$ 的可以强行提出来，对于斜率为 $\frac 1m$ 的部分，此处有一个神妙的观察：$G(i,x)$ 一定是 $\left(\prod_u A_u(x)\right)^{(n-i)}$ 再乘上一个常数。而最终的积分也就变为了要求 $G(i+1,x)$ 的点值。
+
+又可见相邻两段的答案是很相关的，只需要做一次卷积。时间复杂度 $O(n^2\log n)$。
+
+~~哈哈，全是口胡！~~
 

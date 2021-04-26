@@ -928,5 +928,13 @@
 		'last_modi' : '2021-04-25',
 		'tag' : ['monotonicity-of-decision','network-flow','safe',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '117',
+		'post_name' : 'uoj-R-20',
+		'post_chinese_name' : 'UR#20 题解 - 跳蚤电话 / 机器蚤分组 / 金坷垃',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-26',
+		'tag' : ['combinatorics','keter','string',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 })(document);
