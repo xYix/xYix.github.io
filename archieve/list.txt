@@ -777,3 +777,10 @@ solution
 keter
 combinatorics
 string
+uoj-552
+uoj#552 题解 - 【UNR #4】同构判定鸭
+solution
+3
+euclid
+linear-algebra
+randomization
