@@ -275,6 +275,12 @@
     win.table_style['type'] = 'width: 12%';
     win.table_style['tags'] = 'width: 29%';
     win.table_style['last_modi'] = 'width: 12%';
+    win.table_text = {};
+    win.table_text['id'] = '编号';
+    win.table_text['title'] = '标题';
+    win.table_text['type'] = '分类';
+    win.table_text['tags'] = '标签';
+    win.table_text['last_modi'] = '修改时间';
     win.WritePostinfo = function (data, postinfo) {
         let PostinfoBlock = win.createElement('tr');
 
@@ -372,25 +378,21 @@
 
         let ArchieveTitle = win.createElement('tr'); ArchieveTitle.style = 'width: 100%';
 
-        let writeTh = function (text1, text2) {
+        let writeTh = function (qaq) {
             let Titleh = win.createElement('th');
-            Titleh.style = text1;
-            Titleh.appendChild(win.createTextNode(text2));
+            Titleh.style = win.table_style[qaq];
+            let Titleha = win.createElement('a');
+            Titleha.textContent = win.table_text[qaq];
+            Titleha.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: qaq, Page: 0 }));
+            Titleh.appendChild(Titleha);
             ArchieveTitle.appendChild(Titleh);
         }
 
-        writeTh(win.table_style['id'], '编号');
-        writeTh(win.table_style['title'], '标题');
-        writeTh(win.table_style['type'], '分类');
-        writeTh(win.table_style['tags'], '标签');
-
-        let Titleh5 = win.createElement('th');
-        Titleh5.style = win.table_style['last_modi'];
-        let Titleh5a = win.createElement('a');
-        Titleh5a.textContent = '修改时间';
-        Titleh5a.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: 'modi', Page: 0 }));
-        Titleh5.appendChild(Titleh5a);
-        ArchieveTitle.appendChild(Titleh5);
+        writeTh('id');
+        writeTh('title');
+        writeTh('type');
+        writeTh('tags');
+        writeTh('last_modi');
 
         ArchieveTable.appendChild(ArchieveTitle);
 
