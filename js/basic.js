@@ -400,7 +400,7 @@
                 Titleha.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: qaq, Page: 0 }));
                 Titleh.appendChild(Titleha);
             }
-            else Titleh.appendChind(win.createTextNode(table_text[qaq]));
+            else Titleh.appendChild(win.createTextNode(table_text[qaq]));
             ArchieveTitle.appendChild(Titleh);
         }
 
