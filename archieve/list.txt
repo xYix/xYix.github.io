@@ -777,10 +777,17 @@ solution
 keter
 combinatorics
 string
-uoj-552
-uoj#552 题解 - 【UNR #4】同构判定鸭
+uoj-NR-4
+UNR#4 题解 - 不含 D2T3
 solution
 3
-euclid
+keter
 linear-algebra
 randomization
+det-eq-exp-trace-log-ex
+det 又等于 exp trace ln 了
+algorithm
+3
+linear-algebra
+combinatorics
+generating-function

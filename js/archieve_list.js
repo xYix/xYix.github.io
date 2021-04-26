@@ -938,11 +938,19 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '118',
-		'post_name' : 'uoj-552',
-		'post_chinese_name' : 'uoj#552 题解 - 【UNR #4】同构判定鸭',
+		'post_name' : 'uoj-NR-4',
+		'post_chinese_name' : 'UNR#4 题解 - 不含 D2T3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-26',
-		'tag' : ['euclid','linear-algebra','randomization',],
+		'tag' : ['keter','linear-algebra','randomization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '119',
+		'post_name' : 'det-eq-exp-trace-log-ex',
+		'post_chinese_name' : 'det 又等于 exp trace ln 了',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-04-26',
+		'tag' : ['combinatorics','generating-function','linear-algebra',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
