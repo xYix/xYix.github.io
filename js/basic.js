@@ -201,6 +201,8 @@
     sort_text = {};
     sort_text['last_modi'] = '最近修改时间（降序）';
     sort_text['idom_tsal'] = '最近修改时间（升序）';
+    sort_text['id'] = '文章编号（降序）';
+    sort_text['di'] = '文章编号（升序）';
     win.Title = [];
     if (win.Pathname.length === 0) win.Title[0] = '首页';
     else {
