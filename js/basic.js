@@ -372,6 +372,12 @@
     //绘制 archieve 列表
     win.post_count = { value: 0 };
     win.WriteArchieve = function (data) {
+        if (win.Sortby === 'last_modi') {
+	        archieve_list.sort(function(a, b){ return last_modi_val[a] - last_modi_val[b]});
+        }
+        if (win.Sortby === 'idom_tsal') {
+	        archieve_list.sort(function(a, b){ return last_modi_val[b] - last_modi_val[a]});
+        }
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
         ArchieveTable.className = 'mycenter';
