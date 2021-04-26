@@ -24,6 +24,11 @@
         return ret;
     }
     //生成后继链接
+    Reverse = function (s) {
+        let t = '';
+        for (var i in s) t = s[i] + t;
+        return t;
+    }
     NextSearch = function (PrevSearch, deltaSearch) {
         let tmpSearch = {};
         for (var x in PrevSearch) if (x !== 'Tags')
@@ -41,6 +46,13 @@
         if (deltaSearch.Page !== undefined) tmpSearch.Page = deltaSearch.Page;
         if (deltaSearch.Funval !== undefined) tmpSearch.Funval = deltaSearch.Funval;
         if (deltaSearch.ThemeColor !== undefined) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
+        if (deltaSearch.Sortby !== undefined) {
+            if (tmpSearch.Sortby === deltaSearch.Sortby)
+                tmpSearch.Sortby = Reverse(tmpSearch.Sortby);
+            else if (tmpSearch.Sortby === Reverse(deltaSearch.Sortby))
+                tmpSearch.Sortby = undefined;
+            else tmpSearch.Sortby = deltaSearch.Sortby;
+        }
         return tmpSearch;
     }
     ezylanASearch = function (Search) {
@@ -60,8 +72,8 @@
             ret += '&page=' + Search.Page;
         if (Search.Funval !== undefined)
             ret += '&funval=' + Search.Funval;
-        // if (Search.ThemeColor !== undefined) 
-        //     ret += '&themecolor=' + Search.ThemeColor;
+        if (Search.Sortby !== undefined) 
+            ret += '&Sortby=' + Search.Sortby;
         return ret;
     }
     win.Pathname = AnalyzePathname(location.pathname);
