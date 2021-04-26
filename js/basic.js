@@ -198,10 +198,17 @@
         return 'error';
     }
     // Title
+    sort_text = {};
+    sort_text['last_modi'] = '最近修改时间（降序）';
+    sort_text['idom_tsal'] = '最近修改时间（升序）';
     win.Title = [];
     if (win.Pathname.length === 0) win.Title[0] = '首页';
     else {
-        if (win.Pathname[0] === 'archieve') win.Title[0] = '文章一览';
+        if (win.Pathname[0] === 'archieve') {
+            win.Title[0] = '文章一览';
+            if (win.Sortby)
+                win.Title[1] = '排序方式：' + sort_text[win.Sortby];
+        }
         if (win.Pathname[0] === 'posts') {
             win.Title[0] = '文章内容';
             win.Title[1] = win.findpost(win.Postname).post_chinese_name;
@@ -269,18 +276,18 @@
     }
 
     //绘制文章信息
-    win.table_style = {};
-    win.table_style['id'] = 'width: 4%';
-    win.table_style['title'] = 'width: 43%';
-    win.table_style['type'] = 'width: 12%';
-    win.table_style['tags'] = 'width: 29%';
-    win.table_style['last_modi'] = 'width: 12%';
-    win.table_text = {};
-    win.table_text['id'] = '编号';
-    win.table_text['title'] = '标题';
-    win.table_text['type'] = '分类';
-    win.table_text['tags'] = '标签';
-    win.table_text['last_modi'] = '修改时间';
+    table_style = {};
+    table_style['id'] = 'width: 4%';
+    table_style['title'] = 'width: 43%';
+    table_style['type'] = 'width: 12%';
+    table_style['tags'] = 'width: 29%';
+    table_style['last_modi'] = 'width: 12%';
+    table_text = {};
+    table_text['id'] = '编号';
+    table_text['title'] = '标题';
+    table_text['type'] = '分类';
+    table_text['tags'] = '标签';
+    table_text['last_modi'] = '修改时间';
     win.WritePostinfo = function (data, postinfo) {
         let PostinfoBlock = win.createElement('tr');
 
@@ -291,7 +298,7 @@
         Postinfo_id_p.textContent = postinfo.postid;
         Postinfo_id.appendChild(Postinfo_id_p);
 
-        Postinfo_id.style = win.table_style['id'];
+        Postinfo_id.style =table_style['id'];
         PostinfoBlock.appendChild(Postinfo_id);
         //标题
         let Postinfo_title = win.createElement('td');
@@ -305,7 +312,7 @@
 
         Postinfo_title.appendChild(Postinfo_title_a);
 
-        Postinfo_title.style = win.table_style['title'];
+        Postinfo_title.style =table_style['title'];
         PostinfoBlock.appendChild(Postinfo_title);
         //类型
         let Postinfo_type = win.createElement('td');
@@ -323,11 +330,11 @@
             Postinfo_type_p.textContent = '无';
             Postinfo_type.appendChild(Postinfo_type_p);
         }
-        Postinfo_type.style = win.table_style['type'];
+        Postinfo_type.style =table_style['type'];
         PostinfoBlock.appendChild(Postinfo_type);
         //标签
         let Postinfo_tags = win.createElement('td');
-        Postinfo_tags.style = win.table_style['tags'];
+        Postinfo_tags.style =table_style['tags'];
         for (let i = 0; i < postinfo.tag.length; i += 1) {
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
@@ -346,7 +353,7 @@
         PostinfoBlock.appendChild(Postinfo_tags);
         //修改时间
         let Postinfo_last_modi = win.createElement('td');
-        Postinfo_last_modi.style = win.table_style['last_modi'];
+        Postinfo_last_modi.style =table_style['last_modi'];
         let Postinfo_last_modi_p = win.createElement('p');
         Postinfo_last_modi_p.textContent = postinfo.last_modi;
         Postinfo_last_modi.appendChild(Postinfo_last_modi_p);
@@ -373,10 +380,10 @@
     win.post_count = { value: 0 };
     win.WriteArchieve = function (data) {
         if (win.Sortby === 'last_modi') {
-	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
+	        archieve_list.sort(function(a, b){ return b.last_modi_val - a.last_modi_val});
         }
         if (win.Sortby === 'idom_tsal') {
-	        archieve_list.sort(function(a, b){ return b.last_modi_val - a.last_modi_val});
+	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
         }
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
@@ -386,11 +393,14 @@
 
         let writeTh = function (qaq) {
             let Titleh = win.createElement('th');
-            Titleh.style = win.table_style[qaq];
-            let Titleha = win.createElement('a');
-            Titleha.textContent = win.table_text[qaq];
-            Titleha.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: qaq, Page: 0 }));
-            Titleh.appendChild(Titleha);
+            Titleh.style = table_style[qaq];
+            if (qaq === 'last_modi' || qaq === 'id') {
+                let Titleha = win.createElement('a');
+                Titleha.textContent = table_text[qaq];
+                Titleha.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: qaq, Page: 0 }));
+                Titleh.appendChild(Titleha);
+            }
+            else Titleh.appendChind(win.createTextNode(table_text[qaq]));
             ArchieveTitle.appendChild(Titleh);
         }
 
