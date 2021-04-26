@@ -405,8 +405,8 @@
             if (qaq === 'last_modi' || qaq === 'id') {
                 let Titleha = win.createElement('a');
                 Titleha.textContent = table_text[qaq];
-                if (win.Sortby === qaq) Titleha.textContent += "↓";
-                if (win.Sortby === Reverse(qaq)) Titleha.textContent += "↑";
+                if (win.Sortby === qaq) Titleha.textContent += "↑";
+                if (win.Sortby === Reverse(qaq)) Titleha.textContent += "↓";
                 Titleha.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: qaq, Page: 0 }));
                 Titleh.appendChild(Titleha);
             }
