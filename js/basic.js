@@ -366,6 +366,7 @@
 
     //判断文章是否合法
     win.isLegalPost = function (postinfo, post_count) {
+        if (postinfo.postid == '84') return 0;
         if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }

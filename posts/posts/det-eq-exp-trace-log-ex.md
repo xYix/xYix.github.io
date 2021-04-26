@@ -32,4 +32,4 @@ $$
 
 参考资料：
 
-[1] EI 和我的聊天记录（unpublished）
+[1] EI 和我的聊天记录（unpublished yet）
