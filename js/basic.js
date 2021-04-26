@@ -38,15 +38,14 @@
             for (let i = 0; i < PrevSearch.Tags.length; i++)
                 tmpSearch[x][i] = PrevSearch[x][i];
         }
-        if (deltaSearch.Tags !== undefined)
+        if (deltaSearch.Tags)
             for (let i = 0; i < deltaSearch.Tags.length; i++) if (tmpSearch.Tags.indexOf(deltaSearch.Tags[i]) === -1)
                 tmpSearch.Tags.push(deltaSearch.Tags[i]);
-        if (deltaSearch.Type !== undefined) tmpSearch.Type = deltaSearch.Type;
-        if (deltaSearch.Sortby !== undefined) tmpSearch.Sortby = deltaSearch.Sortby;
-        if (deltaSearch.Page !== undefined) tmpSearch.Page = deltaSearch.Page;
-        if (deltaSearch.Funval !== undefined) tmpSearch.Funval = deltaSearch.Funval;
-        if (deltaSearch.ThemeColor !== undefined) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
-        if (deltaSearch.Sortby !== undefined) {
+        if (deltaSearch.Type) tmpSearch.Type = deltaSearch.Type;
+        if (deltaSearch.Page) tmpSearch.Page = deltaSearch.Page;
+        if (deltaSearch.Funval) tmpSearch.Funval = deltaSearch.Funval;
+        if (deltaSearch.ThemeColor) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
+        if (deltaSearch.Sortby) {
             if (tmpSearch.Sortby === deltaSearch.Sortby)
                 tmpSearch.Sortby = Reverse(tmpSearch.Sortby);
             else if (tmpSearch.Sortby === Reverse(deltaSearch.Sortby))
@@ -57,7 +56,7 @@
     }
     ezylanASearch = function (Search) {
         let ret = '?';
-        if (Search.Type !== undefined)
+        if (Search.Type)
             ret += '&type=' + Search.Type;
         if (Search.Tags.length !== 0) {
             ret += '&tags=';
@@ -66,11 +65,11 @@
                 ret += Search.Tags[i];
             }
         }
-        if (Search.Sortby !== undefined) 
+        if (Search.Sortby) 
             ret += '&sortby=' + Search.Sortby;
-        if (Search.Page !== undefined)
+        if (Search.Page)
             ret += '&page=' + Search.Page;
-        if (Search.Funval !== undefined)
+        if (Search.Funval)
             ret += '&funval=' + Search.Funval;
         return ret;
     }
@@ -102,7 +101,7 @@
     if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
         localStorage.setItem("themecolor", 'Z');
     win.ThemeColor = localStorage.getItem('themecolor');
-    if (win.Search['postid'] !== undefined) {
+    if (win.Search['postid']) {
         win.Postname = archieve_list[parseInt(win.Search['postid'])-1].post_name;
         win.location.replace('/posts/?page=0&postname=' + win.Postname);
     }
@@ -180,7 +179,7 @@
             changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=Y';
         if (win.ThemeColor === 'N')
             changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=X';
-        if (win.Postname !== undefined) {
+        if (win.Postname) {
             if (changecolor[changecolor.length - 1] === '/')
                 changecolor += '?postname=' + win.Postname;
             else changecolor += '&postname=' + win.Postname;
@@ -210,7 +209,7 @@
         if (win.Pathname[0] === 'tags') win.Title[0] = '标签一览';
         if (win.Pathname[0] === 'help') win.Title[0] = '帮助';
         if (win.Pathname[0] === 'archieve') {
-            if (win.Type !== undefined) {
+            if (win.Type) {
                 let nowlen = win.Title.length;
                 win.Title[nowlen] = '分类为：';
                 if (win.Type == 'solution') win.Title[nowlen] += '收容物';
@@ -222,7 +221,7 @@
                 let nowlen = win.Title.length;
                 win.Title[nowlen] = '具有标签：';
                 for (let i = 0; i < win.Tags.length; i += 1) {
-                    if (tags_chinese[win.Tags[i]] !== undefined)
+                    if (tags_chinese[win.Tags[i]])
                         win.Title[nowlen] += tags_chinese[win.Tags[i]];
                     else win.Title[nowlen] += '不明标签';
                     if (i !== win.Tags.length - 1) win.Title[nowlen] += '，';
@@ -352,7 +351,7 @@
 
     //判断文章是否合法
     win.isLegalPost = function (postinfo, post_count) {
-        if (win.Type !== undefined) {
+        if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }
         for (let i = 0; i < win.Tags.length; i += 1) {
