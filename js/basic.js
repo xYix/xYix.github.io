@@ -272,6 +272,7 @@
     }
 
     //绘制文章信息
+    win.table_style = {};
     win.table_style['id'] = 'width: 4%';
     win.table_style['title'] = 'width: 43%';
     win.table_style['type'] = 'width: 12%';
