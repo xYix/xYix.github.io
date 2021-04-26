@@ -938,6 +938,7 @@
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
-let qaq = i.last_modi.split('-');
-i.last_modi_val = qaq[0] * 100000000 + qaq[1] * 10000 + qaq[2];
-}})(document);
+let u = archieve_list[i], qaq = u.last_modi.split('-');
+u.last_modi_val = qaq[0] * 100000000 + qaq[1] * 10000 + qaq[2];
+}
+})(document);
