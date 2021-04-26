@@ -385,7 +385,14 @@
         writeTh(win.archieve_title_style, '标题');
         writeTh(win.archieve_type_style, '分类');
         writeTh(win.archieve_tags_style, '标签');
-        writeTh(win.archieve_last_modi_style, '修改时间');
+
+        let Titleh5 = win.createElement('th');
+        Titleh5.style = win.archieve_last_modi_style;
+        let Titleh5a = win.createElement('a');
+        Titleh5a.textContent = '修改时间';
+        Titleh5a.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: 'modi', Page: 0 }));
+        Titleh5.appendChild(Titleh5a);
+        ArchieveTitle.appendChild(Titleh);
 
         ArchieveTable.appendChild(ArchieveTitle);
 
