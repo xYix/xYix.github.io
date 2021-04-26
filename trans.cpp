@@ -93,6 +93,7 @@ int main(){
 		cout<<"],\n	};\n";
 	}
 	printf("	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});\n");
+	printf("for (var i in archieve_list) {\nlet qaq = i.last_modi.split('-');\ni.last_modi_val = qaq[0] * 100000000 + qaq[1] * 10000 + qaq[2];\n}");
 	printf("})(document);");
 	freopen("sitemap.xml","w",stdout);
 	printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
