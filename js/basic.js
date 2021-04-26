@@ -373,10 +373,10 @@
     win.post_count = { value: 0 };
     win.WriteArchieve = function (data) {
         if (win.Sortby === 'last_modi') {
-	        archieve_list.sort(function(a, b){ return last_modi_val[a] - last_modi_val[b]});
+	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
         }
         if (win.Sortby === 'idom_tsal') {
-	        archieve_list.sort(function(a, b){ return last_modi_val[b] - last_modi_val[a]});
+	        archieve_list.sort(function(a, b){ return b.last_modi_val - a.last_modi_val});
         }
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
