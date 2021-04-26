@@ -42,7 +42,7 @@
             for (let i = 0; i < deltaSearch.Tags.length; i++) if (tmpSearch.Tags.indexOf(deltaSearch.Tags[i]) === -1)
                 tmpSearch.Tags.push(deltaSearch.Tags[i]);
         if (deltaSearch.Type) tmpSearch.Type = deltaSearch.Type;
-        if (deltaSearch.Page) tmpSearch.Page = deltaSearch.Page;
+        if (deltaSearch.Page !== undefined) tmpSearch.Page = deltaSearch.Page;
         if (deltaSearch.Funval) tmpSearch.Funval = deltaSearch.Funval;
         if (deltaSearch.ThemeColor) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
         if (deltaSearch.Sortby) {
