@@ -73,7 +73,7 @@
         if (Search.Funval !== undefined)
             ret += '&funval=' + Search.Funval;
         if (Search.Sortby !== undefined) 
-            ret += '&Sortby=' + Search.Sortby;
+            ret += '&sortby=' + Search.Sortby;
         return ret;
     }
     win.Pathname = AnalyzePathname(location.pathname);
