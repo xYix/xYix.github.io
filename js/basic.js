@@ -387,6 +387,12 @@
         if (win.Sortby === 'idom_tsal') {
 	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
         }
+        if (win.Sortby === 'id') {
+	        archieve_list.sort(function(a, b){ return b.postid - a.postid});
+        }
+        if (win.Sortby === 'di') {
+	        archieve_list.sort(function(a, b){ return a.postid - b.postid});
+        }
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
         ArchieveTable.className = 'mycenter';
