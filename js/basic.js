@@ -272,11 +272,11 @@
     }
 
     //绘制文章信息
-    win.archieve_id_style = 'width: 4%';
-    win.archieve_title_style = 'width: 43%';
-    win.archieve_type_style = 'width: 12%';
-    win.archieve_tags_style = 'width: 29%';
-    win.archieve_last_modi_style = 'width: 12%';
+    win.table_style['id'] = 'width: 4%';
+    win.table_style['title'] = 'width: 43%';
+    win.table_style['type'] = 'width: 12%';
+    win.table_style['tags'] = 'width: 29%';
+    win.table_style['last_modi'] = 'width: 12%';
     win.WritePostinfo = function (data, postinfo) {
         let PostinfoBlock = win.createElement('tr');
 
@@ -287,7 +287,7 @@
         Postinfo_id_p.textContent = postinfo.postid;
         Postinfo_id.appendChild(Postinfo_id_p);
 
-        Postinfo_id.style = win.archieve_id_style;
+        Postinfo_id.style = win.table_style['id'];
         PostinfoBlock.appendChild(Postinfo_id);
         //标题
         let Postinfo_title = win.createElement('td');
@@ -301,7 +301,7 @@
 
         Postinfo_title.appendChild(Postinfo_title_a);
 
-        Postinfo_title.style = win.archieve_title_style;
+        Postinfo_title.style = win.table_style['title'];
         PostinfoBlock.appendChild(Postinfo_title);
         //类型
         let Postinfo_type = win.createElement('td');
@@ -319,11 +319,11 @@
             Postinfo_type_p.textContent = '无';
             Postinfo_type.appendChild(Postinfo_type_p);
         }
-        Postinfo_type.style = win.archieve_type_style;
+        Postinfo_type.style = win.table_style['type'];
         PostinfoBlock.appendChild(Postinfo_type);
         //标签
         let Postinfo_tags = win.createElement('td');
-        Postinfo_tags.style = win.archieve_tags_style;
+        Postinfo_tags.style = win.table_style['tags'];
         for (let i = 0; i < postinfo.tag.length; i += 1) {
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
@@ -342,7 +342,7 @@
         PostinfoBlock.appendChild(Postinfo_tags);
         //修改时间
         let Postinfo_last_modi = win.createElement('td');
-        Postinfo_last_modi.style = win.archieve_last_modi_style;
+        Postinfo_last_modi.style = win.table_style['last_modi'];
         let Postinfo_last_modi_p = win.createElement('p');
         Postinfo_last_modi_p.textContent = postinfo.last_modi;
         Postinfo_last_modi.appendChild(Postinfo_last_modi_p);
@@ -381,18 +381,18 @@
             ArchieveTitle.appendChild(Titleh);
         }
 
-        writeTh(win.archieve_id_style, '编号');
-        writeTh(win.archieve_title_style, '标题');
-        writeTh(win.archieve_type_style, '分类');
-        writeTh(win.archieve_tags_style, '标签');
+        writeTh(win.table_style['id'], '编号');
+        writeTh(win.table_style['title'], '标题');
+        writeTh(win.table_style['type'], '分类');
+        writeTh(win.table_style['tags'], '标签');
 
         let Titleh5 = win.createElement('th');
-        Titleh5.style = win.archieve_last_modi_style;
+        Titleh5.style = win.table_style['last_modi'];
         let Titleh5a = win.createElement('a');
         Titleh5a.textContent = '修改时间';
         Titleh5a.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: 'modi', Page: 0 }));
         Titleh5.appendChild(Titleh5a);
-        ArchieveTitle.appendChild(Titleh);
+        ArchieveTitle.appendChild(Titleh5);
 
         ArchieveTable.appendChild(ArchieveTitle);
 
