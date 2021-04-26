@@ -300,7 +300,7 @@
         Postinfo_id_p.textContent = postinfo.postid;
         Postinfo_id.appendChild(Postinfo_id_p);
 
-        Postinfo_id.style =table_style['id'];
+        Postinfo_id.style = table_style['id'];
         PostinfoBlock.appendChild(Postinfo_id);
         //标题
         let Postinfo_title = win.createElement('td');
@@ -405,6 +405,8 @@
             if (qaq === 'last_modi' || qaq === 'id') {
                 let Titleha = win.createElement('a');
                 Titleha.textContent = table_text[qaq];
+                if (win.Sortby === qaq) Titleha.textContent += "↑";
+                if (win.Sortby === Reverse(qaq)) Titleha.textContent += "↓";
                 Titleha.href = ezylanASearch(NextSearch(win.TrueSearch, { Sortby: qaq, Page: 0 }));
                 Titleh.appendChild(Titleha);
             }
