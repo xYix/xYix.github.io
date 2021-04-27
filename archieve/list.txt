@@ -780,13 +780,14 @@ string
 uoj-NR-4
 UNR#4 题解 - 不含 D2T3
 solution
-6
+7
 keter
 interact
 polynomial
 linear-algebra
 randomization
 calculating-geometry
+graph-theory
 det-eq-exp-trace-log-ex
 det 又等于 exp trace ln 了
 algorithm
