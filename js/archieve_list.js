@@ -661,7 +661,7 @@
 		'post_name' : 'det-eq-exp-trace-log',
 		'post_chinese_name' : 'det = exp trace log 和矩阵树定理和多元拉反',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-04-22',
+		'last_modi' : '2021-04-26',
 		'tag' : ['combinatorics','exc-inc','generating-function','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -941,7 +941,7 @@
 		'post_name' : 'uoj-NR-4',
 		'post_chinese_name' : 'UNR#4 题解 - 不含 D2T3',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-26',
+		'last_modi' : '2021-04-27',
 		'tag' : ['keter','linear-algebra','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
