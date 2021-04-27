@@ -942,7 +942,7 @@
 		'post_chinese_name' : 'UNR#4 题解 - 不含 D2T3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-27',
-		'tag' : ['calculating-geometry','interact','keter','linear-algebra','polynomial','randomization',],
+		'tag' : ['calculating-geometry','graph-theory','interact','keter','linear-algebra','polynomial','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '119',
@@ -951,6 +951,14 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-04-26',
 		'tag' : ['combinatorics','generating-function','linear-algebra',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '120',
+		'post_name' : 'how-to-study-well',
+		'post_chinese_name' : '如何解决效率低下的问题',
+		'type_name' : 'other',
+		'last_modi' : '2021-04-27',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
