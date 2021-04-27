@@ -942,7 +942,7 @@
 		'post_chinese_name' : 'UNR#4 题解 - 不含 D2T3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-27',
-		'tag' : ['keter','linear-algebra','randomization',],
+		'tag' : ['calculating-geometry','interact','keter','linear-algebra','polynomial','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '119',
