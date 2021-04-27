@@ -960,6 +960,14 @@
 		'last_modi' : '2021-04-27',
 		'tag' : [],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '121',
+		'post_name' : 'luogu-6965',
+		'post_chinese_name' : 'luoguP6965 题解 - 【NEERC2016】Binary Code',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-28',
+		'tag' : ['graph-theory','safe',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

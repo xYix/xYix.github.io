@@ -799,3 +799,9 @@ how-to-study-well
 如何解决效率低下的问题
 other
 0
+luogu-6965
+luoguP6965 题解 - 【NEERC2016】Binary Code
+solution
+2
+safe
+graph-theory
