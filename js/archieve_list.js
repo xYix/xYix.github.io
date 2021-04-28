@@ -971,7 +971,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '122',
 		'post_name' : 'luogu-6898',
-		'post_chinese_name' : 'luoguP6898 题解 - Metal Processing Plant',
+		'post_chinese_name' : 'luoguP6898 题解 - 【ICPC2014 WF】Metal Processing Plant',
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-28',
 		'tag' : ['graph-theory','keter',],
@@ -983,6 +983,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-28',
 		'tag' : ['euclid','graph-theory','linear-algebra',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '124',
+		'post_name' : 'luogu-6803',
+		'post_chinese_name' : 'luoguP6803 题解 — 【CEOI2020】Star Trek',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-28',
+		'tag' : ['euclid',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

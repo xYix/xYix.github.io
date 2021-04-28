@@ -806,7 +806,7 @@ solution
 safe
 graph-theory
 luogu-6898
-luoguP6898 题解 - Metal Processing Plant
+luoguP6898 题解 - 【ICPC2014 WF】Metal Processing Plant
 solution
 2
 keter
@@ -818,3 +818,8 @@ solution
 euclid
 graph-theory
 linear-algebra
+luogu-6803
+luoguP6803 题解 — 【CEOI2020】Star Trek
+solution
+1
+euclid
