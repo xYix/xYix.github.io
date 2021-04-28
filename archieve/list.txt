@@ -823,3 +823,10 @@ luoguP6803 题解 — 【CEOI2020】Star Trek
 solution
 1
 euclid
+luogu-7123
+luoguP7123 题解 - 【NEERC2016】 Indiana Jones and the Uniform Cave
+solution
+3
+keter
+graph-theory
+interact

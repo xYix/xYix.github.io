@@ -992,6 +992,14 @@
 		'last_modi' : '2021-04-28',
 		'tag' : ['euclid',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '125',
+		'post_name' : 'luogu-7123',
+		'post_chinese_name' : 'luoguP7123 题解 - 【NEERC2016】 Indiana Jones and the Uniform Cave',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-28',
+		'tag' : ['graph-theory','interact','keter',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
