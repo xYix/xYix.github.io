@@ -976,6 +976,14 @@
 		'last_modi' : '2021-04-28',
 		'tag' : ['graph-theory','keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '123',
+		'post_name' : 'luogu-6914',
+		'post_chinese_name' : 'luoguP6914 题解 - 【ICPC2015 WF】Tours',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-28',
+		'tag' : ['euclid','graph-theory','linear-algebra',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

@@ -811,3 +811,10 @@ solution
 2
 keter
 graph-theory
+luogu-6914
+luoguP6914 题解 - 【ICPC2015 WF】Tours
+solution
+3
+euclid
+graph-theory
+linear-algebra
