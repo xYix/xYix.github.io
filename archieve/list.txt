@@ -805,3 +805,9 @@ solution
 2
 safe
 graph-theory
+luogu-6898
+luoguP6898 题解 - Metal Processing Plant
+solution
+2
+keter
+graph-theory

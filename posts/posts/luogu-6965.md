@@ -25,6 +25,6 @@ title: luoguP6965 题解 - 【NEERC2016】Binary Code
 最后一点：没有 ``?`` 的情况。只需要强制选 $u$（$\lnot u\rightarrow u$）即可。
 
 ```cpp
-
+🕊
 ```
 
