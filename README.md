@@ -8,6 +8,10 @@
 - 2021/4/20：更新一篇博文[新年的Dog划分](https://xyix.gitee.io/posts/?&page=3&postname=uoj-461)。
 - 2021/4/21：更新两篇博文[变色龙](https://xyix.gitee.io/posts/?&page=3&postname=uoj-504)，[Wide Swap](https://xyix.gitee.io/posts/?&page=3&postname=agc-001-f)。
 - 2021/4/22：把博文 [det = exp trace ln 和矩阵树定理和多元拉反](https://xyix.gitee.io/posts/?&page=2&postname=det-eq-exp-trace-log) 的表述变得更明确了一些。
-- 2021/4/24：重制了[ZJOI2018 树](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-4500-ex)。
+- 2021/4/24：重制了 [ZJOI2018 树](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-4500-ex)。
 - 2021/4/25：更新一篇博文[Kuroni the Private Tutor](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=cf-1305-h)。
+- 2021/4/26：更新两篇博文 [det 又等于 exp trace ln 了](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=det-eq-exp-trace-log-ex)，[UR#20 题解](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-R-20)。
+- 2021/4/27：更新一篇博文 [UNR#4 题解](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-NR-4)。
+- 2021/4/28：更新 5 篇博文 [Binary Code](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6965)，[Metal Processing Plant](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6898)，[Tours](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6914)，[Star Trek](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6803)，[Indiana Jones and the Uniform Cave](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-7123)。
+- 2021/4/29：更新一篇博文[某科学的动态仙人掌](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-1-3)
 
