@@ -733,7 +733,7 @@
 		'post_name' : 'uoj-199',
 		'post_chinese_name' : 'uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞',
 		'type_name' : 'solution',
-		'last_modi' : '2021-03-28',
+		'last_modi' : '2021-04-29',
 		'tag' : ['apollyon','combinatorics','exc-inc','string',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -999,6 +999,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-28',
 		'tag' : ['graph-theory','interact','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '126',
+		'post_name' : 'thuwc-2020-1-3',
+		'post_chinese_name' : 'THUWC2020Day1T3 题解 - 某科学的动态仙人掌',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-29',
+		'tag' : ['data-structure','graph-theory','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
