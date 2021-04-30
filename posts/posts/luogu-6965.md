@@ -16,13 +16,13 @@ title: luoguP6965 题解 - 【NEERC2016】Binary Code
 
 <center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/luogu-6965-2.png" style="width: 70%" alt=""></div></center>
 
-注意上图并不准确，实际上的 $u$ 不在 Trie 上而是独立的，只不过有个 Trie 上的点和它对应罢了。
-
-于是我们建一个 "上传 Trie" 和一个 "下传 Trie" 即可。是不是和[线段树优化建图](https://www.luogu.com.cn/problem/CF786B)一模一样？
+实际上，Trie 点的被选的含义是"当前点不能放串"，这么一看就更合理了！$u$ 放了串 $\rightarrow$ $u$ 对应的 Trie 点不能再放 $\rightarrow$ 其祖先也全不能再放。
 
 ----
 
-最后一点：没有 ``?`` 的情况。只需要强制选 $u$（$\lnot u\rightarrow u$）即可。
+最后一点：没有 ``?`` 的情况。这时我们会发现这是一个尴尬的 case：按之前的建图方式 $u$ 和 $\lnot u$ 会立即互相推出。
+
+然而你冷静一想这好像并不尴尬，判有无解的时候特判这组 $u,\lnot u$ 即可。
 
 ```cpp
 🕊
