@@ -941,7 +941,7 @@
 		'post_name' : 'uoj-NR-4',
 		'post_chinese_name' : 'UNR#4 题解 - 不含 D2T3',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-27',
+		'last_modi' : '2021-04-29',
 		'tag' : ['calculating-geometry','graph-theory','interact','keter','linear-algebra','polynomial','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1005,8 +1005,16 @@
 		'post_name' : 'thuwc-2020-1-3',
 		'post_chinese_name' : 'THUWC2020Day1T3 题解 - 某科学的动态仙人掌',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-29',
+		'last_modi' : '2021-04-30',
 		'tag' : ['data-structure','graph-theory','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '127',
+		'post_name' : 'cf-1368-h',
+		'post_chinese_name' : 'CF1368H 题解 - Breadboard Capacity',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-30',
+		'tag' : ['euclid','network-flow',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

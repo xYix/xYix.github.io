@@ -837,3 +837,9 @@ solution
 keter
 graph-theory
 data-structure
+cf-1368-h
+CF1368H 题解 - Breadboard Capacity
+solution
+2
+euclid
+network-flow
