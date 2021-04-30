@@ -24,7 +24,3 @@ title: luoguP6965 题解 - 【NEERC2016】Binary Code
 
 然而你冷静一想这好像并不尴尬，判有无解的时候特判这组 $u,\lnot u$ 即可。
 
-```cpp
-🕊
-```
-
