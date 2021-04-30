@@ -843,3 +843,8 @@ solution
 2
 euclid
 network-flow
+cf-1416-f
+CF1416F 题解 - Showing Off
+solution
+1
+euclid

@@ -379,16 +379,21 @@
         'Reroll Your Destiny',
         'Blood Laser Barrage',
         'I feel all', 'I know all', 'I am all',
-        'The Broken', //里以撒
-        'The Deceiver', //里犹大
-        'The Benighted', //里AZ
-        'The Enigma', //里拉撒路
-        'The Capricious', //里伊甸
-        'The Baleful', //里lost
-        'The Zealot', //里双马尾
+        '「The Broken」',       //里以撒，残缺之人
+        '「The Deceiver」',     //里犹大，欺诈之人
+        '「The Benighted」',    //里AZ，愚昧之人
+        '「The Enigma」',       //里拉撒，神必人
+        '「The Capricious」',   //里伊甸，善变之人
+        '「The Empty」',        //里鸭脖，空无之人
+        '「The Baleful」',      //里lost，凶恶之人
+        '「The Zealot」',       //里双马尾，狂热之人
+        '「The Deserter」',     //里双子，亡命之人
         'Ancient Power', //AZ角
         'Where am I?', //死亡证明
         'Exlore the other side', //红钥匙
+        'Come forth from the depths', //深渊
+        'May you get what you came for', //真天梯
+        'A king\'s fortune... but at what cost?', //达摩剑
             //jojo
             '你最大的罪恶，就是压根都不认为自己是『罪人』……那才是最『万恶不赦』的。',
             //基金会

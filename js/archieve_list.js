@@ -1016,6 +1016,14 @@
 		'last_modi' : '2021-04-30',
 		'tag' : ['euclid','network-flow',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '128',
+		'post_name' : 'cf-1416-f',
+		'post_chinese_name' : 'CF1416F 题解 - Showing Off',
+		'type_name' : 'solution',
+		'last_modi' : '2021-04-30',
+		'tag' : ['euclid',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
