@@ -303,7 +303,7 @@
             'and then I gave you my brain / so that you can learn to love',
             'Twist my legs to one  / and mind to none',
             //extension of you
-            'My ribs open up / made room for a beating heat',
+            'My ribs open up / made room for a beating heart',
             'My head open up / made room for deeper thoughts',
             'I\'ve became what I thought was human',
             'Does it feel good to love / to hand out your all / to hand out your all',

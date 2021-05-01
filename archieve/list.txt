@@ -848,3 +848,9 @@ CF1416F 题解 - Showing Off
 solution
 1
 euclid
+uoj-506
+uoj#506 题解 - 【JOISC2020】遗迹
+solution
+2
+apollyon
+combinatorics

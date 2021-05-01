@@ -965,7 +965,7 @@
 		'post_name' : 'luogu-6965',
 		'post_chinese_name' : 'luoguP6965 题解 - 【NEERC2016】Binary Code',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-28',
+		'last_modi' : '2021-04-30',
 		'tag' : ['graph-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1023,6 +1023,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-04-30',
 		'tag' : ['euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '129',
+		'post_name' : 'uoj-506',
+		'post_chinese_name' : 'uoj#506 题解 - 【JOISC2020】遗迹',
+		'type_name' : 'solution',
+		'last_modi' : '2021-05-01',
+		'tag' : ['apollyon','combinatorics',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
