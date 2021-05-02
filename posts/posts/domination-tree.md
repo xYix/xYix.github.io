@@ -1,5 +1,5 @@
 ---
-title: 支配树通俗演义
+title: 男性增加支配树题分数的控制技巧
 ---
 
 <style>
@@ -43,6 +43,9 @@ title: 支配树通俗演义
         document.body.childNodes[0].childNodes[1].appendChild(my_button);
 	};
 </script>
+男性的图论经验和图论技巧是不可能与生俱来的，无论你的观察能力是如何的健♂壮，你没有学会支配树，在支配树相关题目中就会紧张，就会不知所措，就会被水淹没。
+
+男性增加支配树题分数的控制技巧过程，其实也就像是一个人掌握游泳技巧的过程，它也和练习游泳一样，需要有一套练习增加支配树题分数的方法，并经过一段时间的平衡协调练习，使刻意的强制性增加支配树题分数的控制转化为下意识的习惯性控制，*最终也和游泳一样，一旦学会，就不会忘记。*（迫真）
 
 # Part 1 - 什么是支配树
 
@@ -120,13 +123,11 @@ title: 支配树通俗演义
 
 那么问题就来了，我们从该从哪里掏出"$u\rightarrow w=u\rightarrow v\rightarrow w$"这种关系？如果连一条关系都找不到就不可能进行更多的分析。
 
-首先在原图上引入一个以 $1$ 为根的 DFS 树。
+首先在原图上引入一个以 $1$ 为根的 DFS 树。这个 DFS 树会引出一个 DFS 序，下面我们把 $\text{dfn}(u)<\text{dfn}(v)$ 记为 $u\prec v$。
 
 > **引理 3.**
 >
-> 任取原图的一个 DFS 树。
->
-> <span style="color: #36c48e">如果 $\text{dfn}(u)<\text{dfn}(v)$，那么 $u\rightarrow v$ 总是至少经过 $u,v$ 在 DFS 树上的公共祖先中的至少一个。</span>
+> $\text{dom}(u)$ 一定是 $u$ 在 DFS 树上的祖先。
 
 <script>
     document.new_button(3);
@@ -134,7 +135,50 @@ title: 支配树通俗演义
 
 > **引理 3 - 证明.**
 >
-> 注意到非树边要么下指要么总是由较大的 $\text{dfn}$ 指向较小的 $\text{dfn}$，于是就显然了。
+> 因为我们实际上已经找到一条 $1\rightarrow u$ 的路径，$\text{dom}(u)$ 只能在其中排除而不能增加。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+> **引理 4.**
+>
+> 若 $u$ 是 $v$ 在 DFS 树上的祖先，则
+>
+> - 要么 $\text{dom}(v)$ 是 $u$ 的后代；
+> - 要么 $\text{dom}(v)$ 是 $\text{dom}(u)$ 的祖先。
+
+<script>
+    document.new_button(2);
+</script>
+
+> **引理 4 - 证明.**
+>
+> 假设不然，那么 $\text{dom}(u)$ 严格高于 $\text{dom}(v)$ 严格高于 $u$ 严格高于 $v$。
+>
+> 那么显然 $\text{dom}(v)$ 不能支配 $u$，否则 $\text{dom}(u)$ 的"$\text{dom}(u)$"这一头衔就保不住了。于是必定存在一条 $1\rightarrow u$ 且不经过 $\text{dom}(v)$ 的路径，但这直接导出 $\text{dom}(v)$ 支配不了 $v$，矛盾。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+> **引理 5.**
+>
+> <span style="color: #36c48e">如果 $u\prec v$，那么 $u\rightarrow v$ 总是至少经过 $u,v$ 在 DFS 树上的公共祖先中的至少一个。</span>
+
+<script>
+    document.new_button(2);
+</script>
+
+> **引理 5 - 证明.**
+>
+> 注意到非树边只有三种：
+>
+> - 返祖边；
+> - 下指边（起点是终点的祖先）；
+> - 由较大的 $\text{dfn}$ 指向较小的 $\text{dfn}$ 的横杈边。
+>
+> 于是就显然了。
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
@@ -150,5 +194,32 @@ title: 支配树通俗演义
 
 # Part 2 - 半支配点
 
+> **定义. (半支配点)**
+>
+> 一个点 $u$ 的半支配点 $\text{sdom}(u)$ 是这样的 $v$ 中 DFS 序最小的：存在一条只经过 $u$、$v$ 和 $\succ u$ 的节点的 $v\rightarrow u$ 的路径。
 
+> **引理 6. (半支配点的性质)**
+>
+> - $\text{sdom}(u)$ 一定是 $u$ 在 DFS 树上的一个祖先。
+> - $\text{dom}(u)$ 一定是 $\text{sdom}(u)$ 在 DFS 树上的一个祖先。
+
+<script>
+    document.new_button(3);
+</script>
+
+> **引理 6 - 证明.**
+>
+> - 由 **引理 5**，显然。
+> - 回忆 **引理 3**，而我们已经提到 $\text{sdom}(u)$ 的存在否定了它底下的那些点成为 $\text{dom}(u)$ 的可能，故得原引理。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+现在我们考虑 $\text{sdom}$ 怎么求。
+
+# Part $\infty$ - 结语
+
+以上我们介绍了几种练习方法，只要各位男性朋友按照步骤反复练习，一定能够取得你满意的效果！
+
+最后，祝你~~缇乾赦晶~~身体健康，再见。
 
