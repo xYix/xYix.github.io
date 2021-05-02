@@ -1032,6 +1032,14 @@
 		'last_modi' : '2021-05-01',
 		'tag' : ['apollyon','combinatorics',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '130',
+		'post_name' : 'domination-tree',
+		'post_chinese_name' : '支配树通俗演义',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-05-02',
+		'tag' : ['graph-theory',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
