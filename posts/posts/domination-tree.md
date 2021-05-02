@@ -2,6 +2,45 @@
 title: 支配树通俗演义
 ---
 
+<style>
+    button{
+        border: 1px outset #1A5A40;
+        border-radius: 5px;
+        font-size: medium;
+        color: #1A5A40;
+        background-color: #ffffff;
+    }
+</style>
+
+<script>
+    document.get_button_click = function(blockid) {
+        return function() {
+            let my_blockquote = document.getElementsByTagName("blockquote")[blockid];
+            if(my_blockquote.style.display === 'none') {
+                my_blockquote.style.display = "block";
+                this.childNodes[0].textContent = '-隐藏解答';
+            }
+            else {
+                my_blockquote.style.display = 'none';
+                this.childNodes[0].textContent = '+显示解答';
+            }
+        };
+	};
+    document.last_block = -1;
+    document.new_button = function(blockid) {
+        document.last_block = blockid = document.last_block + blockid;
+        let my_button = document.createElement('button');
+        	let button_content = document.createElement('span');
+        	button_content.style = 'font-family: consolas';
+        	button_content.textContent = '+显示解答';
+        	my_button.appendChild(button_content);
+       	my_button.onmouseover = function(){this.style = 'background-color: #dddddd;cursor: pointer;';};
+        my_button.onmouseout = function(){this.style = 'background-color: #ffffff;cursor: pointer;';};
+        my_button.onclick = document.get_button_click(blockid);
+        document.body.childNodes[1].appendChild(my_button);
+	};
+</script>
+
 # Part 1 - 什么是支配树
 
 现在有一个有向图 $G$。
@@ -14,9 +53,17 @@ title: 支配树通俗演义
 >
 > 把上面定义的路径换为<span style="color: #36c48e">"简单路径"</span>，得到的新定义和原定义是等价的。
 
+<script>
+  	document.new_button(2);
+</script>
+
 > **引理 0 - 证明.**
 >
 > 显然。完全没有必要走环。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 于是现在，如果 $v$ 支配 $u$，则我们可以说 <span style="color: #36c48e">$1\rightarrow u=1\rightarrow v\rightarrow u$</span>。即，$1\rightarrow u$ 的所有路径，是由 $1\rightarrow v$ 的所有路径和 $v\rightarrow u$ 的所有路径"生成"的。
 
