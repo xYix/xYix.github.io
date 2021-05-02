@@ -125,7 +125,10 @@ title: 男性增加支配树题分数的控制技巧
 
 那么问题就来了，我们从该从哪里掏出"$u\rightarrow w=u\rightarrow v\rightarrow w$"这种关系？如果连一条关系都找不到就不可能进行更多的分析。
 
-首先在原图上引入一个以 $1$ 为根的 DFS 树。这个 DFS 树会引出一个 DFS 序，下面我们把 $\text{dfn}(u)<\text{dfn}(v)$ 记为 $u\prec v$。
+首先在原图上引入一个以 $1$ 为根的 DFS 树。
+
+- 记 DFS 树上从 $u$ 到 $v$ 的路径（其中 $u$ 是一个 $v$ 的祖先）为 $u\Rightarrow v$。
+- 这个 DFS 树会引出一个 DFS 序，下面我们把 $\text{dfn}(u)<\text{dfn}(v)$ 记为 $u\prec v$。
 
 > **引理 3.**
 >
@@ -137,7 +140,7 @@ title: 男性增加支配树题分数的控制技巧
 
 > **引理 3 - 证明.**
 >
-> 因为我们实际上已经找到一条 $1\rightarrow u$ 的路径，$\text{dom}(u)$ 只能在其中排除而不能增加。
+> 因为我们实际上已经找到一条 $1\rightarrow u$ 的路径 $1\Rightarrow u$，$\text{dom}(u)$ 只能在其中排除而不能增加。
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
@@ -217,11 +220,54 @@ title: 男性增加支配树题分数的控制技巧
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
-现在我们考虑 $\text{sdom}$ 怎么求。
+> <span style="color: #1a5a40">**定理 2. (dom 和 sdom)**</span>
+>
+> 从 $\text{sdom}(u)\Rightarrow u/\{\text{sdom}(u)\}$ 中找到使得 $\text{sdom}(v)$ 在 DFS 序意义下最小的 $v$。
+>
+> - 若 $\text{sdom}(u)=\text{sdom}(v)$，那么 $\text{dom}(u)=\text{sdom}(u)$；
+> - 否则 $\text{dom}(u)=\text{dom}(v)$。
 
-# Part $\infty$ - 结语
+<script>
+    document.new_button(2);
+</script>
 
-以上我们介绍了几种练习方法，只要各位男性朋友按照步骤反复练习，一定能够取得你满意的效果！
+> **定理 2 - 证明.**
+>
+> - 第一条。
+>
+> 我们只需要证明 <span style="color :#36c48e">$\text{sdom}(u)$ 支配了 $u$</span>。
+>
+> 假设不然，也就是说存在一条 $1\rightarrow u$ 的路径不经过 $\text{sdom}(u)$。
+>
+> 如果这条路径从未接触过 $\text{sdom}(u)\Rightarrow u/\{u,\text{sdom}(u)\}$，那么考虑这条路径上最后一个在 $1\Rightarrow u$ 上的点 $w$。$w\rightarrow u$ 的路径必定只经过了 $\succ u$ 的点，否则根据 **引理 5** $w$ 必定不是最后一个。既然如此，$w$ 为什么不自己当 $\text{sdom}(u)$ 呢？
+>
+> 否则这条路径接触过 $\text{sdom}(u)\Rightarrow u/\{u,\text{sdom}(u)\}$。我们故技重施，很容易可以证明这与 $\text{sdom}(u)=\text{sdom}(v)$ 矛盾。
+>
+> - 第二条。
+>
+> 现在 $\text{dom}(v)$ 高于 $\text{sdom}(v)$ 严格高于 $\text{sdom}(u)$ 严格高于 $v$ 严格高于 $u$。
+>
+> 根据 **引理 4**，$\text{dom}(u)$ 必定是 $\text{dom}(v)$ 的祖先。我们只需要证明 <span style="color: #36c48e">$\text{dom}(v)$ 支配了 $u$</span>。
+>
+> 实际上就是故技重施，仍是假设存在一条 $1\rightarrow u$ 的路径不经过 $\text{dom}(v)$。
+>
+> 如果这条路径从未接触过 $\text{sdom}(u)\Rightarrow u/\{u\}$，那么根据上面的论述可以推出矛盾；
+>
+> 否则它必定接触过 $\text{sdom}(u)\Rightarrow u/\{u\}$。而它显然没有接触过 $\text{sdom}(u)$，否则 $\text{sdom}(u)$ 直接走到 $v$，$\text{dom}(v)$ 就支配不了 $v$ 了；而对于剩下的那些，它接触哪个都会导致 $v$ 作为"$\text{sdom}$ 在 DFS 序意义下最小"的头衔被抢。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
+那么现在只剩一个问题，怎么求 $\text{sdom}$？
+
+# Part 3 - 怎么求半支配点
+
+
+
+# Part 5 - 结语
+
+以上我们介绍了支配树的求法，只要各位男性朋友按照步骤反复练习，一定能够取得你满意的效果！
 
 最后，祝你~~缇乾赦晶~~身体健康，再见。
 
