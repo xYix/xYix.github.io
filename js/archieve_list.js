@@ -1035,7 +1035,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '130',
 		'post_name' : 'domination-tree',
-		'post_chinese_name' : '男性增加支配树题分数的控制技巧',
+		'post_chinese_name' : '男性增加支配树题分数的技巧',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-05-02',
 		'tag' : ['graph-theory',],

@@ -216,8 +216,9 @@ title: 男性增加支配树题分数的技巧
 > - $\text{dom}(u)$ 一定是 $\text{sdom}(u)$ 在 DFS 树上的一个祖先。
 
 <script>
-    document.new_button(3);
+    document.new_button(4);
 </script>
+
 
 > **引理 6 - 证明.**
 >

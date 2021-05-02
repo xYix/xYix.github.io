@@ -855,7 +855,7 @@ solution
 apollyon
 combinatorics
 domination-tree
-男性增加支配树题分数的控制技巧
+男性增加支配树题分数的技巧
 algorithm
 1
 graph-theory
