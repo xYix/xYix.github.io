@@ -17,12 +17,15 @@ title: 支配树通俗演义
         return function() {
             let my_blockquote = document.getElementsByTagName("blockquote")[blockid];
             if(my_blockquote.style.display === 'none') {
+                my_blockquote.style.opacity = 0;
                 my_blockquote.style.display = "block";
-                this.childNodes[0].textContent = '-隐藏解答';
+                this.childNodes[0].textContent = '- 隐藏证明';
+                for (var i = 0; i < 10; i++)
+                	setTimeout("document.getElementsByTagName(\"blockquote\")[" + String(blockid) + "].style.opacity = 0.1 * " + String(i), i * 20);
             }
             else {
                 my_blockquote.style.display = 'none';
-                this.childNodes[0].textContent = '+显示解答';
+                this.childNodes[0].textContent = '+ 显示证明';
             }
         };
 	};
@@ -32,12 +35,12 @@ title: 支配树通俗演义
         let my_button = document.createElement('button');
         	let button_content = document.createElement('span');
         	button_content.style = 'font-family: consolas';
-        	button_content.textContent = '+显示解答';
+        	button_content.textContent = '+ 显示证明';
         	my_button.appendChild(button_content);
        	my_button.onmouseover = function(){this.style = 'background-color: #dddddd;cursor: pointer;';};
         my_button.onmouseout = function(){this.style = 'background-color: #ffffff;cursor: pointer;';};
         my_button.onclick = document.get_button_click(blockid);
-        document.body.childNodes[1].appendChild(my_button);
+        document.body.childNodes[0].childNodes[1].appendChild(my_button);
 	};
 </script>
 
@@ -54,7 +57,7 @@ title: 支配树通俗演义
 > 把上面定义的路径换为<span style="color: #36c48e">"简单路径"</span>，得到的新定义和原定义是等价的。
 
 <script>
-  	document.new_button(2);
+    document.new_button(2);
 </script>
 
 > **引理 0 - 证明.**
@@ -71,23 +74,39 @@ title: 支配树通俗演义
 >
 > 支配关系具有<span style="color: #1a5a40">**传递性**</span>：<span style="color: #36c48e">如果 $u$ 支配 $v$，$v$ 支配 $w$，那么 $u$ 支配 $w$。</span>
 
+<script>
+    document.new_button(2);
+</script>
+
 > **引理 1 - 证明.**
 >
 > $1\rightarrow w=1\rightarrow v\rightarrow w=1\rightarrow u\rightarrow v\rightarrow w$，即 $u$ 支配 $w$。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 > **引理 2.**
 >
 > <span style="color: #36c48e">如果 $u,v$ 都支配 $w$，那么 $u,v$ 不可能不互相支配。</span>
 
+<script>
+    document.new_button(2);
+</script>
+
 > **引理 2 - 证明.**
 >
-> 考虑 $1\rightarrow w=1\rightarrow v\rightarrow w$。由于前后两段是独立的，所以 $u$ 至少必定在其中一段出现。（不过显然不可能两段都是。怎么可能有必须走环的路径？）
+> 考虑 $1\rightarrow w=1\rightarrow v\rightarrow w$。由于前后两段是独立的，所以 $u$ 至少必定在其中一段出现。（不过不可能两段都是。怎么可能有必须走环的路径？）
 >
 > 下面不妨认为 $1\rightarrow w=1\rightarrow u\rightarrow v\rightarrow w$。又由于 $1\rightarrow w=1\rightarrow v\rightarrow w$，所以
 > $$
 > 1\rightarrow v=1\rightarrow u\rightarrow v
 > $$
 > 即原命题。
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 又考虑到支配关系有显然的自反性和反对称性，故
 
@@ -97,25 +116,39 @@ title: 支配树通俗演义
 
 下面称节点 $u$ 在支配树上的父亲为 $\text{dom}(u)$。
 
-# Part 2 - DFS 树
+# Part 1.5 - DFS 树和半支配点的引入
 
 那么问题就来了，我们从该从哪里掏出"$u\rightarrow w=u\rightarrow v\rightarrow w$"这种关系？如果连一条关系都找不到就不可能进行更多的分析。
 
 首先在原图上引入一个以 $1$ 为根的 DFS 树。
 
-> **引理 4.**
+> **引理 3.**
 >
 > 任取原图的一个 DFS 树。
 >
 > <span style="color: #36c48e">如果 $\text{dfn}(u)<\text{dfn}(v)$，那么 $u\rightarrow v$ 总是至少经过 $u,v$ 在 DFS 树上的公共祖先中的至少一个。</span>
 
+<script>
+    document.new_button(3);
+</script>
+
 > **引理 3 - 证明.**
 >
 > 注意到非树边要么下指要么总是由较大的 $\text{dfn}$ 指向较小的 $\text{dfn}$，于是就显然了。
 
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
+
 你会想，$u\rightarrow v$ 是否就一定等于 $u\rightarrow \text{lca}(u,v)\rightarrow v$ 呢？并不是这样，比如下面这个 case：
 
-<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/domin-1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:40%;margin:0"><img src="https://xyix.gitee.io/images/domin-1.png" style="width: 70%" alt=""></div></center>
+
+于是，这种"能不经过 $\text{lca}(u,v)$ 就能到 $v$"的 $v$ 的祖先相当重要。更进一步，这种点的存在还直接蕴含 $\text{lca}(u,v)$ 并不支配 $v$。
+
+经过长期的摸♂索和练♂习，一个脱胎于以上定义的重要概念被发现了——<span style="color: #1a5a40">**半支配点**</span>。
+
+# Part 2 - 半支配点
 
 
 
