@@ -45,9 +45,7 @@ title: 男性增加支配树题分数的技巧
 </script>
 各位男性朋友，你们好！
 
-男性的图论经验和图论技巧是不可能与生俱来的，无论你的观察能力是如何的健♂壮，你没有学会<span style="color: #1a5a40">**支配树**</span>，在支配树相关题目中就会紧张，就会不知所措，就会被水淹没；而你学会了支配树，在图论题中你就能轻松自如，如[鱼](https://yhx-12243.github.io/OI-transit/)得水。
-
-男性增加支配树题分数的过程，其实也就像是一个人掌握数数技巧的过程，它也和[练习数数](https://www.luogu.com.cn/blog/zyxxs/x-yi-x-jiang-tan-sheng-cheng-han-shuo-zai-ru-men)一样，需要有一套板子，并经过一段时间的到处粘板练习，使刻意的强制性增加支配树题分数转化为下意识的习惯性拿分。
+男性的图论经验和图论技巧是不可能与生俱来的，无论你的观察能力是如何的健♂壮，你没有学会<span style="color: #1a5a40">**支配树**</span>，在[支配树相关题目](https://www.luogu.com.cn/problem/P7520)（好吧其实不相关）中就会紧张，就会不知所措，就会被水淹没；而你学会了支配树，在支配树相关题目中你就能轻松自如，如[鱼](https://yhx-12243.github.io/OI-transit/)得水。
 
 下面，我们详细介绍关于男性掌握增加支配树题分数的技巧必需具备的几个结论。
 
@@ -272,6 +270,29 @@ title: 男性增加支配树题分数的技巧
 # Part 3 - 怎么求半支配点
 
 > 最后你推开支配树，在 DFS 树中你的支配点和半支配点不断地划动（？），经过一段时间的摸索和练习，忽然你觉得你会求半支配点了，支配点也抬出了水面（？），从此你也就学会了支配树。
+
+对于 $\text{sdom}(u)$，我们自然要考虑所有 $(v,u)$。仍然是经过摸♂索和练♂习，我们发现结论如下：
+
+> <span style="color: #1a5a40">**定理 3. (sdom 的求法)**</span>
+> $$
+> \text{sdom}(u)=\min_{\prec}\{v|(v,u),v\prec u\}\cup\{\text{sdom}(w)|w>v,w\Rightarrow v,(v,u),v\succ u\}
+> $$
+
+<script>
+    document.new_button(3);
+</script>
+
+> **定理 3 - 证明.**
+>
+> 对于 $v\prec u$ 的那一部分，明显是直接搬了半支配点的定义。
+>
+> 对于 $v\succ u$ 的一部分：很明显是枚举了"半支配路径"的一个子集。注意到 $w\Rightarrow v$ 是树边，$v\rightarrow u$ 是横杈边。为什么没有返祖边？而且为什么 $w$ 之前的部分要求 $\succ w$ 而不是 $\succ u$？
+>
+> 
+
+<script>
+    document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
+</script>
 
 # Part 4 - 代码实现
 
