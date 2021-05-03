@@ -28,7 +28,7 @@ x义x 的朋友们~~密切关注中的人类个体~~：
 
 - 外校
 
-[![](https://cdn.luogu.com.cn/upload/usericon/60990.png)](https://www.luogu.com.cn/user/60990)[![](https://cdn.luogu.com.cn/upload/usericon/96580.png)](https://www.luogu.com.cn/user/96580)[![](https://cdn.luogu.com.cn/upload/usericon/112381.png)](https://www.luogu.com.cn/user/112381)[![](https://cdn.luogu.com.cn/upload/usericon/58705.png)](https://www.luogu.com.cn/user/58705)[![](https://cdn.luogu.com.cn/upload/usericon/75840.png)](https://www.luogu.com.cn/user/75840)
+[![](https://cdn.luogu.com.cn/upload/usericon/96580.png)](https://www.luogu.com.cn/user/96580)[![](https://cdn.luogu.com.cn/upload/usericon/112381.png)](https://www.luogu.com.cn/user/112381)[![](https://cdn.luogu.com.cn/upload/usericon/58705.png)](https://www.luogu.com.cn/user/58705)[![](https://cdn.luogu.com.cn/upload/usericon/75840.png)](https://www.luogu.com.cn/user/75840)
 
 友链：
 
