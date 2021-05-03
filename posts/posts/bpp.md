@@ -18,12 +18,15 @@ title: bijective proof problems 选做（上）
         return function() {
             let my_blockquote = document.getElementsByTagName("blockquote")[blockid];
             if(my_blockquote.style.display === 'none') {
+                my_blockquote.style.opacity = 0;
                 my_blockquote.style.display = "block";
-                this.childNodes[0].textContent = '-隐藏解答';
+                this.childNodes[0].textContent = '- 隐藏证明';
+                for (var i = 0; i < 20; i++)
+                	setTimeout("document.getElementsByTagName(\"blockquote\")[" + String(blockid) + "].style.opacity = 0.05 * " + String(i), i * 10);
             }
             else {
                 my_blockquote.style.display = 'none';
-                this.childNodes[0].textContent = '+显示解答';
+                this.childNodes[0].textContent = '+ 显示证明';
             }
         };
 	};
@@ -33,12 +36,12 @@ title: bijective proof problems 选做（上）
         let my_button = document.createElement('button');
         	let button_content = document.createElement('span');
         	button_content.style = 'font-family: consolas';
-        	button_content.textContent = '+显示解答';
+        	button_content.textContent = '+ 显示证明';
         	my_button.appendChild(button_content);
        	my_button.onmouseover = function(){this.style = 'background-color: #dddddd;cursor: pointer;';};
         my_button.onmouseout = function(){this.style = 'background-color: #ffffff;cursor: pointer;';};
         my_button.onclick = document.get_button_click(blockid);
-        document.body.childNodes[1].appendChild(my_button);
+        document.body.childNodes[0].childNodes[1].appendChild(my_button);
 	};
 </script>
 

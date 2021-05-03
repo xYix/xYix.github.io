@@ -13,5 +13,7 @@
 - 2021/4/26：更新两篇博文 [det 又等于 exp trace ln 了](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=det-eq-exp-trace-log-ex)，[UR#20 题解](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-R-20)。
 - 2021/4/27：更新一篇博文 [UNR#4 题解](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-NR-4)。
 - 2021/4/28：更新 5 篇博文 [Binary Code](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6965)，[Metal Processing Plant](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6898)，[Tours](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6914)，[Star Trek](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6803)，[Indiana Jones and the Uniform Cave](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-7123)。
-- 2021/4/29：更新一篇博文[某科学的动态仙人掌](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-1-3)
+- 2021/4/29：更新一篇博文[某科学的动态仙人掌](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-1-3)。
+- 2021/4/30：更新三篇博文 [Showing Off](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=cf-1416-f)，[Breadboard Capacity](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=cf-1368-h)，[某科学的动态仙人掌](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-1-3)。
+- 2021/5/1：更新一篇博文遗迹](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-506)。
 
