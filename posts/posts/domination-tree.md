@@ -198,7 +198,7 @@ title: 男性增加支配树题分数的技巧
 
 于是，这种"能不经过 $\text{lca}(u,v)$ 就能到 $v$"的 $v$ 的祖先相当重要。更进一步，这种点的存在还直接蕴含 $\text{lca}(u,v)$ 并不支配 $v$。
 
-经过长期的摸♂索和练♂习，一个脱胎于以上定义的重要概念被发现了——<span style="color: #1a5a40">**半支配点**</span>。
+经过长期的摸♂索和练♂习，一个脱胎于以上定义的重要概念被（Lengauer 和 Tarjan）发现了——<span style="color: #1a5a40">**半支配点**</span>。
 
 # Part 2 - 半支配点
 
@@ -271,11 +271,11 @@ title: 男性增加支配树题分数的技巧
 
 > 最后你推开支配树，在 DFS 树中你的支配点和半支配点不断地划动（？），经过一段时间的摸索和练习，忽然你觉得你会求半支配点了，支配点也抬出了水面（？），从此你也就学会了支配树。
 
-对于 $\text{sdom}(u)$，我们自然要考虑所有 $(v,u)$。仍然是经过摸♂索和练♂习，我们发现结论如下：
+对于 $\text{sdom}(u)$，我们自然要考虑所有 $(v,u)$。仍然是经过摸♂索和练♂习，Lengauer 和 Tarjan 发现结论如下：
 
 > <span style="color: #1a5a40">**定理 3. (sdom 的求法)**</span>
 > $$
-> \text{sdom}(u)=\min_{\prec}\{v|(v,u),v\prec u\}\cup\{\text{sdom}(w)|w>v,w\Rightarrow v,(v,u),v\succ u\}
+> \text{sdom}(u)=\min_{\prec}\{v|(v,u),v\prec u\}\cup\{\text{sdom}(w)|w\succ u,w\Rightarrow v,(v,u),v\succ u\}
 > $$
 
 <script>
@@ -284,19 +284,103 @@ title: 男性增加支配树题分数的技巧
 
 > **定理 3 - 证明.**
 >
-> 对于 $v\prec u$ 的那一部分，明显是直接搬了半支配点的定义。
+> 对于 $v\prec u$ 的那一部分直接搬了半支配点的定义。
 >
-> 对于 $v\succ u$ 的一部分：很明显是枚举了"半支配路径"的一个子集。注意到 $w\Rightarrow v$ 是树边，$v\rightarrow u$ 是横杈边。为什么没有返祖边？而且为什么 $w$ 之前的部分要求 $\succ w$ 而不是 $\succ u$？
+> 对于 $v\succ u$ 的一部分：很明显是枚举了"半支配路径"的一个子集。
 >
-> 
+> 注意到 $w\Rightarrow v$ 是树边，$(v,u)$ 是横杈边/返祖边。没有下指边，这很合理，能走下指边就一定能走对应树边。
+>
+> 不过，为什么 $w$ 之前的部分要求 $\succ w$ 而不是 $\succ u$？
+>
+> 不妨设 $w$ 是从 $(x,w)$ 来的，显然 $x>w$。那么是否可能存在 $y\Rightarrow x$ 且 $u<y<w$ 呢？
+>
+> - $y$ 是 $w$ 的祖先。那为什么不直接走 $y\Rightarrow w$？即，这样的 $y\Rightarrow x\rightarrow w\Rightarrow v\rightarrow u$ 是没有考虑价值的。
+> - $y$ 不是 $w$ 的祖先。然而注意到 $y$ 是 $x$ 的祖先且 $x>w$，这种情况不可能发生。
+>
+> 故得证。
 
 <script>
     document.getElementsByTagName("blockquote")[document.last_block].style.display="none";
 </script>
 
+是的，它的证明很显然，但我该怎么想到证这个？
+
+——我怎么知道……
+
 # Part 4 - 代码实现
 
+**定理 2** 和 **定理 3** 所需信息的维护可以通过 DFS 序和带权并查集的精细配合实现。
 
+此处不作进一步具体解释，因为一看就懂，代码如下。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 500005;
+vector<int> G[maxn], rG[maxn];
+
+int n, m;
+int dfn[maxn], rev[maxn], idx;
+int T_fa[maxn];
+void get_dfn(int x) {
+	rev[dfn[x] = ++idx] = x;
+	for (int y : G[x])
+		if (!dfn[y]) get_dfn(y), T_fa[y] = x;
+}
+
+int dom[maxn], sdom[maxn], dfn_sdom[maxn];
+
+int dsu_fa[maxn], dsu_val[maxn];
+int find(int x) {
+	if (dsu_fa[x] == x) return x;
+	int fx = find(dsu_fa[x]);
+	if (dfn_sdom[dsu_val[dsu_fa[x]]] < dfn_sdom[dsu_val[x]])
+		dsu_val[x] = dsu_val[dsu_fa[x]];
+	return dsu_fa[x] = fx;
+}
+
+vector<int> r_sdom[maxn];
+
+void solve() {
+	for (int i_ = n; ; i_--) {
+		int x = rev[i_];
+		for (int y : r_sdom[x]) {
+			find(y);
+			if (sdom[dsu_val[y]] == x) dom[y] = x;
+			else dom[y] = -dsu_val[y]; //实际上应是 dom[dsu_val[y]], - 作为标记
+		}
+
+		if (x == 1) break;
+
+		int &qaq = (dfn_sdom[x] = n);
+		for (int y : rG[x])
+			if (dfn[y] < dfn[x])
+				qaq = min(qaq, dfn[y]);
+			else find(y), qaq = min(qaq, dfn_sdom[dsu_val[y]]);
+		r_sdom[sdom[x] = rev[qaq]].push_back(x);
+		dsu_fa[x] = T_fa[x];
+	}
+
+	for (int i_ = 2; i_ <= n; i_++) {
+		int x = rev[i_];
+		if (dom[x] < 0) dom[x] = dom[-dom[x]]; //伏笔回收
+	}
+}
+
+int main() {
+	scanf("%d%d", &n, &m);
+	while (m--) {
+		int u, v; scanf("%d%d", &u, &v);
+		G[u].push_back(v); rG[v].push_back(u);
+	}
+	get_dfn(1);
+	for (int i = 1; i <= n; i++)
+		dsu_fa[i] = dsu_val[i] = i, dfn_sdom[i] = dfn[i];
+	solve();
+	for (int i = 2; i <= n; i++) printf("%d ", dom[i]);
+}
+```
 
 # Part 5 - 结语
 
