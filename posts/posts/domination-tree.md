@@ -216,8 +216,6 @@ title: 男性增加支配树题分数的技巧
 <script>
     document.new_button(4);
 </script>
-
-
 > **引理 6 - 证明.**
 >
 > - 由 **引理 5**，显然。
@@ -228,10 +226,10 @@ title: 男性增加支配树题分数的技巧
 </script>
 > <span style="color: #1a5a40">**定理 2. (dom 和 sdom)**</span>
 >
-> 从 $\text{sdom}(u)\Rightarrow u/\{\text{sdom}(u)\}$ 中找到使得 $\text{sdom}(v)$ 在 DFS 序意义下最小的 $v$。
+> <span style="color: #36c48e">从 $\text{sdom}(u)\Rightarrow u/\{\text{sdom}(u)\}$ 中找到使得 $\text{sdom}(v)$ 在 DFS 序意义下最小的 $v$。</span>
 >
-> - 若 $\text{sdom}(u)=\text{sdom}(v)$，那么 $\text{dom}(u)=\text{sdom}(u)$；
-> - 否则 $\text{dom}(u)=\text{dom}(v)$。
+> - <span style="color: #36c48e">若 $\text{sdom}(u)=\text{sdom}(v)$，那么 $\text{dom}(u)=\text{sdom}(u)$；</span>
+> - <span style="color: #36c48e">否则 $\text{dom}(u)=\text{dom}(v)$。</span>
 
 <script>
     document.new_button(2);
@@ -274,8 +272,9 @@ title: 男性增加支配树题分数的技巧
 对于 $\text{sdom}(u)$，我们自然要考虑所有 $(v,u)$。仍然是经过摸♂索和练♂习，Lengauer 和 Tarjan 发现结论如下：
 
 > <span style="color: #1a5a40">**定理 3. (sdom 的求法)**</span>
+>
 > $$
-> \text{sdom}(u)=\min_{\prec}\{v|(v,u),v\prec u\}\cup\{\text{sdom}(w)|w\succ u,w\Rightarrow v,(v,u),v\succ u\}
+> \color{#36c48e}\text{sdom}(u)=\min_{\prec}\{v|(v,u),v\prec u\}\cup\{\text{sdom}(w)|w\succ u,w\Rightarrow v,(v,u),v\succ u\}
 > $$
 
 <script>
