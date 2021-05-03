@@ -20,8 +20,8 @@ title: 男性增加支配树题分数的技巧
                 my_blockquote.style.opacity = 0;
                 my_blockquote.style.display = "block";
                 this.childNodes[0].textContent = '- 隐藏证明';
-                for (var i = 0; i < 10; i++)
-                	setTimeout("document.getElementsByTagName(\"blockquote\")[" + String(blockid) + "].style.opacity = 0.1 * " + String(i), i * 20);
+                for (var i = 0; i < 20; i++)
+                	setTimeout("document.getElementsByTagName(\"blockquote\")[" + String(blockid) + "].style.opacity = 0.05 * " + String(i), i * 10);
             }
             else {
                 my_blockquote.style.display = 'none';
@@ -66,8 +66,6 @@ title: 男性增加支配树题分数的技巧
 <script>
     document.new_button(3);
 </script>
-
-
 > **引理 0 - 证明.**
 >
 > 显然。完全没有必要走环。
