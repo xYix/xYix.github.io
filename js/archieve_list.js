@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-04-25',
+		'last_modi' : '2021-05-03',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -549,7 +549,7 @@
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-04-02',
+		'last_modi' : '2021-05-03',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -557,7 +557,7 @@
 		'post_name' : 'bpp2',
 		'post_chinese_name' : 'bijective proof problems 选做（下）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-22',
+		'last_modi' : '2021-05-03',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1037,7 +1037,7 @@
 		'post_name' : 'domination-tree',
 		'post_chinese_name' : '男性增加支配树题分数的技巧',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-05-02',
+		'last_modi' : '2021-05-03',
 		'tag' : ['graph-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
