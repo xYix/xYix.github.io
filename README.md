@@ -15,5 +15,6 @@
 - 2021/4/28：更新 5 篇博文 [Binary Code](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6965)，[Metal Processing Plant](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6898)，[Tours](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6914)，[Star Trek](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6803)，[Indiana Jones and the Uniform Cave](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-7123)。
 - 2021/4/29：更新一篇博文[某科学的动态仙人掌](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-1-3)。
 - 2021/4/30：更新三篇博文 [Showing Off](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=cf-1416-f)，[Breadboard Capacity](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=cf-1368-h)，[某科学的动态仙人掌](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-1-3)。
-- 2021/5/1：更新一篇博文遗迹](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-506)。
+- 2021/5/1：更新一篇博文[遗迹](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-506)。
+- 2021/5/2：更新一篇博文[男性增加支配树题分数的技巧](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=domination-tree)，顺便更新了证明折叠模块，主要影响到了 [bpp1](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=bpp) 和 [bpp2](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=bpp2)。
 
