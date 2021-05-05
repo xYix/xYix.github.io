@@ -333,4 +333,4 @@ _rqy 的题解写得太清晰了以至于我完全没有可以补充的地方…
 
 ### 解答
 
-[这里](https://xyix.github.io/2020/09/06/uoj-372/)
+[这里](https://xyix.gitee.io/posts/?postname=uoj-372)

@@ -101,7 +101,7 @@
 		'post_name' : 'probability-expectation',
 		'post_chinese_name' : '概率和期望',
 		'type_name' : 'algorithm',
-		'last_modi' : '2020-10-03',
+		'last_modi' : '2021-05-05',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
