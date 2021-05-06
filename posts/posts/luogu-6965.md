@@ -18,6 +18,22 @@ title: luoguP6965 题解 - 【NEERC2016】Binary Code
 
 实际上，Trie 点的被选的含义是"当前点不能放串"，这么一看就更合理了！$u$ 放了串 $\rightarrow$ $u$ 对应的 Trie 点不能再放 $\rightarrow$ 其祖先也全不能再放。
 
+这是一个"上传 Trie"，我们自然还要再建一个类似的"下传 Trie"。这不就是优化建图吗！
+
+---
+
+但这会出现一个问题：一个串会推出自己不能放……
+
+小问题！我们强行让第一步必须跳一步就行了！
+
+<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/luogu-6965-3.png" style="width: 70%" alt=""></div></center>
+
+----
+
+然而又出现了问题：现在相同串不互相排斥了。
+
+这是一个经典的**前后缀模型**。从它的名字你就能知道它是怎么建的了……
+
 ----
 
 最后一点：没有 ``?`` 的情况。这时我们会发现这是一个尴尬的 case：按之前的建图方式 $u$ 和 $\lnot u$ 会立即互相推出。

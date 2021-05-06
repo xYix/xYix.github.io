@@ -621,7 +621,7 @@
 		'post_name' : 'matroid',
 		'post_chinese_name' : '拟阵通俗演义',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-02-08',
+		'last_modi' : '2021-05-06',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -965,7 +965,7 @@
 		'post_name' : 'luogu-6965',
 		'post_chinese_name' : 'luoguP6965 题解 - 【NEERC2016】Binary Code',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-30',
+		'last_modi' : '2021-05-06',
 		'tag' : ['graph-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -981,7 +981,7 @@
 		'post_name' : 'luogu-6914',
 		'post_chinese_name' : 'luoguP6914 题解 - 【ICPC2015 WF】Tours',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-28',
+		'last_modi' : '2021-05-06',
 		'tag' : ['euclid','graph-theory','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
