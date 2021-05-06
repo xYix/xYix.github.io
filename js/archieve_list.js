@@ -1029,7 +1029,7 @@
 		'post_name' : 'uoj-506',
 		'post_chinese_name' : 'uoj#506 题解 - 【JOISC2020】遗迹',
 		'type_name' : 'solution',
-		'last_modi' : '2021-05-01',
+		'last_modi' : '2021-05-06',
 		'tag' : ['apollyon','combinatorics',],
 	};
 	archieve_list[archieve_list.length] = {
