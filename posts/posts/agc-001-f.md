@@ -69,3 +69,73 @@ $$
 \min \operatorname{rev}p\Leftrightarrow \max\operatorname{rev}(p^{-1})
 $$
 于是就做完了！
+
+下面的代码中没有把图显式建出。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 500005;
+int n, k, p[maxn];
+
+struct node {
+	int p, v;
+	bool operator < (const node b) const { return v < b.v; }
+};
+node max(const node &a, const node &b) { return a < b ? b : a; }
+node val[maxn << 2];
+void build(int x, int l, int r) {
+	if (l == r) return val[x] = (node){l, p[l]}, void();
+	int mid = (l + r) >> 1;
+	build(x << 1, l, mid);
+	build(x << 1 | 1, mid + 1, r);
+	val[x] = max(val[x << 1], val[x << 1 | 1]);
+}
+void update(int x, int l, int r, int pos) {
+	if (l == r) return val[x] = (node){0, 0}, void();
+	int mid = (l + r) >> 1;
+	if (pos <= mid) update(x << 1, l, mid, pos);
+	if (pos > mid) update(x << 1 | 1, mid + 1, r, pos);
+	val[x] = max(val[x << 1], val[x << 1 | 1]);
+}
+node query(int x, int l, int r, int L, int R) {
+	if (L <= l && r <= R) return val[x];
+	int mid = (l + r) >> 1; node ans = (node){0, 0};
+	if (L <= mid) ans = max(ans, query(x << 1, l, mid, L, R));
+	if (mid < R) ans = max(ans, query(x << 1 | 1, mid + 1, r, L, R));
+	return ans;
+}
+node QUERY(int L, int R) {
+	if (L <= 0) L = 1;
+	if (R > n) R = n;
+	if (L > R) return (node){0, 0};
+	return query(1, 1, n, L, R);
+}
+
+bool vis[maxn];
+priority_queue<int> qaq;
+void check(int u) {
+	if (!u) return;
+	if (!vis[u] && QUERY(u - k + 1, u + k - 1).p == u)
+		qaq.push(u), vis[u] = 1;
+}
+
+int ans[maxn];
+
+int main() {
+	scanf("%d%d", &n, &k);
+	for (int i = 1; i <= n; i++) scanf("%d", &p[i]);
+	build(1, 1, n);
+	for (int i = 1; i <= n; i++) check(i);
+	for (int T = n; T; T--) {
+		int u = qaq.top(); qaq.pop();
+		ans[u] = T;
+		update(1, 1, n, u);
+		check(QUERY(u - k + 1, u - 1).p);
+		check(QUERY(u + 1, u + k - 1).p);
+	}
+	for (int i = 1; i <= n; i++) printf("%d\n", ans[i]);
+}
+```
+
