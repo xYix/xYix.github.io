@@ -68,5 +68,71 @@ $$
 
 显然 $\forall i$，$k$ 都是 $|E_i|$ 的因子。自然会考虑 $k=\gcd E_i$ 是否可行。实际上在 $E_i$ 内部乱填就行了，毕竟 $E_i$ 要么完全包含于 $cyc$ 要么完全与之无交。
 
-此题至此得到了解决。
+----
+
+对于本题，按理来说我们应该对每个边双连通分量分别按上述结论进行判定，但实际上对非割边直接跑就行了。
+
+代码如下。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 2005;
+
+int n;
+vector<int> G[maxn];
+int banu, banv;
+namespace Tarjan {
+	int dfn[maxn], low[maxn], idx;
+	int ans, qaq[maxn];
+	void Tarjan(int x, int fa) {
+		dfn[x] = low[x] = ++idx;
+		for (int y : G[x]) {
+			if (x == banu && y == banv) continue;
+			if (x == banv && y == banu) continue;
+			if (y == fa) continue;
+			if (!dfn[y]) Tarjan(y, x);
+			low[x] = min(low[x], low[y]);
+		}
+		if (fa != 0 && low[x] == dfn[x]) ans++, qaq[x] = -fa;
+		else qaq[x] = fa;
+	}
+	void clear() {
+		memset(dfn, 0, sizeof(dfn));
+		memset(low, 0, sizeof(low));
+		memset(qaq, 0, sizeof(qaq));
+		idx = ans = 0;
+	}
+}
+
+int qaq[maxn], tans;
+
+int main() {
+	int m;
+	scanf("%d%d", &n, &m);
+	while (m--) {
+		int u, v; scanf("%d%d", &u, &v);
+		G[u].push_back(v), G[v].push_back(u);
+	}
+	Tarjan::clear();
+	for (int i = 1; i <= n; i++)
+		if (!Tarjan::dfn[i]) Tarjan::Tarjan(i, 0);
+
+	memcpy(qaq, Tarjan::qaq, sizeof(qaq));
+	tans = Tarjan::ans;
+	int ans = 0;
+	for (banu = 1; banu <= n; banu++)
+	for (int i : G[banu]) {
+		banv = i;
+		if (banv == -qaq[banu]) continue;
+		if (banu == -qaq[banv]) continue;
+		Tarjan::clear();
+		for (int i = 1; i <= n; i++)
+			if (!Tarjan::dfn[i]) Tarjan::Tarjan(i, 0);
+		ans = __gcd(ans, Tarjan::ans - tans + 1);
+	}
+	for (int i = 1; i <= ans; i++) if (ans % i == 0) printf("%d ", i);
+}
+```
 
