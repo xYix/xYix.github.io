@@ -18,3 +18,4 @@
 - 2021/5/1：更新一篇博文[遗迹](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-506)。
 - 2021/5/3：更新一篇博文[男性增加支配树题分数的技巧](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=domination-tree)，顺便更新了证明折叠模块，主要影响到了 [bpp1](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=bpp) 和 [bpp2](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=bpp2)。
 - 2021/5/5：更新一篇博文[不知道题目名](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=thuwc-2020-2-2)。
+- 2021/5/6：给 [k 短路及其延伸](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=k-th-shortest-path) 补了一道例题。发现博文 [Binary Code](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6965) 有锅就修了一下。给两篇博文 [Tours](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=luogu-6914) 和 [遗迹](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=uoj-506) 补了代码。
