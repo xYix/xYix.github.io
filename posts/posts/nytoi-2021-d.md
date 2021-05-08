@@ -36,10 +36,35 @@ title: NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Danc
 >
 > 我们把一个杨表按这样的顺序读出来，这会形成一个排列，称为这个杨表的 <span style="color: #36c48e">**Reading Word**</span>。
 >
-> <center><div style="width:100%;margin:0"><img src="https://xyix.gitee.io/images/nytoi-2021-1.png" style="width: 70%" alt=""></div></center>
+> <center><div style="width:50%;margin:0"><img src="https://xyix.gitee.io/images/drd-1.png" style="width: 70%" alt=""></div></center>
 
 极显然地，
 
-> **引理 1.**
+> **引理.**
 >
 > 如果对一个杨表的 Reading Word 运行 RSK 算法，其插入表必定是原杨表。
+
+下面我们来证明，
+
+> **定理.**
+>
+> 一个排列和它对应的插入表的 Reading Word 等价。
+
+> **证明.**
+>
+> 考虑归纳，设已有 $w\sim \text{read}(P)$，那么我们只需要验证
+> $$
+> \text{read}(P)+k\sim \text{read}(P\leftarrow k)
+> $$
+> 其中 $P\leftarrow k$ 是在 $P$ 中插入 $k$ 的结果。
+>
+> 首先看第一行，不妨把 $\text{read}(P)+k$ 看成这样一个杨表的 $\text{read}$。我们可以通过若干次操作把 $k$ 换到它应在的位置。当然如果一下都换不了，那就说明 $\text{read}(P)+k=\text{read}(P\leftarrow k)$。
+>
+> <center><div style="width:70%;margin:0"><img src="https://xyix.gitee.io/images/drd-2.png" style="width: 70%" alt=""></div></center>
+>
+> 首次换不了的情形如下。这时应该改变交换策略，把第一个 $>k$ 的元素踢到下一行。
+>
+> <center><div style="width:70%;margin:0"><img src="https://xyix.gitee.io/images/drd-2.png" style="width: 70%" alt=""></div></center>
+>
+> 把它踢到下一行就变成了一个新的插入过程，重复以上论述即可。
+
