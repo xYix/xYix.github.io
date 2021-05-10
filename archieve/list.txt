@@ -852,7 +852,7 @@ uoj-506
 uoj#506 题解 - 【JOISC2020】遗迹
 solution
 2
-apollyon
+keter
 combinatorics
 domination-tree
 男性增加支配树题分数的技巧
@@ -865,3 +865,9 @@ solution
 2
 keter
 graph-theory
+luogu-5404
+luoguP5404 题解 - 【CTS2019】重复
+solution
+2
+keter
+string

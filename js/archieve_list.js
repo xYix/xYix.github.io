@@ -733,7 +733,7 @@
 		'post_name' : 'uoj-199',
 		'post_chinese_name' : 'uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-29',
+		'last_modi' : '2021-05-07',
 		'tag' : ['apollyon','combinatorics','exc-inc','string',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -765,7 +765,7 @@
 		'post_name' : 'nytoi-2021-a',
 		'post_chinese_name' : 'NayutanOI2021A 题解 - Andromeda Andromeda',
 		'type_name' : 'solution',
-		'last_modi' : '2021-03-31',
+		'last_modi' : '2021-05-08',
 		'tag' : ['apollyon','bijective-proof','combinatorics','construction','x-yi-x',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -909,7 +909,7 @@
 		'post_name' : 'agc-001-f',
 		'post_chinese_name' : 'AGC001F 题解 - Wide Swap',
 		'type_name' : 'solution',
-		'last_modi' : '2021-04-22',
+		'last_modi' : '2021-05-06',
 		'tag' : ['graph-theory','keter',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -965,7 +965,7 @@
 		'post_name' : 'luogu-6965',
 		'post_chinese_name' : 'luoguP6965 题解 - 【NEERC2016】Binary Code',
 		'type_name' : 'solution',
-		'last_modi' : '2021-05-06',
+		'last_modi' : '2021-05-07',
 		'tag' : ['graph-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1030,7 +1030,7 @@
 		'post_chinese_name' : 'uoj#506 题解 - 【JOISC2020】遗迹',
 		'type_name' : 'solution',
 		'last_modi' : '2021-05-06',
-		'tag' : ['apollyon','combinatorics',],
+		'tag' : ['combinatorics','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '130',
@@ -1047,6 +1047,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-05-05',
 		'tag' : ['graph-theory','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '132',
+		'post_name' : 'luogu-5404',
+		'post_chinese_name' : 'luoguP5404 题解 - 【CTS2019】重复',
+		'type_name' : 'solution',
+		'last_modi' : '2021-05-10',
+		'tag' : ['keter','string',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
