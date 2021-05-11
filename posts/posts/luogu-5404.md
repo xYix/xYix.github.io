@@ -50,7 +50,59 @@ title: luoguP5404 题解 - 【CTS2019】重复
 
 但 $t$ 可不可能在非 $\operatorname{maj}t$ 的位置产生贡献呢？
 
-> 不能。如果真有这么一个位置 $u$，那么 $ut^{\infty}$ 一定会把一切有关 $u$ 的信息洗掉。
+> 不能。仍然是回忆 KMP 的意义：如果真有这么一个位置 $u$，那么它后面接 $t^{\infty}$ 一定会把一切有关 $u$ 的信息洗掉。
 
-于是在自动机上 DP 即可通过。（注意每个点不回到根的出边仅有一条。）
+于是在自动机上 DP 即可通过。（注意每个点不回到根的出边全部重合，总是指向唯一的一个点。）
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int p = 998244353;
+
+int n, m; char s[2005];
+int nxt[2005], qaq[2005];
+
+int f[2005][2005];
+
+int main() {
+	scanf("%d", &m); scanf("%s", s + 1); n = strlen(s + 1);
+
+	qaq[0] = 1; qaq[1] = 1;
+	if (s[1] <= s[2]) qaq[1] = 2;
+	for (int i = 2, j = 0; i <= n; i++) {
+		while (j && s[j + 1] != s[i]) j = nxt[j];
+		if (s[j + 1] == s[i]) j++;
+		nxt[i] = j, qaq[i] = qaq[j];
+		if (s[qaq[i]] <= s[i + 1]) qaq[i] = i + 1;
+		if (i == 1) printf("%d %d\n", nxt[i], qaq[i]);
+	}
+
+	for (int i = 1; i <= n; i++) s[i] = 'z' - s[i];
+
+	f[0][0] = 1;
+	for (int i = 1; i <= m; i++)
+	for (int j = 0; j <= n; j++)
+		(f[i][qaq[j]] += f[i - 1][j]) %= p,
+		f[i][0] = (f[i][0] + 1LL * f[i - 1][j] * s[qaq[j]]) % p;
+	
+	int ans = 0;
+	for (int i = 0; i <= n; i++) {
+		int u = i;
+		for (int j = m; j; j--) {
+			if (!u) {
+				(ans += f[j][i]) %= p;
+				break;
+			}
+			u = qaq[u];
+			ans = (ans + 1LL * f[j - 1][i] * s[u]) % p;
+			if (j == 1 && u == i) ans++;
+		}
+	}
+
+	int aaaans = 1;
+	for (int i = 1; i <= m; i++) aaaans = 26LL * aaaans % p;
+	printf("%d\n", (aaaans - ans + p) % p);
+}
+```
 
