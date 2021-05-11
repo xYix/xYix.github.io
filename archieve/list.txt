@@ -871,3 +871,9 @@ solution
 2
 keter
 string
+cf-1091-g
+CF1091G 题解 - New Year and the Factorisation Collaboration
+solution
+2
+euclid
+number-theory

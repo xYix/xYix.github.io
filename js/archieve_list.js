@@ -1053,8 +1053,16 @@
 		'post_name' : 'luogu-5404',
 		'post_chinese_name' : 'luoguP5404 题解 - 【CTS2019】重复',
 		'type_name' : 'solution',
-		'last_modi' : '2021-05-10',
+		'last_modi' : '2021-05-11',
 		'tag' : ['keter','string',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '133',
+		'post_name' : 'cf-1091-g',
+		'post_chinese_name' : 'CF1091G 题解 - New Year and the Factorisation Collaboration',
+		'type_name' : 'solution',
+		'last_modi' : '2021-05-11',
+		'tag' : ['euclid','number-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
