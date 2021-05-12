@@ -135,10 +135,25 @@ $$
 
 ----
 
+定义
+$$
+\color{#ea6965}z_{\lambda}=\prod_i\lambda_i\cdot\prod_j\left(\sum_{i}[\lambda_i=j]\right)!
+$$
+这个东西在巨大多群论题里出现过，各位应该已经很熟悉了。
+
 容易验证：
 $$
-\color{#ea6965}\prod_{i,j}(1-x_iy_j)^{-1}=\exp\sum_{n=1}^{\infty}\dfrac 1np_n(x)p_n(y)\\\color{#ea6965}
-\prod_{i,j}(1+x_iy_j)=\exp\sum_{n=1}^{\infty}\dfrac {(-1)^{n-1}}np_n(x)p_n(y)
+\color{#ea6965}
+\begin{aligned}
+	\prod_{i,j}(1-x_iy_j)^{-1}&=\exp\sum_{n=1}^{\infty}\dfrac 1np_n(x)p_n(y)\\
+	&=\sum_{\lambda}p_{\lambda}(x)p_{\lambda}(y)/z_{\lambda}
+\end{aligned}\\
+
+\color{#ea6965}
+\begin{aligned}
+\prod_{i,j}(1+x_iy_j)&=\exp\sum_{n=1}^{\infty}\dfrac {(-1)^{n-1}}np_n(x)p_n(y)\\
+&=\sum_{\lambda}p_{\lambda}(x)p_{\lambda}(y)/z_{\lambda}\cdot(-1)^{|\lambda|-\ell(\lambda)}
+\end{aligned}
 $$
 
 ----
@@ -157,11 +172,6 @@ $$
 
 现在我们考虑 $h,e$ 如何用 $p$ 表示。
 
-首先定义
-$$
-\color{#ea6965}z_{\lambda}=\prod_i\lambda_i\cdot\prod_j\left(\sum_{i}[\lambda_i=j]\right)!
-$$
-这个东西在巨大多群论题里出现过，各位应该已经很熟悉了。
 $$
 {\color{#ea6965}e_n}=[y^n]\prod(1+x_iy)=[y^n]\exp\sum_{i=1}^{\infty}\dfrac{(-1)^{i-1}}{i}p_i(x)y^i\\
 \color{#ea6965}=\sum_{\lambda\vdash n}(-1)^{n-\ell(\lambda)}p_{\lambda}/z_{\lambda}
@@ -171,9 +181,58 @@ $$
 \color{#ea6965}h_n=\sum_{\lambda\vdash n}p_{\lambda}/z_{\lambda}
 $$
 
-## Part 2.5 Schur Function
+# Part 3 - Symmetric Functions 上的点积
 
-**Schur Function** 的定义相对复杂。
+定义 Symmetric Functions 上的点积是一个双线性函数，其部分点值如下：
+$$
+\color{#ea6965}\left<m_{\lambda},h_{\mu}\right>=[\lambda=\mu]
+$$
+
+> **引理 1.**
+>
+> 以上点积具有<span style="color: #ea6965">对称性</span>，且<span style="color: #ea6965">对于任意 $f$，$\left<f,f\right>\ge 0$ 且取等号仅当 $f=0$。</span>
+
+> **引理 1 - 证明.**
+>
+> 对称性：注意到
+> $$
+> \left<h_{\lambda},h_\mu\right>=N_{\lambda\mu}=\left<h_{\mu},h_{\lambda}\right>
+> $$
+> 立即得证。
+>
+> 对于后一个结论，用 $h$ 表示 $f$ 立得。
+
+> **引理 2.**
+>
+> 两个基 $\{u\},\{v\}$ 满足
+> $$
+> \color{#ea6965}\left<u_\lambda,v_{\mu}\right>=[\lambda=\mu]
+> $$
+> （这时称 $\{u\},\{v\}$ 是**对偶基**）<span style="color: #ea6965">当且仅当</span>
+> $$
+> \color{#ea6965}\sum_{\lambda}u_{\lambda}(x)v_{\lambda}(y)=\prod_{i,j}(1-x_iy_j)^{-1}
+> $$
+
+> **引理 2 - 证明.**
+>
+> 略。线性表示什么的瞎搓一顿就是了。
+
+> **引理 3.**
+> $$
+> \color{#ea6965}\left<f,g\right>=\left<\omega(f),\omega(g)\right>
+> $$
+
+> **引理 3 - 证明.**
+> $$
+> \left<w(p_{\lambda}),w(p_{\mu})\right>=(-1)^{|\lambda|-\ell(\lambda)}\cdot(-1)^{|\mu|-\ell(\mu)}\cdot\left<p_{\lambda},p_{\mu}\right>
+> $$
+> 我们下面证明，$\left<p_{\lambda},p_{\mu}\right>\neq 0$ 仅当 $\lambda=\mu$。
+>
+> 事实上，根据 **引理 2**，$\left<p_{\lambda},p_{\mu}\right>=z_{\lambda}[\lambda=\mu]$。这就得证了。
+
+# Part 4 - Schur Function
+
+**Schur Function** 也是 Symmetric Function，但它的定义和性质较为复杂。
 
 我们先定义**半标准杨表**（**S**emi-**S**tandard **Y**oung **T**ableau）：
 
@@ -237,5 +296,5 @@ $$
 >
 > 略。
 
-# Part 3 - Symmetric Functions 上的点积
+----
 
