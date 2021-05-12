@@ -766,7 +766,7 @@
 		'post_chinese_name' : 'NayutanOI2021A 题解 - Andromeda Andromeda',
 		'type_name' : 'solution',
 		'last_modi' : '2021-05-08',
-		'tag' : ['apollyon','bijective-proof','combinatorics','construction','x-yi-x',],
+		'tag' : ['apollyon','bijective-proof','combinatorics','construction','x-yi-x','young-tableau',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '97',
@@ -1063,6 +1063,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-05-11',
 		'tag' : ['euclid','number-theory',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '134',
+		'post_name' : 'ec-chapter-7',
+		'post_chinese_name' : 'EC Chapter 7 阅读笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-05-12',
+		'tag' : ['bijective-proof','combinatorics','generating-function','young-tableau',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

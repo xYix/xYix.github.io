@@ -633,12 +633,13 @@ construction
 nytoi-2021-a
 NayutanOI2021A 题解 - Andromeda Andromeda
 solution
-5
+6
 x-yi-x
 apollyon
 combinatorics
 bijective-proof
 construction
+young-tableau
 loj-2834
 loj#2834 题解 - 【JOISC 2018】修行
 solution
@@ -877,3 +878,11 @@ solution
 2
 euclid
 number-theory
+ec-chapter-7
+EC Chapter 7 阅读笔记
+algorithm
+4
+combinatorics
+young-tableau
+generating-function
+bijective-proof
