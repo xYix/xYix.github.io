@@ -61,7 +61,7 @@ $$
 
 > **定理 1. (The Foundamental Theorem of Symmetric Functions)**
 >
-> <span style="color: #ea6965">$M_{\lambda\lambda^T}=1$。且 $M_{\lambda\mu}\neq 0$ 当且仅当 $\mu\le\lambda^T$。</span>
+> <span style="color: #ea6965">$M_{\lambda\lambda^T}=1$。且 $M_{\lambda\mu}\neq 0$ 仅当 $\mu\le\lambda^T$。</span>
 >
 > 这显然直接引出 <span style="color: #ea6965">$e_{\lambda}$ 是一个基。</span>（实际上说明了 $M$ 是一个"上三角矩阵"。打引号是因为这里是偏序而非全序关系。）
 
@@ -91,7 +91,7 @@ $$
 >
 > （显然，任何线性变换 $w$ 被其在 $e$ 上的点值唯一确定。）
 >
-> 线性变换 $\omega(e_{\lambda})=h_{\lambda}$ 是一个对合。
+> <span style="color: #ea6965">线性变换 $\omega(e_{\lambda})=h_{\lambda}$ 是一个对合。</span>（请记住 $\omega$，它将会在今后扮演重要角色。）
 >
 > 这显然直接引出 <span style="color: #ea6965">$h_{\lambda}$ 是一个基。</span>（$\omega$ 有逆且就是自身。）
 
@@ -131,7 +131,7 @@ $$
 
 类似地记 <span style="color: #ea6965">$p_{\lambda}=\sum_{\mu}R_{\lambda\mu}m_{\mu}$。</span>$R$ 的组合意义与之前类似，但是同色球必须放在同一个盒里。
 
-显然如果 $\lambda>\mu$，则 $R_{\lambda\mu}=0$。又易见 $R_{\lambda\lambda}\neq 0$，所以 $p$ 也是基。
+显然如果 $\lambda>\mu$，则 $R_{\lambda\mu}=0$，又易见 $R_{\lambda\lambda}\neq 0$，所以 $p$ 也是基。
 
 ----
 
@@ -171,5 +171,71 @@ $$
 \color{#ea6965}h_n=\sum_{\lambda\vdash n}p_{\lambda}/z_{\lambda}
 $$
 
-# Part 3 - 一些 Specializations
+## Part 2.5 Schur Function
+
+**Schur Function** 的定义相对复杂。
+
+我们先定义**半标准杨表**（**S**emi-**S**tandard **Y**oung **T**ableau）：
+
+- 一个形状为 $\lambda$ 的 SSYT 是一个在形状为 $\lambda$ 的杨图上的填数方案，且元素在行上不降在列上严格增。
+- 一个 SSYT $T$ 的形状记为 $\text{sh}(T)$。
+- 一个 SSYT 的 **type** 是序列 $(\alpha_1,\alpha_2,...)$，其中 $\alpha_i$ 是该 SSYT 使用元素 $i$ 的次数。
+- 记
+
+$$
+x^T=\prod x_i^{\alpha_i(T)}
+$$
+
+当然，上面的杨图也可以拓展为斜杨图。
+
+而 Schur Function 就是依托斜杨图的 SSYT 定义的：
+$$
+\color{#ea6965}s_{\lambda/\mu}=\sum_{\text{sh}(T)=\lambda/\mu}x^T
+$$
+
+----
+
+这个定义有很多令人迷惑的点。首先，它真的是一个 Symmetric Function？
+
+> **定理 3.**
+>
+> <span style="color: #ea6965">$s_{\lambda/\mu}$ 确实是一个 Symmetric Function。</span>
+
+> **定理 3 - 证明.**
+>
+> 我们只需要证明我们可以交换 $x_i$ 和 $x_{i+1}$。即，我们考虑构造一个从 type 为
+> $$
+> \alpha=(\alpha_1,...,\alpha_i,\alpha_{i+1},...)
+> $$
+> 的形状为 $\lambda/\mu$ 的 SSYT 集合到
+> $$
+> \alpha'=(\alpha_1,...,\alpha_{i+1},\alpha_{i},...)
+> $$
+> 的形状为 $\lambda/\mu$ 的 SSYT 集合的双射。
+>
+> 那些 $i$ 下面接着 $i+1$ 的格子，我们称其为非自由格子。可见非自由格子成对出现，那就不管了。
+>
+> 然后是那些自由的 $i$ 和 $i+1$。如果专注于某一行，那它们一定靠在一起。考虑这样一个例子：其中 $i$ 有 $a$ 个，$i+1$ 有 $b$ 个，$a,b$ 皆可为 $0$。那我们直接把它们转化成 $b$ 个 $i$ 和 $a$ 个 $i+1$ 就完成交换了。
+
+----
+
+我们不打算过多谈论系数 <span style="color: #ea6965">$s_{\lambda/\mu}=\sum_{\upsilon\vdash n}K_{\lambda/\mu,\upsilon}m_{\upsilon}$</span>（它被称为 Kostka Number）。因为众所周知斜杨表计数不好做，而这东西比斜杨表计数强到不知道哪里去了……
+
+当然，如果 $\upsilon=1^n$，那直接应用斜杨表计数就可以了。
+
+----
+
+下面我们展示，$s_{\lambda}$ 是一个基。
+
+> **定理 4.**
+>
+> <span style="color: #ea6965">$K_{\lambda\lambda}=1$。且 $K_{\lambda\mu}\neq 0$ 仅当 $\mu\le\lambda$。</span>
+>
+> 这直接引出 <span style="color: #ea6965">$s_{\lambda}$ 是一个基。</span>
+
+> **定理 4 - 证明.**
+>
+> 略。
+
+# Part 3 - Symmetric Functions 上的点积
 
