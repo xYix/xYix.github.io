@@ -188,9 +188,11 @@ $$
 \color{#ea6965}\left<m_{\lambda},h_{\mu}\right>=[\lambda=\mu]
 $$
 
+显然它已经唯一确定了。
+
 > **引理 1.**
 >
-> 以上点积具有<span style="color: #ea6965">对称性</span>，且<span style="color: #ea6965">对于任意 $f$，$\left<f,f\right>\ge 0$ 且取等号仅当 $f=0$。</span>
+> 以上定义点积具有<span style="color: #ea6965">对称性</span>，且<span style="color: #ea6965">对于任意 $f$，$\left<f,f\right>\ge 0$ 且取等号仅当 $f=0$。</span>
 
 > **引理 1 - 证明.**
 >
@@ -294,7 +296,23 @@ $$
 
 > **定理 4 - 证明.**
 >
-> 略。
+> 显然，略。
+
+而且它还是一个**标准正交基**。
+
+> **定理 5.**
+> $$
+> \sum_{\lambda}s_{\lambda}(x)s_{\lambda}(y)=\prod_{i,j}(1-x_iy_j)^{-1}
+> $$
+> 这直接引出 $\left<s_{\lambda},s_{\mu}\right>=[\lambda=\mu]$。
+
+> **定理 5 - 证明.**
+>
+> 右式的 $m_{\lambda}m_{\mu}$ 的系数为 $N_{\lambda\mu}$，有已知的组合意义：把 $\text{type}=\lambda$ 的数个球放入盒使得其 $\text{type}=\mu$ 的方案数。
+>
+> 考虑左式，$m_{\lambda}m_{\mu}$ 的系数的含义是其中一个 $\text{type}=\lambda$ 另一个 $\text{type}=\mu$ 且形状相同的 SSYT 对数。
+>
+> 那么右式到左式的双射也很明显了：把颜色与盒的对应写成矩阵，对其运行 RSK 算法即可。
 
 ----
 
