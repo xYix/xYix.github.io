@@ -43,7 +43,7 @@ $$
 
 **Elementary Symmetric Functions** $e_{\lambda}$，其定义如下：<span style="color: #ea6965">$e_n=m_{1^n},e_{\lambda}=\prod e_{\lambda_i}$。</span>
 
-$e_{\lambda},\lambda\vdash n$ 可用 $m_{\mu},\mu\vdash n$ 线性表示。其系数在今后的研究中有意义，以下记 <span style="color: #ea6965">$e_{\lambda}=\sum_{\mu}M_{\lambda\mu}m_{\mu}$。</span>
+$e_{\lambda},\lambda\vdash n$ 可用 $m_{\mu},\mu\vdash n$ 线性表示。其系数在今后的研究中有意义，以下记 $\color{#ea6965}e_{\lambda}=\sum_{\mu}M_{\lambda\mu}m_{\mu}$。
 
 易见：$M_{\lambda\mu}$ 的组合意义是，现有 $\lambda_i$ 个颜色为 $i$ 的球，现在要将球放入足够多个盒中，使得颜色相同的球不放在相同的盒，而盒中球数恰好符合 $\mu$ 的放置方案数。盒和（颜色相同的）球皆不可区分。
 
@@ -71,7 +71,7 @@ $$
 
 ## Part 2.3 Complete Homogeneous Symmetric Funcion
 
-**Complete Homogeneous Symmetric Functions** $h_{\lambda}$，其定义如下：<span style="color: #ea6965">$h_n=\sum_{\lambda\vdash n}m_{\lambda},h_{\lambda}=\prod h_{\lambda_i}$。</span>
+**Complete Homogeneous Symmetric Functions** $h_{\lambda}$，其定义如下：$\color{#ea6965}h_n=\sum_{\lambda\vdash n}m_{\lambda},h_{\lambda}=\prod h_{\lambda_i}$。
 
 类似地，定义 $h_{\lambda}=\sum_{\mu}N_{\lambda\mu}m_{\mu}$。$N_{\lambda\mu}$ 的组合意义也类似，但是同色球可以放在一个盒子中。于是易得 $N_{\lambda\mu}=N_{\mu\lambda}$。
 
@@ -127,9 +127,9 @@ $$
 
 还有完没完了……
 
-**Power Sum Symmetric Functions** $p_{\lambda}$ 的定义如下：<span style="color: #ea6965">$p_n=\sum_i x_i^n,p_{\lambda}=\prod p_{\lambda_i}$。</span>
+**Power Sum Symmetric Functions** $p_{\lambda}$ 的定义如下：$\color{#ea6965}p_n=\sum_i x_i^n,p_{\lambda}=\prod p_{\lambda_i}$。
 
-类似地记 <span style="color: #ea6965">$p_{\lambda}=\sum_{\mu}R_{\lambda\mu}m_{\mu}$。</span>$R$ 的组合意义与之前类似，但是同色球必须放在同一个盒里。
+类似地记 $\color{#ea6965}p_{\lambda}=\sum_{\mu}R_{\lambda\mu}m_{\mu}$。$R$ 的组合意义与之前类似，但是同色球必须放在同一个盒里。
 
 显然如果 $\lambda>\mu$，则 $R_{\lambda\mu}=0$，又易见 $R_{\lambda\lambda}\neq 0$，所以 $p$ 也是基。
 
@@ -234,6 +234,8 @@ $$
 
 # Part 4 - Schur Function
 
+## Part 4.1 - 基本结论
+
 **Schur Function** 也是 Symmetric Function，但它的定义和性质较为复杂。
 
 我们先定义**半标准杨表**（**S**emi-**S**tandard **Y**oung **T**ableau）：
@@ -280,7 +282,7 @@ $$
 
 ----
 
-我们不打算过多谈论系数 <span style="color: #ea6965">$s_{\lambda/\mu}=\sum_{\upsilon\vdash n}K_{\lambda/\mu,\upsilon}m_{\upsilon}$</span>（它被称为 Kostka Number）。因为众所周知斜杨表计数不好做，而这东西比斜杨表计数强到不知道哪里去了……
+我们不打算过多谈论系数 $\color{#ea6965}s_{\lambda/\mu}=\sum_{\upsilon\vdash n}K_{\lambda/\mu,\upsilon}m_{\upsilon}$（它被称为 Kostka Number）。因为众所周知斜杨表计数不好做，而这东西比斜杨表计数强到不知道哪里去了……
 
 当然，如果 $\upsilon=1^n$，那直接应用斜杨表计数就可以了。
 
@@ -300,11 +302,11 @@ $$
 
 而且它还是一个**标准正交基**。
 
-> **定理 5.**
+> **定理 5. (the Cauchy Identity)**
 > $$
-> \sum_{\lambda}s_{\lambda}(x)s_{\lambda}(y)=\prod_{i,j}(1-x_iy_j)^{-1}
+> \color{#ea6965}\sum_{\lambda}s_{\lambda}(x)s_{\lambda}(y)=\prod_{i,j}(1-x_iy_j)^{-1}
 > $$
-> 这直接引出 $\left<s_{\lambda},s_{\mu}\right>=[\lambda=\mu]$。
+> 这直接引出 $\color{#ea6965}\left<s_{\lambda},s_{\mu}\right>=[\lambda=\mu]$。
 
 > **定理 5 - 证明.**
 >
@@ -314,5 +316,22 @@ $$
 >
 > 那么右式到左式的双射也很明显了：把颜色与盒的对应写成矩阵，对其运行 RSK 算法即可。
 
-----
+由上可直接推出
+$$
+\color{#ea6965}h_{\lambda}=\sum_{\mu}K_{\mu\lambda}s_{\mu}
+$$
+
+## Part 4.2 - The Symmetry of the RSK Algorithm
+
+上面的 **定理 5** 把 $s_{\lambda}$ 和 RSK 算法联系了起来，所以我们又不得不转而研究 RSK 算法以获得 $s_{\lambda}$ 的更多性质了。
+
+> **定理 6. (The Symmetry of the RSK Algorithm)**
+>
+> <span style="color: #ea6965">如果 $A\xrightarrow{RSK}(P,Q)$，那么 $A^T\xrightarrow{RSK}(Q,P)$。</span>
+
+首先考虑标准杨表的情形，即 $A$ 中元素只有 $0/1$。我们在 $A$ 上定义一个 **Growth Diagram**。首先我们直接把 $A$ 画出来，然后所谓 Growth Diagram 就是在每个格点上写一个划分，不过当然要遵从一定的规则，等下再说。
+
+（下图中最下角是第一行第一列。）
+
+<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/ec-chapter-701.png" alt=""></div>
 
