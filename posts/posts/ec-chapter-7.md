@@ -300,7 +300,11 @@ $$
 >
 > 显然，略。
 
-而且它还是一个**标准正交基**。
+## Part 4.2 - 进阶结论
+
+下面这些结论需要借助一些计数工具才能得出，比如 RSK 算法和 LGV 引理等等。
+
+$s_{\lambda}$ 不仅是一个基，而且它还是一个**标准正交基**。
 
 > **定理 5. (the Cauchy Identity)**
 > $$
@@ -337,11 +341,22 @@ $$
 
 > 对偶 RSK 算法是一个 $0/1$ 矩阵到相同形状的杨表对 $(P,Q)$ 的双射，其中 $P^T,Q$ 是半标准杨表。
 
-于是
+于是有 **the Dual Cauchy Identity**：
 $$
 \color{#ea6965}\sum_{\lambda}s_{\lambda}(x)s_{\lambda^T}(y)=\prod_{i,j}(1+x_iy_j)
 $$
 那么易得
 $$
 \color{#ea6965}\omega(s_{\lambda})=s_{\lambda^T}
+$$
+
+----
+
+根据 LGV 引理（具体证明[在此](https://xyix.gitee.io/posts/?&postname=nytoi-2021-t)），可得
+$$
+\color{#ea6965}s_{\lambda/\mu}=\text{det}(h_{\lambda_i-i-\mu_j+j})
+$$
+应用 $\omega(s_{\lambda})=s_{\lambda^T}$ 还可得
+$$
+\color{#ea6965}s_{\lambda/\mu}=\text{det}(e_{\lambda^T_i-i-\mu^T_j+j})
 $$

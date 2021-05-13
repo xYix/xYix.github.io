@@ -90,7 +90,7 @@ button{
     border: 1px outset var(--dark-main-color);
     border-radius: 5px;
     font-size: medium;
-    color: #1A5A40;
+    color: var(--dark-main-color);
 }
 .button-block{
     padding: 10px 1px 24px 1px;
