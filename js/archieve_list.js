@@ -1069,8 +1069,16 @@
 		'post_name' : 'ec-chapter-7',
 		'post_chinese_name' : 'EC Chapter 7 阅读笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-05-12',
+		'last_modi' : '2021-05-13',
 		'tag' : ['bijective-proof','combinatorics','generating-function','young-tableau',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '135',
+		'post_name' : 'nytoi-2021-t',
+		'post_chinese_name' : 'NayutanOI2021T 题解 - 太阳系 disco',
+		'type_name' : 'solution',
+		'last_modi' : '2021-05-13',
+		'tag' : ['combinatorics','construction','keter','x-yi-x',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

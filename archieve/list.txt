@@ -886,3 +886,11 @@ combinatorics
 young-tableau
 generating-function
 bijective-proof
+nytoi-2021-t
+NayutanOI2021T 题解 - 太阳系 disco
+solution
+4
+x-yi-x
+keter
+combinatorics
+construction

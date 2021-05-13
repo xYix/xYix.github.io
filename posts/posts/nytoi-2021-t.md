@@ -2,6 +2,8 @@
 title: NayutanOI2021T 题解 - 太陽系デスコ【Solar System Disco】
 ---
 
+来源：Enumerative Combinatorics Theorem 7.16.1。
+
 > **题目大意.**
 >
 > 现在有一些方格，第 $i$ 行恰有 $\lambda_i$ 个（保证 $\lambda_i\ge \lambda_{i+1}$），你要往里面填写 $0\sim k-1$ 的整数，使得：
@@ -18,3 +20,9 @@ title: NayutanOI2021T 题解 - 太陽系デスコ【Solar System Disco】
 没有标权值的边权值为 $1$。
 
 不难验证原问题被转化为不相交路径计数，使用 LGV 引理即可。
+
+----
+
+这个东西还可以用类似的方法扩展到斜半标准杨表上。
+
+LGV 引理又乱杀了。至于能不能用类似方法数其他东西就不知道了……
