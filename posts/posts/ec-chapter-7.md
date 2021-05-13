@@ -321,17 +321,27 @@ $$
 \color{#ea6965}h_{\lambda}=\sum_{\mu}K_{\mu\lambda}s_{\mu}
 $$
 
-## Part 4.2 - The Symmetry of the RSK Algorithm
+类似地有
+$$
+\color{#ea6965}\sum_{\lambda}s_{\lambda}(x)=\prod_{i}(1-x_i)^{-1}\cdot\prod_{i<j}(1-x_ix_j)^{-1}
+$$
+右式数的就是对称矩阵的个数。
 
-上面的 **定理 5** 把 $s_{\lambda}$ 和 RSK 算法联系了起来，所以我们又不得不转而研究 RSK 算法以获得 $s_{\lambda}$ 的更多性质了。
+----
 
-> **定理 6. (The Symmetry of the RSK Algorithm)**
->
-> <span style="color: #ea6965">如果 $A\xrightarrow{RSK}(P,Q)$，那么 $A^T\xrightarrow{RSK}(Q,P)$。</span>
+我们已经发现 RSK 算法和 $\prod_{i,j}(1-x_iy_j)^{-1}$ 有关，而下面介绍的"对偶 RSK 算法"和 $\prod_{i,j}(1+x_iy_j)$ 有关。
 
-首先考虑标准杨表的情形，即 $A$ 中元素只有 $0/1$。我们在 $A$ 上定义一个 **Growth Diagram**。首先我们直接把 $A$ 画出来，然后所谓 Growth Diagram 就是在每个格点上写一个划分，不过当然要遵从一定的规则，等下再说。
+对偶 RSK 算法和 RSK 算法几乎相同，但是它在插入 $x$ 时替换的不是该行第一个 $>x$ 的元素而是第一个 $\ge x$ 的元素。
 
-（下图中最下角是第一行第一列。）
+可以用和与 RSK 算法类似的方法验证：
 
-<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/ec-chapter-701.png" alt=""></div>
+> 对偶 RSK 算法是一个 $0/1$ 矩阵到相同形状的杨表对 $(P,Q)$ 的双射，其中 $P^T,Q$ 是半标准杨表。
 
+于是
+$$
+\color{#ea6965}\sum_{\lambda}s_{\lambda}(x)s_{\lambda^T}(y)=\prod_{i,j}(1+x_iy_j)
+$$
+那么易得
+$$
+\omega(s_{\lambda})=s_{\lambda^T}
+$$
