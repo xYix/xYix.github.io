@@ -343,5 +343,5 @@ $$
 $$
 那么易得
 $$
-\omega(s_{\lambda})=s_{\lambda^T}
+\color{#ea6965}\omega(s_{\lambda})=s_{\lambda^T}
 $$
