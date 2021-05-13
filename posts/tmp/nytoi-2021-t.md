@@ -15,4 +15,6 @@ title: NayutanOI2021T 题解 - 太陽系デスコ【Solar System Disco】
 
 <center><div style="width:100%;margin:0"><img src="https://xyix.gitee.io/images/nytoi-2021-t.png" style="width: 100%" alt=""></div></center>
 
-可见原问题被转化为不相交路径计数，使用 LGV 引理即可。
+没有标权值的边权值为 $1$。
+
+不难验证原问题被转化为不相交路径计数，使用 LGV 引理即可。
