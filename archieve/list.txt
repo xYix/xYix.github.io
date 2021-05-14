@@ -881,11 +881,12 @@ number-theory
 ec-chapter-7
 EC Chapter 7 阅读笔记
 algorithm
-4
+5
 combinatorics
 young-tableau
 generating-function
 bijective-proof
+linear-algebra
 nytoi-2021-t
 NayutanOI2021T 题解 - 太阳系 disco
 solution
@@ -894,3 +895,12 @@ x-yi-x
 keter
 combinatorics
 construction
+schur-func
+Symmetric Function 的部分应用（EC Chapter 7 中的有趣 Excercise）
+algorithm
+5
+combinatorics
+young-tableau
+generating-function
+bijective-proof
+linear-algebra

@@ -181,7 +181,15 @@ $$
 \color{#ea6965}h_n=\sum_{\lambda\vdash n}p_{\lambda}/z_{\lambda}
 $$
 
-# Part 3 - Symmetric Functions 上的点积
+## Part 2.5 - 杂项
+
+考虑这样一个变换 $\text{ex}$，它被称为 **the exponential specialization**。
+$$
+\color{#ea6965}\text{ex}(f)=\sum_{n\ge 0}[x_1x_2...x_n]f\dfrac{t^n}{n!}
+$$
+以后可能会有用。读者不难自行求出它在 $m,e,h,p$ 上的点值。
+
+-----
 
 定义 Symmetric Functions 上的点积是一个双线性函数，其部分点值如下：
 $$
@@ -232,9 +240,9 @@ $$
 >
 > 事实上，根据 **引理 2**，$\left<p_{\lambda},p_{\mu}\right>=z_{\lambda}[\lambda=\mu]$。这就得证了。
 
-# Part 4 - Schur Function
+# Part 3 - Schur Function
 
-## Part 4.1 - 基本结论
+## Part 3.1 - 想不到标题
 
 **Schur Function** 也是 Symmetric Function，但它的定义和性质较为复杂。
 
@@ -300,7 +308,7 @@ $$
 >
 > 显然，略。
 
-## Part 4.2 - 进阶结论
+## Part 3.2 - 想不到标题
 
 下面这些结论需要借助一些计数工具才能得出，比如 RSK 算法和 LGV 引理等等。
 
@@ -325,7 +333,7 @@ $$
 \color{#ea6965}h_{\lambda}=\sum_{\mu}K_{\mu\lambda}s_{\mu}
 $$
 
-类似地有
+类似于 the Cauchy Identity，还有
 $$
 \color{#ea6965}\sum_{\lambda}s_{\lambda}(x)=\prod_{i}(1-x_i)^{-1}\cdot\prod_{i<j}(1-x_ix_j)^{-1}
 $$
@@ -360,3 +368,13 @@ $$
 $$
 \color{#ea6965}s_{\lambda/\mu}=\text{det}(e_{\lambda^T_i-i-\mu^T_j+j})
 $$
+考虑对上上式的两边作用 $\text{ex}$。易知 $\text{ex}(h_{\lambda})=\dfrac{t^{|\lambda|}}{\prod\lambda_i!}$，再代入 $t=1$，得：
+$$
+\color{#ea6965}f^{\lambda/\mu}=(|\lambda/\mu|!)\cdot\text{det}\left(\dfrac{1}{\lambda_i-i-\mu_j+j}\right)
+$$
+其中 $f^{\lambda/\mu}$ 是斜标准杨表 $\lambda/\mu$ 的数量。可喜可贺！
+
+## Part 3.3 - 想不到标题
+
+线代大法！
+
