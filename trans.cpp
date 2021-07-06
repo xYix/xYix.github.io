@@ -112,7 +112,7 @@ int main(){
 			cin>>tag_cnt;getline(cin,trash);
 			for(int i=1;i<=tag_cnt;i++) getline(cin,post_tag[i]);
 			sort(post_tag + 1, post_tag + tag_cnt + 1);
-			PRINT_INDEX_INFO("posts/source_posts/" + post_name + ".html", "posts/posts/" + post_name + ".md");
+			PRINT_INDEX_INFO("posts/posts/" + post_name + ".html", "posts/source_posts/" + post_name + ".md");
 		}
 	printf("</urlset>");
 } 
