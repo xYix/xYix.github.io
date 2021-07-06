@@ -19,4 +19,4 @@
 - 2021/5/3：更新一篇博文[男性增加支配树题分数的技巧](https://xyix.github.io/posts/?&sortby=last_modi&postname=domination-tree)，顺便更新了证明折叠模块，主要影响到了 [bpp1](https://xyix.github.io/posts/?&sortby=last_modi&postname=bpp) 和 [bpp2](https://xyix.github.io/posts/?&sortby=last_modi&postname=bpp2)。
 - 2021/5/5：更新一篇博文[不知道题目名](https://xyix.github.io/posts/?&sortby=last_modi&postname=thuwc-2020-2-2)。
 - 2021/5/6：给 [k 短路及其延伸](https://xyix.github.io/posts/?&sortby=last_modi&postname=k-th-shortest-path) 补了一道例题。发现博文 [Binary Code](https://xyix.github.io/posts/?&sortby=last_modi&postname=luogu-6965) 有锅就修了一下。给三篇博文 [Tours](https://xyix.github.io/posts/?&sortby=last_modi&postname=luogu-6914) 和 [遗迹](https://xyix.github.io/posts/?&sortby=last_modi&postname=uoj-506) 和 [Wide Swap](https://xyix.github.io/posts/?&page=3&postname=agc-001-f) 补了代码。
-- 2021/7/6：大浩劫，gitee 把本博客封了，迁移至 github。由于一些失误，所有博文的"修改时间"均被重置到了本日。
+- 2021/7/6：大浩劫，gitee 把本博客封了，迁移至 github。由于一些失误，inf 篇博文的"修改时间"均被重置到了本日。
