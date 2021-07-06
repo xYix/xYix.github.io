@@ -98,7 +98,7 @@ $$
 - 若 $s\left(i+1\right)=s\left(\pi(i)+1\right)$，则直接令 $\pi(i+1)=\pi(i)+1$，而且根据**引理 1**这是一个上界，不需要进行其他操作。
 - 否则，$\Pi(j+1,i+1)$ 的必要条件是 $\Pi(j,i)$，我们从大到小遍历依次检查即可。
 
-这个算法被称为 **KMP 算法**。根据[均摊分析](https://xyix.gitee.io/posts/?page=2&postname=uoj-228)，整个算法的复杂度是 $O(|s|)$ 的。
+这个算法被称为 **KMP 算法**。根据[均摊分析](https://xyix.github.io/posts/?page=2&postname=uoj-228)，整个算法的复杂度是 $O(|s|)$ 的。
 
 ## KMP / 应用
 

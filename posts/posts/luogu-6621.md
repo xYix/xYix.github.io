@@ -14,7 +14,7 @@ title: luoguP6621 题解 - 【省选联考 2020 A 卷】魔法商店
 >
 > $n\le 1000$。
 
-众所周知线性基是[拟阵](https://xyix.gitee.io/posts/?&postname=matroid)。考虑**基交换引理**：
+众所周知线性基是[拟阵](https://xyix.github.io/posts/?&postname=matroid)。考虑**基交换引理**：
 
 > 现有两个基 $A,B$。对于任意 $x\in A/B$，必存在 $y\in B/A$ 使得 $A/\{x\}\cup\{y\}$ 是一个基。
 
@@ -22,7 +22,7 @@ title: luoguP6621 题解 - 【省选联考 2020 A 卷】魔法商店
 
 于是，爆枚举 $A$（respectively，$B$）中的元素和其外的元素，如果能互相替换就有偏序关系。
 
-最后应用上[保序回归](https://xyix.gitee.io/posts/?&postname=isotonic-regression)就做完了！！！
+最后应用上[保序回归](https://xyix.github.io/posts/?&postname=isotonic-regression)就做完了！！！
 
 ```cpp
 超级缝合怪，鸽了

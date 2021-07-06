@@ -73,7 +73,7 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 - 态射间的映射 $F: \text{Mor}(\mathcal C)\rightarrow \text{Mor}(\mathcal C')$；
 - $s_{\mathcal C}F=Fs_{\mathcal C'},t_{\mathcal C}F=Ft_{\mathcal C'}$。可以见下图。<span style='color: #36C48E'>【注意这不意味着 $F$ 是单射（多个 $\mathcal C'$ 中的箭头可以映射到一个箭头），也不意味着 $F$ 是满射（$\mathcal C$ 中的箭头可以不是 $\mathcal C'$ 中箭头的像）】</span>
 
-<div style="width:50%;margin:auto"><img src="https://xyix.gitee.io/images/cate1.png" alt=""></div>
+<div style="width:50%;margin:auto"><img src="https://xyix.github.io/images/cate1.png" alt=""></div>
 
 函子的合成是显然的：只需要把对对象的映射和对态射的映射分别合成。
 
@@ -96,7 +96,7 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 
 - 给定函子 $F,G:\mathcal C'\rightarrow\mathcal C$，它们之间的自然变换 $\theta$ 是一组**态射** $\theta_X:FX\rightarrow GX$，满足对于任意态射 $f\in\text{Hom}(X,Y)$，$Gf\circ \theta_X=\theta_Y\circ Ff$ 。
 
-<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/cate2.png" alt=""></div>
+<div style="width:40%;margin:auto"><img src="https://xyix.github.io/images/cate2.png" alt=""></div>
 
 函子 $F,G$ 之间若有自然变换 $F\xrightarrow{\sim }G$，则称有 $F$ 到 $G$ 的**自然同态**。自然有了**自然同构**等概念。
 
@@ -135,7 +135,7 @@ $\mathsf{Proof}$ 表示逻辑范畴，从 $X$ 到 $Y$ 的态射定义为一个�
 
 <span style='color: #36C48E'>【$\theta$ 的含义也就很清晰了：它把所有的 $f_i$“压缩”到了一起。】</span>
 
-<div style="width:37%;margin:auto"><img src="https://xyix.gitee.io/images/cate3.png" alt=""></div>
+<div style="width:37%;margin:auto"><img src="https://xyix.github.io/images/cate3.png" alt=""></div>
 
 容易证明，一组 $A$ 的直积（如果存在）是唯一的，精确到同构。
 

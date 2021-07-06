@@ -29,7 +29,7 @@ $$
 \boxed{\mathcal T^{\square}=\text{MSET}(\mathcal T)}
 $$
 
-> 如果你不懂 Symbolic Method 可以看[这个](https://xyix.gitee.io/posts/?page=1&postname=combinatorics)作一个简单的入门。
+> 如果你不懂 Symbolic Method 可以看[这个](https://xyix.github.io/posts/?page=1&postname=combinatorics)作一个简单的入门。
 
 # 2. 找出组合构造对应的代数运算
 
@@ -140,4 +140,4 @@ $$
 \boxed{[y^k]T(\mathcal T)=\int\text{exp}\sum_{j=0}^{\infty}f_j[y^{jk}]T(\mathcal T;x^j,y)}
 $$
 
-这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://xyix.gitee.io/posts/?page=0&postname=luogu-4500)。
+这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://xyix.github.io/posts/?page=0&postname=luogu-4500)。

@@ -110,7 +110,7 @@ title: 喝喝粥传（评注版）
 
 "不好吧？我叫周航锐，叫弟弟，不合适，再说，你是男生，我是女生，我还是叫你哥哥吧！"周航锐说道。
 
-> 注意到别人都称 hhz 为男性，hhz 却总是自称女性，所以一个合理的解释是 hhz 恐怕是木桶饭![](https://xyix.gitee.io/images/qq/jy.png)
+> 注意到别人都称 hhz 为男性，hhz 却总是自称女性，所以一个合理的解释是 hhz 恐怕是木桶饭![](https://xyix.github.io/images/qq/jy.png)
 
 "弟弟就叫弟弟吧，这有什么不好意思的。"刘涛一脸的笑容，"你今年多大了？"
 
@@ -142,7 +142,7 @@ title: 喝喝粥传（评注版）
 
 他也可以去买一些必须的设备什么的，这样一来，他在比赛中就会多了很多的防护措施和应对措施。
 
-> ![](https://xyix.gitee.io/images/qq/jk.png) 
+> ![](https://xyix.github.io/images/qq/jk.png) 
 
 时间很快过去，终于轮到他们进场了。
 

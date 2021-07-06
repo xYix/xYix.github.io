@@ -210,7 +210,7 @@ int main() {
 
 ## [点双连通生成子图计数](https://loj.ac/problem/6729)
 
-我们都知道点/边双是和连通有[某种容斥关系](https://xyix.gitee.io/posts/?postname=biconnected-graph-counting)的。在生成子图问题中我们仍然可以类推。具体来讲：
+我们都知道点/边双是和连通有[某种容斥关系](https://xyix.github.io/posts/?postname=biconnected-graph-counting)的。在生成子图问题中我们仍然可以类推。具体来讲：
 
 首先我们可以算出连通生成子图的集合幂级数 $F_0$。这个很显然，生成子图的集合幂级数 $\text{Ln}$ 一下即可。
 

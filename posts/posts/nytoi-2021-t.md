@@ -15,7 +15,7 @@ title: NayutanOI2021T 题解 - 太陽系デスコ【Solar System Disco】
 
 构造这样一张图：
 
-<center><div style="width:100%;margin:0"><img src="https://xyix.gitee.io/images/nytoi-2021-t.png" style="width: 100%" alt=""></div></center>
+<center><div style="width:100%;margin:0"><img src="https://xyix.github.io/images/nytoi-2021-t.png" style="width: 100%" alt=""></div></center>
 
 没有标权值的边权值为 $1$。
 

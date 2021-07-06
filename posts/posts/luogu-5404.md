@@ -18,7 +18,7 @@ title: luoguP5404 题解 - 【CTS2019】重复
 
 我们直接大力把 $t$ 的所有循环移位放在 $s$ 上跑匹配！现在我们让它们一起新增一位 $t_i$，那看起来大概就是这样：
 
-<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/luogu-5404.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/luogu-5404.png" alt=""></div>
 
 注意：如果 $t$ 到这时仍未被证明是非法的，那些尚未被证明 $>s$ 的 $t$，称为候选 $t$，一定都和 $s$ 完全一致。称其中（已匹配的长度）最长者为 $\operatorname{maj}t$，其他所有候选 $t$（已匹配的部分）都是它的 **border**。（联想到 KMP。注意 $\operatorname{maj}t$ 和 $s$ 完美匹配，所以我们实际上可以在 $s$ 上建 KMP。）
 

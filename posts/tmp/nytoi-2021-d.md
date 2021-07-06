@@ -14,11 +14,11 @@ title: NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Danc
 
 设题中所给的等价关系为 $\sim^{K}$。
 
-在开始之前，你需要先了解[杨表和 RSK 算法](https://xyix.gitee.io/posts/?&postname=young-tableau)。
+在开始之前，你需要先了解[杨表和 RSK 算法](https://xyix.github.io/posts/?&postname=young-tableau)。
 
 看过袁方舟的论文的同学应该记得这样一个引理：
 
-<center><div style="width:100%;margin:0"><img src="https://xyix.gitee.io/images/nytoi-2021-d.png" style="width: 100%" alt=""></div></center>
+<center><div style="width:100%;margin:0"><img src="https://xyix.github.io/images/nytoi-2021-d.png" style="width: 100%" alt=""></div></center>
 
 把上面的证明略作补充就可直接推出：如果两个排列 $w_1,w_2$ 等价，那么它们在运行 RSK 算法后的*插入表*（在一般的记法 $\text{RSK}:w\rightarrow (P,Q)$ 中，插入表是它的 $P$）<span style="color: #36c48e">**完全相同**</span>。
 
@@ -36,7 +36,7 @@ title: NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Danc
 >
 > 我们把一个杨表按这样的顺序读出来，这会形成一个排列，称为这个杨表的 <span style="color: #36c48e">**Reading Word**</span>。
 >
-> <center><div style="width:50%;margin:0"><img src="https://xyix.gitee.io/images/drd-1.png" style="width: 70%" alt=""></div></center>
+> <center><div style="width:50%;margin:0"><img src="https://xyix.github.io/images/drd-1.png" style="width: 70%" alt=""></div></center>
 
 极显然地，
 
@@ -60,11 +60,11 @@ title: NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Danc
 >
 > 首先看第一行，不妨把 $\text{read}(P)+k$ 看成这样一个杨表的 $\text{read}$。我们可以通过若干次操作把 $k$ 换到它应在的位置。当然，如果一下都换不了，那就说明 $\text{read}(P)+k=\text{read}(P\leftarrow k)$。
 >
-> <center><div style="width:70%;margin:0"><img src="https://xyix.gitee.io/images/drd-2.png" style="width: 70%" alt=""></div></center>
+> <center><div style="width:70%;margin:0"><img src="https://xyix.github.io/images/drd-2.png" style="width: 70%" alt=""></div></center>
 >
 > 首次换不了的情形如下。这时应该改变交换策略，把第一个 $>k$ 的元素踢到下一行。这时应该改变交换策略，把第一个 $>k$ 的元素踢到下一行。
 >
-> <center><div style="width:70%;margin:0"><img src="https://xyix.gitee.io/images/drd-3.png" style="width: 70%" alt=""></div></center>
+> <center><div style="width:70%;margin:0"><img src="https://xyix.github.io/images/drd-3.png" style="width: 70%" alt=""></div></center>
 >
 > 一旦把它踢到下一行，就变成了一个新的插入过程，重复以上论述即可。
 

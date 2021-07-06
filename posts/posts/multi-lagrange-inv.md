@@ -120,7 +120,7 @@ $$
 
 ### 2.0.2 具体解释
 
-我们已经看到多元拉反的左式有直接的组合意义，下面我们来解释右式。$h(\mathbf x)\cdot\prod \mathbf g^{\mathbf n}(\mathbf x)$ 可看成是让每个节点先任意选择自己的儿子（如果你无法理解这点，可以看[这里](https://xyix.gitee.io/posts/?page=2&postname=lagrange-inv-bij)），诚然这样会有环的情况，接下来我们来说明后面的行列式其实是一个和矩阵树定理差不多的容斥。
+我们已经看到多元拉反的左式有直接的组合意义，下面我们来解释右式。$h(\mathbf x)\cdot\prod \mathbf g^{\mathbf n}(\mathbf x)$ 可看成是让每个节点先任意选择自己的儿子（如果你无法理解这点，可以看[这里](https://xyix.github.io/posts/?page=2&postname=lagrange-inv-bij)），诚然这样会有环的情况，接下来我们来说明后面的行列式其实是一个和矩阵树定理差不多的容斥。
 
 考虑
 $$
@@ -168,7 +168,7 @@ $$
   - 令 $\sigma_j$ 为 $y$ 的颜色，令 $K_{\sigma_j}=x,F_{\sigma_j}=z$。令 $\pi_{\sigma_j}$ 为 $z$ 到 $y$ 的路径（含）。
   - 在 $P(T)$ 中连边 $\sigma_j\rightarrow \left(K_{\sigma_j} 的颜色\right)$。
 
-- 这里给出一个[例子](https://xyix.gitee.io/images/path-abor.png)。
+- 这里给出一个[例子](https://xyix.github.io/images/path-abor.png)。
 
 - 记只保留 $\{0\}\cup\{\sigma_1,...,\sigma_j\}$ 的 $P(T)$ 为 $P^{(j)}(T)$。
 

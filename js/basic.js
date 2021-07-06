@@ -1,6 +1,6 @@
 (function (win) {
     'use strict',
-        // 格式： xyix.gitee.io/.../.../?tags=...+...&type=...&sortby=&page=
+        // 格式： xyix.github.io/.../.../?tags=...+...&type=...&sortby=&page=
     win.isError = 0;
     win.post_per_page = 30;
     AnalyzeSearch = function (s) {

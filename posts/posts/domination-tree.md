@@ -192,7 +192,7 @@ title: 男性增加支配树题分数的技巧
 
 你会想，$u\rightarrow v$ 是否就一定等于 $u\rightarrow \text{lca}(u,v)\rightarrow v$ 呢？并不是这样，比如下面这个 case：
 
-<center><div style="width:40%;margin:0"><img src="https://xyix.gitee.io/images/domin-1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:40%;margin:0"><img src="https://xyix.github.io/images/domin-1.png" style="width: 70%" alt=""></div></center>
 
 于是，这种"能不经过 $\text{lca}(u,v)$ 就能到 $v$"的 $v$ 的祖先相当重要。更进一步，这种点的存在还直接蕴含 $\text{lca}(u,v)$ 并不支配 $v$。
 

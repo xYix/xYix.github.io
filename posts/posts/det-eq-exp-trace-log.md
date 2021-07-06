@@ -10,7 +10,7 @@ title: det = exp trace ln 和矩阵树定理和多元拉反
 
 # 2. 矩阵树定理和多元拉反的相似性
 
-[请看这里](https://xyix.gitee.io/posts/?page=1&postname=multi-lagrange-inv)
+[请看这里](https://xyix.github.io/posts/?page=1&postname=multi-lagrange-inv)
 
 为了方便我们下面只以矩阵树定理为例。也沿用上文的符号。
 

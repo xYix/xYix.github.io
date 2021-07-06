@@ -130,7 +130,7 @@ $$
 
 “斯特林反演”的结构就完全不同了，此处 $X$ 变为所有 $\{1...n\}$ 的划分，而偏序关系变为“前者是否可以通过若干次合并操作变为后者”。
 
-<center><div style="width:90%;margin:auto"><img src="https://xyix.gitee.io/images/exc-inc1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:90%;margin:auto"><img src="https://xyix.github.io/images/exc-inc1.png" style="width: 70%" alt=""></div></center>
 
 从组合意义出发，我们其实显然有
 $$

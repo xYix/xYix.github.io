@@ -11,7 +11,7 @@ title: bijective proof problems 选做（上）
         background-color: #ffffff;
     }
 </style>
-[pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
+[pdf 版本的题目表](https://xyix.github.io/images/bijective%20proof%20probs.pdf)
 
 <script>
     document.get_button_click = function(blockid) {
@@ -205,7 +205,7 @@ title: bijective proof problems 选做（上）
 >
 > 然后到这里我就做不下去了……还是 EIls 靠谱。
 >
-> <div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp1.png" alt=""></div>
+> <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/bpp1.png" alt=""></div>
 >
 > 其实和上面的思路是一样的，但是 EIls 的解释确实更容易联系到右式。剩下的工作已经很显然了。
 >
@@ -594,7 +594,7 @@ UPD 2020/12/17：找到了一份对珠子颜色数为 $q$，$n,q$ 互质的一�
 
 > **问题.**
 >
-> 建议阅读[这个课件](https://xyix.gitee.io/posts/?page=1&postname=combinatorics)或对生成函数有一定了解后再来尝试此题。
+> 建议阅读[这个课件](https://xyix.github.io/posts/?page=1&postname=combinatorics)或对生成函数有一定了解后再来尝试此题。
 >
 > 记组合类 $\mathcal G$ 由所有无序列表 $g=(f_1,f_2,...)$ 构成，记其长度为 $\ell(g)$。其中 $f$ 皆是组合类 $\mathcal F$ 中的元素。
 >

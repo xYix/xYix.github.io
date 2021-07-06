@@ -125,5 +125,5 @@ $$
 $$
 \operatorname{xD}T_k(\mathcal A;x)=\exp\sum_{i=0}^{\infty}f_iT_{ik}(\mathcal A;x^i)
 $$
-这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://xyix.gitee.io/posts/?page=0&postname=luogu-4500)。
+这便是最终式子了。它的处理细节和复杂度分析等参见[这篇题解](https://xyix.github.io/posts/?page=0&postname=luogu-4500)。
 

@@ -360,7 +360,7 @@ $$
 
 ----
 
-根据 LGV 引理（具体证明[在此](https://xyix.gitee.io/posts/?&postname=nytoi-2021-t)），可得
+根据 LGV 引理（具体证明[在此](https://xyix.github.io/posts/?&postname=nytoi-2021-t)），可得
 $$
 \color{#ea6965}s_{\lambda/\mu}=\text{det}(h_{\lambda_i-i-\mu_j+j})
 $$

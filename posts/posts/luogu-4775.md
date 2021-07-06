@@ -22,7 +22,7 @@ title: luoguP4775 题解 - 【NOI2018】情报中心
 
 下面是最典型的情况：
 
-<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/luogu-4775-1.png" alt=""></div>
+<div style="width:40%;margin:auto"><img src="https://xyix.github.io/images/luogu-4775-1.png" alt=""></div>
 
 可见，$X$ 点是最关键的点。下面写出一些事实：
 
@@ -38,7 +38,7 @@ title: luoguP4775 题解 - 【NOI2018】情报中心
 
 当然我们要枚举 LCA。易见每个 LCA 对应的链是有限的，自然考虑到虚树。
 
-<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/luogu-4775-2.png" alt=""></div>
+<div style="width:40%;margin:auto"><img src="https://xyix.github.io/images/luogu-4775-2.png" alt=""></div>
 
 我们不可能枚举两个 $X$，但是枚举一个 $X$ 也能完成任务，具体来说：
 

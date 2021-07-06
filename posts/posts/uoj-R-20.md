@@ -19,7 +19,7 @@ title: UR#20 题解 - 跳蚤电话 / 机器蚤分组 / 金坷垃
 
 枚举子树 $u$ 中最后一个被消除的点 $v$（每个点最后一个被消除的概率都是 $1/\text{siz}_u$），显然它一定是被删的。而 $u$ 到 $v$ 的路径上的点一定都是被缩的，而且是它们"所在的块"中最后一个被消除的。
 
-<center><div style="width:40%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:40%;margin:0"><img src="https://xyix.github.io/images/uoj-R-20-1.png" style="width: 70%" alt=""></div></center>
 
 导出的 DP 也就显然了。
 $$
@@ -56,7 +56,7 @@ $$
 
 这个图显然很有特色：如果串内的每一个字符都不相同，那么整个图恰好是一个塔形。如果有相同的子串再把节点缩起来。
 
-<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-2.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:60%;margin:0"><img src="https://xyix.github.io/images/uoj-R-20-2.png" style="width: 70%" alt=""></div></center>
 
 很直观的是，
 
@@ -68,7 +68,7 @@ $$
 >
 > 考虑其中长度最短的串们，记其长度为 $L$，从中挑出一个 $[p-1,p+L-2]$ 或 $[p+1,p+L]$ 皆不存在于原反链的串 $[p, p+L-1]$（容易发现它总是存在），然后把它换成 $[p-1,p+L-1]$ 或 $[p,p+L]$。
 >
-> <center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/uoj-R-20-3.png" style="width: 100%" alt=""></div></center>
+> <center><div style="width:60%;margin:0"><img src="https://xyix.github.io/images/uoj-R-20-3.png" style="width: 100%" alt=""></div></center>
 
 然而还是不好做。下面这一个结论就属实有点难看出来了：
 

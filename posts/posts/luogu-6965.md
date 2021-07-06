@@ -10,11 +10,11 @@ title: luoguP6965 题解 - 【NEERC2016】Binary Code
 
 自然可以爆建 2-SAT 但是边数并不理想（$n^2$）。
 
-<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/luogu-6965-1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:60%;margin:0"><img src="https://xyix.github.io/images/luogu-6965-1.png" style="width: 70%" alt=""></div></center>
 
 我们当然会想，能不能依托这棵 Trie 来帮助建图？大概就是这样的：
 
-<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/luogu-6965-2.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:60%;margin:0"><img src="https://xyix.github.io/images/luogu-6965-2.png" style="width: 70%" alt=""></div></center>
 
 实际上，Trie 点的被选的含义是"当前点不能放串"，这么一看就更合理了！$u$ 放了串 $\rightarrow$ $u$ 对应的 Trie 点不能再放 $\rightarrow$ 其祖先也全不能再放。
 
@@ -26,7 +26,7 @@ title: luoguP6965 题解 - 【NEERC2016】Binary Code
 
 小问题！我们强行让第一步必须跳一步就行了！
 
-<center><div style="width:60%;margin:0"><img src="https://xyix.gitee.io/images/luogu-6965-3.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:60%;margin:0"><img src="https://xyix.github.io/images/luogu-6965-3.png" style="width: 70%" alt=""></div></center>
 
 ----
 

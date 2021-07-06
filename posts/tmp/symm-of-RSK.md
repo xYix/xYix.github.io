@@ -18,7 +18,7 @@ EC 7.13 翻译。老汉化组了。
 
 （下图中最下角是第一行第一列。）
 
-<div style="width:40%;margin:auto"><img src="https://xyix.gitee.io/images/ec-chapter-701.png" alt=""></div>
+<div style="width:40%;margin:auto"><img src="https://xyix.github.io/images/ec-chapter-701.png" alt=""></div>
 
 规则如下：
 

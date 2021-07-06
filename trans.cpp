@@ -61,7 +61,7 @@ string Get_Mtime(string filename) {
 	return strTbuf;
 }
 
-string site_name = "https://xyix.gitee.io/";
+string site_name = "https://xyix.github.io/";
 void PRINT_INDEX_INFO(string filename, string mdfile = "") {
 	printf("	<url>\n		<loc>%s%s</loc>\n", site_name.c_str(), filename.c_str());
 	string Tbuf;

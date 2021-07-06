@@ -20,7 +20,7 @@ title: NayutanOI2021A 题解 - アンドロメダアンドロメダ【Andromeda 
 
 # 解法 1.
 
-在开始之前，你需要先了解[杨表和 RSK 算法](https://xyix.gitee.io/posts/?&postname=young-tableau)。
+在开始之前，你需要先了解[杨表和 RSK 算法](https://xyix.github.io/posts/?&postname=young-tableau)。
 
 - 下面把各块大小不相同的划分称作不重划分。
 
@@ -55,11 +55,11 @@ title: NayutanOI2021A 题解 - アンドロメダアンドロメダ【Andromeda 
 >
 > - $\mu$ 与之相同，但在此之后要反转其行和列。
 >
-> <div style="width:60%;margin:auto"><img src="https://xyix.gitee.io/images/youngtable2.png" alt=""></div>
+> <div style="width:60%;margin:auto"><img src="https://xyix.github.io/images/youngtable2.png" alt=""></div>
 >
 > - 然后叠合它们的左 / 上边缘。
 >
-> <div style="width:30%;margin:auto"><img src="https://xyix.gitee.io/images/youngtable3.png" alt=""></div>
+> <div style="width:30%;margin:auto"><img src="https://xyix.github.io/images/youngtable3.png" alt=""></div>
 >
 > **性质.**
 >

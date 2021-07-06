@@ -41,7 +41,7 @@ $$
 
 ### 长链剖分 : part f
 
-首先 $f$ 的这个转移方程长得就很像[经典的长链剖分优化转移](https://xyix.gitee.io/posts/?page=2&postname=luogu-3565)。处理 $\color{red}+1$ 只需要打一个**加法标记**。
+首先 $f$ 的这个转移方程长得就很像[经典的长链剖分优化转移](https://xyix.github.io/posts/?page=2&postname=luogu-3565)。处理 $\color{red}+1$ 只需要打一个**加法标记**。
 
 但真正的问题在于 $f_v$ 其实是**无限长**的。对复杂度的直观影响是每一次合并儿子都要付出 $\text{mdep}(u)$ 的代价，于是长链剖分就炸了。
 

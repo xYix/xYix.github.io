@@ -74,4 +74,4 @@ $\blacksquare$
 
 [多元拉格朗日反演](https://x-yi-x.blog.uoj.ac/blog/6511)的证明事实上也与之非常类似，甚至于[这篇论文](https://core.ac.uk/download/pdf/82394044.pdf)直接称其为“Prüfer-like”的。不过它的确复杂得多。
 
-如果您对更多的双射证明感兴趣，您可以参见[这里](https://xyix.gitee.io/posts/?page=2&postname=bpp)。
+如果您对更多的双射证明感兴趣，您可以参见[这里](https://xyix.github.io/posts/?page=2&postname=bpp)。

@@ -41,7 +41,7 @@ il int operator +(const int a, const Tag b) {return b.chna ? b.chn : a + b.add;}
 il int &operator +=(int &a, const Tag b) {return a = a + b;}
 /*
 code by x_Yi_x (on most platforms) or pataphysicist (only on codeforces)
-my blog : https://xyix.gitee.io (now using) or https://xyix.github.io (abandoned)
+my blog : https://xyix.github.io (now using) or https://xyix.github.io (abandoned)
 */
 #define fori01 for (int i = 0; i < 2; i++)
 struct An {

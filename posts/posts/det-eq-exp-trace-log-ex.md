@@ -2,7 +2,7 @@
 title: det 又等于 exp trace ln 了
 ---
 
-det = exp trace ln 想必大家[都很熟悉](https://xyix.gitee.io/posts/?postname=det-eq-exp-trace-log)，但是为什么 det = exp trace ln 呢？下面就让小编带大家了解一下吧！
+det = exp trace ln 想必大家[都很熟悉](https://xyix.github.io/posts/?postname=det-eq-exp-trace-log)，但是为什么 det = exp trace ln 呢？下面就让小编带大家了解一下吧！
 
 小编了解到，所谓 det = exp trace ln，其实就是要证明
 $$
@@ -14,7 +14,7 @@ $$
 $$
 即所有 $u$ 到 $v$ 的路径。
 
-不知道大家看到 det 和路径想到了什么呢？小编想到了 [**LGV 引理**](https://xyix.gitee.io/posts/?&sortby=last_modi&postname=loj-6759) 哦！
+不知道大家看到 det 和路径想到了什么呢？小编想到了 [**LGV 引理**](https://xyix.github.io/posts/?&sortby=last_modi&postname=loj-6759) 哦！
 
 然而和 LGV 引理还是略有出入的，毕竟这里根本不是 DAG。展开行列式成：
 $$

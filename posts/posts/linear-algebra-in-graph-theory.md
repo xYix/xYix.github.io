@@ -6,7 +6,7 @@ title: 图论中的线性代数 - 论文解析
 
 # 1. LGV 引理和特殊图最大流
 
-见[此处](https://xyix.gitee.io/posts/?&postname=loj-6759)。
+见[此处](https://xyix.github.io/posts/?&postname=loj-6759)。
 
 # 2. 矩阵树定理
 

@@ -18,7 +18,7 @@ skipped
 
 处理树上 $k$ 级祖先问题。一个节点所在的 $k$ 级祖先所在的重链长度一定大于等于 $k$，所以预处理点的 $2^i$ 级祖先和所有完整长链，对于 $k$ 我们跳到最大的 $2^x\le k$ 级祖先，到长链上查即可。
 
-用长链剖分优化 DP 可见[这里](https://xyix.gitee.io/posts/?page=2&postname=luogu-3565)。
+用长链剖分优化 DP 可见[这里](https://xyix.github.io/posts/?page=2&postname=luogu-3565)。
 
 ## 全局平衡二叉树
 

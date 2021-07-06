@@ -29,7 +29,7 @@ $$
 $$
 注意下式中还必须保证 $\mu$ 仍是划分。
 
-你不需要知道这两个式子为什么成立，因为它完全就是靠堆结论堆出来的，知道证明过程对理解没有帮助。如果你真的很好奇你可以看[这里](https://xyix.gitee.io/posts/?&postname=ec-chapter-7)。（unavailable yet……）
+你不需要知道这两个式子为什么成立，因为它完全就是靠堆结论堆出来的，知道证明过程对理解没有帮助。如果你真的很好奇你可以看[这里](https://xyix.github.io/posts/?&postname=ec-chapter-7)。（unavailable yet……）
 
 所以 $U,D$ 可以直接联系到那些"抠格子"问题，下面举一些例子。
 

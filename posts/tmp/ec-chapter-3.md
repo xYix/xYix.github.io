@@ -38,7 +38,7 @@ title: 迫真数论笔记：偏序集计数和莫比乌斯函数
 
 一种局部有限偏序集的表示方法是画图，只画出所有的覆盖边，覆盖者在被覆盖者的上方。
 
-<div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/mobi1.png" alt=""></div>
+<div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/mobi1.png" alt=""></div>
 
 有时候我们会给一个偏序集加上两个元素 $\hat 0$ 和 $\hat 1$。$\hat 0$ 小于等于任意元素，任意元素 $\hat 1$。偏序集 $P$ 加上了 $\hat0,\hat 1$（即使它原来就有和 $\hat 0,\hat 1$ 类似的元素）得到的偏序集记作 $\widehat P$。
 

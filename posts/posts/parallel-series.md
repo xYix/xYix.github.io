@@ -29,7 +29,7 @@ title: 广义串并联图学习笔记
 
 回头考虑缩 $2$ 度点。图中隐藏掉的两条边和一个点就是簇的隐藏结构。
 
-<center><div style="width:90%;margin:auto"><img src="https://xyix.gitee.io/images/paraseri1.png" style="width: 70%" alt=""></div></center>
+<center><div style="width:90%;margin:auto"><img src="https://xyix.github.io/images/paraseri1.png" style="width: 70%" alt=""></div></center>
 
 那么，上图的结构什么时候会表现为“这条边表现得像被选了”呢？当且仅当隐藏的两条边都被选了。那么表现为“这条边表现得像没被选”当且仅当隐藏的两条边恰选了一条。
 

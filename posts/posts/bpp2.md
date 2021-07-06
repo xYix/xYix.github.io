@@ -11,7 +11,7 @@ title: bijective proof problems 选做（下）
         background-color: #ffffff;
     }
 </style>
-[pdf 版本的题目表](https://xyix.gitee.io/images/bijective%20proof%20probs.pdf)
+[pdf 版本的题目表](https://xyix.github.io/images/bijective%20proof%20probs.pdf)
 
 <script>
     document.get_button_click = function(blockid) {
@@ -148,7 +148,7 @@ title: bijective proof problems 选做（下）
 >
 > > **法二.**
 > >
-> > <div style="width:70%;margin:auto"><img src="https://xyix.gitee.io/images/bpp3.png" alt=""></div>
+> > <div style="width:70%;margin:auto"><img src="https://xyix.github.io/images/bpp3.png" alt=""></div>
 > >
 > > 上图已足以说明。它的逆的确唯一存在，虽然不是很显然。
 >
@@ -272,7 +272,7 @@ title: bijective proof problems 选做（下）
 >
 > - 若根是 $0$，则方案数即为无根树数量（所有无根树钦定根为 $0$ 后便得到以 $0$ 为根的树），在右式中表现为<span style='color: blue'>蓝色</span>部分取 $n=0$。
 > - 否则根 $rt\neq 0$，则我们考虑切断 $0$ 到 $rt$ 的路径上的第一条边 $(0, u)$。$rt$ 所在部分是有根树（根为 $u$），而且要额外选出 $rt$，故方案数为 $n^n$。$0$ 所在部分是无根树，故方案数为 $(n+1)^{n-1}$。
-> - 而容易验证他们的合并的确是二项卷积（如果你不明确这一点，可以参考[这里](https://xyix.gitee.io/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf)的习题集 1 一节），于是便得证了。
+> - 而容易验证他们的合并的确是二项卷积（如果你不明确这一点，可以参考[这里](https://xyix.github.io/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf)的习题集 1 一节），于是便得证了。
 >
 > $\blacksquare$
 
