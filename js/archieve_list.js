@@ -549,7 +549,7 @@
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-06',
+		'last_modi' : '2021-07-07',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -909,7 +909,7 @@
 		'post_name' : 'agc-001-f',
 		'post_chinese_name' : 'AGC001F 题解 - Wide Swap',
 		'type_name' : 'solution',
-		'last_modi' : '2021-05-06',
+		'last_modi' : '2021-07-07',
 		'tag' : ['graph-theory','keter',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1070,7 +1070,7 @@
 		'post_chinese_name' : 'EC Chapter 7 阅读笔记',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-07-06',
-		'tag' : ['bijective-proof','combinatorics','generating-function','linear-algebra','young-tableau',],
+		'tag' : ['bijective-proof','combinatorics','generating-function','linear-algebra','pigeon','young-tableau',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '135',
@@ -1086,14 +1086,14 @@
 		'post_chinese_name' : 'Symmetric Function 的部分应用（EC Chapter 7 中的有趣 Excercise）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-07-06',
-		'tag' : ['bijective-proof','combinatorics','generating-function','linear-algebra','young-tableau',],
+		'tag' : ['bijective-proof','combinatorics','generating-function','linear-algebra','pigeon','young-tableau',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '137',
 		'post_name' : 'ioi2021',
 		'post_chinese_name' : 'IOI2021 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-06',
+		'last_modi' : '2021-07-07',
 		'tag' : ['keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
