@@ -906,8 +906,3 @@ generating-function
 bijective-proof
 linear-algebra
 pigeon
-ioi2021
-IOI2021 题解
-solution
-1
-keter
