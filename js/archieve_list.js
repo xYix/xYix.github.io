@@ -150,7 +150,7 @@
 		'post_chinese_name' : 'BZOJ3684 题解 - 大朋友和多叉树',
 		'type_name' : 'solution',
 		'last_modi' : '2020-10-03',
-		'tag' : ['generating-function','lagrange-inversion','safes',],
+		'tag' : ['generating-function','lagrange-inversion','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '20',

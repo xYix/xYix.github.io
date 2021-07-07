@@ -121,7 +121,7 @@ bzoj-3684
 BZOJ3684 题解 - 大朋友和多叉树
 solution
 3
-safes
+safe
 generating-function
 lagrange-inversion
 loj-6054
