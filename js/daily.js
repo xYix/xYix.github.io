@@ -487,7 +487,7 @@
         '/images/modai33.png',
         '/images/modai34.png',
         '/images/modai35.png',
-        '/images/modai36.png',
+        '/images/modai36.jpg',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
