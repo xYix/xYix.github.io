@@ -1,0 +1,138 @@
+---
+title: luoguP6914 题解 - 【ICPC2015 WF】Tours
+---
+
+参考资料：[yhx 博客](https://yhx-12243.github.io/OI-transit/records/lydsy4116%3Blg6914%3Bgym101239K.html)
+
+> **题目大意.**
+>
+> 给定一个无向图。你要找出所有的 $k$，使得存在一种把边染色为 $1\sim k$ 的方案，满足任何一个简单环中每种颜色的边数量恰相等。保证图中至少有一个环。
+>
+> $n,m\le 10^3$。
+
+考虑所有简单环，记 $u(cyc,i)$ 表示简单环 $cyc$ 包含了边 $i$，记 $w(c,i)$ 表示 $i$ 的颜色是否为 $c$。于是我们可以列出 $k$ 个方程组，其中第 $c$ 号如下：
+$$
+\forall cyc,\sum_iu(cyc,i)w(c,i)=|cyc|/k
+$$
+或者可以写成
+$$
+\forall cyc,\sum_iu(cyc,i)(kw(c,i)-1)=0
+$$
+我们自然会考虑把这个东西消元，消元的结果可以直接说明：**有什么除了环以外的，别的东西是 $0$**。当然我们暂时还不知道它是啥。
+
+最好消元过程中还能保证每一行的系数都有意义，这样我们还能联系上一点图论知识。
+
+值得注意的是下面这种消元方法：
+
+> 我们可以获得任意两个环的交。
+>
+> 注意到 $cyc_1\operatorname{xor} cyc_2$ 必定也是环，从而
+> $$
+> \dfrac{cyc_1+cyc_2-(cyc_1\operatorname{xor} cyc_2)}2
+> $$
+> 即可。
+
+可以发现环的交的异或还是环的交，于是我们可以获得交，交的交，交的交的交……最后会变成什么呢？
+
+----
+
+定义两个在某边双连通图 $G$ 上的边<span style="color: #36c48e">**切边等价**</span>，当且仅当：在任何 $G$ 的简单环中，这两条边要么同时出现要么同时不出现。
+
+- 显然地，切边等价是一个<span style="color: #36c48e">**等价关系**</span>。（下面把切边等价记为 $\sim$）
+
+- 易证：两条边切边等价等价于，从 $G$ 中删去这两条边后 $G$ 不连通。
+
+- > 如果 $e_1\sim e_2$，那么删去 $e_1$ 后 $e_2$ 不能在任何环中，否则就是找到了一个不包含 $e_1$ 却包含 $e_2$ 的简单环；于是此时删去 $e_2$，$G$ 必不连通。
+  >
+  > 反之，若删去 $e_1$ 后 $e_2$ 是割边，根据类似的论述立即得 $e_1\sim e_2$。
+
+- 易证：两条边切边等价等价于，<span style="color: #36c48e">**任取包含了它们的 $G$ 的生成树 $T$，不存在非树边跨过其中一条却不跨过另一条**</span>。这个描述比前两者具体了很多。
+
+自然地 $G$ 中的边被划为数个等价类 $E_i$。（$E_i$ 是易求的，删掉某边后求割边即可）
+
+----
+
+不错，最终能交出的恰好就是所有的 $E_i$。于是不妨把之前的方程组写成以 $E_i$ 为变元的形式。
+
+显然 $E_i$ 要么完全包含于 $cyc$ 要么完全与之无交，所以原来的 $u(cyc,i)$ 记号仍可沿用。
+
+记 $w(c,i)$ 为 $E_i$ 中颜色为 $c$ 的边的数量，则有
+$$
+\forall cyc,\sum_{i}u(cyc,i)(kw(c,i)-|E_i|)=0
+$$
+我们知道，这个方程组消元的结果必定是
+$$
+\forall i,kw(c,i)-|E_i|=0
+$$
+即，<span style="color: #36c48e">**对于任何 $E_i$，其染色都是"均匀"的**</span>。没有别的性质了吗？是的没有了，这个新方程组已经显然满秩了。
+
+显然 $\forall i$，$k$ 都是 $|E_i|$ 的因子。自然会考虑 $k=\gcd E_i$ 是否可行。实际上在 $E_i$ 内部乱填就行了，毕竟 $E_i$ 要么完全包含于 $cyc$ 要么完全与之无交。
+
+----
+
+对于本题，按理来说我们应该对每个边双连通分量分别按上述结论进行判定，但实际上对非割边直接跑就行了。
+
+代码如下。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 2005;
+
+int n;
+vector<int> G[maxn];
+int banu, banv;
+namespace Tarjan {
+	int dfn[maxn], low[maxn], idx;
+	int ans, qaq[maxn];
+	void Tarjan(int x, int fa) {
+		dfn[x] = low[x] = ++idx;
+		for (int y : G[x]) {
+			if (x == banu && y == banv) continue;
+			if (x == banv && y == banu) continue;
+			if (y == fa) continue;
+			if (!dfn[y]) Tarjan(y, x);
+			low[x] = min(low[x], low[y]);
+		}
+		if (fa != 0 && low[x] == dfn[x]) ans++, qaq[x] = -fa;
+		else qaq[x] = fa;
+	}
+	void clear() {
+		memset(dfn, 0, sizeof(dfn));
+		memset(low, 0, sizeof(low));
+		memset(qaq, 0, sizeof(qaq));
+		idx = ans = 0;
+	}
+}
+
+int qaq[maxn], tans;
+
+int main() {
+	int m;
+	scanf("%d%d", &n, &m);
+	while (m--) {
+		int u, v; scanf("%d%d", &u, &v);
+		G[u].push_back(v), G[v].push_back(u);
+	}
+	Tarjan::clear();
+	for (int i = 1; i <= n; i++)
+		if (!Tarjan::dfn[i]) Tarjan::Tarjan(i, 0);
+
+	memcpy(qaq, Tarjan::qaq, sizeof(qaq));
+	tans = Tarjan::ans;
+	int ans = 0;
+	for (banu = 1; banu <= n; banu++)
+	for (int i : G[banu]) {
+		banv = i;
+		if (banv == -qaq[banu]) continue;
+		if (banu == -qaq[banv]) continue;
+		Tarjan::clear();
+		for (int i = 1; i <= n; i++)
+			if (!Tarjan::dfn[i]) Tarjan::Tarjan(i, 0);
+		ans = __gcd(ans, Tarjan::ans - tans + 1);
+	}
+	for (int i = 1; i <= ans; i++) if (ans % i == 0) printf("%d ", i);
+}
+```
+

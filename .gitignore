@@ -1,3 +1,3 @@
 posts/source_posts/
-*.cpp
+trans.cpp
 *.exe

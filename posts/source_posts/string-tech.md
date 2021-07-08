@@ -1,0 +1,664 @@
+---
+title: 字符串学习笔记
+---
+
+草我为啥啥字符串科技都不会啊
+
+为啥你们都会 Z-function 啊
+
+# 目录
+
+- 一些记号
+- Trie
+- 自动机
+- KMP
+- - 定义和内容
+  - 应用
+  - - KMP 与周期
+    - KMP 与匹配
+- ACAM
+- Z 函数
+- Manacher
+- 回文自动机
+- - 最小回文划分
+- 子序列自动机
+- 后缀自动机
+- - 定义
+  - 构建
+  - 复杂度分析
+  - 应用
+  - - endpos
+    - 广义 SAM
+    - 区间本质不同子串
+- 后缀数组
+- - 经典做法
+  - SAIS（🕊）
+  - 应用
+  - - Height
+  - 后缀平衡树
+- Lyndon 科技
+- - Lyndon 分解
+  - Runs
+  - Lyndon Tree（🕊）
+  - 应用
+  - - 最小表示法
+
+# 一些记号
+
+$\Sigma$ 表示字符集。
+
+一个字符串 $s$ 是一个字符的有序序列 $(\sigma_1,\sigma_2,...,\sigma_{|s|})$，所有 $\sigma_i$ 均是字符集 $\Sigma$ 中的元素。
+
+记 $s\left(i\right)$ 为 $s$ 的第 $i$ 个字符。
+
+记 $s\left[l:r\right]$ 表示子串 $(\sigma_l,\sigma_{l+1},...,\sigma_r)$。有时把 $s\left[p:|s|\right]$ 简记为 $s\left[p:\right]$，$s\left[1:p\right]$ 简记为 $s\left[:p\right]$。
+
+记两个字符串 $s,t$ 的首尾拼接为 $s+t$。
+
+字符 $s$ 记为 $\mathbf s$。
+
+# Trie
+
+skip
+
+# 自动机
+
+skip
+
+# KMP
+
+## KMP / 定义和内容
+
+记 $\Pi(j,i)$ 是一个条件，其内容为 $s\left[:j\right]=s\left[i-j+1:i\right]$。特别地，认为 $\Pi(0,i)$ 总是成立。
+
+在某字符串 $s$ 上定义一个 $\pi$ 函数
+$$
+\pi(i)=\max_{j<i,\Pi(j,i)}j
+$$
+认为 $\pi(0)$ 没有定义。
+
+为了找到求 $\pi$ 的高效算法，我们引入两个结论。
+
+> **引理 1.**
+>
+> $\pi(i+1)\le \pi(i)+1$。
+
+**证明.** 这是显然的，因为容易验证 $\Pi(j,i)$ 是 $\Pi(j+1,i+1)$ 的必要条件。$\blacksquare$
+
+> **引理 2.**
+>
+> 对于满足 $\Pi(j,i)$ 的 $j$，一定有 $\Pi(j,\pi(i))$。
+
+**证明.** 我们有 $\Pi(\pi(i),i)$，又因 $j\le \pi(i)$，故只需要注意到若 $s=t$ 则一定有 $s\left[l:r\right]=t\left[l:r\right]$ 便立即得证。$\blacksquare$
+
+引理 2 非常有趣，它提示我们只要不断令 $i\leftarrow \pi(i)$ 便可遍历某串的所有满足 $\Pi(j,i)$ 的所有 $j$。这样的 $j$ 被称为 $s\left[:i\right]$ 的 **Border**。
+
+从而我们可以得到一个高效且简单的递推求解 $\pi$ 的算法：
+
+- 若 $s\left(i+1\right)=s\left(\pi(i)+1\right)$，则直接令 $\pi(i+1)=\pi(i)+1$，而且根据**引理 1**这是一个上界，不需要进行其他操作。
+- 否则，$\Pi(j+1,i+1)$ 的必要条件是 $\Pi(j,i)$，我们从大到小遍历依次检查即可。
+
+这个算法被称为 **KMP 算法**。根据[均摊分析](https://xyix.github.io/posts/?page=2&postname=uoj-228)，整个算法的复杂度是 $O(|s|)$ 的。
+
+## KMP / 应用
+
+### KMP / 应用 / KMP 与周期
+
+我们仔细地审视一下 $\pi$ 函数，容易得到以下的性质：
+
+> **引理 3.**
+>
+> $s\left[:i\right]$ 总是 $s\left[:i-\pi(i)\right]$ 不断重复形成的串的一个前缀。特别地，如果存在整数 $k\ge 2$ 使得 $k(i-\pi(i))=i$，那么 $i-\pi(i)$ 是 $s\left[:i\right]$ 的最小**周期**。
+
+字符串的周期的定义非常明确直观，不赘述了。这个引理的正确性是显然的。
+
+> **引理 4.**
+>
+> $s\left[:i\right]$ 不是任何 $j<\pi(i)$ 的 $s\left[:j\right]$ 不断重复形成的串的前缀。
+
+**证明.** 否则我们可以把 $\pi(i)$ 和 $j$ 取 $\text{gcd}$。$\blacksquare$
+
+从而我们可以通过 $\pi$ 函数立即知道某个前缀的周期。
+
+### KMP / 应用 / KMP 与匹配
+
+> **问题.** 给出字符串 $s$ 和 $t$，求 $s$ 在 $t$ 中分别在何位置作为子串出现。
+
+构造字符串 $s+(\$)+t$，其中 $\$$ 是一个不在 $s$ 和 $t$ 中出现的字符。求解该串的 $\pi$ 函数，若某位置满足 $\pi(i)=|s|$，便意味着 $s$ 在此处出现。
+
+时间复杂度 $O(|s|+|t|)$。
+
+当然也有另一个做法是，求解出 $s+(\$)$ 的 $\pi$ 函数，然后构建**自动机** $v_i\xrightarrow{s\left(i+1\right)}v_{i+1},v_i\xrightarrow{\text{if fail}}v_{\pi(i)}$，其中 $v_i$ 表示第 $i$ 个节点，$\rightarrow$ 表示单向边，其上的字符表示这条边附带的字符，如果没有该字符的转移边则不断跳 $\text{fail}$ 边。
+
+然后把 $t$ 扔到上面跑就好了，每跑到一次 $v_{|s|}$ 便表示 $s$ 出现一次。容易观察到，这个自动机实际求解的是**模式** $s$ 和**文本** $t$ 的所有前缀 $t\left[i:\right]$ 的最长公共：$s$ 的前缀，$t\left[i:\right]$ 的后缀。
+
+可以发现这两种做法本质没有区别。
+
+请务必仔细观察构建自动机的做法，因为它将在之后多次出现。
+
+# ACAM
+
+现在我们试图把之前在单个字符串上定义的 $\pi$ 扩展到字典树上去，而之前的 $i,j$ 都改为指代字典树上的某个节点。记根到节点 $v_i$ 组成的那串字符为 $S_i$。定义
+
+$$
+\Pi(j,i)=S_j=S_i\left[|S_i|-|S_j|+1:\right]
+$$
+我们还是认为 $\Pi(0,i)$ 总是成立。（$0$ 表示字典树的根）
+
+然后我们在这个字典树上定义一种小于等于号（也就自然定义了小于号）。以层数为第一关键字，以同一层从左到右为第二关键字即可。
+
+然后仍定义
+$$
+\pi(i)=\max_{j<i,\Pi(j,i)}j
+$$
+原来的**引理 1**和**引理 2**仍几乎成立，只需要把**引理 1**中的 $i$ 改为 $v_{i+1}$ 的父亲。
+
+从而我们容易直接把原来的 KMP 算法移植到此处，注意构造时按新的小于等于关系遍历节点。
+
+显然，使用 ACAM 可以解决**多串匹配问题**：只需要把模式串 $\{s_1,s_2,...\}$ 建出 Trie 然后构造 ACAM 再把 $t$ 放上去跑即可。
+
+# Z 函数
+
+所以为什么这个东西在国内被叫做扩展 KMP……明明没什么关系
+
+> **问题.** 求某个串 $s$ 的所有后缀和 $s$ 自身的最长公共前缀。
+
+在字符串 $s$ 上定义
+$$
+z(i)=\max_{s\left[:j\right]=s\left[i:i+j-1\right]} j
+$$
+
+不妨把条件 $s\left[:j\right]=s\left[i:i+j-1\right]$ 记作 $\zeta(j,i)$。
+
+> **引理 1.**
+>
+> 取 $j<i$ 且使得 $i-j+z(i-j+1)\le z(j)$ 的 $j$，定有 $z(i)\ge z(i-j+1)$。
+
+**证明.** 
+$$
+\begin{aligned}s\left[:z(i-j+1)\right]&&\\&=s\left[i-j+1:i-j+z(i-j+1)\right]&(\zeta(z(i-j+1),i-j+1))\\&=s\left[i:i+z(i-j+1)-1\right]&(\zeta(z(j),j))\end{aligned}
+$$
+$\blacksquare$
+
+> **引理 2.**
+>
+> 取 $j<i$ 且使得 $i\le z(j)+j-1$ 的 $j$，则定有 $z(i)\ge j+z(j)-i$。
+
+证明略，几乎完全同上。
+
+而我们计算 Z 函数的策略是，只使用一个 $j$ 来确认 $z(i)$ 的下界便足够了：使得 $j+z(j)-1$ 最大的 $j$。
+
+- 如果是**引理 2**或者 $z(j)+j-1< i$ 的情况，那么在确认该下界之后我们**暴力**不断检查 $z(i)$ 能否延长为 $z(i)+1$。注意到 $i$ 必然会成为新的 $j$，而最终 $i+z(i)$ 的大小是很有限的，因此这部分复杂度均摊 $O(1)$。
+- 否则如果使用了**引理 1**：
+- - 如果 $i+z(i-j+1)\le j+z(j)-1$，那么 $z(i)$ 不可能延长，否则 $z(i-j+1)$ 也可以延长。
+  - 否则 $i+z(i-j+1)\ge j+z(j)$，那么 $i$ 会成为新的 $j$，仍是暴力检查即可。
+
+即我们成功证明了该算法的复杂度为 $O(|s|)$。
+
+# Manacher
+
+> **问题.** 求某个串 $s$ 的，以任意位置（可以是一个字符也可以是两个字符的间隙）为中心的**回文半径** $r$。回文半径是说，在这个范围之内均是回文串，在这个范围之外均是非回文串。
+
+首先我们可以给 $s$ 中每两个字符中间插入一个 $\$$，这样就只需要考虑以字符为中心的情况了。
+
+> **引理 1.**
+>
+> 取 $j<i$ 且 $i\le j+r(j)-1$，$r(i)\ge r(2j-i)$。
+
+证明显然。
+
+我想我甚至都不用再说下去了，直接就是 Z 函数经典复刻。
+
+# 回文自动机（PAM）
+
+字符串 $s$ 的**回文自动机（PAM）**的节点代表了 $s$ 的所有本质不同回文子串。它的转移边表示在某串两边同时加一个相同字符，$\text{fail}$ 边则表示该串的最长回文后缀。
+
+为了避免一些比较麻烦的判断，我们认为 PAM 有两个根，一个代表空串，另一个“长度为 $-1$”，其转移边连向长度为 $1$ 的那些回文串。空串的 $\text{fail}$ 连向 $-1$ 串。
+
+> **引理 1.**
+>
+> 每当增加一个字符，$s$ 的本质不同回文子串至多增加 $1$ 个。
+
+**证明.**
+
+记新插入的字符为 $\mathbf c$，当前长度为 $i$。显然新增的子串都以 $i$ 结尾，我们只需要考虑它们即可。
+
+- 如果 $\mathbf c$ 从未出现，那么仅会新增一个回文串为 $(\mathbf c)$。
+- 否则新增的回文串一定两端是 $\mathbf c$，中间是 $s\left[:i-1\right]$ 的一个回文后缀。
+- - 我们找到 $s\left[:i-1\right]$ 的最长的：回文且左边第一个字符也是 $\mathbf c$ 的后缀（如果不存在，则 $\mathbf c$ 的出现没有生成任何回文串），记为 $p$。$p$ 两端加 $\mathbf c$ 的确是一个新的回文串。
+  - 但是其他满足条件的回文串一定本身也是 $p$ 的一个后缀，从而经过 $p$ 的反射，它已经的确出现过了。
+
+$\blacksquare$
+
+从而 PAM 的节点数的确是 $O(|s|)$。PAM 的构建也就显然了，在上面**引理 1**的过程中插入转移边和 $\text{fail}$ 的维护即可。
+
+## 回文自动机 / 最小回文划分
+
+咕咕
+
+# 子序列自动机
+
+> **问题.** 求 $s$ 和 $t$ 的最长公共：$s$ 的子序列，$t$ 的前缀。
+
+子序列自动机的每一个节点代表**所有**以该位置结束的子序列，而每一条**路径**代表一个子序列。转移边就是贪心地跳到该字符下一次出现。在本问题中子序列自动机不允许 $\text{fail}$。
+
+注意：当字符集极大时可能需要可持久化线段树来维护子序列自动机。
+
+# 后缀自动机（SAM）
+
+> **问题.** 构造一个接受（即不使用 $\text{fail}$ 地在某自动机上跑）且仅接受所有 $s$ 的后缀的自动机，且要求节点数 $O(n)$。且如果把文本 $t$ 放到这个自动机上跑则可以求出所有 $t$ 的前缀 $t\left[i:\right]$ 和 $s$ 的最长公共后缀。
+
+## 后缀自动机 / 定义
+
+- SAM 实际上保存了所有**本质不同**子串。当然本质不同子串是存不下的，所以它把所有 **endpos** 相同的本质不同子串（下称 endpos 等价类）压缩成了一个节点：一个子串的 endpos 就是它在原串 $s$ 中每一次出现时其末尾所在下标组成的集合。
+
+> **引理 1.**
+>
+> - 若串 $u$ 是串 $v$ 的后缀，则 $\text{endpos}(v)\subseteq\text{endpos}(u)$；
+> - 若串 $u,v$ 互不为后缀，则其 $\text{endpos}$ 不交。
+> - $s$ 的 endpos 等价类最多只有 $2|s|-1$ 个。
+
+**证明.** 
+
+**引理 1.1**是显然的，**引理 1.2**也容易由：如果两个串在同一处出现，则它们必定有后缀关系的事实得出。
+
+每新增一个等价类必定（至少）要合并两个集合，这就证明了**引理 1.3**。串 $(\mathbf{abbb}...)$ 达到了这个上界。
+
+$\blacksquare$
+
+另外我们还可以推出，同一个 endpos 等价类中的串互相有后缀关系且长度连续，记其最长者为 $\text{maxlen}()$，最短者为 $\text{minlen}()$。从而可以定义某个**等价类的后缀**为：其最短串的后缀们属于的那些等价类。
+
+- 转移边的定义是显然的，只需要注意到：
+
+- - >  同一个等价类的串末尾同时加某个字符得到的一组串，它们仍属于同一个等价类。
+
+- 为了符合要求，后缀自动机上跳 $\text{fail}$ 应当可以遍历一个串的所有后缀（属于的等价类），从而某等价类的 $\text{fail}$ 边应该指向该等价类的最长后缀。下面列出一些有关 $\text{fail}$ 的事实。
+
+- - > $\text{minlen}(u)=\text{maxlen}(\text{fail}(u))+1$。
+    >
+    > 跳 $\text{fail}$ 会让串长越来越短，出现次数越来越多。
+    >
+    > 如果存在 $p\xrightarrow{\mathbf c}$，则必然存在 $\text{fail}(p)\xrightarrow{\mathbf c}$，因为 $\text{fail}(p)$ 严格地比 $p$ “更常见”。
+    >
+    > 为了方便，我们有时按 $\text{fail}$ 边把 SAM 看成一个树形结构，称为**parent 树**。
+    >
+    > 一个等价类的最长后缀就是其在 parent 树上的父亲。
+    >
+    > 一个等价类的所有后缀就是其在 parent 树上的祖先。
+
+于是我们便明确了节点、转移边和 $\text{fail}$ 边的定义。
+
+## 后缀自动机 / 构建
+
+接下来我们按如下方法构建 SAM：每当增加一个字符，记新插入的字符为 $\mathbf c$，当前长度为 $i$。
+
+- 显然 $\{i\}$ 当然是一种新出现的 endpos。
+
+- $\{i-1\}$ 的祖先中有这样一些等价类 $p$，它们足够稀有，以至于 $p+(\mathbf c)$ 从未出现（$p$ 没有 $\mathbf c$ 的转移边），于是在插入 $i$ 后 $p+(\mathbf c)$ 一定是 $\{i\}$ 的子集，我们直接连边 $p\xrightarrow{\mathbf c}\{i\}$。显然 $p+(\mathbf c)$ 并不是 $\text{fail}(\{i\})$ 的子集：它已经是 $\{i\}$ 的子集了。
+
+- 令**最长**（等价于在 parent 树上最深）的，且存在 $\xrightarrow{\mathbf c}$ 的，$\{i-1\}$ 的祖先为 $p$。记 $q$ 为这条转移边指向的节点：$p\xrightarrow{\mathbf c}q$。
+
+- 很明显，$\text{fail}(\{i\})$ 就在 $q$ 中：
+
+  - $p+(\mathbf c)$ 是 $q$ 的子集，所以 $q$ 中有 $\{i\}$ 的后缀 ，正是这些 $p+(\mathbf c)$。
+  - 且这些后缀的 endpos 不是 $\{i\}$，因为在插入 $i$ 之前 $q$ 便已存在。
+
+  - 而比 $q$ 更长的那些后缀都太稀有，endpos 是 $\{i\}$，并不是我们想要的。
+
+- 但是注意用词，$q$ 中**的确有**不代表**全是**。长度在 $[\text{minlen}(p)+1,\text{maxlen}(p)+1]$ 的那些串才的确是 $p+(\mathbf c)$，会在 $i$ 处出现。当然更短的也行。
+
+- 更长的就不行了，它们根本不在 $i$ 处出现，应当剔除。
+
+- 从而我们把 $q$ **分裂**为两个点 $q$ 和 $q2$ 即可。想必转移边和 $\text{fail}$ 的维护已经是不需要陈述的细节了。只是要注意我们要把一部分连向 $q$ 的边连到 $q2$。
+
+- 根据我们上面的陈述，$p$ 的祖先们的 $\xrightarrow{\mathbf c}$ 必然已经存在，而所有新节点的 $\text{fail}$ 都已处理完成，我们的工作的确完成了。
+
+## 后缀自动机 / 复杂度分析
+
+SAM 的节点数根据**引理 1.3**是 $O(|s|)$ 的。当然从构建过程中也可以看出：每新增一个字符最多增加两个节点。
+
+下面我们假定字符集足够小以至于我们可以直接保存所有转移边是否存在，即我们可以负担 $O(|s|\cdot|\Sigma|)$ 的空间消耗。此时确认某条转移边的信息的消耗是 $O(1)$ 的。
+
+（如果我们不愿意负担 $O(|s|\cdot|\Sigma|)$ 的空间复杂度，我们可以对每一个节点用平衡树维护它的转移边，空间复杂度降至 $O(|s|)$，但是确认转移边信息的消耗变为 $O(\log\Sigma)$。）
+
+下面我们来证明 SAM 的时间复杂度为 $O(|s|)$。无法立即看出为线性的部分仅有两个 while 循环，我们逐个分析。
+
+- 第一个 while 循环是寻找合法的 $p$，因为每循环一次转移边便会多一条，我们只需要证明总转移边数为 $O(|s|)$ 便立即得证。
+
+- > **证明.**
+  >
+  > 我们从 SAM 上任意选取一棵外向生成树，记为 $T$。树边显然是线性的，下面我们来证明非树边也是线性的。
+  >
+  > 选取非树边 $p\xrightarrow{\mathbf c}q$，记 $T$ 上根到 $p$ 的路径连成的字符串为 $u$，$q$ 到任意一个 $s$ 的后缀的路径（不必在 $T$ 上）为 $v$。显然 $u+(\mathbf c)+ v$ 是 $s$ 的一个后缀。
+  >
+  > 我们断定，边 $p\xrightarrow{\mathbf c}q$ 到字符串 $u+(\mathbf c)+v$ 的映射可逆，从而是单射：我们只需要持该字符串在 SAM 上尽量按树边走，第一条非树边便是其像 $p\xrightarrow{\mathbf c}q$。
+  >
+  > 事实上可以分析出转移边上界为 $3|s|-4$ 条，串 $(\mathbf{abb}...\mathbf{bbc})$ 达到了这一上界。
+  >
+  > $\blacksquare$
+
+- （同理，把 $q$ 的转移边一条一条复制到 $q2$ 的复杂度也是线性的。）
+
+- 第二个 while 循环是暴力把 $p$ 及其祖先连向 $q$ 的边全部重定向到 $q2$。务必注意 $p$ 祖先中连向了 $q$ 的节点恰好是 $p$ 最低的一些祖先。我们来证明它也是线性的。
+
+- > **证明.**
+  >
+  > 我们显然有 $\text{minlen}(\text{fail}(\{i-1\}))\ge \text{minlen}(p)\ge \text{minlen}(q2)-1$，注意到 $q2=\text{fail}(\{i\})$，我们便得到
+  > $$
+  > \text{minlen}(\text{fail}(\{i\}))\le \text{minlen}(\text{fail}(\{i-1\}))+1
+  > $$
+  > 从而整个流程中 $\sum \Delta\text{minlen}(\text{fail})$ 是 $O(n)$ 的。
+  >
+  > 关键在于，重新审视一下 $\text{minlen}(\text{fail}(\{i-1\}))\ge \text{minlen}(p)\ge \text{minlen}(q2)-1$ 的含义：我们发现 $\Delta\text{minlen}(\text{fail})$ 大于等于该 while 循环操作的次数，也就是说该部分复杂度也是均摊线性。
+  >
+  > $\blacksquare$
+
+## 后缀自动机 / 应用
+
+### 后缀自动机 / 应用 / endpos
+
+可见在刚才构造 SAM 的过程中我们并没有把 endpos 显式地保存下来。~~保存下来就完蛋了~~
+
+回想 parent 树的结构，一个节点所有儿子 endpos 的并恰好就是其父亲。于是我们只需要记录各 $\{i\}$ 的位置，建完 SAM 后**线段树合并**即可。
+
+### 后缀自动机 / 应用 / 广义 SAM
+
+SAM 的构建过程可以扩展到 Trie 上。
+
+具体来说，由对 SAM 复杂度的更精细分析（此处略去）可见，SAM 的复杂度证明不依赖于每次新增后缀的长度单调增，而是只需要单调不降就可以了，于是我们找一个让长度单调不降的插入序列即可，一个显然的序列是字典树的 BFS 序。
+
+构建过程几乎没有区别，只需把所有的 $\{i-1\}$ 替换为 $\text{fa}(i)$。
+
+~~懂的都懂~~
+
+### 后缀自动机 / 应用 / 区间本质不同子串
+
+> **问题.**
+>
+> 多次询问求一个串的某个区间的本质不同子串数量。允许离线。
+
+一个经典的想法是，仅考虑位置最大的那个子串。考虑移动 $r\leftarrow r +1$，那么这时 $\{r\}$ 及其祖先的最近出现时间都会被更新为 $r$。这容易让我们联想到 LCT 的 access 操作。
+
+接下来考虑某个串变动的具体影响。一个长度为 $\text{len}$ 的串从 $r'$ 转变为 $r$，会使得 $l\in[r'-\text{len}+2,r-\text{len}+1]$ 新获得贡献 $1$。显然一条链上的等价类，其中的串长度总是恰好连续，于是我们只需要支持区间加一个公差为 $1$ 的等差数列即可。
+
+总复杂度 $\Theta(n\text{log}^2n+m\text{log}n)$。
+
+# 后缀数组
+
+把 $s$ 的所有后缀 $\{s\left[i:\right]\}$ 按字典序排列：$\{s\left[\text{sa}(i):\right]\}$。记 $s\left[i:\right]$ 的排名为 $\text{rank}(i)$。
+
+## 后缀数组 / 经典做法
+
+倍增基排。
+
+## 后缀数组 / SA-IS
+
+🕊
+
+## 后缀数组 / 应用
+
+### 后缀数组 / 应用 / Height
+
+定义 $h(i)=\text{lcp}(s\left[\text{sa}(i-1):\right],s\left[\text{sa}(i):\right])$。
+
+> **引理 1.**
+> $$
+> \text{lcp}(s\left[\text{sa}(u):\right],s\left[\text{sa}(v):\right])=\min_{u<i\le v} h(i)
+> $$
+
+**证明.**
+
+显然 LHS 大于等于 RHS（$\min h$ 这一部分至始至终相等），接下来只要证明 LHS 小于等于 RHS。假设不然，那么显然 $u$ 和 $v$ 应当排在一起，而不是在中间插着一个 $\min h$。
+
+$\blacksquare$
+
+可见 Height 数组是非常有用的（~~可惜的是它等价于 parent 树上求 LCA~~）（然而字符集极大的时候 SA 有优势（正论）），接下来考虑怎么求它。
+
+我想看过了这么多引理，你猜都能猜出来我们接下来要证明
+
+> **引理 2.**
+> $$
+> h(\text{rank}(i))\ge h(\text{rank}(i-1))-1
+> $$
+
+**证明.**
+
+从引理 1 的证明容易发现，后缀排序会让 $\text{lcp}$ 大的后缀尽量排在一起，从而总是有 $h_u\ge \text{lcp}(s\left[\text{sa}(u):\right],s\left[\text{sa}(v):\right])$。
+
+我们只需要取 $u=\text{rank}(i),v=\text{rank}(\text{sa}(i-1)-1)+1$ 即可。
+
+$\blacksquare$
+
+## 后缀数组 / 后缀平衡树
+
+> **问题.**
+>
+> 要求在线支持字符串开头添加字符 $\mathbf c$，维护后缀数组。
+
+首先开头加字符不会改变其他后缀的大小关系，只会加一个新的后缀，于是不难想到平衡树维护。我们只需要找到新后缀的位置。
+
+考虑 $(\mathbf c)+s$ 和 $t$ 的关系。$t$ 可以看成 $(\mathbf c')+t'$，而 $s$ 和 $t'$ 的关系是已知的。
+
+还剩一个问题：如何 $\Theta(1)$ 判断两个后缀的大小关系？你可能会想，维护排名不就好了，但是你仔细分析会发现排名还真没那么好维护，会多一个 $\log$ 出来。
+
+一个显然的想法是维护一个不变动的“绝对排名”。具体来说，我们对每个节点记录其子树的排名区间 $[l,r]$，它自身的绝对排名即 $(l+r)/2$。
+
+当不平衡时我们重构树的结构和绝对排名即可。
+
+# Lyndon 科技
+
+介绍一些符号：
+
+- $\epsilon$ 表示空串。
+- 记字符集为 $\Sigma$，所有由 $\Sigma$ 拼成的字符串为 $\Sigma^*$，再记 $\Sigma^+=\Sigma^*/\{\epsilon\}$。
+- 若字符串 $a$ 的字典序小于 $b$ 则记 $a<b$。
+- 若 $a$ 是 $b$ 的前缀则记 $a\sqsubseteq b$。
+- - 若还有 $a\neq b$ 则记 $a\sqsubset b$。
+  - 若 $a<b$ 且 $a\not\sqsubseteq b$，则记 $a\triangleleft b$。
+- $ab$ 表示拼接字符串 $a$ 和 $b$。
+- - $a^n$ 表示 $a$ 重复 $n$ 次。
+- $|s|$ 表示 $s$ 的长度，$s\left[l:r\right]$ 表示一个子串，下标从 $0$ 开始。
+- 记 $\$$ 是一个特殊字符，小于任何 $\Sigma$ 中的字符。
+- - 记 $\hat w=w\$$。
+
+## Lyndon 科技 / Lyndon 分解
+
+> **定义 1. (Lyndon Word)**
+>
+> 一个非空字符串 $w$ 被称为一个 **Lyndon Word**，当且仅当 $w$ 小于任何一个它的真后缀。
+
+下面记所有 Lyndon Word 的集合为 $\mathfrak L$。
+
+有一个显然的引理：
+
+> **引理 1.**
+>
+> $u,v\in\mathfrak L,u<v\Longrightarrow uv\in\mathfrak L$。
+
+> **证明.**
+>
+> 只需要证明 $uv<v$。
+>
+> - 若 $u\triangleleft v$：根据 $\triangleleft$ 的定义显然。
+> - 若 $u\sqsubseteq v$：则记 $v=uw$，$uv=u^2w$。故只需要证明 $v<w$。而根据 $v\in\mathfrak L$ 这是自然的。
+>
+> $\square$
+
+记把一个串 $s$：
+
+- 划分为数个 Lyndon Word，
+- 且对于其中任意的 Lyndon Word 它的下一位都不大于它，
+
+的方案为 $\text{CFL}(s)$。
+
+$\text{CFL}(s)$ 存在且唯一，这里不给出证明。再给出一个显然但有用的引理：
+
+> **引理 2.**
+>
+> $\text{CFL}(s)$ 的第一个词一定是 $s$ 的最长 Lyndon 前缀，最后一个词一定是 $s$ 的最长 Lyndon 后缀。
+
+下面给出求解 $\text{CFL}(s)$ 的算法。
+
+> **算法 1. (Lyndon 分解)**
+>
+> 令 $w=u^ku'$，其中 $u\in\mathfrak L$，$u'$ 是 $u$ 的一个可空但不为 $u$ 的前缀。现在考虑一个新串 $wa$，其中 $a$ 是单个字符。
+>
+> - 若 $a>u\left[|u'|+1\right]$，则 $wa\in\mathfrak L$。
+> - 若 $a<u\left[|u'|+1\right]$，则 $u$ 是任意 $wa****\ldots$ 的最长 Lyndon Word 前缀。换言之，在 $\text{CFL}(s)$ 中置入 $k$ 个 $u$，对于 $u'a$ 直接暴力退回再求解。
+> - 否则相当于延长了 $u'$。
+
+很直观，亦不给出证明。由于暴力退回的长度不会多于推进的长度，故总复杂度为 $O(|s|)$。
+
+## Lyndon 科技 / Runs
+
+> **定义 2. (Runs 和 Lyndon Root)**
+>
+> 一个字符串 $s$ 有**周期** $p$，当且仅当总有 $s\left[i\right]=s\left[i+p\right]$。注意不必有 $p\operatorname{|}|s|$。
+>
+> 一个二元组 $(l,r)$ 被称为 $s$ 的一个 **run**，当且仅当：
+>
+> - $s\left[l:r\right]$ 的最小周期 $p$ 满足 $2p\le r-l+1$。
+> - 如果 $l\neq 0$，还需满足 $s\left[l-1:r\right]$ 不满足第一条。
+> - 如果 $r\neq |s|-1$，还需满足 $s\left[l:r+1\right]$ 不满足第一条。
+>
+> 记 $\text{Runs}(s)$ 为 $s$ 中的所有 run。
+>
+> 某 run 的 **Lyndon Root** 是它的那些长度为 $p$ 的 Lyndon Word 子串。每个 run 至少有一个 Lyndon Root。（这是因为 $s\left[l:l+p-1\right],s\left[l+1:l+p\right],\ldots$ 中必有一个最小者）
+
+下面我们考虑两个分别由两个完全相反的在 $\Sigma$ 上的偏序关系引出的字典序，分别记为 $<_0$ 和 $<_1$。（$|\Sigma|=1$ 的平凡情况可以忽略。）由 $<_\ell$ 引出的 Lyndon Word 等现在改称为 Lyndon Word$_\ell$。记 $1-\ell=\overline \ell$。
+
+注意：对于任何 $a\in\Sigma,\$<_0a,a<_1\$$。
+
+我们自然会问关于 Lyndon Root 的更多信息。
+
+> **定义 3. (Lyndon Array)**
+>
+> 定义 $\mathcal L_\ell(l)$ 是串 $(\hat s)\left[l:r\right]$，其中 $r$ 是最大的使得 $(\hat s)\left[l:r\right]$ 是 Lyndon Word$_\ell$ 的 $r$。它被称为 **Lyndon Array**。
+
+下面这两个引理非常显然但很强。
+
+> **引理 4.**
+>
+> 对于任意 $l$，总是有一个 $\ell$ 满足 $\mathcal L_\ell(l)=s\left[l\right]$，而 $\overline\ell$ 不满足。
+
+> **引理 5.**
+>
+> 对于某 run $(l,r)$，令 $\ell$ 是使得 $(\hat s)\left[r+1\right]<_{\ell}(\hat s)\left[r+1-p\right]$ 的那个 $\ell$。
+>
+> （根据 run 的定义，$(\hat s)\left[r+1\right]\neq(\hat s)\left[r+1-p\right]$，它一定是存在的。）
+>
+> 该 run 的所有 Lyndon Root$_\ell$ $(L,R)$ 都满足 $\mathcal L_{\ell}(L)=R$。
+>
+> **hint**：引理 2 的直接推论。
+
+于是可见 Lyndon Array 对 Runs 的求解非常重要。下面这个算法给出了求解 $\mathcal L$ 的方法。
+
+> **算法 2. (Lyndon Array)**
+>
+> 该算法的核心思想是直接维护当前后缀 $s\left[i:\right]$ 的 Lyndon 分解。
+>
+> 每次令 $i\leftarrow i-1$，把 $s\left[i\right]$ 视为一个新的 Lyndon 串，反复与 $\text{CFL}(s\left[i+1:\right])$ 的第一个词合并直到不能合并为止。
+
+至于比较两个 Lyndon 串的大小，强行求 LCP 就行了。下文你会看到，想做到线性求 Runs 不管怎么样都需要一个能 $O(1)$ 求 LCP 的后缀数据结构。
+
+最后我们终于得到了求解 Runs 的算法。
+
+> **算法 3. (Runs)**
+>
+> 对于 $\mathcal L_\ell(l)=s\left[l:r\right]$ 找到最长的以它为周期的串（求公共前后缀即可（呕）），这就找到了一个 run。
+
+参考瑇🐎如下：此处用了 hash 求 lcp。
+
+```cpp
+#include<bits/stdc++.h>
+typedef unsigned long long ull;
+using namespace std;
+
+const ull g = 1000003;
+
+int n;
+char s[1000005];
+ull hsh[1000005], powg[1000005];
+ull gethsh(int l, int r) { return hsh[r] - hsh[l - 1] * powg[r - l + 1]; }
+int lcp(int u, int v) {
+	int L = 0, R = min(n - u + 1, n - v + 1);
+	while (L != R) {
+		int mid = (L + R + 1) >> 1;
+		if (gethsh(u, u + mid - 1) == gethsh(v, v + mid - 1)) L = mid;
+		else R = mid - 1;
+	}
+	return L;
+}
+int lcs(int u, int v) {
+	int L = 0, R = min(u, v);
+	while (L != R) {
+		int mid = (L + R + 1) >> 1;
+		if (gethsh(u - mid + 1, u) == gethsh(v - mid + 1, v)) L = mid;
+		else R = mid - 1;
+	}
+	return L;
+}
+int cmp(int ul, int ur, int vl, int vr) {
+	int len = lcp(ul, vl);
+	if (len >= ur - ul + 1) return ur - ul - (vr - vl);
+	return s[ul + len] - s[vl + len];
+}
+
+vector<vector<int> > RUNS;
+
+void inithsh() {
+	powg[0] = 1;
+	for (int i = 1; i <= n; i++)
+		hsh[i] = hsh[i - 1] * g + s[i] - 'a',
+		powg[i] = powg[i - 1] * g;
+}
+int LA[1000005];
+void getLA() {
+	int CFL[100005], cnt = 0;
+	for (int i = n; i; i--) {
+		CFL[++cnt] = i;
+		while (cnt > 1 && cmp(i, CFL[cnt], CFL[cnt] + 1, CFL[cnt - 1]) < 0) cnt--;
+		LA[i] = CFL[cnt];
+	}
+}
+void getRuns() {
+	for (int i = 1; i <= n; i++) {
+		int l = i, r = LA[i], L = l - lcs(l - 1, r), R = r + lcp(l, r + 1);
+		if (R - L + 1 >= 2 * (r - l + 1)) RUNS.push_back({L, R, r - l + 1});
+	}
+}
+
+int main() {
+	scanf("%s", s + 1), n = strlen(s + 1);
+	
+	inithsh(); getLA(); getRuns();
+	for (int i = 1; i <= n; i++) s[i] = 'z' - s[i] + 'a';
+	inithsh(); getLA(); getRuns();
+	
+	sort(RUNS.begin(), RUNS.end());
+    RUNS.erase(unique(RUNS.begin(), RUNS.end()), RUNS.end());
+	printf("%d\n", RUNS.size());
+	for (vector<int> qaq : RUNS)
+		printf("%d %d %d\n", qaq[0], qaq[1], qaq[2]);
+}
+```
+
+## Lyndon 科技 / Lyndon Tree
+
+🕊
+
+## Lyndon 科技 / 应用
+
+### Lyndon 科技 / 应用 / 最小表示法
+
+>**题目大意.**
+>
+>给出一个字符串 $s$，求它的**最小表示法**。
+>
+>$n\le 3\cdot 10^6$。
+>
+>一个串的最小表示法是它的字典序最小的循环移位。
+
+直接对着 $\text{CFL}(ss)$ 搞一下就行。
+
+<center><a href='/posts/posts/string-prob.html'>to be continued...</a></center>
