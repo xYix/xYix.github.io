@@ -1092,9 +1092,9 @@
 		'postid' : '137',
 		'post_name' : 'luogu-7599',
 		'post_chinese_name' : 'luoguP7599 题解 - 【APIO2021】雨林跳跃',
-		'type_name' : '3',
+		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : [],
+		'tag' : ['graph-theory','keter','lmoliver',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

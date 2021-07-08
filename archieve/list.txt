@@ -908,6 +908,7 @@ linear-algebra
 pigeon
 luogu-7599
 luoguP7599 题解 - 【APIO2021】雨林跳跃
+solution
 3
 keter
 graph-theory
