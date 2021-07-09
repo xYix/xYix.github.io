@@ -391,7 +391,7 @@
         '「The Deserter」',     //里双子，亡命之人
         'Ancient Power', //AZ角
         'Where am I?', //死亡证明
-        'Exlore the other side', //红钥匙
+        'Explore the other side', //红钥匙
         'Come forth from the depths', //深渊
         'May you get what you came for', //真天梯
         'A king\'s fortune... but at what cost?', //达摩剑

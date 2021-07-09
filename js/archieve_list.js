@@ -110,7 +110,7 @@
 		'post_chinese_name' : 'SPOJ26073 题解 - DIVCNT1',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['apollyon','calculating-geometry','number-theory',],
+		'tag' : ['calculating-geometry','keter','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '15',
@@ -1093,7 +1093,7 @@
 		'post_name' : 'luogu-7599',
 		'post_chinese_name' : 'luoguP7599 题解 - 【APIO2021】雨林跳跃',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-09',
 		'tag' : ['graph-theory','keter','lmoliver',],
 	};
 	archieve_list[archieve_list.length] = {

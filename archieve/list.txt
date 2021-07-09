@@ -85,7 +85,7 @@ SPOJ-26073
 SPOJ26073 题解 - DIVCNT1
 solution
 3
-apollyon
+keter
 number-theory
 calculating-geometry
 agc-038-e
