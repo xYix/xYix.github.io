@@ -913,3 +913,9 @@ solution
 keter
 graph-theory
 lmoliver
+uoj-595
+uoj#595 题解 - 【集训队互测2021】太阳神的宴会
+solution
+2
+apollyon
+string
