@@ -709,8 +709,8 @@
 		'post_name' : 'string-prob',
 		'post_chinese_name' : '字符串题集',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
-		'tag' : ['keter','lyndon-tech','pigeon','string',],
+		'last_modi' : '2021-07-09',
+		'tag' : ['keter','lyndon-tech','string',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '90',
@@ -1053,7 +1053,7 @@
 		'post_name' : 'luogu-5404',
 		'post_chinese_name' : 'luoguP5404 题解 - 【CTS2019】重复',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-09',
 		'tag' : ['keter','string',],
 	};
 	archieve_list[archieve_list.length] = {

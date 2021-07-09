@@ -21,5 +21,5 @@
 - 2021/5/6：给 [k 短路及其延伸](https://xyix.github.io/posts/?&sortby=last_modi&postname=k-th-shortest-path) 补了一道例题。发现博文 [Binary Code](https://xyix.github.io/posts/?&sortby=last_modi&postname=luogu-6965) 有锅就修了一下。给三篇博文 [Tours](https://xyix.github.io/posts/?&sortby=last_modi&postname=luogu-6914) 和 [遗迹](https://xyix.github.io/posts/?&sortby=last_modi&postname=uoj-506) 和 [Wide Swap](https://xyix.github.io/posts/?&page=3&postname=agc-001-f) 补了代码。
 - 2021/7/6：大浩劫，gitee 把本博客封了，迁移至 github。由于一些失误，inf 篇博文的"修改时间"均被重置到了本日。
 - 2021/7/8：更大的浩劫，我手贱把 md 源码在本地全删了，结果只能从 github 上之前的版本拉一份回来，所有博文的"修改时间"均被重置到了本日。好消息是，在这次乱搞之后 github 不再因为我的博客报 warning 而爆破我的邮箱了。更新一篇博文[雨林跳跃](https://xyix.github.io/posts/?&sortby=id&postname=luogu-7599)。
-- 2021/7/9：修了一下[重复](https://xyix.github.io/posts/?&sortby=id&postname=luogu-5404)的表达。更新一篇博文[太阳神的宴会](https://xyix.github.io/posts/?&sortby=id&postname=uoj-595)。
+- 2021/7/9：修了一下[重复](https://xyix.github.io/posts/?&sortby=id&postname=luogu-5404)的表达。更新一篇博文[太阳神的宴会](https://xyix.github.io/posts/?&sortby=id&postname=uoj-595)。宣布废弃[字符串题集](https://xyix.github.io/posts/?&tags=pigeon&postname=string-prob)。
 

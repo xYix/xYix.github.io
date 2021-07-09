@@ -585,11 +585,10 @@ data-structure
 string-prob
 字符串题集
 solution
-4
+3
 keter
 string
 lyndon-tech
-pigeon
 k-th-shortest-path
 k 短路及其延伸
 algorithm
