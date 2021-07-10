@@ -317,7 +317,7 @@
 		'post_name' : 'isotonic-regression',
 		'post_chinese_name' : '保序回归学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-10',
 		'tag' : ['isotonic-regression','offline','overall-binary-search',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -669,7 +669,7 @@
 		'post_name' : 'hhz-bigraphy',
 		'post_chinese_name' : '喝喝粥传（评注版）',
 		'type_name' : 'other',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-10',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -805,7 +805,7 @@
 		'post_name' : 'uoj-224',
 		'post_chinese_name' : 'uoj#224 题解 - 【NOI2016】旷野大计算',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-10',
 		'tag' : ['keter','submit-answer',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -949,7 +949,7 @@
 		'post_name' : 'det-eq-exp-trace-log-ex',
 		'post_chinese_name' : 'det 又等于 exp trace ln 了',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-10',
 		'tag' : ['combinatorics','generating-function','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1109,7 +1109,7 @@
 		'post_name' : 'ioi2021',
 		'post_chinese_name' : 'IOI2021 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-09',
+		'last_modi' : '2021-07-10',
 		'tag' : ['keter','lmoliver',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
