@@ -22,4 +22,5 @@
 - 2021/7/6：大浩劫，gitee 把本博客封了，迁移至 github。由于一些失误，inf 篇博文的"修改时间"均被重置到了本日。
 - 2021/7/8：更大的浩劫，我手贱把 md 源码在本地全删了，结果只能从 github 上之前的版本拉一份回来，所有博文的"修改时间"均被重置到了本日。好消息是，在这次乱搞之后 github 不再因为我的博客报 warning 而爆破我的邮箱了。更新一篇博文[雨林跳跃](https://xyix.github.io/posts/?&sortby=id&postname=luogu-7599)。
 - 2021/7/9：修了一下[重复](https://xyix.github.io/posts/?&sortby=id&postname=luogu-5404)的表达。更新一篇博文[太阳神的宴会](https://xyix.github.io/posts/?&sortby=id&postname=uoj-595)。宣布废弃[字符串题集](https://xyix.github.io/posts/?&tags=pigeon&postname=string-prob)。
+- 2021/7/10：更新一篇博文 [IOI2021 题解](https://xyix.github.io/posts/?&sortby=id&postname=ioi2021)。
 
