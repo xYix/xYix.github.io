@@ -925,8 +925,3 @@ solution
 keter
 lmoliver
 submit-answer
-random-talk
-OI 杂谈（不是你想的那种杂谈）
-algorithm
-1
-polynomial
