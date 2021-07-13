@@ -925,6 +925,7 @@ solution
 keter
 lmoliver
 submit-answer
+loj-NR-2
 LNR #2 题解
 solution
 4
