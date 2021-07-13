@@ -1112,6 +1112,14 @@
 		'last_modi' : '2021-07-13',
 		'tag' : ['keter','lmoliver','submit-answer',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '140',
+		'post_name' : 'random-talk',
+		'post_chinese_name' : 'OI 杂谈（不是你想的那种杂谈）',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-07-13',
+		'tag' : ['polynomial',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

@@ -411,8 +411,6 @@
             '欢迎来到逆模因部。不，这不是你第一天上班。',
             '戏里戏外，其实如一。',
             '这并不好笑，但我们都笑了。',
-            '（天边有什么一闪而过，白色人形实体微怔了一下便立即向天空坠落，很快变得不可见。Dr.Medako伏地痛哭。XJ-001无声地大笑。又或者只是我的想象？）',
-            '（记录结束。）（台下所有的Dr.Medako站起并热烈鼓掌。）',
         //迫害CF/XJ
         'Codeforces infrastructure is temporarily unavailable, we are working on fixing it.',
         'Rating changes for the last round are temporarily rolled back. They will be back soon.',
