@@ -1109,8 +1109,8 @@
 		'post_name' : 'ioi2021',
 		'post_chinese_name' : 'IOI2021 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-10',
-		'tag' : ['keter','lmoliver',],
+		'last_modi' : '2021-07-13',
+		'tag' : ['keter','lmoliver','submit-answer',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
