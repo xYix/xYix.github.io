@@ -1115,10 +1115,18 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '140',
 		'post_name' : 'loj-NR-2',
-		'post_chinese_name' : 'LNR #2 题解',
+		'post_chinese_name' : 'LNR#2 题解',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-13',
 		'tag' : ['data-structure','keter','network-flow','polynomial',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '141',
+		'post_name' : 'loj-3220',
+		'post_chinese_name' : 'loj#3220 题解 - Terytoria',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-14',
+		'tag' : ['randomization','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
