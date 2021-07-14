@@ -1128,6 +1128,14 @@
 		'last_modi' : '2021-07-14',
 		'tag' : ['randomization','safe',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '142',
+		'post_name' : 'loj-3522',
+		'post_chinese_name' : 'loj#3522 题解 - 【JOI Open 2021】怪兽游戏',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-14',
+		'tag' : ['euclid','interact','lmoliver',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

@@ -939,3 +939,10 @@ solution
 2
 safe
 randomization
+loj-3522
+loj#3522 题解 - 【JOI Open 2021】怪兽游戏
+solution
+3
+euclid
+lmoliver
+interact
