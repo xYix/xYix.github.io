@@ -24,3 +24,6 @@
 - 2021/7/9：修了一下[重复](https://xyix.github.io/posts/?&sortby=id&postname=luogu-5404)的表达。更新一篇博文[太阳神的宴会](https://xyix.github.io/posts/?&sortby=id&postname=uoj-595)。宣布废弃[字符串题集](https://xyix.github.io/posts/?&tags=pigeon&postname=string-prob)。
 - 2021/7/10：更新一篇博文 [IOI2021 题解](https://xyix.github.io/posts/?&sortby=id&postname=ioi2021)。
 - 2021/7/13：更新一篇博文 [LNR#2 题解](https://xyix.github.io/posts/?&sortby=id&postname=loj-NR-2)。其实四月底就写了一半了，现在才补齐。
+- 2021/7/14：更新两篇博文 [Terytoria](https://xyix.github.io/posts/?&sortby=id&postname=loj-3220) 和 [怪兽游戏](https://xyix.github.io/posts/?&sortby=id&postname=loj-3522)。
+- 2021/7/15：给 [变色龙](https://xyix.github.io/posts/?&sortby=last_modi&postname=uoj-504) 和 [简单算术](https://xyix.github.io/posts/?&sortby=last_modi&postname=loj-NR-2) 补了代码。
+
