@@ -901,7 +901,7 @@
 		'post_name' : 'uoj-504',
 		'post_chinese_name' : 'uoj#504 - 【JOISC2020】变色龙',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-15',
 		'tag' : ['graph-theory','interact','keter',],
 	};
 	archieve_list[archieve_list.length] = {
