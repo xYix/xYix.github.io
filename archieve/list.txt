@@ -946,3 +946,8 @@ solution
 euclid
 lmoliver
 interact
+luogu-4356
+luoguP4356 题解 - 【CERC2015】Looping Labyrinth
+solution
+1
+keter

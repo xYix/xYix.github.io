@@ -1117,7 +1117,7 @@
 		'post_name' : 'loj-NR-2',
 		'post_chinese_name' : 'LNR#2 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-13',
+		'last_modi' : '2021-07-15',
 		'tag' : ['data-structure','keter','network-flow','polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1135,6 +1135,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-14',
 		'tag' : ['euclid','interact','lmoliver',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '143',
+		'post_name' : 'luogu-4356',
+		'post_chinese_name' : 'luoguP4356 题解 - 【CERC2015】Looping Labyrinth',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-15',
+		'tag' : ['keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
