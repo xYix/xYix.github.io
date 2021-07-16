@@ -951,3 +951,9 @@ luoguP4356 题解 - 【CERC2015】Looping Labyrinth
 solution
 1
 keter
+cf-gym-102538-h
+CFgym102538H 题解 -【300iq Contest 3】Horrible Cycles
+solution
+2
+euclid
+combinatorics
