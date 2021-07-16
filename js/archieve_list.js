@@ -1141,7 +1141,7 @@
 		'post_name' : 'luogu-4356',
 		'post_chinese_name' : 'luoguP4356 题解 - 【CERC2015】Looping Labyrinth',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-15',
+		'last_modi' : '2021-07-16',
 		'tag' : ['keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});

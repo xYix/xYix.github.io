@@ -26,4 +26,5 @@
 - 2021/7/13：更新一篇博文 [LNR#2 题解](https://xyix.github.io/posts/?&sortby=id&postname=loj-NR-2)。其实四月底就写了一半了，现在才补齐。
 - 2021/7/14：更新两篇博文 [Terytoria](https://xyix.github.io/posts/?&sortby=id&postname=loj-3220) 和 [怪兽游戏](https://xyix.github.io/posts/?&sortby=id&postname=loj-3522)。
 - 2021/7/15：给 [变色龙](https://xyix.github.io/posts/?&sortby=last_modi&postname=uoj-504) 和 [简单算术](https://xyix.github.io/posts/?&sortby=last_modi&postname=loj-NR-2) 补了代码。
+- 2021/7/16：更新一篇博文 [Looping Labyrinth](https://xyix.github.io/posts/?&sortby=id&postname=luogu-4356)。
 
