@@ -554,7 +554,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/schur-func.html</loc>
-		<lastmod>2021-07-08</lastmod>
+		<lastmod>2021-07-17</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/luogu-7599.html</loc>
@@ -566,7 +566,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/ioi2021.html</loc>
-		<lastmod>2021-07-13</lastmod>
+		<lastmod>2021-07-16</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/loj-NR-2.html</loc>
@@ -587,5 +587,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/cf-gym-102538-h.html</loc>
 		<lastmod>2021-07-16</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/nytoi-2021-d.html</loc>
+		<lastmod>2021-07-20</lastmod>
 	</url>
 </urlset>

@@ -1085,7 +1085,7 @@
 		'post_name' : 'schur-func',
 		'post_chinese_name' : 'Symmetric Function 的部分应用（EC Chapter 7 中的有趣 Excercise）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-17',
 		'tag' : ['bijective-proof','combinatorics','generating-function','linear-algebra','pigeon','young-tableau',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1109,7 +1109,7 @@
 		'post_name' : 'ioi2021',
 		'post_chinese_name' : 'IOI2021 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-13',
+		'last_modi' : '2021-07-16',
 		'tag' : ['keter','lmoliver','submit-answer',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1151,6 +1151,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-16',
 		'tag' : ['combinatorics','euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '145',
+		'post_name' : 'nytoi-2021-d',
+		'post_chinese_name' : 'NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Dance】',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-20',
+		'tag' : ['bijective-proof','combinatorics','construction','euclid','x-yi-x','young-tableau',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
