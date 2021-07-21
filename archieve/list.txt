@@ -967,6 +967,7 @@ combinatorics
 bijective-proof
 construction
 young-tableau
+cf-gym-102586-j
 CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard
 solution
 2

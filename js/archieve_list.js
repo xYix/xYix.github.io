@@ -1162,11 +1162,11 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '146',
-		'post_name' : 'CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard',
-		'post_chinese_name' : 'solution',
-		'type_name' : '2',
-		'last_modi' : '',
-		'tag' : [],
+		'post_name' : 'cf-gym-102586-j',
+		'post_chinese_name' : 'CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-21',
+		'tag' : ['dfa-theory','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
