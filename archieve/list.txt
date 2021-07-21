@@ -967,3 +967,8 @@ combinatorics
 bijective-proof
 construction
 young-tableau
+CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard
+solution
+2
+keter
+dfa-theory

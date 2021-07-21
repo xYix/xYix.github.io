@@ -42,6 +42,7 @@
 	tags_chinese['x-yi-x'] = '👽自制👽';
 	tags_chinese['submit-answer'] = '提交答案';
 	tags_chinese['graph-theory'] = '图论';
+	tags_chinese['dfa-theory'] = '自动机理论';
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -85,6 +86,7 @@
 	tags_val['x-yi-x'] = -998244353;
 	tags_val['submit-answer'] = -234;
 	tags_val['graph-theory'] = 35;
+	tags_val['dfa-theory'] = 36;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);

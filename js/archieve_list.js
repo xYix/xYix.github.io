@@ -1160,6 +1160,14 @@
 		'last_modi' : '2021-07-20',
 		'tag' : ['bijective-proof','combinatorics','construction','euclid','x-yi-x','young-tableau',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '146',
+		'post_name' : 'CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard',
+		'post_chinese_name' : 'solution',
+		'type_name' : '2',
+		'last_modi' : '',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
