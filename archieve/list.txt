@@ -973,3 +973,12 @@ solution
 2
 keter
 dfa-theory
+uoj-NR-5
+UNR#5 题解
+solution
+5
+keter
+combinatorics
+polynomial
+graph-theory
+data-structure
