@@ -1173,7 +1173,7 @@
 		'post_name' : 'uoj-NR-5',
 		'post_chinese_name' : 'UNR#5 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-21',
+		'last_modi' : '2021-07-22',
 		'tag' : ['combinatorics','data-structure','graph-theory','keter','polynomial',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
