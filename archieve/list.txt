@@ -892,7 +892,7 @@ NayutanOI2021T 题解 - 太阳系 disco
 solution
 4
 x-yi-x
-keter
+safe
 combinatorics
 construction
 schur-func
@@ -909,7 +909,7 @@ luogu-7599
 luoguP7599 题解 - 【APIO2021】雨林跳跃
 solution
 3
-keter
+euclid
 graph-theory
 lmoliver
 uoj-595
@@ -971,7 +971,7 @@ cf-gym-102586-j
 CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard
 solution
 2
-keter
+euclid
 dfa-theory
 uoj-NR-5
 UNR#5 题解 - 不含 D2T3
@@ -982,3 +982,8 @@ combinatorics
 polynomial
 graph-theory
 data-structure
+cf-1553-h
+CF1553H 题解 - XOR and Distance
+solution
+1
+keter

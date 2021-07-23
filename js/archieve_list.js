@@ -1078,7 +1078,7 @@
 		'post_chinese_name' : 'NayutanOI2021T 题解 - 太阳系 disco',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['combinatorics','construction','keter','x-yi-x',],
+		'tag' : ['combinatorics','construction','safe','x-yi-x',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '136',
@@ -1094,7 +1094,7 @@
 		'post_chinese_name' : 'luoguP7599 题解 - 【APIO2021】雨林跳跃',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-09',
-		'tag' : ['graph-theory','keter','lmoliver',],
+		'tag' : ['euclid','graph-theory','lmoliver',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '138',
@@ -1166,7 +1166,7 @@
 		'post_chinese_name' : 'CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-21',
-		'tag' : ['dfa-theory','keter',],
+		'tag' : ['dfa-theory','euclid',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '147',
@@ -1175,6 +1175,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-22',
 		'tag' : ['combinatorics','data-structure','graph-theory','keter','polynomial',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '148',
+		'post_name' : 'cf-1553-h',
+		'post_chinese_name' : 'CF1553H 题解 - XOR and Distance',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-23',
+		'tag' : ['keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
