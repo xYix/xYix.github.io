@@ -1171,7 +1171,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '147',
 		'post_name' : 'uoj-NR-5',
-		'post_chinese_name' : 'UNR#5 题解',
+		'post_chinese_name' : 'UNR#5 题解 - 不含 D2T3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-22',
 		'tag' : ['combinatorics','data-structure','graph-theory','keter','polynomial',],

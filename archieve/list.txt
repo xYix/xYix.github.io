@@ -974,7 +974,7 @@ solution
 keter
 dfa-theory
 uoj-NR-5
-UNR#5 题解
+UNR#5 题解 - 不含 D2T3
 solution
 5
 keter
