@@ -987,3 +987,9 @@ CF1553H 题解 - XOR and Distance
 solution
 1
 keter
+loj-3409
+loj#3409 题解 - 【2020-2021 集训队作业】Yet Another Linear Algebra Problem
+solution
+2
+safe
+linear-algebra

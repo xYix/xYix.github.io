@@ -1184,6 +1184,14 @@
 		'last_modi' : '2021-07-23',
 		'tag' : ['keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '149',
+		'post_name' : 'loj-3409',
+		'post_chinese_name' : 'loj#3409 题解 - 【2020-2021 集训队作业】Yet Another Linear Algebra Problem',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-27',
+		'tag' : ['linear-algebra','safe',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
