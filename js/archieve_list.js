@@ -1181,7 +1181,7 @@
 		'post_name' : 'cf-1553-h',
 		'post_chinese_name' : 'CF1553H 题解 - XOR and Distance',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-23',
+		'last_modi' : '2021-07-28',
 		'tag' : ['keter',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1191,6 +1191,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-27',
 		'tag' : ['linear-algebra','safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '150',
+		'post_name' : 'polynomial-random-talk',
+		'post_chinese_name' : '多项式杂谈',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-07-28',
+		'tag' : ['polynomial',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
