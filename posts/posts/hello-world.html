@@ -6,7 +6,7 @@
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -137,15 +137,6 @@ kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
@@ -164,9 +155,9 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix { height: auto; margin-top: 16px; margin-bottom: 16px; }
 .md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
 .md-fences.md-fences-math { font-size: 1em; }
-.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
@@ -209,6 +200,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
 
 
 :root {
@@ -224,10 +216,11 @@ mark .md-meta { color: rgb(0, 0, 0); }
     /* open-sans-700italic - latin-ext_latin */
   html {
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -598,10 +591,156 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
  :root {--mermaid-font-zoom:2em ;} 
 </style><title>hello-world</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><p><span>我是 x义x，ZJ 高一 OIer</span><del><span>，本质是纳米机器人组合体，受泰伯尔同族体帝国委托前来</span><a href='https://zh.moegirl.org.cn/%E6%B0%B4%E8%89%B2%E4%BE%B5%E7%95%A5'><span>侵略</span></a><span>地球</span></del><span>。</span></p><p><span>爱好是</span><a href='https://twitter.com/NayutalieN'><span>ナユタン星人</span></a><span>的曲、rougelike 游戏和塔防游戏。还有组合数学。最近可能又对P🐍游戏感兴趣了？</span></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/'><span>luogu 上的x义x</span></a></p><p><a href='https://xyix.github.io'><span>github 上的x义x</span></a></p><p><a href='https://codeforces.com/profile/Comet_Honeymoon'><span>codeforces 上的x义x</span></a></p><p><span>x义x 的朋友们</span><del><span>密切关注中的人类个体</span></del><span>：</span></p><ul><li><span>JHFLS</span></li></ul><p><a href='https://www.luogu.com.cn/user/68085'><img src="https://cdn.luogu.com.cn/upload/usericon/68085.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/60378'><img src="https://cdn.luogu.com.cn/upload/usericon/60378.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/69519'><img src="https://cdn.luogu.com.cn/upload/usericon/69519.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/68824'><img src="https://cdn.luogu.com.cn/upload/usericon/68824.png" referrerpolicy="no-referrer"></a></p><ul><li><span>XJ2019</span></li></ul><p><a href='https://www.luogu.com.cn/user/49725'><img src="https://cdn.luogu.com.cn/upload/usericon/49725.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/28145'><img src="https://cdn.luogu.com.cn/upload/usericon/28145.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/31381'><img src="https://cdn.luogu.com.cn/upload/usericon/31381.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/49458'><img src="https://cdn.luogu.com.cn/upload/usericon/49458.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/36770'><img src="https://cdn.luogu.com.cn/upload/usericon/36770.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/25512'><img src="https://cdn.luogu.com.cn/upload/usericon/25512.png" referrerpolicy="no-referrer"></a></p><ul><li><span>XJ2020</span></li></ul><p><a href='https://www.luogu.com.cn/user/44805'><img src="https://cdn.luogu.com.cn/upload/usericon/44805.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/68030'><img src="https://cdn.luogu.com.cn/upload/usericon/68030.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/206488'><img src="https://cdn.luogu.com.cn/upload/usericon/206488.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/52902'><img src="https://cdn.luogu.com.cn/upload/usericon/52902.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/73142'><img src="https://cdn.luogu.com.cn/upload/usericon/73142.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/67371'><img src="https://cdn.luogu.com.cn/upload/usericon/67371.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/98618'><img src="https://cdn.luogu.com.cn/upload/usericon/98618.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/61430'><img src="https://cdn.luogu.com.cn/upload/usericon/61430.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/51692'><img src="https://cdn.luogu.com.cn/upload/usericon/51692.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/150879'><img src="https://cdn.luogu.com.cn/upload/usericon/150879.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/206998'><img src="https://cdn.luogu.com.cn/upload/usericon/206998.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/101984'><img src="https://cdn.luogu.com.cn/upload/usericon/101984.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/72468'><img src="https://cdn.luogu.com.cn/upload/usericon/72468.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/251723'><img src="https://cdn.luogu.com.cn/upload/usericon/251723.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/66511'><img src="https://cdn.luogu.com.cn/upload/usericon/66511.png" referrerpolicy="no-referrer"></a></p><ul><li><span>XJ2021</span></li></ul><p><a href='https://www.luogu.com.cn/user/53807'><img src="https://cdn.luogu.com.cn/upload/usericon/53807.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/111055'><img src="https://cdn.luogu.com.cn/upload/usericon/111055.png" referrerpolicy="no-referrer"></a></p><ul><li><span>外校</span></li></ul><p><a href='https://www.luogu.com.cn/user/96580'><img src="https://cdn.luogu.com.cn/upload/usericon/96580.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/112381'><img src="https://cdn.luogu.com.cn/upload/usericon/112381.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/58705'><img src="https://cdn.luogu.com.cn/upload/usericon/58705.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/75840'><img src="https://cdn.luogu.com.cn/upload/usericon/75840.png" referrerpolicy="no-referrer"></a></p><p><span>友链：</span></p><p><a href='https://blog.orzsiyuan.com/'><span>顶 D 的博客</span></a></p><p><a href='https://www.cnblogs.com/zkdxl/'><span>凯队的博客</span></a></p><p><a href='https://www.luogu.com.cn/blog/Coding-life/'><span>瑇的博客</span></a></p><p><a href='https://www.cnblogs.com/-Wallace-/'><span>汪莱士的博客</span></a></p><p><a href='https://www.cnblogs.com/Flying2018/'><span>孔姥爷的病历</span></a></p><p><del><span>毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太祖，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体，戴森球，物质解压器的博客</span></del><span>（已 AFO 并删文）</span></p><p><a href='https://www.cnblogs.com/zhouzhendong/'><span>周指导的博客</span></a></p><p><a href='https://www.cnblogs.com/cly-none/'><span>珂丽囡的博客</span></a></p><p><a href='https://www.cnblogs.com/Point-King/'><span>点王的博客</span></a></p><p><a href='https://commune.ml/'><span>俄猫的博客</span></a></p><p><a href='https://dpair.gitee.io'><span>数据结构毒瘤的病历</span></a></p></div></div>
+<div id='write'  class=''><p><span>我是 x义x，ZJ 高一 OIer</span><del><span>，本质是纳米机器人组合体，为完成宇宙社会学毕业设计前来</span><a href='https://zh.moegirl.org.cn/%E6%B0%B4%E8%89%B2%E4%BE%B5%E7%95%A5'><span>侵略</span></a><span>地球</span></del><span>。</span></p><p><span>爱好是</span><a href='https://twitter.com/NayutalieN'><span>ナユタン星人</span></a><span>的曲、rougelike 游戏和塔防游戏。还有组合数学。</span></p><!--可能是毛左。--><p><a href='https://www.luogu.com.cn/blog/zyxxs/'><span>luogu 上的x义x</span></a></p><p><a href='https://xyix.github.io'><span>github 上的x义x</span></a></p><p><a href='https://codeforces.com/profile/Comet_Honeymoon'><span>codeforces 上的x义x</span></a></p><p><span>x义x 的朋友们</span><del><span>密切关注中的人类个体</span></del><span>：</span></p><ul><li><span>JHFLS</span></li></ul><p><a href='https://www.luogu.com.cn/user/68085'><img src="https://cdn.luogu.com.cn/upload/usericon/68085.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/60378'><img src="https://cdn.luogu.com.cn/upload/usericon/60378.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/69519'><img src="https://cdn.luogu.com.cn/upload/usericon/69519.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/68824'><img src="https://cdn.luogu.com.cn/upload/usericon/68824.png" referrerpolicy="no-referrer"></a></p><ul><li><span>XJ2019</span></li></ul><p><a href='https://www.luogu.com.cn/user/49725'><img src="https://cdn.luogu.com.cn/upload/usericon/49725.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/28145'><img src="https://cdn.luogu.com.cn/upload/usericon/28145.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/31381'><img src="https://cdn.luogu.com.cn/upload/usericon/31381.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/49458'><img src="https://cdn.luogu.com.cn/upload/usericon/49458.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/36770'><img src="https://cdn.luogu.com.cn/upload/usericon/36770.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/25512'><img src="https://cdn.luogu.com.cn/upload/usericon/25512.png" referrerpolicy="no-referrer"></a></p><ul><li><span>XJ2020</span></li></ul><p><a href='https://www.luogu.com.cn/user/44805'><img src="https://cdn.luogu.com.cn/upload/usericon/44805.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/68030'><img src="https://cdn.luogu.com.cn/upload/usericon/68030.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/206488'><img src="https://cdn.luogu.com.cn/upload/usericon/206488.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/52902'><img src="https://cdn.luogu.com.cn/upload/usericon/52902.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/73142'><img src="https://cdn.luogu.com.cn/upload/usericon/73142.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/67371'><img src="https://cdn.luogu.com.cn/upload/usericon/67371.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/98618'><img src="https://cdn.luogu.com.cn/upload/usericon/98618.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/61430'><img src="https://cdn.luogu.com.cn/upload/usericon/61430.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/51692'><img src="https://cdn.luogu.com.cn/upload/usericon/51692.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/150879'><img src="https://cdn.luogu.com.cn/upload/usericon/150879.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/206998'><img src="https://cdn.luogu.com.cn/upload/usericon/206998.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/101984'><img src="https://cdn.luogu.com.cn/upload/usericon/101984.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/72468'><img src="https://cdn.luogu.com.cn/upload/usericon/72468.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/251723'><img src="https://cdn.luogu.com.cn/upload/usericon/251723.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/66511'><img src="https://cdn.luogu.com.cn/upload/usericon/66511.png" referrerpolicy="no-referrer"></a></p><ul><li><span>XJ2021</span></li></ul><p><a href='https://www.luogu.com.cn/user/53807'><img src="https://cdn.luogu.com.cn/upload/usericon/53807.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/111055'><img src="https://cdn.luogu.com.cn/upload/usericon/111055.png" referrerpolicy="no-referrer"></a></p><ul><li><span>外校</span></li></ul><p><a href='https://www.luogu.com.cn/user/96580'><img src="https://cdn.luogu.com.cn/upload/usericon/96580.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/112381'><img src="https://cdn.luogu.com.cn/upload/usericon/112381.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/58705'><img src="https://cdn.luogu.com.cn/upload/usericon/58705.png" referrerpolicy="no-referrer"></a><a href='https://www.luogu.com.cn/user/75840'><img src="https://cdn.luogu.com.cn/upload/usericon/75840.png" referrerpolicy="no-referrer"></a></p><p><span>友链：</span></p><p><a href='https://blog.orzsiyuan.com/'><span>顶 D 的博客</span></a><span>（AFO）</span></p><p><a href='https://www.cnblogs.com/zkdxl/'><span>凯队的博客</span></a></p><p><a href='https://www.luogu.com.cn/blog/Coding-life/'><span>瑇的博客</span></a><span>（AFO）</span></p><p><a href='https://www.cnblogs.com/-Wallace-/'><span>汪莱士的博客</span></a></p><p><a href='https://www.cnblogs.com/Flying2018/'><span>孔姥爷的病历</span></a></p><p><del><span>毛蔷忆，a.k.a. 萨卡兹穿刺手组长，“铁壁”，杜王町一中校草，给国历史上第一次（也是最后一次（悲））性解放运动的领导人，给太祖，给太宗，给哀帝，或从海洋二所出逃的人、龟、藻共生体，戴森球，物质解压器的博客</span></del><span>（已 AFO 并删文）</span></p><p><a href='https://www.cnblogs.com/zhouzhendong/'><span>周指导的博客</span></a><span>（集训队，AFO）</span></p><p><a href='https://www.cnblogs.com/cly-none/'><span>珂丽囡的博客</span></a><span>（集训队，AFO）</span></p><p><a href='https://www.cnblogs.com/Point-King/'><span>点王的博客</span></a></p><p><a href='https://dpair.github.io'><span>数据结构毒瘤的病历</span></a></p></div></div>
 </body>
 </html>
