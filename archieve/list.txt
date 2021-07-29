@@ -998,3 +998,10 @@ polynomial-random-talk
 algorithm
 1
 polynomial
+loj-3398
+loj#3398 题解 - 【2020-2021 集训队作业】带加强和多项木
+solution
+3
+euclid
+polynomial
+combinatorics

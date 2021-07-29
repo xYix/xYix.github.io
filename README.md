@@ -30,4 +30,7 @@
 - 2021/7/20：更新一篇博文 [Dance Robot Dance](https://xyix.github.io/posts/?&sortby=id&postname=nytoi-2021-d)。
 - 2021/7/21：水了一篇博文 [Median Replace Hard](https://xyix.github.io/posts/?&sortby=id&postname=cf-gym-102586-j)。
 - 2021/7/22：更新一篇博文 [UNR#5 题解](https://xyix.github.io/posts/?&sortby=id&postname=uoj-NR-5)。
+- 2021/7/26：更新一篇博文 [XOR and distance](https://xyix.github.io/posts/?&sortby=id&postname=cf-1553-h)。
+- 2021/7/27：更新一篇博文 [Yet Another Linear Algebra Problem](https://xyix.github.io/posts/?&sortby=id&postname=loj-3409)。
+- 2021/7/28：因为经常被问到一些关于多项式的问题，所以更新一篇博文 [多项式杂谈](https://xyix.github.io/posts/?&sortby=id&postname=polynomial-random-talk) 作为统一回复。
 

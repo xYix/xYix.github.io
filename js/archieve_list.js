@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-07-28',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1199,6 +1199,14 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-07-28',
 		'tag' : ['polynomial',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '151',
+		'post_name' : 'loj-3398',
+		'post_chinese_name' : 'loj#3398 题解 - 【2020-2021 集训队作业】带加强和多项木',
+		'type_name' : 'solution',
+		'last_modi' : '2021-07-29',
+		'tag' : ['combinatorics','euclid','polynomial',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
