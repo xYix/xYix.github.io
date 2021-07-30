@@ -958,7 +958,7 @@ solution
 euclid
 combinatorics
 nytoi-2021-d
-NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Dance】
+NayutanOI2021D 题解 - Dance Robot Dance
 solution
 6
 euclid

@@ -1155,7 +1155,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '145',
 		'post_name' : 'nytoi-2021-d',
-		'post_chinese_name' : 'NayutanOI2021D 题解 - ダンスロボットダンス【Dance Robot Dance】',
+		'post_chinese_name' : 'NayutanOI2021D 题解 - Dance Robot Dance',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-20',
 		'tag' : ['bijective-proof','combinatorics','construction','euclid','x-yi-x','young-tableau',],
