@@ -1005,3 +1005,9 @@ solution
 euclid
 polynomial
 combinatorics
+loj-6778
+loj#6778 题解 - 【2021 营员交流】忽略 2004
+solution
+2
+euclid
+linear-algebra

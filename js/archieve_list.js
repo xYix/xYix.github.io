@@ -1208,6 +1208,14 @@
 		'last_modi' : '2021-07-29',
 		'tag' : ['combinatorics','euclid','polynomial',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '152',
+		'post_name' : 'loj-6778',
+		'post_chinese_name' : 'loj#6778 题解 - 【2021 营员交流】忽略 2004',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-02',
+		'tag' : ['euclid','linear-algebra',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
