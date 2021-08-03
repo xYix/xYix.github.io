@@ -33,4 +33,8 @@
 - 2021/7/26：更新一篇博文 [XOR and distance](https://xyix.github.io/posts/?&sortby=id&postname=cf-1553-h)。
 - 2021/7/27：更新一篇博文 [Yet Another Linear Algebra Problem](https://xyix.github.io/posts/?&sortby=id&postname=loj-3409)。
 - 2021/7/28：因为经常被问到一些关于多项式的问题，所以更新一篇博文 [多项式杂谈](https://xyix.github.io/posts/?&sortby=id&postname=polynomial-random-talk) 作为统一回复。
+- 2021/7/29：更新一篇博文 [带加强和多项木](https://xyix.github.io/posts/?&sortby=id&postname=loj-3398)。
+- 2021/7/30：给 ZJOI2019 D2T3 补了代码。
+- 2021/8/2：更新一篇博文 [忽略 2004](https://xyix.github.io/posts/?&sortby=id&postname=loj-6778)。
+- 2021/8/3：更新一篇博文 [小修和小栋生♂成树](https://xyix.github.io/posts/?&sortby=id&postname=loj-2488)。
 

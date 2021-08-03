@@ -285,7 +285,7 @@
 		'post_name' : 'sx2019',
 		'post_chinese_name' : '浙江省选 2019 补题记录',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-08-03',
 		'tag' : ['calculating-geometry','combinatorics','data-structure','generating-function','keter',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -549,7 +549,7 @@
 		'post_name' : 'bpp',
 		'post_chinese_name' : 'bijective proof problems 选做（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-08-03',
 		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	archieve_list[archieve_list.length] = {
