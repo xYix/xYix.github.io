@@ -127,9 +127,10 @@
         let SideBarTitle = win.createElement('center');
         SideBarTitle.className = 'title';
             let SideBarIcon = win.createElement('img');
-            daily_message.src = '/images/scp-comb.png';
-            daily_message.alt = '';
-            daily_message.style = 'width: 280px';
+            SideBarIcon.src = '/images/scp-comb.png';
+            SideBarIcon.alt = '';
+            SideBarIcon.style = 'width: 280px';
+            SideBarTitle.appendChild(SideBarIcon);
 
             let SideBarTitleContent1 = win.createElement('h2');
             SideBarTitleContent1.textContent = '基金会超常组合数学部';
