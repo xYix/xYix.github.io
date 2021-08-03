@@ -129,7 +129,7 @@
             let SideBarIcon = win.createElement('img');
             SideBarIcon.src = '/images/scp-comb.png';
             SideBarIcon.alt = '';
-            SideBarIcon.style = 'width: 280px';
+            SideBarIcon.style = 'width: 200px';
             SideBarTitle.appendChild(SideBarIcon);
 
             let SideBarTitleContent1 = win.createElement('h2');
