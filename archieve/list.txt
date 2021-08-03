@@ -1018,3 +1018,9 @@ solution
 2
 safe
 matroid
+cf-1408-i
+CF1408I 题解 - Bitwise Magic
+solution
+2
+euclid
+linear-algebra

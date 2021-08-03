@@ -1224,6 +1224,14 @@
 		'last_modi' : '2021-08-03',
 		'tag' : ['matroid','safe',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '154',
+		'post_name' : 'cf-1408-i',
+		'post_chinese_name' : 'CF1408I 题解 - Bitwise Magic',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-04',
+		'tag' : ['euclid','linear-algebra',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
