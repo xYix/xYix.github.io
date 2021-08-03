@@ -622,7 +622,7 @@
 		'post_chinese_name' : '拟阵通俗演义',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-07-08',
-		'tag' : [],
+		'tag' : ['matroid',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '79',
@@ -1215,6 +1215,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-02',
 		'tag' : ['euclid','linear-algebra',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '153',
+		'post_name' : 'loj-2488',
+		'post_chinese_name' : 'loj#2488 - 【2018集训队互测】小修和小栋生♂成树',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-03',
+		'tag' : ['matroid','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

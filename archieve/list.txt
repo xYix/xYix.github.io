@@ -521,7 +521,8 @@ graph-theory
 matroid
 拟阵通俗演义
 algorithm
-0
+1
+matroid
 priority-queue-disabled
 一个有趣的，吊打单调序列的 trick
 algorithm
@@ -1011,3 +1012,9 @@ solution
 2
 euclid
 linear-algebra
+loj-2488
+loj#2488 - 【2018集训队互测】小修和小栋生♂成树
+solution
+2
+safe
+matroid
