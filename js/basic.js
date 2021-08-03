@@ -126,24 +126,29 @@
         SideBarConBlock.className = 'sidebar-content-block';
         let SideBarTitle = win.createElement('center');
         SideBarTitle.className = 'title';
-        let SideBarTitleContent1 = win.createElement('h2');
-        SideBarTitleContent1.textContent = '基金会超常组合数学部';
-        if (win.Funval === '41') 
-            SideBarTitleContent1.textContent = '数据结构分裂者';
-        SideBarTitle.appendChild(SideBarTitleContent1);
+            let SideBarIcon = win.createElement('img');
+            daily_message.src = '/images/scp-comb.png';
+            daily_message.alt = '';
+            daily_message.style = 'width: 280px';
+
+            let SideBarTitleContent1 = win.createElement('h2');
+            SideBarTitleContent1.textContent = '基金会超常组合数学部';
+            if (win.Funval === '41') 
+                SideBarTitleContent1.textContent = '数据结构分裂者';
+            SideBarTitle.appendChild(SideBarTitleContent1);
         
-        let SCPblock = win.createElement('center');
-        SCPblock.style = 'width: 70%';
-        if (win.Funval === '41') {
-            AddText(SCPblock, '数点', 'p');
-            AddText(SCPblock, '重构', 'p');
-            AddText(SCPblock, '剖分', 'p');
-        }
-        else {
-            AddText(SCPblock, 'Surprising', 'p');
-            AddText(SCPblock, 'Combinatorial', 'p');
-            AddText(SCPblock, 'Proof', 'p');
-        }
+            let SCPblock = win.createElement('center');
+            SCPblock.style = 'width: 70%';
+            if (win.Funval === '41') {
+                AddText(SCPblock, '数点', 'p');
+                AddText(SCPblock, '重构', 'p');
+                AddText(SCPblock, '剖分', 'p');
+            }
+            else {
+                AddText(SCPblock, 'Surprising', 'p');
+                AddText(SCPblock, 'Combinatorial', 'p');
+                AddText(SCPblock, 'Proof', 'p');
+            }
         SideBarTitle.appendChild(SCPblock);
         
         let SideBarTitleContent2 = win.createElement('p');
