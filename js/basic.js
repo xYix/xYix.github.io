@@ -128,8 +128,9 @@
         SideBarTitle.className = 'title';
             let SideBarIcon = win.createElement('img');
             SideBarIcon.src = '/images/scp-comb.png';
+            if (win.funval === 'sayonara') SideBarIcon.src = '/images/scp-comb-2.png';
             SideBarIcon.alt = '';
-            SideBarIcon.style = 'width: 200px';
+            SideBarIcon.style = 'width: 120px';
             SideBarTitle.appendChild(SideBarIcon);
 
             let SideBarTitleContent1 = win.createElement('h2');
