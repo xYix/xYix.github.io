@@ -12,19 +12,19 @@ body {
 div{
 }
 h1{
-    color: #555555;
+    color: var(--text-color);
 }
 h2{
-    color: #555555;
+    color: var(--text-color);
 }
 h3{
-    color: #555555;
+    color: var(--text-color);
 }
 h4{
-    color: #555555;
+    color: var(--text-color);
 }
 p{
-    color: #555555;
+    color: var(--text-color);
 }
 a{
     color: var(--dark-main-color);
@@ -49,7 +49,7 @@ a:hover{
     box-sizing: border-box;
     float: left;
     width: 300px;
-    /* opacity: 0.85; */
+    opacity: 0.85;
     left: 18px;
     position: fixed;
 }
@@ -71,7 +71,7 @@ a:hover{
                 0 1px 5px 0 rgba(0,0,0,0.12);
     box-sizing: border-box;
     float: left;
-    /* opacity: 0.85; */
+    opacity: 0.85;
     margin: auto 20px;
     width: calc(100% - 340px);
     left: 308px;
