@@ -7,7 +7,7 @@ html{
 }
 body {
     margin: 8px;
-    background: var(--main-color);
+    background: #555555;
 }
 div{
 }
@@ -42,7 +42,7 @@ a:hover{
     margin: 10px 10px;
 }
 .sidebar{
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, var(--opa));
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
                 0 3px 1px -2px rgba(0,0,0,0.06), 
                 0 1px 5px 0 rgba(0,0,0,0.12);
@@ -65,7 +65,7 @@ a:hover{
     font-size: smaller;
 }
 .post-block{
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, var(--opa));
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
                 0 3px 1px -2px rgba(0,0,0,0.06), 
                 0 1px 5px 0 rgba(0,0,0,0.12);
