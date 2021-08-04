@@ -1024,3 +1024,7 @@ solution
 2
 euclid
 linear-algebra
+how-to-calc-chara-poly
+soj#439 题解 - 兼 O(n^3) 矩阵特征多项式计算笔记
+algorithm
+linear-algebra

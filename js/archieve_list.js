@@ -1232,6 +1232,14 @@
 		'last_modi' : '2021-08-04',
 		'tag' : ['euclid','linear-algebra',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '155',
+		'post_name' : 'how-to-calc-chara-poly',
+		'post_chinese_name' : 'soj#439 题解 - 兼 O(n^3) 矩阵特征多项式计算笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-08-05',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
