@@ -670,7 +670,7 @@
 		'post_chinese_name' : '喝喝粥传（评注版）',
 		'type_name' : 'other',
 		'last_modi' : '2021-07-10',
-		'tag' : [],
+		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '85',
@@ -957,8 +957,8 @@
 		'post_name' : 'how-to-study-well',
 		'post_chinese_name' : '如何解决效率低下的问题',
 		'type_name' : 'other',
-		'last_modi' : '2021-07-08',
-		'tag' : [],
+		'last_modi' : '2021-08-05',
+		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '121',

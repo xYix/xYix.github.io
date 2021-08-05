@@ -557,7 +557,8 @@ generating-function
 hhz-bigraphy
 喝喝粥传（评注版）
 other
-0
+1
+ban
 luogu-6774
 luoguP6774 题解 - 时瑇的眼泪
 solution
@@ -799,7 +800,8 @@ generating-function
 how-to-study-well
 如何解决效率低下的问题
 other
-0
+1
+ban
 luogu-6965
 luoguP6965 题解 - 【NEERC2016】Binary Code
 solution
@@ -1029,3 +1031,8 @@ soj#439 题解 - 兼 O(n^3) 矩阵特征多项式计算笔记
 algorithm
 1
 linear-algebra
+maoism
+马克思主义中文文库瞎逛笔记
+other
+1
+ban

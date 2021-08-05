@@ -201,8 +201,10 @@
             else changecolor += '&postname=' + win.Postname;
         }
         write_link('更换主题颜色', changecolor);
-        SideBarCon.appendChild(win.createElement('p'));
-        write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
+        if (win.Funval != 'sayonara') {
+            SideBarCon.appendChild(win.createElement('p'));
+            write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
+        }
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
@@ -354,6 +356,7 @@
         let Postinfo_tags = win.createElement('td');
         Postinfo_tags.style =table_style['tags'];
         for (let i = 0; i < postinfo.tag.length; i += 1) {
+            if (postinfo.tag[i] === 'ban') continue;
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
                 ezylanASearch(NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
@@ -381,9 +384,14 @@
     }
 
     //判断文章是否合法
-    win.isLegalPost = function (postinfo, post_count) {
-        if (win.Funval != 'sayonara' && (postinfo.postid == '84' || postinfo.postid == '120')) return 0;
-        if (win.Funval === 'sayonara' && (postinfo.postid != '84' && postinfo.postid != '120')) return 0;
+    isban = function(postinfo) {
+        for (let i = 0; i < postinfo.tag.length; i += 1)
+            if (postinfo.tag[i] === 'ban') return 1;
+        return 0;
+    }
+    isLegalPost = function (postinfo, post_count) {
+        if (isban(postinfo)) { if (win.Funval != 'sayonara') return 0; }
+        else { if (win.Funval === 'sayonara') return 0; }
         if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }
@@ -441,7 +449,7 @@
         ArchieveTable.appendChild(ArchieveTitle);
 
         for (let i = 0; i < archieve_list.length; i += 1)
-            if (win.isLegalPost(archieve_list[i], win.post_count)) {
+            if (isLegalPost(archieve_list[i], win.post_count)) {
                 win.WritePostinfo(ArchieveTable, archieve_list[i]);
             }
 
