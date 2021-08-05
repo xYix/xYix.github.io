@@ -37,8 +37,11 @@
                 Titleh2.appendChild(document.createTextNode('英文名'));
                 TagsTitle.appendChild(Titleh2);
                 TagsTable.appendChild(TagsTitle);
+                let havetag = 0;
                 for (var i = 0; i < postinfo.tag.length; i += 1) {
                     var Tag = postinfo.tag[i];
+                    if (Tag === 'ban') continue;
+                    havetag = 1;
                     let TagsRow = document.createElement('tr');
                     let TagsRow1 = document.createElement('th');
                     let TagsRow1a = document.createElement('a');
@@ -57,7 +60,7 @@
                     TagsRow.appendChild(TagsRow2);
                     TagsTable.appendChild(TagsRow);
                 }
-                if (postinfo.tag.length === 0) {
+                if (!havetag) {
                     let TagsRow = document.createElement('tr');
                     let TagsRow1 = document.createElement('th');
                     let TagsRow1p = document.createElement('p');
