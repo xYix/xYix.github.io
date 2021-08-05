@@ -149,9 +149,9 @@
                 AddText(SCPblock, '剖分', 'p');
             }
             else if (win.Funval === 'sayonara') {
-                AddText(SCPblock, '万物', 'p');
-                AddText(SCPblock, '皆有', 'p');
-                AddText(SCPblock, '对偶', 'p');
+                AddText(SCPblock, '翻腾的记忆', 'p');
+                AddText(SCPblock, '奔涌的感情', 'p');
+                AddText(SCPblock, '万物皆有对偶', 'p');
             }
             else {
                 AddText(SCPblock, 'Surprising', 'p');
