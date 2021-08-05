@@ -1036,9 +1036,9 @@ maoism
 other
 1
 ban
-scp-xj-404
+xj-404
 SCP-XJ-404 - "禁止访问"
 other
-1
+2
 ban
 scp
