@@ -222,6 +222,9 @@
             SideBarCon.appendChild(win.createElement('p'));
             write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
         }
+        if (win.Funval === 'sayonara') {
+            write_link('回到表世界', location.pathname + ezylanASearch(win.TrueSearch) + '&funval=notsayonara');
+        }
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
         SideBar.appendChild(SideBarConBlock);
