@@ -126,6 +126,6 @@ td{
     margin-block-start: 0.4em;
     margin-block-end: 0.4em;
 }
-#outside-only {
+.outside-only {
     display: var(--outside-display);
 }
