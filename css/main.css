@@ -129,3 +129,6 @@ td{
 .outside-only {
     display: var(--outside-display);
 }
+.inside-only {
+    display: var(--inside-display);
+}

@@ -24,9 +24,11 @@
     if (win.Funval === 'sayonara')
         winbody.style.setProperty("--opa", 0.3),
         winbody.style.setProperty("--text-color", '#bbbbbb'),
-        winbody.style.setProperty("--outside-display", 'none');
+        winbody.style.setProperty("--outside-display", 'none'),
+        winbody.style.setProperty("--inside-display", 'default');
     else 
         winbody.style.setProperty("--opa", 0.7),
         winbody.style.setProperty("--text-color", '#555555'),
-        winbody.style.setProperty("--outside-display", 'default');
+        winbody.style.setProperty("--outside-display", 'default'),
+        winbody.style.setProperty("--inside-display", 'none');
 })(document);
