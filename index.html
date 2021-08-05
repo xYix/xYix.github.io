@@ -72,6 +72,11 @@
                     data.appendChild(document.createElement('br'));
                     AddText('……走好不送。', 'p');
                 }
+                else if (document.Funval === 'sayonara') {
+                    AddText('这里不是你该来的地方。', 'p', 'color: #600; font-size: 400%; font-weight: bold; margin: 0');
+                    for (let i = 0; i < 5; i += 1)
+                        data.appendChild(document.createElement('br'));
+                }
                 else {
                     AddText('Ξ 警告：基金会资料库属于 Ξ', 'p');
                     AddText('高度机密', 'p', 'color: #600; font-size: 400%; font-weight: bold; margin: 0');
