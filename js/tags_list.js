@@ -44,6 +44,7 @@
 	tags_chinese['graph-theory'] = '图论';
 	tags_chinese['dfa-theory'] = '🤖自动机理论🤖';
 	tags_chinese['matroid'] = '拟阵';
+	tags_chinese['scp'] = "SCP 作品"
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -89,6 +90,7 @@
 	tags_val['graph-theory'] = 35;
 	tags_val['dfa-theory'] = 36;
 	tags_val['matroid'] = 37;
+	tags_val['scp'] = 0;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);
