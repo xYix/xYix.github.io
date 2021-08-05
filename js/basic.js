@@ -103,6 +103,7 @@
         localStorage.setItem("themecolor", 'Z');
     win.ThemeColor = localStorage.getItem('themecolor');
 
+    win.isInside = 0;
     if (win.Funval) {
         localStorage.setItem("isinside", win.Funval == 'sayonara');
         let newloc = location.pathname + ezylanASearch(
@@ -115,8 +116,9 @@
         );
         if (win.Postname) newloc += '&postname=' + win.Postname;
         location.replace(newloc);
+        if (win.Funval != '41') win.Funval = undefined;
     }
-    if (localStorage.getItem('isinside')) win.Funval = "sayonara";
+    if (localStorage.getItem('isinside')) win.isInside = 1;
 
     if (win.Search['postid']) {
         win.Postname = archieve_list[parseInt(win.Search['postid'])-1].post_name;
@@ -145,7 +147,7 @@
         SideBarTitle.className = 'title';
             let SideBarIcon = win.createElement('img');
             SideBarIcon.src = '/images/scp-comb.png';
-            if (win.Funval === 'sayonara') SideBarIcon.src = '/images/scp-comb-2.png';
+            if (win.isInside) SideBarIcon.src = '/images/scp-comb-2.png';
             SideBarIcon.alt = '';
             SideBarIcon.style = 'width: 120px';
             SideBarTitle.appendChild(SideBarIcon);
@@ -154,7 +156,7 @@
             SideBarTitleContent1.textContent = '基金会超常组合数学部';
             if (win.Funval === '41') 
                 SideBarTitleContent1.textContent = '数据结构分裂者';
-            if (win.Funval === 'sayonara') 
+            if (win.isInside) 
                 SideBarTitleContent1.textContent = '里世界';
             SideBarTitle.appendChild(SideBarTitleContent1);
         
@@ -165,7 +167,7 @@
                 AddText(SCPblock, '重构', 'p');
                 AddText(SCPblock, '剖分', 'p');
             }
-            else if (win.Funval === 'sayonara') {
+            else if (win.isInside) {
                 AddText(SCPblock, '翻腾的记忆', 'p');
                 AddText(SCPblock, '奔涌的感情', 'p');
                 AddText(SCPblock, '万物皆有对偶', 'p');
@@ -199,7 +201,7 @@
         }
         write_link('回到首页', '/' + ezylanASearch(win.TrueSearch));
         write_link('文章一览', '/archieve/' + ezylanASearch(win.TrueSearch));
-        if (win.Funval != 'sayonara') {
+        if (win.isInside === 0) {
             write_link('标签一览', '/tags/' + ezylanASearch(win.TrueSearch));
             write_link('一键清除 tag', location.pathname);
         }
@@ -218,11 +220,11 @@
             else changecolor += '&postname=' + win.Postname;
         }
         write_link('更换主题颜色', changecolor);
-        if (win.Funval != 'sayonara') {
+        if (win.isInside === 0) {
             SideBarCon.appendChild(win.createElement('p'));
             write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
         }
-        if (win.Funval === 'sayonara') {
+        if (win.isInside) {
             write_link('回到表世界', location.pathname + ezylanASearch(win.TrueSearch) + '&funval=notsayonara');
         }
         SideBarConBlock.appendChild(SideBarCon);
@@ -412,8 +414,8 @@
         return 0;
     }
     isLegalPost = function (postinfo, post_count) {
-        if (isban(postinfo)) { if (win.Funval != 'sayonara') return 0; }
-        else { if (win.Funval === 'sayonara') return 0; }
+        if (isban(postinfo)) { if (win.isInside === 0) return 0; }
+        else { if (win.isInside) return 0; }
         if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }
