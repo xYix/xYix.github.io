@@ -1248,6 +1248,22 @@
 		'last_modi' : '2021-08-04',
 		'tag' : ['ban',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '157',
+		'post_name' : 'scp-xj-404',
+		'post_chinese_name' : 'SCP-XJ-404 - "禁止访问"',
+		'type_name' : 'other',
+		'last_modi' : '',
+		'tag' : ['ban',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '158',
+		'post_name' : 'scp',
+		'post_chinese_name' : 'SCP-XJ-404 - "???????"',
+		'type_name' : 'other',
+		'last_modi' : '',
+		'tag' : ['ban',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
