@@ -461,16 +461,16 @@
         ButtonBlock.className = 'button-block';
         let PagePrev = win.createElement('button');
         if (win.Page !== 0) {
-            PagePrev.style = 'float: left;background-color: #rgb(255, 255, 255, var(--opa));cursor: pointer;';
-            PagePrev.onmouseover = function () { this.style = 'float: left;background-color: #rgb(221, 221, 221, var(--opa));cursor: pointer;'; }
-            PagePrev.onmouseout = function () { this.style = 'float: left;background-color: #rgb(255, 255, 255, var(--opa));cursor: pointer;'; }
+            PagePrev.style = 'float: left;background-color: rgb(255, 255, 255, var(--opa));cursor: pointer;';
+            PagePrev.onmouseover = function () { this.style = 'float: left;background-color: rgb(221, 221, 221, var(--opa));cursor: pointer;'; }
+            PagePrev.onmouseout = function () { this.style = 'float: left;background-color: rgb(255, 255, 255, var(--opa));cursor: pointer;'; }
             PagePrev.onclick = function () {
                 location.replace(location.pathname + ezylanASearch(NextSearch(win.TrueSearch, { Page: win.Page - 1 })));
             }
             PagePrev.textContent = '<<上一页';
         }
         else {
-            PagePrev.style = 'float: left;background-color: #rgb(255, 255, 255, var(--opa));';
+            PagePrev.style = 'float: left;background-color: rgb(255, 255, 255, var(--opa));';
             PagePrev.textContent = '已经到顶了';
         }
         ButtonBlock.appendChild(PagePrev);
