@@ -84,6 +84,7 @@
     win.Funval = win.Search['funval'];
     // win.Funval = 41; //April Fools
     win.Postname = win.Search['postname'];
+
     if (win.Search['themecolor']) {
         localStorage.setItem("themecolor", win.Search['themecolor']);
         let newloc = location.pathname + ezylanASearch(
@@ -101,6 +102,22 @@
     if (localStorage.getItem('themecolor') === null || localStorage.getItem('themecolor') === undefined)
         localStorage.setItem("themecolor", 'Z');
     win.ThemeColor = localStorage.getItem('themecolor');
+
+    if (win.Funval) {
+        localStorage.setItem("isinside", win.Funval == 'sayonara');
+        let newloc = location.pathname + ezylanASearch(
+            {
+                Tags: win.Tags,
+                Type: win.Type,
+                Sortby: win.Sortby,
+                Page: win.Page,
+            }
+        );
+        if (win.Postname) newloc += '&postname=' + win.Postname;
+        location.replace(newloc);
+    }
+    if (localStorage.getItem('isinside')) win.Funval = "sayonara";
+
     if (win.Search['postid']) {
         win.Postname = archieve_list[parseInt(win.Search['postid'])-1].post_name;
         win.location.replace('/posts/?page=0&postname=' + win.Postname);
