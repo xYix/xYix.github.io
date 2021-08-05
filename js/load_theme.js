@@ -25,7 +25,9 @@
         winbody.style.setProperty("--opa", 0.3),
         winbody.style.setProperty("--text-color", '#bbbbbb'),
         winbody.style.setProperty("--outside-display", 'none'),
-        winbody.style.setProperty("--inside-display", 'default');
+        winbody.style.setProperty("--inside-display", 'default'),
+        win.querySelectorAll('link')[0].href = "https://xyix.github.io/images/favicon32-2.png",
+        win.querySelectorAll('link')[1].href = "https://xyix.github.io/images/favicon16-2.png";
     else 
         winbody.style.setProperty("--opa", 0.7),
         winbody.style.setProperty("--text-color", '#555555'),
