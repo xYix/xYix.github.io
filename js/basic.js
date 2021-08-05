@@ -182,8 +182,10 @@
         }
         write_link('回到首页', '/' + ezylanASearch(win.TrueSearch));
         write_link('文章一览', '/archieve/' + ezylanASearch(win.TrueSearch));
-        write_link('标签一览', '/tags/' + ezylanASearch(win.TrueSearch));
-        write_link('一键清除 tag', location.pathname);
+        if (win.Funval != 'sayonara') {
+            write_link('标签一览', '/tags/' + ezylanASearch(win.TrueSearch));
+            write_link('一键清除 tag', location.pathname);
+        }
         let changecolor = location.pathname;
         if (win.ThemeColor === undefined || win.ThemeColor === 'Z')
             changecolor += ezylanASearch(win.TrueSearch) + '&themecolor=N';
@@ -459,31 +461,31 @@
         ButtonBlock.className = 'button-block';
         let PagePrev = win.createElement('button');
         if (win.Page !== 0) {
-            PagePrev.style = 'float: left;background-color: #ffffff;cursor: pointer;';
-            PagePrev.onmouseover = function () { this.style = 'float: left;background-color: #dddddd;cursor: pointer;'; }
-            PagePrev.onmouseout = function () { this.style = 'float: left;background-color: #ffffff;cursor: pointer;'; }
+            PagePrev.style = 'float: left;background-color: #rgb(255, 255, 255, var(--opa));cursor: pointer;';
+            PagePrev.onmouseover = function () { this.style = 'float: left;background-color: #rgb(221, 221, 221, var(--opa));cursor: pointer;'; }
+            PagePrev.onmouseout = function () { this.style = 'float: left;background-color: #rgb(255, 255, 255, var(--opa));cursor: pointer;'; }
             PagePrev.onclick = function () {
                 location.replace(location.pathname + ezylanASearch(NextSearch(win.TrueSearch, { Page: win.Page - 1 })));
             }
             PagePrev.textContent = '<<上一页';
         }
         else {
-            PagePrev.style = 'float: left;background-color: #ffffff;';
+            PagePrev.style = 'float: left;background-color: #rgb(255, 255, 255, var(--opa));';
             PagePrev.textContent = '已经到顶了';
         }
         ButtonBlock.appendChild(PagePrev);
         let PageSucc = win.createElement('button');
         if ((win.Page + 1) * pper_page < pcount.value) {
-            PageSucc.style = 'float: right;background-color: #ffffff;cursor: pointer;';
-            PageSucc.onmouseover = function () { this.style = 'float: right;background-color: #dddddd;cursor: pointer;'; }
-            PageSucc.onmouseout = function () { this.style = 'float: right;background-color: #ffffff;cursor: pointer;'; }
+            PageSucc.style = 'float: right;background-color: rgb(255, 255, 255, var(--opa));cursor: pointer;';
+            PageSucc.onmouseover = function () { this.style = 'float: right;background-color: rgb(221, 221, 221, var(--opa));cursor: pointer;'; }
+            PageSucc.onmouseout = function () { this.style = 'float: right;background-color: rgb(255, 255, 255, var(--opa));cursor: pointer;'; }
             PageSucc.onclick = function () {
                 location.replace(location.pathname + ezylanASearch(NextSearch(win.TrueSearch, { Page: win.Page + 1 })));
             }
             PageSucc.textContent = '下一页>>';
         }
         else {
-            PageSucc.style = 'float: right;background-color: #ffffff;';
+            PageSucc.style = 'float: right;background-color: rgb(255, 255, 255, var(--opa));';
             PageSucc.textContent = '已经到底了';
         }
         ButtonBlock.appendChild(PageSucc);
