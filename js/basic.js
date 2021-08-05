@@ -118,7 +118,7 @@
         location.replace(newloc);
         if (win.Funval != '41') win.Funval = undefined;
     }
-    if (localStorage.getItem('isinside') === True) win.isInside = 1;
+    if (localStorage.getItem('isinside') === 'true') win.isInside = 1;
 
     if (win.Search['postid']) {
         win.Postname = archieve_list[parseInt(win.Search['postid'])-1].post_name;
