@@ -353,10 +353,12 @@
         Postinfo_type.style =table_style['type'];
         PostinfoBlock.appendChild(Postinfo_type);
         //标签
+        let havetag = 0;
         let Postinfo_tags = win.createElement('td');
         Postinfo_tags.style =table_style['tags'];
         for (let i = 0; i < postinfo.tag.length; i += 1) {
             if (postinfo.tag[i] === 'ban') continue;
+            havetag = 1;
             let Postinfo_tags_a = win.createElement('a');
             Postinfo_tags_a.href = '/archieve/' +
                 ezylanASearch(NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
@@ -366,7 +368,7 @@
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
         }
-        if (postinfo.tag.length === 0) {
+        if (havetag === 0) {
             let Postinfo_tags_p = win.createElement('p');
             Postinfo_tags_p.textContent = '无';
             Postinfo_tags.appendChild(Postinfo_tags_p);
