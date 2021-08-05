@@ -148,6 +148,11 @@
                 AddText(SCPblock, '重构', 'p');
                 AddText(SCPblock, '剖分', 'p');
             }
+            else if (win.Funval === 'sayonara') {
+                AddText(SCPblock, '万物', 'p');
+                AddText(SCPblock, '皆有', 'p');
+                AddText(SCPblock, '对偶', 'p');
+            }
             else {
                 AddText(SCPblock, 'Surprising', 'p');
                 AddText(SCPblock, 'Combinatorial', 'p');
@@ -375,7 +380,8 @@
 
     //判断文章是否合法
     win.isLegalPost = function (postinfo, post_count) {
-        if (postinfo.postid == '84' || postinfo.postid == '120') return 0;
+        if (win.Funval != 'sayonara' && (postinfo.postid == '84' || postinfo.postid == '120')) return 0;
+        if (win.Funval === 'sayonara' && (postinfo.postid != '84' && postinfo.postid != '120')) return 0;
         if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }
