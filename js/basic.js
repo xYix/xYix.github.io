@@ -137,6 +137,8 @@
             SideBarTitleContent1.textContent = '基金会超常组合数学部';
             if (win.Funval === '41') 
                 SideBarTitleContent1.textContent = '数据结构分裂者';
+            if (win.Funval === 'sayonara') 
+                SideBarTitleContent1.textContent = '里世界';
             SideBarTitle.appendChild(SideBarTitleContent1);
         
             let SCPblock = win.createElement('center');
