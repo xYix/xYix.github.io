@@ -35,14 +35,14 @@
 	tags_chinese['bijective-proof'] = '双射法';
 	tags_chinese['writing'] = '⚠正在施工⚠';
 	tags_chinese['network-flow'] = '🌊网络流🌊';
-	tags_chinese['safe'] = '😊safe😊';
+	tags_chinese['safe'] = '🤗safe🤗';
 	tags_chinese['euclid'] = '😅euclid😅';
-	tags_chinese['keter'] = '😱keter😱';
-	tags_chinese['apollyon'] = '😈apollyon😈';
+	tags_chinese['keter'] = '😨keter😨';
+	tags_chinese['apollyon'] = '👿apollyon👿';
 	tags_chinese['x-yi-x'] = '👽自制👽';
 	tags_chinese['submit-answer'] = '提交答案';
 	tags_chinese['graph-theory'] = '图论';
-	tags_chinese['dfa-theory'] = '自动机理论';
+	tags_chinese['dfa-theory'] = '🤖自动机理论🤖';
 	tags_chinese['matroid'] = '拟阵';
 
 	tags_val={};

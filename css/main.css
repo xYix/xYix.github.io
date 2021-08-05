@@ -1,7 +1,7 @@
-:root{
-    /* --main-color: #36c48e;
-    --dark-main-color: #1A5A40; */
-}
+/* :root{
+    --main-color: #36c48e;
+    --dark-main-color: #1A5A40;
+} */
 html{
     font-family: consolas, "微软雅黑";
 }
@@ -9,8 +9,8 @@ body {
     margin: 8px;
     background: var(--main-color);
 }
-div{
-}
+/* div{
+} */
 h1{
     color: var(--text-color);
 }
