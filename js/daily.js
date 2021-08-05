@@ -508,6 +508,7 @@
         '我是一个外乡人。显而易见地，这个世界憎恨我。',
         //吐槽
         '我没认真调颜色，所以里世界的红颜色主题会非常丑……',
+        '里世界的文章也是 typora 导出的，但和表世界不是同一个主题，所以表世界中文章末尾会有一小段空白的特性没有遗传给里世界，看起来就比较奇怪。',
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
