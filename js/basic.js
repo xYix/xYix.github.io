@@ -1,5 +1,10 @@
 (function (win) {
     'use strict',
+    findpost = function (postname) {
+        for (var i = 0; i < archieve_list.length; i = i + 1)
+            if (archieve_list[i].post_name === postname) return archieve_list[i];
+        return undefined;
+    }
         // 格式： xyix.github.io/.../.../?tags=...+...&type=...&sortby=&page=
     win.isError = 0;
     win.post_per_page = 30;
@@ -84,6 +89,7 @@
     win.Funval = win.Search['funval'];
     // win.Funval = 41; //April Fools
     win.Postname = win.Search['postname'];
+    win.Postinfo = findpost(win.Postname);
 
     if (win.Search['themecolor']) {
         localStorage.setItem("themecolor", win.Search['themecolor']);
@@ -232,11 +238,6 @@
         SideBar.appendChild(SideBarConBlock);
         data.appendChild(SideBar);
     }
-    win.findpost = function (postname) {
-        for (var i = 0; i < archieve_list.length; i = i + 1)
-            if (archieve_list[i].post_name === postname) return archieve_list[i];
-        return 'error';
-    }
     // Title
     sort_text = {};
     sort_text['last_modi'] = '最近修改时间（降序）';
@@ -253,7 +254,10 @@
         }
         if (win.Pathname[0] === 'posts') {
             win.Title[0] = '文章内容';
-            win.Title[1] = win.findpost(win.Postname).post_chinese_name;
+            if (win.Postinfo)
+                win.Title[1] = win.Postinfo.post_chinese_name;
+            else
+                win.Title[1] = '未知文章';
         }
         if (win.Pathname[0] === 'tags') win.Title[0] = '标签一览';
         if (win.Pathname[0] === 'help') win.Title[0] = '帮助';
@@ -525,12 +529,39 @@
     }
 
     //绘制文章内容
+    win.WriteErrorBlog = function (data) {
+        let Ttext = document.createElement('h1');
+        Ttext.textContent = '未知文章';
+        Ttext.style = 'text-align: center';
+        data.appendChild(Ttext);
+
+        let Blog = win.createElement('iframe');
+        Blog.style.opacity = 1.0;
+        Blog.frameBorder = 1;
+        Blog.className = 'inline-blog';\
+        Blog.src = '/posts/posts/404.html';
+        Blog.scrolling = "no";
+        Blog.onload = function () {
+            Blog.style.height = Blog.contentDocument.body.scrollHeight;
+            setInterval(()=>Blog.style.height = Blog.contentDocument.body.scrollHeight,200);
+        }
+        data.appendChild(Blog);
+    }
     win.WriteBlog = function (data, postinfo) {
+        if (postinfo === undefined) return win.WriteErrorBlog(data);
+        if (isban(postinfo)) { if (win.isInside === 0) return win.WriteErrorBlog(data); }
+        else { if (win.isInside) return win.WriteErrorBlog(data); }
+
+        let Ttext = document.createElement('h1');
+        Ttext.textContent = postinfo.post_chinese_name;
+        Ttext.style = 'text-align: center';
+        data.appendChild(Ttext);
+        
         let Blog = win.createElement('iframe');
         Blog.style.opacity = 1.0;
         Blog.frameBorder = 1;
         Blog.className = 'inline-blog';
-        if(postinfo.post_name === 'combinatorics') {
+        if (postinfo.postid === '45') {
             Blog.src = '/images/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0.pdf';
             Blog.scrolling = "yes";
             Blog.opacity = 1.0;
@@ -547,5 +578,63 @@
             }
         }
         data.appendChild(Blog);
+
+        let TTtext = document.createElement('h1');
+        TTtext.textContent = '标签';
+        TTtext.style = 'text-align: center';
+        data.appendChild(TTtext);
+
+        let TagsBlock = document.createElement('center');
+        let TagsTable = document.createElement('table');
+        TagsTable.border = '1'; TagsTable.rules = 'all'; TagsTable.style = 'width: 70%';
+        let TagsTitle = document.createElement('tr');
+        let Titleh1 = document.createElement('th');
+        Titleh1.style = 'width: 45%';
+        Titleh1.appendChild(document.createTextNode('名称'));
+        TagsTitle.appendChild(Titleh1);
+        let Titleh2 = document.createElement('th');
+        Titleh2.style = 'width: 55%';
+        Titleh2.appendChild(document.createTextNode('英文名'));
+        TagsTitle.appendChild(Titleh2);
+        TagsTable.appendChild(TagsTitle);
+        let havetag = 0;
+        for (var i = 0; i < postinfo.tag.length; i += 1) {
+            var Tag = postinfo.tag[i];
+            if (Tag === 'ban') continue;
+            havetag = 1;
+            let TagsRow = document.createElement('tr');
+            let TagsRow1 = document.createElement('th');
+            let TagsRow1a = document.createElement('a');
+            TagsRow1a.href = '/archieve/' + ezylanASearch(NextSearch(document.TrueSearch, { Tags: [Tag], Page: 0 }));
+            let TagsRow1strong = document.createElement('strong');
+            TagsRow1strong.textContent = tags_chinese[Tag];
+            TagsRow1a.appendChild(TagsRow1strong);
+            if(Tag === 'writing') TagsRow1a.style = 'color: orange';
+            if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
+            TagsRow1.appendChild(TagsRow1a);
+            TagsRow.appendChild(TagsRow1);
+            let TagsRow2 = document.createElement('th');
+            let TagsRow2p = document.createElement('p');
+            TagsRow2p.textContent = Tag;
+            TagsRow2.appendChild(TagsRow2p);
+            TagsRow.appendChild(TagsRow2);
+            TagsTable.appendChild(TagsRow);
+        }
+        if (!havetag) {
+            let TagsRow = document.createElement('tr');
+            let TagsRow1 = document.createElement('th');
+            let TagsRow1p = document.createElement('p');
+            TagsRow1p.textContent = '这篇文章没有任何 tag';
+            TagsRow1.appendChild(TagsRow1p);
+            TagsRow.appendChild(TagsRow1);
+            let TagsRow2 = document.createElement('th');
+            let TagsRow2p = document.createElement('p');
+            TagsRow2p.textContent = 'N/A';
+            TagsRow2.appendChild(TagsRow2p);
+            TagsRow.appendChild(TagsRow2);
+            TagsTable.appendChild(TagsRow);
+        }
+        TagsBlock.appendChild(TagsTable);
+        data.appendChild(TagsBlock);
     }
 })(document);

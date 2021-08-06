@@ -14,69 +14,7 @@
     <script>document.WriteSideBar(document.querySelector('.bodybody'),document.Title,document.Funval);</script>
     <div class="post-block">
         <div class="content-block" id='post'>
-            <script>
-                let Ttext = document.createElement('h1');
-                Ttext.textContent = document.findpost(document.Postname).post_chinese_name;
-                Ttext.style = 'text-align: center';
-                document.querySelector('#post').appendChild(Ttext);
-            </script>
-            <script>document.WriteBlog(document.querySelector('#post'),document.findpost(document.Postname));</script>
-            <center><h1>标签</h1></center>
-            <script>
-                let data = document.querySelector('#post'), postinfo = document.findpost(document.Postname);
-                let TagsBlock = document.createElement('center');
-                let TagsTable = document.createElement('table');
-                TagsTable.border = '1'; TagsTable.rules = 'all'; TagsTable.style = 'width: 70%';
-                let TagsTitle = document.createElement('tr');
-                let Titleh1 = document.createElement('th');
-                Titleh1.style = 'width: 45%';
-                Titleh1.appendChild(document.createTextNode('名称'));
-                TagsTitle.appendChild(Titleh1);
-                let Titleh2 = document.createElement('th');
-                Titleh2.style = 'width: 55%';
-                Titleh2.appendChild(document.createTextNode('英文名'));
-                TagsTitle.appendChild(Titleh2);
-                TagsTable.appendChild(TagsTitle);
-                let havetag = 0;
-                for (var i = 0; i < postinfo.tag.length; i += 1) {
-                    var Tag = postinfo.tag[i];
-                    if (Tag === 'ban') continue;
-                    havetag = 1;
-                    let TagsRow = document.createElement('tr');
-                    let TagsRow1 = document.createElement('th');
-                    let TagsRow1a = document.createElement('a');
-                    TagsRow1a.href = '/archieve/' + ezylanASearch(NextSearch(document.TrueSearch, { Tags: [Tag], Page: 0 }));
-                    let TagsRow1strong = document.createElement('strong');
-                    TagsRow1strong.textContent = tags_chinese[Tag];
-                    TagsRow1a.appendChild(TagsRow1strong);
-                    if(Tag === 'writing') TagsRow1a.style = 'color: orange';
-                    if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
-                    TagsRow1.appendChild(TagsRow1a);
-                    TagsRow.appendChild(TagsRow1);
-                    let TagsRow2 = document.createElement('th');
-                    let TagsRow2p = document.createElement('p');
-                    TagsRow2p.textContent = Tag;
-                    TagsRow2.appendChild(TagsRow2p);
-                    TagsRow.appendChild(TagsRow2);
-                    TagsTable.appendChild(TagsRow);
-                }
-                if (!havetag) {
-                    let TagsRow = document.createElement('tr');
-                    let TagsRow1 = document.createElement('th');
-                    let TagsRow1p = document.createElement('p');
-                    TagsRow1p.textContent = '这篇文章没有任何 tag';
-                    TagsRow1.appendChild(TagsRow1p);
-                    TagsRow.appendChild(TagsRow1);
-                    let TagsRow2 = document.createElement('th');
-                    let TagsRow2p = document.createElement('p');
-                    TagsRow2p.textContent = 'N/A';
-                    TagsRow2.appendChild(TagsRow2p);
-                    TagsRow.appendChild(TagsRow2);
-                    TagsTable.appendChild(TagsRow);
-                }
-                TagsBlock.appendChild(TagsTable);
-                data.appendChild(TagsBlock);
-            </script>
+            <script>document.WriteBlog(document.querySelector('#post'), document.Postinfo);</script>
         </div>
     </div>
     
