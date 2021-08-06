@@ -144,7 +144,7 @@
     };
     true_isban = function(postinfo) {
         if (isban(postinfo)) { if (win.isInside === 0) return 1; }
-        else { if (win.isInside) 1; }
+        else { if (win.isInside) return 1; }
         return 0;
     }
 
@@ -423,7 +423,7 @@
 
     //判断文章是否合法
     isLegalPost = function (postinfo, post_count) {
-        if (true_isban(postinfo)) return 0
+        if (true_isban(postinfo)) return 0;
         if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }
