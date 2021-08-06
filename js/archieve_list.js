@@ -1253,7 +1253,7 @@
 		'post_name' : 'xj-404',
 		'post_chinese_name' : 'SCP-XJ-404 - "禁止访问"',
 		'type_name' : 'other',
-		'last_modi' : '',
+		'last_modi' : '2021-08-06',
 		'tag' : ['ban','scp',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
