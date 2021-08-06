@@ -519,7 +519,7 @@
     ];
     win.Write_Daily_Message = function (data){
         let message_box=document.createElement('center');
-        if (Math.floor(Math.random() * 5) != 0 || win.Funval === 'sayonara') {
+        if (Math.floor(Math.random() * 5) != 0 || win.isInside) {
             let message_title=document.createElement('h3');
             message_title.textContent="一言";
             let daily_message=document.createElement('p');
