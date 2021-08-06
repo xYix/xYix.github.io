@@ -1042,3 +1042,11 @@ other
 2
 ban
 scp
+loj-562
+loj#562 题解 - 【LibreOJ Round #9】Tangjz 的背包
+solution
+4
+euclid
+linear-algebra
+combinatorics
+bijective-proof
