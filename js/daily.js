@@ -523,8 +523,8 @@
             let message_title=document.createElement('h3');
             message_title.textContent="一言";
             let daily_message=document.createElement('p');
-            if (win.Funval === 'sayonara')
-            daily_message.textContent=DAILY_MESSAGES_2[Math.floor(Math.random()*DAILY_MESSAGES_2.length)];
+            if (win.isInside === 'sayonara')
+                daily_message.textContent=DAILY_MESSAGES_2[Math.floor(Math.random()*DAILY_MESSAGES_2.length)];
             else daily_message.textContent=DAILY_MESSAGES[Math.floor(Math.random()*DAILY_MESSAGES.length)];
             message_box.appendChild(message_title);
             message_box.appendChild(daily_message);
