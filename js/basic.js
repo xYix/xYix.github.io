@@ -538,7 +538,7 @@
         let Blog = win.createElement('iframe');
         Blog.style.opacity = 1.0;
         Blog.frameBorder = 1;
-        Blog.className = 'inline-blog';\
+        Blog.className = 'inline-blog';
         Blog.src = '/posts/posts/404.html';
         Blog.scrolling = "no";
         Blog.onload = function () {
