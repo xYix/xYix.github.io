@@ -143,8 +143,9 @@
         Funval: win.Funval,
     };
     true_isban = function(postinfo) {
-        if (isban(postinfo)) { if (win.isInside === 0) return win.WriteErrorBlog(data); }
-        else { if (win.isInside) return win.WriteErrorBlog(data); }
+        if (isban(postinfo)) { if (win.isInside === 0) return 1; }
+        else { if (win.isInside) 1; }
+        return 0;
     }
 
     win.WriteSideBar = function (data, title, funval) {
