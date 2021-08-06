@@ -5,6 +5,11 @@
             if (archieve_list[i].post_name === postname) return archieve_list[i];
         return undefined;
     }
+    isban = function(postinfo) {
+        for (let i = 0; i < postinfo.tag.length; i += 1)
+            if (postinfo.tag[i] === 'ban') return 1;
+        return 0;
+    }
         // 格式： xyix.github.io/.../.../?tags=...+...&type=...&sortby=&page=
     win.isError = 0;
     win.post_per_page = 30;
@@ -137,6 +142,10 @@
         Page: win.Page,
         Funval: win.Funval,
     };
+    true_isban = function(postinfo) {
+        if (isban(postinfo)) { if (win.isInside === 0) return win.WriteErrorBlog(data); }
+        else { if (win.isInside) return win.WriteErrorBlog(data); }
+    }
 
     win.WriteSideBar = function (data, title, funval) {
         let AddText = function (tdata, ttext, eletag) {
@@ -254,7 +263,7 @@
         }
         if (win.Pathname[0] === 'posts') {
             win.Title[0] = '文章内容';
-            if (win.Postinfo)
+            if (win.Postinfo && !true_isban(win.Postinfo))
                 win.Title[1] = win.Postinfo.post_chinese_name;
             else
                 win.Title[1] = '未知文章';
@@ -412,14 +421,8 @@
     }
 
     //判断文章是否合法
-    isban = function(postinfo) {
-        for (let i = 0; i < postinfo.tag.length; i += 1)
-            if (postinfo.tag[i] === 'ban') return 1;
-        return 0;
-    }
     isLegalPost = function (postinfo, post_count) {
-        if (isban(postinfo)) { if (win.isInside === 0) return 0; }
-        else { if (win.isInside) return 0; }
+        if (true_isban(postinfo)) return 0
         if (win.Type) {
             if (postinfo.type_name !== win.Type) return 0;
         }
@@ -549,8 +552,7 @@
     }
     win.WriteBlog = function (data, postinfo) {
         if (postinfo === undefined) return win.WriteErrorBlog(data);
-        if (isban(postinfo)) { if (win.isInside === 0) return win.WriteErrorBlog(data); }
-        else { if (win.isInside) return win.WriteErrorBlog(data); }
+        if (true_isban(postinfo)) return win.WriteErrorBlog(data);
 
         let Ttext = document.createElement('h1');
         Ttext.textContent = postinfo.post_chinese_name;
