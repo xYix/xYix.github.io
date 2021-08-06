@@ -241,7 +241,9 @@
             write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
         }
         if (win.isInside) {
-            write_link('回到表世界', location.pathname + ezylanASearch(win.TrueSearch) + '&funval=notsayonara');
+            changemode = location.pathname + ezylanASearch(win.TrueSearch) + '&funval=notsayonara';
+            if (win.Postname) changemode += '&postname=' + win.Postname;
+            write_link('回到表世界', changemode);
         }
         SideBarConBlock.appendChild(SideBarCon);
         win.Write_Daily_Message(SideBarConBlock);
