@@ -75,10 +75,12 @@
         'Tutte 多项式刚被发明时，由于是色多项式的二元扩展，所以 Tutte 希望它的名字里有“色”“双重”。于是 Tutte 把它命名为了“重铬酸盐”。',
         '左偏树的“左偏”和“左倾”在英语里还真是同一个词 leftist。',
         '巴黎综合理工学院的法文名是 École Polytechnique。',
+        //OI hint
+        '计算没有浮点误差，存储才有。关注函数的导数。',
+        '生成函数是组合对象在度量上的投影。',
         //膜拜
         '我最喜欢的古人是苏轼，我最喜欢他《江城子·密州出猎》中的“会挽雕弓如满月，西北望，射天狼”，我能从中感受到他那种豪'+
         '迈的气概，我也想迫切地感受这种豪迈的气概',
-        'あなたはステラ　僕は瑇！',
         //歌词
             //Andromeda Andromeda
             'Andromeda Andromeda　答えておくれ　あなたとわたし　永久に逢えないの',
@@ -222,20 +224,6 @@
             //蓝色极星
             '夜空を(夜空を) 浮かんで(浮かんで)　キミとまた巡り逢う',
             'ただいま(ただいま) おかえり(おかえり)　ふたりごとは星になって',
-            //恋爱侵略计划
-            '恋はあなたの侵略計画なんだ　おメメに浮かべて　漫画みたいなheart　ドキドキをちょーだいな',
-            'キリ取る視線が　瞬間、合ってすぐ逸らす　言葉に隠して　dramaみたいなmood　初めに触れるのはどっち？',
-            '恋はあなたの侵略計画なんだ　抱き合って迎える　映画みたいなend　まだまだ来なさそうだ',
-            '恋をしたなら侵略計画をしよう　おハナ咲かせて　漫画みたいなcut　ドキドキをちょーだいな',
-            '気づかぬあなたに　侵略的なattack！　効き目はどれほど？　確かめさせて　今日もスキ、スキ、溢れているんだ❤',
-            //四有
-            '人の子も　どの子も　生まれが総て / 宝籤外せば　孤独と無力',
-            'THIS IS LIFE (WOW!)',
-            '最低の犠牲者に愛を——',
-            'どうしてこれをつくったの',
-            'どうしてここまでほうっておいたの',
-            'どうしてこのこをうんだの',
-            'どうしてそこにうまれてしまったの',
             //bitter choco decoration
             'bitter choco decoration　兎角言わずにたんと召し上がれ',
             'bitter choco decoration　食わず嫌いはちゃんと直さなきゃ',
@@ -265,8 +253,7 @@
             'With an awkward blackened smile / It\'s fine you can\'t love yourself / But can\'t you love a sloth?',
             'And the whole thing made me extremely sad / I thought / \'How long will the future last?\'',
             //utopiosphere
-            'Step through the gate into utopia',
-            'Sink into a world of melodia',
+            'Step through the gate into utopia / Sink into a world of melodia',
             'Tick, tock / Time doesn\'t stop / Prepare, your doubts, eat them up',
             'The sky is painted in lunacia / Florets slashed open the vein of tears',
             'Misfortuna / There is no escape, my dear',
