@@ -1050,3 +1050,8 @@ euclid
 linear-algebra
 combinatorics
 bijective-proof
+loj-3391
+loj#3391 题解 - 【2020-2021 集训队作业】大鱼洽水
+solution
+1
+euclid

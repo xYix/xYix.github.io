@@ -1264,6 +1264,14 @@
 		'last_modi' : '2021-08-06',
 		'tag' : ['bijective-proof','combinatorics','euclid','linear-algebra',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '159',
+		'post_name' : 'loj-3391',
+		'post_chinese_name' : 'loj#3391 题解 - 【2020-2021 集训队作业】大鱼洽水',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-08',
+		'tag' : ['euclid',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
