@@ -44,7 +44,7 @@
 	tags_chinese['graph-theory'] = '图论';
 	tags_chinese['dfa-theory'] = '🤖自动机理论🤖';
 	tags_chinese['matroid'] = '拟阵';
-	tags_chinese['scp'] = "SCP 作品"
+	tags_chinese['scp'] = "SCP 作品";
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;

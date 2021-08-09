@@ -1060,4 +1060,4 @@ loj#3390 题解 - 【2020-2021 集训队作业】大鱼治水
 solution
 2
 euclid
-interactive
+interact

@@ -37,4 +37,9 @@
 - 2021/7/30：给 ZJOI2019 D2T3 补了代码。
 - 2021/8/2：更新一篇博文 [忽略 2004](https://xyix.github.io/posts/?&sortby=id&postname=loj-6778)。
 - 2021/8/3：更新一篇博文 [小修和小栋生♂成树](https://xyix.github.io/posts/?&sortby=id&postname=loj-2488)。
+- 2021/8/4：更新一篇博文 [Bitwise Magic](https://xyix.github.io/posts/?&sortby=id&postname=cf-1408-i)。
+- 2021/8/5：更新一篇博文 [O(n^3) 矩阵特征多项式计算笔记](https://xyix.github.io/posts/?&sortby=id&postname=how-to-calc-chara-poly)。
+- 2021/8/6：更新一篇博文 [Tangjz 的背包](https://xyix.github.io/posts/?&sortby=id&postname=loj-562)。
+- 2021/8/7：更新一篇博文 [大鱼洽水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3391)。
+- 2021/8/9：更新一篇博文 [大鱼治水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3390)。
 
