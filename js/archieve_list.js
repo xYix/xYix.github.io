@@ -1269,8 +1269,16 @@
 		'post_name' : 'loj-3391',
 		'post_chinese_name' : 'loj#3391 题解 - 【2020-2021 集训队作业】大鱼洽水',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-08',
+		'last_modi' : '2021-08-09',
 		'tag' : ['euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '160',
+		'post_name' : 'loj-3390',
+		'post_chinese_name' : 'loj#3390 题解 - 【2020-2021 集训队作业】大鱼治水',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-09',
+		'tag' : ['euclid','interactive',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
