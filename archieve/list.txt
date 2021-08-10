@@ -1067,3 +1067,8 @@ solution
 2
 construction
 bijective-proof
+luogu-6980
+luoguP6980 题解 - 【NEERC2015】Hypercube
+solution
+1
+safe

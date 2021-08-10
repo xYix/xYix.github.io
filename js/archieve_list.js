@@ -1288,6 +1288,14 @@
 		'last_modi' : '2021-08-09',
 		'tag' : ['bijective-proof','construction',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '162',
+		'post_name' : 'luogu-6980',
+		'post_chinese_name' : 'luoguP6980 题解 - 【NEERC2015】Hypercube',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-10',
+		'tag' : ['safe',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
