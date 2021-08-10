@@ -41,5 +41,5 @@
 - 2021/8/5：更新一篇博文 [O(n^3) 矩阵特征多项式计算笔记](https://xyix.github.io/posts/?&sortby=id&postname=how-to-calc-chara-poly)。
 - 2021/8/6：更新一篇博文 [Tangjz 的背包](https://xyix.github.io/posts/?&sortby=id&postname=loj-562)。
 - 2021/8/7：更新一篇博文 [大鱼洽水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3391)。
-- 2021/8/9：更新一篇博文 [大鱼治水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3390)。
+- 2021/8/9：更新两篇博文 [大鱼治水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3390) 和 [停车问题到树的双射](https://xyix.github.io/posts/?&sortby=id&postname=parking-and-tree)。
 

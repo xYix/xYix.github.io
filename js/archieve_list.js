@@ -1288,14 +1288,6 @@
 		'last_modi' : '2021-08-09',
 		'tag' : ['bijective-proof','construction',],
 	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '162',
-		'post_name' : 'construction',
-		'post_chinese_name' : '哲哲帝课件学习笔记',
-		'type_name' : 'solution',
-		'last_modi' : '2021-08-09',
-		'tag' : ['ban','construction',],
-	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
