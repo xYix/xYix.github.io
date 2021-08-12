@@ -42,4 +42,6 @@
 - 2021/8/6：更新一篇博文 [Tangjz 的背包](https://xyix.github.io/posts/?&sortby=id&postname=loj-562)。
 - 2021/8/7：更新一篇博文 [大鱼洽水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3391)。
 - 2021/8/9：更新两篇博文 [大鱼治水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3390) 和 [停车问题到树的双射](https://xyix.github.io/posts/?&sortby=id&postname=parking-and-tree)。
+- 2021/8/10：更新一篇博文 [Hypercube](https://xyix.github.io/posts/?&sortby=id&postname=luogu-6980)。
+- 2021/8/12：更新 [Tangjz 的背包](https://xyix.github.io/posts/?&sortby=id&postname=loj-562) 课后思考题的解答，冷静了一下发现是个 sb 题。~~（其实是把 $r!_q$ 幻视成 $r!$ 了）~~
 
