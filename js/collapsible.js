@@ -1,4 +1,4 @@
-// 实验作，里面套公式会比较痛苦，目前计划是用于在 xyix.github.io 中复刻
+// 实验作，里面套公式会比较痛苦
 setopa = function(data, i) {
     data.style.opacity = 0.05 * i;
 };
