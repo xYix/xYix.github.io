@@ -1261,7 +1261,7 @@
 		'post_name' : 'loj-562',
 		'post_chinese_name' : 'loj#562 题解 - 【LibreOJ Round #9】Tangjz 的背包',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-06',
+		'last_modi' : '2021-08-12',
 		'tag' : ['bijective-proof','combinatorics','euclid','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1293,8 +1293,16 @@
 		'post_name' : 'luogu-6980',
 		'post_chinese_name' : 'luoguP6980 题解 - 【NEERC2015】Hypercube',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-10',
+		'last_modi' : '2021-08-12',
 		'tag' : ['safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '163',
+		'post_name' : 'exc-inc-ex',
+		'post_chinese_name' : '更更炫酷的反演魔术',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-08-13',
+		'tag' : ['combinatorics','exc-inc','generating-function',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

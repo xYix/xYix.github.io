@@ -1072,3 +1072,10 @@ luoguP6980 题解 - 【NEERC2015】Hypercube
 solution
 1
 safe
+exc-inc-ex
+更更炫酷的反演魔术
+algorithm
+3
+exc-inc
+combinatorics
+generating-function
