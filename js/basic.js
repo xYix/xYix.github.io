@@ -115,7 +115,7 @@
     win.ThemeColor = localStorage.getItem('themecolor');
 
     win.isInside = 0;
-    if (win.Funval) {
+    if (win.Funval && win.Funval != '41') {
         localStorage.setItem("isinside", win.Funval === 'sayonara');
         let newloc = location.pathname + ezylanASearch(
             {
@@ -127,7 +127,6 @@
         );
         if (win.Postname) newloc += '&postname=' + win.Postname;
         location.replace(newloc);
-        if (win.Funval != '41') win.Funval = undefined;
     }
     if (localStorage.getItem('isinside') === 'true') win.isInside = 1;
 
