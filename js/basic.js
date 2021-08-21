@@ -405,10 +405,10 @@
             if(postinfo.tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'interact') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'commu') Postinfo_tags_a.style = 'color: orange';
-            if(postinfo.tag[i] === 'safe') Postinfo_tags_a.style = 'color: purple';
-            if(postinfo.tag[i] === 'euclid') Postinfo_tags_a.style = 'color: purple';
-            if(postinfo.tag[i] === 'keter') Postinfo_tags_a.style = 'color: purple';
-            if(postinfo.tag[i] === 'apollyon') Postinfo_tags_a.style = 'color: purple';
+            if(postinfo.tag[i] === 'safe') Postinfo_tags_a.style = 'color: violet';
+            if(postinfo.tag[i] === 'euclid') Postinfo_tags_a.style = 'color: violet';
+            if(postinfo.tag[i] === 'keter') Postinfo_tags_a.style = 'color: violet';
+            if(postinfo.tag[i] === 'apollyon') Postinfo_tags_a.style = 'color: violet';
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
         }
