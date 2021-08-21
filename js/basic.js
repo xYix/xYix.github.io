@@ -402,9 +402,13 @@
             Postinfo_tags_a.textContent = tags_chinese[postinfo.tag[i]];
             if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
-            if(postinfo.tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: yellow';
-            if(postinfo.tag[i] === 'interact') Postinfo_tags_a.style = 'color: yellow';
-            if(postinfo.tag[i] === 'commu') Postinfo_tags_a.style = 'color: yellow';
+            if(postinfo.tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: orange';
+            if(postinfo.tag[i] === 'interact') Postinfo_tags_a.style = 'color: orange';
+            if(postinfo.tag[i] === 'commu') Postinfo_tags_a.style = 'color: orange';
+            if(postinfo.tag[i] === 'safe') Postinfo_tags_a.style = 'color: purple';
+            if(postinfo.tag[i] === 'euclid') Postinfo_tags_a.style = 'color: purple';
+            if(postinfo.tag[i] === 'keter') Postinfo_tags_a.style = 'color: purple';
+            if(postinfo.tag[i] === 'apollyon') Postinfo_tags_a.style = 'color: purple';
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
         }
@@ -618,9 +622,13 @@
             TagsRow1a.appendChild(TagsRow1strong);
             if(Tag === 'writing') TagsRow1a.style = 'color: orange';
             if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
-            if(Tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: yellow';
-            if(Tag[i] === 'interact') Postinfo_tags_a.style = 'color: yellow';
-            if(Tag[i] === 'commu') Postinfo_tags_a.style = 'color: yellow';
+            if(Tag === 'submit-answer') TagsRow1a.style = 'color: orange';
+            if(Tag === 'interact') TagsRow1a.style = 'color: orange';
+            if(Tag === 'commu') TagsRow1a.style = 'color: orange';
+            if(Tag === 'safe') TagsRow1a.style = 'color: violet';
+            if(Tag === 'euclid') TagsRow1a.style = 'color: violet';
+            if(Tag === 'keter') TagsRow1a.style = 'color: violet';
+            if(Tag === 'apollyon') TagsRow1a.style = 'color: violet';
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
             let TagsRow2 = document.createElement('th');
