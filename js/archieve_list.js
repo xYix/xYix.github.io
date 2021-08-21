@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-07-28',
+		'last_modi' : '2021-08-14',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -565,7 +565,7 @@
 		'post_name' : 'circle-union',
 		'post_chinese_name' : '圆面积并的靠谱做法',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-08-21',
 		'tag' : ['calculating-geometry',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1303,6 +1303,14 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-08-13',
 		'tag' : ['combinatorics','exc-inc','generating-function',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '164',
+		'post_name' : 'uoj-619',
+		'post_chinese_name' : 'uoj#619 题解 - 【JOISC2021】古老的机器',
+		'type_name' : 'solution',
+		'last_modi' : '',
+		'tag' : ['',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

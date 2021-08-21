@@ -402,6 +402,9 @@
             Postinfo_tags_a.textContent = tags_chinese[postinfo.tag[i]];
             if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
             if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
+            if(postinfo.tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: yellow';
+            if(postinfo.tag[i] === 'interact') Postinfo_tags_a.style = 'color: yellow';
+            if(postinfo.tag[i] === 'commu') Postinfo_tags_a.style = 'color: yellow';
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
         }
@@ -615,6 +618,9 @@
             TagsRow1a.appendChild(TagsRow1strong);
             if(Tag === 'writing') TagsRow1a.style = 'color: orange';
             if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
+            if(Tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: yellow';
+            if(Tag[i] === 'interact') Postinfo_tags_a.style = 'color: yellow';
+            if(Tag[i] === 'commu') Postinfo_tags_a.style = 'color: yellow';
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
             let TagsRow2 = document.createElement('th');
