@@ -1310,7 +1310,7 @@
 		'post_chinese_name' : 'uoj#619 题解 - 【JOISC2021】古老的机器',
 		'type_name' : 'solution',
 		'last_modi' : '',
-		'tag' : ['',],
+		'tag' : ['commu',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
