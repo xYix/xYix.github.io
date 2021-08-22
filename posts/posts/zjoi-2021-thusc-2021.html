@@ -2,10 +2,11 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>2021 省选游记兼神秘比赛游记</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -66,7 +67,7 @@ div.hr:focus { cursor: none; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
 .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -91,6 +92,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -135,15 +137,6 @@ kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
@@ -154,14 +147,60 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
 @media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix { height: auto; margin-top: 16px; margin-bottom: 16px; }
 .md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
 
 
 :root {
@@ -177,10 +216,11 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
     /* open-sans-700italic - latin-ext_latin */
   html {
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -349,7 +389,7 @@ table {
     word-break: initial;
 }
 table tr {
-    border-top: 1px solid #dfe2e5;
+    border: 1px solid #dfe2e5;
     margin: 0;
     padding: 0;
 }
@@ -523,9 +563,9 @@ header, .context-menu, .megamenu-content, footer{
     color: #b4654d;
 }
 
-.html-for-mac .context-menu {
+/*.html-for-mac {
     --item-hover-bg-color: #E6F0FE;
-}
+}*/
 
 #md-notification .btn {
     border: 0;
@@ -533,6 +573,7 @@ header, .context-menu, .megamenu-content, footer{
 
 .dropdown-menu .divider {
     border-color: #e5e5e5;
+    opacity: 0.4;
 }
 
 .ty-preferences .window-content {
@@ -544,11 +585,165 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
- :root {--mermaid-font-zoom:2em ;} 
-</style>
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						} :root {--mermaid-font-zoom:2em ;} 
+</style><title>2021 省选游记</title>
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="part-1---zjoi-游记" class="md-header-anchor"></a><span>Part 1 - ZJOI 游记</span></h1><p><span>我只需要在省选中拿到 750 就可以进队了，真是太简单了，有手就行啊！</span></p><p><span>反正也就是老年选手划划水，别考太差被【】D 就行了，来年再战来年再战。</span></p><p><span>就是能不能别考构造啊，求求了</span>&#x1f64f;</p><!--0. 越走越是觉得无力啊。矛盾，太矛盾了，我无时无刻不在反驳我自己。这样的争斗最终能否有答案？我在等待。--><!--FUCK:0. 乐了，缝合怪又出来跳了--><!--1. 如果有信仰可以皈依，可以停止无休无止进展缓慢的思考和辩论，会是好事吗？--><!--2. 这样的挣扎真能最终开出美丽的花朵吗？还是说这是死路呢？--><!--3. 我做的对吗？--><!--4. 我认为邪恶的人邪恶吗？我认为善良的人善良吗？--><!--RE:4. 我受的蒙蔽比那些我认为被蒙蔽的人少吗？还是我已走入某种死路而不自知？--><!--RE:RE:4. 我的思考比那些人高贵吗？--><!--5.努力和坚持是否总有结果？"你的勇敢无人知晓，你的坚持引人发笑。"--><!--RE:5. 我能"努力和坚持"吗？"努力和坚持"是某种天赋的能力吗？--><!--FUCK:RE:5. 多少沾点吧，自己不努力还能怪天可真牛脾--><!--FUCK:FUCK:RE:5. 还不是意志力，还不是不努力😅--><!--RE:1. 思考的深刻和现实的成功，哪个更重要？--><!--FUCK:RE:1. 人可以不思考，但不可以不生活。--><!--6. 政治信仰是什么？它和宗教信仰区别何在？--><!--RE:6. 选择何种政治信仰？--><!--RE:RE:6. 为更大的人类善服务是否有意义？其他的生活是否没有意义？--><!--RE:3. 我幸运吗？我成功吗？这是否是一个励志故事？--><!--FUCK:RE:3. 你只是运气好。--><!--FUCK:RE:3. 你只是运气差。--><!--7. 有些东西高于其他的快乐。"理智"和它的运用是至高无上的。--><!--PS. 脑部压迫感似乎消失了。--><!--RE:(RE:4.)&&7. 那些我认为受蒙蔽的人是否拥有和我同样的理智，或者恰当地运用了它们的理智？为什么它们会有如此错乱的观念？--><!--RE:(RE:(RE:4.)&&7.)&&1. 这是否就是停止思考的后果？--><!--RE:RE:3. 我是否受到了不公正的对待？--><!--RE:(RE:RE:3.)&&(RE:6.) 我能否改变它？--><!--RE:(RE:5.)&&(RE:1.) 我是残疾的吗？--><!--FUCK:(RE:4.)&&4. 那他妈绝对是令人恶心。我都怀疑它们是不是真的有任何理解能力。--><!--RE:FUCK:(RE:4.)&&4. 我.绝.对.不.希.望.变.成.那.样.的.人.--><!--RE:RE:FUCK:(RE:4.)&&4. 为什么它们全都一个样？这是某种命中注定吗？我决不能停止思考。--><h2><a name="day1" class="md-header-anchor"></a><span>Day1</span></h2><p><span>太搞笑了，被一道差分约束一道最短路打爆了</span></p><p><span>最短路是什么新科技，咋没听说过啊(ﾟ∀。)</span></p><p><span>而且场上没拍 T1，不知道 FST 没有，听说大样例巨水</span></p><p><span>最好情况：100+30+44，是的我 T2 没写 </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.789ex" height="1.994ex" viewBox="0 -755.9 4645.1 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E1-MJMATHI-6E" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="0" id="E1-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E1-MJMATHI-6D" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="0" id="E1-MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMATHI-6E" x="0" y="0"></use><use xlink:href="#E1-MJMAIN-3D" x="877" y="0"></use><use xlink:href="#E1-MJMATHI-6D" x="1933" y="0"></use><use xlink:href="#E1-MJMAIN-3D" x="3089" y="0"></use><use xlink:href="#E1-MJMAIN-33" x="4145" y="0"></use></g></svg></span><script type="math/tex">n=m=3</script></p><h2><a name="day2" class="md-header-anchor"></a><span>Day2</span></h2><p><span>My laptop isn&#39;t beside me now so I am typing on my phone</span></p><p><span>but there is a bug or something which results in that I can&#39;t use Chinese</span></p><p><span>I was so silly that I didn&#39;t even finish the bruteforce of Task 3 (my way to do it was for the deads instead of the alives)</span></p><blockquote><p><span>注：当时此处想表达的其实是&quot;我的做法很阴间&quot;，但是结果写出来的这个句子也很阴间</span></p></blockquote><p><span>Brother Ming told me the solution of Task 3 without O(nlogn) Domination Tree technique, he is so strong!!!</span></p><p><span>hehezhou was reciting the code</span>
-<span> of Domination Tree days ago, but he didn&#39;t debug it out in the competition</span></p><p><span>Task 1 and Task 2 seemed easy and was killed by everyone</span></p><p><span>expected grade ：100+100+0</span></p><h2><a name="day" class="md-header-anchor"></a><span>Day?</span></h2><p><span>没 fst，D2T3 还捞了 5 分</span></p><p><span>我 D2T3 打得合理一点就上队线了/fn</span></p><p><span>可惜 NOIP 属实太拉</span></p><p><span>喝喝粥不出意料地 A 队了，ZJ-002 hhz！</span></p><p><span>明哥大概是 rank 22, 23 的样子，戚大师虽然是 rank18（钱哥 IOI 金牌稳了，而且今年女队打上了队线，所以 rank18 恰好是队线下面一名）但是他似乎没有买 C 的意愿。</span></p><p><span>听说这一届 THU 一等约的政策好起来了，祝他们文化课顺利吧。</span></p><h1><a name="part-2---神秘比赛游记" class="md-header-anchor"></a><span>Part 2 - 神秘比赛游记</span></h1><h2><a name="day-" class="md-header-anchor"></a><span>Day-?</span></h2><p><span>在卷学考和冲高端（悲）</span></p></div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='part-1---zjoi-游记'><span>Part 1 - ZJOI 游记</span></h1><p><span>我只需要在省选中拿到 750 就可以进队了，真是太简单了，有手就行啊！</span></p><p><span>反正也就是老年选手划划水，别考太差被【】D 就行了，来年再战来年再战。</span></p><p><span>就是能不能别考构造啊，求求了</span>&#x1f64f;</p><!--0. 越走越是觉得无力啊。矛盾，太矛盾了，我无时无刻不在反驳我自己。这样的争斗最终能否有答案？我在等待。--><!--FUCK:0. 乐了，缝合怪又出来跳了--><!--1. 如果有信仰可以皈依，可以停止无休无止进展缓慢的思考和辩论，会是好事吗？--><!--2. 这样的挣扎真能最终开出美丽的花朵吗？还是说这是死路呢？--><!--3. 我做的对吗？--><!--4. 我认为邪恶的人邪恶吗？我认为善良的人善良吗？--><!--RE:4. 我受的蒙蔽比那些我认为被蒙蔽的人少吗？还是我已走入某种死路而不自知？--><!--RE:RE:4. 我的思考比那些人高贵吗？--><!--5.努力和坚持是否总有结果？"你的勇敢无人知晓，你的坚持引人发笑。"--><!--RE:5. 我能"努力和坚持"吗？"努力和坚持"是某种天赋的能力吗？--><!--FUCK:RE:5. 多少沾点吧，自己不努力还能怪天可真牛脾--><!--FUCK:FUCK:RE:5. 还不是意志力，还不是不努力😅--><!--RE:1. 思考的深刻和现实的成功，哪个更重要？--><!--FUCK:RE:1. 人可以不思考，但不可以不生活。--><!--6. 政治信仰是什么？它和宗教信仰区别何在？--><!--RE:6. 选择何种政治信仰？--><!--RE:RE:6. 为更大的人类善服务是否有意义？其他的生活是否没有意义？--><!--RE:3. 我幸运吗？我成功吗？这是否是一个励志故事？--><!--FUCK:RE:3. 你只是运气好。--><!--FUCK:RE:3. 你只是运气差。--><!--7. 有些东西高于其他的快乐。"理智"和它的运用是至高无上的。--><!--PS. 脑部压迫感似乎消失了。--><!--RE:(RE:4.)&&7. 那些我认为受蒙蔽的人是否拥有和我同样的理智，或者恰当地运用了它们的理智？为什么它们会有如此错乱的观念？--><!--RE:(RE:(RE:4.)&&7.)&&1. 这是否就是停止思考的后果？--><!--RE:RE:3. 我是否受到了不公正的对待？--><!--RE:(RE:RE:3.)&&(RE:6.) 我能否改变它？--><!--RE:(RE:5.)&&(RE:1.) 我是残疾的吗？--><!--FUCK:(RE:4.)&&4. 那他妈绝对是令人恶心。我都怀疑它们是不是真的有任何理解能力。--><!--RE:FUCK:(RE:4.)&&4. 我.绝.对.不.希.望.变.成.那.样.的.人.--><!--RE:RE:FUCK:(RE:4.)&&4. 为什么它们全都一个样？这是某种命中注定吗？我决不能停止思考。--><h2 id='day1'><span>Day1</span></h2><p><span>太搞笑了，被一道差分约束一道最短路打爆了</span></p><p><span>最短路是什么新科技，咋没听说过啊(ﾟ∀。)</span></p><p><span>而且场上没拍 T1，不知道 FST 没有，听说大样例巨水</span></p><p><span>最好情况：100+30+44，是的我 T2 没写 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="10.509ex" height="1.69ex" role="img" focusable="false" viewBox="0 -665 4645.1 747" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.186ex;"><defs><path id="MJX-2-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-2-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-2-TEX-I-1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-2-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D45B" xlink:href="#MJX-2-TEX-I-1D45B"></use></g><g data-mml-node="mo" transform="translate(877.8,0)"><use data-c="3D" xlink:href="#MJX-2-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(1933.6,0)"><use data-c="1D45A" xlink:href="#MJX-2-TEX-I-1D45A"></use></g><g data-mml-node="mo" transform="translate(3089.3,0)"><use data-c="3D" xlink:href="#MJX-2-TEX-N-3D"></use></g><g data-mml-node="mn" transform="translate(4145.1,0)"><use data-c="33" xlink:href="#MJX-2-TEX-N-33"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><mi>m</mi><mo>=</mo><mn>3</mn></math></mjx-assistive-mml></mjx-container><script type="math/tex">n=m=3</script></p><h2 id='day2'><span>Day2</span></h2><p><span>My laptop isn&#39;t beside me now so I am typing on my phone</span></p><p><span>but there is a bug or something which results in that I can&#39;t use Chinese</span></p><p><span>I was so silly that I didn&#39;t even finish the bruteforce of Task 3 (my way to do it was for the deads instead of the alives)</span></p><blockquote><p><span>注：当时此处想表达的其实是&quot;我的做法很阴间&quot;，但是结果写出来的这个句子也很阴间</span></p></blockquote><p><span>Brother Ming told me the solution of Task 3 without O(nlogn) Domination Tree technique, he is so strong!!!</span></p><p><span>hehezhou was reciting the code</span>
+<span> of Domination Tree days ago, but he didn&#39;t debug it out in the competition</span></p><p><span>Task 1 and Task 2 seemed easy and was killed by everyone</span></p><p><span>expected grade ：100+100+0</span></p><h2 id='day'><span>Day?</span></h2><p><span>没 fst，D2T3 还捞了 5 分</span></p><p><span>我 D2T3 打得合理一点就上队线了/fn</span></p><p><span>可惜 NOIP 属实太拉</span></p><p><span>喝喝粥不出意料地 A 队了，ZJ-002 hhz！</span></p><p><span>明哥大概是 rank 22, 23 的样子，戚大师虽然是 rank18（钱哥 IOI 金牌稳了，而且今年女队打上了队线，所以 rank18 恰好是队线下面一名）但是他似乎没有买 C 的意愿。</span></p><p><span>听说这一届 THU 一等约的政策好起来了，祝他们文化课顺利吧。</span></p></div></div>
 </body>
 </html>

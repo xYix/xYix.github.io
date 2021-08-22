@@ -819,9 +819,9 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '103',
 		'post_name' : 'zjoi-2021-thusc-2021',
-		'post_chinese_name' : '2021 省选游记兼神秘比赛游记',
+		'post_chinese_name' : '2021 省选游记',
 		'type_name' : 'other',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-08-22',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1094,7 +1094,7 @@
 		'post_chinese_name' : 'luoguP7599 题解 - 【APIO2021】雨林跳跃',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-09',
-		'tag' : ['euclid','graph-theory','lmoliver',],
+		'tag' : ['euclid','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '138',
