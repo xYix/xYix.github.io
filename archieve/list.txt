@@ -1084,3 +1084,8 @@ uoj#619 题解 - 【JOISC2021】古老的机器
 solution
 1
 commu
+loj-6786
+loj#6786 题解 - 克莱茵蓝彼岸花
+solution
+1
+keter
