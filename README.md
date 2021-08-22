@@ -43,5 +43,8 @@
 - 2021/8/7：更新一篇博文 [大鱼洽水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3391)。
 - 2021/8/9：更新两篇博文 [大鱼治水](https://xyix.github.io/posts/?&sortby=id&postname=loj-3390) 和 [停车问题到树的双射](https://xyix.github.io/posts/?&sortby=id&postname=parking-and-tree)。
 - 2021/8/10：更新一篇博文 [Hypercube](https://xyix.github.io/posts/?&sortby=id&postname=luogu-6980)。
-- 2021/8/12：更新 [Tangjz 的背包](https://xyix.github.io/posts/?&sortby=id&postname=loj-562) 课后思考题的解答，冷静了一下发现是个 sb 题。~~（其实是把 $r!_q$ 幻视成 $r!$ 了）~~
+- 2021/8/12：更新 [Tangjz 的背包](https://xyix.github.io/posts/?&sortby=id&postname=loj-562) 课后思考题的解答，冷静了一下发现是个 sb 题。~~（之前把 $r!_q$ 幻视成 $r!$ 了）~~
+- 2021/8/13：更新一篇博文 [更更炫酷的反演魔术](https://xyix.github.io/posts/?&sortby=id&postname=exc-inc-ex)！越来越抽象了。应该说这回我们真的探到了容斥的本质。（不过对利用容斥解题没有什么意义（悲））
+- 2021/8/21：更新一篇博文 [古老的机器](https://xyix.github.io/posts/?&sortby=id&postname=uoj-616)。
+- 2021/8/22：更新一篇博文 [克莱茵蓝彼岸花](https://xyix.github.io/posts/?&sortby=id&postname=loj-6786)。
 
