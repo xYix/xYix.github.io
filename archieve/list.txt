@@ -1093,3 +1093,5 @@ recent-kouhu
 solution
 3
 keter
+linear-algebra
+graph-theory

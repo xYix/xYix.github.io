@@ -1326,7 +1326,7 @@
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-22',
-		'tag' : ['exc-inc','generating-function','keter',],
+		'tag' : ['graph-theory','keter','linear-algebra',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
