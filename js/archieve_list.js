@@ -1306,10 +1306,10 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '164',
-		'post_name' : 'uoj-619',
-		'post_chinese_name' : 'uoj#619 题解 - 【JOISC2021】古老的机器',
+		'post_name' : 'uoj-616',
+		'post_chinese_name' : 'uoj#616 题解 - 【JOISC2021】古老的机器',
 		'type_name' : 'solution',
-		'last_modi' : '',
+		'last_modi' : '2021-08-21',
 		'tag' : ['commu',],
 	};
 	archieve_list[archieve_list.length] = {

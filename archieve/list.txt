@@ -1079,8 +1079,8 @@ algorithm
 exc-inc
 combinatorics
 generating-function
-uoj-619
-uoj#619 题解 - 【JOISC2021】古老的机器
+uoj-616
+uoj#616 题解 - 【JOISC2021】古老的机器
 solution
 1
 commu
