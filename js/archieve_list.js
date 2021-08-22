@@ -1320,6 +1320,14 @@
 		'last_modi' : '2021-08-22',
 		'tag' : ['keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '166',
+		'post_name' : 'recent-kouhu',
+		'post_chinese_name' : '近期嘴巴杂记',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-22',
+		'tag' : ['exc-inc','generating-function','keter',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

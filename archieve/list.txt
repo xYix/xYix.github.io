@@ -1088,3 +1088,8 @@ loj#6786 题解 - 克莱茵蓝彼岸花
 solution
 1
 keter
+recent-kouhu
+近期嘴巴杂记
+solution
+3
+keter
