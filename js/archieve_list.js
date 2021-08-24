@@ -1328,6 +1328,14 @@
 		'last_modi' : '2021-08-22',
 		'tag' : ['graph-theory','keter','linear-algebra',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '167',
+		'post_name' : 'ptz-camp',
+		'post_chinese_name' : '毛营 2021（夏）游记',
+		'type_name' : 'other',
+		'last_modi' : '2021-08-24',
+		'tag' : ['combinatorics','generating-function','lagrange-inversion',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
