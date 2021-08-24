@@ -1336,6 +1336,14 @@
 		'last_modi' : '2021-08-24',
 		'tag' : ['combinatorics','generating-function','lagrange-inversion',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '168',
+		'post_name' : 'online-convolution',
+		'post_chinese_name' : '回忆半在线 / 在线卷积',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-08-24',
+		'tag' : ['polynomial',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
