@@ -1333,8 +1333,8 @@
 		'post_name' : 'ptz-camp',
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
-		'last_modi' : '2021-08-24',
-		'tag' : ['combinatorics','generating-function','lagrange-inversion',],
+		'last_modi' : '2021-08-26',
+		'tag' : ['bijective-proof','combinatorics','data-structure','generating-function','graph-theory','lagrange-inversion','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '168',
@@ -1343,6 +1343,14 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-08-24',
 		'tag' : ['polynomial',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '169',
+		'post_name' : 'cf-98-e',
+		'post_chinese_name' : 'CF98E 题解 - Help Shrek and Donkey',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-26',
+		'tag' : ['euclid','game-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

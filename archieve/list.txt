@@ -1098,12 +1098,22 @@ graph-theory
 ptz-camp
 毛营 2021（夏）游记
 other
-3
+7
 combinatorics
 generating-function
 lagrange-inversion
+randomization
+graph-theory
+bijective-proof
+data-structure
 online-convolution
 回忆半在线 / 在线卷积
 algorithm
 1
 polynomial
+cf-98-e
+CF98E 题解 - Help Shrek and Donkey
+solution
+2
+euclid
+game-theory
