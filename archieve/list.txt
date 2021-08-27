@@ -1117,3 +1117,9 @@ solution
 2
 euclid
 game-theory
+luogu-7054
+luoguP7054 题解 - 【NWRRC2015】Graph
+solution
+2
+keter
+graph-theory
