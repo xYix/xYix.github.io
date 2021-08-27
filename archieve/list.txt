@@ -1098,7 +1098,7 @@ graph-theory
 ptz-camp
 毛营 2021（夏）游记
 other
-7
+8
 combinatorics
 generating-function
 lagrange-inversion
@@ -1106,6 +1106,7 @@ randomization
 graph-theory
 bijective-proof
 data-structure
+ban
 online-convolution
 回忆半在线 / 在线卷积
 algorithm
