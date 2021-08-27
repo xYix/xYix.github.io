@@ -1124,3 +1124,9 @@ solution
 2
 keter
 graph-theory
+xj-1000-medako
+XJ-1000：破晓之时
+other
+2
+scp
+ban
