@@ -799,7 +799,7 @@ combinatorics
 generating-function
 how-to-study-well
 如何解决效率低下的问题
-other
+library
 1
 ban
 luogu-6965
@@ -1037,10 +1037,9 @@ other
 ban
 xj-404
 SCP-XJ-404 - "禁止访问"
-other
-2
-ban
 scp
+1
+ban
 loj-562
 loj#562 题解 - 【LibreOJ Round #9】Tangjz 的背包
 solution
@@ -1091,10 +1090,12 @@ keter
 recent-kouhu
 近期嘴巴杂记
 solution
-3
+5
 keter
 linear-algebra
 graph-theory
+data-structure
+calculating-geometry
 ptz-camp
 毛营 2021（夏）游记
 other
@@ -1131,9 +1132,8 @@ keter
 graph-theory
 xj-1000-medako
 XJ-1000：破晓之时
-other
-2
 scp
+1
 ban
 ptz-camp-7-a
 毛营 Day7 A 题解 - Goldberg Machine 2

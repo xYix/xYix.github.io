@@ -956,7 +956,7 @@
 		'postid' : '120',
 		'post_name' : 'how-to-study-well',
 		'post_chinese_name' : '如何解决效率低下的问题',
-		'type_name' : 'other',
+		'type_name' : 'library',
 		'last_modi' : '2021-08-05',
 		'tag' : ['ban',],
 	};
@@ -1252,9 +1252,9 @@
 		'postid' : '157',
 		'post_name' : 'xj-404',
 		'post_chinese_name' : 'SCP-XJ-404 - "禁止访问"',
-		'type_name' : 'other',
+		'type_name' : 'scp',
 		'last_modi' : '2021-08-06',
-		'tag' : ['ban','scp',],
+		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '158',
@@ -1325,8 +1325,8 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-28',
-		'tag' : ['graph-theory','keter','linear-algebra',],
+		'last_modi' : '2021-08-31',
+		'tag' : ['calculating-geometry','data-structure','graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '167',
@@ -1364,9 +1364,9 @@
 		'postid' : '171',
 		'post_name' : 'xj-1000-medako',
 		'post_chinese_name' : 'XJ-1000：破晓之时',
-		'type_name' : 'other',
+		'type_name' : 'scp',
 		'last_modi' : '',
-		'tag' : ['ban','scp',],
+		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '172',

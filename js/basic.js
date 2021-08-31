@@ -279,6 +279,8 @@
                 if (win.Type == 'solution') win.Title[nowlen] += '收容物';
                 else if (win.Type == 'algorithm') win.Title[nowlen] += 'Thaumiel级';
                 else if (win.Type == 'other') win.Title[nowlen] += '外勤记录';
+                else if (win.Type == 'scp') win.Title[nowlen] += 'SCP文档';
+                else if (win.Type == 'library') win.Title[nowlen] += '图书馆格式';
                 else win.Title[nowlen] += '不明分类';
             }
             if (win.Tags.length !== 0) {
