@@ -1371,10 +1371,10 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '172',
 		'post_name' : 'ptz-camp-7-a',
-		'post_chinese_name' : '毛营 Day7 A 题解 - Goldberg Machine2',
+		'post_chinese_name' : '毛营 Day7 A 题解 - Goldberg Machine 2',
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-31',
-		'tag' : ['combinatorics','randomization',],
+		'tag' : ['apollyon','combinatorics','randomization',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
