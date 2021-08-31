@@ -1325,7 +1325,7 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-22',
+		'last_modi' : '2021-08-28',
 		'tag' : ['graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1333,7 +1333,7 @@
 		'post_name' : 'ptz-camp',
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
-		'last_modi' : '2021-08-26',
+		'last_modi' : '2021-08-31',
 		'tag' : ['ban','bijective-proof','combinatorics','data-structure','generating-function','graph-theory','lagrange-inversion','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1367,6 +1367,14 @@
 		'type_name' : 'other',
 		'last_modi' : '',
 		'tag' : ['ban','scp',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '172',
+		'post_name' : 'ptz-camp-7-a',
+		'post_chinese_name' : '毛营 Day7 A 题解 - Goldberg Machine2',
+		'type_name' : 'solution',
+		'last_modi' : '2021-08-31',
+		'tag' : ['combinatorics','randomization',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
