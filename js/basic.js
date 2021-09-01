@@ -282,6 +282,7 @@
                 else if (win.Type == 'scp') win.Title[nowlen] += 'SCP文档';
                 else if (win.Type == 'library') win.Title[nowlen] += '图书馆格式';
                 else win.Title[nowlen] += '不明分类';
+                console.log(win.Type);
             }
             if (win.Tags.length !== 0) {
                 let nowlen = win.Title.length;
