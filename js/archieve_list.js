@@ -1325,7 +1325,7 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-31',
+		'last_modi' : '2021-09-02',
 		'tag' : ['calculating-geometry','data-structure','graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1374,7 +1374,7 @@
 		'post_chinese_name' : '毛营 Day7 A 题解 - Goldberg Machine 2',
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-31',
-		'tag' : ['apollyon','combinatorics','randomization',],
+		'tag' : ['apollyon','ban','combinatorics','randomization',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

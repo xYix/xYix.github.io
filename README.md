@@ -47,4 +47,9 @@
 - 2021/8/13：更新一篇博文 [更更炫酷的反演魔术](https://xyix.github.io/posts/?&sortby=id&postname=exc-inc-ex)！越来越抽象了。应该说这回我们真的探到了容斥的本质。（不过对利用容斥解题没有什么意义（悲））
 - 2021/8/21：更新一篇博文 [古老的机器](https://xyix.github.io/posts/?&sortby=id&postname=uoj-616)。
 - 2021/8/22：更新一篇博文 [克莱茵蓝彼岸花](https://xyix.github.io/posts/?&sortby=id&postname=loj-6786)。
+- 2021/8/23：[近期嘴巴杂记](https://xyix.github.io/posts/?&sortby=id&postname=recent-kouhu) 开始更新；[毛营游记](https://xyix.github.io/posts/?page=0&postname=ptz-camp)（invisible）开始更新。
+- 2021/8/24：更新一篇博文 [回忆半在线/在线卷积](https://xyix.github.io/posts/?&sortby=id&postname=online-convolution)。
+- 2021/8/26：更新一篇博文 [Help Shrek and Donkey](https://xyix.github.io/posts/?&sortby=id&postname=cf-98-e)。
+- 2021/8/27：更新一篇博文 [Graph](https://xyix.github.io/posts/?&sortby=id&postname=luogu-7054)。
+- 2021/8/31：毛营结束；更新一篇博文 [Goldberg Machine 2](https://xyix.github.io/posts/?&sortby=id&postname=ptz-camp-7-a)（invisible）。
 

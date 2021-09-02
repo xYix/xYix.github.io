@@ -1138,7 +1138,8 @@ ban
 ptz-camp-7-a
 毛营 Day7 A 题解 - Goldberg Machine 2
 solution
-3
+4
 apollyon
 combinatorics
 randomization
+ban
