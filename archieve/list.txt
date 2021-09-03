@@ -87,7 +87,7 @@ solution
 3
 keter
 number-theory
-calculating-geometry
+geometry
 agc-038-e
 AGC038E 题解 - Gachapon
 solution
@@ -145,7 +145,7 @@ luoguP5155 题解 - 【USACO18】Balance Beam P
 solution
 2
 safe
-calculating-geometry
+geometry
 simplex-alg
 单纯形法学习笔记
 algorithm
@@ -230,7 +230,7 @@ solution
 5
 combinatorics
 generating-function
-calculating-geometry
+geometry
 data-structure
 keter
 uoj-272
@@ -352,7 +352,7 @@ euclid
 data-structure
 d-and-c-on-tree
 monotonicity-of-decision
-calculating-geometry
+geometry
 luogu-6910
 luoguP6910 题解 - 【ICPC2015WF】Pipe Stream
 solution
@@ -423,7 +423,7 @@ solution
 3
 safe
 data-structure
-calculating-geometry
+geometry
 loj-3385
 loj#3385 题解 - 【COCI 2020】Svjetlo
 solution
@@ -474,7 +474,7 @@ circle-union
 圆面积并的靠谱做法
 algorithm
 1
-calculating-geometry
+geometry
 ioi2020hw2
 IOI2020 集训队作业 AT 部分口胡（下）
 solution
@@ -614,7 +614,7 @@ solution
 3
 safe
 number-theory
-calculating-geometry
+geometry
 luogu-7440
 luoguP7440 题解 - 【KrOI2021】Feux Follets
 solution
@@ -788,7 +788,7 @@ interact
 polynomial
 linear-algebra
 randomization
-calculating-geometry
+geometry
 graph-theory
 det-eq-exp-trace-log-ex
 det 又等于 exp trace ln 了
@@ -1095,7 +1095,7 @@ keter
 linear-algebra
 graph-theory
 data-structure
-calculating-geometry
+geometry
 ptz-camp
 毛营 2021（夏）游记
 other
@@ -1107,7 +1107,7 @@ randomization
 graph-theory
 bijective-proof
 data-structure
-calculating-geometry
+geometry
 nimber
 linear-algebra
 construction
@@ -1143,3 +1143,8 @@ apollyon
 combinatorics
 randomization
 ban
+projective-geometry
+射影几何学习笔记
+algorithm
+1
+geometry

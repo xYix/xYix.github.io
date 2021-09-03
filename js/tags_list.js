@@ -7,7 +7,7 @@
 	tags_chinese['polynomial'] = 'x多项式x';
 	tags_chinese['number-theory'] = '🐢数论🐢';
 	tags_chinese['min25-sieve'] = 'min25筛';
-	tags_chinese['calculating-geometry'] = '📏计算几何📏';
+	tags_chinese['geometry'] = '⚪几何学⚪';
 	tags_chinese['lagrange-interpolation'] = '拉格朗日插值';
 	tags_chinese['linear-algebra'] = '线性代数';
 	tags_chinese['string'] = '字符串';
@@ -53,7 +53,7 @@
 	tags_val['polynomial'] = 4;
 	tags_val['number-theory'] = 5;
 	tags_val['min25-sieve'] = 6;
-	tags_val['calculating-geometry'] = 7;
+	tags_val['geometry'] = 7;
 	tags_val['lagrange-interpolation'] = 8;
 	tags_val['linear-algebra'] = 9;
 	tags_val['string'] = 10;

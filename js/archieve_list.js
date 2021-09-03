@@ -110,7 +110,7 @@
 		'post_chinese_name' : 'SPOJ26073 题解 - DIVCNT1',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['calculating-geometry','keter','number-theory',],
+		'tag' : ['geometry','keter','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '15',
@@ -174,7 +174,7 @@
 		'post_chinese_name' : 'luoguP5155 题解 - 【USACO18】Balance Beam P',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['calculating-geometry','safe',],
+		'tag' : ['geometry','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '23',
@@ -286,7 +286,7 @@
 		'post_chinese_name' : '浙江省选 2019 补题记录',
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-03',
-		'tag' : ['calculating-geometry','combinatorics','data-structure','generating-function','keter',],
+		'tag' : ['combinatorics','data-structure','generating-function','geometry','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '37',
@@ -422,7 +422,7 @@
 		'post_chinese_name' : 'luoguP2305 题解 - 【NOI2014】购票',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['calculating-geometry','d-and-c-on-tree','data-structure','euclid','monotonicity-of-decision',],
+		'tag' : ['d-and-c-on-tree','data-structure','euclid','geometry','monotonicity-of-decision',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '54',
@@ -502,7 +502,7 @@
 		'post_chinese_name' : 'loj#3370 题解 - 【COCI2020】3D Histogram',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['calculating-geometry','data-structure','safe',],
+		'tag' : ['data-structure','geometry','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '64',
@@ -566,7 +566,7 @@
 		'post_chinese_name' : '圆面积并的靠谱做法',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-08-21',
-		'tag' : ['calculating-geometry',],
+		'tag' : ['geometry',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '72',
@@ -742,7 +742,7 @@
 		'post_chinese_name' : 'SPOJ33039 题解 - AFS3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['calculating-geometry','number-theory','safe',],
+		'tag' : ['geometry','number-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '94',
@@ -942,7 +942,7 @@
 		'post_chinese_name' : 'UNR#4 题解 - 不含 D2T3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['calculating-geometry','graph-theory','interact','keter','linear-algebra','polynomial','randomization',],
+		'tag' : ['geometry','graph-theory','interact','keter','linear-algebra','polynomial','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '119',
@@ -1326,7 +1326,7 @@
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-02',
-		'tag' : ['calculating-geometry','data-structure','graph-theory','keter','linear-algebra',],
+		'tag' : ['data-structure','geometry','graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '167',
@@ -1334,7 +1334,7 @@
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
 		'last_modi' : '2021-08-31',
-		'tag' : ['ban','bijective-proof','calculating-geometry','combinatorics','construction','data-structure','generating-function','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
+		'tag' : ['ban','bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '168',
@@ -1375,6 +1375,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-31',
 		'tag' : ['apollyon','ban','combinatorics','randomization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '173',
+		'post_name' : 'projective-geometry',
+		'post_chinese_name' : '射影几何学习笔记',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-09-03',
+		'tag' : ['geometry',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
