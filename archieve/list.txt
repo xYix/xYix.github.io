@@ -1143,8 +1143,3 @@ apollyon
 combinatorics
 randomization
 ban
-projective-geometry
-射影几何学习笔记
-algorithm
-1
-geometry
