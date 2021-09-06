@@ -1149,3 +1149,8 @@ solution
 2
 euclid
 string
+cf-gym-103069-c
+CFgym103069C 题解 - 【EC final】Ramdom Shuffle
+solution
+1
+euclid

@@ -1384,6 +1384,14 @@
 		'last_modi' : '2021-09-06',
 		'tag' : ['euclid','string',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '174',
+		'post_name' : 'cf-gym-103069-c',
+		'post_chinese_name' : 'CFgym103069C 题解 - 【EC final】Ramdom Shuffle',
+		'type_name' : 'solution',
+		'last_modi' : '2021-09-06',
+		'tag' : ['euclid',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
