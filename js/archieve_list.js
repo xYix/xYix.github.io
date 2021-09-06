@@ -1325,7 +1325,7 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-09-02',
+		'last_modi' : '2021-09-05',
 		'tag' : ['data-structure','geometry','graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1375,6 +1375,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-31',
 		'tag' : ['apollyon','ban','combinatorics','randomization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '173',
+		'post_name' : 'soj-458',
+		'post_chinese_name' : 'soj#458 题解 - 区间本质不同回文子串计数',
+		'type_name' : 'solution',
+		'last_modi' : '2021-09-06',
+		'tag' : ['euclid','string',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
