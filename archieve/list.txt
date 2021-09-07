@@ -1155,7 +1155,7 @@ solution
 1
 euclid
 cf-gym-103069-f
-CFgym103069F 题解 - 【EC finalProf. Pang\'s sequence
+CFgym103069F 题解 - 【EC final】Prof. Pang\'s sequence
 solution
 2
 safe

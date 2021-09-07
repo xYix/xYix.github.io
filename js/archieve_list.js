@@ -1395,7 +1395,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '175',
 		'post_name' : 'cf-gym-103069-f',
-		'post_chinese_name' : 'CFgym103069F 题解 - 【EC finalProf. Pang\'s sequence',
+		'post_chinese_name' : 'CFgym103069F 题解 - 【EC final】Prof. Pang\'s sequence',
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-07',
 		'tag' : ['data-structure','safe',],
