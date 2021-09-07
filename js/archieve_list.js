@@ -1392,6 +1392,14 @@
 		'last_modi' : '2021-09-06',
 		'tag' : ['euclid',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '175',
+		'post_name' : 'cf-gym-103069-f',
+		'post_chinese_name' : 'CFgym103069F 题解 - 【EC finalProf. Pang's sequence',
+		'type_name' : 'solution',
+		'last_modi' : '2021-09-07',
+		'tag' : ['data-structure','safe',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

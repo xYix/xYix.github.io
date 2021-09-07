@@ -1154,3 +1154,9 @@ CFgym103069C 题解 - 【EC final】Ramdom Shuffle
 solution
 1
 euclid
+cf-gym-103069-f
+CFgym103069F 题解 - 【EC finalProf. Pang's sequence
+solution
+2
+safe
+data-structure
