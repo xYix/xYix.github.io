@@ -1160,3 +1160,8 @@ solution
 2
 safe
 data-structure
+hook-formula-proof
+论文翻译：钩长公式的一个概率论证明
+algorithm
+1
+combinatorics

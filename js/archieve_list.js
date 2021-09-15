@@ -1325,7 +1325,7 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-09-05',
+		'last_modi' : '2021-09-13',
 		'tag' : ['data-structure','geometry','graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1341,7 +1341,7 @@
 		'post_name' : 'online-convolution',
 		'post_chinese_name' : '回忆半在线 / 在线卷积',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-08-24',
+		'last_modi' : '2021-09-08',
 		'tag' : ['polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1381,7 +1381,7 @@
 		'post_name' : 'soj-458',
 		'post_chinese_name' : 'soj#458 题解 - 区间本质不同回文子串计数',
 		'type_name' : 'solution',
-		'last_modi' : '2021-09-06',
+		'last_modi' : '2021-09-07',
 		'tag' : ['euclid','string',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1399,6 +1399,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-07',
 		'tag' : ['data-structure','safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '176',
+		'post_name' : 'hook-formula-proof',
+		'post_chinese_name' : '论文翻译：钩长公式的一个概率论证明',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-09-15',
+		'tag' : ['combinatorics',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
