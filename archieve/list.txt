@@ -1169,5 +1169,5 @@ luogu-4502
 luoguP4502 题解 - 【ZJOI2018】保镖
 solution
 2
-calculating-geometry
+geometry
 keter

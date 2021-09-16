@@ -1414,7 +1414,7 @@
 		'post_chinese_name' : 'luoguP4502 题解 - 【ZJOI2018】保镖',
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-16',
-		'tag' : ['calculating-geometry','keter',],
+		'tag' : ['geometry','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
