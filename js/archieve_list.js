@@ -1325,7 +1325,7 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-09-13',
+		'last_modi' : '2021-09-16',
 		'tag' : ['data-structure','geometry','graph-theory','keter','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1406,7 +1406,15 @@
 		'post_chinese_name' : '论文翻译：钩长公式的一个概率论证明',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-09-15',
-		'tag' : ['combinatorics',],
+		'tag' : ['luogu-4502',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '177',
+		'post_name' : 'luoguP4502 题解 - 【ZJOI2018】保镖',
+		'post_chinese_name' : 'solution',
+		'type_name' : '2',
+		'last_modi' : '',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
