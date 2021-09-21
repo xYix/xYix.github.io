@@ -1422,7 +1422,7 @@
 		'post_chinese_name' : 'NayutanOI C 题解 - サークレット',
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-21',
-		'tag' : ['bijective-proof','combinatorics','group-theory','x-yi-x',],
+		'tag' : ['bijective-proof','combinatorics','group-theory','safe','x-yi-x',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

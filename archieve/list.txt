@@ -1174,7 +1174,8 @@ keter
 nytoi-2021-c
 NayutanOI C 题解 - サークレット
 solution
-4
+5
+safe
 x-yi-x
 bijective-proof
 combinatorics
