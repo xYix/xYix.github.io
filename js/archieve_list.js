@@ -763,7 +763,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '96',
 		'post_name' : 'nytoi-2021-a',
-		'post_chinese_name' : 'NayutanOI2021A 题解 - Andromeda Andromeda',
+		'post_chinese_name' : 'NayutanOI A 题解 - Andromeda Andromeda',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
 		'tag' : ['apollyon','bijective-proof','combinatorics','construction','x-yi-x','young-tableau',],
@@ -1075,7 +1075,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '135',
 		'post_name' : 'nytoi-2021-t',
-		'post_chinese_name' : 'NayutanOI2021T 题解 - 太阳系 disco',
+		'post_chinese_name' : 'NayutanOI T 题解 - 太阳系 disco',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
 		'tag' : ['combinatorics','construction','safe','x-yi-x',],
@@ -1155,7 +1155,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '145',
 		'post_name' : 'nytoi-2021-d',
-		'post_chinese_name' : 'NayutanOI2021D 题解 - Dance Robot Dance',
+		'post_chinese_name' : 'NayutanOI D 题解 - Dance Robot Dance',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-20',
 		'tag' : ['bijective-proof','combinatorics','construction','euclid','x-yi-x','young-tableau',],
@@ -1373,7 +1373,7 @@
 		'post_name' : 'ptz-camp-7-a',
 		'post_chinese_name' : '毛营 Day7 A 题解 - Goldberg Machine 2',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-31',
+		'last_modi' : '2021-09-17',
 		'tag' : ['apollyon','ban','combinatorics','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1415,6 +1415,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-16',
 		'tag' : ['geometry','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '178',
+		'post_name' : 'nytoi-2021-c',
+		'post_chinese_name' : 'NayutanOI C 题解 - サークレット',
+		'type_name' : 'solution',
+		'last_modi' : '2021-09-21',
+		'tag' : ['bijective-proof','combinatorics','group-theory','x-yi-x',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

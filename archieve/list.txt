@@ -632,7 +632,7 @@ combinatorics
 bijective-proof
 construction
 nytoi-2021-a
-NayutanOI2021A 题解 - Andromeda Andromeda
+NayutanOI A 题解 - Andromeda Andromeda
 solution
 6
 x-yi-x
@@ -891,7 +891,7 @@ bijective-proof
 linear-algebra
 pigeon
 nytoi-2021-t
-NayutanOI2021T 题解 - 太阳系 disco
+NayutanOI T 题解 - 太阳系 disco
 solution
 4
 x-yi-x
@@ -960,7 +960,7 @@ solution
 euclid
 combinatorics
 nytoi-2021-d
-NayutanOI2021D 题解 - Dance Robot Dance
+NayutanOI D 题解 - Dance Robot Dance
 solution
 6
 euclid
@@ -1171,3 +1171,11 @@ solution
 2
 geometry
 keter
+nytoi-2021-c
+NayutanOI C 题解 - サークレット
+solution
+4
+x-yi-x
+bijective-proof
+combinatorics
+group-theory
