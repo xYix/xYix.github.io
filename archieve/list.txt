@@ -1171,12 +1171,3 @@ solution
 2
 geometry
 keter
-nytoi-2021-c
-NayutanOI C 题解 - サークレット
-solution
-5
-safe
-x-yi-x
-bijective-proof
-combinatorics
-group-theory

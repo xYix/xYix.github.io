@@ -1285,7 +1285,7 @@
 		'post_name' : 'parking-and-tree',
 		'post_chinese_name' : '停车问题到树的双射',
 		'type_name' : 'solution',
-		'last_modi' : '2021-08-09',
+		'last_modi' : '2021-09-21',
 		'tag' : ['bijective-proof','construction',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1333,7 +1333,7 @@
 		'post_name' : 'ptz-camp',
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
-		'last_modi' : '2021-08-31',
+		'last_modi' : '2021-09-22',
 		'tag' : ['ban','bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1415,14 +1415,6 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-16',
 		'tag' : ['geometry','keter',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '178',
-		'post_name' : 'nytoi-2021-c',
-		'post_chinese_name' : 'NayutanOI C 题解 - サークレット',
-		'type_name' : 'solution',
-		'last_modi' : '2021-09-21',
-		'tag' : ['bijective-proof','combinatorics','group-theory','safe','x-yi-x',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
