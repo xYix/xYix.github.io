@@ -1416,6 +1416,14 @@
 		'last_modi' : '2021-09-16',
 		'tag' : ['geometry','keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '178',
+		'post_name' : 'cf-1408-h',
+		'post_chinese_name' : 'CF1408H 题解 - Rainbow Triples',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-06',
+		'tag' : ['greedy','keter','network-flow',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

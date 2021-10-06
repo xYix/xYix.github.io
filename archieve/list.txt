@@ -1171,3 +1171,10 @@ solution
 2
 geometry
 keter
+cf-1408-h
+CF1408H 题解 - Rainbow Triples
+solution
+3
+keter
+greedy
+network-flow

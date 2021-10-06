@@ -45,6 +45,7 @@
 	tags_chinese['dfa-theory'] = '自动机理论';
 	tags_chinese['matroid'] = '拟阵';
 	tags_chinese['commu'] = "通信";
+	tags_chinese['greedy'] = "贪心";
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -92,6 +93,7 @@
 	tags_val['matroid'] = 37;
 	// tags_val['scp'] = 0;
 	tags_val['commu'] = -235;
+	tags_val['greedy'] = 38;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);
