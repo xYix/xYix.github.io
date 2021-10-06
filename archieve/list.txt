@@ -1099,7 +1099,7 @@ geometry
 ptz-camp
 毛营 2021（夏）游记
 other
-13
+12
 combinatorics
 generating-function
 lagrange-inversion
@@ -1112,7 +1112,6 @@ nimber
 linear-algebra
 construction
 lmoliver
-ban
 online-convolution
 回忆半在线 / 在线卷积
 algorithm
@@ -1138,11 +1137,10 @@ ban
 ptz-camp-7-a
 毛营 Day7 A 题解 - Goldberg Machine 2
 solution
-4
+3
 apollyon
 combinatorics
 randomization
-ban
 soj-458
 soj#458 题解 - 区间本质不同回文子串计数
 solution

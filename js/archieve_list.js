@@ -1334,7 +1334,7 @@
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
 		'last_modi' : '2021-09-22',
-		'tag' : ['ban','bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
+		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '168',
@@ -1374,7 +1374,7 @@
 		'post_chinese_name' : '毛营 Day7 A 题解 - Goldberg Machine 2',
 		'type_name' : 'solution',
 		'last_modi' : '2021-09-17',
-		'tag' : ['apollyon','ban','combinatorics','randomization',],
+		'tag' : ['apollyon','combinatorics','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '173',
