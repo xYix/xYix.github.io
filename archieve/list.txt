@@ -1174,5 +1174,12 @@ CF1408H 题解 - Rainbow Triples
 solution
 3
 keter
-greedy
+optimization
 network-flow
+cf-671-e
+CF671E 题解 - Organizing a Race
+solution
+3
+apollyon
+optimization
+data-structure

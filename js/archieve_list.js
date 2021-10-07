@@ -1421,8 +1421,16 @@
 		'post_name' : 'cf-1408-h',
 		'post_chinese_name' : 'CF1408H 题解 - Rainbow Triples',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-06',
-		'tag' : ['greedy','keter','network-flow',],
+		'last_modi' : '2021-10-07',
+		'tag' : ['keter','network-flow','optimization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '179',
+		'post_name' : 'cf-671-e',
+		'post_chinese_name' : 'CF671E 题解 - Organizing a Race',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-07',
+		'tag' : ['apollyon','data-structure','optimization',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
