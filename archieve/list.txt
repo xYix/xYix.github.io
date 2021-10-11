@@ -1183,13 +1183,13 @@ solution
 apollyon
 optimization
 data-structure
-dr-medako-orgin
+dr-medako-origin
 伪装成人类的第 29 天
 library
 1
 ban
-ioi2021-hc
-集训队胡策 2021 口胡
+ioi2022-hc
+集训队胡策 2022 口胡
 solution
 1
 ban

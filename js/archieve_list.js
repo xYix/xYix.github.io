@@ -1434,18 +1434,18 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '180',
-		'post_name' : 'dr-medako-orgin',
+		'post_name' : 'dr-medako-origin',
 		'post_chinese_name' : '伪装成人类的第 29 天',
 		'type_name' : 'library',
-		'last_modi' : '',
+		'last_modi' : '2021-10-02',
 		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '181',
-		'post_name' : 'ioi2021-hc',
-		'post_chinese_name' : '集训队胡策 2021 口胡',
+		'post_name' : 'ioi2022-hc',
+		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
-		'last_modi' : '',
+		'last_modi' : '2021-10-11',
 		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
