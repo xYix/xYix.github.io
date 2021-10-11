@@ -1432,6 +1432,22 @@
 		'last_modi' : '2021-10-07',
 		'tag' : ['apollyon','data-structure','optimization',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '180',
+		'post_name' : 'dr-medako-orgin',
+		'post_chinese_name' : '伪装成人类的第 29 天',
+		'type_name' : 'library',
+		'last_modi' : '',
+		'tag' : ['ban',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '181',
+		'post_name' : 'ioi2021-hc',
+		'post_chinese_name' : '集训队胡策 2021 口胡',
+		'type_name' : 'solution',
+		'last_modi' : '',
+		'tag' : ['ban',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
