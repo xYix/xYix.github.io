@@ -1193,3 +1193,9 @@ ioi2021-hc
 solution
 1
 ban
+agc-008-f
+AGC008F 题解 - Black Radius
+solution
+2
+keter
+lmoliver

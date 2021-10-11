@@ -1448,6 +1448,14 @@
 		'last_modi' : '',
 		'tag' : ['ban',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '182',
+		'post_name' : 'agc-008-f',
+		'post_chinese_name' : 'AGC008F 题解 - Black Radius',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-11',
+		'tag' : ['keter','lmoliver',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
