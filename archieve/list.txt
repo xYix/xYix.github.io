@@ -1199,3 +1199,10 @@ solution
 2
 keter
 lmoliver
+luogu-7896
+luoguP7896 题解 - Moke 的游戏
+solution
+3
+keter
+lagrange-inversion
+polynomial

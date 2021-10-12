@@ -1456,6 +1456,14 @@
 		'last_modi' : '2021-10-11',
 		'tag' : ['keter','lmoliver',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '183',
+		'post_name' : 'luogu-7896',
+		'post_chinese_name' : 'luoguP7896 题解 - Moke 的游戏',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-12',
+		'tag' : ['keter','lagrange-inversion','polynomial',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
