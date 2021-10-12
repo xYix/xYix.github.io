@@ -52,8 +52,7 @@
         '越是追求抽象，越是发觉自己只能用具体的例子才能理解抽象的理论……我不做人啦，JOJO！',
         '&funval=41',
         '&funval=sayonara',
-        '&funval=sayonara',
-        '&funval=sayonara',
+        '为什么有些编号没有对应文章呢？为什么呢？为·什·么·呢？',
         //奇妙bug/翻译
         'x锟斤拷x 锟斤拷锟斤拷锟斤拷 BLOG',
         '快速计算方法 问题方案 多项目类型,Rakuraro Nikki',
