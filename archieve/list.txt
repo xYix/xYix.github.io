@@ -1099,7 +1099,7 @@ geometry
 lmoliver
 bijective-proof
 optimization
-matriod
+matroid
 string
 lagrange-interpolation
 game-theory
