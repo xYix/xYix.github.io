@@ -1325,8 +1325,8 @@
 		'post_name' : 'recent-kouhu',
 		'post_chinese_name' : '近期嘴巴杂记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-09-16',
-		'tag' : ['data-structure','geometry','graph-theory','keter','linear-algebra',],
+		'last_modi' : '2021-10-13',
+		'tag' : ['bijective-proof','data-structure','game-theory','geometry','graph-theory','keter','lagrange-interpolation','linear-algebra','lmoliver','matriod','optimization','string',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '167',
