@@ -1210,5 +1210,5 @@ cf-1237-g
 CF1237G 题解 - Balanced Distribution
 solution
 2
-eculid
+euclid
 optimization

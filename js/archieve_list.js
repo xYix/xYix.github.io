@@ -1470,7 +1470,7 @@
 		'post_chinese_name' : 'CF1237G 题解 - Balanced Distribution',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-13',
-		'tag' : ['eculid','optimization',],
+		'tag' : ['euclid','optimization',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
