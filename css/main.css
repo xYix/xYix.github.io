@@ -97,10 +97,11 @@ input{
     border-radius: 3px;
     margin: 6px;
     font-size: medium;
-    color: var(--main-color);
+    color: var(--dark-main-color);
     background: rgba(255, 255, 255, 0.6);
     height: 1.8em;
     padding: 0px 6px;
+    width: 300px;
 }
 .button-block{
     padding: 10px 1px 24px 1px;

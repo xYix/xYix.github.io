@@ -552,7 +552,8 @@
         let InputBody = win.createElement('input');
         InputBody.style = 'float: right;';
         InputBody.type = 'text';
-        InputBody.placeholder = '搜点什么……？';
+        // InputBody.placeholder = '搜点什么……？';
+        InputBody.placeholder = '搜索功能还没做好qaq';
         InputBlock.appendChild(InputBody);
         data.appendChild(InputBlock);
     }
