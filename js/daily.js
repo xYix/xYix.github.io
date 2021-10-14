@@ -53,6 +53,7 @@
         '&funval=41',
         '&funval=sayonara',
         '为什么有些编号没有对应文章呢？为什么呢？为·什·么·呢？',
+        '据统计，87.5% 的 xyix.github.io 读者都是 Au 爷，但 xyix 自己却不是，这是怎么一回事呢？',
         //奇妙bug/翻译
         'x锟斤拷x 锟斤拷锟斤拷锟斤拷 BLOG',
         '快速计算方法 问题方案 多项目类型,Rakuraro Nikki',
