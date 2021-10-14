@@ -510,8 +510,8 @@
     }
 
     //绘制翻页按钮
-    win.WritePageButton = function (data, pcount, pper_page) {
-        let ButtonBlock = document.createElement('div');
+    WritePageButton = function (data, pcount, pper_page) {
+        let ButtonBlock = win.createElement('div');
         ButtonBlock.className = 'button-block';
         let PagePrev = win.createElement('button');
         if (win.Page !== 0) {
@@ -544,6 +544,17 @@
         }
         ButtonBlock.appendChild(PageSucc);
         data.appendChild(ButtonBlock);
+    }
+
+    //绘制搜索框
+    WriteSearchInput = function (data) {
+        let InputBlock = win.createElement('div');
+        let InputBody = win.createElement('input');
+        InputBody.style = 'float: right;';
+        InputBody.type = 'text';
+        InputBody.placeholder = '搜点什么……？';
+        InputBlock.appendChild(InputBody);
+        data.appendChild(InputBlock);
     }
 
     //绘制文章内容

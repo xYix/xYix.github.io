@@ -49,8 +49,9 @@
                     AddText('排序方式：' + sort_text[document.Sortby], 'h3');
                 AddText('第 ' + (document.Page + 1) + ' 页', 'h3');
             </script>
+            <script>WriteSearchInput(document.querySelector('#post'));</script>
             <script>document.WriteArchieve(document.querySelector('#post'));</script>
-            <script>document.WritePageButton(document.querySelector('#post'),
+            <script>WritePageButton(document.querySelector('#post'),
                 document.post_count,document.post_per_page);</script>
         </div>
     </div>
