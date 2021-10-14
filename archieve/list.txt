@@ -1223,5 +1223,5 @@ luogu-7115
 luoguP7115 题解 - 【NOIP2020】移球游戏
 solution
 2
-euclid
+keter
 construction

@@ -1478,7 +1478,7 @@
 		'post_chinese_name' : 'luoguP7115 题解 - 【NOIP2020】移球游戏',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-14',
-		'tag' : ['construction','euclid',],
+		'tag' : ['construction','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
