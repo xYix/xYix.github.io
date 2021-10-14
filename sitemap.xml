@@ -38,11 +38,11 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/51nod-1222.html</loc>
-		<lastmod>2021-07-08</lastmod>
+		<lastmod>2021-10-13</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/about-FFT.html</loc>
-		<lastmod>2021-07-08</lastmod>
+		<lastmod>2021-10-13</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/euler-maclaurin-formula.html</loc>
@@ -418,7 +418,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/binomial-sum.html</loc>
-		<lastmod>2021-07-08</lastmod>
+		<lastmod>2021-10-13</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/zjoi-2021-thusc-2021.html</loc>
@@ -426,7 +426,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-031-f.html</loc>
-		<lastmod>2021-07-08</lastmod>
+		<lastmod>2021-10-13</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-036-d.html</loc>
@@ -747,5 +747,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/cf-1237-g.html</loc>
 		<lastmod>2021-10-13</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/luogu-7115.html</loc>
+		<lastmod>2021-10-14</lastmod>
 	</url>
 </urlset>

@@ -53,7 +53,7 @@
 		'post_name' : '51nod-1222',
 		'post_chinese_name' : '51nod1222 题解 - 最小公倍数计数',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-10-13',
 		'tag' : ['number-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -61,7 +61,7 @@
 		'post_name' : 'about-FFT',
 		'post_chinese_name' : '关于 FFT',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-10-13',
 		'tag' : ['combinatorics','polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -813,7 +813,7 @@
 		'post_name' : 'binomial-sum',
 		'post_chinese_name' : '《再谈 Binomial Sum》通俗演义',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-10-13',
 		'tag' : ['combinatorics','generating-function',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -829,7 +829,7 @@
 		'post_name' : 'agc-031-f',
 		'post_chinese_name' : 'AGC031F 题解 - Walk on Graph',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-10-13',
 		'tag' : ['euclid','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1471,6 +1471,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-13',
 		'tag' : ['euclid','optimization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '185',
+		'post_name' : 'luogu-7115',
+		'post_chinese_name' : 'luoguP7115 题解 - 【NOIP2020】移球游戏',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-14',
+		'tag' : ['construction','euclid',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
