@@ -144,6 +144,7 @@
         Sortby: win.Sortby,
         Page: win.Page,
         Funval: win.Funval,
+        Searchfor: win.Searchfor
     };
     true_isban = function(postinfo) {
         if (isban(postinfo)) { if (win.isInside === 0) return 1; }
