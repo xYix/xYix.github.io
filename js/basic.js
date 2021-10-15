@@ -549,12 +549,16 @@
     //绘制搜索框
     WriteSearchInput = function (data) {
         let InputBlock = win.createElement('div');
+        let InputForm = win.createElement('form');
+        InputForm.action = '/archieve';
+        InputForm.onsubmit = 'return console.log(\'qaq\')';
         let InputBody = win.createElement('input');
         InputBody.style = 'float: right;';
         InputBody.type = 'text';
         // InputBody.placeholder = '搜点什么……？';
         InputBody.placeholder = '搜索功能还没做好qaq';
-        InputBlock.appendChild(InputBody);
+        InputForm.appendChild(InputBody);
+        InputBlock.appendChild(InputForm);
         data.appendChild(InputBlock);
     }
 
