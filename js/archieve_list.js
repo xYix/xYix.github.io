@@ -1363,7 +1363,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '171',
 		'post_name' : 'xj-1000-medako',
-		'post_chinese_name' : 'XJ-1000：破晓之时',
+		'post_chinese_name' : 'SCP-XJ-1998 - 破晓之时',
 		'type_name' : 'scp',
 		'last_modi' : '2021-10-04',
 		'tag' : ['ban',],

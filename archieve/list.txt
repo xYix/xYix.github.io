@@ -1137,7 +1137,7 @@ solution
 keter
 graph-theory
 xj-1000-medako
-XJ-1000：破晓之时
+SCP-XJ-1998 - 破晓之时
 scp
 1
 ban
