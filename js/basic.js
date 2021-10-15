@@ -62,6 +62,7 @@
                 tmpSearch.Sortby = undefined;
             else tmpSearch.Sortby = deltaSearch.Sortby;
         }
+        if (deltaSearch.Searchfor) tmpSearch.Searchfor = deltaSearch.Searchfor;
         return tmpSearch;
     }
     ezylanASearch = function (Search) {
@@ -81,6 +82,8 @@
             ret += '&page=' + Search.Page;
         if (Search.Funval)
             ret += '&funval=' + Search.Funval;
+        if (Search.Searchfor)
+            ret += '&searchfor=' + Search.Searchfor;
         return ret;
     }
     win.Pathname = AnalyzePathname(location.pathname);
@@ -95,6 +98,7 @@
     // win.Funval = 41; //April Fools
     win.Postname = win.Search['postname'];
     win.Postinfo = findpost(win.Postname);
+    win.Searchfor = AnalyzeTags(win.Search['searchfor']);
 
     if (win.Search['themecolor']) {
         localStorage.setItem("themecolor", win.Search['themecolor']);
@@ -293,6 +297,9 @@
                     else win.Title[nowlen] += '不明标签';
                     if (i !== win.Tags.length - 1) win.Title[nowlen] += '，';
                 }
+            }
+            if (win.Searchfor) {
+                win.Title[win.Title.length] = '正在搜索子序列：' + win.Searchfor;
             }
             let nowlen = win.Title.length;
             win.Title[nowlen] = '第 ' + (win.Page + 1) + ' 页';
@@ -555,8 +562,7 @@
         InputBody.style = 'float: right;';
         InputBody.type = 'text';
         InputBody.name = 'searchfor';
-        // InputBody.placeholder = '搜点什么……？';
-        InputBody.placeholder = '搜索功能还没做好qaq';
+        InputBody.placeholder = '搜点什么……？';
         InputForm.appendChild(InputBody);
         data.appendChild(InputForm);
     }
