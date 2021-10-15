@@ -562,6 +562,11 @@
     }
 
     //绘制搜索框
+    SearchHint = [
+        '搜点什么……？',
+        '不要输入奇怪的字符呀，搜索姬会坏掉的',
+        '由于一些奇怪的事情，最好先搜索子串再点 tag 哦',
+    ];
     WriteSearchInput = function (data) {
         let InputForm = win.createElement('form');
         InputForm.action = '/archieve';
@@ -570,7 +575,7 @@
         InputBody.style = 'float: right;';
         InputBody.type = 'text';
         InputBody.name = 'searchfor';
-        InputBody.placeholder = '搜点什么……？';
+        InputBody.placeholder = SearchHint[Math.floor(Math.random()*SearchHint.length)];
         InputForm.appendChild(InputBody);
         data.appendChild(InputForm);
     }
