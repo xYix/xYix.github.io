@@ -452,15 +452,16 @@
         for (let i = 0; i < win.Tags.length; i += 1) {
             if (postinfo.tag.indexOf(win.Tags[i]) === -1) return 0;
         }
-        post_count.value = post_count.value + 1;
-        if (post_count.value <= win.Page * win.post_per_page) return 0;
-        if (post_count.value > (win.Page + 1) * win.post_per_page) return 0;
         if (win.Searchfor) {
             let exp = '';
             for (let i = 0; i < win.Searchfor.length; i += 1)
                 exp += win.Searchfor[i] + '[^]*';
+            console.log(exp);
             if (postinfo.post_chinese_name.search(exp) == -1) return 0;
         }
+        post_count.value = post_count.value + 1;
+        if (post_count.value <= win.Page * win.post_per_page) return 0;
+        if (post_count.value > (win.Page + 1) * win.post_per_page) return 0;
         return 1;
     }
 
