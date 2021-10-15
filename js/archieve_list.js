@@ -1477,8 +1477,16 @@
 		'post_name' : 'luogu-7115',
 		'post_chinese_name' : 'luoguP7115 题解 - 【NOIP2020】移球游戏',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-14',
+		'last_modi' : '2021-10-15',
 		'tag' : ['construction','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '186',
+		'post_name' : 'luogu-7116',
+		'post_chinese_name' : 'luoguP7115 题解 - 【NOIP2020】微信步数',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-15',
+		'tag' : ['safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
