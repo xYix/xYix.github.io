@@ -98,7 +98,7 @@
     // win.Funval = 41; //April Fools
     win.Postname = win.Search['postname'];
     win.Postinfo = findpost(win.Postname);
-    win.Searchfor = AnalyzeTags(win.Search['searchfor']);
+    win.Searchfor = win.Search['searchfor'];
 
     if (win.Search['themecolor']) {
         localStorage.setItem("themecolor", win.Search['themecolor']);
