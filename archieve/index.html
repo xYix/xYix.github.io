@@ -47,6 +47,9 @@
                 }
                 if (document.Sortby)
                     AddText('排序方式：' + sort_text[document.Sortby], 'h3');
+                if (document.Searchfor) {
+                    AddText('正在搜索子序列：' + document.Searchfor, 'h3');
+                }
                 AddText('第 ' + (document.Page + 1) + ' 页', 'h3');
             </script>
             <script>WriteSearchInput(document.querySelector('#post'));</script>
