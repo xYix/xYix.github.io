@@ -563,9 +563,11 @@
 
     //绘制搜索框
     SearchHint = [
-        '搜点什么……？',
+        '主人今天要搜点什么……？',
         '别输奇怪的字符呀，搜索姬会坏掉的',
         '最好先搜索子串再点 tag 哦',
+        '搜索姬做事很严谨，所以区分大小写！',
+        '搜索姬只支持搜索标题中的子序列qaq',
     ];
     WriteSearchInput = function (data) {
         let InputForm = win.createElement('form');
