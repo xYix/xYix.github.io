@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-08-14',
+		'last_modi' : '2021-10-16',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1487,6 +1487,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-15',
 		'tag' : ['safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '187',
+		'post_name' : 'generalized-binomial-exponential',
+		'post_chinese_name' : '广义二项/指数级数？广义卡塔兰/凯莱数！',
+		'type_name' : 'algorithm',
+		'last_modi' : '2021-10-16',
+		'tag' : ['bijective-proof','combinatorics','generating-function',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

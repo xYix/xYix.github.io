@@ -1230,3 +1230,10 @@ luoguP7115 题解 - 【NOIP2020】微信步数
 solution
 1
 safe
+generalized-binomial-exponential
+广义二项/指数级数？广义卡塔兰/凯莱数！
+algorithm
+3
+combinatorics
+generating-function
+bijective-proof
