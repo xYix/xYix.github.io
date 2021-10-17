@@ -1284,7 +1284,7 @@
 		'postid' : '161',
 		'post_name' : 'parking-and-tree',
 		'post_chinese_name' : '停车问题到树的双射',
-		'type_name' : 'solution',
+		'type_name' : 'algorithm',
 		'last_modi' : '2021-09-21',
 		'tag' : ['bijective-proof','construction',],
 	};
@@ -1445,7 +1445,7 @@
 		'post_name' : 'ioi2022-hc',
 		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-11',
+		'last_modi' : '2021-10-17',
 		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {

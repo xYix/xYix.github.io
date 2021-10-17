@@ -1061,7 +1061,7 @@ euclid
 interact
 parking-and-tree
 停车问题到树的双射
-solution
+algorithm
 2
 construction
 bijective-proof
