@@ -1037,7 +1037,7 @@
 		'post_name' : 'domination-tree',
 		'post_chinese_name' : '男性增加支配树题分数的技巧',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-10-18',
 		'tag' : ['graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1334,7 +1334,7 @@
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
 		'last_modi' : '2021-09-22',
-		'tag' : ['ban','bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
+		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '168',

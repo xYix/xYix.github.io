@@ -1106,8 +1106,7 @@ game-theory
 ptz-camp
 毛营 2021（夏）游记
 other
-13
-ban
+12
 combinatorics
 generating-function
 lagrange-inversion
