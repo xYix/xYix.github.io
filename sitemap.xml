@@ -14,7 +14,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/hello-world.html</loc>
-		<lastmod>2021-10-16</lastmod>
+		<lastmod>2021-10-18</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/alkane-counting.html</loc>
@@ -742,7 +742,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/luogu-7896.html</loc>
-		<lastmod>2021-10-12</lastmod>
+		<lastmod>2021-10-18</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/cf-1237-g.html</loc>
@@ -759,5 +759,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/generalized-binomial-exponential.html</loc>
 		<lastmod>2021-10-16</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/cf-1586.html</loc>
+		<lastmod>2021-10-18</lastmod>
 	</url>
 </urlset>

@@ -1237,3 +1237,10 @@ algorithm
 combinatorics
 generating-function
 bijective-proof
+cf-1586
+CFR#749 部分题解
+solution
+3
+euclid
+construction
+lmoliver
