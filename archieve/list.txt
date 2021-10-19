@@ -1238,9 +1238,16 @@ combinatorics
 generating-function
 bijective-proof
 cf-1586
-CFR#749 部分题解
+CF1586 部分题解 - CFR#749
 solution
 3
 euclid
 construction
 lmoliver
+cf-gym-102331
+CFgym102331 部分题解 - 300iq Contest 2
+solution
+3
+keter
+data-structure
+interact

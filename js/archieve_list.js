@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-10-18',
+		'last_modi' : '2021-10-19',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1499,10 +1499,18 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '188',
 		'post_name' : 'cf-1586',
-		'post_chinese_name' : 'CFR#749 部分题解',
+		'post_chinese_name' : 'CF1586 部分题解 - CFR#749',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-18',
+		'last_modi' : '2021-10-19',
 		'tag' : ['construction','euclid','lmoliver',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '189',
+		'post_name' : 'cf-gym-102331',
+		'post_chinese_name' : 'CFgym102331 部分题解 - 300iq Contest 2',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-19',
+		'tag' : ['data-structure','interact','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
