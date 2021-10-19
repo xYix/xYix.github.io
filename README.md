@@ -58,4 +58,7 @@
 - 2021/10/12：更新一篇博文 [Moke 的游戏](https://xyix.github.io/posts/?&sortby=id&postname=luogu-7896)。给题。
 - 2021/10/13：更新一篇博文 [Balanced Distribution](https://xyix.github.io/posts/?&sortby=id&postname=cf-1237-g)。给[《再谈 Binomial Sum》通俗演义](https://xyix.github.io/posts/?&sortby=last_modi&postname=binomial-sum)加了一个例题。这个鬼题推+调了我一个下午。
 - 2021/10/14：更新一篇博文[移球游戏](https://xyix.github.io/posts/?&sortby=last_modi&postname=luogu-7115)。神 之 降 临。
+- 2021/10/15：更新一篇博文[微信步数](https://xyix.github.io/posts/?&sortby=id&postname=luogu-7116)。
+- 2021/10/16：更新一篇博文[广义二项/指数级数？广义卡塔兰/凯莱数！](https://xyix.github.io/posts/?&sortby=id&postname=generalized-binomial-exponential)好像非常有趣。
+- 2021/10/19：更新两篇博文[CFR#749 部分题解](https://xyix.github.io/posts/?&sortby=id&postname=cf-1586)、[300iq Contest 2 部分题解](https://xyix.github.io/posts/?&sortby=id&postname=cf-gym-102331)。
 
