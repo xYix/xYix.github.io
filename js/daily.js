@@ -220,8 +220,8 @@
             'きみは一瞬だけの永遠に　ぼくの永遠だけが一瞬に',
             '最期の電燈　そこに淡い世界が浮かんだ　そこできみの涙をみたんだ',
             //蓝色极星
-            '夜空を(夜空を) 浮かんで(浮かんで)　キミとまた巡り逢う',
-            'ただいま(ただいま) おかえり(おかえり)　ふたりごとは星になって',
+            '夜空を 浮かんで　キミとまた巡り逢う',
+            'ただいま おかえり　ふたりごとは星になって',
             //bitter choco decoration
             'bitter choco decoration　兎角言わずにたんと召し上がれ',
             'bitter choco decoration　食わず嫌いはちゃんと直さなきゃ',
@@ -257,18 +257,15 @@
             'Misfortuna / There is no escape, my dear',
             'The world undergoes photosynthesia / Transform endless anger to ecstasia',
             //children of the city
-            'going through the shelves picking out my prewritten persona',
             'the children of the city see only the neon stars',
             'don\'t ask me why / I desperately wish to be included in the city\'s night',
             'don\'t ask me why / I desperately wish to be noticed by the city\'s eye',
-            'Do not go home until you finish reading the value of e',
             //bathtub mermaid
             'If I\'m covered in scars will you look at me?',
             'and then I gave you my eyes / to see all the colors',
             'and then I gave you my ears / to hear all the sirens',
             'and then I gave you my heart / to fill the emptiness in your chest',
             'and then I gave you my brain / so that you can learn to love',
-            'Twist my legs to one  / and mind to none',
             //extension of you
             'My ribs open up / made room for a beating heart',
             'My head open up / made room for deeper thoughts',
@@ -290,10 +287,6 @@
             'Perfect life for you and I / People who\'s trying to get by / Painful death for the lactose intolerant / For you, there is no lament!',
             'Lovely life for you and I / People who\'s fighting \'til midnight / Painful death for the lactose intolerant / Begin the revolution!',
             'Endless life for you and I / People who stick to each other\'s sides / Painful death for the lactose intolerant / Struggle \'til your last moment!',
-            //Celebrite
-            'Sparkling water connected to the sky / And your hair goes free / Dancing in the sea breeze / Your eyes are sapphires',
-            'Sinking spaceship falls out into the sky / And your life goes free / Dancing in vacuity / Your tears are rubies',
-            '(Bursting in the sky) Shimmering twilight (Galaxies ignite) Stars shall never rise',
             //world.execute(me)
             'Switch on the power line / Remember to put on PROTECTION',
             'Lay down your pieces / And let\'s begin OBJECT CREATION',
@@ -342,10 +335,10 @@
             'silent night fallen snow / I still love with you I miss you baby',
             'seaside flight staring sky / you know how much I love you',
         //游戏 / 动漫 / 基金会名句
-        'Fate Chosen',
-        'Reroll Your Destiny',
-        'Blood Laser Barrage',
-        'I feel all', 'I know all', 'I am all',
+        'Fate Chosen', //全家福/底片
+        'Reroll Your Destiny', //D6
+        'Blood Laser Barrage', //硫磺火
+        'I feel all', 'I know all', 'I am all', //the body/the mind/the soul
         '「The Broken」',       //里以撒，残缺之人
         '「The Deceiver」',     //里犹大，欺诈之人
         '「The Benighted」',    //里AZ，愚昧之人
@@ -378,10 +371,6 @@
             '戏里戏外，其实如一。',
             '这并不好笑，但我们都笑了。',
             '我会使得我们的宇宙成为一个值得拯救的宇宙的。',
-            //1984
-            '战争即和平',
-            '自由即奴役',
-            '无知即力量',
             //美丽新世界
             '人类有多么美！啊！美丽的新世界，有这样的人在里头！',
         //迫害CF/XJ

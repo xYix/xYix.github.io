@@ -1106,7 +1106,7 @@ game-theory
 ptz-camp
 毛营 2021（夏）游记
 other
-14
+13
 combinatorics
 generating-function
 lagrange-inversion
@@ -1116,7 +1116,6 @@ bijective-proof
 data-structure
 geometry
 nimber
-linear-algebra
 construction
 lmoliver
 sqrt-tech
