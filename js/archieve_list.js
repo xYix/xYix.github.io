@@ -1520,6 +1520,14 @@
 		'last_modi' : '2021-10-20',
 		'tag' : ['interact','keter','sqrt-tech',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '191',
+		'post_name' : 'agc-045',
+		'post_chinese_name' : 'AGC045 题解',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-20',
+		'tag' : ['keter','lmoliver','optimization','writing',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
