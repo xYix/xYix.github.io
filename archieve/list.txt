@@ -1106,7 +1106,7 @@ game-theory
 ptz-camp
 毛营 2021（夏）游记
 other
-13
+14
 combinatorics
 generating-function
 lagrange-inversion
@@ -1120,6 +1120,7 @@ linear-algebra
 construction
 lmoliver
 sqrt-tech
+interact
 online-convolution
 回忆半在线 / 在线卷积
 algorithm

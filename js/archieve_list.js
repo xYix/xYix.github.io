@@ -1334,7 +1334,7 @@
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
 		'last_modi' : '2021-09-22',
-		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization','sqrt-tech',],
+		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','interact','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization','sqrt-tech',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '168',
