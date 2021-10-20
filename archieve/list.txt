@@ -1106,7 +1106,7 @@ game-theory
 ptz-camp
 毛营 2021（夏）游记
 other
-12
+13
 combinatorics
 generating-function
 lagrange-inversion
@@ -1119,6 +1119,7 @@ nimber
 linear-algebra
 construction
 lmoliver
+sqrt-tech
 online-convolution
 回忆半在线 / 在线卷积
 algorithm
@@ -1254,5 +1255,7 @@ interact
 loj-3538-3541
 JOI Open 2018 题解
 solution
-1
+3
 keter
+interact
+sqrt-tech

@@ -1334,7 +1334,7 @@
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
 		'last_modi' : '2021-09-22',
-		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization',],
+		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','lagrange-inversion','linear-algebra','lmoliver','nimber','randomization','sqrt-tech',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '168',
@@ -1517,8 +1517,8 @@
 		'post_name' : 'loj-3538-3541',
 		'post_chinese_name' : 'JOI Open 2018 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-19',
-		'tag' : ['keter',],
+		'last_modi' : '2021-10-20',
+		'tag' : ['interact','keter','sqrt-tech',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
