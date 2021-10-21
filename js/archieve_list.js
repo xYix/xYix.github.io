@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-10-19',
+		'last_modi' : '2021-10-20',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1509,7 +1509,7 @@
 		'post_name' : 'cf-gym-102331',
 		'post_chinese_name' : 'CFgym102331 部分题解 - 300iq Contest 2',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-19',
+		'last_modi' : '2021-10-21',
 		'tag' : ['data-structure','interact','keter',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1525,8 +1525,16 @@
 		'post_name' : 'agc-045',
 		'post_chinese_name' : 'AGC045 题解',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-20',
+		'last_modi' : '2021-10-21',
 		'tag' : ['keter','lmoliver','optimization','writing',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '192',
+		'post_name' : 'agc-040-f',
+		'post_chinese_name' : 'AGC040F 题解 - Two Pieces',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-22',
+		'tag' : ['combinatorics','euclid',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
