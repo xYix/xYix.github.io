@@ -1205,9 +1205,10 @@ ban
 agc-008-f
 AGC008F 题解 - Black Radius
 solution
-2
+3
 keter
 lmoliver
+graph-theory
 luogu-7896
 luoguP7896 题解 - Moke 的游戏
 solution
@@ -1259,7 +1260,7 @@ overall-binary-search
 loj-3538-3541
 JOI Open 2018 题解
 solution
-6
+4
 keter
 interact
 data-structure
