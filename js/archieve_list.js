@@ -1510,7 +1510,7 @@
 		'post_chinese_name' : 'CFgym102331 部分题解 - 300iq Contest 2',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-21',
-		'tag' : ['d-and-c-on-tree','data-structure','interact','keter',],
+		'tag' : ['d-and-c-on-tree','data-structure','interact','keter','monotonicity-of-decision','overall-binary-search',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '190',
@@ -1518,31 +1518,15 @@
 		'post_chinese_name' : 'JOI Open 2018 题解',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-20',
-		'tag' : ['interact','keter','sqrt-tech',],
+		'tag' : ['AGC045 部分题解 - 不含 E','agc-045','data-structure','interact','keter','sqrt-tech',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '191',
-		'post_name' : 'agc-045',
-		'post_chinese_name' : 'AGC045 部分题解 - 不含 E',
-		'type_name' : 'solution',
-		'last_modi' : '2021-10-22',
-		'tag' : ['apollyon','lmoliver','optimization',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '192',
-		'post_name' : 'agc-040-f',
-		'post_chinese_name' : 'AGC040F 题解 - Two Pieces',
-		'type_name' : 'solution',
-		'last_modi' : '2021-10-22',
-		'tag' : ['combinatorics','euclid',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '193',
-		'post_name' : 'agc-044',
-		'post_chinese_name' : 'AGC044 题解',
-		'type_name' : 'solution',
-		'last_modi' : '2021-10-22',
-		'tag' : ['interact','keter',],
+		'post_name' : 'solution',
+		'post_chinese_name' : '3',
+		'type_name' : 'apollyon',
+		'last_modi' : '',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

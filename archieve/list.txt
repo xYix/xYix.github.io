@@ -1249,17 +1249,20 @@ lmoliver
 cf-gym-102331
 CFgym102331 部分题解 - 300iq Contest 2
 solution
-4
+6
 keter
 data-structure
 interact
 d-and-c-on-tree
+monotonicity-of-decision
+overall-binary-search
 loj-3538-3541
 JOI Open 2018 题解
 solution
-3
+6
 keter
 interact
+data-structure
 sqrt-tech
 agc-045
 AGC045 部分题解 - 不含 E
