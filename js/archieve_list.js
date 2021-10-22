@@ -1278,7 +1278,7 @@
 		'post_chinese_name' : 'loj#3390 题解 - 【2020-2021 集训队作业】大鱼治水',
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-09',
-		'tag' : ['euclid','interact',],
+		'tag' : ['d-and-c-on-tree','euclid','interact',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '161',
@@ -1510,7 +1510,7 @@
 		'post_chinese_name' : 'CFgym102331 部分题解 - 300iq Contest 2',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-21',
-		'tag' : ['data-structure','interact','keter',],
+		'tag' : ['d-and-c-on-tree','data-structure','interact','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '190',

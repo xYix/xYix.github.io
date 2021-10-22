@@ -1056,9 +1056,10 @@ euclid
 loj-3390
 loj#3390 题解 - 【2020-2021 集训队作业】大鱼治水
 solution
-2
+3
 euclid
 interact
+d-and-c-on-tree
 parking-and-tree
 停车问题到树的双射
 algorithm
@@ -1248,10 +1249,11 @@ lmoliver
 cf-gym-102331
 CFgym102331 部分题解 - 300iq Contest 2
 solution
-3
+4
 keter
 data-structure
 interact
+d-and-c-on-tree
 loj-3538-3541
 JOI Open 2018 题解
 solution
