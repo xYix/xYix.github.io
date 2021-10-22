@@ -1526,15 +1526,23 @@
 		'post_chinese_name' : 'AGC045 部分题解 - 不含 E',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-22',
-		'tag' : ['agc-040-f','apollyon','lmoliver','optimization',],
+		'tag' : ['apollyon','lmoliver','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '192',
-		'post_name' : 'AGC040F 题解 - Two Pieces',
-		'post_chinese_name' : 'solution',
-		'type_name' : '2',
-		'last_modi' : '',
-		'tag' : [],
+		'post_name' : 'agc-040-f',
+		'post_chinese_name' : 'AGC040F 题解 - Two Pieces',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-22',
+		'tag' : ['combinatorics','euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '193',
+		'post_name' : 'agc-044',
+		'post_chinese_name' : 'AGC044 题解',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-22',
+		'tag' : ['interact','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
