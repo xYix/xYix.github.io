@@ -1284,3 +1284,9 @@ solution
 2
 keter
 interact
+luogu-7124
+luoguP7124 题解 - 【Ynoi2008】stcm
+solution
+2
+euclid
+d-and-c-on-tree

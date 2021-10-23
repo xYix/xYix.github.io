@@ -1544,6 +1544,14 @@
 		'last_modi' : '2021-10-22',
 		'tag' : ['interact','keter',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '194',
+		'post_name' : 'luogu-7124',
+		'post_chinese_name' : 'luoguP7124 题解 - 【Ynoi2008】stcm',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-23',
+		'tag' : ['d-and-c-on-tree','euclid',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
