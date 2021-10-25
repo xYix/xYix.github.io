@@ -1296,3 +1296,9 @@ solution
 2
 euclid
 graph-theory
+cf-1392-h
+CF1392H 题解 - ZS Shuffles Cards
+solution
+2
+safe
+combinatorics

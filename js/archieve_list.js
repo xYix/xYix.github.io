@@ -1560,6 +1560,14 @@
 		'last_modi' : '2021-10-25',
 		'tag' : ['euclid','graph-theory',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '196',
+		'post_name' : 'cf-1392-h',
+		'post_chinese_name' : 'CF1392H 题解 - ZS Shuffles Cards',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-25',
+		'tag' : ['combinatorics','safe',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
