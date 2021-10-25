@@ -1445,7 +1445,7 @@
 		'post_name' : 'ioi2022-hc',
 		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-17',
+		'last_modi' : '2021-10-25',
 		'tag' : ['ban',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1461,7 +1461,7 @@
 		'post_name' : 'luogu-7896',
 		'post_chinese_name' : 'luoguP7896 题解 - Moke 的游戏',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-18',
+		'last_modi' : '2021-10-23',
 		'tag' : ['keter','lagrange-inversion','polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1549,8 +1549,16 @@
 		'post_name' : 'luogu-7124',
 		'post_chinese_name' : 'luoguP7124 题解 - 【Ynoi2008】stcm',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-23',
+		'last_modi' : '2021-10-24',
 		'tag' : ['d-and-c-on-tree','euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '195',
+		'post_name' : 'loj-3126',
+		'post_chinese_name' : 'loj#3126 题解 - 【COCI 2018.10】Teoreti?ar',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-25',
+		'tag' : ['euclid','graph-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
