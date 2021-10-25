@@ -1291,7 +1291,7 @@ solution
 euclid
 d-and-c-on-tree
 loj-3126
-loj#3126 题解 - 【COCI 2018.10】Teoretičar
+loj#3126 题解 - 【COCI 2018.10】Teoreticar
 solution
 2
 euclid
@@ -1302,3 +1302,7 @@ solution
 2
 safe
 combinatorics
+code-name-apotheosis
+CODE NAME: APOTHEOSIS
+other
+0

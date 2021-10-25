@@ -1555,7 +1555,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '195',
 		'post_name' : 'loj-3126',
-		'post_chinese_name' : 'loj#3126 题解 - 【COCI 2018.10】Teoreti?ar',
+		'post_chinese_name' : 'loj#3126 题解 - 【COCI 2018.10】Teoreticar',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-25',
 		'tag' : ['euclid','graph-theory',],
@@ -1567,6 +1567,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-25',
 		'tag' : ['combinatorics','safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '197',
+		'post_name' : 'code-name-apotheosis',
+		'post_chinese_name' : 'CODE NAME: APOTHEOSIS',
+		'type_name' : 'other',
+		'last_modi' : '2021-10-25',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
