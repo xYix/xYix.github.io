@@ -1307,7 +1307,7 @@ CODE NAME: APOTHEOSIS
 other
 0
 ptz-gxx-round-5-h
-毛营2017（冬）Xiaoxu Guo Contest 5 H 题解 - Permutation and noitatumreP
+毛营 2017（冬）叉姐 Contest 5 H 题解 - Permutation and noitatumreP
 solution
 1
 safe

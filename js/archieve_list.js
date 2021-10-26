@@ -1579,7 +1579,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '198',
 		'post_name' : 'ptz-gxx-round-5-h',
-		'post_chinese_name' : '毛营2017（冬）Xiaoxu Guo Contest 5 H 题解 - Permutation and noitatumreP',
+		'post_chinese_name' : '毛营 2017（冬）叉姐 Contest 5 H 题解 - Permutation and noitatumreP',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-26',
 		'tag' : ['safe',],
