@@ -1200,8 +1200,12 @@ ban
 ioi2022-hc
 集训队胡策 2022 口胡
 solution
-1
+5
 ban
+linear-algebra
+graph-theory
+game-theory
+data-structure
 agc-008-f
 AGC008F 题解 - Black Radius
 solution
@@ -1279,7 +1283,7 @@ solution
 euclid
 combinatorics
 agc-044
-AGC044 题解
+AGC044 部分题解 - 不含 F
 solution
 2
 keter

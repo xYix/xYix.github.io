@@ -1446,7 +1446,7 @@
 		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-25',
-		'tag' : ['ban',],
+		'tag' : ['ban','data-structure','game-theory','graph-theory','linear-algebra',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '182',
@@ -1539,9 +1539,9 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '193',
 		'post_name' : 'agc-044',
-		'post_chinese_name' : 'AGC044 题解',
+		'post_chinese_name' : 'AGC044 部分题解 - 不含 F',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-22',
+		'last_modi' : '2021-10-26',
 		'tag' : ['interact','keter',],
 	};
 	archieve_list[archieve_list.length] = {
