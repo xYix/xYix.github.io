@@ -1557,7 +1557,7 @@
 		'post_name' : 'loj-3126',
 		'post_chinese_name' : 'loj#3126 题解 - 【COCI 2018.10】Teoreticar',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-25',
+		'last_modi' : '2021-10-26',
 		'tag' : ['euclid','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1573,8 +1573,16 @@
 		'post_name' : 'code-name-apotheosis',
 		'post_chinese_name' : 'CODE NAME: APOTHEOSIS',
 		'type_name' : 'other',
-		'last_modi' : '2021-10-25',
+		'last_modi' : '2021-10-26',
 		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '198',
+		'post_name' : 'ptz-gxx-round-5-h',
+		'post_chinese_name' : '毛营2017（冬）Xiaoxu Guo Contest 5 H 题解 - Permutation and noitatumreP',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-26',
+		'tag' : ['safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
