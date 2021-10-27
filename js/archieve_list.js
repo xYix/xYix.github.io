@@ -1053,7 +1053,7 @@
 		'post_name' : 'luogu-5404',
 		'post_chinese_name' : 'luoguP5404 题解 - 【CTS2019】重复',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-09',
+		'last_modi' : '2021-10-27',
 		'tag' : ['keter','string',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1583,6 +1583,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-26',
 		'tag' : ['safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '199',
+		'post_name' : 'agc-mis',
+		'post_chinese_name' : 'AGC 随机做',
+		'type_name' : '4',
+		'last_modi' : '2021-10-27',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

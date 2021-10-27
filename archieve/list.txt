@@ -1315,3 +1315,10 @@ ptz-gxx-round-5-h
 solution
 1
 safe
+agc-mis
+AGC 随机做
+4
+keter
+submit-answer
+constructive
+lmoliver
