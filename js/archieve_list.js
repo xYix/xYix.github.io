@@ -1588,9 +1588,9 @@
 		'postid' : '199',
 		'post_name' : 'agc-mis',
 		'post_chinese_name' : 'AGC 随机做',
-		'type_name' : '4',
+		'type_name' : 'solution',
 		'last_modi' : '2021-10-27',
-		'tag' : [],
+		'tag' : ['constructive','keter','lmoliver','submit-answer',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

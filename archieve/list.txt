@@ -1317,6 +1317,7 @@ solution
 safe
 agc-mis
 AGC 随机做
+solution
 4
 keter
 submit-answer
