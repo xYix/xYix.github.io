@@ -1318,14 +1318,14 @@ safe
 agc-mis
 AGC 随机做
 solution
-4
+5
 keter
 submit-answer
 construction
 lmoliver
-luogu-7570
-luoguP7570 题解 - 【MCOI-05】多宇
+writing
+command-block
+试图取并 command_block 记
 solution
-2
-safe
-graph-theory
+1
+writing
