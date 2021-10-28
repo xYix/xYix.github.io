@@ -1592,6 +1592,14 @@
 		'last_modi' : '2021-10-27',
 		'tag' : ['construction','keter','lmoliver','submit-answer',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '200',
+		'post_name' : 'luogu-7570',
+		'post_chinese_name' : 'luoguP7570 题解 - 【MCOI-05】多宇',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-28',
+		'tag' : ['graph-theory','safe',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

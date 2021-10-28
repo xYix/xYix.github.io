@@ -1323,3 +1323,9 @@ keter
 submit-answer
 construction
 lmoliver
+luogu-7570
+luoguP7570 题解 - 【MCOI-05】多宇
+solution
+2
+safe
+graph-theory
