@@ -1526,7 +1526,7 @@
 		'post_chinese_name' : 'AGC045 部分题解 - 不含 E',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-22',
-		'tag' : ['apollyon','lmoliver','optimization',],
+		'tag' : ['apollyon','dp','lmoliver','number-theory','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '192',
@@ -1582,7 +1582,7 @@
 		'post_chinese_name' : '毛营 2017（冬）叉姐 Contest 5 H 题解 - Permutation and noitatumreP',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-26',
-		'tag' : ['safe',],
+		'tag' : ['combinatorics','safe',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '199',
@@ -1590,7 +1590,7 @@
 		'post_chinese_name' : 'AGC 随机做',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-29',
-		'tag' : ['construction','keter','lmoliver','submit-answer','writing',],
+		'tag' : ['construction','dp','game-theory','keter','lmoliver','submit-answer','writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '200',
@@ -1598,7 +1598,7 @@
 		'post_chinese_name' : '试图取并 command_block 记',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-29',
-		'tag' : ['data-structure','graph-theory','writing',],
+		'tag' : ['data-structure','dp','graph-theory','writing',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

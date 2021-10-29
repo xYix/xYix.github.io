@@ -1272,10 +1272,12 @@ sqrt-tech
 agc-045
 AGC045 部分题解 - 不含 E
 solution
-3
+5
 apollyon
 optimization
 lmoliver
+dp
+number-theory
 agc-040-f
 AGC040F 题解 - Two Pieces
 solution
@@ -1313,21 +1315,25 @@ other
 ptz-gxx-round-5-h
 毛营 2017（冬）叉姐 Contest 5 H 题解 - Permutation and noitatumreP
 solution
-1
+2
 safe
+combinatorics
 agc-mis
 AGC 随机做
 solution
-5
+7
 keter
 submit-answer
 construction
 lmoliver
 writing
+game-theory
+dp
 command-block
 试图取并 command_block 记
 solution
-3
+4
 writing
 graph-theory
 data-structure
+dp
