@@ -1589,7 +1589,7 @@
 		'post_name' : 'agc-mis',
 		'post_chinese_name' : 'AGC 随机做',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-27',
+		'last_modi' : '2021-10-29',
 		'tag' : ['construction','keter','lmoliver','submit-answer','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1597,8 +1597,8 @@
 		'post_name' : 'command-block',
 		'post_chinese_name' : '试图取并 command_block 记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-28',
-		'tag' : ['writing',],
+		'last_modi' : '2021-10-29',
+		'tag' : ['data-structure','graph-theory','writing',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
