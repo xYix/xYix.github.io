@@ -1600,6 +1600,14 @@
 		'last_modi' : '2021-10-29',
 		'tag' : ['data-structure','dp','graph-theory','writing',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '201',
+		'post_name' : 'arc-mis',
+		'post_chinese_name' : 'ARC 随机做',
+		'type_name' : 'solution',
+		'last_modi' : '2021-10-30',
+		'tag' : ['lagrange-interpolation','number-theory','writing',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
