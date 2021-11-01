@@ -1605,8 +1605,8 @@
 		'post_name' : 'arc-mis',
 		'post_chinese_name' : 'ARC 随机做',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-31',
-		'tag' : ['lagrange-interpolation','number-theory','writing',],
+		'last_modi' : '2021-11-01',
+		'tag' : ['combinatorics','dp','lagrange-interpolation','lmoliver','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '202',
