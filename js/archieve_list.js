@@ -734,7 +734,7 @@
 		'post_chinese_name' : 'uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['apollyon','combinatorics','exc-inc','string',],
+		'tag' : ['apollyon','combinatorics','dp','exc-inc','string',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '93',
@@ -782,7 +782,7 @@
 		'post_chinese_name' : 'luoguP4339 题解 - 【ZJOI2018】迷宫',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['graph-theory','keter','lmoliver','number-theory',],
+		'tag' : ['dfa-theory','graph-theory','keter','number-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '99',
@@ -910,7 +910,7 @@
 		'post_chinese_name' : 'AGC001F 题解 - Wide Swap',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['graph-theory','keter',],
+		'tag' : ['graph-theory','keter','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '115',
@@ -990,7 +990,7 @@
 		'post_chinese_name' : 'luoguP6803 题解 — 【CEOI2020】Star Trek',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['euclid',],
+		'tag' : ['dp','euclid','game-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '125',
@@ -1022,7 +1022,7 @@
 		'post_chinese_name' : 'CF1416F 题解 - Showing Off',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['euclid',],
+		'tag' : ['euclid','network-flow',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '129',
@@ -1030,7 +1030,7 @@
 		'post_chinese_name' : 'uoj#506 题解 - 【JOISC2020】遗迹',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['combinatorics','keter',],
+		'tag' : ['combinatorics','dp','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '130',
@@ -1150,7 +1150,7 @@
 		'post_chinese_name' : 'CFgym102538H 题解 -【300iq Contest 3】Horrible Cycles',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-16',
-		'tag' : ['combinatorics','euclid',],
+		'tag' : ['combinatorics','dp','euclid',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '145',
@@ -1166,7 +1166,7 @@
 		'post_chinese_name' : 'CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-21',
-		'tag' : ['dfa-theory','euclid',],
+		'tag' : ['dfa-theory','dp','euclid',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '147',
@@ -1174,7 +1174,7 @@
 		'post_chinese_name' : 'UNR#5 题解 - 不含 D2T3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-22',
-		'tag' : ['combinatorics','data-structure','graph-theory','keter','polynomial',],
+		'tag' : ['combinatorics','data-structure','dp','graph-theory','keter','polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '148',
@@ -1318,7 +1318,7 @@
 		'post_chinese_name' : 'loj#6786 题解 - 克莱茵蓝彼岸花',
 		'type_name' : 'solution',
 		'last_modi' : '2021-08-22',
-		'tag' : ['keter',],
+		'tag' : ['dp','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '166',

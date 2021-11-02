@@ -603,11 +603,12 @@ pigeon
 uoj-199
 uoj#199 题解 - 【CTSC2016】萨菲克斯·阿瑞
 solution
-4
+5
 string
 combinatorics
 exc-inc
 apollyon
+dp
 spoj-33039
 SPOJ33039 题解 - AFS3
 solution
@@ -651,7 +652,7 @@ luoguP4339 题解 - 【ZJOI2018】迷宫
 solution
 4
 keter
-lmoliver
+dfa-theory
 number-theory
 graph-theory
 luogu-4775
@@ -755,9 +756,10 @@ interact
 agc-001-f
 AGC001F 题解 - Wide Swap
 solution
-2
+3
 keter
 graph-theory
+optimization
 loj-6736
 loj#6736 题解 - 【2020 集训队论文】最小连通块
 solution
@@ -824,8 +826,10 @@ linear-algebra
 luogu-6803
 luoguP6803 题解 — 【CEOI2020】Star Trek
 solution
-1
+3
 euclid
+dp
+game-theory
 luogu-7123
 luoguP7123 题解 - 【NEERC2016】 Indiana Jones and the Uniform Cave
 solution
@@ -849,14 +853,16 @@ network-flow
 cf-1416-f
 CF1416F 题解 - Showing Off
 solution
-1
+2
 euclid
+network-flow
 uoj-506
 uoj#506 题解 - 【JOISC2020】遗迹
 solution
-2
+3
 keter
 combinatorics
+dp
 domination-tree
 男性增加支配树题分数的技巧
 algorithm
@@ -956,9 +962,10 @@ keter
 cf-gym-102538-h
 CFgym102538H 题解 -【300iq Contest 3】Horrible Cycles
 solution
-2
+3
 euclid
 combinatorics
+dp
 nytoi-2021-d
 NayutanOI D 题解 - Dance Robot Dance
 solution
@@ -972,18 +979,20 @@ young-tableau
 cf-gym-102586-j
 CFgym102586J 题解 - 【GP of Tokyo】Median Replace Hard
 solution
-2
+3
 euclid
+dp
 dfa-theory
 uoj-NR-5
 UNR#5 题解 - 不含 D2T3
 solution
-5
+6
 keter
 combinatorics
 polynomial
 graph-theory
 data-structure
+dp
 cf-1553-h
 CF1553H 题解 - XOR and Distance
 solution
@@ -1086,8 +1095,9 @@ commu
 loj-6786
 loj#6786 题解 - 克莱茵蓝彼岸花
 solution
-1
+2
 keter
+dp
 recent-kouhu
 近期嘴巴杂记
 solution
