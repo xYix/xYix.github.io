@@ -1446,7 +1446,7 @@
 		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-01',
-		'tag' : ['ban','data-structure','game-theory','graph-theory','linear-algebra',],
+		'tag' : ['ban','data-structure','dp','game-theory','graph-theory','isotonic-regression','linear-algebra','number-theory','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '182',
@@ -1597,7 +1597,7 @@
 		'post_name' : 'command-block',
 		'post_chinese_name' : '试图取并 command_block 记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-29',
+		'last_modi' : '2021-11-02',
 		'tag' : ['data-structure','dp','graph-theory','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1615,6 +1615,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-01',
 		'tag' : ['apollyon','bijective-proof','dp','lmoliver',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '203',
+		'post_name' : 'luogu-5288',
+		'post_chinese_name' : 'luoguP5288 题解 - 【HNOI2019】多边形',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-02',
+		'tag' : ['safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

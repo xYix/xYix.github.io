@@ -1200,12 +1200,16 @@ ban
 ioi2022-hc
 集训队胡策 2022 口胡
 solution
-5
+9
 ban
+number-theory
 linear-algebra
 graph-theory
 game-theory
 data-structure
+dp
+isotonic-regression
+optimization
 agc-008-f
 AGC008F 题解 - Black Radius
 solution
@@ -1355,3 +1359,8 @@ apollyon
 bijective-proof
 lmoliver
 dp
+luogu-5288
+luoguP5288 题解 - 【HNOI2019】多边形
+solution
+1
+safe

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://xyix.github.io/index.html</loc>
-		<lastmod>2021-10-15</lastmod>
+		<lastmod>2021-11-01</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/tags/index.html</loc>
@@ -810,7 +810,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/command-block.html</loc>
-		<lastmod>2021-10-29</lastmod>
+		<lastmod>2021-11-02</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/arc-mis.html</loc>
@@ -819,5 +819,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-055.html</loc>
 		<lastmod>2021-11-01</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/luogu-5288.html</loc>
+		<lastmod>2021-11-02</lastmod>
 	</url>
 </urlset>
