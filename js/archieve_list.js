@@ -1627,10 +1627,10 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '204',
 		'post_name' : 'loj-6539',
-		'post_chinese_name' : 'solution',
-		'type_name' : '2',
+		'post_chinese_name' : 'loj#3529 题解 - 有趣的题',
+		'type_name' : 'solution',
 		'last_modi' : '2021-11-03',
-		'tag' : [],
+		'tag' : ['optimization','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

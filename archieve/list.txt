@@ -1376,6 +1376,7 @@ solution
 1
 safe
 loj-6539
+loj#3529 题解 - 有趣的题
 solution
 2
 safe
