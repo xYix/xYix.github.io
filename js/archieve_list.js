@@ -1634,11 +1634,11 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '205',
-		'post_name' : 'loj#3407 题解 - 【2020-2021 集训队作业】Island Manager',
-		'post_chinese_name' : 'solution',
-		'type_name' : '3',
-		'last_modi' : '',
-		'tag' : [],
+		'post_name' : 'loj-3407',
+		'post_chinese_name' : 'loj#3407 题解 - 【2020-2021 集训队作业】Island Manager',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-03',
+		'tag' : ['d-and-c-on-tree','keter','sqrt-tech',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
