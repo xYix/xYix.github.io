@@ -1381,3 +1381,9 @@ solution
 2
 safe
 optimization
+loj#3407 题解 - 【2020-2021 集训队作业】Island Manager
+solution
+3
+keter
+sqrt-tech
+d-and-c-on-tree

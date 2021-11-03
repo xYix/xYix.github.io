@@ -806,7 +806,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-mis.html</loc>
-		<lastmod>2021-10-30</lastmod>
+		<lastmod>2021-11-03</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/command-block.html</loc>
@@ -818,7 +818,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-055.html</loc>
-		<lastmod>2021-11-01</lastmod>
+		<lastmod>2021-11-03</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/luogu-5288.html</loc>
@@ -827,5 +827,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/loj-6539.html</loc>
 		<lastmod>2021-11-03</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/loj#3407 题解 - 【2020-2021 集训队作业】Island Manager.html</loc>
+		<lastmod></lastmod>
 	</url>
 </urlset>

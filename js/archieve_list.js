@@ -1589,7 +1589,7 @@
 		'post_name' : 'agc-mis',
 		'post_chinese_name' : 'AGC 随机做',
 		'type_name' : 'solution',
-		'last_modi' : '2021-10-30',
+		'last_modi' : '2021-11-03',
 		'tag' : ['construction','dp','game-theory','keter','lmoliver','submit-answer','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1613,7 +1613,7 @@
 		'post_name' : 'agc-055',
 		'post_chinese_name' : 'AGC055 部分题解 - 不含 E',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-01',
+		'last_modi' : '2021-11-03',
 		'tag' : ['apollyon','bijective-proof','dp','lmoliver',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1631,6 +1631,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-03',
 		'tag' : ['optimization','safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '205',
+		'post_name' : 'loj#3407 题解 - 【2020-2021 集训队作业】Island Manager',
+		'post_chinese_name' : 'solution',
+		'type_name' : '3',
+		'last_modi' : '',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
