@@ -1333,7 +1333,7 @@
 		'post_name' : 'ptz-camp',
 		'post_chinese_name' : '毛营 2021（夏）游记',
 		'type_name' : 'other',
-		'last_modi' : '2021-09-22',
+		'last_modi' : '2021-11-03',
 		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','interact','lagrange-inversion','lmoliver','nimber','randomization','sqrt-tech',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1597,8 +1597,8 @@
 		'post_name' : 'command-block',
 		'post_chinese_name' : '试图取并 command_block 记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-02',
-		'tag' : ['data-structure','dp','graph-theory','writing',],
+		'last_modi' : '2021-11-03',
+		'tag' : ['data-structure','dp','graph-theory','optimization','writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '201',
@@ -1623,6 +1623,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-02',
 		'tag' : ['safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '204',
+		'post_name' : 'loj-6539',
+		'post_chinese_name' : 'solution',
+		'type_name' : '2',
+		'last_modi' : '2021-11-03',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

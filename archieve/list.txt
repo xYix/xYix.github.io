@@ -1346,11 +1346,12 @@ dp
 command-block
 试图取并 command_block 记
 solution
-4
+5
 writing
 graph-theory
 data-structure
 dp
+optimization
 arc-mis
 ARC 随机做
 solution
@@ -1374,3 +1375,8 @@ luoguP5288 题解 - 【HNOI2019】多边形
 solution
 1
 safe
+loj-6539
+solution
+2
+safe
+optimization
