@@ -427,9 +427,11 @@ geometry
 loj-3385
 loj#3385 题解 - 【COCI 2020】Svjetlo
 solution
-2
+4
 keter
 lmoliver
+graph-theory
+dp
 uoj-228
 uoj#228 题解 - 基础数据结构练习题 - 兼均摊分析学习笔记
 algorithm
@@ -996,8 +998,9 @@ dp
 cf-1553-h
 CF1553H 题解 - XOR and Distance
 solution
-1
+2
 keter
+dp
 loj-3409
 loj#3409 题解 - 【2020-2021 集训队作业】Yet Another Linear Algebra Problem
 solution
@@ -1231,7 +1234,7 @@ luogu-7896
 luoguP7896 题解 - Moke 的游戏
 solution
 3
-keter
+euclid
 lagrange-inversion
 polynomial
 cf-1237-g

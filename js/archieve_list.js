@@ -510,7 +510,7 @@
 		'post_chinese_name' : 'loj#3385 题解 - 【COCI 2020】Svjetlo',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-08',
-		'tag' : ['keter','lmoliver',],
+		'tag' : ['dp','graph-theory','keter','lmoliver',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '65',
@@ -1182,7 +1182,7 @@
 		'post_chinese_name' : 'CF1553H 题解 - XOR and Distance',
 		'type_name' : 'solution',
 		'last_modi' : '2021-07-28',
-		'tag' : ['keter',],
+		'tag' : ['dp','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '149',
@@ -1462,7 +1462,7 @@
 		'post_chinese_name' : 'luoguP7896 题解 - Moke 的游戏',
 		'type_name' : 'solution',
 		'last_modi' : '2021-10-23',
-		'tag' : ['keter','lagrange-inversion','polynomial',],
+		'tag' : ['euclid','lagrange-inversion','polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '184',
@@ -1597,7 +1597,7 @@
 		'post_name' : 'command-block',
 		'post_chinese_name' : '试图取并 command_block 记',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-03',
+		'last_modi' : '2021-11-04',
 		'tag' : ['data-structure','dp','graph-theory','optimization','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1637,7 +1637,7 @@
 		'post_name' : 'loj-3407',
 		'post_chinese_name' : 'loj#3407 题解 - 【2020-2021 集训队作业】Island Manager',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-03',
+		'last_modi' : '2021-11-04',
 		'tag' : ['d-and-c-on-tree','keter','sqrt-tech',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
