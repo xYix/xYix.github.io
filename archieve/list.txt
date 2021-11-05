@@ -1338,13 +1338,14 @@ combinatorics
 agc-mis
 AGC 随机做
 solution
-7
-keter
+8
+apollyon
 submit-answer
 construction
 lmoliver
-writing
 game-theory
+graph-theory
+optimization
 dp
 command-block
 试图取并 command_block 记
