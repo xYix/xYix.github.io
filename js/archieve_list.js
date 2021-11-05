@@ -1640,6 +1640,14 @@
 		'last_modi' : '2021-11-05',
 		'tag' : ['d-and-c-on-tree','keter','sqrt-tech',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '206',
+		'post_name' : 'uoj-84',
+		'post_chinese_name' : 'uoj#84 题解 - 【UR #7】水题走四方',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-05',
+		'tag' : ['dp','graph-theory','keter','optimization',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
