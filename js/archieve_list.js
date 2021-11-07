@@ -1005,7 +1005,7 @@
 		'post_name' : 'thuwc-2020-1-3',
 		'post_chinese_name' : 'THUWC2020Day1T3 题解 - 某科学的动态仙人掌',
 		'type_name' : 'solution',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-11-06',
 		'tag' : ['data-structure','graph-theory','keter',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1647,6 +1647,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-05',
 		'tag' : ['dp','graph-theory','keter','optimization',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '207',
+		'post_name' : 'cf-1375-h',
+		'post_chinese_name' : 'CF1375H 题解 - Set Merging',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-07',
+		'tag' : ['construction','euclid','sqrt-tech',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
