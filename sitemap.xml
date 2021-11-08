@@ -318,7 +318,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/parallel-series.html</loc>
-		<lastmod>2021-07-08</lastmod>
+		<lastmod>2021-11-08</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/matroid.html</loc>
@@ -798,7 +798,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/code-name-apotheosis.html</loc>
-		<lastmod>2021-10-26</lastmod>
+		<lastmod>2021-11-08</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/ptz-gxx-round-5-h.html</loc>
@@ -806,7 +806,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-mis.html</loc>
-		<lastmod>2021-11-05</lastmod>
+		<lastmod>2021-11-08</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/command-block.html</loc>
@@ -839,5 +839,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/cf-1375-h.html</loc>
 		<lastmod>2021-11-07</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/CF1439E 题解 - Cheat and Win.html</loc>
+		<lastmod></lastmod>
 	</url>
 </urlset>

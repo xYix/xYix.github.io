@@ -1407,3 +1407,8 @@ solution
 euclid
 sqrt-tech
 construction
+CF1439E 题解 - Cheat and Win
+solution
+2
+safe
+game-theory

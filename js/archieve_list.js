@@ -613,7 +613,7 @@
 		'post_name' : 'parallel-series',
 		'post_chinese_name' : '广义串并联图学习笔记',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-07-08',
+		'last_modi' : '2021-11-08',
 		'tag' : ['d-and-c-on-tree','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1573,7 +1573,7 @@
 		'post_name' : 'code-name-apotheosis',
 		'post_chinese_name' : 'CODE NAME: APOTHEOSIS',
 		'type_name' : 'other',
-		'last_modi' : '2021-10-26',
+		'last_modi' : '2021-11-08',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1589,7 +1589,7 @@
 		'post_name' : 'agc-mis',
 		'post_chinese_name' : 'AGC 随机做',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-05',
+		'last_modi' : '2021-11-08',
 		'tag' : ['apollyon','construction','dp','game-theory','graph-theory','lmoliver','optimization','submit-answer',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1655,6 +1655,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-07',
 		'tag' : ['construction','euclid','sqrt-tech',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '208',
+		'post_name' : 'CF1439E 题解 - Cheat and Win',
+		'post_chinese_name' : 'solution',
+		'type_name' : '2',
+		'last_modi' : '',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
