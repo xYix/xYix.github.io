@@ -1658,11 +1658,11 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '208',
-		'post_name' : 'CF1439E 题解 - Cheat and Win',
-		'post_chinese_name' : 'solution',
-		'type_name' : '2',
-		'last_modi' : '',
-		'tag' : [],
+		'post_name' : 'cf-1439-e',
+		'post_chinese_name' : 'CF1439E 题解 - Cheat and Win',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-08',
+		'tag' : ['game-theory','safe',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
