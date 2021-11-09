@@ -1414,7 +1414,7 @@ solution
 safe
 game-theory
 loj-3472
-JOI 2021 Final T4 T5 题解 - 机器人 / 地牢3
+loj#3472 题解 - 【JOI 2021 Final】地牢 3
 solution
 2
 keter
