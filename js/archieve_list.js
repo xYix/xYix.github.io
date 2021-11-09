@@ -1675,7 +1675,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '210',
 		'post_name' : 'moonshine-generator',
-		'post_chinese_name' : '随机说话生成器（使用例附）',
+		'post_chinese_name' : '胡话生成器（使用例附）',
 		'type_name' : 'other',
 		'last_modi' : '2021-11-09',
 		'tag' : [],

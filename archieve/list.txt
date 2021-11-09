@@ -1420,6 +1420,6 @@ solution
 keter
 data-structure
 moonshine-generator
-随机说话生成器（使用例附）
+胡话生成器（使用例附）
 other
 0
