@@ -1667,10 +1667,18 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '209',
 		'post_name' : 'loj-3472',
-		'post_chinese_name' : 'JOI 2021 Final T4 T5 题解 - 机器人 / 地牢3',
+		'post_chinese_name' : 'loj#3472 题解 - 【JOI 2021 Final】地牢 3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-09',
 		'tag' : ['data-structure','keter',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '210',
+		'post_name' : 'moonshine-generator',
+		'post_chinese_name' : '随机说话生成器（使用例附）',
+		'type_name' : 'other',
+		'last_modi' : '2021-11-09',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
