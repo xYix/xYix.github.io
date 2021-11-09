@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-10-27',
+		'last_modi' : '2021-11-09',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1663,6 +1663,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-08',
 		'tag' : ['game-theory','safe',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '209',
+		'post_name' : 'loj-3472',
+		'post_chinese_name' : 'JOI 2021 Final T4 T5 题解 - 机器人 / 地牢3',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-09',
+		'tag' : ['data-structure','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
