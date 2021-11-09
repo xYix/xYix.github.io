@@ -1416,10 +1416,18 @@ game-theory
 loj-3472
 loj#3472 题解 - 【JOI 2021 Final】地牢 3
 solution
-2
+3
 keter
+dp
 data-structure
 moonshine-generator
 胡话生成器（使用例附）
 other
 0
+cf-1416-e
+CF1416E 题解 - Split
+solution
+3
+keter
+dp
+data-structure

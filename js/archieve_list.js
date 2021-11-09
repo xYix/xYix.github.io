@@ -1341,7 +1341,7 @@
 		'post_name' : 'online-convolution',
 		'post_chinese_name' : '回忆半在线 / 在线卷积',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-09-08',
+		'last_modi' : '2021-11-09',
 		'tag' : ['polynomial',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1670,15 +1670,23 @@
 		'post_chinese_name' : 'loj#3472 题解 - 【JOI 2021 Final】地牢 3',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-09',
-		'tag' : ['data-structure','keter',],
+		'tag' : ['data-structure','dp','keter',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '210',
 		'post_name' : 'moonshine-generator',
 		'post_chinese_name' : '胡话生成器（使用例附）',
 		'type_name' : 'other',
-		'last_modi' : '2021-11-09',
+		'last_modi' : '2021-11-10',
 		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '211',
+		'post_name' : 'cf-1416-e',
+		'post_chinese_name' : 'CF1416E 题解 - Split',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-10',
+		'tag' : ['data-structure','dp','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
