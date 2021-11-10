@@ -1626,14 +1626,6 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '204',
-		'post_name' : 'loj-6539',
-		'post_chinese_name' : 'loj#3529 题解 - 有趣的题',
-		'type_name' : 'solution',
-		'last_modi' : '2021-11-03',
-		'tag' : ['optimization','safe',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '205',
 		'post_name' : 'loj-3407',
 		'post_chinese_name' : 'loj#3407 题解 - 【2020-2021 集训队作业】Island Manager',
 		'type_name' : 'solution',
@@ -1641,23 +1633,7 @@
 		'tag' : ['d-and-c-on-tree','keter','sqrt-tech',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '206',
-		'post_name' : 'uoj-84',
-		'post_chinese_name' : 'uoj#84 题解 - 【UR #7】水题走四方',
-		'type_name' : 'solution',
-		'last_modi' : '2021-11-05',
-		'tag' : ['dp','graph-theory','keter','optimization',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '207',
-		'post_name' : 'cf-1375-h',
-		'post_chinese_name' : 'CF1375H 题解 - Set Merging',
-		'type_name' : 'solution',
-		'last_modi' : '2021-11-07',
-		'tag' : ['construction','euclid','sqrt-tech',],
-	};
-	archieve_list[archieve_list.length] = {
-		'postid' : '208',
+		'postid' : '205',
 		'post_name' : 'cf-1439-e',
 		'post_chinese_name' : 'CF1439E 题解 - Cheat and Win',
 		'type_name' : 'solution',
@@ -1665,7 +1641,7 @@
 		'tag' : ['game-theory','safe',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '209',
+		'postid' : '206',
 		'post_name' : 'loj-3472',
 		'post_chinese_name' : 'loj#3472 题解 - 【JOI 2021 Final】地牢 3',
 		'type_name' : 'solution',
@@ -1673,7 +1649,7 @@
 		'tag' : ['data-structure','dp','keter',],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '210',
+		'postid' : '207',
 		'post_name' : 'moonshine-generator',
 		'post_chinese_name' : '胡话生成器（使用例附）',
 		'type_name' : 'other',
@@ -1681,12 +1657,12 @@
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
-		'postid' : '211',
-		'post_name' : 'cf-1416-e',
-		'post_chinese_name' : 'CF1416E 题解 - Split',
+		'postid' : '208',
+		'post_name' : 'oi-transit-mis',
+		'post_chinese_name' : 'OI-transit 随机做',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-10',
-		'tag' : ['data-structure','dp','keter',],
+		'tag' : ['construction','data-structure','dp','geometry','graph-theory','keter','optimization','sqrt-tech',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

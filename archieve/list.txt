@@ -1379,12 +1379,6 @@ luoguP5288 题解 - 【HNOI2019】多边形
 solution
 1
 safe
-loj-6539
-loj#3529 题解 - 有趣的题
-solution
-2
-safe
-optimization
 loj-3407
 loj#3407 题解 - 【2020-2021 集训队作业】Island Manager
 solution
@@ -1392,21 +1386,6 @@ solution
 keter
 sqrt-tech
 d-and-c-on-tree
-uoj-84
-uoj#84 题解 - 【UR #7】水题走四方
-solution
-4
-keter
-graph-theory
-dp
-optimization
-cf-1375-h
-CF1375H 题解 - Set Merging
-solution
-3
-euclid
-sqrt-tech
-construction
 cf-1439-e
 CF1439E 题解 - Cheat and Win
 solution
@@ -1424,10 +1403,15 @@ moonshine-generator
 胡话生成器（使用例附）
 other
 0
-cf-1416-e
-CF1416E 题解 - Split
+oi-transit-mis
+OI-transit 随机做
 solution
-3
+8
 keter
 dp
 data-structure
+geometry
+sqrt-tech
+construction
+graph-theory
+optimization
