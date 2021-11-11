@@ -1423,3 +1423,10 @@ x-yi-x
 safe
 exc-inc
 combinatorics
+nytoi-2021-c-old
+一个有趣的 prüfer 题
+solution
+3
+x-yi-x
+euclid
+bijective-proof

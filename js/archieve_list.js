@@ -1672,6 +1672,14 @@
 		'last_modi' : '2021-11-11',
 		'tag' : ['combinatorics','exc-inc','safe','x-yi-x',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '210',
+		'post_name' : 'nytoi-2021-c-old',
+		'post_chinese_name' : '一个有趣的 prüfer 题',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-11',
+		'tag' : ['bijective-proof','euclid','x-yi-x',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
