@@ -1653,7 +1653,7 @@
 		'post_name' : 'moonshine-generator',
 		'post_chinese_name' : '胡话生成器（使用例附）',
 		'type_name' : 'other',
-		'last_modi' : '2021-11-10',
+		'last_modi' : '2021-11-11',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1679,6 +1679,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-11',
 		'tag' : ['bijective-proof','euclid','x-yi-x',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '211',
+		'post_name' : 'loj-6215',
+		'post_chinese_name' : 'loj#6215 - 【美团 CodeM 决赛】bt',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-11',
+		'tag' : ['combinatorics','generating-function','keter',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
