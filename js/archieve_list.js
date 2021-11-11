@@ -1661,7 +1661,7 @@
 		'post_name' : 'oi-transit-mis',
 		'post_chinese_name' : 'OI-transit 随机做',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-10',
+		'last_modi' : '2021-11-11',
 		'tag' : ['construction','data-structure','dp','geometry','graph-theory','keter','optimization','sqrt-tech',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1686,7 +1686,7 @@
 		'post_chinese_name' : 'loj#6215 - 【美团 CodeM 决赛】bt',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-11',
-		'tag' : ['combinatorics','generating-function','keter',],
+		'tag' : ['combinatorics','euclid','generating-function',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

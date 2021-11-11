@@ -1434,6 +1434,6 @@ loj-6215
 loj#6215 - 【美团 CodeM 决赛】bt
 solution
 3
-keter
+euclid
 generating-function
 combinatorics
