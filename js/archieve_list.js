@@ -1573,7 +1573,7 @@
 		'post_name' : 'code-name-apotheosis',
 		'post_chinese_name' : 'CODE NAME: APOTHEOSIS',
 		'type_name' : 'other',
-		'last_modi' : '2021-11-08',
+		'last_modi' : '2021-11-12',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
