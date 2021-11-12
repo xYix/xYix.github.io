@@ -1437,3 +1437,9 @@ solution
 euclid
 generating-function
 combinatorics
+loj-3519
+loj#3519 题解 - 【CCO 2018 Day2】Flop Sorting
+solution
+2
+euclid
+construction
