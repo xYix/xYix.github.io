@@ -1443,3 +1443,9 @@ solution
 2
 euclid
 construction
+xjoi
+不能发到表世界的模拟赛记录
+solution
+2
+ban
+construction
