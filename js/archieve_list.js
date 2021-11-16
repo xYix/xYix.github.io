@@ -1573,7 +1573,7 @@
 		'post_name' : 'code-name-apotheosis',
 		'post_chinese_name' : 'CODE NAME: APOTHEOSIS',
 		'type_name' : 'other',
-		'last_modi' : '2021-11-12',
+		'last_modi' : '2021-11-15',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1703,6 +1703,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-15',
 		'tag' : ['ban','construction',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '214',
+		'post_name' : 'loj-mis',
+		'post_chinese_name' : 'loj 杂题集',
+		'type_name' : 'solution',
+		'last_modi' : '2021-11-16',
+		'tag' : ['d-and-c-on-tree','data-structure','dp','geometry','graph-theory','keter','linear-algebra','number-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
