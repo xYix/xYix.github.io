@@ -1326,8 +1326,8 @@ solution
 safe
 combinatorics
 code-name-apotheosis
-CODE NAME: APOTHEOSIS
-other
+Dr.Medako 的提案
+scp
 0
 ptz-gxx-round-5-h
 毛营 2017（冬）叉姐 Contest 5 H 题解 - Permutation and noitatumreP

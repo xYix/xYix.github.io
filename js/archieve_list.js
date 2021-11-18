@@ -1571,9 +1571,9 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '197',
 		'post_name' : 'code-name-apotheosis',
-		'post_chinese_name' : 'CODE NAME: APOTHEOSIS',
-		'type_name' : 'other',
-		'last_modi' : '2021-11-15',
+		'post_chinese_name' : 'Dr.Medako 的提案',
+		'type_name' : 'scp',
+		'last_modi' : '2021-11-18',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1701,7 +1701,7 @@
 		'post_name' : 'xjoi',
 		'post_chinese_name' : '不能发到表世界的模拟赛记录',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-15',
+		'last_modi' : '2021-11-16',
 		'tag' : ['ban','construction',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1709,7 +1709,7 @@
 		'post_name' : 'loj-mis',
 		'post_chinese_name' : 'loj 杂题集',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-16',
+		'last_modi' : '2021-11-18',
 		'tag' : ['d-and-c-on-tree','data-structure','dp','geometry','graph-theory','keter','linear-algebra','number-theory',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
