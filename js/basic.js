@@ -120,7 +120,7 @@
 
     win.isInside = 0;
     if (win.Funval && win.Funval != '41') {
-        localStorage.setItem("isinside", win.Funval === 'sayonara');
+        localStorage.setItem("isinside", win.Funval === 'oyasumi');
         let newloc = location.pathname + ezylanASearch(
             {
                 Tags: win.Tags,
@@ -245,7 +245,7 @@
             write_link('关于作者 & 友链', '/posts/?page=0&postname=hello-world');
         }
         if (win.isInside) {
-            changemode = location.pathname + ezylanASearch(win.TrueSearch) + '&funval=notsayonara';
+            changemode = location.pathname + ezylanASearch(win.TrueSearch) + '&funval=notoyasumi';
             if (win.Postname) changemode += '&postname=' + win.Postname;
             write_link('回到表世界', changemode);
         }
