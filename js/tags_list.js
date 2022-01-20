@@ -47,6 +47,7 @@
 	tags_chinese['commu'] = "通信";
 	tags_chinese['optimization'] = '最优化';
 	tags_chinese['dp'] = '动态规划';
+	tags_chinese['farewell'] = '……那么，再见。';
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -96,6 +97,7 @@
 	tags_val['commu'] = -235;
 	tags_val['optimization'] = 38;
 	tags_val['dp'] = 39;
+	tags_val['farewell'] = 998244354;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);
