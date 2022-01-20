@@ -734,7 +734,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/ioi2022-hc.html</loc>
-		<lastmod>2021-11-05</lastmod>
+		<lastmod>2021-11-19</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/agc-008-f.html</loc>
@@ -798,7 +798,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/code-name-apotheosis.html</loc>
-		<lastmod>2021-11-18</lastmod>
+		<lastmod>2021-11-19</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/ptz-gxx-round-5-h.html</loc>
@@ -867,5 +867,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/loj-mis.html</loc>
 		<lastmod>2021-11-18</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/nytoi-2021-s.html</loc>
+		<lastmod>2022-01-20</lastmod>
 	</url>
 </urlset>

@@ -1445,7 +1445,7 @@
 		'post_name' : 'ioi2022-hc',
 		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
-		'last_modi' : '2021-11-05',
+		'last_modi' : '2021-11-19',
 		'tag' : ['ban','data-structure','dp','game-theory','graph-theory','isotonic-regression','linear-algebra','number-theory','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1573,7 +1573,7 @@
 		'post_name' : 'code-name-apotheosis',
 		'post_chinese_name' : 'Dr.Medako 的提案',
 		'type_name' : 'scp',
-		'last_modi' : '2021-11-18',
+		'last_modi' : '2021-11-19',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1711,6 +1711,14 @@
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-18',
 		'tag' : ['d-and-c-on-tree','data-structure','dp','geometry','graph-theory','keter','linear-algebra','number-theory',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '215',
+		'post_name' : 'nytoi-2021-s',
+		'post_chinese_name' : 'NayutanOI S 题解 - 彗星ハネムーン',
+		'type_name' : 'solution',
+		'last_modi' : '2022-01-20',
+		'tag' : ['apollyon','bijective-proof','combinatorics','farewell','x-yi-x',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
