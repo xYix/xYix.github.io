@@ -1208,13 +1208,11 @@ data-structure
 dr-medako-origin
 伪装成人类的第 29 天
 library
-1
-ban
+0
 ioi2022-hc
 集训队胡策 2022 口胡
 solution
-9
-ban
+8
 number-theory
 linear-algebra
 graph-theory
