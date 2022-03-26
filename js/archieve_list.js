@@ -1720,6 +1720,22 @@
 		'last_modi' : '2022-01-20',
 		'tag' : ['apollyon','bijective-proof','combinatorics','farewell','x-yi-x',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '216',
+		'post_name' : 'restart',
+		'post_chinese_name' : 'restart',
+		'type_name' : 'other',
+		'last_modi' : '2022-03-26',
+		'tag' : ['writing',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '217',
+		'post_name' : 'drought',
+		'post_chinese_name' : '干燥',
+		'type_name' : 'other',
+		'last_modi' : '2022-03-26',
+		'tag' : ['writing',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
