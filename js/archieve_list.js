@@ -670,7 +670,7 @@
 		'post_chinese_name' : '喝喝粥传（评注版）',
 		'type_name' : 'other',
 		'last_modi' : '2021-07-10',
-		'tag' : ['ban',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '85',
@@ -958,7 +958,7 @@
 		'post_chinese_name' : '如何解决效率低下的问题',
 		'type_name' : 'library',
 		'last_modi' : '2021-08-05',
-		'tag' : ['ban',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '121',
@@ -1254,7 +1254,7 @@
 		'post_chinese_name' : 'SCP-XJ-404 - "禁止访问"',
 		'type_name' : 'scp',
 		'last_modi' : '2021-08-06',
-		'tag' : ['ban',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '158',
@@ -1366,7 +1366,7 @@
 		'post_chinese_name' : 'SCP-XJ-1998 - 破晓之时',
 		'type_name' : 'scp',
 		'last_modi' : '2021-10-04',
-		'tag' : ['ban',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '172',

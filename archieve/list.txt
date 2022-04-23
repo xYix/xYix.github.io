@@ -559,8 +559,7 @@ generating-function
 hhz-bigraphy
 喝喝粥传（评注版）
 other
-1
-ban
+0
 luogu-6774
 luoguP6774 题解 - 时瑇的眼泪
 solution
@@ -804,8 +803,7 @@ generating-function
 how-to-study-well
 如何解决效率低下的问题
 library
-1
-ban
+0
 luogu-6965
 luoguP6965 题解 - 【NEERC2016】Binary Code
 solution
@@ -1050,8 +1048,7 @@ ban
 xj-404
 SCP-XJ-404 - "禁止访问"
 scp
-1
-ban
+0
 loj-562
 loj#562 题解 - 【LibreOJ Round #9】Tangjz 的背包
 solution
@@ -1154,8 +1151,7 @@ graph-theory
 xj-1000-medako
 SCP-XJ-1998 - 破晓之时
 scp
-1
-ban
+0
 ptz-camp-7-a
 毛营 Day7 A 题解 - Goldberg Machine 2
 solution
