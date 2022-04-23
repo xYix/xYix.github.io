@@ -1438,7 +1438,7 @@
 		'post_chinese_name' : '伪装成人类的第 29 天',
 		'type_name' : 'library',
 		'last_modi' : '2021-10-02',
-		'tag' : ['ban',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '181',
@@ -1446,7 +1446,7 @@
 		'post_chinese_name' : '集训队胡策 2022 口胡',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-19',
-		'tag' : ['ban','data-structure','dp','game-theory','graph-theory','isotonic-regression','linear-algebra','number-theory','optimization',],
+		'tag' : ['data-structure','dp','game-theory','graph-theory','isotonic-regression','linear-algebra','number-theory','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '182',
@@ -1725,7 +1725,7 @@
 		'post_name' : 'restart',
 		'post_chinese_name' : 'restart',
 		'type_name' : 'other',
-		'last_modi' : '2022-03-26',
+		'last_modi' : '2022-04-23',
 		'tag' : ['writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1735,6 +1735,14 @@
 		'type_name' : 'other',
 		'last_modi' : '2022-03-26',
 		'tag' : ['writing',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '218',
+		'post_name' : 'the-shattering-of-delusion',
+		'post_chinese_name' : '望海潮',
+		'type_name' : 'other',
+		'last_modi' : '2022-04-23',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
