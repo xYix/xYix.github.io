@@ -1725,7 +1725,7 @@
 		'post_name' : 'restart',
 		'post_chinese_name' : 'restart',
 		'type_name' : 'other',
-		'last_modi' : '2022-04-23',
+		'last_modi' : '2022-05-02',
 		'tag' : ['ban','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1733,8 +1733,8 @@
 		'post_name' : 'drought',
 		'post_chinese_name' : '干燥',
 		'type_name' : 'other',
-		'last_modi' : '2022-03-26',
-		'tag' : ['ban','writing',],
+		'last_modi' : '2022-05-02',
+		'tag' : ['writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '218',

@@ -1473,9 +1473,8 @@ ban
 drought
 干燥
 other
-2
+1
 writing
-ban
 the-shattering-of-delusion
 望海潮
 other
