@@ -1726,7 +1726,7 @@
 		'post_chinese_name' : 'restart',
 		'type_name' : 'other',
 		'last_modi' : '2022-04-23',
-		'tag' : ['writing',],
+		'tag' : ['ban','writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '217',
@@ -1734,7 +1734,7 @@
 		'post_chinese_name' : '干燥',
 		'type_name' : 'other',
 		'last_modi' : '2022-03-26',
-		'tag' : ['writing',],
+		'tag' : ['ban','writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '218',

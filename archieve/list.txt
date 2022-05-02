@@ -1467,13 +1467,15 @@ farewell
 restart
 restart
 other
-1
+2
 writing
+ban
 drought
 干燥
 other
-1
+2
 writing
+ban
 the-shattering-of-delusion
 望海潮
 other
