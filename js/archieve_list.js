@@ -1732,9 +1732,9 @@
 		'postid' : '217',
 		'post_name' : 'drought',
 		'post_chinese_name' : '干燥',
-		'type_name' : 'other',
+		'type_name' : 'library',
 		'last_modi' : '2022-05-02',
-		'tag' : ['writing',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '218',
