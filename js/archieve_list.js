@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2021-11-09',
+		'last_modi' : '2022-05-15',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1733,15 +1733,23 @@
 		'post_name' : 'drought',
 		'post_chinese_name' : '干燥',
 		'type_name' : 'library',
-		'last_modi' : '2022-05-02',
+		'last_modi' : '2022-05-13',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '218',
 		'post_name' : 'the-shattering-of-delusion',
 		'post_chinese_name' : '望海潮',
-		'type_name' : 'other',
+		'type_name' : 'library',
 		'last_modi' : '2022-04-23',
+		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '219',
+		'post_name' : 'nayutalien',
+		'post_chinese_name' : 'x义x 的糖学研究',
+		'type_name' : 'other',
+		'last_modi' : '',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
