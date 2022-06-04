@@ -1733,7 +1733,7 @@
 		'post_name' : 'drought',
 		'post_chinese_name' : '干燥',
 		'type_name' : 'library',
-		'last_modi' : '2022-05-13',
+		'last_modi' : '2022-05-23',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1749,7 +1749,7 @@
 		'post_name' : 'nayutalien',
 		'post_chinese_name' : 'x义x 的糖学研究',
 		'type_name' : 'other',
-		'last_modi' : '',
+		'last_modi' : '2022-05-15',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
