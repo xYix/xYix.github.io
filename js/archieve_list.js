@@ -1746,10 +1746,10 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '219',
-		'post_name' : 'nayutalien',
-		'post_chinese_name' : 'x义x 的糖学研究',
-		'type_name' : 'other',
-		'last_modi' : '2022-05-15',
+		'post_name' : 'salt',
+		'post_chinese_name' : '食盐',
+		'type_name' : 'library',
+		'last_modi' : '2022-06-25',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
