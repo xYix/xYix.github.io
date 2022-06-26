@@ -1750,6 +1750,14 @@
 		'post_chinese_name' : '食盐',
 		'type_name' : 'library',
 		'last_modi' : '2022-06-25',
+		'tag' : ['writing',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '220',
+		'post_name' : 'settings',
+		'post_chinese_name' : '谜之小说的谜之设定',
+		'type_name' : '1',
+		'last_modi' : '2022-06-26',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
