@@ -1481,8 +1481,7 @@ library
 salt
 食盐
 library
-1
-writing
+0
 settings
 谜之小说的谜之设定
 1

@@ -1749,8 +1749,8 @@
 		'post_name' : 'salt',
 		'post_chinese_name' : '食盐',
 		'type_name' : 'library',
-		'last_modi' : '2022-06-25',
-		'tag' : ['writing',],
+		'last_modi' : '2022-07-04',
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '220',
