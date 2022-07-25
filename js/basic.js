@@ -394,7 +394,7 @@
             else if (postinfo.type_name === 'other') Postinfo_type_a.textContent = '其他';
             else if (postinfo.type_name === 'journey') Postinfo_type_a.textContent = '外勤记录';
             else if (postinfo.type_name === 'scp') Postinfo_type_a.textContent = 'SCP文档';
-            else if (postinfo.type_name === 'library') Postinfo_type_a.textContent = '图书馆格式';
+            else if (postinfo.type_name === 'library') Postinfo_type_a.textContent = '图书馆';
             else Postinfo_type_a.textContent = '不明分类';
             Postinfo_type.appendChild(Postinfo_type_a);
         }
