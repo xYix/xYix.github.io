@@ -283,9 +283,10 @@
                 win.Title[nowlen] = '分类为：';
                 if (win.Type == 'solution') win.Title[nowlen] += '收容物';
                 else if (win.Type == 'algorithm') win.Title[nowlen] += 'Thaumiel级';
-                else if (win.Type == 'other') win.Title[nowlen] += '外勤记录';
+                else if (win.Type == 'other') win.Title[nowlen] += '其他';
+                else if (win.Type == 'journey') win.Title[nowlen] += '外勤记录';
                 else if (win.Type == 'scp') win.Title[nowlen] += 'SCP文档';
-                else if (win.Type == 'library') win.Title[nowlen] += '图书馆格式';
+                else if (win.Type == 'library') win.Title[nowlen] += '图书馆';
                 else win.Title[nowlen] += '不明分类';
                 console.log(win.Type);
             }
@@ -390,7 +391,8 @@
                 ezylanASearch(NextSearch(win.TrueSearch, { Type: postinfo.type_name, Page: 0 }));
             if (postinfo.type_name === 'solution') Postinfo_type_a.textContent = '收容物';
             else if (postinfo.type_name === 'algorithm') Postinfo_type_a.textContent = 'Thaumiel级';
-            else if (postinfo.type_name === 'other') Postinfo_type_a.textContent = '外勤记录';
+            else if (postinfo.type_name === 'other') Postinfo_type_a.textContent = '其他';
+            else if (postinfo.type_name === 'journey') Postinfo_type_a.textContent = '外勤记录';
             else if (postinfo.type_name === 'scp') Postinfo_type_a.textContent = 'SCP文档';
             else if (postinfo.type_name === 'library') Postinfo_type_a.textContent = '图书馆格式';
             else Postinfo_type_a.textContent = '不明分类';

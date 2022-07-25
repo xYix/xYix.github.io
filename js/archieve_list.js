@@ -332,7 +332,7 @@
 		'postid' : '42',
 		'post_name' : 'csp-2020-precontest',
 		'post_chinese_name' : 'CSP2020 初赛游记',
-		'type_name' : 'other',
+		'type_name' : 'journey',
 		'last_modi' : '2021-07-08',
 		'tag' : [],
 	};
@@ -404,7 +404,7 @@
 		'postid' : '51',
 		'post_name' : 'csp-2020-fst',
 		'post_chinese_name' : 'CSP2020 游记',
-		'type_name' : 'other',
+		'type_name' : 'journey',
 		'last_modi' : '2021-07-08',
 		'tag' : [],
 	};
@@ -532,7 +532,7 @@
 		'postid' : '67',
 		'post_name' : 'noip-2020',
 		'post_chinese_name' : 'NOIP2020 退役记',
-		'type_name' : 'other',
+		'type_name' : 'journey',
 		'last_modi' : '2021-07-08',
 		'tag' : ['construction',],
 	};
@@ -820,7 +820,7 @@
 		'postid' : '103',
 		'post_name' : 'zjoi-2021-thusc-2021',
 		'post_chinese_name' : '2021 省选游记',
-		'type_name' : 'other',
+		'type_name' : 'journey',
 		'last_modi' : '2021-08-22',
 		'tag' : [],
 	};
@@ -1332,7 +1332,7 @@
 		'postid' : '167',
 		'post_name' : 'ptz-camp',
 		'post_chinese_name' : '毛营 2021（夏）游记',
-		'type_name' : 'other',
+		'type_name' : 'journey',
 		'last_modi' : '2021-11-03',
 		'tag' : ['bijective-proof','combinatorics','construction','data-structure','generating-function','geometry','graph-theory','interact','lagrange-inversion','lmoliver','nimber','randomization','sqrt-tech',],
 	};
@@ -1574,7 +1574,7 @@
 		'post_chinese_name' : 'Dr.Medako 的提案',
 		'type_name' : 'scp',
 		'last_modi' : '2021-11-19',
-		'tag' : [],
+		'tag' : ['pigeon',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '198',
@@ -1724,9 +1724,9 @@
 		'postid' : '216',
 		'post_name' : 'restart',
 		'post_chinese_name' : 'restart',
-		'type_name' : 'other',
-		'last_modi' : '2022-05-02',
-		'tag' : ['ban','writing',],
+		'type_name' : 'library',
+		'last_modi' : '2022-07-25',
+		'tag' : ['writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '217',
@@ -1754,11 +1754,11 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '220',
-		'post_name' : 'settings',
-		'post_chinese_name' : '谜之小说的谜之设定',
-		'type_name' : '1',
-		'last_modi' : '2022-06-26',
-		'tag' : [],
+		'post_name' : 'proverb-of-medako',
+		'post_chinese_name' : 'medako 的箴言（长期更新）',
+		'type_name' : 'library',
+		'last_modi' : '2022-07-25',
+		'tag' : ['writing',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

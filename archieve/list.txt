@@ -270,7 +270,7 @@ game-theory
 generating-function
 csp-2020-precontest
 CSP2020 初赛游记
-other
+journey
 0
 cube-root-of-two
 2 的立方根是多少（详细揭秘）
@@ -333,7 +333,7 @@ lmoliver
 graph-theory
 csp-2020-fst
 CSP2020 游记
-other
+journey
 0
 multi-lagrange-inv
 矩阵树定理和多元拉反
@@ -448,7 +448,7 @@ randomization
 interact
 noip-2020
 NOIP2020 退役记
-other
+journey
 1
 construction
 cf-923-e
@@ -684,7 +684,7 @@ generating-function
 combinatorics
 zjoi-2021-thusc-2021
 2021 省选游记
-other
+journey
 0
 agc-031-f
 AGC031F 题解 - Walk on Graph
@@ -1116,7 +1116,7 @@ lagrange-interpolation
 game-theory
 ptz-camp
 毛营 2021（夏）游记
-other
+journey
 13
 combinatorics
 generating-function
@@ -1322,7 +1322,8 @@ combinatorics
 code-name-apotheosis
 Dr.Medako 的提案
 scp
-0
+1
+pigeon
 ptz-gxx-round-5-h
 毛营 2017（冬）叉姐 Contest 5 H 题解 - Permutation and noitatumreP
 solution
@@ -1466,10 +1467,9 @@ combinatorics
 farewell
 restart
 restart
-other
-2
+library
+1
 writing
-ban
 drought
 干燥
 library
@@ -1482,7 +1482,8 @@ salt
 食盐
 library
 0
-settings
-谜之小说的谜之设定
+proverb-of-medako
+medako 的箴言（长期更新）
+library
 1
 writing
