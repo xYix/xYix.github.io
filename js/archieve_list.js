@@ -1741,7 +1741,7 @@
 		'post_name' : 'the-shattering-of-delusion',
 		'post_chinese_name' : '望海潮',
 		'type_name' : 'library',
-		'last_modi' : '2022-04-23',
+		'last_modi' : '2022-07-25',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
