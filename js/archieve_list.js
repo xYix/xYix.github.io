@@ -1725,7 +1725,7 @@
 		'post_name' : 'restart',
 		'post_chinese_name' : 'restart',
 		'type_name' : 'library',
-		'last_modi' : '2022-07-25',
+		'last_modi' : '2022-08-13',
 		'tag' : ['writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1733,7 +1733,7 @@
 		'post_name' : 'drought',
 		'post_chinese_name' : '干燥',
 		'type_name' : 'library',
-		'last_modi' : '2022-07-25',
+		'last_modi' : '2022-08-22',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1766,6 +1766,14 @@
 		'post_chinese_name' : '万花筒',
 		'type_name' : 'library',
 		'last_modi' : '2022-08-09',
+		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '222',
+		'post_name' : 'questioning',
+		'post_chinese_name' : '呵护发问的种子（考试作文）',
+		'type_name' : 'other',
+		'last_modi' : '2022-09-10',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
