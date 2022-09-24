@@ -1776,6 +1776,14 @@
 		'last_modi' : '2022-09-10',
 		'tag' : [],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '223',
+		'post_name' : 'the-parable-of-the-tower',
+		'post_chinese_name' : '塔的寓言',
+		'type_name' : 'library',
+		'last_modi' : '2022-09-24',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
