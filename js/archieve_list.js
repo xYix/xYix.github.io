@@ -1725,7 +1725,7 @@
 		'post_name' : 'restart',
 		'post_chinese_name' : 'restart',
 		'type_name' : 'library',
-		'last_modi' : '2022-09-24',
+		'last_modi' : '2022-11-04',
 		'tag' : ['writing',],
 	};
 	archieve_list[archieve_list.length] = {
