@@ -1784,6 +1784,14 @@
 		'last_modi' : '2022-09-24',
 		'tag' : [],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '224',
+		'post_name' : 'factory-nihilism',
+		'post_chinese_name' : '工厂（和虚无主义）',
+		'type_name' : 'library',
+		'last_modi' : '2022-11-04',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

@@ -1499,3 +1499,7 @@ the-parable-of-the-tower
 塔的寓言
 library
 0
+factory-nihilism
+工厂（和虚无主义）
+library
+0
