@@ -1503,3 +1503,8 @@ factory-nihilism
 工厂（和虚无主义）
 library
 0
+factory-analyze
+退役一周年特别企划·《工厂（和虚无主义）》及其创作历程
+other
+1
+writing

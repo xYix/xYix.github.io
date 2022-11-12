@@ -1789,8 +1789,16 @@
 		'post_name' : 'factory-nihilism',
 		'post_chinese_name' : '工厂（和虚无主义）',
 		'type_name' : 'library',
-		'last_modi' : '2022-11-04',
+		'last_modi' : '2022-11-12',
 		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '225',
+		'post_name' : 'factory-analyze',
+		'post_chinese_name' : '退役一周年特别企划·《工厂（和虚无主义）》及其创作历程',
+		'type_name' : 'other',
+		'last_modi' : '2022-11-12',
+		'tag' : ['writing',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
