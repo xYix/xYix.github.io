@@ -1726,7 +1726,7 @@
 		'post_chinese_name' : 'restart',
 		'type_name' : 'library',
 		'last_modi' : '2022-11-04',
-		'tag' : ['writing',],
+		'tag' : ['andromeda-signal','writing',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '217',
@@ -1734,7 +1734,7 @@
 		'post_chinese_name' : '干燥',
 		'type_name' : 'library',
 		'last_modi' : '2022-08-22',
-		'tag' : [],
+		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '218',
@@ -1750,7 +1750,7 @@
 		'post_chinese_name' : '食盐',
 		'type_name' : 'library',
 		'last_modi' : '2022-07-04',
-		'tag' : [],
+		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '220',
@@ -1766,7 +1766,7 @@
 		'post_chinese_name' : '万花筒',
 		'type_name' : 'library',
 		'last_modi' : '2022-08-09',
-		'tag' : [],
+		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '222',
@@ -1782,7 +1782,7 @@
 		'post_chinese_name' : '塔的寓言',
 		'type_name' : 'library',
 		'last_modi' : '2022-09-24',
-		'tag' : [],
+		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '224',
@@ -1790,7 +1790,7 @@
 		'post_chinese_name' : '工厂（和虚无主义）',
 		'type_name' : 'library',
 		'last_modi' : '2022-11-12',
-		'tag' : [],
+		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '225',

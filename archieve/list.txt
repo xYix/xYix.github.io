@@ -1470,12 +1470,14 @@ farewell
 restart
 restart
 library
-1
+2
 writing
+andromeda-signal
 drought
 干燥
 library
-0
+1
+andromeda-signal
 the-shattering-of-delusion
 望海潮
 library
@@ -1483,7 +1485,8 @@ library
 salt
 食盐
 library
-0
+1
+andromeda-signal
 proverb-of-medako
 medako 的箴言（长期更新）
 library
@@ -1492,7 +1495,8 @@ writing
 kaleidoscope
 万花筒
 library
-0
+1
+andromeda-signal
 questioning
 呵护发问的种子（考试作文）
 other
@@ -1500,11 +1504,13 @@ other
 the-parable-of-the-tower
 塔的寓言
 library
-0
+1
+andromeda-signal
 factory-nihilism
 工厂（和虚无主义）
 library
-0
+1
+andromeda-signal
 factory-analyze
 退役一周年特别企划·《工厂（和虚无主义）》及其创作历程
 other
