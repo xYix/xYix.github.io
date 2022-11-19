@@ -1048,7 +1048,8 @@ ban
 xj-404
 SCP-XJ-404 - "禁止访问"
 scp
-0
+1
+xj
 loj-562
 loj#562 题解 - 【LibreOJ Round #9】Tangjz 的背包
 solution
@@ -1151,7 +1152,8 @@ graph-theory
 xj-1000-medako
 SCP-XJ-1998 - 破晓之时
 scp
-0
+1
+xj
 ptz-camp-7-a
 毛营 Day7 A 题解 - Goldberg Machine 2
 solution
@@ -1506,5 +1508,9 @@ library
 factory-analyze
 退役一周年特别企划·《工厂（和虚无主义）》及其创作历程
 other
+0
+xj-404-analyze
+退役一周年特别企划·解密：空调中心页
+other
 1
-writing
+xj

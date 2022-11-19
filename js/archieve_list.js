@@ -1254,7 +1254,7 @@
 		'post_chinese_name' : 'SCP-XJ-404 - "禁止访问"',
 		'type_name' : 'scp',
 		'last_modi' : '2021-08-06',
-		'tag' : [],
+		'tag' : ['xj',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '158',
@@ -1366,7 +1366,7 @@
 		'post_chinese_name' : 'SCP-XJ-1998 - 破晓之时',
 		'type_name' : 'scp',
 		'last_modi' : '2021-10-04',
-		'tag' : [],
+		'tag' : ['xj',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '172',
@@ -1798,7 +1798,15 @@
 		'post_chinese_name' : '退役一周年特别企划·《工厂（和虚无主义）》及其创作历程',
 		'type_name' : 'other',
 		'last_modi' : '2022-11-12',
-		'tag' : ['writing',],
+		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '226',
+		'post_name' : 'xj-404-analyze',
+		'post_chinese_name' : '退役一周年特别企划·解密：空调中心页',
+		'type_name' : 'other',
+		'last_modi' : '2022-11-19',
+		'tag' : ['xj',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
