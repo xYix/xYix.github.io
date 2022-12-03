@@ -1733,7 +1733,7 @@
 		'post_name' : 'drought',
 		'post_chinese_name' : '干燥',
 		'type_name' : 'library',
-		'last_modi' : '2022-08-22',
+		'last_modi' : '2022-12-03',
 		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1807,6 +1807,22 @@
 		'type_name' : 'other',
 		'last_modi' : '2022-11-19',
 		'tag' : ['xj',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '227',
+		'post_name' : '11-26',
+		'post_chinese_name' : '11.26 闲话',
+		'type_name' : 'other',
+		'last_modi' : '2022-12-03',
+		'tag' : ['flowers',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '228',
+		'post_name' : 'exorcism',
+		'post_chinese_name' : '驱魔',
+		'type_name' : 'library',
+		'last_modi' : '2022-12-03',
+		'tag' : ['andromeda-signal',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
