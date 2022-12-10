@@ -1750,7 +1750,7 @@
 		'post_chinese_name' : '食盐',
 		'type_name' : 'library',
 		'last_modi' : '2022-07-04',
-		'tag' : ['andromeda-signal',],
+		'tag' : ['andromeda-signal','suicide',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '220',
@@ -1823,6 +1823,14 @@
 		'type_name' : 'library',
 		'last_modi' : '2022-12-03',
 		'tag' : ['andromeda-signal',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '229',
+		'post_name' : 'moon',
+		'post_chinese_name' : '奔月',
+		'type_name' : 'library',
+		'last_modi' : '2022-12-10',
+		'tag' : ['andromeda-signal','hentai','suicide',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

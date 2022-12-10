@@ -425,6 +425,8 @@
             if(postinfo.tag[i] === 'euclid') Postinfo_tags_a.style = 'color: violet';
             if(postinfo.tag[i] === 'keter') Postinfo_tags_a.style = 'color: violet';
             if(postinfo.tag[i] === 'apollyon') Postinfo_tags_a.style = 'color: violet';
+            if(postinfo.tag[i] === 'hentai') Postinfo_tags_a.style = 'color: red';
+            if(postinfo.tag[i] === 'suicide') Postinfo_tags_a.style = 'color: red';
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
         }
@@ -673,6 +675,8 @@
             if(Tag === 'euclid') TagsRow1a.style = 'color: violet';
             if(Tag === 'keter') TagsRow1a.style = 'color: violet';
             if(Tag === 'apollyon') TagsRow1a.style = 'color: violet';
+            if(Tag === 'hentai') TagsRow1a.style = 'color: red';
+            if(Tag === 'suicide') TagsRow1a.style = 'color: red';
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
             let TagsRow2 = document.createElement('th');

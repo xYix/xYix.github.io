@@ -1485,8 +1485,9 @@ library
 salt
 食盐
 library
-1
+2
 andromeda-signal
+suicide
 proverb-of-medako
 medako 的箴言（长期更新）
 library
@@ -1530,3 +1531,10 @@ exorcism
 library
 1
 andromeda-signal
+moon
+奔月
+library
+3
+andromeda-signal
+hentai
+suicide
