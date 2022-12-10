@@ -147,8 +147,7 @@
         Searchfor: win.Searchfor
     };
     true_isban = function(postinfo) {
-        if (isban(postinfo)) { return 1; }
-        else { if (win.isInside) return 1; }
+        if (isban(postinfo)) { if (win.isInside) return 0; return 1; }
         return 0;
     }
 
