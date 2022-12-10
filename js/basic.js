@@ -147,7 +147,7 @@
         Searchfor: win.Searchfor
     };
     true_isban = function(postinfo) {
-        if (isban(postinfo)) { if (win.isInside === 0) return 1; }
+        if (isban(postinfo)) { return 1; }
         else { if (win.isInside) return 1; }
         return 0;
     }
@@ -626,12 +626,43 @@
                 Blog.style.height = document.body.offsetHeight * 0.8;
             }
         }
-        else {
-            Blog.src = '/posts/posts/' + postinfo.post_name + ".html";
-            Blog.scrolling = "no";
+        else if (postinfo.postname === 'xj-404') {
+            Blog.src = 'https://scpsandboxcn.wikidot.com/xj-404';
+            Blog.scrolling = "yes";
+            Blog.opacity = 1.0;
             Blog.onload = function () {
-                Blog.style.height = Blog.contentDocument.body.scrollHeight;
-                setInterval(()=>Blog.style.height = Blog.contentDocument.body.scrollHeight,200);
+                Blog.style.height = document.body.offsetHeight * 0.8;
+            }
+        }
+        else if (postinfo.postname === 'xj-1998') {
+            Blog.src = 'https://scpsandboxcn.wikidot.com/xj-1998';
+            Blog.scrolling = "yes";
+            Blog.opacity = 1.0;
+            Blog.onload = function () {
+                Blog.style.height = document.body.offsetHeight * 0.8;
+            }
+        }
+        else {
+            dangerlist = []
+            for (tags in postinfo.tag)
+                if (['hentai', 'suicide'].indexOf(tags) != -1)
+                    dangerlist.append(tags);
+            
+            if (dangerlist.len() == 0 || win.funval == 'oyasumi') {
+                Blog.src = '/posts/posts/' + postinfo.post_name + ".html";
+                Blog.scrolling = "no";
+                Blog.onload = function () {
+                    Blog.style.height = Blog.contentDocument.body.scrollHeight;
+                    setInterval(()=>Blog.style.height = Blog.contentDocument.body.scrollHeight,200);
+                }
+            }
+            else {
+                Blog.src = '/posts/posts/404.html';
+                Blog.scrolling = "no";
+                Blog.onload = function () {
+                    Blog.style.height = Blog.contentDocument.body.scrollHeight;
+                    setInterval(()=>Blog.style.height = Blog.contentDocument.body.scrollHeight,200);
+                }
             }
         }
         data.appendChild(Blog);
