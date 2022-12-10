@@ -1534,7 +1534,8 @@ andromeda-signal
 moon
 奔月
 library
-3
+4
 andromeda-signal
 hentai
 suicide
+ban

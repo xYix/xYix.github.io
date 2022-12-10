@@ -646,7 +646,7 @@
             dangerlist = []
             for (tags in postinfo.tag)
                 if (['hentai', 'suicide'].indexOf(postinfo.tag[tags]) != -1)
-                    dangerlist.append(postinfo.tag[tags]);
+                    dangerlist[dangerlist.length] = postinfo.tag[tags];
             
             if (dangerlist.length == 0 || win.funval == 'oyasumi') {
                 Blog.src = '/posts/posts/' + postinfo.post_name + ".html";
