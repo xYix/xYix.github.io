@@ -648,7 +648,7 @@
                 if (['hentai', 'suicide'].indexOf(tags) != -1)
                     dangerlist.append(tags);
             
-            if (dangerlist.len() == 0 || win.funval == 'oyasumi') {
+            if (dangerlist.length == 0 || win.funval == 'oyasumi') {
                 Blog.src = '/posts/posts/' + postinfo.post_name + ".html";
                 Blog.scrolling = "no";
                 Blog.onload = function () {
