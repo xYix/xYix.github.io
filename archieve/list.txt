@@ -1043,8 +1043,7 @@ linear-algebra
 maoism
 马克思主义中文文库瞎逛笔记
 other
-1
-ban
+0
 xj-404
 SCP-XJ-404 - "禁止访问"
 scp
@@ -1347,8 +1346,7 @@ dp
 command-block
 试图取并 command_block 记
 solution
-5
-writing
+4
 graph-theory
 data-structure
 dp
@@ -1443,8 +1441,7 @@ construction
 xjoi
 不能发到表世界的模拟赛记录
 solution
-2
-ban
+1
 construction
 loj-mis
 loj 杂题集
@@ -1534,8 +1531,7 @@ andromeda-signal
 moon
 奔月
 library
-4
+3
 andromeda-signal
 hentai
 suicide
-ban

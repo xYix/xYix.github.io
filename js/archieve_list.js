@@ -1246,7 +1246,7 @@
 		'post_chinese_name' : '马克思主义中文文库瞎逛笔记',
 		'type_name' : 'other',
 		'last_modi' : '2021-08-04',
-		'tag' : ['ban',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '157',
@@ -1598,7 +1598,7 @@
 		'post_chinese_name' : '试图取并 command_block 记',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-05',
-		'tag' : ['data-structure','dp','graph-theory','optimization','writing',],
+		'tag' : ['data-structure','dp','graph-theory','optimization',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '201',
@@ -1702,7 +1702,7 @@
 		'post_chinese_name' : '不能发到表世界的模拟赛记录',
 		'type_name' : 'solution',
 		'last_modi' : '2021-11-16',
-		'tag' : ['ban','construction',],
+		'tag' : ['construction',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '214',
@@ -1830,7 +1830,7 @@
 		'post_chinese_name' : '奔月',
 		'type_name' : 'library',
 		'last_modi' : '2022-12-10',
-		'tag' : ['andromeda-signal','ban','hentai','suicide',],
+		'tag' : ['andromeda-signal','hentai','suicide',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
