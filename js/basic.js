@@ -424,7 +424,7 @@
             if(postinfo.tag[i] === 'euclid') Postinfo_tags_a.style = 'color: violet';
             if(postinfo.tag[i] === 'keter') Postinfo_tags_a.style = 'color: violet';
             if(postinfo.tag[i] === 'apollyon') Postinfo_tags_a.style = 'color: violet';
-            if(postinfo.tag[i] === 'hentai') Postinfo_tags_a.style = 'color: red';
+            if(postinfo.tag[i] === 'ero') Postinfo_tags_a.style = 'color: red';
             if(postinfo.tag[i] === 'suicide') Postinfo_tags_a.style = 'color: red';
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
@@ -644,7 +644,7 @@
         else {
             dangerlist = []
             for (tags in postinfo.tag)
-                if (['hentai', 'suicide'].indexOf(postinfo.tag[tags]) != -1)
+                if (['ero', 'suicide'].indexOf(postinfo.tag[tags]) != -1)
                     dangerlist[dangerlist.length] = postinfo.tag[tags];
             
             if (dangerlist.length == 0 || win.isInside) {

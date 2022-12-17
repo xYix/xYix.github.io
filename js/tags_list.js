@@ -51,7 +51,7 @@
 	tags_chinese['xj'] = '【】';
 	tags_chinese['andromeda-signal'] = '仙女座信号';
 	tags_chinese['flowers'] = '闲话';
-	tags_chinese['hentai'] = '性描写';
+	tags_chinese['ero'] = '性描写';
 	tags_chinese['suicide'] = '自杀描写';
 
 	tags_val={};
@@ -106,7 +106,7 @@
 	tags_val['xj'] = 0;
 	tags_val['andromeda-signal'] = -1;
 	tags_val['flowers'] = -2;
-	tags_val['hentai'] = -3;
+	tags_val['ero'] = -3;
 	tags_val['suicide'] = -4;
 
 	tags_list = [];
