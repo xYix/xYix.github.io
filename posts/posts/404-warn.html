@@ -1,12 +1,38 @@
 <center>
-    <p style='font-size: 400%; font-weight: bold;'>404</p>
-    <h1>文章不存在</h1>
+    <p style='font-size: 400%; font-weight: bold;'>文章不可见</p>
     <img src="/images/404.gif" alt="">
 </center>
 <script>
     let qwq = document.createElement('p');
     qwq.textContent = location.search;
     document.body.appendChild(qwq);
+
+    AnalyzeSearch = function (s) {
+        let ret = {}, t, r;
+        for (t of (s.startsWith('?') ? s.substr(1) : s).split('&'))
+            if (r = t.split('='), r[1])
+                ret[decodeURIComponent(r[0])] = decodeURIComponent(r[1]);
+        return ret;
+    }
+    AnalyzeTags = function (s) {
+        if (s === undefined) return [];
+        let ret = [], t;
+        for (t of s.split('+'))
+            ret.push(t);
+        return ret;
+    }
+
+    Search = AnalyzeSearch(location.search);
+    Search.warn = AnalyzeTags(Search.warn);
+    let qwq2 = document.createElement('p');
+    qwq2.textContent = '这篇文章，因其包含 ';
+    for (i in Search.warn) {
+        if (i != 0) qwq2.textContent += '、';
+        qwq2.textContent += tags_chinese[Search.warn[i]];
+    }
+    qwq2.textContent = ' 而可能并不适合所有读者。';
+    document.body.appendChild(qwq2);
+    
 </script>
 <p>也许你可以尝试：</p>
 <p>检查链接正确性</p>

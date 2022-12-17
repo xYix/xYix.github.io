@@ -658,7 +658,7 @@
             else {
                 Blog.src = '/posts/posts/404-warn.html?postname=' + postinfo.post_name + '&warn=';
                 for (i in dangerlist) {
-                    if (i) Blog.src += '+';
+                    if (i != 0) Blog.src += '+';
                     Blog.src += dangerlist[i];
                 }
                 Blog.scrolling = "no";
