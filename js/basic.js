@@ -656,7 +656,11 @@
                 }
             }
             else {
-                Blog.src = '/posts/posts/404.html';
+                Blog.src = '/posts/posts/404-warn.html?postname=' + postinfo.post_name + '&warn=';
+                for (i in dangerlist) {
+                    if (i) Blog.src += '+';
+                    Blog.src += dangerlist[i];
+                }
                 Blog.scrolling = "no";
                 Blog.onload = function () {
                     Blog.style.height = Blog.contentDocument.body.scrollHeight;
