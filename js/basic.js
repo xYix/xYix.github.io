@@ -625,7 +625,7 @@
                 Blog.style.height = document.body.offsetHeight * 0.8;
             }
         }
-        else if (postinfo.postname === 'xj-404') {
+        else if (postinfo.post_name === 'xj-404') {
             Blog.src = 'https://scpsandboxcn.wikidot.com/xj-404';
             Blog.scrolling = "yes";
             Blog.opacity = 1.0;
@@ -633,7 +633,7 @@
                 Blog.style.height = document.body.offsetHeight * 0.8;
             }
         }
-        else if (postinfo.postname === 'xj-1998') {
+        else if (postinfo.post_name === 'xj-1998') {
             Blog.src = 'https://scpsandboxcn.wikidot.com/xj-1998';
             Blog.scrolling = "yes";
             Blog.opacity = 1.0;

@@ -4,9 +4,9 @@
 </center>
 <script src="/js/tags_list.js"></script>
 <script>
-    let qwq = document.createElement('p');
-    qwq.textContent = location.search;
-    document.body.appendChild(qwq);
+    // let qwq = document.createElement('p');
+    // qwq.textContent = location.search;
+    // document.body.appendChild(qwq);
 
     AnalyzeSearch = function (s) {
         let ret = {}, t, r;
@@ -32,7 +32,7 @@
         if (i != 0) qwq2.textContent += '、';
         qwq2.textContent += tags_chinese[Search.warn[i]];
     }
-    qwq2.textContent = ' 而可能并不适合所有读者。';
+    qwq2.textContent += ' 而可能并不适合所有读者。';
     document.body.appendChild(qwq2);
 
     let qwq3 = document.createElement('a');
