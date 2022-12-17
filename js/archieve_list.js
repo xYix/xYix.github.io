@@ -1829,7 +1829,7 @@
 		'post_name' : 'moon',
 		'post_chinese_name' : '奔月',
 		'type_name' : 'library',
-		'last_modi' : '2022-12-10',
+		'last_modi' : '2022-12-17',
 		'tag' : ['andromeda-signal','hentai','suicide',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
