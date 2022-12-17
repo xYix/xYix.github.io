@@ -705,7 +705,7 @@
             if(Tag === 'euclid') TagsRow1a.style = 'color: violet';
             if(Tag === 'keter') TagsRow1a.style = 'color: violet';
             if(Tag === 'apollyon') TagsRow1a.style = 'color: violet';
-            if(Tag === 'hentai') TagsRow1a.style = 'color: red';
+            if(Tag === 'ero') TagsRow1a.style = 'color: red';
             if(Tag === 'suicide') TagsRow1a.style = 'color: red';
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
