@@ -14,7 +14,7 @@
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/hello-world.html</loc>
-		<lastmod>2022-05-15</lastmod>
+		<lastmod>2022-12-22</lastmod>
 	</url>
 	<url>
 		<loc>https://xyix.github.io/posts/posts/alkane-counting.html</loc>
@@ -927,5 +927,9 @@
 	<url>
 		<loc>https://xyix.github.io/posts/posts/moon.html</loc>
 		<lastmod>2022-12-20</lastmod>
+	</url>
+	<url>
+		<loc>https://xyix.github.io/posts/posts/strange-list.html</loc>
+		<lastmod>2022-12-24</lastmod>
 	</url>
 </urlset>

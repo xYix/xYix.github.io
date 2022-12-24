@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2022-05-15',
+		'last_modi' : '2022-12-22',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1831,6 +1831,14 @@
 		'type_name' : 'library',
 		'last_modi' : '2022-12-20',
 		'tag' : ['andromeda-signal','ero','suicide',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '230',
+		'post_name' : 'strange-list',
+		'post_chinese_name' : '《仙女座信号》主角战力榜单',
+		'type_name' : 'other',
+		'last_modi' : '2022-12-24',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

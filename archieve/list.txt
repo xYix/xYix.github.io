@@ -1535,3 +1535,7 @@ library
 andromeda-signal
 ero
 suicide
+strange-list
+《仙女座信号》主角战力榜单
+other
+0
