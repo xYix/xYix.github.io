@@ -1840,6 +1840,14 @@
 		'last_modi' : '2022-12-24',
 		'tag' : [],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '231',
+		'post_name' : 'author-page',
+		'post_chinese_name' : '庆祝叉义叉在基金会中分的作者页上线',
+		'type_name' : 'other',
+		'last_modi' : '2023-01-10',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
