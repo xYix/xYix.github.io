@@ -1852,9 +1852,9 @@
 		'postid' : '232',
 		'post_name' : '酒精',
 		'post_chinese_name' : 'alcohol',
-		'type_name' : '1',
+		'type_name' : 'library',
 		'last_modi' : '',
-		'tag' : [],
+		'tag' : ['andromeda-signal',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

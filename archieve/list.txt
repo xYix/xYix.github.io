@@ -1545,5 +1545,6 @@ other
 0
 酒精
 alcohol
+library
 1
 andromeda-signal
