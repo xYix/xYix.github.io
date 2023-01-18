@@ -1543,8 +1543,8 @@ author-page
 庆祝叉义叉在基金会中分的作者页上线
 other
 0
-酒精
 alcohol
+酒精
 library
 1
 andromeda-signal

@@ -1850,10 +1850,10 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '232',
-		'post_name' : '酒精',
-		'post_chinese_name' : 'alcohol',
+		'post_name' : 'alcohol',
+		'post_chinese_name' : '酒精',
 		'type_name' : 'library',
-		'last_modi' : '',
+		'last_modi' : '2023-01-18',
 		'tag' : ['andromeda-signal',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
