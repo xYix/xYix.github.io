@@ -1856,6 +1856,14 @@
 		'last_modi' : '2023-01-18',
 		'tag' : ['andromeda-signal',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '233',
+		'post_name' : 'you-must-create',
+		'post_chinese_name' : '"你要创作"杯叉义叉参赛文章',
+		'type_name' : 'other',
+		'last_modi' : '2023-01-19',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
