@@ -1864,6 +1864,22 @@
 		'last_modi' : '2023-01-19',
 		'tag' : [],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '234',
+		'post_name' : 'another-para-to',
+		'post_chinese_name' : '另一个塔的寓言',
+		'type_name' : 'library',
+		'last_modi' : '2023-02-05',
+		'tag' : ['andromeda-signal',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '235',
+		'post_name' : '1-30',
+		'post_chinese_name' : '1.30 发癫',
+		'type_name' : 'other',
+		'last_modi' : '2023-02-05',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
