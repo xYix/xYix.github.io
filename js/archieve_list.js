@@ -1757,7 +1757,7 @@
 		'post_name' : 'proverb-of-medako',
 		'post_chinese_name' : 'medako 的箴言（长期更新）',
 		'type_name' : 'library',
-		'last_modi' : '2022-07-25',
+		'last_modi' : '2023-02-11',
 		'tag' : ['writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1853,7 +1853,7 @@
 		'post_name' : 'alcohol',
 		'post_chinese_name' : '酒精',
 		'type_name' : 'library',
-		'last_modi' : '2023-01-18',
+		'last_modi' : '2023-02-11',
 		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1878,7 +1878,15 @@
 		'post_chinese_name' : '1.30 发癫',
 		'type_name' : 'other',
 		'last_modi' : '2023-02-05',
-		'tag' : [],
+		'tag' : ['flowers',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '236',
+		'post_name' : 'hikou-shoujo',
+		'post_chinese_name' : '飛行少女',
+		'type_name' : 'library',
+		'last_modi' : '2023-02-25',
+		'tag' : ['politics',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

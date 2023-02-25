@@ -50,6 +50,7 @@
 	tags_chinese['farewell'] = '……那么，再见。';
 	tags_chinese['xj'] = '【】';
 	tags_chinese['andromeda-signal'] = '仙女座信号';
+	tags_chinese['politics'] = '晶体学、宇宙学、政治哲学';
 	tags_chinese['flowers'] = '闲话';
 	tags_chinese['ero'] = '性描写';
 	tags_chinese['suicide'] = '自杀描写';
@@ -105,9 +106,10 @@
 	tags_val['farewell'] = 998244354;
 	tags_val['xj'] = 0;
 	tags_val['andromeda-signal'] = -1;
-	tags_val['flowers'] = -2;
-	tags_val['ero'] = -3;
-	tags_val['suicide'] = -4;
+	tags_val['politics'] = -2;
+	tags_val['flowers'] = -3;
+	tags_val['ero'] = -4;
+	tags_val['suicide'] = -5;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);
