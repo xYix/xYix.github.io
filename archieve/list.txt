@@ -1567,3 +1567,8 @@ hikou-shoujo
 library
 1
 politics
+after-hikou-shoujo
+《飛行少女》之后回顾《食盐》和《奔月》
+other
+1
+flowers

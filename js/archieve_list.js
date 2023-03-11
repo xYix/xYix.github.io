@@ -1725,7 +1725,7 @@
 		'post_name' : 'restart',
 		'post_chinese_name' : 'restart',
 		'type_name' : 'library',
-		'last_modi' : '2022-12-21',
+		'last_modi' : '2023-02-25',
 		'tag' : ['andromeda-signal','writing',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1829,7 +1829,7 @@
 		'post_name' : 'moon',
 		'post_chinese_name' : '奔月',
 		'type_name' : 'library',
-		'last_modi' : '2022-12-20',
+		'last_modi' : '2023-03-11',
 		'tag' : ['andromeda-signal','ero','suicide',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1837,7 +1837,7 @@
 		'post_name' : 'strange-list',
 		'post_chinese_name' : '《仙女座信号》主角战力榜单',
 		'type_name' : 'other',
-		'last_modi' : '2022-12-24',
+		'last_modi' : '2023-02-25',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1869,7 +1869,7 @@
 		'post_name' : 'another-para-to',
 		'post_chinese_name' : '另一个塔的寓言',
 		'type_name' : 'library',
-		'last_modi' : '2023-02-05',
+		'last_modi' : '2023-02-25',
 		'tag' : ['andromeda-signal',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1885,8 +1885,16 @@
 		'post_name' : 'hikou-shoujo',
 		'post_chinese_name' : '飛行少女',
 		'type_name' : 'library',
-		'last_modi' : '2023-02-25',
+		'last_modi' : '2023-03-11',
 		'tag' : ['politics',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '237',
+		'post_name' : 'after-hikou-shoujo',
+		'post_chinese_name' : '《飛行少女》之后回顾《食盐》和《奔月》',
+		'type_name' : 'other',
+		'last_modi' : '2023-03-11',
+		'tag' : ['flowers',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
