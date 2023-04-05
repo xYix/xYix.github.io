@@ -1896,6 +1896,14 @@
 		'last_modi' : '2023-03-11',
 		'tag' : ['flowers',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '238',
+		'post_name' : 'song-to-my-daughter',
+		'post_chinese_name' : '唱给她的歌',
+		'type_name' : 'library',
+		'last_modi' : '2023-04-05',
+		'tag' : ['politics',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
