@@ -1907,10 +1907,18 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '239',
 		'post_name' : '4-15',
-		'post_chinese_name' : '后世',
+		'post_chinese_name' : '后事',
 		'type_name' : 'other',
 		'last_modi' : '2023-04-15',
 		'tag' : ['flowers',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '240',
+		'post_name' : 'immortal',
+		'post_chinese_name' : '长生',
+		'type_name' : 'library',
+		'last_modi' : '2023-05-27',
+		'tag' : ['politics',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
