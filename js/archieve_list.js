@@ -1920,6 +1920,14 @@
 		'last_modi' : '2023-05-27',
 		'tag' : ['politics',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '241',
+		'post_name' : 'big-numbers',
+		'post_chinese_name' : '那些很大的数',
+		'type_name' : 'algorithm',
+		'last_modi' : '2023-07-27',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
