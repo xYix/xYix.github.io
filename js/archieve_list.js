@@ -342,7 +342,7 @@
 		'post_chinese_name' : '2 的立方根是多少（详细揭秘）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2021-07-08',
-		'tag' : ['game-theory','nimber',],
+		'tag' : ['game-theory','googology','nimber',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '44',
@@ -1926,7 +1926,7 @@
 		'post_chinese_name' : '那些很大的数',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-07-27',
-		'tag' : [],
+		'tag' : ['googology',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

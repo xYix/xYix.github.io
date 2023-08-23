@@ -54,6 +54,7 @@
 	tags_chinese['flowers'] = '闲话';
 	tags_chinese['ero'] = '性描写';
 	tags_chinese['suicide'] = '自杀描写';
+	tags_chinese['googology'] = '大数学';
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -110,6 +111,7 @@
 	tags_val['flowers'] = -3;
 	tags_val['ero'] = -4;
 	tags_val['suicide'] = -5;
+	tags_val['googology'] = 40;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);

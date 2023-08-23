@@ -275,9 +275,10 @@ journey
 cube-root-of-two
 2 的立方根是多少（详细揭秘）
 algorithm
-2
+3
 nimber
 game-theory
+googology
 luogu-4565
 luoguP4565 题解 - 【CTSC2018】暴力写挂
 solution
@@ -1590,4 +1591,5 @@ politics
 big-numbers
 那些很大的数
 algorithm
-0
+1
+googology
