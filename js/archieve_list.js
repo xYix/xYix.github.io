@@ -1928,6 +1928,14 @@
 		'last_modi' : '2023-07-27',
 		'tag' : ['googology',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '242',
+		'post_name' : 'on-numbers-and-games',
+		'post_chinese_name' : '叉义叉重读 On Numbers and Games',
+		'type_name' : 'algorithm',
+		'last_modi' : '2023-08-23',
+		'tag' : ['googology','nimber',],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');

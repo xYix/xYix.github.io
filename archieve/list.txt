@@ -1593,3 +1593,9 @@ big-numbers
 algorithm
 1
 googology
+on-numbers-and-games
+叉义叉重读 On Numbers and Games
+algorithm
+2
+googology
+nimber
