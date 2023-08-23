@@ -1934,7 +1934,7 @@
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-08-23',
-		'tag' : ['googology','nimber',],
+		'tag' : ['game-theory','googology','nimber',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
