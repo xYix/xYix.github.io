@@ -1933,8 +1933,16 @@
 		'post_name' : 'on-numbers-and-games',
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-08-23',
+		'last_modi' : '2023-08-24',
 		'tag' : ['game-theory','googology','nimber',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '243',
+		'post_name' : 'chuang',
+		'post_chinese_name' : '你要创作合集贴',
+		'type_name' : 'other',
+		'last_modi' : '2023-08-31',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
