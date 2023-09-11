@@ -1490,7 +1490,7 @@ proverb-of-medako
 medako 的箴言（长期更新）
 library
 1
-writing
+pigeon
 kaleidoscope
 万花筒
 library

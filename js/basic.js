@@ -60,7 +60,16 @@
                 tmpSearch.Sortby = Reverse(tmpSearch.Sortby);
             else if (tmpSearch.Sortby === Reverse(deltaSearch.Sortby))
                 tmpSearch.Sortby = undefined;
-            else tmpSearch.Sortby = deltaSearch.Sortby;
+            else {
+                if (tmpSearch.Sortby)
+                    tmpSearch.Sortby = deltaSearch.Sortby;
+                else {
+                    if (deltaSearch.Sortby == 'id')
+                        tmpSearch.Sortby = 'di';
+                    else 
+                        tmpSearch.Sortby = deltaSearch.Sortby;
+                }
+            }
         }
         if (deltaSearch.Searchfor) tmpSearch.Searchfor = deltaSearch.Searchfor;
         return tmpSearch;
@@ -474,13 +483,13 @@
         if (win.Sortby === 'last_modi') {
 	        archieve_list.sort(function(a, b){ return b.last_modi_val - a.last_modi_val});
         }
-        if (win.Sortby === 'idom_tsal') {
+        else if (win.Sortby === 'idom_tsal') {
 	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
         }
-        if (win.Sortby === 'id') {
+        else if (win.Sortby === 'id') {
 	        archieve_list.sort(function(a, b){ return b.postid - a.postid});
         }
-        if (win.Sortby === 'di') {
+        else {
 	        archieve_list.sort(function(a, b){ return a.postid - b.postid});
         }
         let ArchieveTable = win.createElement('table');

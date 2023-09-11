@@ -1758,7 +1758,7 @@
 		'post_chinese_name' : 'medako 的箴言（长期更新）',
 		'type_name' : 'library',
 		'last_modi' : '2023-02-11',
-		'tag' : ['writing',],
+		'tag' : ['pigeon',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '221',
