@@ -56,19 +56,21 @@
         if (deltaSearch.Funval) tmpSearch.Funval = deltaSearch.Funval;
         if (deltaSearch.ThemeColor) tmpSearch.ThemeColor = deltaSearch.ThemeColor;
         if (deltaSearch.Sortby) {
-            if (tmpSearch.Sortby === deltaSearch.Sortby)
-                tmpSearch.Sortby = Reverse(tmpSearch.Sortby);
-            else if (tmpSearch.Sortby === Reverse(deltaSearch.Sortby))
+            if (tmpSearch.Sortby) {
+                if (tmpSearch.Sortby != deltaSearch.Sortby && tmpSearch.Sortby != Reverse(deltaSearch.Sortby))
                 tmpSearch.Sortby = undefined;
+            }
+            if (tmpSearch.Sortby) {
+                if (tmpSearch.Sortby === 'di' || (tmpSearch.Sortby === deltaSearch.Sortby && deltaSearch.Sortby != 'id'))
+                    tmpSearch.Sortby = Reverse(tmpSearch.Sortby);
+                else 
+                tmpSearch.Sortby = undefined;
+            }
             else {
-                if (tmpSearch.Sortby)
+                if (deltaSearch.Sortby == 'id')
+                    tmpSearch.Sortby = 'di';
+                else 
                     tmpSearch.Sortby = deltaSearch.Sortby;
-                else {
-                    if (deltaSearch.Sortby == 'id')
-                        tmpSearch.Sortby = 'di';
-                    else 
-                        tmpSearch.Sortby = deltaSearch.Sortby;
-                }
             }
         }
         if (deltaSearch.Searchfor) tmpSearch.Searchfor = deltaSearch.Searchfor;
