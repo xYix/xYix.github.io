@@ -488,11 +488,11 @@
         else if (win.Sortby === 'idom_tsal') {
 	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
         }
-        else if (win.Sortby === 'id') {
-	        archieve_list.sort(function(a, b){ return b.postid - a.postid});
+        else if (win.Sortby === 'di') {
+	        archieve_list.sort(function(a, b){ return a.postid - b.postid});
         }
         else {
-	        archieve_list.sort(function(a, b){ return a.postid - b.postid});
+	        archieve_list.sort(function(a, b){ return b.postid - a.postid});
         }
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
