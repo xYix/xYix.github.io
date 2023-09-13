@@ -1285,7 +1285,7 @@
 		'post_name' : 'parking-and-tree',
 		'post_chinese_name' : '停车问题到树的双射',
 		'type_name' : 'algorithm',
-		'last_modi' : '2021-09-21',
+		'last_modi' : '2023-09-01',
 		'tag' : ['bijective-proof','construction',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1933,7 +1933,7 @@
 		'post_name' : 'on-numbers-and-games',
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-08-24',
+		'last_modi' : '2023-09-13',
 		'tag' : ['game-theory','googology','nimber',],
 	};
 	archieve_list[archieve_list.length] = {
