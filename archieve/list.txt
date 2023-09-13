@@ -1594,7 +1594,7 @@ algorithm
 1
 googology
 on-numbers-and-games
-叉义叉重读 On Numbers and Games
+叉义叉重读 On Numbers and Games（上）
 algorithm
 3
 googology
@@ -1604,3 +1604,9 @@ chuang
 你要创作合集贴
 other
 0
+叉义叉重读 On Numbers and Games（下）
+algorithm
+3
+googology
+nimber
+game-theory
