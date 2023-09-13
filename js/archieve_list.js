@@ -1946,11 +1946,11 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '244',
-		'post_name' : '叉义叉重读 On Numbers and Games（下）',
-		'post_chinese_name' : 'algorithm',
-		'type_name' : '3',
-		'last_modi' : '',
-		'tag' : [],
+		'post_name' : 'on-numbers-and-games',
+		'post_chinese_name' : '叉义叉重读 On Numbers and Games（下）',
+		'type_name' : 'algorithm',
+		'last_modi' : '2023-09-13',
+		'tag' : ['game-theory','googology','nimber',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
