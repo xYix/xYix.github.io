@@ -1946,7 +1946,7 @@
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '244',
-		'post_name' : 'on-numbers-and-games',
+		'post_name' : 'on-numbers-and-games-ii',
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games（下）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-09-13',
