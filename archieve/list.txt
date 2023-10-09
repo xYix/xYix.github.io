@@ -1605,9 +1605,14 @@ chuang
 other
 0
 on-numbers-and-games-ii
+叉义叉重读 On Numbers and Games（中）
+algorithm
+2
+nimber
+game-theory
+on-numbers-and-games-iii
 叉义叉重读 On Numbers and Games（下）
 algorithm
-3
-googology
+2
 nimber
 game-theory

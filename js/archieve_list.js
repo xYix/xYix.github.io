@@ -1925,7 +1925,7 @@
 		'post_name' : 'big-numbers',
 		'post_chinese_name' : '那些很大的数',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-07-27',
+		'last_modi' : '2023-09-21',
 		'tag' : ['googology',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1933,7 +1933,7 @@
 		'post_name' : 'on-numbers-and-games',
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games（上）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-09-13',
+		'last_modi' : '2023-09-14',
 		'tag' : ['game-theory','googology','nimber',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1947,10 +1947,18 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '244',
 		'post_name' : 'on-numbers-and-games-ii',
+		'post_chinese_name' : '叉义叉重读 On Numbers and Games（中）',
+		'type_name' : 'algorithm',
+		'last_modi' : '2023-09-22',
+		'tag' : ['game-theory','nimber',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '245',
+		'post_name' : 'on-numbers-and-games-iii',
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games（下）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-09-13',
-		'tag' : ['game-theory','googology','nimber',],
+		'last_modi' : '2023-10-10',
+		'tag' : ['game-theory','nimber',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
