@@ -1931,7 +1931,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '242',
 		'post_name' : 'on-numbers-and-games',
-		'post_chinese_name' : '叉义叉重读 On Numbers and Games（上）',
+		'post_chinese_name' : '叉义叉重读 On Numbers and Games（一）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-09-14',
 		'tag' : ['game-theory','googology','nimber',],
@@ -1947,7 +1947,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '244',
 		'post_name' : 'on-numbers-and-games-ii',
-		'post_chinese_name' : '叉义叉重读 On Numbers and Games（中）',
+		'post_chinese_name' : '叉义叉重读 On Numbers and Games（二）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-09-22',
 		'tag' : ['game-theory','nimber',],
@@ -1955,10 +1955,18 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '245',
 		'post_name' : 'on-numbers-and-games-iii',
-		'post_chinese_name' : '叉义叉重读 On Numbers and Games（下）',
+		'post_chinese_name' : '叉义叉重读 On Numbers and Games（三）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-10-10',
+		'last_modi' : '2023-10-11',
 		'tag' : ['game-theory','nimber',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '246',
+		'post_name' : 'on-an-identity',
+		'post_chinese_name' : '一个组合恒等式',
+		'type_name' : 'solution',
+		'last_modi' : '2023-10-11',
+		'tag' : ['bijective-proof','combinatorics','euclid',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

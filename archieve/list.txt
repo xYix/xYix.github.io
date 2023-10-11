@@ -1594,7 +1594,7 @@ algorithm
 1
 googology
 on-numbers-and-games
-叉义叉重读 On Numbers and Games（上）
+叉义叉重读 On Numbers and Games（一）
 algorithm
 3
 googology
@@ -1605,14 +1605,21 @@ chuang
 other
 0
 on-numbers-and-games-ii
-叉义叉重读 On Numbers and Games（中）
+叉义叉重读 On Numbers and Games（二）
 algorithm
 2
 nimber
 game-theory
 on-numbers-and-games-iii
-叉义叉重读 On Numbers and Games（下）
+叉义叉重读 On Numbers and Games（三）
 algorithm
 2
 nimber
 game-theory
+on-an-identity
+一个组合恒等式
+solution
+3
+euclid
+combinatorics
+bijective-proof
