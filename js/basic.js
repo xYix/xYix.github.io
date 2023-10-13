@@ -317,7 +317,9 @@
             win.Title[nowlen] = '第 ' + (win.Page + 1) + ' 页';
         }
     }
-    win.title = 'x义x 的 blog - ' + win.Title[0];
+    if (win.Title[0] == '文章内容')
+        win.title = 'x义x 的 blog - ' + win.Title[1];
+    else win.title = 'x义x 的 blog - ' + win.Title[0];
     //绘制标签表格
     win.WriteTagsList = function (data) {
         let TagsBlock = win.createElement('center');
