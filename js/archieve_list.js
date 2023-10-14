@@ -1957,7 +1957,7 @@
 		'post_name' : 'on-numbers-and-games-iii',
 		'post_chinese_name' : '叉义叉重读 On Numbers and Games（三）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-10-11',
+		'last_modi' : '2023-10-14',
 		'tag' : ['game-theory','nimber',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1965,8 +1965,16 @@
 		'post_name' : 'on-an-identity',
 		'post_chinese_name' : '一个组合恒等式',
 		'type_name' : 'solution',
-		'last_modi' : '2023-10-11',
+		'last_modi' : '2023-10-12',
 		'tag' : ['bijective-proof','combinatorics','euclid',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '247',
+		'post_name' : 'rhetorical-experiement',
+		'post_chinese_name' : '修辞实验',
+		'type_name' : 'library',
+		'last_modi' : '2023-10-14',
+		'tag' : ['politics',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
