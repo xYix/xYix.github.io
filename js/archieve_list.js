@@ -1285,8 +1285,8 @@
 		'post_name' : 'parking-and-tree',
 		'post_chinese_name' : '停车问题到树的双射',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-09-01',
-		'tag' : ['bijective-proof','construction',],
+		'last_modi' : '2023-10-20',
+		'tag' : ['bijective-proof','combinatorics','construction',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '162',
@@ -1975,6 +1975,14 @@
 		'type_name' : 'library',
 		'last_modi' : '2023-10-14',
 		'tag' : ['politics',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '248',
+		'post_name' : 'parking-and-tree-ex',
+		'post_chinese_name' : '停车序列到树的双射（劲爆续集）',
+		'type_name' : 'algorithm',
+		'last_modi' : '2023-10-24',
+		'tag' : ['bijective-proof','combinatorics','construction','graph-thoery',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {

@@ -1073,9 +1073,10 @@ d-and-c-on-tree
 parking-and-tree
 停车问题到树的双射
 algorithm
-2
+3
 construction
 bijective-proof
+combinatorics
 luogu-6980
 luoguP6980 题解 - 【NEERC2015】Hypercube
 solution
@@ -1628,3 +1629,11 @@ rhetorical-experiement
 library
 1
 politics
+parking-and-tree-ex
+停车序列到树的双射（劲爆续集）
+algorithm
+4
+construction
+bijective-proof
+combinatorics
+graph-thoery
