@@ -1982,14 +1982,14 @@
 		'post_chinese_name' : '停车序列到树的双射（劲爆续集）',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-10-24',
-		'tag' : ['bijective-proof','combinatorics','construction','graph-thoery',],
+		'tag' : ['bijective-proof','combinatorics','construction','graph-theory',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '249',
-		'post_name' : 'proof-thoery',
+		'post_name' : 'proof-theory',
 		'post_chinese_name' : '证明论笔记（第一章）',
 		'type_name' : 'algorithm',
-		'last_modi' : '',
+		'last_modi' : '2023-11-07',
 		'tag' : ['mathematical-logic',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});

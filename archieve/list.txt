@@ -1636,8 +1636,8 @@ algorithm
 construction
 bijective-proof
 combinatorics
-graph-thoery
-proof-thoery
+graph-theory
+proof-theory
 证明论笔记（第一章）
 algorithm
 1
