@@ -1637,3 +1637,8 @@ construction
 bijective-proof
 combinatorics
 graph-thoery
+proof-thoery
+证明论笔记（第一章）
+algorithm
+1
+mathematical-logic

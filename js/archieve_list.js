@@ -5,7 +5,7 @@
 		'post_name' : 'hello-world',
 		'post_chinese_name' : '关于 x义x',
 		'type_name' : 'none',
-		'last_modi' : '2023-09-01',
+		'last_modi' : '2023-10-26',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1983,6 +1983,14 @@
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-10-24',
 		'tag' : ['bijective-proof','combinatorics','construction','graph-thoery',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '249',
+		'post_name' : 'proof-thoery',
+		'post_chinese_name' : '证明论笔记（第一章）',
+		'type_name' : 'algorithm',
+		'last_modi' : '',
+		'tag' : ['mathematical-logic',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
