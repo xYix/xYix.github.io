@@ -1642,3 +1642,8 @@ proof-theory
 algorithm
 1
 mathematical-logic
+proof-theory-ii
+证明论笔记（第二章）
+algorithm
+1
+mathematical-logic
