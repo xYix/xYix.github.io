@@ -1997,7 +1997,7 @@
 		'post_name' : 'proof-theory-ii',
 		'post_chinese_name' : '证明论笔记（第二章）',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-11-11',
+		'last_modi' : '2023-11-17',
 		'tag' : ['mathematical-logic',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
