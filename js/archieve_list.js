@@ -1987,7 +1987,7 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '249',
 		'post_name' : 'proof-theory',
-		'post_chinese_name' : '证明论笔记（第一章）',
+		'post_chinese_name' : '证明论笔记 - 一阶逻辑',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-11-10',
 		'tag' : ['mathematical-logic',],
@@ -1995,9 +1995,17 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '250',
 		'post_name' : 'proof-theory-ii',
-		'post_chinese_name' : '证明论笔记（第二章）',
+		'post_chinese_name' : '证明论笔记 - 皮亚诺算术',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-11-17',
+		'tag' : ['mathematical-logic',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '251',
+		'post_name' : 'proof-theory-iii',
+		'post_chinese_name' : '证明论笔记 - 二阶逻辑',
+		'type_name' : 'algorithm',
+		'last_modi' : '2023-11-20',
 		'tag' : ['mathematical-logic',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
