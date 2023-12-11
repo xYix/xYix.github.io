@@ -1989,7 +1989,7 @@
 		'post_name' : 'proof-theory',
 		'post_chinese_name' : '证明论笔记 - 一阶逻辑',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-11-10',
+		'last_modi' : '2023-11-27',
 		'tag' : ['mathematical-logic',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -2005,8 +2005,16 @@
 		'post_name' : 'proof-theory-iii',
 		'post_chinese_name' : '证明论笔记 - 二阶逻辑',
 		'type_name' : 'algorithm',
-		'last_modi' : '2023-11-20',
+		'last_modi' : '2023-11-27',
 		'tag' : ['mathematical-logic',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '252',
+		'post_name' : 'bunburrow',
+		'post_chinese_name' : 'paquerette down the bunburrow 攻略补遗',
+		'type_name' : 'other',
+		'last_modi' : '2023-12-11',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
