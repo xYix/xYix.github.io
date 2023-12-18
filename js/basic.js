@@ -163,6 +163,17 @@
     }
 
     win.TYPENAME = {'solution': '题解', 'algorithm': '笔记', 'other': '其他', 'journey': '游记', 'scp': 'SCP文档', 'library': '图书馆'}
+    win.SPECIALCOLOR = {'writing': 'orange',
+                        'pigeon': 'grey',
+                        'submit-answer': 'orange',
+                        'interact': 'orange',
+                        'commu': 'orange',
+                        'safe': 'violet',
+                        'euclid': 'violet',
+                        'keter': 'violet',
+                        'apollyon': 'violet',
+                        'ero': 'red',
+                        'suicide': 'red'}
 
     win.WriteSideBar = function (data, title, funval) {
         let AddText = function (tdata, ttext, eletag) {
@@ -407,17 +418,8 @@
             Postinfo_tags_a.href = '/archieve/' +
                 ezylanASearch(NextSearch(win.TrueSearch, { Tags: [postinfo.tag[i]], Page: 0 }));
             Postinfo_tags_a.textContent = tags_chinese[postinfo.tag[i]];
-            if(postinfo.tag[i] === 'writing') Postinfo_tags_a.style = 'color: orange';
-            if(postinfo.tag[i] === 'pigeon') Postinfo_tags_a.style = 'color: grey';
-            if(postinfo.tag[i] === 'submit-answer') Postinfo_tags_a.style = 'color: orange';
-            if(postinfo.tag[i] === 'interact') Postinfo_tags_a.style = 'color: orange';
-            if(postinfo.tag[i] === 'commu') Postinfo_tags_a.style = 'color: orange';
-            if(postinfo.tag[i] === 'safe') Postinfo_tags_a.style = 'color: violet';
-            if(postinfo.tag[i] === 'euclid') Postinfo_tags_a.style = 'color: violet';
-            if(postinfo.tag[i] === 'keter') Postinfo_tags_a.style = 'color: violet';
-            if(postinfo.tag[i] === 'apollyon') Postinfo_tags_a.style = 'color: violet';
-            if(postinfo.tag[i] === 'ero') Postinfo_tags_a.style = 'color: red';
-            if(postinfo.tag[i] === 'suicide') Postinfo_tags_a.style = 'color: red';
+            if (postinfo.tag[i] in win.SPECIALCOLOR)
+                Postinfo_tags_a.style = 'color: ' + win.SPECIALCOLOR[postinfo.tag[i]]
             Postinfo_tags.appendChild(Postinfo_tags_a);
             if (i !== postinfo.tag.length - 1) Postinfo_tags.appendChild(win.createTextNode(','));
         }
@@ -463,18 +465,14 @@
     //绘制 archieve 列表
     win.post_count = { value: 0 };
     win.WriteArchieve = function (data) {
-        if (win.Sortby === 'last_modi') {
+        if (win.Sortby === 'last_modi')
 	        archieve_list.sort(function(a, b){ return b.last_modi_val - a.last_modi_val});
-        }
-        else if (win.Sortby === 'idom_tsal') {
+        else if (win.Sortby === 'idom_tsal') 
 	        archieve_list.sort(function(a, b){ return a.last_modi_val - b.last_modi_val});
-        }
-        else if (win.Sortby === 'di') {
+        else if (win.Sortby === 'di') 
 	        archieve_list.sort(function(a, b){ return a.postid - b.postid});
-        }
-        else {
+        else 
 	        archieve_list.sort(function(a, b){ return b.postid - a.postid});
-        }
         let ArchieveTable = win.createElement('table');
         ArchieveTable.border = '1'; ArchieveTable.rules = 'all'; ArchieveTable.style = 'width: 100%';
         ArchieveTable.className = 'mycenter';
@@ -692,17 +690,7 @@
             let TagsRow1strong = document.createElement('strong');
             TagsRow1strong.textContent = tags_chinese[Tag];
             TagsRow1a.appendChild(TagsRow1strong);
-            if(Tag === 'writing') TagsRow1a.style = 'color: orange';
-            if(Tag === 'pigeon') TagsRow1a.style = 'color: grey';
-            if(Tag === 'submit-answer') TagsRow1a.style = 'color: orange';
-            if(Tag === 'interact') TagsRow1a.style = 'color: orange';
-            if(Tag === 'commu') TagsRow1a.style = 'color: orange';
-            if(Tag === 'safe') TagsRow1a.style = 'color: violet';
-            if(Tag === 'euclid') TagsRow1a.style = 'color: violet';
-            if(Tag === 'keter') TagsRow1a.style = 'color: violet';
-            if(Tag === 'apollyon') TagsRow1a.style = 'color: violet';
-            if(Tag === 'ero') TagsRow1a.style = 'color: red';
-            if(Tag === 'suicide') TagsRow1a.style = 'color: red';
+            if (Tag in win.SPECIALCOLOR) TagsRow1a.style = 'color: ' + win.SPECIALCOLOR[Tag]
             TagsRow1.appendChild(TagsRow1a);
             TagsRow.appendChild(TagsRow1);
             let TagsRow2 = document.createElement('th');
