@@ -2011,9 +2011,9 @@
 	archieve_list[archieve_list.length] = {
 		'postid' : '252',
 		'post_name' : 'bunburrow',
-		'post_chinese_name' : 'paquerette down the bunburrow 攻略补遗',
+		'post_chinese_name' : 'paquerette down the bunburrow 评测&攻略补遗',
 		'type_name' : 'review',
-		'last_modi' : '2023-12-11',
+		'last_modi' : '2023-12-18',
 		'tag' : ['indie-game',],
 	};
 	archieve_list[archieve_list.length] = {
