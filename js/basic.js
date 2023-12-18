@@ -162,6 +162,8 @@
         return 0;
     }
 
+    const TYPENAME = {'solution': '题解', 'algorithm': '笔记', 'other': '其他', 'journey': '游记', 'scp': 'SCP文档', 'library': '图书馆'}
+
     win.WriteSideBar = function (data, title, funval) {
         let AddText = function (tdata, ttext, eletag) {
             let Ttext = win.createElement(eletag);
@@ -290,15 +292,8 @@
         if (win.Pathname[0] === 'archieve') {
             if (win.Type) {
                 let nowlen = win.Title.length;
-                win.Title[nowlen] = '分类为：';
-                if (win.Type == 'solution') win.Title[nowlen] += '收容物';
-                else if (win.Type == 'algorithm') win.Title[nowlen] += 'Thaumiel级';
-                else if (win.Type == 'other') win.Title[nowlen] += '其他';
-                else if (win.Type == 'journey') win.Title[nowlen] += '外勤记录';
-                else if (win.Type == 'scp') win.Title[nowlen] += 'SCP文档';
-                else if (win.Type == 'library') win.Title[nowlen] += '图书馆';
-                else win.Title[nowlen] += '不明分类';
-                console.log(win.Type);
+                win.Title[nowlen] = '分类为：' + TYPENAME[win.Type]
+                // console.log(win.Type);
             }
             if (win.Tags.length !== 0) {
                 let nowlen = win.Title.length;
@@ -401,13 +396,7 @@
             let Postinfo_type_a = win.createElement('a');
             Postinfo_type_a.href = '/archieve/' +
                 ezylanASearch(NextSearch(win.TrueSearch, { Type: postinfo.type_name, Page: 0 }));
-            if (postinfo.type_name === 'solution') Postinfo_type_a.textContent = '收容物';
-            else if (postinfo.type_name === 'algorithm') Postinfo_type_a.textContent = 'Thaumiel级';
-            else if (postinfo.type_name === 'other') Postinfo_type_a.textContent = '其他';
-            else if (postinfo.type_name === 'journey') Postinfo_type_a.textContent = '外勤记录';
-            else if (postinfo.type_name === 'scp') Postinfo_type_a.textContent = 'SCP文档';
-            else if (postinfo.type_name === 'library') Postinfo_type_a.textContent = '图书馆';
-            else Postinfo_type_a.textContent = '不明分类';
+            Postinfo_type_a.textContent = TYPENAME[postinfo.type_name]
             Postinfo_type.appendChild(Postinfo_type_a);
         }
         else {

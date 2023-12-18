@@ -27,9 +27,9 @@
                 AddText('文章一览', 'h1');
                 if (document.Type !== undefined) {
                     let Typeinfo = '分类为：';
-                    if (document.Type == 'solution') Typeinfo += '收容物';
-                    else if (document.Type == 'algorithm') Typeinfo += 'Thaumiel级';
-                    else if (document.Type == 'other') Typeinfo += '外勤记录';
+                    if (document.Type == 'solution') Typeinfo += '题解';
+                    else if (document.Type == 'algorithm') Typeinfo += '笔记';
+                    else if (document.Type == 'other') Typeinfo += '游记';
                     else if (document.Type == 'scp') Typeinfo += 'SCP文档';
                     else if (document.Type == 'library') Typeinfo += '图书馆格式';
                     else Typeinfo += '不明分类';
