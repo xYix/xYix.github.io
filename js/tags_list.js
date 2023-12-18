@@ -56,6 +56,7 @@
 	tags_chinese['suicide'] = '自杀描写';
 	tags_chinese['googology'] = '大数学';
 	tags_chinese['mathematical-logic'] = '数理逻辑';
+	tags_chinese['indie-game'] = '独立游戏';
 
 	tags_val={};
 	tags_val['combinatorics'] = 1;
@@ -114,6 +115,7 @@
 	tags_val['suicide'] = -5;
 	tags_val['googology'] = 40;
 	tags_val['mathematical-logic'] = 41
+	tags_val['indie-game'] = 42;
 
 	tags_list = [];
 	for (var Tag in tags_chinese) tags_list.push(Tag);

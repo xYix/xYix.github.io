@@ -1655,4 +1655,10 @@ mathematical-logic
 bunburrow
 paquerette down the bunburrow 攻略补遗
 other
-0
+1
+indie-game
+manifold-garden
+Manifold Garden 测评
+other
+1
+indie-game
