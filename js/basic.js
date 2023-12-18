@@ -162,7 +162,7 @@
         return 0;
     }
 
-    const TYPENAME = {'solution': '题解', 'algorithm': '笔记', 'other': '其他', 'journey': '游记', 'scp': 'SCP文档', 'library': '图书馆'}
+    win.TYPENAME = {'solution': '题解', 'algorithm': '笔记', 'other': '其他', 'journey': '游记', 'scp': 'SCP文档', 'library': '图书馆'}
 
     win.WriteSideBar = function (data, title, funval) {
         let AddText = function (tdata, ttext, eletag) {
@@ -292,7 +292,7 @@
         if (win.Pathname[0] === 'archieve') {
             if (win.Type) {
                 let nowlen = win.Title.length;
-                win.Title[nowlen] = '分类为：' + TYPENAME[win.Type]
+                win.Title[nowlen] = '分类为：' + win.TYPENAME[win.Type]
                 // console.log(win.Type);
             }
             if (win.Tags.length !== 0) {
@@ -352,18 +352,8 @@
     }
 
     //绘制文章信息
-    table_style = {};
-    table_style['id'] = 'width: 4%';
-    table_style['title'] = 'width: 43%';
-    table_style['type'] = 'width: 12%';
-    table_style['tags'] = 'width: 29%';
-    table_style['last_modi'] = 'width: 12%';
-    table_text = {};
-    table_text['id'] = '编号';
-    table_text['title'] = '标题';
-    table_text['type'] = '分类';
-    table_text['tags'] = '标签';
-    table_text['last_modi'] = '修改时间';
+    table_style = {'id': 'width: 4%', 'title': 'width: 43%', 'type': 'width: 12%', 'tags': 'width: 29%', 'last_modi': 'width: 12%'};
+    table_text = {'id': '编号', 'title': '标题', 'type': '分类', 'tags': '标签', 'last_modi': '修改时间'};
     win.WritePostinfo = function (data, postinfo) {
         let PostinfoBlock = win.createElement('tr');
 
@@ -396,7 +386,7 @@
             let Postinfo_type_a = win.createElement('a');
             Postinfo_type_a.href = '/archieve/' +
                 ezylanASearch(NextSearch(win.TrueSearch, { Type: postinfo.type_name, Page: 0 }));
-            Postinfo_type_a.textContent = TYPENAME[postinfo.type_name]
+            Postinfo_type_a.textContent = win.TYPENAME[postinfo.type_name]
             Postinfo_type.appendChild(Postinfo_type_a);
         }
         else {

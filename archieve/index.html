@@ -25,16 +25,8 @@
                     data.appendChild(TTtext);
                 }
                 AddText('文章一览', 'h1');
-                if (document.Type !== undefined) {
-                    let Typeinfo = '分类为：';
-                    if (document.Type == 'solution') Typeinfo += '题解';
-                    else if (document.Type == 'algorithm') Typeinfo += '笔记';
-                    else if (document.Type == 'other') Typeinfo += '游记';
-                    else if (document.Type == 'scp') Typeinfo += 'SCP文档';
-                    else if (document.Type == 'library') Typeinfo += '图书馆格式';
-                    else Typeinfo += '不明分类';
-                    AddText(Typeinfo, 'h3');
-                }
+                if (document.Type !== undefined)
+                    AddText('分类为：' + document.TYPENAME[document.Type], 'h3');
                 if (document.Tags.length !== 0) {
                     let Taginfo = '具有标签：';
                     for (let i = 0; i < document.Tags.length; i = i + 1) {
