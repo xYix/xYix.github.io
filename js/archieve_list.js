@@ -1796,7 +1796,7 @@
 		'postid' : '225',
 		'post_name' : 'factory-analyze',
 		'post_chinese_name' : '退役一周年特别企划·《工厂（和虚无主义）》及其创作历程',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2022-11-12',
 		'tag' : [],
 	};
@@ -1804,7 +1804,7 @@
 		'postid' : '226',
 		'post_name' : 'xj-404-analyze',
 		'post_chinese_name' : '退役一周年特别企划·解密：空调中心页',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2022-11-19',
 		'tag' : ['xj',],
 	};
@@ -1812,9 +1812,9 @@
 		'postid' : '227',
 		'post_name' : '11-26',
 		'post_chinese_name' : '11.26 闲话',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2022-12-03',
-		'tag' : ['flowers',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '228',
@@ -1836,7 +1836,7 @@
 		'postid' : '230',
 		'post_name' : 'strange-list',
 		'post_chinese_name' : '《仙女座信号》主角战力榜单',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2023-02-25',
 		'tag' : [],
 	};
@@ -1844,7 +1844,7 @@
 		'postid' : '231',
 		'post_name' : 'author-page',
 		'post_chinese_name' : '庆祝叉义叉在基金会中分的作者页上线',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2023-01-10',
 		'tag' : [],
 	};
@@ -1876,9 +1876,9 @@
 		'postid' : '235',
 		'post_name' : '1-30',
 		'post_chinese_name' : '1.30 发癫',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2023-02-05',
-		'tag' : ['flowers',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '236',
@@ -1892,9 +1892,9 @@
 		'postid' : '237',
 		'post_name' : 'after-hikou-shoujo',
 		'post_chinese_name' : '《飛行少女》之后回顾《食盐》和《奔月》',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2023-03-11',
-		'tag' : ['flowers',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '238',
@@ -1908,9 +1908,9 @@
 		'postid' : '239',
 		'post_name' : '4-15',
 		'post_chinese_name' : '后事',
-		'type_name' : 'other',
+		'type_name' : 'flower',
 		'last_modi' : '2023-04-15',
-		'tag' : ['flowers',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '240',
@@ -2012,7 +2012,7 @@
 		'postid' : '252',
 		'post_name' : 'bunburrow',
 		'post_chinese_name' : 'paquerette down the bunburrow 攻略补遗',
-		'type_name' : 'other',
+		'type_name' : 'review',
 		'last_modi' : '2023-12-11',
 		'tag' : ['indie-game',],
 	};
@@ -2020,7 +2020,7 @@
 		'postid' : '253',
 		'post_name' : 'manifold-garden',
 		'post_chinese_name' : 'Manifold Garden 测评',
-		'type_name' : 'other',
+		'type_name' : 'review',
 		'last_modi' : '2023-12-18',
 		'tag' : ['indie-game',],
 	};

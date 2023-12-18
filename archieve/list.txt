@@ -1513,18 +1513,17 @@ library
 andromeda-signal
 factory-analyze
 退役一周年特别企划·《工厂（和虚无主义）》及其创作历程
-other
+flower
 0
 xj-404-analyze
 退役一周年特别企划·解密：空调中心页
-other
+flower
 1
 xj
 11-26
 11.26 闲话
-other
-1
-flowers
+flower
+0
 exorcism
 驱魔
 library
@@ -1539,11 +1538,11 @@ ero
 suicide
 strange-list
 《仙女座信号》主角战力榜单
-other
+flower
 0
 author-page
 庆祝叉义叉在基金会中分的作者页上线
-other
+flower
 0
 alcohol
 酒精
@@ -1561,9 +1560,8 @@ library
 andromeda-signal
 1-30
 1.30 发癫
-other
-1
-flowers
+flower
+0
 hikou-shoujo
 飛行少女
 library
@@ -1571,9 +1569,8 @@ library
 politics
 after-hikou-shoujo
 《飛行少女》之后回顾《食盐》和《奔月》
-other
-1
-flowers
+flower
+0
 song-to-my-daughter
 唱给她的歌
 library
@@ -1581,9 +1578,8 @@ library
 politics
 4-15
 后事
-other
-1
-flowers
+flower
+0
 immortal
 长生
 library
@@ -1654,11 +1650,11 @@ algorithm
 mathematical-logic
 bunburrow
 paquerette down the bunburrow 攻略补遗
-other
+review
 1
 indie-game
 manifold-garden
 Manifold Garden 测评
-other
+review
 1
 indie-game

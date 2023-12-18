@@ -162,7 +162,14 @@
         return 0;
     }
 
-    win.TYPENAME = {'solution': '题解', 'algorithm': '笔记', 'other': '其他', 'journey': '游记', 'scp': 'SCP文档', 'library': '图书馆'}
+    win.TYPENAME = {'solution': '题解',
+                    'algorithm': '笔记',
+                    'other': '其他',
+                    'journey': '游记',
+                    'scp': 'SCP文档',
+                    'library': '图书馆',
+                    'flower': '鲜花',
+                    'review': '测评'}
     win.SPECIALCOLOR = {'writing': 'orange',
                         'pigeon': 'grey',
                         'submit-answer': 'orange',

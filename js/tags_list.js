@@ -51,7 +51,6 @@
 	tags_chinese['xj'] = '【】';
 	tags_chinese['andromeda-signal'] = '仙女座信号';
 	tags_chinese['politics'] = '晶体学、宇宙学、政治哲学';
-	tags_chinese['flowers'] = '闲话';
 	tags_chinese['ero'] = '性描写';
 	tags_chinese['suicide'] = '自杀描写';
 	tags_chinese['googology'] = '大数学';
@@ -110,7 +109,6 @@
 	tags_val['xj'] = 0;
 	tags_val['andromeda-signal'] = -1;
 	tags_val['politics'] = -2;
-	tags_val['flowers'] = -3;
 	tags_val['ero'] = -4;
 	tags_val['suicide'] = -5;
 	tags_val['googology'] = 40;
