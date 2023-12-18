@@ -1641,8 +1641,9 @@ mathematical-logic
 proof-theory-ii
 证明论笔记 - 皮亚诺算术
 algorithm
-1
+2
 mathematical-logic
+googology
 proof-theory-iii
 证明论笔记 - 二阶逻辑
 algorithm

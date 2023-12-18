@@ -1998,7 +1998,7 @@
 		'post_chinese_name' : '证明论笔记 - 皮亚诺算术',
 		'type_name' : 'algorithm',
 		'last_modi' : '2023-11-17',
-		'tag' : ['mathematical-logic',],
+		'tag' : ['googology','mathematical-logic',],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '251',
