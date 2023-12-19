@@ -2021,7 +2021,7 @@
 		'post_name' : 'manifold-garden',
 		'post_chinese_name' : 'Manifold Garden 测评',
 		'type_name' : 'review',
-		'last_modi' : '2023-12-18',
+		'last_modi' : '2023-12-19',
 		'tag' : ['indie-game',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
