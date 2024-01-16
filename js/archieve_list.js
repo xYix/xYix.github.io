@@ -1941,7 +1941,7 @@
 		'post_name' : 'chuang',
 		'post_chinese_name' : '你要创作合集贴',
 		'type_name' : 'other',
-		'last_modi' : '2023-08-31',
+		'last_modi' : '2024-01-16',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -2013,7 +2013,7 @@
 		'post_name' : 'bunburrow',
 		'post_chinese_name' : 'paquerette down the bunburrow 评测&攻略补遗',
 		'type_name' : 'review',
-		'last_modi' : '2023-12-18',
+		'last_modi' : '2024-01-08',
 		'tag' : ['indie-game',],
 	};
 	archieve_list[archieve_list.length] = {
