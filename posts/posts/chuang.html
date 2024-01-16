@@ -3,11 +3,11 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -163,7 +163,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
 @media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
@@ -203,6 +203,20 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
 mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
 :root {
@@ -210,7 +224,7 @@ mjx-container { break-inside: avoid; }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 /* open-sans-regular - latin-ext_latin */
   /* open-sans-italic - latin-ext_latin */
@@ -594,6 +608,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>你要创作合集贴</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h2 id='第一届'><span>第一届</span></h2><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-jie-long-tai-zhan-kai-mu'><span>第一届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1aW4y1V7vY'><span>第一届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHNCVUFETVl4VHRT?'><span>第一届</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-yuan-man-bi-mu'><span>第一届颁奖典礼 &amp;&amp; 赛后总结</span></a></p><hr /><h2 id='第二届'><span>第二届</span></h2><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-di-er-jie-zhong-xin-ye'><span>第二届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1jV4y1m7vE'><span>第二届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHdrb2pObG95VHFV'><span>第二届（上）</span></a></p><p><a href='https://docs.qq.com/doc/DZEVxZHZXUE5TTlB4'><span>第二届（下）</span></a></p><p><a href='https://docs.qq.com/doc/DZExDRkZlZndLZU9C'><span>第二届颁奖典礼</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/ni-yao-chuang-zuo-bei-di-er-jie-sai-hou-zong-jie-tie'><span>第二届赛后总结</span></a></p><hr /><h2 id='第三届'><span>第三届</span></h2><p><a href='https://docs.qq.com/doc/DZGhlaExZbFVkSVZ0'><span>第三届</span></a></p><p><a href='https://docs.qq.com/doc/DZFRwVHRLV09Ya3FW'><span>第三届颁奖典礼</span></a></p></div></div>
+<div id='write'  class=''><h2 id='第一届'><span>第一届</span></h2><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-jie-long-tai-zhan-kai-mu'><span>第一届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1aW4y1V7vY'><span>第一届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHNCVUFETVl4VHRT?'><span>第一届</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-yuan-man-bi-mu'><span>第一届颁奖典礼 &amp;&amp; 赛后总结</span></a></p><hr /><h2 id='第二届'><span>第二届</span></h2><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-di-er-jie-zhong-xin-ye'><span>第二届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1jV4y1m7vE'><span>第二届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHdrb2pObG95VHFV'><span>第二届（上）</span></a></p><p><a href='https://docs.qq.com/doc/DZEVxZHZXUE5TTlB4'><span>第二届（下）</span></a></p><p><a href='https://docs.qq.com/doc/DZExDRkZlZndLZU9C'><span>第二届颁奖典礼</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/ni-yao-chuang-zuo-bei-di-er-jie-sai-hou-zong-jie-tie'><span>第二届赛后总结</span></a></p><hr /><h2 id='第三届'><span>第三届</span></h2><p><a href='https://docs.qq.com/doc/DZGhlaExZbFVkSVZ0'><span>第三届</span></a></p><p><a href='https://docs.qq.com/doc/DZFRwVHRLV09Ya3FW'><span>第三届颁奖典礼</span></a></p><hr /><h2 id='第四届'><span>第四届</span></h2><p><a href='https://docs.qq.com/mind/DZE1IVW1SWnZSSGxv'><span>第四届导航</span></a></p><p><span>因为理论上还没结束所以没有颁奖典礼。</span></p></div></div>
 </body>
 </html>
