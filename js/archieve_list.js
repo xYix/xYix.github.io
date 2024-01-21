@@ -2024,6 +2024,14 @@
 		'last_modi' : '2023-12-19',
 		'tag' : ['indie-game',],
 	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '254',
+		'post_name' : 'luogu-archive',
+		'post_chinese_name' : 'luogu 博客补档中心页',
+		'type_name' : 'other',
+		'last_modi' : '2024-01-21',
+		'tag' : [],
+	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
 let u = archieve_list[i], qaq = u.last_modi.split('-');
