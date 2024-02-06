@@ -2029,8 +2029,16 @@
 		'post_name' : 'luogu-archive',
 		'post_chinese_name' : 'luogu 博客补档中心页',
 		'type_name' : 'other',
-		'last_modi' : '2024-01-21',
+		'last_modi' : '2024-01-22',
 		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '255',
+		'post_name' : 'bunniesarecool',
+		'post_chinese_name' : 'Paquerette Down the Bunburrow 新版本攻略',
+		'type_name' : 'review',
+		'last_modi' : '2024-02-06',
+		'tag' : ['indie-game',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
