@@ -1623,8 +1623,7 @@ bijective-proof
 rhetorical-experiement
 修辞实验
 library
-1
-politics
+0
 parking-and-tree-ex
 停车序列到树的双射（劲爆续集）
 algorithm
@@ -1668,3 +1667,8 @@ Paquerette Down the Bunburrow 新版本攻略
 review
 1
 indie-game
+unnamed-city
+无名的城市
+library
+1
+politics

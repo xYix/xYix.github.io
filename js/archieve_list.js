@@ -1974,7 +1974,7 @@
 		'post_chinese_name' : '修辞实验',
 		'type_name' : 'library',
 		'last_modi' : '2023-10-14',
-		'tag' : ['politics',],
+		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
 		'postid' : '248',
@@ -2039,6 +2039,14 @@
 		'type_name' : 'review',
 		'last_modi' : '2024-02-06',
 		'tag' : ['indie-game',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '256',
+		'post_name' : 'unnamed-city',
+		'post_chinese_name' : '无名的城市',
+		'type_name' : 'library',
+		'last_modi' : '2024-02-26',
+		'tag' : ['politics',],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
