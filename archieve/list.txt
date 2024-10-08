@@ -1672,3 +1672,8 @@ unnamed-city
 library
 1
 politics
+force
+力迫法
+algorithm
+1
+mathematical-logic
