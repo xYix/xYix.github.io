@@ -2053,8 +2053,16 @@
 		'post_name' : 'force',
 		'post_chinese_name' : '力迫法',
 		'type_name' : 'algorithm',
-		'last_modi' : '2024-10-08',
+		'last_modi' : '2024-10-11',
 		'tag' : ['mathematical-logic',],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '258',
+		'post_name' : 'antihero',
+		'post_chinese_name' : '反英雄',
+		'type_name' : 'library',
+		'last_modi' : '2024-11-26',
+		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
 for (var i in archieve_list) {
