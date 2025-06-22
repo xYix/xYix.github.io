@@ -30,8 +30,8 @@ img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
 p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
@@ -161,6 +161,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
@@ -215,7 +216,7 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-tip { color: rgb(31, 136, 61); }
 .md-alert-text-caution { color: rgb(207, 34, 46); }
 .md-alert-text { font-size: 0.9rem; font-weight: 700; }
-.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
@@ -572,6 +573,10 @@ header, .context-menu, .megamenu-content, footer{
     background-color: var(--side-bar-bg-color);
 }
 
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
 .md-lang {
     color: #b4654d;
 }
@@ -608,6 +613,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>你要创作合集贴</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h2 id='第一届'><span>第一届</span></h2><p><img src="https://xyix.github.io/images/chuang1.png" referrerpolicy="no-referrer"></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-jie-long-tai-zhan-kai-mu'><span>第一届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1aW4y1V7vY'><span>第一届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHNCVUFETVl4VHRT?'><span>第一届</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-yuan-man-bi-mu'><span>第一届颁奖典礼 &amp;&amp; 赛后总结</span></a></p><hr /><h2 id='第二届'><span>第二届</span></h2><p><img src="https://xyix.github.io/images/chuang2.png" referrerpolicy="no-referrer"></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-di-er-jie-zhong-xin-ye'><span>第二届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1jV4y1m7vE'><span>第二届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHdrb2pObG95VHFV'><span>第二届（上）</span></a></p><p><a href='https://docs.qq.com/doc/DZEVxZHZXUE5TTlB4'><span>第二届（下）</span></a></p><p><a href='https://docs.qq.com/doc/DZExDRkZlZndLZU9C'><span>第二届颁奖典礼</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/ni-yao-chuang-zuo-bei-di-er-jie-sai-hou-zong-jie-tie'><span>第二届赛后总结</span></a></p><hr /><h2 id='第三届'><span>第三届</span></h2><p><img src="https://xyix.github.io/images/chuang3.png" referrerpolicy="no-referrer"></p><p><a href='https://docs.qq.com/doc/DZGhlaExZbFVkSVZ0'><span>第三届</span></a></p><p><a href='https://docs.qq.com/doc/DZFRwVHRLV09Ya3FW'><span>第三届颁奖典礼</span></a></p><hr /><h2 id='第四届'><span>第四届</span></h2><p><a href='https://docs.qq.com/mind/DZE1IVW1SWnZSSGxv'><span>第四届导航</span></a></p><p><span>因为理论上还没结束所以没有颁奖典礼。</span></p></div></div>
+<div id='write'  class=''><h2 id='第一届'><span>第一届</span></h2><p><img src="https://xyix.github.io/images/chuang1.png" referrerpolicy="no-referrer"></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-jie-long-tai-zhan-kai-mu'><span>第一届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1aW4y1V7vY'><span>第一届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHNCVUFETVl4VHRT?'><span>第一届</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-yuan-man-bi-mu'><span>第一届颁奖典礼 &amp;&amp; 赛后总结</span></a></p><hr /><h2 id='第二届'><span>第二届</span></h2><p><img src="https://xyix.github.io/images/chuang2.png" referrerpolicy="no-referrer"></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/post-ni-yao-chuang-zuo-bei-di-er-jie-zhong-xin-ye'><span>第二届中心页</span></a></p><p><a href='https://www.bilibili.com/video/BV1jV4y1m7vE'><span>第二届宣传 PV</span></a></p><p><a href='https://docs.qq.com/doc/DZHdrb2pObG95VHFV'><span>第二届（上）</span></a></p><p><a href='https://docs.qq.com/doc/DZEVxZHZXUE5TTlB4'><span>第二届（下）</span></a></p><p><a href='https://docs.qq.com/doc/DZExDRkZlZndLZU9C'><span>第二届颁奖典礼</span></a></p><p><a href='https://www.luogu.com.cn/blog/zyxxs/ni-yao-chuang-zuo-bei-di-er-jie-sai-hou-zong-jie-tie'><span>第二届赛后总结</span></a></p><hr /><h2 id='第三届'><span>第三届</span></h2><p><img src="https://xyix.github.io/images/chuang3.png" referrerpolicy="no-referrer"></p><p><a href='https://docs.qq.com/doc/DZGhlaExZbFVkSVZ0'><span>第三届</span></a></p><p><a href='https://docs.qq.com/doc/DZFRwVHRLV09Ya3FW'><span>第三届颁奖典礼</span></a></p><hr /><h2 id='第四届'><span>第四届</span></h2><p><a href='https://docs.qq.com/mind/DZE1IVW1SWnZSSGxv'><span>第四届导航</span></a></p><p><span>因为理论上还没结束所以没有颁奖典礼。</span></p><hr /><h2 id='第五届'><span>第五届</span></h2><p><img src="/images/chuang5.png" referrerpolicy="no-referrer"></p><p><a href='https://www.luogu.com.cn/article/efyu7ia9'><span>你要创作第五届前瞻</span></a></p><p><a href='https://docs.qq.com/doc/DZERMQWRyRmdSU1hI'><span>你要创作第五届</span></a></p><hr /><h2 id='第六届'><span>第六届</span></h2><p><a href='https://docs.qq.com/doc/DZGRrU0hWU2JGemVi'><span>你要创作第六届</span></a></p><p><a href='https://docs.qq.com/doc/DZG9KSUhBQ2J3RHpt'><span>第六届颁奖&amp;&amp;总结帖（by D指导）</span></a></p><p>&nbsp;</p></div></div>
 </body>
 </html>
