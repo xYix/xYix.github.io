@@ -2068,7 +2068,7 @@
 		'postid' : '259',
 		'post_name' : 'bomb',
 		'post_chinese_name' : 'OS Lab0 实验报告 - 拆弹实验',
-		'type_name' : '0',
+		'type_name' : 'solution',
 		'last_modi' : '2025-09-28',
 		'tag' : [],
 	};
