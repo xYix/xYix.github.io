@@ -1925,7 +1925,7 @@
 		'post_name' : 'big-numbers',
 		'post_chinese_name' : '那些很大的数',
 		'type_name' : 'algorithm',
-		'last_modi' : '2024-06-19',
+		'last_modi' : '2025-09-24',
 		'tag' : ['googology',],
 	};
 	archieve_list[archieve_list.length] = {
@@ -1941,7 +1941,7 @@
 		'post_name' : 'chuang',
 		'post_chinese_name' : '你要创作合集贴',
 		'type_name' : 'other',
-		'last_modi' : '2024-06-19',
+		'last_modi' : '2025-07-31',
 		'tag' : [],
 	};
 	archieve_list[archieve_list.length] = {
@@ -2061,7 +2061,15 @@
 		'post_name' : 'antihero',
 		'post_chinese_name' : '反英雄',
 		'type_name' : 'library',
-		'last_modi' : '2024-11-26',
+		'last_modi' : '2024-11-28',
+		'tag' : [],
+	};
+	archieve_list[archieve_list.length] = {
+		'postid' : '259',
+		'post_name' : 'bomb',
+		'post_chinese_name' : 'OS Lab0 实验报告 - 拆弹实验',
+		'type_name' : '0',
+		'last_modi' : '2025-09-28',
 		'tag' : [],
 	};
 	for (var i in archieve_list) archieve_list[i].tag.sort(function(a, b){ return tags_val[a] - tags_val[b]});
